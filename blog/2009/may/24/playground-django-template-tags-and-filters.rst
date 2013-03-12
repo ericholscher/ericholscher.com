@@ -1,4 +1,5 @@
 :Date: 2009-05-24 10:32:59
+
 A playground for Django Template tags and filters
 =================================================
 

@@ -1,4 +1,5 @@
 :Date: 2009-04-20 12:45:26
+
 Django's Summer of Code students announced!
 ===========================================
 

@@ -1,5 +1,6 @@
 :Date: 2007-01-07 23:57:00
- Good Software is SO hard to find..
+
+Good Software is SO hard to find..
 ===================================
 
 I just installed Songbird which is a really neat music player built

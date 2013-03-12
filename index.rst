@@ -5,8 +5,8 @@ Welcome to the home of Eric Holscher on the web. I talk about software developme
 
 I am currently walking the `Pacific Crest Trail <http://en.wikipedia.org/wiki/Pacific_Crest_Trail>`_, in a quest for the holy grail. My journey lasts from April 15, 2013, until some time in the future :) I will be writing quite a bit about that as well.
 
-Recent Blog Entries
--------------------
+Blog Entries
+------------
 
 2013
 ~~~~
@@ -15,7 +15,18 @@ Recent Blog Entries
    :maxdepth: 1
    :glob:
 
-   blog/2013/*/*/*
+   blog/2013/jan/*/*
+   blog/2013/feb/*/*
+   blog/2013/mar/*/*
+   blog/2013/apr/*/*
+   blog/2013/may/*/*
+   blog/2013/jun/*/*
+   blog/2013/jul/*/*
+   blog/2013/aug/*/*
+   blog/2013/sept/*/*
+   blog/2013/oct/*/*
+   blog/2013/nov/*/*
+   blog/2013/dec/*/*
 
 2012
 ~~~~
@@ -24,4 +35,115 @@ Recent Blog Entries
    :maxdepth: 1
    :glob:
 
-   blog/2012/*/*/*
+   blog/2012/jan/*/*
+   blog/2012/feb/*/*
+   blog/2012/mar/*/*
+   blog/2012/apr/*/*
+   blog/2012/may/*/*
+   blog/2012/jun/*/*
+   blog/2012/jul/*/*
+   blog/2012/aug/*/*
+   blog/2012/sep/*/*
+   blog/2012/oct/*/*
+   blog/2012/nov/*/*
+   blog/2012/dec/*/*
+
+2011
+~~~~
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   blog/2011/jan/*/*
+   blog/2011/feb/*/*
+   blog/2011/mar/*/*
+   blog/2011/apr/*/*
+   blog/2011/may/*/*
+   blog/2011/jun/*/*
+   blog/2011/jul/*/*
+   blog/2011/aug/*/*
+   blog/2011/sep/*/*
+   blog/2011/oct/*/*
+   blog/2011/nov/*/*
+   blog/2011/dec/*/*
+
+2010
+~~~~
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   blog/2010/jan/*/*
+   blog/2010/feb/*/*
+   blog/2010/mar/*/*
+   blog/2010/apr/*/*
+   blog/2010/may/*/*
+   blog/2010/jun/*/*
+   blog/2010/jul/*/*
+   blog/2010/aug/*/*
+   blog/2010/sep/*/*
+   blog/2010/oct/*/*
+   blog/2010/nov/*/*
+   blog/2010/dec/*/*
+
+2009
+~~~~
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   blog/2009/jan/*/*
+   blog/2009/feb/*/*
+   blog/2009/mar/*/*
+   blog/2009/apr/*/*
+   blog/2009/may/*/*
+   blog/2009/jun/*/*
+   blog/2009/jul/*/*
+   blog/2009/aug/*/*
+   blog/2009/sep/*/*
+   blog/2009/oct/*/*
+   blog/2009/nov/*/*
+   blog/2009/dec/*/*
+
+2008
+~~~~
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   blog/2008/jan/*/*
+   blog/2008/feb/*/*
+   blog/2008/mar/*/*
+   blog/2008/apr/*/*
+   blog/2008/may/*/*
+   blog/2008/jun/*/*
+   blog/2008/jul/*/*
+   blog/2008/aug/*/*
+   blog/2008/sep/*/*
+   blog/2008/oct/*/*
+   blog/2008/nov/*/*
+   blog/2008/dec/*/*
+
+2007
+~~~~
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   blog/2007/jan/*/*
+   blog/2007/feb/*/*
+   blog/2007/mar/*/*
+   blog/2007/apr/*/*
+   blog/2007/may/*/*
+   blog/2007/jun/*/*
+   blog/2007/jul/*/*
+   blog/2007/aug/*/*
+   blog/2007/sep/*/*
+   blog/2007/oct/*/*
+   blog/2007/nov/*/*
+   blog/2007/dec/*/*

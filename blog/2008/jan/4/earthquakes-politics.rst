@@ -1,4 +1,5 @@
 :Date: 2008-01-04 12:25:23
+
 Earthquakes in politics
 =======================
 

@@ -1,4 +1,5 @@
 :Date: 2008-08-14 10:20:51
+
 Using Mock objects in Django for testing the current date
 =========================================================
 

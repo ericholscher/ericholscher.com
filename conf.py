@@ -25,7 +25,8 @@ import sys, os
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = []
+sys.path.insert(0, os.path.abspath('vendor'))
+extensions = ['feed']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -242,3 +243,9 @@ texinfo_documents = [
 
 # How to display URL addresses: 'footnote', 'no', or 'inline'.
 #texinfo_show_urls = 'footnote'
+
+
+feed_base_url = "http://ericholscher.com"
+feed_description = 'Surfing in Kansas'
+feed_filename = 'rss.xml'
+feed_title = 'Surfing in Kansas'

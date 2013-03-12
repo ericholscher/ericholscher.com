@@ -1,4 +1,5 @@
 :Date: 2010-11-16 21:01:00
+
 Using Haystack to index non-database content
 ============================================
 
