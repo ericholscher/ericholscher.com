@@ -217,7 +217,7 @@ def emit_feed(app, exc):
     app.builder.env.feed_feed = feed
     ordered_keys = feed_entries.keys()
     ordered_keys.sort(reverse=True)
-    for key in ordered_keys:
+    for key in ordered_keys[:10]:
         feed.add_item(**feed_entries[key])     
     outfilename = os.path.join(app.builder.outdir,
       app.config.feed_filename)
