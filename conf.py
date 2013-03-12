@@ -252,4 +252,4 @@ texinfo_documents = [
 feed_base_url = "http://ericholscher.com"
 feed_description = 'Surfing in Kansas'
 feed_filename = 'rss.xml'
-feed_title = 'Surfing in Kansas'
+feed_title = "Eric's Thoughts"
