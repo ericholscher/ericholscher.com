@@ -1,3 +1,6 @@
+Projects
+========
+
 * `Read The Docs`_ 
 
 A Django Dash project, allowing users to host their Sphinx documentation easily. 
