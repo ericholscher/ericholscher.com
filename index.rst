@@ -108,6 +108,8 @@ Blog Entries
    blog/2009/nov/*/*
    blog/2009/dec/*/*
 
+.. warning:: Everything past here in from college. I was living in a bit of a different world back then, so buyer beware.
+
 2008
 ~~~~
 
