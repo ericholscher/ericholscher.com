@@ -1,7 +1,7 @@
 Welcome
 =======
 
-Welcome to the home of Eric Holscher on the web. I talk about software development, mostly in the realm of Django. I am interested in the real time web, testing, mobile apps, and other things.
+Welcome to the home of Eric Holscher on the web. I talk about software development, mostly in the realm of Django. I am interested in the web, testing, mobile apps, documentation, and lots of other things.
 
 I am currently walking the `Pacific Crest Trail <http://en.wikipedia.org/wiki/Pacific_Crest_Trail>`_, in a quest for the holy grail. My journey lasts from April 15, 2013, until some time in the future :) I will be writing quite a bit about that as well.
 
