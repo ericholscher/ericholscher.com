@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*- 
+
 from fsdict import FSDict
 import feedgenerator
 from urllib import quote_plus
@@ -175,9 +177,11 @@ def create_feed_item(app, docname, templatename, ctx, doctree):
       'description': absolutify(ctx.get('body'), link),
       'pubdate': pub_date
     }
+    item['description'] = item['description'].replace(u'¶', '')
     if 'author' in metadata:
         item['author'] = metadata['author']
         
+
     feed_entries[dated_name(docname, pub_date)] = item
     
     #Now, useful variables to keep in context
