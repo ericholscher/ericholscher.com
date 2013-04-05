@@ -28,6 +28,6 @@ Mental Prep
 
 The big part of the journey currently is just getting my head into a good state. The concept of hiking the PCT is becoming very real, and it's scary and exciting as hell. I know it will be an amazing experience, but it's quite the physical feat. It's also something different; something I have never done anything like before. It's that nervous feeling that you get when you are pushing your limits.
 
-I am trying to step back from the emotions I'm experiencing to appreciate the experience of it. Much like watching a movie, I need to appreciate the fear and apprehension that I'm experencing as an artifact of doing something important and necessary. There is common wisdom that goes along the lines of "The things that scare you the most are the most important to do," and I'm trying to keep that mindset in the front of my mind.
+I am trying to step back from the emotions I'm experiencing to appreciate the experience of it. Much like watching a movie, I need to appreciate the fear and apprehension that I'm experiencing as an artifact of doing something important and necessary. There is common wisdom that goes along the lines of "The things that scare you the most are the most important to do," and I'm trying to keep that mindset in the front of my mind.
 
 .. _gear list: http://postholer.com/journal/viewGearlist.php?sid=8e4a8a7092365242b81959e2570b2e25&event_id=1504
