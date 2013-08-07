@@ -1,3 +1,6 @@
+.. image:: /_static/img/me.jpeg
+   :height: 300px
+
 About me
 ========
 

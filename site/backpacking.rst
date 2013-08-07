@@ -1,4 +1,5 @@
-.. image:: waterfall.gif
+.. image:: /_static/img/waterfall.gif
+   :width: 700 px
 
 Backpacking
 ===========
