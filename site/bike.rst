@@ -1,6 +1,8 @@
 .. image:: /_static/img/bike.png
    :height: 300px
 
+Photo: My bike on the Williamette Valley Scenic Bikeway
+
 Bike Camping
 ============
 

@@ -1,5 +1,7 @@
-.. image:: /_static/img/waterfall.gif
+.. image:: /_static/img/backpack.jpg
    :height: 300px
+
+Photo: Mount Whitney (ev. 14505) at Sunrise 
 
 Backpacking
 ===========
