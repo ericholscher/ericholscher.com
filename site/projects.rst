@@ -5,15 +5,15 @@ Projects
 
 A Django Dash project, allowing users to host their Sphinx documentation easily. 
 
-* `Devmason`_ 
+* `Write the Docs Conference`_ 
 
-A project for test status reporting. Also happens to run my own open source projects in a Continuous Integration environment. 
+.. _Write the Docs Conference: http://conf.writethedocs.org
 
-* `PyPants`_ 
+`Write the Docs Documentation`_ 
 
-A Django Dash project, trying to grade the value of Python Projects. 
+.. _Write the Docs Documentation: http://docs.writethedocs.org
 
-* `Django Kong`_ 
+* `Django Kong`_
 
 A wrapper around twill that allows you to do monitoring and basic functional testing of your sites. 
 
@@ -21,13 +21,6 @@ A wrapper around twill that allows you to do monitoring and basic functional tes
 
 This is a project of mine to help with the testing of Django applications. 
 
-* `Django Conventions`_ 
-
-This is a project to document and create a reference for Django Best Practices and Conventions.
-
 .. _Read The Docs: http://readthedocs.org
-.. _Devmason: http://devmason.com
-.. _PyPants: http://pypants.org
 .. _Django Kong: http://django-kong.rtfd.org
 .. _Django Test Utils: http://django-test-utils.rtfd.org
-.. _Django Conventions: http://django-reusable-app-docs.readthedocs.org/
