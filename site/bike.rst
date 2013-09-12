@@ -1,3 +1,6 @@
+.. image:: /_static/img/bike.png
+   :height: 300px
+
 Bike Camping
 ============
 
