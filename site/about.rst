@@ -1,4 +1,4 @@
-.. image:: /_static/img/me.jpeg
+.. image:: /_static/img/me.jpg
    :height: 300px
 
 About me
