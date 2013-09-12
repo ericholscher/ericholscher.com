@@ -13,7 +13,9 @@ Pacific Crest Trail
 -------------------
 
 I walked on the Pacific Crest Trail from April 15 - June 16 in 2013. 
-I had to come home due to a stress fracture in my third metatarsal in my left foot.
+I had to come home due to a stress fracture in my third metatarsal in my left foot,
+after walking 800 miles.
+
 I have collected my favorite photos `on Flickr`_ 
 
 .. _on Flickr: https://www.flickr.com/photos/98071214@N07/sets/72157634560986460/

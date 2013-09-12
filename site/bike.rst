@@ -3,8 +3,13 @@
 
 Photo: My bike on the Williamette Valley Scenic Bikeway
 
-Bike Camping
+Bike Touring
 ============
+
+After my PCT injury,
+I wondered what I could use all of my lightweight camping gear for.
+I turned to bike touring,
+allowing a machine to handle the stress that my foot obviously isn't capable of.
 
 August 24, 2013: First overnight
 --------------------------------
