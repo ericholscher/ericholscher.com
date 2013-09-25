@@ -41,7 +41,7 @@ I want to help improve this situation in many ways.
 
 Read the Docs is the defacto documentation hosting tool for Python.
 It has also spread into many other communities,
-hosting documentation for PHP, Javascript, C, Java, and Ruby.
+hosting documentation for PHP_, Javascript_, Science_, Java_, and Erlang_.
 It removes barriers to people writing documentation,
 allowing them to simply get started down a well paved path.
 
@@ -86,3 +86,8 @@ I hope that you support me `on Gittip`_.
 .. _documentation: http://docs.writethedocs.org/
 .. _presentations: http://docs.writethedocs.org/en/latest/presentations/
 .. _on Gittip: https://www.gittip.com/ericholscher/
+
+.. _PHP: http://docs.doctrine-project.org/en/latest/
+.. _Javascript: http://docs.casperjs.org/en/latest/
+.. _Science: http://docs.julialang.org/en/release-0.1-0/
+.. _Java: http://inventory-tweaks.readthedocs.org/en/latest/
