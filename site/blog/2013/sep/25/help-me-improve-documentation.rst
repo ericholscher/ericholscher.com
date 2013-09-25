@@ -3,6 +3,8 @@
 Help me improve documentation
 =============================
 
+tl;dr: I have no job, help `fund me`_ to make the documentation world better.
+
 A year ago,
 I :doc:`asked </blog/2012/sep/20/help-fund-read-docs>` people to help cover the hosting costs of `Read the Docs`_.
 It was successful and the site has been funded ever since.
@@ -80,6 +82,7 @@ Support me
 If you think that the work that I'm doing is important,
 I hope that you support me `on Gittip`_.
 
+.. _fund me: https://www.gittip.com/ericholscher/
 .. _your help: https://www.gittip.com/ericholscher/
 .. _Read the Docs: http://readthedocs.org
 .. _Write the Docs conference: http://conf.writethedocs.org/
