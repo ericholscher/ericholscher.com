@@ -3,17 +3,19 @@
 Help me improve documentation
 =============================
 
-tl;dr: I have no job, help `fund me`_ to make the documentation world better.
+tl;dr: I don't have a job, help `fund me`_ to make the documentation world better.
 
 A year ago,
 I :doc:`asked </blog/2012/sep/20/help-fund-read-docs>` people to help cover the hosting costs of `Read the Docs`_.
-It was successful and the site has been funded ever since.
-That money never went to helping support other aspects of the site,
+It was successful and the site hosting has been funded ever since.
+Simply being hosted isn't enough.
+There are many other aspects to having a healthy community,
 including development,
 support,
 and advocacy.
+The approach this time around is aiming to support those aspects as well.
 
-In that time,
+In the last year,
 I have gone on to do a lot more to help improve the documentation world.
 I want to continue to do this work,
 with `your help`_.
@@ -30,7 +32,7 @@ Work I am doing
 * Writing `documentation`_ about documentation
 	* A growing resource of information about writing docs
 * Writing blog posts and `presentations`_ about documentation
-	* Planning to write more
+	* The end goal being stock presentations that people can use or edit themselves
 * An unreleased project called Grok the Docs
 	* The idea here is to improve documentation through data.
 
@@ -75,6 +77,23 @@ Currently, my living arrangements cost around **$1200/month**:
 This works out to around **$300/week**,
 which is the way that Gittip keeps track of money.
 I hope to achieve independence from money so that I can continue to do work on this important problem.
+
+Why Gittip?
+-----------
+
+Gittip supports me without telling me who is giving money.
+This allows me to maintain and develop projects without regard to who's interests might be impacted by my work.
+This gives me the freedom work on important things,
+without regard for who might stop giving me money.
+
+I also don't want to promise certain outcomes with the money.
+Platforms like Kickstarter and Indiegogo are great for raising money,
+but they require that you offer something in return.
+I am approaching this more as patronage.
+**If you like the work I have done,
+sponsor me to continue to do more good things.**
+My interests will change over time,
+and I don't want to be tied down to a specific goal.
 
 Support me
 ----------
