@@ -78,6 +78,10 @@ This works out to around **$300/week**,
 which is the way that Gittip keeps track of money.
 I hope to achieve independence from money so that I can continue to do work on this important problem.
 
+..note:: This is a baseline existence. 
+		 Simply enough to make sure I don't die or starve.
+		 Going to conferences, buying hardware, and other expenses will need to be figured out too. 
+
 Why Gittip?
 -----------
 
