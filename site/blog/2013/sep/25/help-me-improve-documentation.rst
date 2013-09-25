@@ -1,3 +1,5 @@
+:Date: 2013-09-25 01:00:00
+
 Help me improve documentation
 =============================
 
