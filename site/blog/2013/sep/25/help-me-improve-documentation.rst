@@ -31,8 +31,8 @@ Work I am doing
 	* We currently have meetups in SF, NYC, and Boston, hopefully more coming soon!
 * Writing `documentation`_ about documentation
 	* A growing resource of information about writing docs
-* Writing blog posts and `presentations`_ about documentation
-	* The end goal being stock presentations that people can use or edit themselves
+* Writing `presentations`_ about documentation
+	* The end goal being a set of presentations that people can use to promote documentation at meetups and conferences
 * An unreleased project called Grok the Docs
 	* The idea here is to improve documentation through data.
 
@@ -63,8 +63,8 @@ Budget
 ------
 
 I quit my job earlier this year to hike the Pacific Crest Trail.
-So I currently have very little income,
-and hope to work on improving documentation with my time.
+I have returned home (after only 800 miles, but that's a different story),
+and want to try living life a bit differently.
 
 I am asking for support on Gittip to help me on this endeavor. 
 Currently, my living arrangements cost around **$1200/month**:
