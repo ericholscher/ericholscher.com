@@ -93,7 +93,7 @@ I am approaching this more as patronage.
 **If you like the work I have done,
 sponsor me to continue doing more good things.**
 My interests will change over time,
-and I don't want to be tied down to a specific goal.
+and I want to have freedom to change direction.
 
 Support me
 ----------
