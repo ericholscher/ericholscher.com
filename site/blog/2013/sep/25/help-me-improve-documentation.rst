@@ -103,7 +103,7 @@ I hope that you support me `on Gittip`_.
 
 This is an experiment,
 and I have no idea what is going to happen.
-So please feel free to give me feedback over `email`_ or `Twitter`_
+So please feel free to give me feedback over `email`_ or `Twitter`_.
 
 .. _fund me: https://www.gittip.com/ericholscher/
 .. _your help: https://www.gittip.com/ericholscher/
