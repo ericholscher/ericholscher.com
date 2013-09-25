@@ -31,7 +31,7 @@ Work I am doing
 	* A growing resource of information about writing docs
 * Writing blog posts and `presentations`_ about documentation
 	* Planning to write more
-* An unannounced project called Grok the Docs
+* An unreleased project called Grok the Docs
 	* The idea here is to improve documentation through data.
 
 Why it matters
