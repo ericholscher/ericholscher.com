@@ -103,11 +103,6 @@ Support me
 ----------
 
 
-.. raw:: html
-
-		<script data-gittip-username="ericholscher"
-        src="//gttp.co/v1.js"></script>
-
 I don't want to have to get a job. 
 I want to continue doing work that I love,
 and that I think matters.
@@ -118,6 +113,13 @@ I hope that you support me `on Gittip`_.
 This is an experiment,
 and I have no idea what is going to happen.
 So please feel free to give me feedback over `email`_ or `Twitter`_.
+
+I started today with $1.75 in gittip, the current tally is:
+
+.. raw:: html
+
+		<script data-gittip-username="ericholscher"
+        src="//gttp.co/v1.js"></script>
 
 .. _fund me: https://www.gittip.com/ericholscher/
 .. _your help: https://www.gittip.com/ericholscher/
