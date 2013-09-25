@@ -3,7 +3,7 @@
 Help me improve documentation
 =============================
 
-tl;dr: I don't have a job, help `fund me`_ to make the documentation world better.
+tl;dr: I don't have (or want) a job, help `fund me`_ to make the documentation world better.
 
 A year ago,
 I :doc:`asked </blog/2012/sep/20/help-fund-read-docs>` people to help cover the hosting costs of `Read the Docs`_.
