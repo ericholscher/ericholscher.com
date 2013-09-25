@@ -45,7 +45,7 @@ I want to help improve this situation in many ways.
 
 Read the Docs is the defacto documentation hosting tool for Python.
 It has also spread into many other communities,
-hosting documentation for PHP_, Javascript_, Science_, Java_, and Erlang_.
+hosting documentation for PHP_, Javascript_, Science_, Games_, and Databases_.
 It removes barriers to people writing documentation,
 allowing them to simply get started down a well paved path.
 
@@ -116,8 +116,8 @@ So please feel free to give me feedback over `email`_ or `Twitter`_.
 .. _PHP: http://docs.doctrine-project.org/en/latest/
 .. _Javascript: http://docs.casperjs.org/en/latest/
 .. _Science: http://docs.julialang.org/en/release-0.1-0/
-.. _Java: http://inventory-tweaks.readthedocs.org/en/latest/
-.. _Erlang: http://docs.couchdb.org/en/latest/
+.. _Games: http://inventory-tweaks.readthedocs.org/en/latest/
+.. _Databases: http://docs.couchdb.org/en/latest/
 
 .. _Twitter: https://twitter.com/ericholscher/
 .. _email: eric@ericholscher.com
