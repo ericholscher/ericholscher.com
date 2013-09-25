@@ -32,5 +32,5 @@
 
 	May there be many more adventures for us both.
 
-	Cheers,
-	Eric
+	| Cheers,
+	| Eric
