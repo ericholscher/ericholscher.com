@@ -91,3 +91,4 @@ I hope that you support me `on Gittip`_.
 .. _Javascript: http://docs.casperjs.org/en/latest/
 .. _Science: http://docs.julialang.org/en/release-0.1-0/
 .. _Java: http://inventory-tweaks.readthedocs.org/en/latest/
+.. _Erlang: http://docs.couchdb.org/en/latest/
