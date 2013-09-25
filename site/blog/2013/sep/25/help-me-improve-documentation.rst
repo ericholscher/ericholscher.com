@@ -82,7 +82,7 @@ Why Gittip?
 -----------
 
 Gittip supports me without telling me who is giving money.
-This allows me to maintain and develop projects without regard to who's interests might be impacted by my work.
+This allows me to maintain and develop projects without regard to whose interests might be impacted by my work.
 This gives me the freedom work on important things,
 without regard for who might stop giving me money.
 
