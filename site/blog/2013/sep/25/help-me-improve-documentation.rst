@@ -101,6 +101,10 @@ Support me
 If you think that the work that I'm doing is important,
 I hope that you support me `on Gittip`_.
 
+This is an experiment,
+and I have no idea what is going to happen.
+So please feel free to give me feedback over `email`_ or `Twitter`_
+
 .. _fund me: https://www.gittip.com/ericholscher/
 .. _your help: https://www.gittip.com/ericholscher/
 .. _Read the Docs: http://readthedocs.org
@@ -114,3 +118,6 @@ I hope that you support me `on Gittip`_.
 .. _Science: http://docs.julialang.org/en/release-0.1-0/
 .. _Java: http://inventory-tweaks.readthedocs.org/en/latest/
 .. _Erlang: http://docs.couchdb.org/en/latest/
+
+.. _Twitter: https://twitter.com/ericholscher/
+.. _email: eric@ericholscher.com
