@@ -49,7 +49,7 @@ Joining together allows us to present a unified presence for improving documenta
 Grok the Docs is a project that is still in development.
 The goal is to use analytics data to improve the browsing experience.
 It is very much a research project,
-but I really hope to use Grok the Docs as a platform to improve the experience of reading and writing documentation.
+but I really hope Grok the Docs will improve the experience of reading and writing documentation.
 
 Budget
 ------
