@@ -24,8 +24,8 @@ Work I am doing
 * Co-organizing and producing `Write the Docs conference`_
 	* A community, non-profit conference that gathers 250 people in Portland to talk docs
 * Helping organize regional Write the Docs meetups
-	* We currently have meetups in SF, NYC, and Boston. 
-* Writing `documentation`- about documentation
+	* We currently have meetups in SF, NYC, and Boston, hopefully more coming soon!
+* Writing `documentation`_ about documentation
 	* A growing resource of information about writing docs
 * Writing blog posts and `presentations`_ about documentation
 	* Planning to write more
