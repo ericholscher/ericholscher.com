@@ -98,6 +98,10 @@ and I want to have freedom to change direction.
 Support me
 ----------
 
+**I don't want to have to get a job. 
+I want to continue doing work that I love,
+and that I think matters**
+
 If you think that the work that I'm doing is important,
 I hope that you support me `on Gittip`_.
 
