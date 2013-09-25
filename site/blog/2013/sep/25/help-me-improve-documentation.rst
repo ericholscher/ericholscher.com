@@ -6,9 +6,13 @@ Help me improve documentation
 A year ago,
 I :doc:`asked </blog/2012/sep/20/help-fund-read-docs>` people to help cover the hosting costs of `Read the Docs`_.
 It was successful and the site has been funded ever since.
+That money never went to helping support other aspects of the site,
+including development,
+support,
+and advocacy.
 
 In that time,
-I have gone on to do a lot more to help improve documentation in the open source world.
+I have gone on to do a lot more to help improve the documentation world.
 I want to continue to do this work,
 with `your help`_.
 
