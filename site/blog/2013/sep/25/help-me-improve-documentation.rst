@@ -45,7 +45,7 @@ I want to help improve this situation in many ways.
 
 Read the Docs is the defacto documentation hosting tool for Python.
 It has also spread into many other communities,
-hosting documentation for PHP_, Javascript_, Science_, Games_, and Databases_.
+hosting documentation for PHP_, Javascript_, Science_, Games_, Databases_, and  more.
 It removes barriers to people writing documentation,
 allowing them to simply get started down a well paved path.
 
