@@ -30,9 +30,9 @@ Work I am doing
 * Helping organize regional Write the Docs meetups
 	* We currently have meetups in SF, NYC, and Boston, hopefully more coming soon!
 * Writing `documentation`_ about documentation
-	* A growing resource of information about writing docs
+	* A growing resource of information about writing docs.
 * Writing `presentations`_ about documentation
-	* The end goal being a set of presentations that people can use to promote documentation at meetups and conferences
+	* The end goal being a set of presentations that people can use to promote documentation at meetups and conferences.
 * An unreleased project called Grok the Docs
 	* The idea here is to improve documentation through data.
 
