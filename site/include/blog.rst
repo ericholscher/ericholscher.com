@@ -16,7 +16,7 @@ Blog Entries
    /blog/2013/jun/*/*
    /blog/2013/jul/*/*
    /blog/2013/aug/*/*
-   /blog/2013/sept/*/*
+   /blog/2013/sep/*/*
    /blog/2013/oct/*/*
    /blog/2013/nov/*/*
    /blog/2013/dec/*/*
