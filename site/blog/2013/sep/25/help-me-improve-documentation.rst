@@ -52,7 +52,7 @@ allowing them to simply get started down a well paved path.
 Through my work on Write the Docs,
 we are building a community around documentation.
 This community is helping to push the state of the art.
-Joining together allows us to present a unified presence for improving documentation in the open source, and proprietary software worlds.
+Joining together allows us to present a unified face for improving documentation in the open source, and proprietary software worlds.
 
 Grok the Docs is a project that is still in development.
 The goal is to use analytics data to improve the browsing experience.
