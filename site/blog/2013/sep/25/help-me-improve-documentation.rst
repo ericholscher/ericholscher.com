@@ -26,7 +26,7 @@ Work I am doing
 * Developing and maintaining `Read the Docs`_
 	* A website that hosts documentation for ~4000 projects, and has over 5 million pageviews/month.
 * Co-organizing and producing `Write the Docs conference`_
-	* A community, non-profit conference that gathers 250 people in Portland to talk docs
+	* A community, non-profit conference that gathers 250 people in Portland to talk docs.
 * Helping organize regional Write the Docs meetups
 	* We currently have meetups in SF, NYC, and Boston, hopefully more coming soon!
 * Writing `documentation`_ about documentation
