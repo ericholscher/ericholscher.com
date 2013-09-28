@@ -1,29 +1,20 @@
-Writing docs: A beginners guide to writing documentation
-========================================================
+A beginners guide to writing documentation
+==========================================
 
-.. contents:: Table of Contents
-   :depth: 2
-
-| Camera pans in from stage left.
-| It shows a text editor, open to a blank page
-| A person hunched in front, head to desk.
+	| Camera pans from stage left.
+	| It shows a text editor, open to a blank page
+	| A person hunched in front, head to desk.
 
 The scene above is well known to everyone who writes for a living.
 The mixed emotions of a blank page.
-Holding all posibility, breeding both dispair and excitement.
+Holding all possibility, breeding both despair and excitement.
 
 That is the scene I am trying to stop from playing out.
 
 This will be a guide to documentation your first project.
 The first time is always the hardest,
-and I hope this guide will get you started down the path without too much tumult.
+and I hope this guide will get you started down the righteous path.
 
-I'd like to address three major issues:
-
-	* Why write docs
-	* What technology
-	* What to write
-	
 Why write docs
 --------------
 
@@ -84,7 +75,7 @@ A mix of terror and excitement.
 | I am a real open source developer!
 | Oh god, someone else is using my code..
 
-Writing good documentation will help alieve some of these fears.
+Writing good documentation will help alleviate some of these fears.
 A lot of this fear comes from putting something into the world.
 My favorite quote about this is something along these lines:
 
@@ -142,7 +133,7 @@ which is a useful skill to have as a programmer.
 Writing also becomes easier over time.
 If you don't write for many months,
 it is a lot harder to start writing again.
-Keeping your projects documented will keep you writing at a reasonable cadance.
+Keeping your projects documented will keep you writing at a reasonable cadence.
 
 What technology
 ---------------
@@ -152,7 +143,7 @@ I will present a well-paved path to walk down,
 and after you have the basic idea, 
 you can expand your scope.
 The tools should be powerful and easy to use.
-This removes obsticles to actually putting words on the page.
+This removes obstacles to actually putting words on the page.
 
 Version controlled plain text
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -207,9 +198,6 @@ you generally just need to appeal to two audiences:
 Users are people who simply want to use your code,
 and don't care how it works.
 Developers are people who want to contribute back to your code.
-
-What to include
----------------
 
 What problem your project solves.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
