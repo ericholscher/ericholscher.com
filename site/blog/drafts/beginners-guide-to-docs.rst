@@ -15,8 +15,11 @@ This will be a guide to documenting your first project.
 The first time is always the hardest,
 and I hope this guide will get you started down the righteous path.
 
+At the end of this guide,
+you should have a project with a great README.
 This document includes a :ref:`template` that you can use to get started.
-Feel free to read this document fully, or use it as a reference for writing your docs.
+Feel free to read this document fully, 
+or use it as a reference.
 
 Why write docs
 --------------
