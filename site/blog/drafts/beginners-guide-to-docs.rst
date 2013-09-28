@@ -261,7 +261,7 @@ BSD? MIT? GPL? This stuff might not matter to you, but the people who want to us
 Template
 --------
 
-A simple template for you to start with, for your README::
+A simple template for you to start with, for your ``README.md``::
 
 	$project
 	========
