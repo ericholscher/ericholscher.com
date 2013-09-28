@@ -19,8 +19,6 @@ At the end of this guide,
 you should have a project with a great README.
 There is a :ref:`template` that you can use to get started.
 
-
-
 .. _why:
 
 Why write docs
@@ -117,7 +115,6 @@ A lot of people have never contributed before,
 and documentation changes are a lot less scary than code changes.
 If you don't have documentation,
 you will miss out on a whole class of contributors.
-
 
 It makes your code better
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -288,7 +285,6 @@ A simple template for you to start with, for your ``README.md``::
 	$project will solve your problem of where to start with documentation,
 	by providing a basic explanation of how to do it easily.
 
-
 	Look how easy it is to use:
 
 	    import project
@@ -301,14 +297,12 @@ A simple template for you to start with, for your ``README.md``::
 	- Be awesome
 	- Make things faster
 
-
 	Installation
 	------------
 
 	Install $project by running:
 
 	    install project
-
 
 	Contribute
 	----------
