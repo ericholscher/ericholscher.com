@@ -169,7 +169,7 @@ def create_feed_item(app, docname, templatename, ctx, doctree):
     #     author_name=None, author_link=None, pubdate=None, comments=None,
     #     unique_id=None, enclosure=None, categories=(), item_copyright=None,
     #     ttl=None,
-    link = app.config.feed_base_url + '/' + ctx['current_page_name'] + ctx['file_suffix']
+    link = app.config.feed_base_url + '/' + ctx['current_page_name'] + '/' #ctx['file_suffix']
     item = {
       'title': ctx.get('title'),
       'link': link,
