@@ -15,6 +15,9 @@ This will be a guide to documenting your first project.
 The first time is always the hardest,
 and I hope this guide will get you started down the righteous path.
 
+This document includes a :ref:`template` that you can use to get started.
+Feel free to read this document fully, or use it as a reference for writing your docs.
+
 Why write docs
 --------------
 
@@ -155,6 +158,12 @@ We also have some of the best tooling available for tracking changes to files.
 Why would we forgo using those tools when writing documentation.
 This workflow is powerful, and familiar to developers.
 
+We will be using Markdown,
+as it's the simplest plain text format.
+You can learn more about markdown with `this tutorial`_ 
+
+.. _this tutorial: http://www.markdowntutorial.com/
+
 Basic Example
 ~~~~~~~~~~~~~
 
@@ -257,6 +266,7 @@ Your project's license
 
 BSD? MIT? GPL? This stuff might not matter to you, but the people who want to use your code will care about this a whole lot. Think about what you want to accomplish with your license, and please only pick one of the standard licenses that you see around the web.
 
+.. _template:
 
 Template
 --------
