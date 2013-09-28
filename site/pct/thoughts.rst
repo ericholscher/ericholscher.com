@@ -1,7 +1,11 @@
 Thoughts
 --------
 
-.. note:: This was written on the trail in Idyllwild, mile ~150.
+This was written on the trail in Idyllwild, mile ~150.
+It's amazing how fully formed my thoughts on the trail were at such an early junction.
+
+Text
+~~~~
 
 The trail has been an amazing mental experience as well. I've run into some amazing people, and it's only been about 10 days. I've hiked with the same group (Team Horseshoe) until now, and have leap-frogged a few other groups (Team America, Skip & 2Step, Legend, Double Sprainbow & Ollie, Mike & Jill). It feels like I've known these folks for years, and it's been less than 2 weeks. The trail builds an amazing kind of rapport, where you can let your guard down and get to know people well. The removal of "What do you do?" from the common vocabulary of life is a welcome one. It feels like you get farther into the interesting tidbits of life faster. The small talk becomes deeper.
 
