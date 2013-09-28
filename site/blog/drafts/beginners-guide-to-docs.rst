@@ -11,7 +11,7 @@ Holding all possibility, breeding both despair and excitement.
 
 That is the scene I am trying to stop from playing out.
 
-This will be a guide to documentation your first project.
+This will be a guide to documenting your first project.
 The first time is always the hardest,
 and I hope this guide will get you started down the righteous path.
 
