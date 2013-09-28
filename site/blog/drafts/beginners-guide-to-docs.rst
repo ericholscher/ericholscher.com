@@ -17,9 +17,11 @@ and I hope this guide will get you started down the righteous path.
 
 At the end of this guide,
 you should have a project with a great README.
-This document includes a :ref:`template` that you can use to get started.
-Feel free to read this document fully, 
-or use it as a reference.
+There is a :ref:`template` that you can use to get started.
+
+
+
+.. _why:
 
 Why write docs
 --------------
@@ -141,6 +143,8 @@ If you don't write for many months,
 it is a lot harder to start writing again.
 Keeping your projects documented will keep you writing at a reasonable cadence.
 
+.. _tech:
+
 What technology
 ---------------
 
@@ -192,6 +196,8 @@ Your first steps in documentation should go into your README.
 Code hosting services will render your README into HTML automatically if you provide the proper extension.
 It is also the first interaction that most users will have with your project.
 So having a solid README will serve your project well.
+
+.. _write:
 
 What to write
 -------------
