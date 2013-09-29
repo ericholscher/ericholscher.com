@@ -1,7 +1,7 @@
-:Date: 2013-09-29
+.. :Date: 2013-09-29
 
-A beginners guide to writing documentation
-==========================================
+Announcing a beginners guide to writing documentation
+=====================================================
 
 A few days ago I :doc:`started a campaign </blog/2013/sep/25/help-me-improve-documentation>` to improve documentation.
 Now I have the first results to show from the work.
