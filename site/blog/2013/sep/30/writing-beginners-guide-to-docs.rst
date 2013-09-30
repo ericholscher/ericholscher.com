@@ -1,4 +1,4 @@
-.. :Date: 2013-09-30 09:00:00
+:Date: 2013-09-30 09:00:00
 
 Writing a Beginners Guide to Documentation
 ==========================================
