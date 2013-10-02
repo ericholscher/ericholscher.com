@@ -4,7 +4,7 @@ Sphinx Live Preview
 ===================
 
 For a long time, 
-there has been a live preview site for reStructuredText: http://rst.ninjs.org/
+there has been a live preview site for reStructuredText: http://rst.ninjs.org/.
 It is really fantastic for learning the language.
 The immediate feedback is really valuable in helping you expirment and see how things work.
 
@@ -14,7 +14,7 @@ and then end up on that page,
 and random things don't work because they are extensions to reStructuredText.
 So, I went ahead and forked the app to support Sphinx.
 
-I present: http://livesphinx.herokuapp.com/
+I present: http://livesphinx.herokuapp.com/.
 
 It is still very much a work in progress.
 The output should be themed nicely,
