@@ -8,12 +8,11 @@ there has been a live preview site for reStructuredText: http://rst.ninjs.org/
 It is really fantastic for learning the language.
 The immediate feedback is really valuable in helping you expirment and see how things work.
 
-
-I think that this tool would be great for people to have with Sphinx as well.
+I think that this tool would be great for people to have with `Sphinx`_ as well.
 I know a lot of people use Sphinx,
 and then end up on that page,
 and random things don't work because they are extensions to reStructuredText.
-So, I went ahead and ported the app to support Sphinx.
+So, I went ahead and forked the app to support Sphinx.
 
 I present: http://livesphinx.herokuapp.com/
 
@@ -27,6 +26,7 @@ This work was done as part of my :doc:`ongoing work </blog/2013/sep/25/help-me-i
 If you think this work is important,
 you should `support me on Gittip`_.
 
+.. _Sphinx: http://sphinx-doc.org/
 .. _email: mailto:eric@ericholscher.com
 .. _tweet: http://twitter.com/ericholscher
 .. _support me on Gittip: http://www.gittip.com/ericholscher
