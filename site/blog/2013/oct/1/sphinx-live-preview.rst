@@ -22,7 +22,7 @@ and support syntax highlighting.
 If you have any feedback or requests,
 please `tweet`_ or `email`_ me.
 
-This work was done as part of my :doc:`ongoing work </blog/2013/sep/25/help-me-improve-documentation>` to improve documentation.
+This project was done as part of my :doc:`ongoing work </blog/2013/sep/25/help-me-improve-documentation>` to improve documentation.
 If you think this work is important,
 you should `support me on Gittip`_.
 
