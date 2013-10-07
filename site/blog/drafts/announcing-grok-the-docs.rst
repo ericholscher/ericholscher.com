@@ -1,3 +1,5 @@
+.. :date: 2013-10-08 2:00
+
 Announcing Grok the Docs
 ========================
 
