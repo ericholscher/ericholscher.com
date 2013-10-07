@@ -33,10 +33,11 @@ which is probably where they want to go too.
 This is very much just a tech demo currently.
 I would love feedback from folks about how I could improve the display of the data.
 Currently it's something that you `need to enable`_.
-Also, it would be great if you have ideas for other additoinal functionality that could be added.
+
+It would be great if you have ideas for other additoinal functionality that could be added.
 This is very much an experiment currently,
 so I'd love to hear any thoughts you have.
-Please, `email`_ or `tweet`_ me if you have thoughts.
+Please `email`_ or `tweet`_ me if you have feedback or ideas.
 
 Once the code is more baked and solid,
 the plan is to turn it on for all Read the Docs users.
