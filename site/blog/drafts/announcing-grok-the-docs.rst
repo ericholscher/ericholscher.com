@@ -43,6 +43,13 @@ and will likely remain so.
 That said,
 it will always be free for documentation on Read the Docs.
 
+This project was done as part of my :doc:`ongoing work </blog/2013/sep/25/help-me-improve-documentation>` to improve documentation.
+If you think this work is important,
+you should `support me on Gittip`_.
+
+.. _Read the Docs: http://rtfd.org
+.. _Grok the Docs: https://api.grokthedocs.com
+.. _support me on Gittip: http://www.gittip.com/ericholscher
 
 Example
 -------
@@ -52,5 +59,4 @@ This shows how user might harness this data.
 .. image:: https://dl.dropboxusercontent.com/u/372293/GTD-Example.gif
 	:width: 800px
 
-.. _Read the Docs: http://rtfd.org
-.. _Grok the Docs: https://api.grokthedocs.com
+	
