@@ -9,8 +9,8 @@ Announcing Grok the Docs
 I've asked myself these questions a lot.
 Historically I have put Google Analytics on my doc pages,
 and called it good.
-I would browse over the Analytics data every once in a while,
-gleaning basically zero interesting data out of it.
+I would browse over the data every once in a while,
+gleaning basically zero information out of it.
 
 `Read the Docs`_ hosts a lot of documentation,
 and I want to help these folks understand how their docs are being used.
@@ -19,9 +19,10 @@ So I have been working on a project for the last month called `Grok the Docs`_.
 `Grok the Docs`_ is a bit different,
 with the main difference being it embeds the information in the page for you.
 This is interesting because it adds context to the data.
+I believe that context is the first step from turning data into information.
 The main interface to Grok the Docs are keyboard shortcuts within the documentation page.
 So you can access information about the current page you're on,
-while you're browsing the documentation.
+while you're browsing.
 Check out the :ref:`example` below to see it in action.
 
 Surfacing analytic data in the page is great for the maintainer and user alike.
