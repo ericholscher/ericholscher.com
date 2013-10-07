@@ -50,7 +50,7 @@ Example
 This shows how user might harness this data.
 
 .. image:: https://dl.dropboxusercontent.com/u/372293/GTD-Example.gif
-
+	:width: 500px
 
 .. _Read the Docs: http://rtfd.org
 .. _Grok the Docs: https://api.grokthedocs.com
