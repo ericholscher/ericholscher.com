@@ -4,7 +4,7 @@ Announcing Grok the Docs
 ========================
 
 	| Are my docs working? 
-	| Are users getting what they need?
+	| Are folks getting what they need?
 
 I've asked myself these questions a lot.
 Historically I have put Google Analytics on my doc pages,
