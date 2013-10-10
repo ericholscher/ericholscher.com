@@ -19,8 +19,8 @@ Information
     projects
     resume
 
-Outdoorsy stuff
----------------
+Activities
+----------
 
 .. toctree::
     :maxdepth: 1
