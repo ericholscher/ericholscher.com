@@ -11,7 +11,7 @@ A Django Dash project, allowing users to host their Sphinx documentation easily.
 
 A conference about all things documentation, held in Portland, Oregon.
 
-`Write the Docs Documentation`_ 
+* `Write the Docs Documentation`_ 
 
 A resource for writing better documentation, and spreading the general culture of writing documentation in software.
 
