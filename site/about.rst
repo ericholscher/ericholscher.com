@@ -1,5 +1,5 @@
 .. image:: /_static/img/me.jpg
-   :height: 300px
+   :height: 400px
 
 About me
 ========
