@@ -6,7 +6,7 @@ Photo: Mount Whitney (14505 ft) at Sunrise
 Backpacking
 ===========
 
-Backpacking is a hobby that I have recently picked up since moving to the Pacific Northwest. 
+Backpacking is a hobby that I have picked up since moving to the Pacific Northwest. 
 
 
 Pacific Crest Trail
