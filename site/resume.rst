@@ -1,4 +1,4 @@
-Resume
+Résumé
 ======
 
 | Eric Holscher
