@@ -9,6 +9,16 @@ I currently live in Portland, Oregon, and love to explore the outdoors.
 Whether on bike or foot, I spend as much time as possible out and about,
 checking out the various beauty that the world holds.
 
+Information
+-----------
+
+.. toctree::
+    :maxdepth: 1
+
+    about
+    projects
+    resume
+
 Outdoorsy stuff
 ---------------
 
@@ -18,14 +28,5 @@ Outdoorsy stuff
     bike
     backpacking
 
-Random bits
------------
-
-.. toctree::
-    :maxdepth: 1
-
-    about
-    projects
-    resume
 
 .. include:: include/blog.rst
