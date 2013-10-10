@@ -32,10 +32,10 @@ I then went down to a friend's going away party.
 Main Ride
 ~~~~~~~~~
 
-Total: 185 miles
-Day 1: 62 miles - Beaverton to Keizer Rapids City Park
-Day 2: 68 miles - Keizer Rapids City Park to Peoria Boat Dock
-Day 3: 55 miles - Peoria Boat Dock to Eugene
+| Total: 185 miles
+| Day 1: 62 miles - Beaverton to Keizer Rapids City Park
+| Day 2: 68 miles - Keizer Rapids City Park to Peoria Boat Dock
+| Day 3: 55 miles - Peoria Boat Dock to Eugene
 
 Thoughts
 ~~~~~~~~
