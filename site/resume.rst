@@ -33,7 +33,7 @@ Conferences
 Speaking
 ---------
 
-Spoken at the following conferences on Read the Docs, IRC, Testing, and Documentation:
+Spoken at the following conferences on Read the Docs, IRC bots, Testing, and Documentation:
 
 * Open Source Bridge 2012, 2011
 * Pyweb Summit 2012
