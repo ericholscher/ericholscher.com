@@ -28,6 +28,7 @@ Conferences
 * Helped organize the Write the Docs conference - http://conf.writethedocs.org
     * 200+ people came to talk about documentation
     * Portland, Oregon on April 8-9 2013
+    * Has spawned local users groups in multiple cities
 
 Speaking
 ---------
