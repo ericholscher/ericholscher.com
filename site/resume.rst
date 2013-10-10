@@ -19,7 +19,7 @@ Open Source Projects
 * Read the Docs - http://readthedocs.org
     * Over 5000 projects
     * Over 5 million page views a month
-    * Standard community hosting for Python community
+    * Standard hosting for Python community
 * Member of the Python Software Foundation
 
 Conferences
