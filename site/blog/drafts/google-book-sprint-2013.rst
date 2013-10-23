@@ -8,10 +8,10 @@ It is an event that brings open source projects together to write a book in a we
 20 people and 3 projects produced books over a sunny and well-fed week.
 Kindly hosted by Google,
 we spent 5 days hanging out at their campus writing away. 
-The three projects involed were: 
+The three projects involved were: 
 
 	* OpenMRS - A medical records system used in many developing countries, originally created to help with AIDS in Africa.
-	* BRL-CAD - A CAD program for developing 3d models, one of the first open source projects from the military.
+	* BRL-CAD - A CAD program for developing 3D models, one of the first open source projects from the military.
 	* Mallard - An XML based documentation framework, from the Gnome documentation team.
 
 I was what they called a "free agent",
@@ -33,7 +33,7 @@ Monday
 Heresy
 ~~~~~~
 
-On monday,
+On Monday,
 we got together to play some games to break the ice.
 We were asked to write our most polarizing documentation viewpoints on an index card,
 and they were read out loud in front of the room.
@@ -52,14 +52,14 @@ Some people were developers,
 some were tech writers,
 some were students,
 some where teachers,
-people ranged all across the specrum of experience.
+people ranged all across the spectrum of experience.
 You learned to respect where people were coming from with their thoughts.
 
 Audience and Outcomes
 ~~~~~~~~~~~~~~~~~~~~~
 
 After the ice breakers, 
-we did an exercise where each member of the team was broken into a seperate group, 
+we did an exercise where each member of the team was broken into a separate group, 
 and had to write down their views for the book.
 We were told to have **up to 3 audiences in mind, and 3 take aways someone would have from reading the book**.
 This allowed people to flesh out their idea of the book without other members.
@@ -75,7 +75,7 @@ so that they could see the vision for the book.
 As a project group,
 we then chose the audiences and takeaways that we felt people would have.
 This is the part where I joined the OpenMRS group.
-They were writing an introductary book for developers who wanted to get involved in the project,
+They were writing an introductory book for developers who wanted to get involved in the project,
 and I felt I could help out as a developer coming to the project fresh. 
 
 We assumed everyone would be new to OpenMRS. We then broke this down into 3 types of things people might be new to:
@@ -87,7 +87,7 @@ We assumed everyone would be new to OpenMRS. We then broke this down into 3 type
 The outcomes we wanted people to come away with were:
 
 * Understand how to become a member of the OpenMRS community
-* Feel confident to write a basic addon module
+* Feel confident to write a basic add-on module
 * 
 
 
@@ -97,11 +97,11 @@ Tuesday
 Table of Contents
 ~~~~~~~~~~~~~~~~~
 
-On tuesday we got together in the morning to come up with a table of contents based on our audience and outcomes.
+On Tuesday we got together in the morning to come up with a table of contents based on our audience and outcomes.
 Having the audience and outcomes written down really helped guide and focus the book.
 At each step someone could ask "is this really serving our intended audience and outcomes?"
 We were to have only 2 and a half days to actually write,
-so we needed to aggresively trim the content to something that we could accomplish in that time.
+so we needed to aggressively trim the content to something that we could accomplish in that time.
 
 Our table of contents ended up looking something like:
 
@@ -109,7 +109,7 @@ Our table of contents ended up looking something like:
 * Stuff
 * Things
 
-Promition Plan
+Promotion Plan
 ~~~~~~~~~~~~~~
 
 We also talked through a plan to release the book into the community for the project.
@@ -117,10 +117,10 @@ There was an understanding that if you don't promote the book,
 the time spent writing it might go to waste.
 Having a way to build momentum for the project in the community would ensure the book continued to live on after the week.
 
-Our original promition plan looked something like:
+Our original promotion plan looked something like:
 
 * Blog Post
-* Tell devleopers
+* Tell developers
 * Add to wiki
   
 Compare and Contrast
@@ -131,7 +131,7 @@ we sent a member to each other team to hear what they had come up with.
 We were encouraged to steal their ideas if they had something interesting,
 and to provide feedback if we saw something missing.
 This worked really well at removing group think again,
-and making sure that you didn't have a huge blindspot in your plans.
+and making sure that you didn't have a huge blind spot in your plans.
 
 
 Start writing
@@ -169,14 +169,14 @@ We would each read a chapter and then talk over each of the issues that we found
 Friday
 ------
 
-On Friday we got together to do a postmortum on the process.
+On Friday we got together to do a postmortem on the process.
 We talked again about the promotion plan,
 assigning items to specific people to make sure they got done.
 
 Take aways
 ----------
 
-I think the mixing of ideas behind groups was really key to success in this endeavour.
+I think the mixing of ideas behind groups was really key to success in this endeavor.
 Group think is potent,
 and having someone with an outside perspective come in can really reveal your blind spots.
 
