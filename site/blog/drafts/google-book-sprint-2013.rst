@@ -106,7 +106,7 @@ At each step someone could ask "is this really serving our intended audience and
 We were to have only 2 and a half days to actually write,
 so we needed to aggressively trim the content to something that we could accomplish in that time.
 
-Our table of contents ended up looking something like:
+Our table of contents ended up looking like:
 
 * Introduction
 	* Welcome to OpenMRS!
