@@ -30,12 +30,12 @@ as long as you keep the scope small.
 Monday
 -------
 
-Heresey in the midst
-~~~~~~~~~~~~~~~~~~~~
+Heresy
+~~~~~~
 
 On monday,
 we got together to play some games to break the ice.
-We were asked to write our most flagrent and polarizing documentation viewpoints on an index card,
+We were asked to write our most polarizing documentation viewpoints on an index card,
 and they were read out loud in front of the room.
 People arranged themselves along a spectrum of agreement and disagreement.
 Physically arranged themselves, 
