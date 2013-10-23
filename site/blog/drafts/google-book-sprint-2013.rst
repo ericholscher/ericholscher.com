@@ -27,6 +27,10 @@ and possibly think about doing it yourself.
 After this experience I think it is something that anyone can do,
 as long as you keep the scope small.
 
+You can see the `finished book`_ online now.
+
+.. _finished book: http://flossmanuals.net/openmrs-developers-guide/
+
 Monday
 -------
 
@@ -82,14 +86,13 @@ We assumed everyone would be new to OpenMRS. We then broke this down into 3 type
 
 * Developers new to Health IT
 * Developers new to Open Source
-* Developers new to 
+* Developers new to Software Development in General
   
 The outcomes we wanted people to come away with were:
 
 * Understand how to become a member of the OpenMRS community
-* Feel confident to write a basic add-on module
-* 
-
+* Be able to get the OpenMRS environment set up
+* Feel confident doing development on OpenMRS modules
 
 Tuesday
 -------
@@ -105,9 +108,26 @@ so we needed to aggressively trim the content to something that we could accompl
 
 Our table of contents ended up looking something like:
 
-* Intro
-* Stuff
-* Things
+* Introduction
+	* Welcome to OpenMRS!
+* Saving Lives With Software
+	* The Need for Health IT
+	* Our Response
+	* OpenMRS Today
+* Community
+	* Working Cooperatively
+	* Collaboration Tools
+* Technology
+	* Architecture
+	* Data Model
+	* Development Process
+	* Get Set Up
+* Case Study
+	* Creating your First Module
+* What's Next?
+	* Get Involved
+	* Get Support
+	* Developer Checklist
 
 Promotion Plan
 ~~~~~~~~~~~~~~
@@ -172,6 +192,12 @@ Friday
 On Friday we got together to do a postmortem on the process.
 We talked again about the promotion plan,
 assigning items to specific people to make sure they got done.
+
+This was all along the theme of continuing momentum forward.
+We now had a list of tasks,
+with people who were responsible for getting them done.
+This made me feel a lot more confident that our work would live on,
+and really make a difference in the community.
 
 Take aways
 ----------
