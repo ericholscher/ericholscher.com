@@ -136,7 +136,7 @@ Promotion Plan
 We also talked through a plan to release the book into the community.
 There was an understanding that if you don't promote the book,
 the time spent writing it might go to waste.
-Having a way to build momentum for the project in the community would ensure the book continued to live on after the week.
+Having a way to build momentum for the project in the community would ensure the book continued to live on after this week.
 
 Our original promotion plan looked something like:
 
