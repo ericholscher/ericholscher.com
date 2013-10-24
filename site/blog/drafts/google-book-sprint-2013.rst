@@ -27,7 +27,7 @@ and possibly think about doing it yourself.
 After this experience I think it is something that anyone can do,
 as long as you keep the scope small.
 
-You can see the `finished book`_ online now.
+You can see the `finished book`_ for OpenMRS online.
 
 .. _finished book: http://flossmanuals.net/openmrs-developers-guide/
 
