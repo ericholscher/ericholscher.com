@@ -11,8 +11,8 @@ we spent 5 days hanging out at their campus writing away.
 The three projects involved were: 
 
 	* OpenMRS - A medical records system used in many developing countries, originally created to help with AIDS in Africa.
-	* BRL-CAD - A CAD program for developing 3D models, one of the first open source projects from the military.
-	* Mallard - An XML based documentation framework, from the Gnome documentation team.
+	* BRL-CAD - A CAD program for developing 3D models, one of the first open source projects from the United States Military.
+	* Mallard - An XML based documentation framework, from the Gnome Documentation Team.
 
 I was what they called a "free agent",
 someone not involved in a specific project that would help out.
