@@ -220,3 +220,7 @@ You can't sit and write 24/7,
 and having a place to escape and let you ideas breathe really allows you to form them.
 I think throughout the week everyone was thinking about their book pretty non-stop,
 but were weren't necessarily writing non-stop.
+
+I come away from this experience with a lot of energy and perspective.
+Writing a book is something that I can do,
+with a little help from my friends.
