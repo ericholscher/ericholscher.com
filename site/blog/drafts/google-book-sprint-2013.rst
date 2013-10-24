@@ -55,7 +55,7 @@ This exercise acted to show how diverse a crowd we had.
 Some people were developers, 
 some were tech writers,
 some were students,
-some where teachers,
+some were teachers,
 people ranged all across the spectrum of experience.
 You learned to respect where people were coming from with their thoughts.
 
