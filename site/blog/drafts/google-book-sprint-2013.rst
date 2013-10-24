@@ -67,7 +67,7 @@ After the ice breakers,
 we did an exercise where each member of the team was broken into a separate group, 
 and had to write down their views for the book.
 We were told to have **up to 3 audiences in mind, and 3 take aways someone would have from reading the book**.
-This allowed people to flesh out their idea of the book without other members.
+This allowed people to flesh out their idea of the book without other members of their team present.
 The idea behind this exercise was to eliminate the group-think that happens when a group works to shape an idea.
 It also allowed us free agents to get an idea of what book people were writing,
 and which we might be able to help out with.
