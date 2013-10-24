@@ -146,7 +146,7 @@ Our original promotion plan looked like:
 * Tell developers in the project about it, so they can recommend it to people
 * Add it to all of our beginner documentation
 * Talk with existing developers to make sure the information in the book is correct
-* Add a JIRA category so we can track issues with the book
+* Add a JIRA project so we can track issues with the book
 * Add a survey so that we can get feedback on the book
 * Make sure that updating the book is added to release processes
   
@@ -193,7 +193,7 @@ Each section had an average of 3 chapters,
 and you looked to make sure the flow of all the chapters made sense together.
 We would each read a chapter and then talk over each of the issues that we found.
 
-At 6pm on Friday we called the books done,
+At 6pm on Thursday we called the books done,
 and all celebrated. 
 
 Friday
