@@ -103,8 +103,8 @@ Table of Contents
 
 On Tuesday we got together in the morning to come up with a table of contents based on our audience and outcomes.
 Having the audience and outcomes written down really helped guide and focus the book.
-At each step someone could ask "is this really serving our intended audience and outcomes?"
-We were to have only 2 and a half days to actually write,
+At each step someone could ask "is this really serving our intended audience?"
+We only had 2 and a half days to actually write,
 so we needed to aggressively trim the content to something that we could accomplish in that time.
 
 Our table of contents ended up looking like:
