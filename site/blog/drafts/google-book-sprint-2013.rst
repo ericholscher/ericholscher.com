@@ -222,5 +222,5 @@ I think throughout the week everyone was thinking about their book pretty non-st
 but were weren't necessarily writing non-stop.
 
 I come away from this experience with a lot of inspiration and perspective.
-Writing a book is something that I can do,
-with a little help from my friends.
+Writing a book is something that anyone can do,
+with a little help from their friends.
