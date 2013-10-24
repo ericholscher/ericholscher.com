@@ -78,7 +78,7 @@ This is the stage where free agents chose their team as well,
 so that they could see the vision for the book.
 
 As a project group,
-we then chose the audiences and takeaways that we felt people would have.
+we then chose the audiences and takeaways for the book.
 This is the part where I joined the OpenMRS group.
 They were writing an introductory book for developers who wanted to get involved in the project,
 and I felt I could help out as a developer coming to the project fresh. 
