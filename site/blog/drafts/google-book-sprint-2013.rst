@@ -1,5 +1,5 @@
-Google Summer of Code Book Sprint
-=================================
+Google Summer of Code Book Sprint 2013
+======================================
 
 Or how I learned to stop worrying and write a book.
 
