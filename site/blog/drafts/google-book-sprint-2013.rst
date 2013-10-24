@@ -138,11 +138,15 @@ There was an understanding that if you don't promote the book,
 the time spent writing it might go to waste.
 Having a way to build momentum for the project in the community would ensure the book continued to live on after this week.
 
-Our original promotion plan looked something like:
+Our original promotion plan looked like:
 
-* Blog Post
-* Tell developers
-* Add to wiki
+* Blog post announcing the book on the project blog
+* Tell developers in the project about it, so they can recommend it to people
+* Add it to all of our beginner documentation
+* Talk with existing developers to make sure the information in the book is correct
+* Add a JIRA category so we can track issues with the book
+* Add a survey so that we can get feedback on the book
+* Make sure that updating the book is added to release processes
   
 Compare and Contrast
 ~~~~~~~~~~~~~~~~~~~~
