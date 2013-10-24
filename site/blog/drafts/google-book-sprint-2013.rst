@@ -191,6 +191,9 @@ Each section had an average of 3 chapters,
 and you looked to make sure the flow of all the chapters made sense together.
 We would each read a chapter and then talk over each of the issues that we found.
 
+At 6pm on Friday we called the books done,
+and all celebrated. 
+
 Friday
 ------
 
