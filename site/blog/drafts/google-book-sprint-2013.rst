@@ -57,7 +57,8 @@ some were tech writers,
 some were students,
 some were teachers,
 people ranged all across the spectrum of experience.
-You learned to respect where people were coming from with their thoughts.
+You learned to respect where people were coming,
+which might be very different from your background.
 
 Audience and Outcomes
 ~~~~~~~~~~~~~~~~~~~~~
