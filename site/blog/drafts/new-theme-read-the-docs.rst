@@ -94,7 +94,7 @@ The new badge lets you:
 	* Change versions
 	* Go back to Read the Docs
 	* See the current version
-	* Shows if the current version is out of date
+	* Show if the current version is out of date
 	* Download docs for offline viewing
 	* Contribute edits on GitHub or Bitbucket
 	* Do a full-text search (Coming soon)
