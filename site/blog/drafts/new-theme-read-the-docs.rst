@@ -116,9 +116,10 @@ I think that this theme is a great addition to the documentation ecosystem.
 It is highly functional and beautiful,
 allowing users to easily navigate and find what they need.
 
-I hope that you will think about using it 
-
-
+I hope that you enjoy using it.
+If you have any feedback, 
+feel free to `email me`_.
 
 .. _Read the Docs: http://readthedocs.org/
 .. _Dave Snider: https://twitter.com/enemykite
+.. _email me: eric@ericholscher.com
