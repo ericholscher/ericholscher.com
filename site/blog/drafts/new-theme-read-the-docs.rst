@@ -123,13 +123,12 @@ allowing users to easily navigate and find what they need.
 
 I hope that you enjoy using it.
 If you have any feedback, 
-feel free to `email me`_.
+please `open an issue`_ on GitHub for the repo.
 
 If you want to support work like this,
 help `fund development on Read the Docs`_ on Gittip.
 
 .. _fund development on Read the Docs: https://www.gittip.com/readthedocs/
-
 .. _Read the Docs: http://readthedocs.org/
 .. _Dave Snider: https://twitter.com/enemykite
-.. _email me: eric@ericholscher.com
+.. _open an issue: http://github.com/snide/sphinx_rtd_theme/issues
