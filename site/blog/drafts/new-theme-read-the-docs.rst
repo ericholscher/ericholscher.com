@@ -79,7 +79,7 @@ With the new version we wanted to do more.
 Old
 ***
 
-Let you:
+The old badge let you:
 
 	* Change versions
 	* Go back to Read the Docs
@@ -89,12 +89,14 @@ Let you:
 New
 ***
 
-Lets you:
+The new badge lets you:
 
 	* Change versions
-	* Download for offline viewing
-	* Contribute edits on GitHub or Bitbucket
 	* Go back to Read the Docs
+	* See the current version
+	* Shows if the current version is out of date
+	* Download docs for offline viewing
+	* Contribute edits on GitHub or Bitbucket
 	* Do a full-text search (Coming soon)
 
 .. image:: http://i.imgur.com/9DRP8fj.png
