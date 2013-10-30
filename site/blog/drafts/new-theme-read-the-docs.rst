@@ -113,6 +113,9 @@ while staying completely functional.
 .. image:: http://i.imgur.com/jLpGlFs.png
 	:width: 50%
 
+.. image:: http://i.imgur.com/29uEpVs.png
+	:width: 100%
+
 
 Conclusion
 ----------
