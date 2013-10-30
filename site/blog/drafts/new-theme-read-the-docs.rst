@@ -27,7 +27,7 @@ Using it
 There are 2 ways that you can use this theme on Read the Docs.
 The first is to simply leave your ``html_theme`` variable set to ``default``.
 This is now the default Read the Docs theme.
-You can also include set ``RTD_NEW_THEME = True`` in your project,
+You can also set ``RTD_NEW_THEME = True`` in your project's ``conf.py``,
 and we will use our theme when building on Read the Docs no matter what ``html_theme`` is set to.
 
 After you change these settings,
