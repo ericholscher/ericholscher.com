@@ -1,7 +1,7 @@
 A new theme for Read the Docs
 =============================
 
-Read the Docs hasn't changed much visually since it launched.
+`Read the Docs`_ hasn't changed much visually since it launched.
 We have had a default theme that is a slight change over the Sphinx theme.
 A few colors and a nice mobile interface was about it.
 
@@ -15,7 +15,7 @@ offering to help improve the documentation ecosystem.
 He is a designer with an interest in documentation,
 and wanted to help out with Read the Docs.
 
-He has built a fantastic new default theme for `Read the Docs`_.
+He has built a fantastic new default theme for Read the Docs.
 We talked through a lot of the functionality of the site,
 and how people tend to use documentation.
 I think we have come up with a really great solution that will look great,
