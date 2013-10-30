@@ -30,6 +30,9 @@ This is now the default Read the Docs theme.
 You can also include set ``RTD_NEW_THEME = True`` in your project,
 and we will use our theme when building on Read the Docs no matter what ``html_theme`` is set to.
 
+After you change these settings,
+simply rebuild your docs and the theme should update.
+
 Screenshots
 -----------
 
