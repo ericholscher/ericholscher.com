@@ -10,10 +10,8 @@ There is so much that could happen badly,
 and this is scary as hell.
 
 As an organizer,
-I found myself looking for systems to minmize stress and uncertainty.
-Uncertainty, 
-for me at least,
-is the breeding ground for fear.
+I found myself looking for systems to minimize stress and uncertainty.
+Uncertainty is the breeding ground of fear.
 
 Code of Conduct
 ---------------
