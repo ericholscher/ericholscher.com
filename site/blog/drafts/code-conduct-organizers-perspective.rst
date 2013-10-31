@@ -1,4 +1,4 @@
-Code of Conduct, an Organizers Perspective
+Codes of Conduct, an Organizers Perspective
 ==========================================
 
 I helped organize my first conference last year,
