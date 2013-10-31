@@ -18,7 +18,7 @@ is the breeding ground for fear.
 Code of Conduct
 ---------------
 
-We established a Code of Conduct at the conference because it felt like the right thing to do.
+We established a `Code of Conduct`_ for the conference because it felt like the right thing to do.
 I believe in increasing diversity,
 and know that Codes of Conduct matter to people who I care about.
 So,
@@ -43,8 +43,14 @@ on the website,
 and in the opening address to the conference.
 
 
+Conclusion
+----------
 
+Adding a Code of Conduct for your conference will reduce a source of stress as an organizer.
+If anything happens,
+you have a playbook ready,
+and you won't be caught off guard.
 
-
+.. _Code of Conduct: http://conf.writethedocs.org/code-of-conduct.html
 .. _Write the Docs: http://conf.writethedocs.org/na/2013/
 .. _amazing document: http://geekfeminism.wikia.com/wiki/Conference_anti-harassment/Policy#Internal_version_for_conference_staff
