@@ -443,3 +443,11 @@ a:hover tt {
 .revsys-inline {
     display: none!important;
 }
+
+a.image-reference {
+    border-bottom: none;
+}
+
+a.image-reference img {
+    margin-top: 15px;
+}

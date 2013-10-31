@@ -54,12 +54,14 @@ Old
 
 .. image:: http://i.imgur.com/hWOnmKy.png
 	:width: 100%
+	:target: http://i.imgur.com/hWOnmKy.png
 
 New
 ***
 
 .. image:: http://i.imgur.com/7oLntvR.png
 	:width: 100%
+	:taget: http://i.imgur.com/7oLntvR.png
 
 Sidebar
 ~~~~~~~
@@ -88,7 +90,9 @@ The old badge let you:
 	* Change versions
 	* Go back to Read the Docs
 
-.. image:: http://i.imgur.com/quXfsbc.png
+.. image:: http://i.imgur.com/CBDPzbD.png
+	:width: 50%
+	:target: http://i.imgur.com/CBDPzbD.png
 
 New
 ***
@@ -105,7 +109,7 @@ The new badge lets you:
 
 .. image:: http://i.imgur.com/9DRP8fj.png
 	:width: 50%
-
+	:target: http://i.imgur.com/9DRP8fj.png
 
 Mobile
 ~~~~~~
@@ -116,7 +120,7 @@ while staying completely functional.
 
 .. image:: http://i.imgur.com/29uEpVs.png
 	:width: 100%
-
+	:target: http://i.imgur.com/29uEpVs.png
 
 Conclusion
 ----------
