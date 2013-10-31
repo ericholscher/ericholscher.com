@@ -20,7 +20,7 @@ Code of Conduct
 
 We established a `Code of Conduct`_ for the conference because it felt like the right thing to do.
 I believe in increasing diversity,
-and know that Codes of Conduct matter to people who I care about.
+and I know that Codes of Conduct matter to people who I care about.
 So,
 it initially started out as a way to signal to people that we really care.
 
