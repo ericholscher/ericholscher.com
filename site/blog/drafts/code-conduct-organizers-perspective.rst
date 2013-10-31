@@ -50,7 +50,10 @@ Adding a Code of Conduct for your conference will reduce a source of stress as a
 If anything happens,
 you have a playbook ready,
 and you won't be caught off guard.
+If you need a place to start,
+the `Geek Feminism Wiki`_ has you covered.
 
 .. _Code of Conduct: http://conf.writethedocs.org/code-of-conduct.html
 .. _Write the Docs: http://conf.writethedocs.org/na/2013/
 .. _amazing document: http://geekfeminism.wikia.com/wiki/Conference_anti-harassment/Policy#Internal_version_for_conference_staff
+.. _Geek Feminism Wiki: http://geekfeminism.wikia.com/wiki/Conference_anti-harassment/Policy
