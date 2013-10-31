@@ -1,5 +1,3 @@
-:Date: 2013-11-01 10:00:00
-
 A new theme for Read the Docs
 =============================
 
@@ -35,6 +33,7 @@ and we will use our theme when building on Read the Docs no matter what ``html_t
 
 After you change these settings,
 simply rebuild your docs and the theme should update.
+More information about the theme can be found on the `theme documentation page`_
 
 If you want to continue using the old theme,
 simply set ``RTD_OLD_THEME = True`` in your ``conf.py``. 
@@ -131,6 +130,11 @@ I think that this theme is a great addition to the documentation ecosystem.
 It is highly functional and beautiful,
 allowing users to easily navigate and find what they need.
 
+We have a few more tricks up our sleves,
+but I believe the theme is ready to launch today.
+Over the next few weeks we'll be adding a bit more functionality to it,
+which should be even more delightful.
+
 I hope that you enjoy using it.
 If you have any feedback, 
 please `open an issue`_ on GitHub for the repo.
@@ -143,3 +147,4 @@ help `fund development on Read the Docs`_ on Gittip.
 .. _Read the Docs: http://readthedocs.org/
 .. _Dave Snider: https://twitter.com/enemykite
 .. _open an issue: http://github.com/snide/sphinx_rtd_theme/issues
+.. _theme documentation page: http://docs.readthedocs.org/en/latest/theme.html
