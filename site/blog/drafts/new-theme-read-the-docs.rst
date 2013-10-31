@@ -130,6 +130,11 @@ I think that this theme is a great addition to the documentation ecosystem.
 It is highly functional and beautiful,
 allowing users to easily navigate and find what they need.
 
+We have a few more tricks up our sleves,
+but I believe the theme is ready to launch today.
+Over the next few weeks we'll be adding a bit more functionality to it,
+which should be even more delightful.
+
 I hope that you enjoy using it.
 If you have any feedback, 
 please `open an issue`_ on GitHub for the repo.
