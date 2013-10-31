@@ -6,6 +6,7 @@ We have had a default theme that is a slight change over the Sphinx theme.
 A few colors and a nice mobile interface was about it.
 
 That is all about to change.
+We are proud to announce a `new default theme`_ for Read the Docs!
 
 Creation Story
 ---------------
@@ -32,6 +33,9 @@ and we will use our theme when building on Read the Docs no matter what ``html_t
 
 After you change these settings,
 simply rebuild your docs and the theme should update.
+
+If you want to continue using the old theme,
+simply set ``RTD_OLD_THEME = True`` in your ``conf.py``. 
 
 Screenshots
 -----------
@@ -131,6 +135,7 @@ please `open an issue`_ on GitHub for the repo.
 If you want to support work like this,
 help `fund development on Read the Docs`_ on Gittip.
 
+.. _new default theme: http://docs.readthedocs.org/en/latest/
 .. _fund development on Read the Docs: https://www.gittip.com/readthedocs/
 .. _Read the Docs: http://readthedocs.org/
 .. _Dave Snider: https://twitter.com/enemykite
