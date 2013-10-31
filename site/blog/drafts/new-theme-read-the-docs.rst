@@ -61,7 +61,7 @@ New
 
 .. image:: http://i.imgur.com/7oLntvR.png
 	:width: 100%
-	:taget: http://i.imgur.com/7oLntvR.png
+	:target: http://i.imgur.com/7oLntvR.png
 
 Sidebar
 ~~~~~~~

@@ -444,7 +444,11 @@ a:hover tt {
     display: none!important;
 }
 
-a.image-reference {
+a.image-reference  {
+    border-bottom: none;
+}
+
+a.image-reference:hover {
     border-bottom: none;
 }
 
