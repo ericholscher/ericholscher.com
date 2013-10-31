@@ -33,6 +33,7 @@ and we will use our theme when building on Read the Docs no matter what ``html_t
 
 After you change these settings,
 simply rebuild your docs and the theme should update.
+More information about the theme can be found on the `theme documentation page`_
 
 If you want to continue using the old theme,
 simply set ``RTD_OLD_THEME = True`` in your ``conf.py``. 
@@ -141,3 +142,4 @@ help `fund development on Read the Docs`_ on Gittip.
 .. _Read the Docs: http://readthedocs.org/
 .. _Dave Snider: https://twitter.com/enemykite
 .. _open an issue: http://github.com/snide/sphinx_rtd_theme/issues
+.. _theme documentation page: http://docs.readthedocs.org/en/latest/theme.html

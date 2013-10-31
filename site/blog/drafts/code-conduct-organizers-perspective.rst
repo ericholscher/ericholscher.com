@@ -1,0 +1,50 @@
+Code of Conduct, an Organizers Perspective
+==========================================
+
+I helped organize my first conference last year,
+`Write the Docs`_.
+It was a great experience,
+but also rather stressful.
+It turns out that organizing things is an interesting exercise in managing fear and risk.
+There is so much that could happen badly,
+and this is scary as hell.
+
+As an organizer,
+I found myself looking for systems to minmize stress and uncertainty.
+Uncertainty, 
+for me at least,
+is the breeding ground for fear.
+
+Code of Conduct
+---------------
+
+We established a Code of Conduct at the conference because it felt like the right thing to do.
+I believe in increasing diversity,
+and know that Codes of Conduct matter to people who I care about.
+So,
+it initially started out as a way to signal to people that we really care.
+
+As the confernce came closer though,
+it became really valuable for me as an organizer in another way.
+It was one aspect of the conference that I didn't have to worry about.
+Something bad might happen,
+but you can't remove that possibility from existing.
+However, 
+if something bad did happen, 
+we had a plan.
+I felt prepared to deal with any issues.
+This was much easier thanks this `amazing document`_ from the Geek Feminism Wiki,
+which provides an example internal policy to follow.
+
+The Code of Conduct also gave us a leg to stand on if there were any issues.
+Someone couldn't complain about being repremanded or expelled from the conference by pleading ignorance.
+We mentioned the Code of Conduct on speaker signups,
+on the website,
+and in the opening address to the conference.
+
+
+
+
+
+.. _Write the Docs: http://conf.writethedocs.org/na/2013/
+.. _amazing document: http://geekfeminism.wikia.com/wiki/Conference_anti-harassment/Policy#Internal_version_for_conference_staff
