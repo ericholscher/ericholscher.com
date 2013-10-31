@@ -114,9 +114,6 @@ The new theme really shines on mobile.
 We provide a beautiful interface for phones and tablets,
 while staying completely functional.
 
-.. image:: http://i.imgur.com/jLpGlFs.png
-	:width: 50%
-
 .. image:: http://i.imgur.com/29uEpVs.png
 	:width: 100%
 
