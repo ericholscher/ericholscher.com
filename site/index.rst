@@ -1,5 +1,6 @@
+****
 Home
-====
+****
 
 Welcome to the home of Eric Holscher on the web. 
 
@@ -10,7 +11,7 @@ Whether on bike or foot, I spend as much time as possible out and about,
 checking out the various beauty that the world holds.
 
 Information
------------
+^^^^^^^^^^^
 
 .. toctree::
     :maxdepth: 1
@@ -20,7 +21,7 @@ Information
     resume
 
 Activities
-----------
+^^^^^^^^^^
 
 .. toctree::
     :maxdepth: 1
