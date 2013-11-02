@@ -29,5 +29,4 @@ Activities
     bike
     backpacking
 
-
 .. include:: include/blog.rst
