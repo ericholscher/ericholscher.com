@@ -9,7 +9,6 @@ We have looked at how users use documentation,
 and built a beautiful and highly functional new interface for browsing documentation.
 We have come up with a solution that looks as great as it functions.
 
-
 The New Theme
 -------------
 
