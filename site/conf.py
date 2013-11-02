@@ -254,4 +254,4 @@ feed_filename = 'rss.xml'
 feed_title = "Eric's Thoughts"
 
 # Launch with new theme? :)
-RTD_NEW_THEME = True
+#RTD_NEW_THEME = True
