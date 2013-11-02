@@ -17,15 +17,18 @@ Open Source Projects
 --------------------
 
 * Read the Docs - http://readthedocs.org
+
     * Over 5000 projects
     * Over 5 million page views a month
     * Standard hosting for Python community
+
 * Member of the Python Software Foundation
 
 Conferences
 -----------
 
 * Helped organize the Write the Docs conference - http://conf.writethedocs.org
+
     * 200+ people came to talk about documentation
     * Portland, Oregon on April 8-9 2013
     * Has spawned local users groups in multiple cities
@@ -75,8 +78,11 @@ Lawrence Journal-World - Developer
 
 * The birthplace of Django, maintaining the world's oldest Django codebase
 * Worked as Lead developer and defacto sysadmin for the "Internal" team
+
     - Ljworld.com, Lawrence.com, Kusports.com and ~20 other sites
+
 * Worked on the "Commerical" team on Ellington
+
     - Ported Ellington from Django r1290 to 1.0
     - Wrote lots of tests and supported the product
 
