@@ -29,27 +29,5 @@ Activities
     bike
     backpacking
 
-Blog
-^^^^
 
-2013
-====
-
-.. toctree::
-    :maxdepth: 2
-
-    /blog/2013/index
-
-2012
-====
-
-.. toctree::
-    :maxdepth: 2
-
-    /blog/2012/index
-
-
-asdfasdf
-
-..  comment
-    .. include:: include/blog.rst
+.. include:: include/blog.rst
