@@ -1,51 +1,26 @@
 A new theme for Read the Docs
 =============================
 
-`Read the Docs`_ hasn't changed much visually since it launched.
-We have had a default theme that is a slight change over the Sphinx theme.
-A few colors and a nice mobile interface was about it.
+We have been hard at work improving `Read the Docs`_ over the past month.
+A large amount of back end work has been going on,
+and now we have a brand new documentation theme to showcase it.
 
-That is all about to change.
-We are proud to announce a `new default theme`_ for Read the Docs!
-
-Creation Story
----------------
-
-`Dave Snider`_ approached me about a month ago,
-offering to help improve the documentation ecosystem.
-He is a designer with an interest in documentation,
-and wanted to help out with Read the Docs.
-
-He has built a fantastic new default theme for Read the Docs.
+We have looked at how users use documentation,
+and we have built a beautiful and highly functional new interface for browsing documentation.
 We talked through a lot of the functionality of the site,
 and how people tend to use documentation.
-I think we have come up with a really great solution that will look great,
-but also work well.
+We have come up with a solution that looks great,
+and also works well.
 
-Using it
---------
 
-There are 2 ways that you can use this theme on Read the Docs.
-The first is to simply leave your ``html_theme`` variable set to ``default``.
-This is now the default Read the Docs theme.
-You can also set ``RTD_NEW_THEME = True`` in your project's ``conf.py``,
-and we will use our theme when building on Read the Docs no matter what ``html_theme`` is set to.
-
-After you change these settings,
-simply rebuild your docs and the theme should update.
-More information about the theme can be found on the `theme documentation page`_
-
-If you want to continue using the old theme,
-simply set ``RTD_OLD_THEME = True`` in your ``conf.py``. 
-
-Screenshots
------------
+The New Theme
+-------------
 
 Full site
 ~~~~~~~~~
 
 The full documentation page is now beautiful and streamlined.
-We got rid of a bunch of the visual clutter and integrated a full-project Table of Contents on the left side.
+We got rid of the visual clutter and integrated a full-project Table of Contents on the sidebar.
 When you go into a specific page,
 the page-level contents get embedded in the sidebar as well.
 This allows you to keep context inside the documentation when you land on a page from a search.
@@ -64,20 +39,17 @@ New
 	:width: 100%
 	:target: http://i.imgur.com/7oLntvR.png
 
-Sidebar
-~~~~~~~
+Flyout
+~~~~~~
 
-The sidebar is a major feature of Read the Docs.
-For a project with a custom theme,
-it is the only interaction with Read the Docs.
-This means we need to pack most of the functionality we offer into a small space.
+Read the Docs provides a lot of functionality for documentation projects.
+The flyout we provides on each page is the avenue to accessing that functionality.
+We need to pack all our functionality into this small space.
 
 In the new theme,
-the sidebar is integrated into the bottom left of the theme.
+the flyout is integrated into the bottom left of the theme.
 For all other projects,
 it stays in the same place in the bottom right.
-If you have a theme and want to better integrate our sidebar,
-please let me know.
 
 The old version was very simple,
 providing access to a version selector.
@@ -86,7 +58,7 @@ With the new version we wanted to do more.
 Old
 ***
 
-The old badge let you:
+The old flyout let you:
 
 	* Change versions
 	* Go back to Read the Docs
@@ -98,7 +70,7 @@ The old badge let you:
 New
 ***
 
-The new badge lets you:
+The new flyout lets you:
 
 	* Change versions
 	* Go back to Read the Docs
@@ -123,15 +95,41 @@ while staying completely functional.
 	:width: 100%
 	:target: http://i.imgur.com/29uEpVs.png
 
+Using it
+--------
+
+There are 2 ways that you can use this theme on Read the Docs.
+The first is to simply leave your ``html_theme`` variable set to ``default``.
+This is now the default Read the Docs theme.
+You can also set ``RTD_NEW_THEME = True`` in your project's ``conf.py``,
+and we will use our theme when building on Read the Docs no matter what ``html_theme`` is set to.
+
+After you change these settings,
+simply rebuild your docs and the theme should update.
+More information about the theme can be found on the `theme documentation page`_
+
+If you want to continue using the old theme,
+simply set ``RTD_OLD_THEME = True`` in your ``conf.py``. 
+
+Creation Story
+---------------
+
+`Dave Snider`_ approached me about a month ago,
+offering to help improve the documentation ecosystem.
+He is a designer with an interest in documentation,
+and wanted to help out with Read the Docs.
+He built this fantastic new theme for Read the Docs,
+and is hard at work improving the main site as well.
+
 Conclusion
 ----------
 
-I think that this theme is a great addition to the documentation ecosystem.
+This theme is a great addition to the documentation ecosystem.
 It is highly functional and beautiful,
 allowing users to easily navigate and find what they need.
 
-We have a few more tricks up our sleves,
-but I believe the theme is ready to launch today.
+We have a few more tricks up our sleeves,
+but theme is ready to launch today.
 Over the next few weeks we'll be adding a bit more functionality to it,
 which should be even more delightful.
 
