@@ -6,11 +6,8 @@ A large amount of back end work has been going on,
 and now we have a brand new documentation theme to showcase it.
 
 We have looked at how users use documentation,
-and we have built a beautiful and highly functional new interface for browsing documentation.
-We talked through a lot of the functionality of the site,
-and how people tend to use documentation.
-We have come up with a solution that looks great,
-and also works well.
+and built a beautiful and highly functional new interface for browsing documentation.
+We have come up with a solution that looks as great as it functions.
 
 
 The New Theme

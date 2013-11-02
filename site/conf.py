@@ -252,3 +252,6 @@ feed_base_url = "http://ericholscher.com"
 feed_description = 'Surfing in Kansas'
 feed_filename = 'rss.xml'
 feed_title = "Eric's Thoughts"
+
+# Launch with new theme? :)
+RTD_NEW_THEME = True
