@@ -133,6 +133,8 @@ which should be even more delightful.
 I hope that you enjoy using it.
 If you have any feedback, 
 please `open an issue`_ on GitHub for the repo.
+To follow announcements for Read the Docs,
+follow `us on Twitter`_
 
 If you want to support work like this,
 help `fund development on Read the Docs`_ on Gittip.
@@ -143,3 +145,4 @@ help `fund development on Read the Docs`_ on Gittip.
 .. _Dave Snider: https://twitter.com/enemykite
 .. _open an issue: http://github.com/snide/sphinx_rtd_theme/issues
 .. _theme documentation page: http://docs.readthedocs.org/en/latest/theme.html
+.. _us on Twitter: http://twitter.com/readthedocs
