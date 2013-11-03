@@ -133,7 +133,7 @@ follow `us on Twitter`_
 If you want to support work like this,
 help `fund development on Read the Docs`_ on Gittip.
 
-.. _hard at work: http://ericholscher.com/blog/2013/sep/25/help-me-improve-documentation/
+.. _hard at work: https://github.com/rtfd/readthedocs.org/pulse/monthly
 .. _new default theme: http://docs.readthedocs.org/en/latest/
 .. _fund development on Read the Docs: https://www.gittip.com/readthedocs/
 .. _Read the Docs: http://readthedocs.org/
