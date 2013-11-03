@@ -3,13 +3,21 @@
 A new theme for Read the Docs
 =============================
 
-We have been hard at work improving `Read the Docs`_ over the past month.
+We have been `hard at work`_ improving `Read the Docs`_ over the past month.
 A large amount of back end work has been going on,
 and now we have a brand new documentation theme to showcase it.
 
 We have looked at how users use documentation,
 and built a beautiful and highly functional new interface for browsing documentation.
-We have come up with a solution that looks as great as it functions.
+We have come up with a solution that looks great and functions well.
+
+Creation
+--------
+
+`Dave Snider`_ approached me about a month ago,
+interested in helping improve the documentation ecosystem.
+We talked about what could have the most impact on the most people,
+and a new theme seemed like a great place to start.
 
 The New Theme
 -------------
@@ -18,9 +26,9 @@ Full site
 ~~~~~~~~~
 
 The full documentation page is now beautiful and streamlined.
-We got rid of the visual clutter and integrated a full-project Table of Contents on the sidebar.
+We got rid of the visual clutter and integrated a full-project Table of Contents in the sidebar.
 When you go into a specific page,
-the page-level contents get embedded in the sidebar as well.
+a page-level contents get embedded in the sidebar as well.
 This allows you to keep context inside the documentation when you land on a page from a search.
 
 Old
@@ -41,17 +49,11 @@ Flyout
 ~~~~~~
 
 Read the Docs provides a lot of functionality for documentation projects.
-The flyout we provides on each page is the avenue to accessing that functionality.
-We need to pack all our functionality into this small space.
+The flyout is the avenue to accessing that functionality.
+We need to pack all our functionality into this space.
 
 In the new theme,
 the flyout is integrated into the bottom left of the theme.
-For all other projects,
-it stays in the same place in the bottom right.
-
-The old version was very simple,
-providing access to a version selector.
-With the new version we wanted to do more.
 
 Old
 ***
@@ -107,17 +109,8 @@ simply rebuild your docs and the theme should update.
 More information about the theme can be found on the `theme documentation page`_
 
 If you want to continue using the old theme,
-simply set ``RTD_OLD_THEME = True`` in your ``conf.py``. 
+simply set ``RTD_OLD_THEME = True`` in your ``conf.py``.
 
-Creation Story
----------------
-
-`Dave Snider`_ approached me about a month ago,
-offering to help improve the documentation ecosystem.
-He is a designer with an interest in documentation,
-and wanted to help out with Read the Docs.
-He built this fantastic new theme for Read the Docs,
-and is hard at work improving the main site as well.
 
 Conclusion
 ----------
@@ -132,7 +125,7 @@ Over the next few weeks we'll be adding a bit more functionality to it,
 which should be even more delightful.
 
 I hope that you enjoy using it.
-If you have any feedback, 
+If you have any feedback,
 please `open an issue`_ on GitHub for the repo.
 To follow announcements for Read the Docs,
 follow `us on Twitter`_
@@ -140,6 +133,7 @@ follow `us on Twitter`_
 If you want to support work like this,
 help `fund development on Read the Docs`_ on Gittip.
 
+.. _hard at work: http://ericholscher.com/blog/2013/sep/25/help-me-improve-documentation/
 .. _new default theme: http://docs.readthedocs.org/en/latest/
 .. _fund development on Read the Docs: https://www.gittip.com/readthedocs/
 .. _Read the Docs: http://readthedocs.org/
