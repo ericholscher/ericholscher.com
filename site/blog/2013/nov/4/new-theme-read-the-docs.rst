@@ -126,9 +126,9 @@ which should be even more delightful.
 
 I hope that you enjoy using it.
 If you have any feedback,
-please `open an issue`_ on GitHub for the repo.
+please `open an issue`_ on GitHub.
 To follow announcements for Read the Docs,
-follow `us on Twitter`_
+follow `us on Twitter`_.
 
 If you want to support work like this,
 help `fund development on Read the Docs`_ on Gittip.
