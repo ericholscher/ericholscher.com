@@ -1,6 +1,6 @@
 :Date: 2013-11-04 10:00:00
 
-A new theme for Read the Docs
+A New Theme for Read the Docs
 =============================
 
 We have been `hard at work`_ improving `Read the Docs`_ over the past month.
