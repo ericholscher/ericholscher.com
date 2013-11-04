@@ -8,7 +8,7 @@ A large amount of back end work has been going on,
 and now we have a brand new documentation theme to showcase it.
 
 We have looked at how people use documentation,
-and built a beautiful and highly functional new interface for browsing documentation.
+and built a beautiful and highly functional `new interface`_ for browsing documentation.
 We created a solution that looks great and works well.
 
 Creation
@@ -134,7 +134,7 @@ If you want to support work like this,
 help `fund development on Read the Docs`_ on Gittip.
 
 .. _hard at work: https://github.com/rtfd/readthedocs.org/pulse/monthly
-.. _new default theme: http://docs.readthedocs.org/en/latest/
+.. _new interface: http://docs.readthedocs.org/en/latest/
 .. _fund development on Read the Docs: https://www.gittip.com/readthedocs/
 .. _Read the Docs: http://readthedocs.org/
 .. _Dave Snider: https://twitter.com/enemykite
