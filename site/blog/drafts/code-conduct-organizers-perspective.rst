@@ -4,9 +4,9 @@ Codes of Conduct, an Organizers Perspective
 I helped organize my first conference last year,
 `Write the Docs`_.
 It was a great experience,
-but also rather stressful.
-It turns out that organizing things is an interesting exercise in managing fear and risk.
-There is so much that could happen badly,
+but was also rather stressful.
+Organizing things is an interesting exercise in managing fear and risk.
+There are so many possible outcomes,
 and this is scary as hell.
 
 As an organizer,
@@ -25,21 +25,19 @@ it initially started out as a way to signal to people that we really care.
 As the conference came closer though,
 it became really valuable for me as an organizer in another way.
 It was one aspect of the conference that I didn't have to worry about.
-Something bad might happen,
+An event that violates our Code of Conduct might happen,
 but you can't remove that possibility from existing.
-However, 
-if something bad did happen, 
-we had a plan.
-I felt prepared to deal with any issues.
+If anything did happen,
+I felt prepared to deal with it.
 This was much easier thanks this `amazing document`_ from the Geek Feminism Wiki,
 which provides an example internal policy to follow.
 
 The Code of Conduct also gave us a leg to stand on if there were any issues.
-Someone couldn't complain about being reprimanded or expelled from the conference by pleading ignorance.
-We mentioned the Code of Conduct on speaker signups,
+If we had to repremand or expel someone,
+they couldn't claim ignorance of the policy.
+We mentioned the Code of Conduct on conference signup,
 on the website,
 and in the opening address to the conference.
-
 
 Conclusion
 ----------
