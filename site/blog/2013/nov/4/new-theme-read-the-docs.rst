@@ -7,16 +7,16 @@ We have been `hard at work`_ improving `Read the Docs`_ over the past month.
 A large amount of back end work has been going on,
 and now we have a brand new documentation theme to showcase it.
 
-We have looked at how users use documentation,
+We have looked at how people use documentation,
 and built a beautiful and highly functional new interface for browsing documentation.
-We have come up with a solution that looks great and functions well.
+We created a solution that looks great and works well.
 
 Creation
 --------
 
 `Dave Snider`_ approached me about a month ago,
 interested in helping improve the documentation ecosystem.
-We talked about what could have the most impact on the most people,
+We talked about what could improve the Read the Docs experience for the greatest number of our users, 
 and a new theme seemed like a great place to start.
 
 The New Theme
