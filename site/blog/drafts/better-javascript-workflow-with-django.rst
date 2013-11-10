@@ -72,7 +72,7 @@ and renders them into one large file you can include in your project.
 It does this by pointing to an "entry-point" file,
 which is the top-level entry point into your code.
 In the example above, 
-`client.js` would be the entry[1]_ point.
+`client.js` would be the entry point.
 
 To user Browserify you simply install it:
 
@@ -132,23 +132,31 @@ but also serves normal static media.
 This means you can point your `STATIC_URL` at Beefy,
 and it will just work.
 
-First you have to collect your static media into a single directory::
+First you have to collect your static media into a single directory:
+
+.. code-block:: bash
 
 	./manage.py collectstatic
 
 Then,
 from your `STATIC_ROOT` you run beefy,
-pointing at your Browserify entry point::
+pointing at your Browserify entry point:
+
+.. code-block:: bash
 
 	beefy client.js
 
 You can also pass the bundle you want it to generate with a `:`.
-This allows you to point at the same Javascript file in development as in production::
+This allows you to point at the same Javascript file in development as in production:
+
+.. code-block:: bash
 
 	beefy client.js:bundle.js
 
 Beefy should now be serving on port `9966`.
-You can point Django at this for static media by using a setting::
+You can point Django at this for static media by using a setting:
+
+.. code-block:: python
 
 	STATIC_URL = 'http://localhost:9966/'
 
@@ -166,4 +174,3 @@ I hope that it makes the Javascript part of your development a little bit more e
 .. _grunt: http://gruntjs.com/
 .. _Beefy: http://didact.us/beefy/
 .. _browserify: http://browserify.org/
-.. [1] 
