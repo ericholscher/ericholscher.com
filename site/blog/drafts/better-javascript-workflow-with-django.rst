@@ -29,14 +29,14 @@ It works very similarly to Python's `import` mechanism.
 
 `client.js`
 
-.. code:: javascript
+.. code-block:: javascript
 
 	var events = require('./lib/events')
 	events.awesome()
 
 `lib/events.js`
 
-.. code:: javascript
+.. code-block:: javascript
 
 	module.exports = {
 		awesome: awesome
@@ -72,19 +72,25 @@ and renders them into one large file you can include in your project.
 It does this by pointing to an "entry-point" file,
 which is the top-level entry point into your code.
 In the example above, 
-`client.js` would be the entry point.
+`client.js` would be the entry[1]_ point.
 
-To user Browserify you simply install it::
+To user Browserify you simply install it:
+
+.. code-block:: bash
 
 	npm install browserify -g # -g means globally
 
-Then run browserify on your top-level file::
+Then run browserify on your top-level file:
+
+.. code-block:: bash
 
 	browserify client.js > bundle.js
 
 Browserify outputs the Javascript to stdout,
 so you can simply redirect it to a file that will contain your bundled Javascript code.
-The "bundle" is what you include in your HTML::
+The "bundle" is what you include in your HTML:
+
+.. code-block:: html
 
 	<script type="text/javascript" src="bundle.js"></script>
 
@@ -111,7 +117,9 @@ they tend towards the smaller side.
 
 `Beefy`_ is a project that presents an HTTP server,
 which autocompiles your Javascript with Browserify.
-To use beefy you install it::
+To use beefy you install it:
+
+.. code-block:: bash
 
 	npm install beefy -g # -g for global install
 
@@ -158,3 +166,4 @@ I hope that it makes the Javascript part of your development a little bit more e
 .. _grunt: http://gruntjs.com/
 .. _Beefy: http://didact.us/beefy/
 .. _browserify: http://browserify.org/
+.. [1] 
