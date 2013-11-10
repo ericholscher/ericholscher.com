@@ -153,3 +153,8 @@ Conclusion
 With this workflow you can now write Javascript with a sane import system,
 and have it *Just Work* in development.
 I hope that it makes the Javascript part of your development a little bit more enjoyable.
+
+.. _watchdog: https://pypi.python.org/pypi/watchdog
+.. _grunt: http://gruntjs.com/
+.. _Beefy: http://didact.us/beefy/
+.. _browserify: http://browserify.org/
