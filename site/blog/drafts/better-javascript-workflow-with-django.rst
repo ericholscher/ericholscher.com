@@ -46,9 +46,12 @@ It works very similarly to Python's `import` mechanism.
 		console.log("Do awesome stuff.")
 	}
 
+The `module.exports` is similar to Python's `__all__`,
+allowing you to explicitly set your public API.
+
 .. TODO: Explain why this is better, better.
 
-This allows you to factor your code into multiple files.
+The `require` system allows you to factor your code into multiple files.
 More importantly,
 this allows for code isolation.
 I can put logic surrounding setting up event handlers in the `events.js` file,
