@@ -1,5 +1,7 @@
-.. image:: /_static/img/speaking.jpg
-   :height: 400px
+.. 
+
+    .. image:: /_static/img/speaking.jpg
+       :height: 400px
 
 Speaking
 ========
@@ -21,8 +23,8 @@ I am interested in speaking on the following topics:
 If you would like me to speak at your event,
 feel free to `email me`_
 
-Past Speaking
--------------
+Past Events
+-----------
 
 I have spoken at the following events,
 on a number of topics including Read the Docs, IRC bots, Testing, and Documentation:
