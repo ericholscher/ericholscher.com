@@ -1,5 +1,4 @@
 .. 
-
     .. image:: /_static/img/speaking.jpg
        :height: 400px
 
