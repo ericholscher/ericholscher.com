@@ -22,6 +22,7 @@ We established a `Code of Conduct`_ for Write the Docs early on.
 As the conference came closer,
 it became really valuable for me as an organizer.
 It was one aspect of the conference that I didn't have to worry about.
+
 An event that violates our Code of Conduct might happen,
 but you can't remove that possibility from existing.
 If anything did happen,
