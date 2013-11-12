@@ -12,7 +12,7 @@ There are so many possible outcomes,
 and this is scary as hell.
 
 As an organizer,
-I found myself looking for systems to minimize stress and uncertainty.
+I found myself looking for systems to minimize uncertainty.
 Uncertainty is the breeding ground of fear.
 
 Code of Conduct
