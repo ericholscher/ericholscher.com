@@ -9,8 +9,9 @@ I have always had an interest in teaching,
 and I believe that conference presentations are one of the best ways to teach in a professional setting.
 
 I believe that speakers should be part of the conference as well as presenting talks.
-A lot of the value in conferences comes from the hallways,
-and I will attend each day of your conference and talk with people.
+A lot of the value in conferences comes from the hallways.
+If I speak at your conference,
+I will also attend.
 
 I am interested in speaking on the following topics:
 
