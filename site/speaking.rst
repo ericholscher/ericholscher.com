@@ -5,7 +5,6 @@
 Speaking
 ========
 
-I enjoy speaking at tech conferences quite a bit.
 I have always had an interest in teaching,
 and I believe that conference presentations are one of the best ways to teach in a professional setting.
 
