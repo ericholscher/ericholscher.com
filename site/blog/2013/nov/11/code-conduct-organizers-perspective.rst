@@ -1,3 +1,5 @@
+:Date: 2013-11-11 20:00:00
+
 Codes of Conduct, an Organizers Perspective
 ==========================================
 
@@ -16,24 +18,19 @@ Uncertainty is the breeding ground of fear.
 Code of Conduct
 ---------------
 
-We established a `Code of Conduct`_ for the conference because it felt like the right thing to do.
-I believe in increasing diversity,
-and I know that Codes of Conduct matter to people who I care about.
-So,
-it initially started out as a way to signal to people that we really care.
-
-As the conference came closer though,
-it became really valuable for me as an organizer in another way.
+We established a `Code of Conduct`_ for Write the Docs early on.
+As the conference came closer,
+it became really valuable for me as an organizer.
 It was one aspect of the conference that I didn't have to worry about.
 An event that violates our Code of Conduct might happen,
 but you can't remove that possibility from existing.
 If anything did happen,
 I felt prepared to deal with it.
-This was much easier thanks this `amazing document`_ from the Geek Feminism Wiki,
+This was much easier thanks this `amazing document`_,
 which provides an example internal policy to follow.
 
 The Code of Conduct also gave us a leg to stand on if there were any issues.
-If we had to repremand or expel someone,
+If we had to reprimand or expel someone,
 they couldn't claim ignorance of the policy.
 We mentioned the Code of Conduct on conference signup,
 on the website,
