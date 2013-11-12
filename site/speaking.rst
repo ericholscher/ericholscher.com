@@ -1,5 +1,5 @@
-.. image:: /_static/img/speaking.png
-   :height: 300px
+.. image:: /_static/img/speaking.jpg
+   :height: 400px
 
 Speaking
 ========
@@ -7,6 +7,10 @@ Speaking
 I enjoy speaking at tech conferences quite a bit.
 I have always had an interest in teaching,
 and I believe that conference presentations are one of the best ways to teach in a professional setting.
+
+I believe that speakers should be part of the conference as well as presenting talks.
+A lot of the value in conferences comes from the hallways,
+and I will attend each day of your conference and talk with people.
 
 I am interested in speaking on the following topics:
 

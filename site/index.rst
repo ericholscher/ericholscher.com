@@ -18,6 +18,7 @@ Information
 
     about
     projects
+    speaking
     resume
 
 Activities
