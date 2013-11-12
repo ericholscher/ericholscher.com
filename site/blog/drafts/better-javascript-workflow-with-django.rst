@@ -6,8 +6,8 @@ It was the part of the process of developing that I would dread.
 On the last project I worked on,
 I found a very simple change that significantly improved my experience writing Javascript.
 
-One big file
-------------
+Problem: One big file
+---------------------
 
 Historically,
 Javascript lived in one really large file.
@@ -21,8 +21,8 @@ you had to reply on implicit import mechanisms.
 A variable would just magically appear in your file because of the import order of the scripts.
 This incredibly brittle and unintuitive way of working puts up a high barrier to writing well-factored code.
 
-Introducing node-style requires
--------------------------------
+Solution: node-style requires
+-----------------------------
 
 Node.js has the concept of `require`.
 It works very similarly to Python's `import` mechanism.
@@ -62,6 +62,10 @@ It gives you an entry point into the code,
 where the uppermost logic lives.
 Then you can dive into each specific file to understand that subsection of code.
 All the benefits normally associated with an import system come to bare.
+
+As a wise man once said:
+
+	Namespaces are one honking great idea -- let's do more of those!
 
 Imports in the browser
 ----------------------
@@ -157,7 +161,7 @@ This allows you to point at the same Javascript file in development as in produc
 	beefy client.js:bundle.js
 
 Beefy should now be serving on port `9966`.
-You can point Django at this for static media by using a setting:
+You can point Django at this for static media by using the setting:
 
 .. code-block:: python
 
