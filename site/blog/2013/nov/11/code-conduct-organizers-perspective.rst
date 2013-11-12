@@ -27,7 +27,7 @@ An event that violates our Code of Conduct might happen,
 but you can't remove that possibility from existing.
 If anything did happen,
 I felt prepared to deal with it.
-This was much easier thanks this `amazing document`_,
+This was much easier because of this `amazing document`_,
 which provides an example internal policy to follow.
 
 The Code of Conduct also gave us a leg to stand on if there were any issues.
