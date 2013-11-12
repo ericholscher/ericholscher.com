@@ -1,6 +1,6 @@
-.. 
-    .. image:: /_static/img/speaking.jpg
-       :height: 400px
+.. image:: /_static/img/speaking.jpg
+   :align: right
+   :height: 450px
 
 Speaking
 ========
