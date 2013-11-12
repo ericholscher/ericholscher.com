@@ -35,7 +35,7 @@ If we had to reprimand or expel someone,
 they couldn't claim ignorance of the policy.
 We mentioned the Code of Conduct on conference signup,
 on the website,
-and in the opening address to the conference.
+and in the opening address.
 
 Conclusion
 ----------
