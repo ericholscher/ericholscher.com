@@ -22,7 +22,11 @@ Speakers
 
 Talk proposals are now open!
 If you have something that you wish to share with the documentation community,
-now is your chance to submit a talk.
+now is your chance.
+
+We'd love to hear your ideas for talks on the many and varied aspects of documentation.
+Our favorite topics are those that deliver hard-earned knowledge based on real-world experience and research. 
+Come share with us!
 
 * `Write the Docs EU talks`_ will be accepted until **January 15**
 * `Write the Docs NA talks`_ will be accepted until **March 15**
@@ -30,7 +34,7 @@ now is your chance to submit a talk.
 Sponsors
 --------
 
-We are now accepting sponsorship inquiries for the conferences.
+We are now accepting sponsors for the conferences.
 Please `email us`_ for more information about sponsorship.
 
 If you sponsor both conferences,
