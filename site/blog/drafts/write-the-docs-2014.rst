@@ -42,7 +42,7 @@ Questions
 If you have any questions,
 feel free to `email us <mailto:writethedocs@gmail.com>`_.
 
-.. _email us: mailto:writethedocs@gmail.com?subject=[Write the Docs] Sponsorship
+.. _email us: mailto:writethedocs@gmail.com?subject=[Write%20the%20Docs]%20Sponsorship
 .. _Europe Mailing List: http://writethedocs.us6.list-manage.com/subscribe?u=94377ea46d8b176a11a325d03&id=232251933d
 .. _North America Mailing List: http://writethedocs.us6.list-manage.com/subscribe?u=94377ea46d8b176a11a325d03&id=dcf0ed349b
 .. _Write the Docs EU talks: http://conf.writethedocs.org/eu/2014/index.html#cfp
