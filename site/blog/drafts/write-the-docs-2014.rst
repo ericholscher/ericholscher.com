@@ -19,7 +19,7 @@ sign up for our mailing list.
 * `North America Mailing List`_
 * `Europe Mailing List`_
 
-We will only send important updates and information to the lists.
+Ticket announcements and other important information will be sent to these lists.
 
 Speakers
 --------
