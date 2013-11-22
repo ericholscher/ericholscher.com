@@ -78,7 +78,7 @@ but that doesn't help me when I'm writing Javascript for the browser.
 
 Browserify takes all of your Javascript files with imports,
 and renders them into one large file you can include in your project.
-It does this by pointing to an "entry-point" file,
+It does this by pointing to an "entry point" file,
 which is the top-level entry point into your code.
 In the example above, 
 `client.js` would be the entry point.
