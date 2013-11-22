@@ -83,7 +83,7 @@ which is the top-level entry point into your code.
 In the example above, 
 `client.js` would be the entry point.
 
-To user Browserify you simply install it:
+To use Browserify you simply install it:
 
 .. code-block:: bash
 
