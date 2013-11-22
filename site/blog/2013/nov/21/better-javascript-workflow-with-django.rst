@@ -103,8 +103,8 @@ The "bundle" is what you include in your HTML:
 
 	<script type="text/javascript" src="bundle.js"></script>
 
-The problem
------------
+A New Problem
+--------------
 
 As with all preprocessors,
 the main issue is the workflow around rendering the code into its final form.
