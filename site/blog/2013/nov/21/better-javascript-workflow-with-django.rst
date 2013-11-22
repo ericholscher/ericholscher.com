@@ -172,7 +172,7 @@ You can point Django at this for static media by using the setting:
 Beefy should now be serving your media properly,
 and auto-compiling your javascript through Browserify.
 
-.. note:: You might need to symlink your javascript files from your STATIC_ROOT,
+.. note:: You may want to symlink your javascript files from into STATIC_ROOT,
             if you are doing active development on them.
 
 Conclusion
