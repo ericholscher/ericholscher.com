@@ -74,7 +74,7 @@ Imports in the browser
 
 It's great that node has an import system,
 but that doesn't help me when I'm writing Javascript for the browser.
-`browserify`_ is a project that basically allows you to have node-style imports in the browser.
+`browserify`_ is a project that allows you to have node-style imports in the browser.
 
 Browserify takes all of your Javascript files with imports,
 and renders them into one large file you can include in your project.
