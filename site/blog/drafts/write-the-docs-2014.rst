@@ -13,16 +13,20 @@ one in North America and one in Europe.
 Both of these dates are on a Monday and Tuesday.
 
 For the uninitiated,
-Write the Docs is a conference where the art and science of documentation can be
-practiced and appreciated.
-There are a lot of people out there who write docs,
-but there isn't a good place to go to find information,
-ask questions, and generally be a member of a community of documenters.
-We hope to slowly solve this problem by building a place with high quality
-information about the art of writing documentation.
-Along with that, 
-we hope to open communication between all the awesome
-people out there writing documentation.
+Write the Docs is a two-day conference focused on documentation systems, 
+tech writing theory, 
+and information delivery. 
+
+Writing and maintaining documentation involves the talents of a multidisciplinary community of technical writers, 
+designers, 
+typesetters, 
+developers, 
+support teams, 
+marketers, 
+and many others.
+This conference creates a time and a place for this community of documentarians to share information, 
+discuss ideas, 
+and work together to improve the art and science of documentation.
 
 Stay up to date
 ---------------
@@ -34,9 +38,9 @@ sign up for our mailing list.
 * `Europe Mailing List`_
 
 Ticket announcements and other important information will be sent to these lists.
+You can also find us on online at other places:
 
-You can also track the events on Lanyrd:
-
+* `Write the Docs Twitter`_
 * `Write the Docs NA Lanyrd`_ 
 * `Write the Docs EU Lanyrd`_
 
@@ -77,6 +81,7 @@ We are happy to help in any way that we can.
 .. _send us an email: mailto:writethedocs@gmail.com
 .. _Europe Mailing List: http://writethedocs.us6.list-manage.com/subscribe?u=94377ea46d8b176a11a325d03&id=232251933d
 .. _North America Mailing List: http://writethedocs.us6.list-manage.com/subscribe?u=94377ea46d8b176a11a325d03&id=dcf0ed349b
+.. _Write the Docs Twitter: https://twitter.com/writethedocs
 .. _Write the Docs EU talks: http://conf.writethedocs.org/eu/2014/index.html#cfp
 .. _Write the Docs NA talks: http://conf.writethedocs.org/na/2014/index.html#cfp
 .. _Write the Docs NA Lanyrd: http://lanyrd.com/2014/writethedocs/
