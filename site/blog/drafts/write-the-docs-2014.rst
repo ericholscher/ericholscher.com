@@ -12,6 +12,18 @@ one in North America and one in Europe.
 
 Both of these dates are on a Monday and Tuesday.
 
+For the uninitiated,
+Write the Docs is a conference where the art and science of documentation can be
+practiced and appreciated.
+There are a lot of people out there who write docs,
+but there isn't a good place to go to find information,
+ask questions, and generally be a member of a community of documenters.
+We hope to slowly solve this problem by building a place with high quality
+information about the art of writing documentation.
+Along with that, 
+we hope to open communication between all the awesome
+people out there writing documentation.
+
 Stay up to date
 ---------------
 
@@ -32,10 +44,11 @@ now is your chance.
 
 We'd love to hear your ideas for talks on the many and varied aspects of documentation.
 Our favorite topics are those that deliver hard-earned knowledge based on real-world experience and research. 
+We are happy to accept talks from all skill levels and 
 Come share with us!
 
-* `Write the Docs EU talks`_ will be accepted until **January 15**
-* `Write the Docs NA talks`_ will be accepted until **March 15**
+* `Write the Docs EU talks`_ will be accepted until **January 31**
+* `Write the Docs NA talks`_ will be accepted until **March 1**
 
 Sponsors
 --------
