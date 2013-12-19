@@ -35,6 +35,11 @@ sign up for our mailing list.
 
 Ticket announcements and other important information will be sent to these lists.
 
+You can also track the events on Lanyrd:
+
+* `Write the Docs NA Lanyrd`_ 
+* `Write the Docs EU Lanyrd`_
+
 Speakers
 --------
 
@@ -74,3 +79,5 @@ We are happy to help in any way that we can.
 .. _North America Mailing List: http://writethedocs.us6.list-manage.com/subscribe?u=94377ea46d8b176a11a325d03&id=dcf0ed349b
 .. _Write the Docs EU talks: http://conf.writethedocs.org/eu/2014/index.html#cfp
 .. _Write the Docs NA talks: http://conf.writethedocs.org/na/2014/index.html#cfp
+.. _Write the Docs NA Lanyrd: http://lanyrd.com/2014/writethedocs/
+.. _Write the Docs EU Lanyrd: http://lanyrd.com/2014/write-the-docs-europe/
