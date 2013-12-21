@@ -1,0 +1,12 @@
+{% extends "!layout.html" %}
+{% block extrahead %}
+    <link rel="canonical" href="http://ericholscher.com/
+    {%- for word in pagename.split('/') -%}
+        {%- if word != 'index' -%}
+            {%- if word != '' -%}
+                {{ word }}{% if builder == "dirhtml" %}/{% else %}.html{% endif %}
+            {%- endif -%}
+        {%- endif -%}
+    {%- endfor -%}
+    ">
+{% endblock %}
