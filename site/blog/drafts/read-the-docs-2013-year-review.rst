@@ -49,6 +49,7 @@ these numbers are similar to what `MDN has`_.
 I think an image shows this a bit better than words:
 
 .. image:: https://dl.dropboxusercontent.com/s/m1xjc5jemlql6i2/Screenshot%202013-12-21%2009.28.51.png
+	:width: 100%
 
 Site Stats
 ----------
@@ -78,6 +79,7 @@ The stats:
 Again, an image might show things better:
 
 .. image:: https://dl.dropboxusercontent.com/spa/es5kemdyaeh8wb8/pygv8k2k.png
+	:width: 100%
 
 Conclusion
 ----------
