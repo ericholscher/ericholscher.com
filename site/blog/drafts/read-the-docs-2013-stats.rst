@@ -1,17 +1,17 @@
 Read the Docs 2013 Stats
 ================================
 
-2013 has been a big year for Read the Docs.
+2013 has been a big year for `Read the Docs`_.
 Our mission is to make documentation hosting easier and better,
 with the overall goal of increasing the quality of documentation in the programming world.
 I believe that we have been doing good work towards that goal,
 and I want to share some numbers to reflect our progress.
 
-Committers
-----------
+Community
+---------
 
-I am the main person who maintains Read the Docs,
-but we have a good number of folks who submit patches and issues.
+Our community has been great this year.
+I have been really happy to see a few people submit multiple patches and features.
 This year, we had:
 
 * `39 people`_ who committed code
@@ -30,7 +30,7 @@ Page Views
 
 Our growth in page views has always been crazy to me.
 It was somewhere in mid-2011 that Read the Docs went from a hobby project,
-into something many projects depended on.
+into something projects depended on.
 This growth has never stopped,
 and today a large number of important projects depend on Read the Docs.
 
@@ -43,7 +43,7 @@ For context,
 these numbers are similar to what `MDN has`_. 
 
 .. note:: These numbers are actually a bit low.
-		  Some Sphinx themes don't support default Sphinx template blocks,
+		  Some themes don't support default Sphinx template blocks,
 		  so we can't count them in our stats correctly.
 
 I think an image shows this a bit better than words:
@@ -93,6 +93,7 @@ and make the site more approachable.
 I look forward to continuing to improve the documentation ecosystem in the new year.
 
 
+.. _Read the Docs: https://readthedocs.org/
 .. _39 people: https://github.com/rtfd/readthedocs.org/graphs/contributors?from=2013-01-01&to=2013-12-21&type=c
 .. _271 issues: https://github.com/rtfd/readthedocs.org/search?q=created%3A%3E%3D2013-01-01&source=cc&type=Issues
 .. _Wraithan: http://blog.wraithan.net/
