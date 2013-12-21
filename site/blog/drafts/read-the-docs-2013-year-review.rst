@@ -94,5 +94,5 @@ I look forward to continuing to improve the documentation ecosystem in the new y
 .. _39 people: https://github.com/rtfd/readthedocs.org/graphs/contributors?from=2013-01-01&to=2013-12-21&type=c
 .. _271 issues: https://github.com/rtfd/readthedocs.org/search?q=created%3A%3E%3D2013-01-01&source=cc&type=Issues
 .. _Wraithan: http://blog.wraithan.net/
-.. _MDN: https://blog.mozilla.org/files/2013/12/mozilla_eoy_2013_EN_72dpi_FINAL.jpg
+.. _MDN has: https://blog.mozilla.org/files/2013/12/mozilla_eoy_2013_EN_72dpi_FINAL.jpg
 .. _on Gittip: https://www.gittip.com/readthedocs/
