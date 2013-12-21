@@ -81,6 +81,9 @@ Again, an image might show things better:
 .. image:: https://dl.dropboxusercontent.com/spa/es5kemdyaeh8wb8/pygv8k2k.png
 	:width: 100%
 
+Our hosting costs are sponsored by `Rackspace`_,
+which is fantasticly generous of them.
+
 Conclusion
 ----------
 
@@ -99,3 +102,4 @@ I look forward to continuing to improve the documentation ecosystem in the new y
 .. _Wraithan: http://blog.wraithan.net/
 .. _MDN has: https://blog.mozilla.org/files/2013/12/mozilla_eoy_2013_EN_72dpi_FINAL.jpg
 .. _on Gittip: https://www.gittip.com/readthedocs/
+.. _Rackspace: http://rackspace.com/
