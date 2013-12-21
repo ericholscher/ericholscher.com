@@ -1,5 +1,5 @@
-Read the Docs 2013 Year in Review
-=================================
+Read the Docs 2013 Stats
+================================
 
 2013 has been a big year for Read the Docs.
 Our mission is to make documentation hosting easier and better,
@@ -73,7 +73,7 @@ even when you give it away for free.
 
 The stats:
 
-* $149.30/wk currently
+* $167/wk currently
 * 114 people giving money
 
 Again, an image might show things better:
