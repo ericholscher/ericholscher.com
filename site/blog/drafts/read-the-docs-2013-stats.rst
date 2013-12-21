@@ -18,8 +18,8 @@ This year, we had:
 * 550 commits
 * `271 issues`_ - 218 closed, 53 open
 
-I should also thank `Wraithan`_, 
-who has taken a large role in helping maintain the site and servers.
+Many thanks to `Wraithan`_ in particular, 
+who has taken on a large role in helping maintain the site and servers.
 
 If there is anyone else out there who would like to help with operations,
 especially outside of US timezones,
