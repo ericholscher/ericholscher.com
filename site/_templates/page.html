@@ -4,10 +4,11 @@
     {%- for word in pagename.split('/') -%}
         {%- if word != 'index' -%}
             {%- if word != '' -%}
-                {{ word }}{% if builder == "dirhtml" %}/{% else %}.html{% endif %}
+                {{ word }}/
             {%- endif -%}
         {%- endif -%}
     {%- endfor -%}
+    {% if builder == "dirhtml" %}/{% else %}.html{% endif %}
     ">
 {% endblock %}
 {% block body %}
