@@ -37,7 +37,7 @@ and today a large number of important projects depend on Read the Docs.
 Our stats:
 
 * 65 Million Page Views
-* 13 Million Visitors
+* 13 Million Unique Visitors
 
 For context,
 these numbers are similar to what `MDN has`_. 
