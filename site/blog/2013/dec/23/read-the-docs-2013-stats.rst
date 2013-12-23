@@ -68,6 +68,9 @@ The stats:
 Funding
 -------
 
+Our hosting costs are sponsored by `Rackspace`_,
+which is fantasticly generous of them.
+
 Development on Read the Docs is funded by the community `on Gittip`_.
 I am very grateful for the support that the community has given the project over the years.
 It is great validation that people value the service you are providing,
@@ -77,9 +80,6 @@ The stats:
 
 * $167/wk currently
 * 114 people giving money
-
-Our hosting costs are sponsored by `Rackspace`_,
-which is fantasticly generous of them.
 
 Again, an image might show things better:
 
