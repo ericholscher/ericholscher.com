@@ -4,7 +4,7 @@ Read the Docs 2013 Stats
 ================================
 
 2013 has been a big year for `Read the Docs`_.
-Our mission is to make documentation hosting easier and better,
+Our mission is to make documentation hosting easier,
 with the overall goal of increasing the quality of documentation in the programming world.
 I believe that we have been doing good work towards that goal,
 and I want to share some numbers to reflect our progress.
@@ -25,7 +25,7 @@ who has taken on a large role in helping maintain the site and servers.
 
 If there is anyone else out there who would like to help with operations,
 especially outside of US timezones,
-please let me know.
+please `let me know`_.
 
 Page Views
 ----------
@@ -96,10 +96,11 @@ and I think 2014 will be even better.
 
 We are working on a number of new features to expand the user base,
 and make the site more approachable.
-I look forward to continuing to improve the documentation ecosystem in the new year.
+We forward to continuing to improve the documentation ecosystem in the new year.
 
 
 .. _Read the Docs: https://readthedocs.org/
+.. _let me know: mailto:eric@ericholscher.com
 .. _39 people: https://github.com/rtfd/readthedocs.org/graphs/contributors?from=2013-01-01&to=2013-12-21&type=c
 .. _271 issues: https://github.com/rtfd/readthedocs.org/search?q=created%3A%3E%3D2013-01-01&source=cc&type=Issues
 .. _Wraithan: http://blog.wraithan.net/
