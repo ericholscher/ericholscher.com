@@ -78,13 +78,14 @@ The stats:
 * $167/wk currently
 * 114 people giving money
 
+Our hosting costs are sponsored by `Rackspace`_,
+which is fantasticly generous of them.
+
 Again, an image might show things better:
 
 .. image:: https://dl.dropboxusercontent.com/spa/es5kemdyaeh8wb8/pygv8k2k.png
 	:width: 100%
 
-Our hosting costs are sponsored by `Rackspace`_,
-which is fantasticly generous of them.
 
 Conclusion
 ----------
