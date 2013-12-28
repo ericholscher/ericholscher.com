@@ -1,7 +1,7 @@
 :Date: 2013-12-23 10:00:00
 
 Read the Docs 2013 Stats
-================================
+========================
 
 2013 has been a big year for `Read the Docs`_.
 Our mission is to make documentation hosting easier,
