@@ -2,7 +2,7 @@
 ===================
 
 2013 has been a fantastic year.
-In :doc:`2012 </blog/2012/dec/31/2012-year-review`, 
+In :doc:`2012 </blog/2012/dec/31/2012-year-review>`, 
 I decided that I would focus more on life than my career.
 This year has been a larger experiment along those lines.
 I have done a lot of good work on programming,
