@@ -38,6 +38,9 @@ and was fantastic.
 We got almost uniformly positive reviews,
 and it was a really great moment in time for me.
 
+April 15
+~~~~~~~~
+
 April 14 is when I flew to San Diego to start my hike on the PCT.
 April 15 was the official start to my hike.
 
