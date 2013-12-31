@@ -126,6 +126,12 @@ and maybe spend a month or two living there.
 December
 --------
 
+I spend the entire month visiting friends and family on the east coast.
+It's a luxury that I have time,
+and I am glad that I spend so much of it with family.
+It's often easy to get caught up in life and not remember those who matter the most to you.
+Spending time with family is something that I will never regret.
+
 We `announced Write the Docs <http://docs.writethedocs.org/en/latest/2014/blog/announcing-write-the-docs-2014/>`_ again next year,
 including a European version.
 I have also started submitting conference talks to a couple places.
