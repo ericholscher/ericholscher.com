@@ -12,9 +12,9 @@ January
 -------
 
 I quit my job a few weeks into the new year.
-Ending my employment at Urban Airship after 2 years.
+:ref:`Ending my employment <walk-woods>` at Urban Airship after 2 years.
 
-This was to train for the Pacific Crest Trail.
+This was to train for the `Pacific Crest Trail`_.
 The Pacific Crest Trail is a wilderness trail that stretches from Mexico to Canada, 
 across the western United States.
 
@@ -33,7 +33,7 @@ Planning this event also took up a good amount of my time during these couple mo
 April
 -----
 
-Write the Docs happened on April 6-8,
+`Write the Docs`_ happened on April 6-8,
 and was fantastic.
 We got almost uniformly positive reviews,
 and it was a really great moment in time for me.
@@ -45,7 +45,7 @@ April-June
 ----------
 
 Hike, hike hike.
-See some of the most beautiful places in the United States.
+See some of the most `beautiful places`_ in the United States.
 Meet amazing people,
 and do something incredibly difficult and rewarding.
 
@@ -72,11 +72,11 @@ because I had never thought about quitting.
 September
 ---------
 
-I attended XOXO Festival.
+I attended `XOXO Festival <http://2013.xoxofest.com/>`_.
 This is where things really started to turn around.
 
 I decided to focus on improving documentation full time for the foreseeable future,
-asking for help with this on Gittip.
+asking for help with this on `Gittip <https://www.gittip.com/ericholscher/>`_.
 I immediately had a good number of people helping to support me,
 and it heavily validated and inspired my work going forward.
 
@@ -123,7 +123,7 @@ and maybe spend a month or two living there.
 December
 --------
 
-We announced Write the Docs again next year,
+We `announced Write the Docs <http://docs.writethedocs.org/en/latest/2014/blog/announcing-write-the-docs-2014/>`_ again next year,
 including a European version.
 I have also started submitting conference talks to a couple places.
 I haven't spoken much in the past few years,
@@ -143,3 +143,7 @@ with a new focus and enthusiasm for my work as well.
 Focusing on documentation professionally has given me clarity of purpose.
 I feel like there is a lot I can accomplish in this realm in 2014,
 and that it will hopefully be the turning point in creating some kind of documentation community.
+
+.. _Pacific Crest Trail: http://en.wikipedia.org/wiki/Pacific_Crest_Trail
+.. _Write the Docs: http://conf.writethedocs.org/na/2013/index.html
+.. _beautiful places: http://www.flickr.com/photos/98071214@N07/sets/72157634560986460/

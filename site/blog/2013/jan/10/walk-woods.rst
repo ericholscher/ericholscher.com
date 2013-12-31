@@ -1,5 +1,7 @@
 :Date: 2013-01-10 19:08:43
 
+.. _walk-woods:
+
 A Walk in the Woods
 ===================
 
