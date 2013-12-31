@@ -33,8 +33,9 @@ Planning this event also took up a good amount of my time during these couple mo
 April
 -----
 
-`Write the Docs`_ happened on April 6-8,
+`Write the Docs`_ happened on April 8-9,
 and was fantastic.
+We gathered over 200 people in Portland to talk docs.
 We got almost uniformly positive reviews,
 and it was a really great moment in time for me.
 
