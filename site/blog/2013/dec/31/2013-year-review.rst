@@ -67,7 +67,7 @@ June-August
 This was a pretty depressing time.
 I had to re-enter normal society.
 This was surprisingly difficult,
-made harder by the fact that I had to wear a boot on my foot for 6 months.
+made harder by the fact that I had to wear a boot on my foot for 6 weeks.
 After walking for over 2 months everyday,
 the lack of exercise was really tough mentally.
 Also not finishing the PCT was really hard,
