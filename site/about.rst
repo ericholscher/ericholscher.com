@@ -1,6 +1,8 @@
 .. image:: /_static/img/me.jpg
    :height: 400px
 
+Photo Credit: `Kenneth Reitz <http://www.flickr.com/photos/kennethreitz>`_
+
 About me
 ========
 
