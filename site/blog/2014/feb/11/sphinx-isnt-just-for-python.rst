@@ -1,11 +1,11 @@
 Sphinx isn't just for Python
 ============================
 
-I have heard various times over the past couple months that Sphinx is "mainly for Python projects."
+I have heard a few times over the past couple months that Sphinx is "mainly for Python projects".
 This line of thinking makes sense,
 because Sphinx was created to document Python itself.
 Sphinx however,
-is a generic documentation tool that is capable of documenting any software projects.
+is a generic documentation tool that is capable of documenting any software project.
 
 The goal of Sphinx is to help you write prose documentation.
 Prose docs work great for any kind of software you are documenting.
