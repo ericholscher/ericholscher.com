@@ -37,6 +37,8 @@ Javascript
 
 * Bootstrap Datepicker: http://bootstrap-datepicker.readthedocs.org/en/latest/
 * CasperJS: http://docs.casperjs.org/en/latest/
+* highlight.js: http://highlightjs.readthedocs.org/en/latest/
+* raven.js: http://raven-js.readthedocs.org/en/latest/
 
 PHP
 ---
@@ -46,23 +48,35 @@ PHP
 * Guzzle: http://docs.guzzlephp.org/en/latest/
 * Phalcon: http://docs.phalconphp.com/en/latest/
 * Bernard: http://bernardphp.com/
+* PHP Security: http://phpsecurity.readthedocs.org/en/latest/
+
+Ruby
+----
+
+* Chef: http://docs.opscode.com/
+* Twilio Ruby Client: http://twilio-ruby.readthedocs.org/en/latest/
+* OpenDNS: http://opendns-dnsdb-client-for-ruby.readthedocs.org/en/latest/
+* Topaz: http://topaz.readthedocs.org/en/latest/
 
 Java
 ----
 
 * Inventory Tweaks: http://inventory-tweaks.readthedocs.org/en/latest/
 * Idiorm: http://idiorm.readthedocs.org/en/latest/
+* Spock: http://spock-framework.readthedocs.org/en/latest/
 
 Go
 --
 
 * Docker: http://docs.docker.io/en/latest/
-
+* GoDrone: http://www.godrone.io/en/latest/
+* Gandalf: http://gandalf.readthedocs.org/en/latest/
 
 Erlang
 ------
 
 * CouchDB: http://docs.couchdb.org/en/latest/
+* Disco: http://disco.readthedocs.org/en/latest/
 
 R
 -
