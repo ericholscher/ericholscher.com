@@ -80,9 +80,18 @@ Versions
 
 I see versions in lots of documentation,
 but not nearly enough.
+If your project has versions,
+your documentation should took.
 Not everyone can always upgrade to the latest version.
 **If someone is using an old version,
 they should have access to documentation for that version**.
+
+Along the same lines,
+you should also have documentation for your development version.
+If the docs don't have a version attached,
+I have no idea if they are up to date or not.
+You should clearly mark your released versions and development version,
+otherwise users will get confused.
 
 Language
 ~~~~~~~~
