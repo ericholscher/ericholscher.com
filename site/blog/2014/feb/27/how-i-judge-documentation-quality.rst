@@ -17,6 +17,10 @@ and this is a great way to get at them.
 I have developed quick ways to tell the quality of documentation.
 This post will be about what they are,
 and what they mean.
+Obviously it is just a heuristic,
+and having these things doesn't make good documentation.
+However,
+the absence of them usually indicates a lack of quality.
 
 A Website
 ---------
@@ -55,8 +59,8 @@ Permalinks
 ----------
 
 One of the primary uses of documentation is the ability to link information to other people.
-If your documentation doesn't have an easy way to link to sections of content on a page,
-then the value decreases.
+**If your documentation doesn't have an easy way to link to sections of content on a page,
+then the value decreases.**
 Your users should never have to send someone a link and say "go here and search for X".
 That means your documentation has failed your users.
 
