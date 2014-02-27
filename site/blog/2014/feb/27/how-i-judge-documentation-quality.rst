@@ -55,7 +55,7 @@ So please,
 use a tool that allows you to write prose documentation outside of your source code.
 Your users will thank you.
 
-A great start is to read this series on `Writing Great Documentation`_, and the resources on the `Write the Docs`_ docs.
+A great start [1]_ is to read this series on `Writing Great Documentation`_, and the resources on the `Write the Docs`_ docs.
 
 .. _Writing Great Documentation: http://jacobian.org/writing/great-documentation/
 .. _Write the Docs: http://docs.writethedocs.org/#contents
@@ -125,4 +125,8 @@ That is the 30 second way that I determine if a project's documentation is worth
 These are all hints about if a project actually cares about its docs.
 If the project doesn't care about its documentation,
 that is a good sign that you probably shouldn't use it.
+
+.. [1] If this kind of stuff interests you,
+		I help organize a conference about documentation:
+		http://conf.writethedocs.org/
 
