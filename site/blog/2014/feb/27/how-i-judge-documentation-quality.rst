@@ -1,4 +1,4 @@
-How I judge the Quality of Documentation in 30 Seconds
+How I Judge the Quality of Documentation in 30 Seconds
 ======================================================
 
 As a developer,
@@ -12,7 +12,6 @@ I think this question is telling.
 Every person has different priorities,
 and this is a great way to get at them.
 
-Given my focus on documentation,
 I have developed quick ways to tell the quality of documentation.
 This post will be about what they are,
 and what they mean.
@@ -81,7 +80,7 @@ Versions
 I see versions in lots of documentation,
 but not nearly enough.
 If your project has versions,
-your documentation should took.
+your documentation should too.
 Not everyone can always upgrade to the latest version.
 **If someone is using an old version,
 they should have access to documentation for that version**.
@@ -112,8 +111,8 @@ Conclusion
 ----------
 
 That is the 30 second way that I determine if a project's documentation is worth looking at.
-These are all hints about if a project actually cares about it's docs.
-If the project doesn't care about it's documentation,
+These are all hints about if a project actually cares about its docs.
+If the project doesn't care about its documentation,
 that is a good sign that you probably shouldn't use it.
 
 
