@@ -20,8 +20,8 @@ and what they mean.
 A Website
 ---------
 
-If your documentation is a directory full of files on GitHub,
-I close the tab.
+**If your documentation is a directory full of files on GitHub,
+I close the tab.**
 With GitHub Pages, 
 Read the Docs, 
 and other places to host generated documentation for free,
@@ -43,8 +43,8 @@ If your documentation is generated from source code,
 I am immediately skeptical.
 You should use words to communicate with your users,
 and those words shouldn't live in your source code.
-If you included all of the things needed to document a project in source,
-your code would be unreadable.
+**If you included all of the things needed to document a project in source,
+your code would be unreadable.**
 
 So please,
 use a tool that allows you to write prose documentation outside of your source code.
@@ -102,7 +102,7 @@ If you don't provide a language in your URL,
 you are implicitly sending the message that the documentation will never be translated.
 
 I believe that translating documentation is a really important step towards helping people learn to program.
-Someone shouldn't have to learn Programming and English at the same time.
+**Someone shouldn't have to learn Programming and English at the same time.**
 
 Translations are quite a bit of work,
 so I understand why many projects don't have them.
