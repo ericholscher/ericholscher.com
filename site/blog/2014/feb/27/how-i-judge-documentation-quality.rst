@@ -55,6 +55,11 @@ So please,
 use a tool that allows you to write prose documentation outside of your source code.
 Your users will thank you.
 
+A great start what to write is to read this series on `Writing Great Documentation`_, and the resources on the `Write the Docs`_ docs.
+
+.. _Writing Great Documentation: http://jacobian.org/writing/great-documentation/
+.. _Write the Docs: http://docs.writethedocs.org/#contents
+
 Permalinks
 ----------
 
