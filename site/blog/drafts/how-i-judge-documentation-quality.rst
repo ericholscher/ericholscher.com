@@ -17,7 +17,7 @@ I have developed quick ways to tell the quality of documentation.
 This post will be about what they are,
 and what they mean.
 
-A website
+A Website
 ---------
 
 If your documentation is a directory full of files on GitHub,
