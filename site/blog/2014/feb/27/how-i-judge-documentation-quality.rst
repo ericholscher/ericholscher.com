@@ -121,8 +121,3 @@ These are all hints about if a project actually cares about its docs.
 If the project doesn't care about its documentation,
 that is a good sign that you probably shouldn't use it.
 
-If you're interested in these topics,
-I help organize a conference called `Write the Docs`_ which covers this type of material.
-
-.. _Write the Docs: http://conf.writethedocs.org/
-
