@@ -1,5 +1,14 @@
 {% block about %}
 
+{% if meta %}
+<h3>
+This Post
+</h3>
+
+Published {{ meta.date.split(' ')[0] }}
+
+{% endif %}
+
 <h3>
 Find me online
 </h3>
