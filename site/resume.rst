@@ -18,26 +18,49 @@ Open Source Projects
 
 * Read the Docs - http://readthedocs.org
 
-    * Over 5000 projects
-    * Over 5 million page views a month
-    * Standard hosting for Python community
+    * Role: Primary maintainer for over 3 years
+    * Over 10,000 projects
+    * Over 9 million page views a month
+    * Standard documentation hosting for Python community
 
-* Member of the Python Software Foundation
+* Django - https://www.djangoproject.com/
+
+    * Role: Contributor and Operations Staff
+    * Help keep the main website and documentation up and functioning
+
+* Fellow at the Python Software Foundation
 
 Conferences
 -----------
 
-* Helped organize the Write the Docs conference - http://conf.writethedocs.org
+* Chaired the Write the Docs conference - http://conf.writethedocs.org
 
-    * 200+ people came to talk about documentation
-    * Portland, Oregon on April 8-9 2013
+2013 - Portland
+~~~~~~~~~~~~~~~
+
+    * 200+ attendees
+    * April 8-9
     * Has spawned local users groups in multiple cities
+
+2014 - Budapest 
+~~~~~~~~~~~~~~~
+
+    * 100 attendees 
+    * April 31-May 1
+
+2014 - Portland
+~~~~~~~~~~~~~~~
+
+    * 300 attendees 
+    * May 5-6
 
 Speaking
 ---------
 
 Spoken at the following conferences on Read the Docs, IRC bots, Testing, and Documentation:
 
+* Keynote - Pycon Malaysia 2014
+* Pycon Phillipines 2014
 * Open Source Bridge 2012, 2011
 * Pyweb Summit 2012
 * Djangocon US 2011, 2010
