@@ -91,13 +91,6 @@ Lawrence Journal-World - Developer
 * The birthplace of Django, maintaining the world's oldest Django codebase
 * Worked as Lead developer and defacto sysadmin for the "Internal" team
 
-    - Ljworld.com, Lawrence.com, Kusports.com and ~20 other sites
-
-* Worked on the "Commerical" team on Ellington
-
-    - Ported Ellington from Django r1290 to 1.0
-    - Wrote lots of tests and supported the product
-
 Education
 ---------
 
