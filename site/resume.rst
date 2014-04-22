@@ -4,31 +4,27 @@ Résumé
 | Eric Holscher
 | 757 705 0532
 | Portland, Oregon
+| https://github.com/ericholscher
 
 Interests
 ---------
 
-* Django & Python
 * Documentation
+* Django & Python
 * Devops
-* Scaling systems
 
 Open Source Projects
 --------------------
 
-* Github - https://github.com/ericholscher
-
 * Read the Docs - http://readthedocs.org
 
     * Role: Primary maintainer for over 3 years
-    * Over 10,000 projects
-    * Over 9 million page views a month
+    * Over 10,000 projects & 9 million page views a month
     * Standard documentation hosting for Python community
 
 * Write the Docs Documentation - http://docs.writethedocs.org/
 
     * Maintainer and primary author
-    * Documentation about documentation
     * A resource for people who want to write documentation
 
 * Django - https://www.djangoproject.com/
@@ -41,26 +37,10 @@ Open Source Projects
 Conferences
 -----------
 
-* Chaired of the Write the Docs conference - http://conf.writethedocs.org
-
-2013 - Portland
-~~~~~~~~~~~~~~~
-
-    * 225 attendees
-    * April 8-9
-    * Has spawned local users groups in multiple cities
-
-2014 - Budapest 
-~~~~~~~~~~~~~~~
-
-    * 100 attendees 
-    * April 31-May 1
-
-2014 - Portland
-~~~~~~~~~~~~~~~
-
-    * 300 attendees 
-    * May 5-6
+* Chair of the Write the Docs conference - http://conf.writethedocs.org
+* 2013 NA - Portland - 225 attendees
+* 2014 EU - Budapest - 100 attendees 
+* 2014 NA - Portland - 300 attendees 
 
 Speaking
 ---------
@@ -71,7 +51,7 @@ Spoken at the following conferences on Read the Docs, IRC bots, Testing, and Doc
 * Pycon Phillipines 2014
 * Mulitple meetups across Taiwan in 2014
 * Open Source Bridge 2012, 2011
-* Pyweb Summit 2012
+* Pycon Web Summit 2012
 * Djangocon US 2011, 2010
 * OSCON 2011
 * Djangocon EU 2010, 2009
@@ -117,18 +97,6 @@ Lawrence Journal-World - Developer
 
     - Ported Ellington from Django r1290 to 1.0
     - Wrote lots of tests and supported the product
-
-
-March 2006 - May 2008
-~~~~~~~~~~~~~~~~~~~~~
-(Hiatus July 2006-January 2007 while in Australia)
-
-CACI - Developer
-````````````````
-
-* Full Life-cycle development of a Portal-type website for the U.S. Navy
-* Wrote a javascript validation library, allowing you to add rules in one line, and saving developers from writing custom javascript for each page
-* Used Prototype and Scriptaculous Javascript libraries for AJAX and other development
 
 Education
 ---------
