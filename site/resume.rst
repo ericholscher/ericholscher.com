@@ -24,12 +24,12 @@ Open Source Projects
 
 * Write the Docs Documentation - http://docs.writethedocs.org/
 
-    * Maintainer and primary author
+    * Role: Maintainer and primary author
     * A resource for people who want to write documentation
 
 * Django - https://www.djangoproject.com/
 
-    * Role: Contributor and Operations Staff
+    * Role: Contributor and operations staff
     * Help keep the main website and documentation up and functioning
 
 * Fellow at the Python Software Foundation
