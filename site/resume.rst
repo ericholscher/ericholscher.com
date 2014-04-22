@@ -16,12 +16,20 @@ Interests
 Open Source Projects
 --------------------
 
+* Github - https://github.com/ericholscher
+
 * Read the Docs - http://readthedocs.org
 
     * Role: Primary maintainer for over 3 years
     * Over 10,000 projects
     * Over 9 million page views a month
     * Standard documentation hosting for Python community
+
+* Write the Docs Documentation - http://docs.writethedocs.org/
+
+    * Maintainer and primary author
+    * Documentation about documentation
+    * A resource for people who want to write documentation
 
 * Django - https://www.djangoproject.com/
 
