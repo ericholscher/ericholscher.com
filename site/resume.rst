@@ -33,12 +33,12 @@ Open Source Projects
 Conferences
 -----------
 
-* Chaired the Write the Docs conference - http://conf.writethedocs.org
+* Chaired of the Write the Docs conference - http://conf.writethedocs.org
 
 2013 - Portland
 ~~~~~~~~~~~~~~~
 
-    * 200+ attendees
+    * 225 attendees
     * April 8-9
     * Has spawned local users groups in multiple cities
 
