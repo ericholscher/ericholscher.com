@@ -69,6 +69,7 @@ Spoken at the following conferences on Read the Docs, IRC bots, Testing, and Doc
 
 * Keynote - Pycon Malaysia 2014
 * Pycon Phillipines 2014
+* Mulitple meetups across Taiwan in 2014
 * Open Source Bridge 2012, 2011
 * Pyweb Summit 2012
 * Djangocon US 2011, 2010
