@@ -1,4 +1,4 @@
-.. image:: /_static/img/bike.png
+.. image:: /_static/img/bike.jpg
    :height: 300px
 
 Photo: My bike on the Williamette Valley Scenic Bikeway
