@@ -2,7 +2,7 @@ Arguing for Inclusivity
 =======================
 
 Large changes often start with small things.
-Small things are not done because they aren't large enough.
+Those small things are often not done because they are small.
 Changing language is a small thing,
 but it has a large impact.
 
@@ -13,7 +13,6 @@ you shouldn't change it.
 There is a call of "political correctness",
 saying that the change is unnecessary.
 
-We should hold ourselves to a higher standard.
 If we are trying to build inclusive and welcoming communities,
 "not offensive" isn't enough.
 **Language should pass the test of "is it welcoming to everyone".**
