@@ -3,7 +3,7 @@ Résumé
 
 | Eric Holscher
 | 757 705 0532
-| Portland, Oregon
+| Portland, Oregon, Cascadia
 | https://github.com/ericholscher
 
 Interests
