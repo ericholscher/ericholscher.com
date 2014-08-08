@@ -4,7 +4,7 @@ Read the Docs goes full-time
 We have some exciting news in Read the Docs land this week.
 The project has been `accepted into`_ the Portland Incubator Experiment,
 as an open source project.
-This means that we have office space provided to us in Portland for 3 months,
+This means that we have office space provided to us in Portland for three months,
 where we will be working on Read the Docs full-time.
 There will be two of us working on this:
 `Eric Holscher`_ and `Anthony Johnson`_.
@@ -12,7 +12,7 @@ There will be two of us working on this:
 .. note:: Because we now have amazing office space,
 		  you can drop by and hack with us any time.
 		  We will be in `Downtown Portland`_ every weekday.
-		  Come drop by and work on Read the Docs with us!
+		  Come work on Read the Docs with us!
 
 This is a fantastic opportunity for the project.
 Having two engineers working on it for three months will enable us to build a lot of useful things.
@@ -30,8 +30,8 @@ This isn't a great format for showing new things.
 
 Today we are announcing a new blog: http://blog.readthedocs.com/
 We will be doing regular feature announcements on the blog as we build them.
-There are also a number of recently released features that we'll highlight there as well.
-If reading on the web aren't your thing,
+There are a number of recently released features that we'll be highlighting there.
+If reading on the web isn't your thing,
 you can also choose to get that content via `RSS`_ or email: 
 
 .. raw:: html
