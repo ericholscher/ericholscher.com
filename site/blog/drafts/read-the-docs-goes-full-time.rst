@@ -44,7 +44,7 @@ you can also choose to get that content via `RSS`_ or email:
 	<!--End mc_embed_signup-->
 
 Adding new features to the project is great,
-and we love the idea of supporting it for a long time.
+but something like Read the Docs needs support for the foreseeable future.
 To be able to continue doing Read the Docs,
 we have decided our other focus will be on making the project sustainable.
 
