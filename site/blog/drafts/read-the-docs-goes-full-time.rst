@@ -61,7 +61,7 @@ We will have more information on this front in the next few weeks,
 as we figure out what our sustainability model will look like.
 The goal is that we will be able to create new features and support hosting the project for years to come.
 If you have thoughts on good ways to do this,
-feel free to `email me`_
+feel free to `email me`_.
 
 We really believe in the mission and potential of Read the Docs to really improve the state of documentation in software,
 and we are really happy with how far we've come.
