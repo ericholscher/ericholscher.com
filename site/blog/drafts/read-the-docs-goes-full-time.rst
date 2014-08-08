@@ -26,12 +26,22 @@ This isn't a great format for showing new things.
 Today we are announcing a new blog: http://blog.readthedocs.com/
 We will be doing regular feature announcements on the blog as we build them.
 There are also a number of recently released features that we'll highlight there as well.
-If blogs aren't your thing,
-you can also choose to get that content via email: 
+If reading on the web aren't your thing,
+you can also choose to get that content via `RSS`_ or email: 
 
 .. raw:: html
 
-Mailchimp thing
+	<!-- Begin MailChimp Signup Form -->
+	<div id="mc_embed_signup">
+	<form action="//readthedocs.us3.list-manage.com/subscribe/post?u=a6a22369cc2b356379cf789ca&amp;id=a85a83a5a5" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+	    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+	    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+	    <div style="position: absolute; left: -5000px;"><input type="text" name="b_a6a22369cc2b356379cf789ca_a85a83a5a5" tabindex="-1" value=""></div>
+	    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+	</form>
+	</div>
+
+	<!--End mc_embed_signup-->
 
 Sustainability
 --------------
@@ -52,3 +62,4 @@ and we look forward to building the future with you.
 .. _Eric Holscher: http://twitter.com/ericholscher
 .. _Anthony Johnson: https://twitter.com/agjhnsn
 .. _@readthedocs: http://twitter.com/readthedocs
+.. _RSS: http://blog.readthedocs.com/archive/atom.xml
