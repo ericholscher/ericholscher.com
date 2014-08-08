@@ -12,7 +12,7 @@ There will be two of us working on this:
 This is a fantastic opportunity for the project.
 Having two engineers working on it for three months will enable us to build a lot of useful things.
 This week is the first week,
-and we have already triaged the entire issue tracker and launched a few new features.
+and we have already `triaged the entire issue tracker`_ and launched a few new features.
 
 New Features
 ------------
@@ -43,18 +43,18 @@ you can also choose to get that content via `RSS`_ or email:
 
 	<!--End mc_embed_signup-->
 
-Adding new features to the project is great,
-but something like Read the Docs needs support for the foreseeable future.
+Adding new features to the project is great in the short term,
+but something like Read the Docs needs support for the long term.
 To be able to continue doing Read the Docs,
-we have decided our other focus will be on making the project sustainable.
+we have decided to spend this time figuring out how to make the project sustainable.
 
 Sustainability
 --------------
 
 We hope at the end of three months that Read the Docs is a sustainable open source project.
-This means that we will be able to create new features and support hosting the project for years to come.
 We will have more information on this front in the next few weeks,
 as we figure out what our sustainability model will look like.
+The goal is that we will be able to create new features and support hosting the project for years to come.
 
 We really believe in the mission and potential of Read the Docs to really improve the state of documentation in software,
 and we are really happy with how far we've come.
@@ -63,6 +63,7 @@ this is just the beginning,
 and we look forward to building the future with you.
 
 .. _accepted into: http://blog.piepdx.com/2014/08/05/announcing-pie-class-of-2014/
+.. _triaged the entire issue tracker: https://github.com/rtfd/readthedocs.org/pulse
 .. _Eric Holscher: http://twitter.com/ericholscher
 .. _Anthony Johnson: https://twitter.com/agjhnsn
 .. _@readthedocs: http://twitter.com/readthedocs
