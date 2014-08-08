@@ -63,8 +63,8 @@ The goal is that we will be able to create new features and support hosting the 
 If you have thoughts on good ways to do this,
 feel free to `email me`_.
 
-We really believe in the mission and potential of Read the Docs to really improve the state of documentation in software,
-and we are really happy with how far we've come.
+We really believe in the mission and potential of Read the Docs to improve the state of documentation in software,
+and we are happy with how far we've come.
 However,
 this is just the beginning,
 and we look forward to building the future with you.
