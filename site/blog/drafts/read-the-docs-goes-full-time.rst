@@ -43,20 +43,24 @@ you can also choose to get that content via `RSS`_ or email:
 
 	<!--End mc_embed_signup-->
 
+Adding new features to the project is great,
+and we love the idea of supporting it for a long time.
+To be able to continue doing Read the Docs,
+we have decided our other focus will be on making the project sustainable.
+
 Sustainability
 --------------
 
-The main goal of this project is to make Read the Docs a sustainable open source project.
+We hope at the end of three months that Read the Docs is a sustainable open source project.
 This means that we will be able to create new features and support hosting the project for years to come.
 We will have more information on this front in the next few weeks,
-as we figure out what we will be doing.
+as we figure out what our sustainability model will look like.
 
 We really believe in the mission and potential of Read the Docs to really improve the state of documentation in software,
 and we are really happy with how far we've come.
 However,
 this is just the beginning,
 and we look forward to building the future with you.
-
 
 .. _accepted into: http://blog.piepdx.com/2014/08/05/announcing-pie-class-of-2014/
 .. _Eric Holscher: http://twitter.com/ericholscher
