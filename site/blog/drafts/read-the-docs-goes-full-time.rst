@@ -1,3 +1,5 @@
+:Date: 2014-08-08
+
 Read the Docs goes full-time
 ============================
 
