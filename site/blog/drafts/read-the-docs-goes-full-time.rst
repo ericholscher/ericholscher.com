@@ -3,7 +3,7 @@
 Read the Docs goes full-time
 ============================
 
-We have some exciting news in Read the Docs land this week.
+We have some exciting news in `Read the Docs`_ land this week.
 The project has been `accepted into`_ the Portland Incubator Experiment,
 as an open source project.
 This means that we have office space provided to us in Portland for three months,
@@ -79,3 +79,4 @@ and we look forward to building the future with you.
 .. _@readthedocs: http://twitter.com/readthedocs
 .. _RSS: http://blog.readthedocs.com/archive/atom.xml
 .. _email me: mailto:eric@ericholscher.com
+.. _Read the Docs: https://readthedocs.org/
