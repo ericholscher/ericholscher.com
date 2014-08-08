@@ -14,6 +14,11 @@ Having two engineers working on it for three months will enable us to build a lo
 This week is the first week,
 and we have already `triaged the entire issue tracker`_ and launched a few new features.
 
+.. note:: Because we now have amazing office space,
+		  you can drop by and hack with us any time.
+		  We will be in `Downtown Portland`_ every week day.
+		  Come drop by and work on Read the Docs with us!
+
 New Features
 ------------
 
@@ -64,6 +69,7 @@ and we look forward to building the future with you.
 
 .. _accepted into: http://blog.piepdx.com/2014/08/05/announcing-pie-class-of-2014/
 .. _triaged the entire issue tracker: https://github.com/rtfd/readthedocs.org/pulse
+.. _Downtown Portland: https://www.google.com/maps/place/Portland+Incubator+Experiment/@45.52441,-122.683594,17z/data=!3m1!4b1!4m2!3m1!1s0x54950a02699da207:0xc065b43c82957842
 .. _Eric Holscher: http://twitter.com/ericholscher
 .. _Anthony Johnson: https://twitter.com/agjhnsn
 .. _@readthedocs: http://twitter.com/readthedocs
