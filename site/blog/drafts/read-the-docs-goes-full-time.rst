@@ -9,15 +9,15 @@ where we will be working on Read the Docs full-time.
 There will be two of us working on this:
 `Eric Holscher`_ and `Anthony Johnson`_.
 
+.. note:: Because we now have amazing office space,
+		  you can drop by and hack with us any time.
+		  We will be in `Downtown Portland`_ every weekday.
+		  Come drop by and work on Read the Docs with us!
+
 This is a fantastic opportunity for the project.
 Having two engineers working on it for three months will enable us to build a lot of useful things.
 This week is the first week,
 and we have already `triaged the entire issue tracker`_ and launched a few new features.
-
-.. note:: Because we now have amazing office space,
-		  you can drop by and hack with us any time.
-		  We will be in `Downtown Portland`_ every week day.
-		  Come drop by and work on Read the Docs with us!
 
 New Features
 ------------
