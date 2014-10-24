@@ -1,5 +1,5 @@
-Read the Docs For Business
-==========================
+Announcing Read the Docs For Business
+=====================================
 
 I helped `create`_ Read the Docs over four years ago,
 as an open source project to solve a problem we had.
