@@ -1,8 +1,8 @@
 Announcing Read the Docs For Business
 =====================================
 
-I helped `create`_ Read the Docs over four years ago,
-as an open source project to solve a problem we had.
+I helped `create`_ Read the Docs over four years ago.
+It started with a humble goal of replacing a cron job on my own server.
 Since then,
 it `has grown`_ more than I ever could have `imagined`_.
 It has become vital infrastructure for the Python community,
@@ -14,18 +14,28 @@ but it doesn't compare to a developer's salary
 It has been a labor of love because I `really believe`_ in improving documentation for developers [#f1]_.
 
 Companies have the same issues with documentation that open source has. [#f2]_
+Since Read the Docs is open source,
+it's been possible to run it locally at your company.
 However,
 running Read the Docs is not trivial.
 There are a lot of moving pieces,
-and it requires a good deal of maintenance. 
+and the code base is always gaining new features.
 
 That's why today, 
 Read The Docs is adding a hosted solution aimed at companies.
-It will host your private documentation,
+It will host your company's private documentation,
 and only give people at your company access.
+
+readthedocs.com
+~~~~~~~~~~~~~~~
 
 This site will live at https://readthedocs.com.
 The profits from the ``.com`` will help fund development on the ``.org``.
+
+We've also added some features that only make sense for companies.
+Since everyone is logged in,
+you can see who is reading each page.
+This lets you focus your writing on pages that get read.
 
 https://readthedocs.com is launching today with a private beta.
 You can sign up for invites now,
