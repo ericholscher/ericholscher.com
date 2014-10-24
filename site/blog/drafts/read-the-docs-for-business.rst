@@ -1,7 +1,7 @@
 Announcing Read the Docs For Business
 =====================================
 
-| tl;dr: We are launching https://readthedocs.com 
+| tl;dr: We are launching https://readthedocs.com.
 | Nothing about https://readthedocs.org is going to change.
 
 I helped `create`_ Read the Docs over four years ago,
