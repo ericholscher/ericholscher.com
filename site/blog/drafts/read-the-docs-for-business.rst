@@ -13,7 +13,7 @@ and the `programming world`_ in general.
 
 Read the Docs has always been a volunteer effort for me.
 I have gotten small amounts from `Gittip`_ over the years,
-but compared to developer salary,
+but compared to developer's salary,
 it is peanuts.
 It has been a labor of love because I `really believe`_ in improving documentation for developers [#f1]_.
 
@@ -21,9 +21,9 @@ The way the world works,
 companies are where money is stored.
 It is ten times harder to get a company to donate money to a project than to buy a product.
 Asking individuals to give us money instead of companies is asking the people who are actually doing the open source work to support us.
-**The companies benefiting from open source should be supporting the ecosystem much more than they are.**[#f2]_
+**The companies benefiting from open source should be supporting the ecosystem much more than they are.** [#f2]_
 
-Companies have the same issues with documentation that open source has.
+Companies have the same issues with documentation that open source has. [#f3]_
 Read the Docs has always been open source,
 so some companies have installed it locally.
 However,
@@ -32,7 +32,9 @@ There are a lot of moving pieces,
 and it requires a good deal of maintenance. 
 
 That's why today, 
-we are adding the ability to have us host it for companies.
+Read The Docs is adding a hosted solution aimed at companies.
+It will host your private documentation,
+and only give people at your company access.
 
 This site will live at https://readthedocs.com
 
@@ -41,25 +43,29 @@ Why a .com and a .org
 
 I love readthedocs.org,
 and I never want anything to happen to it.
-readthedocs.com is a separate entity,
-that has been established to bring Read the Docs to business.
+readthedocs.com is a separate entity that has been established to bring Read the Docs to business.
 
 This has been a lot of work.
-Having both live on the same domain would be much easier.
-I strongly believe readthedocs.org should never be part of "`an incredible journey`_".
-As part of that, we are bootstrapping, and do not plan on taking venture funding. [#f3]_
+Having both live on the same domain would be much easier,
+but I strongly believe readthedocs.org should never be part of "`an incredible journey`_".
+As part of that, we are bootstrapping, and do not plan on taking venture funding. [#f4]_
 
 **The fate of readthedocs.org is not tied to the fate of the business.**
 readthedocs.com has been created to help fund this work.
 readthedocs.org should be a resource available to the programming community forever,
-and I are doing everything in my power to make sure that happens.
+and I am doing everything in my power to make sure that happens.
 
-My work creating a company is to help make both the open source and corporate documentation worlds better.
+Creating a company will help make both the open source and corporate documentation worlds better.
 Read the Docs solves a real need in the software world,
 and I hope you join us in the next stage.
 
 Our mission is to build world-class documentation tools for developers,
 and we would love to have you aboard.
+
+.. raw:: html
+
+	<br>
+	<br>
 
 .. _create: http://ericholscher.com/blog/2010/aug/16/announcing-read-docs/
 .. _Gittip: http://ericholscher.com/blog/2013/sep/25/help-me-improve-documentation/
@@ -81,8 +87,13 @@ and we would love to have you aboard.
 
 .. [#f2]
 
-	Many thanks to companies like `Stripe <https://stripe.com/blog/stripe-open-source-retreat>`_ who are doing their part.
+	Many thanks to companies like `Stripe <https://stripe.com/blog/stripe-open-source-retreat>`_ who are doing their part. I would love to see other companies help our open source like this. I'm sure some are, but it isn't nearly as common as it should be.
 
 .. [#f3]
+	
+	Actually, most companies have it way worse. 
+
+.. [#f4]
 
 	We have taken $20,000 as part of being in `PIE <http://www.piepdx.com/>`_ with the explicit understanding that we are not seeking further venture funding. They are also amazing folks and I thank them sincerely. The business likely never would have happened without the three months of office space and mentoring they provided.
+
