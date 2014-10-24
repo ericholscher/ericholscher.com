@@ -83,7 +83,7 @@ and we would love to have you aboard.
 
 .. [#f2]
 
-	Many thanks to companies like `Stripe <https://stripe.com/blog/stripe-open-source-retreat>`_ who are doing their part. I would love to see other companies help our open source like this. I'm sure some are, but it isn't nearly as common as it should be.
+	Many thanks to companies like `Stripe <https://stripe.com/blog/stripe-open-source-retreat>`_ who are doing their part. I would love to see other companies help open source like this. I'm sure some are, but it isn't nearly as common as it should be.
 
 .. [#f3]
 	
