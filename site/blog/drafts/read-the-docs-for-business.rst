@@ -13,11 +13,7 @@ I have gotten small amounts from `Gittip`_ over the years,
 but it doesn't compare to a developer's salary
 It has been a labor of love because I `really believe`_ in improving documentation for developers [#f1]_.
 
-It is ten times harder to get a company to donate money to a project than to buy a product.
-Asking individuals to give us money instead of companies is asking the people who are actually doing the open source work to support us.
-The companies benefiting from open source should be supporting the ecosystem much more than they are. [#f2]_
-
-Companies have the same issues with documentation that open source has. [#f3]_
+Companies have the same issues with documentation that open source has. [#f2]_
 However,
 running Read the Docs is not trivial.
 There are a lot of moving pieces,
@@ -47,7 +43,7 @@ and I never want anything to happen to it.
 This has been a lot of work.
 Having both live on the same domain would be much easier,
 but I strongly believe ``readthedocs.org`` should never be part of "`an incredible journey`_".
-As part of that, we are bootstrapping, and do not plan on taking venture funding. [#f4]_
+As part of that, we are bootstrapping, and do not plan on taking venture funding. [#f3]_
 
 **The fate of readthedocs.org is not tied to the fate of the business.**
 
@@ -86,14 +82,10 @@ and we would love to have you aboard.
 
 
 .. [#f2]
-
-	Many thanks to companies like `Stripe <https://stripe.com/blog/stripe-open-source-retreat>`_ who are doing their part. I would love to see other companies help open source like this. I'm sure some are, but it isn't nearly as common as it should be.
-
-.. [#f3]
 	
 	Actually, most companies have it way worse. 
 
-.. [#f4]
+.. [#f3]
 
 	We have taken $20,000 as part of being in `PIE <http://www.piepdx.com/>`_ with the explicit understanding that we are not seeking further venture funding. They are amazing folks and I thank them sincerely. The business likely never would have happened without the office space and mentoring they provided.
 
