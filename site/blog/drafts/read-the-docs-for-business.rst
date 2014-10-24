@@ -31,6 +31,10 @@ and only give people at your company access.
 This site will live at https://readthedocs.com.
 The profits from the ``.com`` will help fund development on the ``.org``.
 
+https://readthedocs.com is launching today with a private beta.
+You can sign up for invites now,
+and we will start letting people in soon.
+
 **readthedocs.org will always be free and available for open source docs.**
 
 Why a .com and a .org
