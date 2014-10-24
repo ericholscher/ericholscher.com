@@ -50,8 +50,8 @@ Having both live on the same domain would be much easier.
 However,
 I strongly believe readthedocs.org should never be part of `an incredible journey`_.
 
+**The fate of readthedocs.org is not tied to the fate of the business.**
 readthedocs.com has been created to help fund our work.
-*The fate of readthedocs.org is not tied to the fate of the business.**
 I believe readthedocs.org should be a resource available to the programming community forever,
 and we are doing everything in our power to make sure that happens.
 
