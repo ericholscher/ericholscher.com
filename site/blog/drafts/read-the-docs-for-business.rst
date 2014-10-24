@@ -1,7 +1,7 @@
 Read the Docs For Business
 ==========================
 
-I `created`_ Read the Docs over four years ago,
+I helped `create`_ Read the Docs over four years ago,
 as an open source project to solve a problem we had.
 Since then,
 it `has grown`_ more than I ever could have `imagined`_.
@@ -25,10 +25,15 @@ The companies benefiting from open source should be supporting the ecosystem muc
 I also believe that companies have the same issues with documentation that open source has.
 Read the Docs has always been open source,
 so some companies have installed it locally.
-Today,
+However,
+running Read the Docs is not trivial.
+There are a lot of moving pieces,
+and it requires a good deal of maintenance. 
+
+That's why today, 
 we are adding the ability to have us host it for companies.
 
-This site will live at readthedocs.com
+This site will live at https://readthedocs.com
 
 Why a .com and a .org
 ~~~~~~~~~~~~~~~~~~~~~
@@ -45,9 +50,9 @@ Having both live on the same domain would be much easier.
 However,
 I strongly believe readthedocs.org should never be part of `an incredible journey`_.
 
-Read the Docs for Business has been created to help fund our work on the code base.
-However, the fate of readthedocs.org is not tied to the fate of the business.
-We believe readthedocs.org should be a resource available to the programming community forever,
+readthedocs.com has been created to help fund our work.
+*The fate of readthedocs.org is not tied to the fate of the business.**
+I believe readthedocs.org should be a resource available to the programming community forever,
 and we are doing everything in our power to make sure that happens.
 
 Our work creating a company is to help make both the open source and corporate documentation worlds better.
@@ -57,7 +62,7 @@ and we hope you join us in the next stage.
 Our mission it to build world-class documentation tools for developers,
 and we would love to have you aboard.
 
-.. _created: http://ericholscher.com/blog/2010/aug/16/announcing-read-docs/
+.. _create: http://ericholscher.com/blog/2010/aug/16/announcing-read-docs/
 .. _Gittip: http://ericholscher.com/blog/2013/sep/25/help-me-improve-documentation/
 .. _really believe: http://ericholscher.com/blog/2012/jan/22/why-read-docs-matters/
 .. _has grown: http://ericholscher.com/blog/2013/dec/23/read-the-docs-2013-stats/
@@ -71,5 +76,5 @@ and we would love to have you aboard.
 	During this time,
 	I've also co-founded `conferences`_ in the US and Europe.
 	We're building community around people who care about this issue.
-	The conference is also run as a non-profit endeavour,
+	The conference is also run as a non-profit endeavor,
 	in our effort to build community.
