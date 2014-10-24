@@ -15,7 +15,7 @@ It has been a labor of love because I `really believe`_ in improving documentati
 
 It is ten times harder to get a company to donate money to a project than to buy a product.
 Asking individuals to give us money instead of companies is asking the people who are actually doing the open source work to support us.
-**The companies benefiting from open source should be supporting the ecosystem much more than they are.** [#f2]_
+The companies benefiting from open source should be supporting the ecosystem much more than they are. [#f2]_
 
 Companies have the same issues with documentation that open source has. [#f3]_
 However,
