@@ -4,7 +4,7 @@ Read the Docs For Business
 We `created`_ Read the Docs over four years ago,
 as an open source project to solve a problem we had.
 Since then,
-it `has grown`_ more than I ever could have imagined.
+it `has grown`_ more than I ever could have `imagined`_.
 It has become vital infrastructure for the Python community,
 and the programming world in general.
 
@@ -63,3 +63,4 @@ Eric
 .. _really believe: http://ericholscher.com/blog/2012/jan/22/why-read-docs-matters/
 .. _has grown: http://ericholscher.com/blog/2013/dec/23/read-the-docs-2013-stats/
 .. _an incredible journey: http://ourincrediblejourney.tumblr.com/
+.. _imagined: http://www.seethestats.com/site/readthedocs.org
