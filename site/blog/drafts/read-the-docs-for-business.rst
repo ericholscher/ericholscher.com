@@ -35,6 +35,7 @@ we are adding the ability to have us host it for companies.
 
 This site will live at https://readthedocs.com
 
+
 Why a .com and a .org
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -48,7 +49,7 @@ that has been established to bring Read the Docs to business.
 This has been a lot of work.
 Having both live on the same domain would be much easier.
 However,
-I strongly believe readthedocs.org should never be part of `an incredible journey`_.
+I strongly believe readthedocs.org should never be part of "`an incredible journey`_".
 
 **The fate of readthedocs.org is not tied to the fate of the business.**
 readthedocs.com has been created to help fund our work.
@@ -59,7 +60,7 @@ Our work creating a company is to help make both the open source and corporate d
 We believe Read the Docs solves a real need in the software world,
 and we hope you join us in the next stage.
 
-Our mission it to build world-class documentation tools for developers,
+Our mission is to build world-class documentation tools for developers,
 and we would love to have you aboard.
 
 .. _create: http://ericholscher.com/blog/2010/aug/16/announcing-read-docs/
