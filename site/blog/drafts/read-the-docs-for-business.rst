@@ -1,7 +1,7 @@
 Read the Docs For Business
 ==========================
 
-We `created`_ Read the Docs over four years ago,
+I `created`_ Read the Docs over four years ago,
 as an open source project to solve a problem we had.
 Since then,
 it `has grown`_ more than I ever could have `imagined`_.
@@ -19,8 +19,8 @@ the way the world works,
 companies are where money is stored.
 It is 10 times harder to get a company to donate money to a project,
 than to buy a product.
-Asking individuals to give us money instead of companies is asking the people who are actually doing the work to support us.
-The companies benefiting from Open Source should be supporting the ecosystem much more than they are.
+Asking individuals to give us money instead of companies is asking the people who are actually doing the open source work to support us.
+The companies benefiting from open source should be supporting the ecosystem much more than they are.
 
 I also believe that companies have the same issues with documentation that open source has.
 Read the Docs has always been open source,
@@ -35,13 +35,15 @@ Why a .com and a .org
 
 I love readthedocs.org,
 and I never want anything to happen to it.
-readthedocs.com is a seperate entity,
+readthedocs.com is a separate entity,
 that has been established to bring Read the Docs to business.
+
+**readthedocs.org will always be free and available for open source docs.**
 
 This has been a lot of work.
 Having both live on the same domain would be much easier.
 However,
-we strongly believe readthedocs.org should never be part of `an incredible journey`_.
+I strongly believe readthedocs.org should never be part of `an incredible journey`_.
 
 Read the Docs for Business has been created to help fund our work on the code base.
 However, the fate of readthedocs.org is not tied to the fate of the business.
@@ -67,7 +69,7 @@ and we would love to have you aboard.
 .. [#f1]
 
 	During this time,
-	we've also started `conferences`_ in the US and Europe.
+	I've also co-founded `conferences`_ in the US and Europe.
 	We're building community around people who care about this issue.
 	The conference is also run as a non-profit endeavour,
 	in our effort to build community.
