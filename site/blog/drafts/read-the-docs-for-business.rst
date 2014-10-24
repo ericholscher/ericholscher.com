@@ -28,7 +28,7 @@ Read The Docs is adding a hosted solution aimed at companies.
 It will host your private documentation,
 and only give people at your company access.
 
-This site will live at https://readthedocs.com
+This site will live at https://readthedocs.com.
 The profits from the ``.com`` will help fund development on the ``.org``.
 
 **readthedocs.org will always be free and available for open source docs.**
