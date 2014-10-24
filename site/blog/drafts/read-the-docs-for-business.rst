@@ -96,5 +96,5 @@ and we would love to have you aboard.
 
 .. [#f4]
 
-	We have taken $20,000 as part of being in `PIE <http://www.piepdx.com/>`_ with the explicit understanding that we are not seeking further venture funding. They are also amazing folks and I thank them sincerely. The business likely never would have happened without the three months of office space and mentoring they provided.
+	We have taken $20,000 as part of being in `PIE <http://www.piepdx.com/>`_ with the explicit understanding that we are not seeking further venture funding. They are amazing folks and I thank them sincerely. The business likely never would have happened without the office space and mentoring they provided.
 
