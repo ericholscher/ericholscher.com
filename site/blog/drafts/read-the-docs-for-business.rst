@@ -12,7 +12,7 @@ Read the Docs has always been a volunteer effort for me.
 I have gotten small amounts from `Gittip`_ over the years,
 but compared to developer salary,
 it is peanuts.
-It has been a labor of love because I `really believe`_ in improving documentation for developers.
+It has been a labor of love because I `really believe`_ in improving documentation for developers [#f1]_.
 
 Sadly,
 the way the world works,
@@ -55,9 +55,6 @@ and we hope you join us in the next stage.
 Our mission it to build world-class documentation tools for developers,
 and we would love to have you aboard.
 
-Cheers,
-Eric
-
 .. _created: http://ericholscher.com/blog/2010/aug/16/announcing-read-docs/
 .. _Gittip: http://ericholscher.com/blog/2013/sep/25/help-me-improve-documentation/
 .. _really believe: http://ericholscher.com/blog/2012/jan/22/why-read-docs-matters/
@@ -65,3 +62,12 @@ Eric
 .. _an incredible journey: http://ourincrediblejourney.tumblr.com/
 .. _imagined: http://www.seethestats.com/site/readthedocs.org
 .. _programming world: http://ericholscher.com/blog/2014/feb/11/sphinx-isnt-just-for-python/
+.. _conferences: http://conf.writethedocs.org/
+
+.. [#f1]
+
+	During this time,
+	we've also started `conferences`_ in the US and Europe.
+	We're building community around people who care about this issue.
+	The conference is also run as a non-profit endeavour,
+	in our effort to build community.
