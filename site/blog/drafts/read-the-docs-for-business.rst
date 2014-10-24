@@ -1,8 +1,8 @@
 Announcing Read the Docs For Business
 =====================================
 
-| tl;dr: We are launching https://readthedocs.com.
-| Nothing about https://readthedocs.org is going to change.
+	| tl;dr: We are launching readthedocs.com.
+	| **readthedocs.org will always be free and available for open source docs.**
 
 I helped `create`_ Read the Docs over four years ago,
 as an open source project to solve a problem we had.
@@ -21,7 +21,7 @@ The way the world works,
 companies are where money is stored.
 It is ten times harder to get a company to donate money to a project than to buy a product.
 Asking individuals to give us money instead of companies is asking the people who are actually doing the open source work to support us.
-The companies benefiting from open source should be supporting the ecosystem much more than they are.
+**The companies benefiting from open source should be supporting the ecosystem much more than they are.**[#f2]_
 
 I also believe that companies have the same issues with documentation that open source has.
 Read the Docs has always been open source,
@@ -44,13 +44,10 @@ and I never want anything to happen to it.
 readthedocs.com is a separate entity,
 that has been established to bring Read the Docs to business.
 
-**readthedocs.org will always be free and available for open source docs.**
-
 This has been a lot of work.
 Having both live on the same domain would be much easier.
-However,
 I strongly believe readthedocs.org should never be part of "`an incredible journey`_".
-**As part of that, we bootstrapping, and not taking venture funding.**
+As part of that, we are bootstrapping, and do not plan on taking venture funding. [#f3]_
 
 **The fate of readthedocs.org is not tied to the fate of the business.**
 readthedocs.com has been created to help fund our work.
@@ -80,3 +77,12 @@ and we would love to have you aboard.
 	We're building community around people who care about this issue.
 	The conference is also run as a non-profit endeavor,
 	in our effort to build community.
+
+
+.. [#f2]
+
+	Many thanks to companies like `Stripe <https://stripe.com/blog/stripe-open-source-retreat>`_ who are doing their part.
+
+.. [#f3]
+
+	We have taken $20,000 as part of being in `PIE <http://www.piepdx.com/>`_ with the explicit understanding that we are not seeking further venture funding. They are also amazing folks and I thank them sincerely. The business likely never would have happened without the three months of office space and mentoring they provided.
