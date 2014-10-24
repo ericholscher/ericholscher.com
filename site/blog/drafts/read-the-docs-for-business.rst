@@ -1,9 +1,6 @@
 Announcing Read the Docs For Business
 =====================================
 
-	| tl;dr: We are launching `readthedocs.com <https://readthedocs.com>`_.
-	| **readthedocs.org will always be free and available for open source docs.**
-
 I helped `create`_ Read the Docs over four years ago,
 as an open source project to solve a problem we had.
 Since then,
@@ -13,19 +10,14 @@ and the `programming world`_ in general.
 
 Read the Docs has always been a volunteer effort for me.
 I have gotten small amounts from `Gittip`_ over the years,
-but compared to developer's salary,
-it is peanuts.
+but it doesn't compare to a developer's salary
 It has been a labor of love because I `really believe`_ in improving documentation for developers [#f1]_.
 
-The way the world works,
-companies are where money is stored.
 It is ten times harder to get a company to donate money to a project than to buy a product.
 Asking individuals to give us money instead of companies is asking the people who are actually doing the open source work to support us.
 **The companies benefiting from open source should be supporting the ecosystem much more than they are.** [#f2]_
 
 Companies have the same issues with documentation that open source has. [#f3]_
-Read the Docs has always been open source,
-so some companies have installed it locally.
 However,
 running Read the Docs is not trivial.
 There are a lot of moving pieces,
@@ -37,6 +29,9 @@ It will host your private documentation,
 and only give people at your company access.
 
 This site will live at https://readthedocs.com
+The profits from the ``.com`` will help fund development on the ``.org``.
+
+**readthedocs.org will always be free and available for open source docs.**
 
 Why a .com and a .org
 ~~~~~~~~~~~~~~~~~~~~~
@@ -75,12 +70,12 @@ and we would love to have you aboard.
 .. _an incredible journey: http://ourincrediblejourney.tumblr.com/
 .. _imagined: http://www.seethestats.com/site/readthedocs.org
 .. _programming world: http://ericholscher.com/blog/2014/feb/11/sphinx-isnt-just-for-python/
-.. _conferences: http://conf.writethedocs.org/
+.. _documentation conferences: http://conf.writethedocs.org/
 
 .. [#f1]
 
 	During this time,
-	I've also co-founded `conferences`_ in the US and Europe.
+	I've also co-founded `documentation conferences`_ in the US and Europe.
 	We're building community around people who care about this issue.
 	The conference is also run as a non-profit endeavor,
 	in our effort to build community.
