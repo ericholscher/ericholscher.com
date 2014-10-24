@@ -6,7 +6,7 @@ as an open source project to solve a problem we had.
 Since then,
 it `has grown`_ more than I ever could have `imagined`_.
 It has become vital infrastructure for the Python community,
-and the programming world in general.
+and the `programming world`_ in general.
 
 Read the Docs has always been a volunteer effort for me.
 I have gotten small amounts from `Gittip`_ over the years,
@@ -64,3 +64,4 @@ Eric
 .. _has grown: http://ericholscher.com/blog/2013/dec/23/read-the-docs-2013-stats/
 .. _an incredible journey: http://ourincrediblejourney.tumblr.com/
 .. _imagined: http://www.seethestats.com/site/readthedocs.org
+.. _programming world: http://ericholscher.com/blog/2014/feb/11/sphinx-isnt-just-for-python/
