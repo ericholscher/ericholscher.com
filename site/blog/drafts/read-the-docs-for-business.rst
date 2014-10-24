@@ -93,7 +93,7 @@ and we would love to have you aboard.
 
 .. [#f2]
 	
-	Actually, most companies have it way worse. If your docs are still stored in a wiki, I'm sorry.
+	Actually, most companies have it way worse. Hell, most of them still store their docs in a **wiki**.
 
 .. [#f3]
 
