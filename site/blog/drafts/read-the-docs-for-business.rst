@@ -1,8 +1,6 @@
 Read the Docs For Business
 ==========================
 
-tl;dr: Wherein we create a business while trying not to sell out.
-
 We `created`_ Read the Docs over four years ago,
 as an open source project to solve a problem we had.
 Since then,
