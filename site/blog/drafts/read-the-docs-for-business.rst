@@ -41,18 +41,19 @@ This site will live at https://readthedocs.com
 Why a .com and a .org
 ~~~~~~~~~~~~~~~~~~~~~
 
-I love readthedocs.org,
+I love ``readthedocs.org``,
 and I never want anything to happen to it.
-readthedocs.com is a separate entity that has been established to bring Read the Docs to business.
+``readthedocs.com`` is a separate entity that has been established to bring Read the Docs to business.
 
 This has been a lot of work.
 Having both live on the same domain would be much easier,
-but I strongly believe readthedocs.org should never be part of "`an incredible journey`_".
+but I strongly believe ``readthedocs.org`` should never be part of "`an incredible journey`_".
 As part of that, we are bootstrapping, and do not plan on taking venture funding. [#f4]_
 
 **The fate of readthedocs.org is not tied to the fate of the business.**
-readthedocs.com has been created to help fund this work.
-readthedocs.org should be a resource available to the programming community forever,
+
+``readthedocs.com`` has been created to help fund work on the open source project.
+``readthedocs.org`` should be a resource available to the programming community forever,
 and I am doing everything in my power to make sure that happens.
 
 Creating a company will help make both the open source and corporate documentation worlds better.
