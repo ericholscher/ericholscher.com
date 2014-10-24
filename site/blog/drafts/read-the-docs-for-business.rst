@@ -1,6 +1,8 @@
 Announcing Read the Docs For Business
 =====================================
 
+tl;dr: We are launching https://readthedocs.com -- Nothing about https://readthedocs.org is going to change. 
+
 I helped `create`_ Read the Docs over four years ago,
 as an open source project to solve a problem we had.
 Since then,
@@ -14,11 +16,9 @@ but compared to developer salary,
 it is peanuts.
 It has been a labor of love because I `really believe`_ in improving documentation for developers [#f1]_.
 
-Sadly,
-the way the world works,
+The way the world works,
 companies are where money is stored.
-It is 10 times harder to get a company to donate money to a project,
-than to buy a product.
+It is ten times harder to get a company to donate money to a project than to buy a product.
 Asking individuals to give us money instead of companies is asking the people who are actually doing the open source work to support us.
 The companies benefiting from open source should be supporting the ecosystem much more than they are.
 
@@ -35,7 +35,6 @@ we are adding the ability to have us host it for companies.
 
 This site will live at https://readthedocs.com
 
-
 Why a .com and a .org
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -50,6 +49,7 @@ This has been a lot of work.
 Having both live on the same domain would be much easier.
 However,
 I strongly believe readthedocs.org should never be part of "`an incredible journey`_".
+**As part of that, we bootstrapping, and not taking venture funding.**
 
 **The fate of readthedocs.org is not tied to the fate of the business.**
 readthedocs.com has been created to help fund our work.
