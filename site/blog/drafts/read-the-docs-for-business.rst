@@ -23,7 +23,7 @@ It is ten times harder to get a company to donate money to a project than to buy
 Asking individuals to give us money instead of companies is asking the people who are actually doing the open source work to support us.
 **The companies benefiting from open source should be supporting the ecosystem much more than they are.**[#f2]_
 
-I also believe that companies have the same issues with documentation that open source has.
+Companies have the same issues with documentation that open source has.
 Read the Docs has always been open source,
 so some companies have installed it locally.
 However,
@@ -50,13 +50,13 @@ I strongly believe readthedocs.org should never be part of "`an incredible journ
 As part of that, we are bootstrapping, and do not plan on taking venture funding. [#f3]_
 
 **The fate of readthedocs.org is not tied to the fate of the business.**
-readthedocs.com has been created to help fund our work.
-I believe readthedocs.org should be a resource available to the programming community forever,
-and we are doing everything in our power to make sure that happens.
+readthedocs.com has been created to help fund this work.
+readthedocs.org should be a resource available to the programming community forever,
+and I are doing everything in my power to make sure that happens.
 
-Our work creating a company is to help make both the open source and corporate documentation worlds better.
-We believe Read the Docs solves a real need in the software world,
-and we hope you join us in the next stage.
+My work creating a company is to help make both the open source and corporate documentation worlds better.
+Read the Docs solves a real need in the software world,
+and I hope you join us in the next stage.
 
 Our mission is to build world-class documentation tools for developers,
 and we would love to have you aboard.
