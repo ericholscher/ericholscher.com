@@ -1,4 +1,4 @@
-Announcing Read the Docs For Business
+Announcing Read the Docs for Business
 =====================================
 
 I helped `create`_ Read the Docs over four years ago.
@@ -22,7 +22,7 @@ There are a lot of moving pieces,
 and the code base is always gaining new features.
 
 That's why today, 
-Read The Docs is adding a hosted solution aimed at companies.
+Read the Docs is adding a hosted solution aimed at companies.
 It will host your company's private documentation,
 and only give people at your company access.
 
