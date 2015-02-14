@@ -118,7 +118,7 @@ would connect to your bouncer instead. This will be running on the
 IP and port that you have configured in your ZNC config. My
 `Limechat <http://limechat.net/mac/>`_ config looks like this:
 
-.. figure:: http://img.skitch.com/20101106-q8gjfucywbyym43p1x4fu8y41c.png
+.. figure:: limechat-config.png
    :align: center
    :alt: Limechat Config
    
