@@ -65,6 +65,22 @@ along with offering a better experience for existing users.
 If you want to see this experiment play out,
 I hope you will contribute to our `sustainability campaign`_.
 
+Money
+-----
+
+Read the Docs has been a labor of love,
+but it needs to transition into just labor.
+As the service has grown,
+it deserves more resources than I can dedicate to it for free.
+Introducing money lets other people do work on Read the Docs that otherwise I am left doing,
+often for free,
+because I feel a responsibility for the service.
+Having more people and money in the project will make it better for everyone.
+
+If you care about Read the Docs,
+I encourage you to get involved in the development or contribute money.
+It will make sure the service grows into something even more amazing.
+
 .. _sustainability campaign: https://readthedocs.org/sustainability/
 .. _stepped down: http://www.holovaty.com/writing/bdfls-retiring/
 .. _fundraiser: https://www.djangoproject.com/fundraising/
