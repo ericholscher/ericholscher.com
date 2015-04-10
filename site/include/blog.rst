@@ -1,6 +1,27 @@
 Blog Entries
 ------------
 
+2015
+~~~~
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   /blog/2015/dec/*/*
+   /blog/2015/nov/*/*
+   /blog/2015/oct/*/*
+   /blog/2015/sep/*/*
+   /blog/2015/aug/*/*
+   /blog/2015/jul/*/*
+   /blog/2015/jun/*/*
+   /blog/2015/may/*/*
+   /blog/2015/apr/*/*
+   /blog/2015/mar/*/*
+   /blog/2015/feb/*/*
+   /blog/2015/jan/*/*
+
+
 2014
 ~~~~
 
