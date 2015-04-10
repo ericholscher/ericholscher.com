@@ -10,7 +10,7 @@ Open Source
 
 I've considered myself a member of the Open Source Community for over 10 years.
 In that time,
-I've seen and been influenced by a lot of projects.
+I've been influenced by a lot of projects.
 The Python and Django communities are the ones I've always held in the highest esteem.
 
 Django in particular is an amazing example,
@@ -30,7 +30,7 @@ They created their own `fundraiser`_ to help with work that often gets missed:
 administrative and community management tasks.
 These are things that volunteers generally aren't willing or able to do.
 
-This shows that even communities that are successful by any measure still have work that doesn't make sense for volunteers.
+This shows that even communities that are successful still have work that doesn't make sense for volunteers.
 I believe Read the Docs is in a similar boat,
 though with a much less active community.
 
