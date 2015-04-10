@@ -73,7 +73,7 @@ but it needs to transition into just labor.
 As the service has grown,
 it deserves more resources than I can dedicate to it for free.
 Introducing money lets other people do work on Read the Docs that otherwise I am left doing,
-often for free,
+poorly,
 because I feel a responsibility for the service.
 Having more people and money in the project will make it better for everyone.
 
