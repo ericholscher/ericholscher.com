@@ -57,6 +57,8 @@ I imagine this would work better on some teams than others,
 but I generally believe it would allow people to live better lives,
 and do better work.
 
+It would also require a lot more documentation :)
+
 Crazy?
 ------
 
