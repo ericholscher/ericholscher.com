@@ -1,3 +1,6 @@
+
+.. _structure-post::
+
 Why I'm building a company: Structure
 =====================================
 
@@ -7,9 +10,9 @@ However,
 there are ways to manifest things that don't require a new company.
 
 The idea of a company structure and building something important and interesting came to me mostly from Steve Jobs.
-The canonical biography talks a lot about the *company* as a structure to build sustainable ideas beyond yourself.
+The canonical biography talks a lot about the company as *a structure to build sustainable ideas that live beyond yourself*.
 This was something I'd understood in a partial way,
-but made the concept concrete.
+but the book made the concept concrete.
 
 Structure
 ---------
@@ -38,10 +41,6 @@ The biggest element that can't be changed immediately:
 Luckily creativity required constraints,
 and these are the constraints that I am working with.
 
-We haven't implemented this concept yet,
-but I would love to hear of other people who might be doing similar,
-or who have tried.
-
 A new structure
 ---------------
 
@@ -62,6 +61,7 @@ It would also require a lot more documentation :)
 Crazy?
 ------
 
+We haven't implemented this concept yet.
 I'd be curious of previous examples of this kind of structure working,
 or failing.
 I imagine there are subsets of a business where this might make perfect sense (customer support, operations),
