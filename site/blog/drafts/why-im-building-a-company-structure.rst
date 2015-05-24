@@ -22,7 +22,7 @@ Most folks admit they don't have 40 hours of creative potential within a week.
 Usually they get about 5-6 hours a day,
 at most,
 of truly creative and productive time.
-Within a classic, officed, 9-5ish company,
+Within a classic, *officed*, 9-5ish company,
 the rest is meetings, filler, and "fun".
 
 Exostructure
