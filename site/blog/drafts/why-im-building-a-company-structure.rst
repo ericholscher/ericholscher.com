@@ -31,7 +31,7 @@ Exostructure
 As much as you want to change a company,
 you can't change the culture around the company,
 at least to start :)
-So there are a couple of elements that can't be changed immediately:
+The biggest element that can't be changed immediately:
 
 * Monday-Friday 9-5ish availability of support and meeting time
 
