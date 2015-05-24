@@ -9,8 +9,7 @@ there are ways to manifest things that don't require a new company.
 The idea of a company structure and building something important and interesting came to me mostly from Steve Jobs.
 The canonical biography talks a lot about the *company* as a structure to build sustainable ideas beyond yourself.
 This was something I'd understood in a partial way,
-but this made the concept concrete,
-and shows the value of the company as an object other than myself.
+but made the concept concrete.
 
 Structure
 ---------
