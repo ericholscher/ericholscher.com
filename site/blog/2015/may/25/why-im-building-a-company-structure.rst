@@ -90,7 +90,7 @@ the work has to be good,
 supportable,
 documented.**
 
-.. _kill your heros: https://al3x.net/2010/01/09/dont-be-a-hero.html
+.. _kill your heroes: https://al3x.net/2010/01/09/dont-be-a-hero.html
 
 Crazy?
 ------
