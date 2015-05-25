@@ -3,15 +3,19 @@
 Why I'm building a company: Structure
 =====================================
 
-There are a lot of reasons to build a new business.
+There are a lot of reasons to build a new company.
 A large part of it is wanting something to exist in the world.
 However,
 there are ways to manifest things that don't require a new company.
 
 The idea of a company having structure and building something important and interesting came to me mostly from Steve Jobs.
-The canonical biography talks a lot about the company as *a structure to build sustainable culture and ideas that live beyond yourself*.
+The canonical biography talks a lot about the company.
+
+| Company: A structure to build sustainable culture and ideas that live beyond yourself.
+
 This was something I'd understood in a partial way,
 but the book made the concept concrete.
+It also helps understand why building a company is more
 
 Structure
 ---------
@@ -77,9 +81,9 @@ Crazy?
 We haven't implemented this concept yet.
 I'd be curious of previous examples of this kind of structure working,
 or failing.
-I imagine there are subsets of a business where this might make perfect sense (customer support, operations),
+I imagine there are subsets of a company where this might make perfect sense (customer support, operations),
 because there is a shared context.
 There are also likely situations where it wouldn't work,
 but I'm really excited to try things like this.
 
-Why build a business if it's going to be like every other business?
+Why build a company if it's going to be like every other company?
