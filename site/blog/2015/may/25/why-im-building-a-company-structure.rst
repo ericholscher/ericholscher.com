@@ -88,7 +88,7 @@ A structure that reinforces balance provides the right incentive structure.
 **If I can't work all the time,
 the work has to be good,
 supportable,
-documented.**
+and documented.**
 
 .. _kill your heroes: https://al3x.net/2010/01/09/dont-be-a-hero.html
 
