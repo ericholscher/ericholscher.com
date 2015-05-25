@@ -15,7 +15,6 @@ The canonical biography talks a lot about the company.
 
 This was something I'd understood in a partial way,
 but the book made the concept concrete.
-It also helps understand why building a company is more
 
 Structure
 ---------
@@ -76,6 +75,17 @@ and giving people more time to live,
 we will all be happier.
 
 Happier people build better products and companies.
+
+Working less also requires more discipline.
+You have to `kill your heroes`_,
+and work in the time meant for work to be done.
+A structure that reinforces balance provides the right incentive structure.
+**If I can't work all the time,
+the work has to be good,
+supported,
+documented.**
+
+.. _kill your heros: https://al3x.net/2010/01/09/dont-be-a-hero.html
 
 Crazy?
 ------
