@@ -57,6 +57,20 @@ and do better work.
 
 It would also require a lot more documentation :)
 
+Why?
+----
+
+I live for the woods.
+You may live for something else,
+but it is most certainly not work :)
+I enjoy my work in a profound way,
+but work is only a subset of life.
+By promoting life outside of work,
+and giving people more time to live,
+we will all be happier.
+
+Happier people build better products companies.
+
 Crazy?
 ------
 
