@@ -14,7 +14,7 @@ there are ways to manifest things that don't require a new company.
 
 The idea of a company itself being important came to me mostly from Steve Jobs.
 The canonical biography talks a lot about him building the company specifically,
-with the below definition:
+with the below understanding:
 
 **Company: A structure to build sustainable culture and values that live beyond yourself.**
 
