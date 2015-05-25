@@ -54,6 +54,8 @@ Two separate working teams:
 
 The idea is that there are two separate teams working on either the same or similar projects.
 Wednesday would be the shared day where people would transfer knowledge and hand off projects which require handoff.
+It would also be for brainstorming,
+so people fresh from not working and folks deep in the project could work together.
 
 I imagine this would work better on some teams than others,
 but I generally believe it would allow people to live better lives,
