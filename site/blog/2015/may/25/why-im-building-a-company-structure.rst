@@ -73,7 +73,7 @@ By promoting life outside of work,
 and giving people more time to live,
 we will all be happier.
 
-Happier people build better products companies.
+Happier people build better products and companies.
 
 Crazy?
 ------
