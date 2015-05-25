@@ -56,6 +56,7 @@ Two separate working teams:
 
 * Monday-Wednesday Team
 * Wednesday-Friday Team
+* Working ~20 hours a week
 
 The idea is that there are two separate teams working on either the same or similar projects.
 Wednesday would be the shared day where people would transfer knowledge and hand off projects which require handoff.
