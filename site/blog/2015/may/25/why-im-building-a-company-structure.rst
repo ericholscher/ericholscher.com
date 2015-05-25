@@ -11,7 +11,7 @@ there are ways to manifest things that don't require a new company.
 The idea of a company having structure and building something important and interesting came to me mostly from Steve Jobs.
 The canonical biography talks a lot about the company.
 
-| Company: A structure to build sustainable culture and ideas that live beyond yourself.
+**Company: A structure to build sustainable culture and ideas that live beyond yourself.**
 
 This was something I'd understood in a partial way,
 but the book made the concept concrete.
