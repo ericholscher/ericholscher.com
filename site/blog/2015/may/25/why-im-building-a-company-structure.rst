@@ -43,7 +43,8 @@ you can't change the culture around the company,
 at least to start :)
 The biggest element that can't be changed immediately:
 
-* Monday-Friday 9-5ish availability of support
+* Monday-Friday 9-5ish availability
+* Weekends as time off
 
 Luckily creativity loves constraints,
 and these are the constraints that I am working with.
