@@ -12,10 +12,11 @@ A large part of it is wanting something to exist in the world.
 However,
 there are ways to manifest things that don't require a new company.
 
-The idea of a company having structure and building something important and interesting came to me mostly from Steve Jobs.
-The canonical biography talks a lot about the company.
+The idea of a company itself being important came to me mostly from Steve Jobs.
+The canonical biography talks a lot about him building the company specifically,
+with the below definition:
 
-**Company: A structure to build sustainable culture and ideas that live beyond yourself.**
+**Company: A structure to build sustainable culture and values that live beyond yourself.**
 
 This was something I'd understood in a partial way,
 but the book made the concept concrete.
@@ -28,7 +29,7 @@ The biggest issue is the concept of a 40-hour work week.
 Almost all creative people I know strife at the concept of working 40 hours a week.
 
 Most folks admit they don't have 40 hours of creative potential within a week.
-Usually they get about 5-6 hours a day,
+Usually they get about 3-4 hours a day,
 at most,
 of truly creative and productive time.
 Within a classic, *officed*, 9-5ish company,
@@ -42,9 +43,9 @@ you can't change the culture around the company,
 at least to start :)
 The biggest element that can't be changed immediately:
 
-* Monday-Friday 9-5ish availability of support and meeting time
+* Monday-Friday 9-5ish availability of support
 
-Luckily creativity required constraints,
+Luckily creativity loves constraints,
 and these are the constraints that I am working with.
 
 A new structure
@@ -86,7 +87,7 @@ and work in the time meant for work to be done.
 A structure that reinforces balance provides the right incentive structure.
 **If I can't work all the time,
 the work has to be good,
-supported,
+supportable,
 documented.**
 
 .. _kill your heros: https://al3x.net/2010/01/09/dont-be-a-hero.html
