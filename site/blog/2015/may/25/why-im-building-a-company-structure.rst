@@ -26,7 +26,6 @@ Structure
 
 I believe there is a lot wrong with the ways companies are currently structured.
 The biggest issue is the concept of a 40-hour work week.
-Almost all creative people I know strife at the concept of working 40 hours a week.
 
 Most folks admit they don't have 40 hours of creative potential within a week.
 Usually they get about 3-4 hours a day,
