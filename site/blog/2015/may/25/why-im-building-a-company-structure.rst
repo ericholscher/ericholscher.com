@@ -48,8 +48,8 @@ The biggest element that can't be changed immediately:
 Luckily creativity loves constraints,
 and these are the constraints that I am working with.
 
-A new structure
----------------
+Idea
+----
 
 Two separate working teams:
 
