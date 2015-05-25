@@ -3,6 +3,10 @@
 Why I'm building a company: Structure
 =====================================
 
+..  * You are more than your job
+	* We only get part of your creative output -- and that's okay
+	* Incentives matter
+
 There are a lot of reasons to build a new company.
 A large part of it is wanting something to exist in the world.
 However,
@@ -99,3 +103,4 @@ There are also likely situations where it wouldn't work,
 but I'm really excited to try things like this.
 
 Why build a company if it's going to be like every other company?
+
