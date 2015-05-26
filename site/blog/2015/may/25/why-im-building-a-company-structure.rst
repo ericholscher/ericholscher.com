@@ -7,7 +7,7 @@ Why I'm building a company: Structure
 	* We only get part of your creative output -- and that's okay
 	* Incentives matter
 
-There are a lot of reasons to build a new company.
+There are a lot of reasons to build a new `company`_.
 A large part of it is wanting something to exist in the world.
 However,
 there are ways to manifest things that don't require a new company.
@@ -20,6 +20,8 @@ with the below understanding:
 
 This was something I'd understood in a partial way,
 but the book made the concept concrete.
+
+.. _company: https://readthedocs.com
 
 Structure
 ---------
