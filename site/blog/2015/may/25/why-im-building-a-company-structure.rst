@@ -29,7 +29,7 @@ The biggest issue is the concept of a 40-hour work week.
 All creative people I know strife at the concept of working 40 hours a week.
 
 Most folks admit they don't have 40 hours of creative potential within a week.
-Usually they get about 3-4 hours a day,
+Usually they get about 4-5 hours a day,
 at most,
 of truly creative and productive time.
 Within a classic, *officed*, 9-5ish company,
