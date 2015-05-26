@@ -42,7 +42,7 @@ Exostructure
 
 As much as you want to change a company,
 you can't change the culture around the company,
-at least to start :)
+at least to start.
 The biggest element that can't be changed immediately:
 
 * Monday-Friday 9-5ish availability
@@ -76,7 +76,7 @@ Why?
 
 I live for the woods.
 You may live for something else,
-but it is most certainly not work :)
+but it is most certainly not *work*.
 I enjoy my work in a profound way,
 but work is only a subset of life.
 By promoting life outside of work,
