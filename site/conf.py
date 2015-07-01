@@ -42,7 +42,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Surfing in Kansas'
+project = u"Surfing in Kansas - Eric Holscher"
 copyright = u'2015, Eric Holscher'
 
 # The version info for the project you're documenting, acts as replacement for

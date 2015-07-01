@@ -28,6 +28,9 @@ Past Events
 I have spoken at the following events,
 on a number of topics including Read the Docs, IRC bots, Testing, and Documentation:
 
+* Djangocon 2015
+* Django Birthday 2015
+* Write the Docs 2013-2015
 * PDXNode 2013
 * PDXPython 2013, 2012
 * Open Source Bridge 2012, 2011
