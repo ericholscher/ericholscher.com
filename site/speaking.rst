@@ -31,9 +31,9 @@ on a number of topics including Read the Docs, IRC bots, Testing, and Documentat
 * Djangocon 2015
 * Django Birthday 2015
 * Write the Docs 2013-2015
+* Open Source Bridge 2014, 2012, 2011
 * PDXNode 2013
 * PDXPython 2013, 2012
-* Open Source Bridge 2012, 2011
 * Pycon Web Summit 2012
 * Djangocon US 2011, 2010
 * OSCON 2011
