@@ -20,8 +20,8 @@ I learned a really important thing that conference organizers can do to make thi
 Encouraging Courage
 -------------------
 
-The hardest part for me is walking up to a group of people that I don't know.
-Or that I do know, and respect.
+The hardest part for me is walking up to a group of people that I don't know,
+or that I do know, and respect.
 I will generally default to sitting by myself or staring at my phone,
 instead of joining a conversation that would likely be quite interesting.
 
