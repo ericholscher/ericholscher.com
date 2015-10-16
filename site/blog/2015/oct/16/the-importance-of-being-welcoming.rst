@@ -45,7 +45,7 @@ Outcome
 Similar to a Code of Conduct,
 giving people permission to act in ways that makes the conference more valuable is a fundamental role of the organizer.
 
-I now `do this <https://www.youtube.com/watch?v=LmjF1PZxuHs&feature=youtu.be&t=3m19s>` at every conference I organize.
+I now `do this <https://www.youtube.com/watch?v=LmjF1PZxuHs&feature=youtu.be&t=3m19s>`_ at every conference I organize.
 Telling people how to act,
 and giving them permission to interact,
 fundamentally changes the conference experience.
