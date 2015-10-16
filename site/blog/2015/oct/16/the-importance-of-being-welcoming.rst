@@ -39,8 +39,8 @@ As a member of a group chatting,
 it also made it much easier to welcome someone into the conversation.
 **It set the tone and expected behavior for everyone at the event.**
 
-Outcome
--------
+3 + 1 = <3
+----------
 
 Similar to a Code of Conduct,
 giving people permission to act in ways that makes the conference more valuable is a fundamental role of the organizer.
