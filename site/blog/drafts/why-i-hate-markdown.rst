@@ -93,7 +93,7 @@ almost none have any kind of semantic meaning.
 This means that you can't write a *Note* or a *Warning*,
 you can only write text.
 
-This leads people to embeding HTML directly in their Markdown:
+This leads people to embed HTML directly in their Markdown:
 
 .. code-block:: html
 
