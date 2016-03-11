@@ -113,11 +113,13 @@ you can write:
 
 This will be output as a warning properly in HTML, PDF, and any other output format you can generate.
 
-This has a number of issues:
+**Semantic markup firmly seperates the words that you write from how they are displayed.**
+
+Writing without semantic markup is a problem for a few reasons:
 
 * Your Markdown is now dependent on specific CSS classes in your display, meaning your writers have to think about how your page will be designed
-* Markdown is no longer portable to other output formats (PDF)
-* Conversion to other markup tools becomes impossible
+* Your content is no longer portable to other output formats (PDF, etc.)
+* Conversion to other markup tools and page designs becomes much harder
 
 Lack of Extensibility
 ---------------------
