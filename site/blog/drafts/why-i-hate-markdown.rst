@@ -110,6 +110,10 @@ You can learn more about the `rfc <http://www.sphinx-doc.org/en/stable/markup/in
 **There is no way of doing this in Markdown,
 in a way that would be portable across versions.**
 
+.. note:: CommonMark is working on an `extensibility syntax`_, but it isn't implemented yet.
+
+.. _extensibility syntax: http://talk.commonmark.org/t/generic-directives-plugins-syntax/444
+
 Lock In and Lack of Portability
 -------------------------------
 
