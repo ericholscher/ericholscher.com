@@ -81,7 +81,9 @@ This would apply syntax highlighting to the actual rendered HTML output.
 
 **These two things produce totally different HTML, and rendered from differnt "Markdown".**
 
-In reStructuredText this would look like::
+In reStructuredText this would look like:
+
+.. code-block:: rst
 
 	.. code-block:: rst
 
@@ -101,7 +103,9 @@ almost none have any kind of semantic meaning.
 This means that you can't write a *Note* or a *Warning*,
 you can only write text.
 
-This leads people to embeding HTML directly in their Markdown::
+This leads people to embeding HTML directly in their Markdown:
+
+.. code-block:: html
 
 	<div class="warning">
 
@@ -110,7 +114,9 @@ This leads people to embeding HTML directly in their Markdown::
 	</div>
 
 In reStructuredText for example,
-you can write::
+you can write:
+
+.. code-block:: rst
 
 	.. warning:: This is a Warning!
 
