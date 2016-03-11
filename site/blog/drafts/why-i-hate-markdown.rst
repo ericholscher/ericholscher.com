@@ -79,7 +79,7 @@ with `GitHub Flavored Markdown`_ the same example would be::
 
 This would apply syntax highlighting to the actual rendered HTML output.
 
-**These two things produce totally different HTML, and rendered from differnt "Markdown".**
+**These two things produce totally different HTML, and are both called "Markdown".**
 
 In reStructuredText this would look like:
 
