@@ -1,3 +1,5 @@
+:Date: 2016-03-11 09:00:00
+
 Why I Hate "Markdown" for Documentation
 =======================================
 
@@ -105,8 +107,8 @@ has both inline and block level markup::
 
 You can learn more about the `rfc <http://www.sphinx-doc.org/en/stable/markup/inline.html#role-rfc>`_, `class <http://www.sphinx-doc.org/en/stable/domains.html?highlight=domains#cross-referencing-python-objects>`_, and `contents <http://docutils.sourceforge.net/docs/ref/rst/directives.html#table-of-contents>`_ concepts.
 
-There is no way of doing this in Markdown,
-in a way that would be portable across versions.
+**There is no way of doing this in Markdown,
+in a way that would be portable across versions.**
 
 Lock In and Lack of Portability
 -------------------------------
@@ -115,9 +117,16 @@ The explosion of flavors and lack of semantic meaning leads to lock in.
 Once you've built out a large set of "Markdown" documents,
 it's quite hard to migrate them to another tool,
 even if that tool claims to support "Markdown"!
-You have a large set of custom HTML classes and weird flavors that won't work anywhere but the current set of tools.
+You have a large set of custom HTML classes and weird flavor extensions that won't work anywhere but the current set of tools and designs.
 
 You also can't migrate them easily to another markup languages (Asciidoc or RST).
+
+I think that a lot of people choose Markdown because they think they can migrate to another tool or markup later.
+Markdown is definitely the lowest common demoninator,
+except that for any reasonably sized set of docs you'll need things that aren't in the basic language.
+**Once you start using markdown flavors,
+which is required for any non-trivial documentation,
+you lose all portability benefits.**
 
 Conclusion
 ----------
