@@ -9,7 +9,8 @@ mainly blog posts and commenting.
 However,
 lately it has been adopted by the technical writing community as a solution for writing longer form documents.
 
-I'd like to lay out the main arguments that I have against Markdown.
+I'd like to lay out the main arguments that I have against "Markdown",
+including why I have it in *"scare quotes"*.
 Hopefully this will be useful in helping you decide whether it's a good fit for your organization.
 If you are considering markdown,
 I hope that you also look at AsciiDoc + `Asciidoctor`_, and reStructuredText + `Sphinx`_.
