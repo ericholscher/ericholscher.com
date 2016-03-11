@@ -57,6 +57,32 @@ This sounds great,
 except that **every tool implements a different flavor**.
 Even tools that do similar things with the language use different syntax for it!
 
+For example,
+in `Markdown Extra`_ code blocks look like this::
+
+	~~~ .python
+
+	import antigravity
+
+	~~~
+
+This would apply a `python` class to the HTML block that is output.
+
+However,
+with `GitHub Flavored Markdown`_ the same example would be::
+
+	```python
+
+	import antigravity
+
+	```
+
+This would apply syntax highlighting to the actual rendered HTML output.
+
+**These two things produce totally different HTML, and rendered from differnt "Markdown".**
+
+.. _GitHub Flavored Markdown: https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown
+.. _Markdown Extra: https://michelf.ca/projects/php-markdown/extra/#fenced-code-blocks
 .. _flavor: https://github.com/jgm/CommonMark/wiki/Markdown-Flavors
 
 Lack of Semantic Meaning
