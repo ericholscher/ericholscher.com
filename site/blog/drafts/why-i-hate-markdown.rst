@@ -141,4 +141,8 @@ However,
 when you are trying to author large sets of interrelated documents,
 it probably isn't the correct tool.
 
+Please investigate `Sphinx`_ and `Asciidoctor`_ as good alternatives.
+They come with a lot more extensibility built into the language,
+and are more complete tools for building sets of documentation.
+
 .. _initial implementation: https://daringfireball.net/projects/markdown/
