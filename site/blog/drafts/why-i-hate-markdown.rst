@@ -57,10 +57,6 @@ Even tools that do similar things with the language use different syntax for it!
 
 .. _flavor: https://github.com/jgm/CommonMark/wiki/Markdown-Flavors
 
-Lack of referencing and includes
---------------------------------
-
-
 Lack of Semantic Meaning
 ------------------------
 
@@ -90,6 +86,28 @@ This has a number of issues:
 * Markdown is no longer portable to other output formats (PDF)
 * Conversion to other markup tools becomes impossible
 
+Lack of Extensibility
+---------------------
+
+With other markup languages,
+you can extend the language to provide the features that you need.
+They have mechanisms in the syntax to add new functionality,
+without breaking from the original spec and creating a new language.
+
+reStructuredText for example,
+has both inline and block level markup::
+
+	.. contents::
+	   :caption: Table of Contents
+
+	Please look at :rfc:`1984` for more information.
+	This is implemented in our codebase at :class:`Example.Encryption`.
+
+You can learn more about the `rfc <http://www.sphinx-doc.org/en/stable/markup/inline.html#role-rfc>`_, `class <http://www.sphinx-doc.org/en/stable/domains.html?highlight=domains#cross-referencing-python-objects>`_, and `contents <http://docutils.sourceforge.net/docs/ref/rst/directives.html#table-of-contents>`_ concepts.
+
+There is no way of doing this in Markdown,
+in a way that would be portable across versions.
+
 Lock In and Lack of Portability
 -------------------------------
 
@@ -101,12 +119,12 @@ You have a large set of custom HTML classes and weird flavors that won't work an
 
 You also can't migrate them easily to another markup languages (Asciidoc or RST).
 
-
 Conclusion
 ----------
 
 I love Markdown for it's simplicity.
 However,
-when you are trying to author 
+when you are trying to author large sets of interrelated documents,
+it probably isn't the correct tool.
 
 .. _initial implementation: https://daringfireball.net/projects/markdown/
