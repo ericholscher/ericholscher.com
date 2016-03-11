@@ -30,7 +30,7 @@ and the "proper" behavior was whatever this script chose to do.
 As Markdown got more popular,
 more and more sites started to implement it.
 Those sites were written in other languages,
-so more implementations of "Markdown" were created.
+so more implementations of Markdown were created.
 All of these implementations had slight variations in what was accepted.
 
 One example is that some required a space before a heading and others didn't::
@@ -53,7 +53,7 @@ Flavors
 
 The main reason for this lack of adoption is that people using Markdown haven't been sitting still for all these years.
 Because the original Markdown is so limited,
-every popular tool built on top of Markdown implements what is called a "`flavor`_" of "Markdown".
+every popular tool built on top of Markdown implements what is called a "`flavor`_" of Markdown.
 This sounds great,
 except that **every tool implements a different flavor**.
 Even tools that do similar things with the language use different syntax for it!
@@ -80,7 +80,7 @@ with `GitHub Flavored Markdown`_ the same example would be::
 
 This would apply syntax highlighting to the actual rendered HTML output.
 
-**These two things produce totally different HTML, and are both called "Markdown".**
+**These two things produce totally different HTML, and are both called Markdown.**
 
 .. _GitHub Flavored Markdown: https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown
 .. _Markdown Extra: https://michelf.ca/projects/php-markdown/extra/#fenced-code-blocks
@@ -151,9 +151,9 @@ Lock In and Lack of Portability
 -------------------------------
 
 The explosion of flavors and lack of semantic meaning leads to lock in.
-Once you've built out a large set of "Markdown" documents,
+Once you've built out a large set of Markdown documents,
 it's quite hard to migrate them to another tool,
-even if that tool claims to support "Markdown"!
+even if that tool claims to support Markdown!
 You have a large set of custom HTML classes and weird flavor extensions that won't work anywhere but the current set of tools and designs.
 
 You also can't migrate them easily to another markup languages (Asciidoc or RST).
