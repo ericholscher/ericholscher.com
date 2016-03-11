@@ -10,7 +10,7 @@ lately it has been adopted by the technical writing community as a solution for 
 I'd like to lay out the main arguments that I have against Markdown.
 Hopefully this will be useful in helping you decide whether it's a good fit for your organization.
 If you are considering markdown,
-I hope that you also look at AsciiDoc+`Asciidoctor`_, and reStructuredText+`Sphinx`_.
+I hope that you also look at AsciiDoc + `Asciidoctor`_, and reStructuredText + `Sphinx`_.
 I find them to be much better toolsets for writing documentation.
 
 .. _Asciidoctor: http://asciidoctor.org/
@@ -56,6 +56,10 @@ except that **every tool implements a different flavor**.
 Even tools that do similar things with the language use different syntax for it!
 
 .. _flavor: https://github.com/jgm/CommonMark/wiki/Markdown-Flavors
+
+Lack of referencing and includes
+--------------------------------
+
 
 Lack of Semantic Meaning
 ------------------------
