@@ -81,16 +81,6 @@ This would apply syntax highlighting to the actual rendered HTML output.
 
 **These two things produce totally different HTML, and are both called "Markdown".**
 
-In reStructuredText this would look like:
-
-.. code-block:: rst
-
-	.. code-block:: rst
-
-		import antigravity
-
-And would work with any reStructuredText tool you want to use.
-
 .. _GitHub Flavored Markdown: https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown
 .. _Markdown Extra: https://michelf.ca/projects/php-markdown/extra/#fenced-code-blocks
 .. _flavor: https://github.com/jgm/CommonMark/wiki/Markdown-Flavors
