@@ -9,11 +9,10 @@ mainly blog posts and commenting.
 However,
 lately it has been adopted by the technical writing community as a solution for writing longer form documents.
 
-I'd like to lay out the main arguments that I have against "Markdown",
-including why I have it in *"scare quotes"*.
+I'd like to lay out the main arguments that I have against "Markdown".
 Hopefully this will be useful in helping you decide whether it's a good fit for your organization.
 If you are considering Markdown,
-I hope that you also look at AsciiDoc + `Asciidoctor`_, and reStructuredText + `Sphinx`_.
+I hope that you also look at `Asciidoctor`_ and `Sphinx`_.
 I find them to be much better toolsets for writing documentation.
 
 .. _Asciidoctor: http://asciidoctor.org/
@@ -80,7 +79,7 @@ with `GitHub Flavored Markdown`_ the same example would be::
 
 This would apply syntax highlighting to the actual rendered HTML output.
 
-**These two things produce totally different HTML, and are both called Markdown.**
+**This is two different syntaxes for a similar concept, both called "Markdown"*	*
 
 .. _GitHub Flavored Markdown: https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown
 .. _Markdown Extra: https://michelf.ca/projects/php-markdown/extra/#fenced-code-blocks
@@ -172,13 +171,13 @@ you lose all portability benefits.**
 Conclusion
 ----------
 
-I love Markdown for it's simplicity.
-However,
-when you are trying to author large sets of interrelated documents,
-it probably isn't the correct tool.
-
 Please investigate `Sphinx`_ and `Asciidoctor`_ as good alternatives.
 They come with a lot more extensibility built into the language,
 and are more complete tools for building sets of documentation.
+
+Markdown is a concept more than it is an implementation.
+It generally means "a set of incompatible extensions to something that looks kinda like Markdown".
+When you are trying to author large sets of documents,
+it isn't the correct tool.
 
 .. _initial implementation: https://daringfireball.net/projects/markdown/
