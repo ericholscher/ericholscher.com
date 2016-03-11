@@ -158,7 +158,8 @@ it's quite hard to migrate them to another tool,
 even if that tool claims to support Markdown!
 You have a large set of custom HTML classes and weird flavor extensions that won't work anywhere but the current set of tools and designs.
 
-You also can't migrate them easily to another markup languages (Asciidoc or RST).
+You also can't migrate them easily to another markup languages (Asciidoc or RST),
+because Pandoc and other tools won't support your flavor's extensions.
 
 I think that a lot of people choose Markdown because they think they can migrate to another tool or markup later.
 Markdown is definitely the lowest common demoninator,
