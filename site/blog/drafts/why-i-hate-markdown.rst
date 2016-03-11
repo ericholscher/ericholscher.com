@@ -1,7 +1,7 @@
 :Date: 2016-03-11 09:00:00
 
-Why I Hate "Markdown" for Documentation
-=======================================
+Why You Shouldn't use Markdown for Documentation
+================================================
 
 "Markdown" is the most commonly used markup language on the internet.
 It is great for a subset of tasks,
