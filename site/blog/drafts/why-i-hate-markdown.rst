@@ -12,7 +12,7 @@ lately it has been adopted by the technical writing community as a solution for 
 I'd like to lay out the main arguments that I have against "Markdown",
 including why I have it in *"scare quotes"*.
 Hopefully this will be useful in helping you decide whether it's a good fit for your organization.
-If you are considering markdown,
+If you are considering Markdown,
 I hope that you also look at AsciiDoc + `Asciidoctor`_, and reStructuredText + `Sphinx`_.
 I find them to be much better toolsets for writing documentation.
 
