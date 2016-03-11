@@ -124,6 +124,7 @@ You also can't migrate them easily to another markup languages (Asciidoc or RST)
 I think that a lot of people choose Markdown because they think they can migrate to another tool or markup later.
 Markdown is definitely the lowest common demoninator,
 except that for any reasonably sized set of docs you'll need things that aren't in the basic language.
+
 **Once you start using markdown flavors,
 which is required for any non-trivial documentation,
 you lose all portability benefits.**
