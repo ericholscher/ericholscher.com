@@ -1,6 +1,6 @@
 :Date: 2016-03-11 09:00:00
 
-Why You Shouldn't use Markdown for Documentation
+Why You Shouldn't Use Markdown for Documentation
 ================================================
 
 "Markdown" is the most commonly used markup language on the internet.
@@ -110,9 +110,15 @@ you can write:
 
 	.. warning:: This is a Warning!
 
+Or, in AsciiDoc, you can write:
+
+.. code-block:: rst
+
+	.. WARNING: This is a Warning!
+
 This will be output as a warning properly in HTML, PDF, and any other output format you can generate.
 
-**Semantic markup firmly seperates the words that you write from how they are displayed.**
+**Semantic markup firmly separates the words that you write from how they are displayed.**
 
 Writing without semantic markup is a problem for a few reasons:
 
@@ -167,6 +173,17 @@ except that for any reasonably sized set of docs you'll need things that aren't 
 **Once you start using markdown flavors,
 which is required for any non-trivial documentation,
 you lose all portability benefits.**
+
+Lack of Scalability
+-------------------
+
+Markdown looks easier than AsciiDoc or RST, and you only need simple content, so why fuss with all the complexity? There's all this great out-of-the-box tooling, just install, configure, and go. 
+After all, you're just starting out, and the most important thing is to ship the docs. Easy is good. The trouble is, you don't know
+when you're starting out just what you'll need down the road. Doc sets have a tendency to grow. You need new types of content you didn't have time to think about with version 1 of the product. You need to support multiple versions. You need to deliver custom doc sets. Marketing has decided to re-brand. All of a sudden, your simple API isn't quite so simple anymore, you're building things on top of it, and you start looking at a CMS.
+
+But either AsciiDoc/Asciidoctor or RST/Sphinx will let you scale beautifully. And you don't have to start out with all
+the complexity. Sure, the markup conventions are slightly different, but if all you need initially is some headings, some 
+paragraphs, and some code blocks, the learning curve isn't steep.
 
 Conclusion
 ----------
