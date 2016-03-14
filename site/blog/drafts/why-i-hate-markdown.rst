@@ -110,9 +110,15 @@ you can write:
 
 	.. warning:: This is a Warning!
 
+Or, in AsciiDoc, you can write:
+
+.. code-block:: rst
+
+	.. WARNING: This is a Warning!
+
 This will be output as a warning properly in HTML, PDF, and any other output format you can generate.
 
-**Semantic markup firmly seperates the words that you write from how they are displayed.**
+**Semantic markup firmly separates the words that you write from how they are displayed.**
 
 Writing without semantic markup is a problem for a few reasons:
 
