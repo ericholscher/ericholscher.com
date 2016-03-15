@@ -1,6 +1,6 @@
-:Date: 2016-03-11 09:00:00
+:Date: 2016-03-15 09:00:00
 
-Why You Shouldn't use Markdown for Documentation
+Why You Shouldn't Use Markdown for Documentation
 ================================================
 
 "Markdown" is the most commonly used markup language on the internet.
@@ -38,7 +38,7 @@ One example is that some required a space before a heading and others didn't::
 
 	#Heading 1
 
-There are a number of small issues that made it hard to port your Markdown between sites and verisons.
+There are a number of small issues that made it hard to port your Markdown between sites and versions.
 
 In the last few years, `Commonmark`_ was developed as a standardized Markdown.
 This is great,
@@ -79,7 +79,7 @@ with `GitHub Flavored Markdown`_ the same example would be::
 
 This would apply syntax highlighting to the actual rendered HTML output.
 
-**This is two different syntaxes for a similar concept, both called "Markdown"*	*
+**This is two different syntaxes for a similar concept, both called "Markdown"**
 
 .. _GitHub Flavored Markdown: https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown
 .. _Markdown Extra: https://michelf.ca/projects/php-markdown/extra/#fenced-code-blocks
@@ -112,7 +112,7 @@ you can write:
 
 This will be output as a warning properly in HTML, PDF, and any other output format you can generate.
 
-**Semantic markup firmly seperates the words that you write from how they are displayed.**
+**Semantic markup firmly separates the words that you write from how they are displayed.**
 
 Writing without semantic markup is a problem for a few reasons:
 
