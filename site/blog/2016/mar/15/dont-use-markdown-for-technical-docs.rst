@@ -86,7 +86,6 @@ This would apply syntax highlighting to the actual rendered HTML output.
 .. _Markdown Extra: https://michelf.ca/projects/php-markdown/extra/#fenced-code-blocks
 .. _flavor: https://github.com/jgm/CommonMark/wiki/Markdown-Flavors
 
-
 Lack of Extensibility
 ---------------------
 
@@ -115,32 +114,12 @@ in a way that would be portable across versions.**
 
 .. _extensibility syntax: http://talk.commonmark.org/t/generic-directives-plugins-syntax/444
 
-Lock In and Lack of Portability
--------------------------------
-
-The explosion of flavors and lack of semantic meaning leads to lock in.
-Once you've built out a large set of Markdown documents,
-it's quite hard to migrate them to another tool,
-even if that tool claims to support Markdown!
-You have a large set of custom HTML classes and weird flavor extensions that won't work anywhere but the current set of tools and designs.
-
-You also can't migrate them easily to another markup languages (Asciidoc or RST),
-because Pandoc and other tools won't support your flavor's extensions.
-
-I think that a lot of people choose Markdown because they think they can migrate to another tool or markup later.
-Markdown is definitely the lowest common denominator,
-except that for any reasonably sized set of docs you'll need things that aren't in the basic language.
-
-**Once you start using markdown flavors,
-which is required for any non-trivial documentation,
-you lose all portability benefits.**
-
 Lack of Semantic Meaning
 ------------------------
 
 Though many people have added extensions to Markdown,
 almost none have any kind of semantic meaning.
-This means that you can't write a *Note* or a *Warning*,
+This means that you can't write a *Class* or a *Warning*,
 you can only write text.
 
 This leads people to embed HTML directly in their Markdown:
@@ -169,6 +148,26 @@ Writing without semantic markup is a problem for a few reasons:
 * Your Markdown is now dependent on specific CSS classes in your display, meaning your writers have to think about how your page will be designed
 * Your content is no longer portable to other output formats (PDF, etc.)
 * Conversion to other markup tools and page designs becomes much harder
+
+Lock In and Lack of Portability
+-------------------------------
+
+The explosion of flavors and lack of semantic meaning leads to lock in.
+Once you've built out a large set of Markdown documents,
+it's quite hard to migrate them to another tool,
+even if that tool claims to support Markdown!
+You have a large set of custom HTML classes and weird flavor extensions that won't work anywhere but the current set of tools and designs.
+
+You also can't migrate them easily to another markup languages (Asciidoc or RST),
+because Pandoc and other tools won't support your flavor's extensions.
+
+I think that a lot of people choose Markdown because they think they can migrate to another tool or markup later.
+Markdown is definitely the lowest common denominator,
+except that for any reasonably sized set of docs you'll need things that aren't in the basic language.
+
+**Once you start using markdown flavors,
+which is required for any non-trivial documentation,
+you lose all portability benefits.**
 
 Conclusion
 ----------
