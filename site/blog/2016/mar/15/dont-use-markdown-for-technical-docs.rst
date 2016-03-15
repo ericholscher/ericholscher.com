@@ -3,7 +3,7 @@
 Why You Shouldn't Use Markdown for Documentation
 ================================================
 
-"Markdown" is the most commonly used markup language on the internet.
+`"Markdown"`_ is the most commonly used markup language on the internet.
 It is great for a subset of tasks,
 mainly blog posts and commenting.
 However,
@@ -15,6 +15,7 @@ If you are considering Markdown,
 I hope that you also look at `Asciidoctor`_ and `Sphinx`_.
 I find them to be much better toolsets for writing documentation.
 
+.. _"Markdown": https://github.com/jgm/CommonMark/wiki/Markdown-Flavors
 .. _Asciidoctor: http://asciidoctor.org/
 .. _Sphinx: http://www.sphinx-doc.org/en/stable/
 
