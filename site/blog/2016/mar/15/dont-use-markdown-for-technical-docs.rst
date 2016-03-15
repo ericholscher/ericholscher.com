@@ -186,9 +186,19 @@ you lose all portability benefits.**
 Conclusion
 ----------
 
-Please investigate `Sphinx`_ and `Asciidoctor`_ as good alternatives.
+I believe that CommonMark is a good step forward,
+and if it became more widely used,
+and added extension support,
+I could whole-heartedly recommend it as a solution to this problem.
+The current ecosystem we have around Markdown is not something that I can endorse,
+and believe that it's actively holding back folks to want to make documentation better.
+
+I hope that we can start to move forward with a more standardized set of languages,
+including CommonMark, reStructuredText, and Asciidoc,
+fully supporting them across the suite of tools that we use.
+For now, please investigate `Sphinx`_ and `Asciidoctor`_ as good alternatives.
 They come with a lot more extensibility built into the language,
-and are more complete tools for building sets of documentation.
+and are more complete tools for building sets of documentation today.
 
 Markdown is a concept more than it is an implementation.
 It generally means "a set of incompatible extensions to something that looks kinda like Markdown".
