@@ -100,8 +100,8 @@ has both inline and block level markup:
 
 .. code-block:: rst
 
-	.. contents::
-	   :caption: Table of Contents
+	.. contents:: All the stuff I'm going to talk about
+	   :depth: 2
 
 	Please look at :rfc:`1984` for more information.
 	This is implemented in our codebase at :class:`Example.Encryption`.
