@@ -86,40 +86,6 @@ This would apply syntax highlighting to the actual rendered HTML output.
 .. _Markdown Extra: https://michelf.ca/projects/php-markdown/extra/#fenced-code-blocks
 .. _flavor: https://github.com/jgm/CommonMark/wiki/Markdown-Flavors
 
-Lack of Semantic Meaning
-------------------------
-
-Though many people have added extensions to Markdown,
-almost none have any kind of semantic meaning.
-This means that you can't write a *Note* or a *Warning*,
-you can only write text.
-
-This leads people to embed HTML directly in their Markdown:
-
-.. code-block:: html
-
-	<div class="warning">
-
-	This is a Warning!
-
-	</div>
-
-In reStructuredText for example,
-you can write:
-
-.. code-block:: rst
-
-	.. warning:: This is a Warning!
-
-This will be output as a warning properly in HTML, PDF, and any other output format you can generate.
-
-**Semantic markup firmly separates the words that you write from how they are displayed.**
-
-Writing without semantic markup is a problem for a few reasons:
-
-* Your Markdown is now dependent on specific CSS classes in your display, meaning your writers have to think about how your page will be designed
-* Your content is no longer portable to other output formats (PDF, etc.)
-* Conversion to other markup tools and page designs becomes much harder
 
 Lack of Extensibility
 ---------------------
@@ -168,6 +134,41 @@ except that for any reasonably sized set of docs you'll need things that aren't 
 **Once you start using markdown flavors,
 which is required for any non-trivial documentation,
 you lose all portability benefits.**
+
+Lack of Semantic Meaning
+------------------------
+
+Though many people have added extensions to Markdown,
+almost none have any kind of semantic meaning.
+This means that you can't write a *Note* or a *Warning*,
+you can only write text.
+
+This leads people to embed HTML directly in their Markdown:
+
+.. code-block:: html
+
+	<div class="warning">
+
+	This is a Warning!
+
+	</div>
+
+In reStructuredText for example,
+you can write:
+
+.. code-block:: rst
+
+	.. warning:: This is a Warning!
+
+This will be output as a warning properly in HTML, PDF, and any other output format you can generate.
+
+**Semantic markup firmly separates the words that you write from how they are displayed.**
+
+Writing without semantic markup is a problem for a few reasons:
+
+* Your Markdown is now dependent on specific CSS classes in your display, meaning your writers have to think about how your page will be designed
+* Your content is no longer portable to other output formats (PDF, etc.)
+* Conversion to other markup tools and page designs becomes much harder
 
 Conclusion
 ----------
