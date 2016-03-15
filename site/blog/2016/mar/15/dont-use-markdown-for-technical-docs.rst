@@ -195,6 +195,6 @@ It generally means "a set of incompatible extensions to something that looks kin
 When you are trying to author large sets of documents,
 it isn't the correct tool.
 
-*Full Disclosure:* I work on a product, Read the Docs, which is based on Sphinx, so my views are likely biased.
+*Full Disclosure:* I work on a product, `Read the Docs <https://readthedocs.com/>`_, which is based on Sphinx, so my views are likely biased.
 
 .. _initial implementation: https://daringfireball.net/projects/markdown/
