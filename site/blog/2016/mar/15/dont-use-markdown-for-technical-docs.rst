@@ -3,7 +3,7 @@
 Why You Shouldn't Use "Markdown" for Documentation
 ==================================================
 
-`"Markdown"`_ is the most commonly used markup language on the internet.
+`"Markdown"`_ is the most commonly used lightweight markup language on the internet.
 It is great for a subset of tasks,
 mainly blog posts and commenting.
 However,
