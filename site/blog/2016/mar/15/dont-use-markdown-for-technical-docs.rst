@@ -107,6 +107,12 @@ has both inline and block level markup:
 
 You can learn more about the `rfc <http://docutils.sourceforge.net/docs/ref/rst/roles.html#rfc-reference>`_, `class <http://www.sphinx-doc.org/en/stable/domains.html?highlight=domains#cross-referencing-python-objects>`_, and `contents <http://docutils.sourceforge.net/docs/ref/rst/directives.html#table-of-contents>`_ concepts.
 
+As a developer working with rST or Asciidoctor,
+I can add new markup to the language in a simple,
+pluggable way.
+I don't have to change how the language is parsed,
+and I can share those additions with other users via a standard extension mechanism.
+
 **There is no way of doing this in Markdown,
 in a way that would be portable across versions.**
 
