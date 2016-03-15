@@ -106,7 +106,7 @@ has both inline and block level markup:
 	Please look at :rfc:`1984` for more information.
 	This is implemented in our codebase at :class:`Example.Encryption`.
 
-You can learn more about the `rfc <http://www.sphinx-doc.org/en/stable/markup/inline.html#role-rfc>`_, `class <http://www.sphinx-doc.org/en/stable/domains.html?highlight=domains#cross-referencing-python-objects>`_, and `contents <http://docutils.sourceforge.net/docs/ref/rst/directives.html#table-of-contents>`_ concepts.
+You can learn more about the `rfc <http://docutils.sourceforge.net/docs/ref/rst/roles.html#rfc-reference>`_, `class <http://www.sphinx-doc.org/en/stable/domains.html?highlight=domains#cross-referencing-python-objects>`_, and `contents <http://docutils.sourceforge.net/docs/ref/rst/directives.html#table-of-contents>`_ concepts.
 
 **There is no way of doing this in Markdown,
 in a way that would be portable across versions.**
