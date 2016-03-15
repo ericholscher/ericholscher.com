@@ -161,7 +161,7 @@ You also can't migrate them easily to another markup languages (Asciidoc or RST)
 because Pandoc and other tools won't support your flavor's extensions.
 
 I think that a lot of people choose Markdown because they think they can migrate to another tool or markup later.
-Markdown is definitely the lowest common demoninator,
+Markdown is definitely the lowest common denominator,
 except that for any reasonably sized set of docs you'll need things that aren't in the basic language.
 
 **Once you start using markdown flavors,
@@ -179,5 +179,7 @@ Markdown is a concept more than it is an implementation.
 It generally means "a set of incompatible extensions to something that looks kinda like Markdown".
 When you are trying to author large sets of documents,
 it isn't the correct tool.
+
+*Full Disclosure:* I work on a product, Read the Docs, which is based on Sphinx, so my views are likely biased.
 
 .. _initial implementation: https://daringfireball.net/projects/markdown/
