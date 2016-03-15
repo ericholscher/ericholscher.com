@@ -7,7 +7,7 @@ Why You Shouldn't Use "Markdown" for Documentation
 It is great for a subset of tasks,
 mainly blog posts and commenting.
 However,
-lately it has been adopted by the technical writing community as a solution for writing longer form documents.
+lately it has been adopted by the technical writing community as a solution for writing documentation.
 
 I'd like to lay out the main arguments that I have against Markdown.
 Hopefully this will be useful in helping you decide whether it's a good fit for your organization.
