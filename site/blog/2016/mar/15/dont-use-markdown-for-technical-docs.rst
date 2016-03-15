@@ -9,7 +9,7 @@ mainly blog posts and commenting.
 However,
 lately it has been adopted by the technical writing community as a solution for writing longer form documents.
 
-I'd like to lay out the main arguments that I have against "Markdown".
+I'd like to lay out the main arguments that I have against Markdown.
 Hopefully this will be useful in helping you decide whether it's a good fit for your organization.
 If you are considering Markdown,
 I hope that you also look at `Asciidoctor`_ and `Sphinx`_.
