@@ -15,6 +15,15 @@ If you are considering Markdown,
 I hope that you also look at `Asciidoctor`_ and `Sphinx`_.
 I find them to be much better toolsets for writing documentation.
 
+Markdown is often chosen because it's viewed as a simple approach that handles the basic cases well.
+Developers prefer it because GitHub supports it,
+though GitHub supports `9 different markup languages <https://github.com/github/markup#markups>`_,
+including `Asciidoc <http://asciidoctor.org/docs/asciidoc-writers-guide/>`_ and `reStructuredText <http://www.sphinx-doc.org/en/stable/rest.html>`_,
+which I recommend over Markdown.
+As documentation grows from a few pages into a large set of documents,
+Markdown quickly falls over and becomes a liability instead of a benefit.
+I'd like to explain a bit more about why this is the case.
+
 .. _"Markdown": https://github.com/jgm/CommonMark/wiki/Markdown-Flavors
 .. _Asciidoctor: http://asciidoctor.org/
 .. _Sphinx: http://www.sphinx-doc.org/en/stable/
@@ -27,7 +36,7 @@ Markdown was defined by the `initial implementation`_ written by John Gruber.
 There was no spec,
 and the "proper" behavior was whatever this script chose to do.
 
-As Markdown got more popular,
+As Markdown got popular,
 more and more sites started to implement it.
 Those sites were written in other languages,
 so more implementations of Markdown were created.
