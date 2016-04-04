@@ -39,7 +39,7 @@ about documentation, and to further the art of documentation in all
 forms.
 
 Write the Docs will also
-`be a community <http://docs.writethedocs.org/en/latest/about/community.html>`_
+`be a community <http://docs.writethedocs.org/about/community/>`_
 that you can become involed in. We are announcing a mailing list
 that will serve as a place to ask questions, and bring together all
 those who write the docs. In addition, the
@@ -50,7 +50,7 @@ there.
 All of the above is a work in progress. I hope you join me in
 supporting and contributing these projects. I believe that they
 will advance the state of the software community in many ways. The
-`vision <http://docs.writethedocs.org/en/latest/about/vision.html>`_
+`vision <http://docs.writethedocs.org/about/vision/>`_
 for the project lays out some of the things that we want to
 accomplish.
 
