@@ -1,1 +1,4 @@
+Blog Posts
+----------
+
 .. postlist::

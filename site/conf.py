@@ -17,6 +17,7 @@ blog_locations = {
     'PDX': ('Portland, Oregon', 'http://www.portlandhikersfieldguide.org/'),
 }
 blog_default_location = 'PDX'
+fontawesome_link_cdn = 'http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css'
 
 templates_path = ['_templates', ablog.get_html_templates_path()]
 source_suffix = '.rst'
@@ -25,14 +26,13 @@ project = u"Surfing in Kansas - Eric Holscher"
 copyright = u'2016, Eric Holscher'
 version = '1.0'
 release = '1.0'
-exclude_patterns = ['_build', 'include/*', 'blog/index.rst', 'blog/*/index.rst', 'blog/drafts/*']
+exclude_patterns = ['_build', 'include/*', 'blog/drafts/*']
 pygments_style = 'sphinx'
 html_theme_path = [alabaster.get_path()]
 html_theme = 'alabaster'
 html_sidebars = {
-    '**': [
-        'sidebarlogo.html', 'about.html', 'localtoc.html',
-    ]
+    '*': ['sidebarlogo.html', 'about.html', 'localtoc.html'],
+    'blog/**': ['sidebarlogo.html', 'postcard.html', 'about.html', 'localtoc.html'],
 }
 html_title = "Surfing in Kansas"
 html_favicon = '_static/img/favicon.ico'
