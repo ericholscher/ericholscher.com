@@ -1,4 +1,4 @@
-:Date: 2012-12-01 18:27:15
+.. post:: 2012-12-01 18:27:15
 
 Interesting projects on Read the Docs: Teaching
 ===============================================

@@ -1,4 +1,4 @@
-:Date: 2008-11-11 17:40:10
+.. post:: 2008-11-11 17:40:10
 
 Practical Django Testing Examples: Views
 ========================================

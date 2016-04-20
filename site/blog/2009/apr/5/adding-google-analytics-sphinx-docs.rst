@@ -1,4 +1,4 @@
-:Date: 2009-04-05 10:12:42
+.. post:: 2009-04-05 10:12:42
 
 Adding Google Analytics to Sphinx Docs
 ======================================

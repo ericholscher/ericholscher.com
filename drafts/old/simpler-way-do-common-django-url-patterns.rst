@@ -1,4 +1,4 @@
-:Date: 2009-08-16 20:36:04
+.. post:: 2009-08-16 20:36:04
 
 A simpler way to do common Django URL patterns
 ==============================================

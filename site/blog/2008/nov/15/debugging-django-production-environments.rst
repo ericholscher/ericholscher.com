@@ -1,4 +1,4 @@
-:Date: 2008-11-15 17:27:37
+.. post:: 2008-11-15 17:27:37
 
 Debugging Django in Production Environments
 ===========================================

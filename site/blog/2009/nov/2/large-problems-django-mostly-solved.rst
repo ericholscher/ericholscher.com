@@ -1,4 +1,4 @@
-:Date: 2009-11-02 17:34:04
+.. post:: 2009-11-02 17:34:04
 
 Large Problems in Django, Mostly Solved: Search
 ===============================================

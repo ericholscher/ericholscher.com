@@ -1,4 +1,4 @@
-:Date: 2009-11-11 18:42:40
+.. post:: 2009-11-11 18:42:40
 
 Large Problems in Django, Mostly Solved: APIs
 =============================================

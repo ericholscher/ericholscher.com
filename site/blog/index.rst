@@ -1,1 +1,1 @@
-.. include:: /include/blog.rst
+.. postlist::

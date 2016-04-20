@@ -1,4 +1,4 @@
-:Date: 2009-01-22 17:41:49
+.. post:: 2009-01-22 17:41:49
 
 Encouraging Web Interaction for University Students
 ===================================================

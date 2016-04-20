@@ -1,4 +1,4 @@
-:Date: 2010-04-07 17:11:30
+.. post:: 2010-04-07 17:11:30
 
 What should a company's open source site look like?
 ===================================================

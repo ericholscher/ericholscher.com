@@ -1,4 +1,4 @@
-:Date: 2009-02-14 03:00:00
+.. post:: 2009-02-14 03:00:00
 
 Envisioning a class in software testing
 =======================================

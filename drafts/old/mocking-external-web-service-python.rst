@@ -1,4 +1,4 @@
-:Date: 2009-11-25 11:20:59
+.. post:: 2009-11-25 11:20:59
 
 Mocking an External Web Service in Python
 =========================================

@@ -1,4 +1,4 @@
-:Date: 2013-11-11 20:00:00
+.. post:: 2013-11-11 20:00:00
 
 Codes of Conduct, an Organizers Perspective
 ==========================================

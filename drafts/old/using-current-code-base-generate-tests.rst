@@ -1,4 +1,4 @@
-:Date: 2008-10-07 13:03:08
+.. post:: 2008-10-07 13:03:08
 
 Using the current code base to generate tests
 =============================================

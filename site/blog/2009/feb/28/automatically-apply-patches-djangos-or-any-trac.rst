@@ -1,4 +1,4 @@
-:Date: 2009-02-28 20:18:07
+.. post:: 2009-02-28 20:18:07
 
 Automatically apply patches from Django's (or any) Trac
 =======================================================

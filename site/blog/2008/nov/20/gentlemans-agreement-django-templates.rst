@@ -1,4 +1,4 @@
-:Date: 2008-11-20 20:24:01
+.. post:: 2008-11-20 20:24:01
 
 Gentlemans agreement on Django templates
 ========================================

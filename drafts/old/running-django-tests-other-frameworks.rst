@@ -1,4 +1,4 @@
-:Date: 2009-10-02 16:00:15
+.. post:: 2009-10-02 16:00:15
 
 Running Django Tests with Other Frameworks
 ==========================================

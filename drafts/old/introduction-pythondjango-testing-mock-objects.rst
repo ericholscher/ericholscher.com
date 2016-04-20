@@ -1,4 +1,4 @@
-:Date: 2009-02-14 03:00:00
+.. post:: 2009-02-14 03:00:00
 
 Introduction to Python/Django testing: Mock objects
 ===================================================

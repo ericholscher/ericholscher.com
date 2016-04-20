@@ -1,4 +1,4 @@
-:Date: 2016-03-15 09:00:00
+.. post:: 2016-03-15 09:00:00
 
 Why You Shouldn't Use "Markdown" for Documentation
 ==================================================

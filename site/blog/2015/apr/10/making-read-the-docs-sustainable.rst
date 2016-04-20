@@ -1,4 +1,4 @@
-:Date: 2015-04-10 12:00:00
+.. post:: 2015-04-10 12:00:00
 
 
 Making Read the Docs Sustainable

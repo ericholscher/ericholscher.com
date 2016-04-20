@@ -1,4 +1,4 @@
-:Date: 2010-06-23 17:17:49
+.. post:: 2010-06-23 17:17:49
 
 Large Problems in Django, Mostly Solved: Remote Execution
 =========================================================

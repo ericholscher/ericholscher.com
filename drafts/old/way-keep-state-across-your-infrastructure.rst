@@ -1,4 +1,4 @@
-:Date: 2011-07-05 16:42:06
+.. post:: 2011-07-05 16:42:06
 
 A way to keep state across your infrastructure
 ==============================================

@@ -1,4 +1,4 @@
-:Date: 2009-11-16 17:24:14
+.. post:: 2009-11-16 17:24:14
 
 The importance of conferences in Open Source
 ============================================

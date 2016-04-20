@@ -1,4 +1,4 @@
-:Date: 2010-02-06 10:02:32
+.. post:: 2010-02-06 10:02:32
 
 The role of designers in the Django community
 =============================================

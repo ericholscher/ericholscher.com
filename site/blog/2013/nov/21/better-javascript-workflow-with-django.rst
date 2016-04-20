@@ -1,4 +1,4 @@
-:Date: 2013-11-21 20:00:00
+.. post:: 2013-11-21 20:00:00
 
 A Better Javascript Workflow with Django
 ========================================

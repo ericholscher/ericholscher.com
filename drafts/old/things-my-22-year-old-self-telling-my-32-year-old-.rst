@@ -1,4 +1,4 @@
-:Date: 2009-04-25 13:32:00
+.. post:: 2009-04-25 13:32:00
 
 Things that my 22 year old self is telling my 32 year old self
 ==============================================================

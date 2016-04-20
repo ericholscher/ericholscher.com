@@ -1,4 +1,4 @@
-:Date: 2008-09-12 16:01:35
+.. post:: 2008-09-12 16:01:35
 
 Screencast: Django Command Extensions
 =====================================

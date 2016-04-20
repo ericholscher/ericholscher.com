@@ -1,4 +1,4 @@
-:Date: 2009-11-25 19:39:42
+.. post:: 2009-11-25 19:39:42
 
 What are the most important metrics for a site?
 ===============================================

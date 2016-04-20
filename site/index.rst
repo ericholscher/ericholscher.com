@@ -30,5 +30,20 @@ Activities
     bike
     backpacking
 
+Random Tidbits
+^^^^^^^^^^^^^^
 
-.. include:: include/blog.rst
+.. toctree::
+    :maxdepth: 1
+    
+    pct/index
+    favorites
+
+
+Blog Entries
+^^^^^^^^^^^^
+
+.. postlist::
+   :date: %b %d, %Y
+   :list-style: circle
+

@@ -1,4 +1,4 @@
-:Date: 2010-11-15 18:28:14
+.. post:: 2010-11-15 18:28:14
 
 Correct commands to check out and update VCS repos
 ==================================================

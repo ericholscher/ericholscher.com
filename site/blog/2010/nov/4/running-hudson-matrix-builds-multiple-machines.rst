@@ -1,4 +1,4 @@
-:Date: 2010-11-04 16:00:00
+.. post:: 2010-11-04 16:00:00
 
 Running Hudson matrix builds on multiple machines
 =================================================

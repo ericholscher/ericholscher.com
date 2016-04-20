@@ -1,4 +1,4 @@
-:Date: 2008-02-19 09:35:18
+.. post:: 2008-02-19 09:35:18
 
 Security Vulnerabilities on the Internet
 ========================================

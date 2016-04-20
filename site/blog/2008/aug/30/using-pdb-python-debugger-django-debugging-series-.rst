@@ -1,4 +1,4 @@
-:Date: 2008-08-30 21:36:21
+.. post:: 2008-08-30 21:36:21
 
 Using pdb, the Python Debugger (Django Debugging Series, Part 3)
 ================================================================

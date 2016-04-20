@@ -1,4 +1,4 @@
-:Date: 2009-11-17 20:14:49
+.. post:: 2009-11-17 20:14:49
 
 Announcing Kong: A server description and deployment testing tool
 =================================================================

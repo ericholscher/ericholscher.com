@@ -1,4 +1,4 @@
-:Date: 2008-12-03 19:45:39
+.. post:: 2008-12-03 19:45:39
 
 Starting a Django Conventions Project and Reference
 ===================================================
