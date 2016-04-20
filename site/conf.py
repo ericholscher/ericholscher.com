@@ -52,3 +52,7 @@ texinfo_documents = [
      u'Eric Holscher', 'SurfinginKansas', 'One line description of project.',
      'Miscellaneous'),
 ]
+
+
+def setup(app):
+    app.add_stylesheet('eric.css')

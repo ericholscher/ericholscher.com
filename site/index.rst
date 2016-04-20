@@ -43,7 +43,8 @@ Random Tidbits
 Blog Entries
 ^^^^^^^^^^^^
 
-.. postlist::
+.. postlist:: 
    :date: %b %d, %Y
    :list-style: circle
+   :format: {date} - {title}
 
