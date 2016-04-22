@@ -1,0 +1,51 @@
+How to Work with Designers
+==========================
+
+As a developer,
+I find working with a Designer to be the best way to improve my work.
+Designers have a fantastic ability to look at things from the viewpoint of a user.
+They have greater empathy for the usability of a system.
+
+There is one key to working well with Designers:
+
+	Come to them with a problem instead of a solution
+
+If you are a developer,
+this sounds very similar to how you want people to approach you as well.
+This is true of most people in creative fields.
+
+When you come to someone with a solution for them to implement,
+you are insulting their skillset.
+Skilled people are fantastic at building solutions to problems.
+A much larger set of people can implement a pre-existing solution.
+
+Involve your designer in the development process early and often.
+Allow them to form your understanding of the problems,
+and respect their views on usability.
+
+A more in depth look at this can be found in `this blog post`_
+
+Examples
+--------
+
+| Bad: You should make the button blue.
+| Good: We need more people to click the button.
+
+| Bad: Can you make the website prettier?
+| Good: We are having issues with user retention, how can we help fix this issue?
+
+| Bad: I built the backend, can you make it work well?
+| Good: How can we build this system so that it's usable to accomplish our goals.
+
+Conclusion
+----------
+
+You need to respect the time and skills of everyone you work with.
+Sometimes it can be hard to understand what exactly some folks do,
+but defaulting to thinking they are good at what they do.
+
+Involving designers in your planning and design phase of projects is a quick way to get wider perspectives.
+It also allows them to bring their skills and viewpoint to improve the solution.
+
+
+.. _this blog post: https://medium.com/the-year-of-the-looking-glass/6c975dede146

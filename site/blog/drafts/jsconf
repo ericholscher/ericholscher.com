@@ -1,0 +1,9 @@
+Documentation as Empathy
+
+I have done a lot of work around Documentation. I help organize a conference called Write the Docs, and I run a website called Read the Docs, which hosts documentation for thousands of open source projects.
+
+Over this time, I have come to understand that documentation is a part of outreach and inclusivity. By not writing documentation for your projects, you are artificially limiting the number and type of people who will use your software.
+
+I will argue that this is a systematic problem with all of software, and the effect is to perpetuate the system of programmers that currently exists: English speaking, highly motivated people with lots of free time.
+
+I think that arguing documentation as a moral and ethical requirement for software is a fundamentally important argument, and I haven't seen it made before. I haven't presented this talk anywhere else, but I hope it's the right kind of crazy for JSConf.
