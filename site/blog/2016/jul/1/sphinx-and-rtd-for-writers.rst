@@ -364,18 +364,21 @@ I use a package called ``ablog`` for hosting of my blog over at http://ericholsc
 
 The simplest thing you do is specify that a document is a blog post with the ``post`` directive::
 
-    .. post:: 2016-03-15 09:00:00
-       :tags: earth, love, peace
+    .. post:: 2016-03-15 09:00
+       :tags: writing, stc, sphinx
 
 This will then add it to the set of posts that get output in any document where you use::
 
     .. postlist:: 
-       :tags: Manual
+       :tags: stc
 
 You can even create specific archive pages for categories or tags with ``postlist``,
 or just output all of your posts.
 
 This shows some of the magical things you can do with Sphinx's extensibility.
+If you're curious,
+this article was actually written in reStructuredText,
+and you can see it in full here: https://github.com/ericholscher/ericholscher.com/blob/master/site/blog/2016/jul/1/sphinx-and-rtd-for-writers.rst
 
 Custom builders
 ---------------
@@ -543,5 +546,3 @@ the better our products get.
 Using tools that integrate with development workflows makes it much easier to become a part of the product process.
 Sphinx and Read the Docs have been battle tested by hundreds of thousands of open source developers for years,
 and are a great choice for your software documentation project.
-
-
