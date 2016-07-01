@@ -16,7 +16,7 @@ This marrying of cultures isn't simple,
 but having the proper tools for the job makes both sides happy with the results that get produced.
 
 A lot of developer tools don't work well for writers.
-Sphinx and Read the Docs unique in this ecosystem,
+Sphinx and Read the Docs are unique in this ecosystem,
 in that they have powerful tools that both writers and developers want,
 in one convenient package.
 
@@ -31,7 +31,7 @@ but it has most of the features that technical writers have come to expect in a 
 This blending of worlds makes it the best suited platform for teams that want both writers and developers contributing to product and API documentation.
 
 Read the Docs is best thought of as a continuous documentation platform for Sphinx.
-Continuous documentation being similar to continuous integration in programming circles.
+Continuous documentation is analogous to continuous integration of code.
 In practice it means that your documentation is built,
 tested, 
 and updated on every commit.
@@ -40,28 +40,28 @@ Sphinx provides a documentation generator that is best-in-class for software doc
 Sphinx documents are written in the reStructuredText markup language.
 which is similar to Markdown,
 but much more powerful.
-Read the Docs provides a best-in-class hosting platform for Sphinx.
+Read the Docs provides a hosting platform for Sphinx.
 
 As a writer who uses Sphinx,
-your day to day will be writing reStructuredText in text files.
-You will then build your documentation by running Sphinx on the command line.
+your day to day is writing reStructuredText in plain text files.
+You then build your documentation by running Sphinx on the command line.
 Generally it's easiest to output HTML for local writing and testing,
 and then you can let Read the Docs generate PDF's and other formats.
 
-This article will provide an overview of the features of Sphinx and Read the Docs,
+This article provides an overview of the features of Sphinx and Read the Docs,
 and allow you to evaluate them for use in your organization.
 
 Introduction to Sphinx
 ----------------------
 
 `Sphinx <http://www.sphinx-doc.org/>`_ is the documentation tool of choice for the Python language community,
-and increasingly large parts of the software ecosystem.
+and increasingly also for other programming languages and tools.
 It was `originally created <https://en.wikipedia.org/wiki/Sphinx_(documentation_generator)>`_ in 2008 to document the Python language itself.
 
 Over the past eight years,
 it has turned into a robust and mature solution for software documentation.
-It has a number of features that technical writers would expect,
-including:
+It includes a number of features that writers expect,
+such as:
 
 * Single Source Publishing 
     * Output HTML, PDF, ePub, and more
@@ -75,20 +75,20 @@ including:
 It also has practical and powerful tools for documenting software specifically,
 including:
 
-* Semantic referencing of software concepts, including Classes, Functions, Programs, Variables, etc.
-* Including of code comments inside prose documentation for many programming languages
-* Tools for documenting HTTP API's
+* Semantic referencing of software concepts, including classes, functions, programs, variables, etc.
+* Including code comments in documentation output for many programming languages
+* Tools for documenting HTTP APIs
 * Extensions with the Python language
 * A vast array of third party extensions to do useful things
 
 This article isn't large enough to cover all of the power packed into this tool.
-Hopefully I can show you enough that it piques your interest and you can research more.
+But I hope to show enough to pique reader interest so that you can try these tools out and research their capacity for yourself.
 
 Using Sphinx
 ~~~~~~~~~~~~
 
 reStructuredText is a powerful language primarily because the syntax can be extended.
-There are two types of extension that reStructuredText supports:
+reStructuredTest supports two types of extension:
 
 * Paragraph level (with Directives)
 * Inline level (with Interpreted Text Roles, or roles for short)
@@ -118,7 +118,8 @@ They allow for customization of directives,
 and show the full power of reStructuredText.
 
 .. note:: You'll notice that Sphinx uses whitespace to denote where a directive ends.
-   This means the content will last until the next unindented line.
+   The "Proceed with caution!" is still part of the ``warning``,
+   and everything that continues to be indented will be part of that warning.
 
 Sphinx ships with a number of powerful directives,
 and you can also write your own if you have someone on your team that knows Python.
@@ -135,11 +136,11 @@ Here is an example:
 Here you can see ``rfc`` and ``class`` act as the name of the role,
 and then you can pass in a single argument.
 For the ``rfc`` role,
-it will generate a link to the online reference for RFC 1984 with a text of ``RFC 1984``.
+it generates a link to the online reference for RFC 1984 with a text of ``RFC 1984``.
 
 The ``class`` is where things get interesting.
 This acts as a reference to the class ``System.Security`` that is documented in your project,
-which will be a hyperlink in the HTML output,
+which is a hyperlink in the HTML output,
 but also a working link in PDF and other outputs as well.
 
 Similarly,
@@ -163,9 +164,8 @@ The ``toctree`` directive is a fundamental part of this structure.
      install
      support
 
-The above example will output a Table of Contents in the page where it occurs.
-The ``maxdepth`` argument tells Sphinx to include 2 levels of headers in it's output.
-It will output the 2 top-level headers of the pages listed.
+The above example outputs a Table of Contents in the page where it occurs.
+The ``maxdepth`` argument tells Sphinx to include 2 levels of headers.
 This also tells Sphinx that the other pages are sub-pages of the current page,
 creating a "tree" structure of the pages::
 
@@ -217,7 +217,7 @@ This uses the ``literalinclude`` directive::
        :emphasize-lines: 12,15-18
 
 The neat thing here is the ``:emphasize-lines:``.
-This will show the lines highlighted in your output.
+This shows the lines highlighted in your output.
 This is quite useful for showing sets of code examples where a subset of the code changes.
 You can also specify just a subset of lines to show with the ``:lines:`` option,
 so you don't have to manage multiple snippets.
@@ -367,7 +367,7 @@ The simplest thing you do is specify that a document is a blog post with the ``p
     .. post:: 2016-03-15 09:00
        :tags: writing, stc, sphinx
 
-This will then add it to the set of posts that get output in any document where you use::
+This adds it to the set of posts that get shown in any document where you use::
 
     .. postlist:: 
        :tags: stc
@@ -391,11 +391,11 @@ and folks in the community have been.
 For example,
 these are a sampling of the builders that ship with Sphinx:
 
-* A linkcheck builder that will tell you about broken URL's
+* A linkcheck builder that tells you about broken URL's
 * A builder that outputs all the things changed in the latest version of your code for a changelog
-* An XML builder that will output a representation of your documents in XML
+* An XML builder that outputs a representation of your documents in XML
 * A Man page builder that builds man pages from your documentation
-* JSON builder that will output your pages as HTML inside of JSON, with some metadata, for embedding dynamically
+* JSON builder that outputs your pages as HTML inside of JSON, with some metadata, for embedding dynamically
 
 Trade offs with Sphinx
 ----------------------
@@ -429,8 +429,8 @@ It takes the powerful tool that Sphinx is,
 then adds understanding of version control and other powerful features on top.
 
 Supporting Git, Mercurial, and Subversion,
-Read the Docs will pull down the code from your version control,
-then build and host that documentation for you.
+Read the Docs pulls down the code from your version control,
+then builds and host that documentation for you.
 We'll use GitHub in this example as it's the most commonly used system for accessing code.
 
 To get started,
@@ -439,17 +439,17 @@ and link your GitHub account.
 Then you select the GitHub repository you'd like to build documentation for,
 at which point the magic happens.
 
-Read the Docs will:
+Read the Docs:
 
-* Clone your repository
-* Build HTML, PDF, and ePub versions of your documentation from your ``master`` branch.
+* Clones your repository
+* Builds HTML, PDF, and ePub versions of your documentation from your ``master`` branch.
 * Indexes your documentation to allow full-text-search
 * Creates Version objects from each *tag* and *branch* in your repository, allowing you to optionally host those as well
-* Activates a webhook on your repository, so when you push code to any branch, your documentation will be rebuilt
+* Activates a webhook on your repository, so when you push code to any branch, your documentation is rebuilt
 
 Now,
 whenever you commit new code or documentation to your repository,
-your documentation will be kept up to date.
+your documentation is kept up to date.
 This works with your ``master`` branch,
 as well as any other branches or tags you might have activated documentation for.
 
@@ -471,7 +471,7 @@ Recommended Versioning System
 
 Read the Docs only works with version control.
 This means that however you version your software,
-your documentation will follow suite.
+your documentation follows suite.
 This is great for integrating with your development team,
 but it also means you need to think about the proper strategy for versioning.
 
