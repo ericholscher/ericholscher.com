@@ -17,7 +17,7 @@ but having the proper tools for the job makes both sides happy with the process 
 
 A lot of developer tools don't work well for writers.
 Sphinx and Read the Docs are unique in this ecosystem,
-in that they have powerful tools that both writers and developers want,
+in that they have powerful features that both writers and developers want,
 in one convenient package.
 
 Overview of the Ecosystem
@@ -154,7 +154,7 @@ you can create a custom semantic sytnax for our own software::
     Check out :jira:`199` for information on the :toy:`jump-rope`.
     There is a fix in our :unit-test:`assert-jump-rope-length`.
 
-These custom roles work in your rst files,
+These custom roles work in your ``.rst`` files,
 but also in any kind content that is pulled out of a comment in your source code too.
 
 Now,
@@ -385,7 +385,7 @@ You can show a post listing by using the ``postlist`` directive::
 This shows some of the magical things you can do with Sphinx's extensibility.
 If you're curious,
 this article was actually written in reStructuredText and then exported to Word for publishing.
-You can see the RST in full here: https://github.com/ericholscher/ericholscher.com/blob/master/site/blog/2016/jul/1/sphinx-and-rtd-for-writers.rst
+You can see the full source here: https://github.com/ericholscher/ericholscher.com/blob/master/site/blog/2016/jul/1/sphinx-and-rtd-for-writers.rst
 
 Custom builders
 ---------------
