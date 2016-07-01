@@ -127,7 +127,7 @@ and you can also write your own if you have someone on your team that knows Pyth
 Inline Markup
 `````````````
 
-For extendability inside of your prose Sphinx uses roles.
+For extendability inside of a paragraph Sphinx uses roles.
 Here is an example:
 
     You can learn more about this in :rfc:`1984`.
@@ -143,9 +143,16 @@ This acts as a reference to the class ``System.Security`` that is documented in 
 which is a hyperlink in the HTML output,
 but also a working link in PDF and other outputs as well.
 
-Similarly,
-you can implement your own roles with Python.
+You can implement your own roles with Python.
 This allows you to create powerful semantic constructs into the actual *markup* you're using to write documentation.
+If you worked buildig software at a toy factory,
+you can create a custom semantic sytnax for our own software::
+
+    Check out :jira:`199` for information on the :toy:`jump-rope`.
+    There is a fix in our :unit-test:`assert-jump-rope-length`.
+
+These custom roles work in your rst files,
+but also in any kind content that is pulled out of a comment in your source code too.
 
 Now,
 let's see how you take these sets of reStructuredText files and turn them into a document set.
@@ -153,7 +160,7 @@ let's see how you take these sets of reStructuredText files and turn them into a
 Table of Contents Tree
 ----------------------
 
-One of the main concepts in Sphinx is that it allows multiple pages to be combined into a cohesive hierarchy.
+Sphinx lets you combine multiple pages into a cohesive hierarchy.
 The ``toctree`` directive is a fundamental part of this structure.
 
 .. code-block:: rst
@@ -197,9 +204,7 @@ Let's see how we can show a basic code example::
        def main():
            antigravity.fly()
 
-This would display the Python snippet,
-syntax highlighted,
-with line numbers.
+This markup displays the Python snippet with syntax highlighting and line numbers.
 The ``python`` in the above example is an argument to the ``code-block`` *directive*.
 The ``:linesnos:`` is an *option* that says to display line numbers for the code block.
 In the HTML output,
@@ -222,7 +227,7 @@ This is quite useful for showing sets of code examples where a subset of the cod
 You can also specify just a subset of lines to show with the ``:lines:`` option,
 so you don't have to manage multiple snippets.
 
-These directives have a lot more powerful options than I can show in this article.
+There's far more power to Sphinx directives than this article can show.
 You can see the full documentation for them on the Sphinx website:
 
 * http://www.sphinx-doc.org/en/stable/markup/code.html
@@ -238,7 +243,7 @@ Sphinx includes ``intersphinx`` which allows referencing across Sphinx projects.
 This means that if you have multiple projects inside your company,
 you can still use semantic referencing across them!
 
-A simple reference is defined as such::
+A simple reference is defined like this::
 
     .. _reference-target-name::
 
@@ -247,7 +252,7 @@ A simple reference is defined as such::
     This is how you point to the above reference, :ref:`reference-target-name`
 
 Sphinx also includes a number of other semantic reference types.
-Here are a few examples:
+Examples of other semantic reference types that Sphinx provides:
 
 * ``:doc:`` for referencing documents
 * ``:cls:`` for referencing programming classes
@@ -271,9 +276,10 @@ You see the complete set of references in the Sphinx documentation:
 
 Including comments form source code
 ```````````````````````````````````
-Integration with software is one of the largest benefits of Sphinx.
+
+Integration with code is one of the largest benefits of Sphinx.
 You can easily embed software comments from multiple languages,
-including Python, Java, and .Net.
+including Python, Java, and .NET.
 
 Here is an example of embedding Python documentation for a class in your project::
 
@@ -287,7 +293,7 @@ Here is an example of embedding Python documentation for a class in your project
     .. autofunction:: api.request
 
 As you can see,
-you can include prose content along with generated content in the same file.
+you can include generated content in the file that you're writing by hand.
 This allows for building a narrative around generated code comments,
 instead of giving your users a separate User Guide and API Reference,
 which is often times just a alphabetical listing of code!
@@ -300,8 +306,8 @@ You can read more about including code comments in the following documentation p
 
 * Domains, where the references are defined - http://www.sphinx-doc.org/en/stable/domains.html#what-is-a-domain
 * Autodoc, which generates docs from Python code - http://www.sphinx-doc.org/en/stable/ext/autodoc.html
-* Breathe, which bridges Doxygen and Sphinx - https://breathe.readthedocs.io/en/latest/
-* AutoAPI, which bridges .Net and Sphinx - https://sphinx-autoapi.readthedocs.io/en/latest/
+* Breathe, which bridges doxygen and Sphinx - https://breathe.readthedocs.io/en/latest/
+* AutoAPI, which bridges .NET and Sphinx - https://sphinx-autoapi.readthedocs.io/en/latest/
 
 Tables
 ------
@@ -311,7 +317,7 @@ Most other languages require that you write them in the file with some arcane sy
 However with reStructuredText,
 you can use directives to make this much easier.
 
-It comes with two powerful list directives,
+You can use either of two powerful list directives,
 ``csv-table`` and ``list-table``.
 Here is an example of ``csv-table``::
 
@@ -330,7 +336,7 @@ and have your documentation consume them from a CSV which is a much nicer workfl
 Internationalization
 --------------------
 
-Sphinx has support for translating documentation into multiple languages.
+Sphinx includes support for translating documentation into multiple languages.
 Since sphinx knows the structure of your documents,
 it is able to generate a catalog of content split by each paragraph.
 
@@ -346,7 +352,7 @@ which gives you a web-based system for translating the documentation:
 
 .. image:: transifex.png
 
-You can then tell Sphinx what language to generate for it's documentation when you build it by setting the ``language`` setting.
+You can then tell Sphinx what language to generate for its documentation when you build it by setting the ``language`` setting.
 Read the Docs also supports translation,
 allowing you to specify the language of the documentation.
 
@@ -377,19 +383,14 @@ or just output all of your posts.
 
 This shows some of the magical things you can do with Sphinx's extensibility.
 If you're curious,
-this article was actually written in reStructuredText,
-and you can see it in full here: https://github.com/ericholscher/ericholscher.com/blob/master/site/blog/2016/jul/1/sphinx-and-rtd-for-writers.rst
+this article was actually written in reStructuredText and then exported to Word for publishing.
+You can see the RST in full here: https://github.com/ericholscher/ericholscher.com/blob/master/site/blog/2016/jul/1/sphinx-and-rtd-for-writers.rst
 
 Custom builders
 ---------------
 
-Along with the basic output formats,
-Sphinx also supports custom builders that do other tasks.
-This is a place where you can really be creative,
-and folks in the community have been.
-
-For example,
-these are a sampling of the builders that ship with Sphinx:
+Sphinx supports custom builders to perform tasks beyond providing basic output formats.
+Some examples that ship with Sphinx:
 
 * A linkcheck builder that tells you about broken URL's
 * A builder that outputs all the things changed in the latest version of your code for a changelog
@@ -397,12 +398,15 @@ these are a sampling of the builders that ship with Sphinx:
 * A Man page builder that builds man pages from your documentation
 * JSON builder that outputs your pages as HTML inside of JSON, with some metadata, for embedding dynamically
 
-Trade offs with Sphinx
-----------------------
+You can get as creative as you like with custom builders,
+as many current members of the Sphinx community have already done.
 
-Every tool has it's issues and limitations.
-I'd like to address some of the major issues with Sphinx,
-so that you can go into using it with eyes wide open.
+Tradeoffs with Sphinx
+---------------------
+
+Every tool has its issues and limitations.
+I'd like to address some of the issues with Sphinx,
+so that you can go into it with eyes wide open.
 
 The biggest issue is that it is originally a *programmer tool*.
 This means that a lot of the designs assume knowledge of code,
@@ -424,13 +428,14 @@ reStructuredText can do so much more that it's worth the complexity and somewhat
 Introduction to Read the Docs
 -----------------------------
 
-Read the Docs is a hosting platform for Sphinx documentation.
-It takes the powerful tool that Sphinx is,
-then adds understanding of version control and other powerful features on top.
-
-Supporting Git, Mercurial, and Subversion,
-Read the Docs pulls down the code from your version control,
-then builds and host that documentation for you.
+Read the Docs is a hosting platform for Sphinx-generated documentation.
+It takes the power of Sphinx and adds version control, 
+full-text search,
+and other useful features.
+It pulls down code and doc files from Git,
+Mercurial,
+or Subversion, 
+then builds and hosts your documentation.
 We'll use GitHub in this example as it's the most commonly used system for accessing code.
 
 To get started,
@@ -458,7 +463,7 @@ Read the Docs has two special versions:
 * ``latest`` which maps to the most up to date development version of your software
 * ``stable`` which maps to the latest tagged release of your software
 
-These are version aliases that are meant to maintain stable URL's for your users who want to use the most up to date committed or released software, respectively.
+These are version aliases that help maintain stable URLs for the most up-to-date commits or for the most stable released version of your software.
 
 We built Read the Docs to be "set it and forget it".
 Once you set your project up and activate the versions you want hosted,
@@ -471,7 +476,7 @@ Recommended Versioning System
 
 Read the Docs only works with version control.
 This means that however you version your software,
-your documentation follows suite.
+your documentation follows suit.
 This is great for integrating with your development team,
 but it also means you need to think about the proper strategy for versioning.
 
@@ -501,11 +506,10 @@ An example:
 Additional Read the Docs features
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-As a hosting platform Read the Docs does add some additional features.
-Here is a short list which you can explore in more detail:
+Read the Docs also provides the following features:
 
 * GitHub, BitBucket, and Gitlab post-commit hooks
-* Custom domain hosting (CNAME's)
+* Custom domain hosting (CNAMEs)
 * Full-text search for all your projects versions
 * Status badges to show your docs are up to date
 * Hosting of multiple languages for a specific project
@@ -537,12 +541,12 @@ Conclusion
 ----------
 
 Sphinx is an incredibly powerful tool.
-Read the Docs builds on top to provide a way of hosting that documentation where it is kept up to date across versions.
+Read the Docs builds on top to provide hosting for Sphinx documentation that keeps your docs up to date across versions.
 Together,
 they are a wonderful set of tools that developers and technical writers both enjoy using.
 
 I firmly believe that the more integrated with the product development process technical writers get,
 the better our products get.
-Using tools that integrate with development workflows makes it much easier to become a part of the product process.
+Tools that integrate documentation and development workflows make it much easier for writers to become part of the larger development process.
 Sphinx and Read the Docs have been battle tested by hundreds of thousands of open source developers for years,
 and are a great choice for your software documentation project.
