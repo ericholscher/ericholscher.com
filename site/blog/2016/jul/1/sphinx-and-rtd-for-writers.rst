@@ -376,13 +376,11 @@ The most basic usage allows you to specify that a document is a blog post with t
     .. post:: 2016-03-15 09:00
        :tags: writing, stc, sphinx
 
-This adds it to the set of posts that get shown in any document where you use::
+``post`` adds the document to the set of posts.
+You can show a post listing by using the ``postlist`` directive::
 
     .. postlist:: 
        :tags: stc
-
-You can even create specific archive pages for categories or tags with ``postlist``,
-or just output all of your posts.
 
 This shows some of the magical things you can do with Sphinx's extensibility.
 If you're curious,
@@ -483,11 +481,8 @@ your documentation follows suit.
 This is great for integrating with your development team,
 but it also means you need to think about the proper strategy for versioning.
 
-If you work on a SaaS product,
-you probably only have one version.
-However,
-if you produce software with multiple supported versions,
-we recommend the following:
+After working with a lot of open source projects,
+we generally recommend this workflow for projects:
 
 * A ``master`` branch that the next release of your software is developed on
 * Git *branches* for ongoing maintenance of each version of your software that is maintained
@@ -501,19 +496,17 @@ An example:
 
 * ``master`` is your 2.2 release that isn't out yet
 * ``2.1.X`` is your release branch for the ``2.1`` version
-* ``2.1.0`` is a tag of your ``2.1`` branch, when you release ``2.1.0`` to your users
-* ``2.1.1`` is a similar tag of your ``2.1`` branch
-* ``1.4.X`` is the latest release branch of your ``1.X`` version
-* ``1.4.3`` is the latest release of your ``1.X`` version
+* ``2.1.1`` is a similar tag of your ``2.1`` branch, with the latest release
+* ``2.1.0`` is the first tag of your ``2.1`` branch
 
-Additional Read the Docs features
+Additional Read the Docs Features
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Read the Docs also provides the following features:
 
-* GitHub, BitBucket, and Gitlab post-commit hooks
-* Custom domain hosting (CNAMEs)
-* Full-text search for all your projects versions
+* GitHub, Bitbucket, and Gitlab webhooks 
+* Custom domain hosting
+* Full-text search for all your projects' versions
 * Status badges to show your docs are up to date
 * Hosting of multiple languages for a specific project
 * Hosting of multiple projects on a single domain with "subprojects"
@@ -530,8 +523,8 @@ and Read the Docs makes it easy and free to host docs for your open source proje
 
 Here are some examples that show the wide range of projects using Sphinx & Read the Docs:
 
+* ASP.NET - Microsoft's web framework: https://docs.asp.net
 * Julia - A language for scientific computing: http://docs.julialang.org
-* Asp.Net - Microsoft's web framework: https://docs.asp.net
 * Jupyter - An interactive programming environment: http://jupyter.readthedocs.io
 * PHPMyAdmin - A web-based database editor: https://docs.phpmyadmin.net
 * Write the Docs - The community site for Write the Docs - http://www.writethedocs.org
@@ -540,8 +533,8 @@ As you can see,
 a wide range of projects are using the tools for many different uses.
 It's a powerful tool for writing prose as well as documenting source code.
 
-Conclusion
-----------
+Going Forward
+-------------
 
 Sphinx is an incredibly powerful tool.
 Read the Docs builds on top to provide hosting for Sphinx documentation that keeps your docs up to date across versions.
