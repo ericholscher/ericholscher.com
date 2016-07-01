@@ -3,17 +3,17 @@ An introduction to Sphinx and Read the Docs for Technical Writers
 
 By: Eric Holscher
 
-Bio: Eric Holscher is the co-founder of Read the Docs, and the Write the Docs conference.
+Bio: Eric Holscher is the co-founder of Read the Docs and a co-organizer of the Write the Docs conference.
 Along with community organizing and open source work,
 he does consulting around software documentation and speaks at a number of industry events each year.
 When he isn't expressing his views on software docs, he's getting views from the top of mountains.
 
 Treating documentation as code is becoming a major theme in the software industry.
 This is coming from both sides,
-with developers starting treat documentation as a priority alongside tests and code,
+with developers starting to treat documentation as a priority alongside tests and code,
 and writers seeing a lot of value in integrating more into the development process.
 This marrying of cultures isn't simple,
-but having the proper tools for the job makes both sides happy with the results that get produced.
+but having the proper tools for the job makes both sides happy with the process and the results that get produced.
 
 A lot of developer tools don't work well for writers.
 Sphinx and Read the Docs are unique in this ecosystem,
@@ -31,16 +31,19 @@ but it has most of the features that technical writers have come to expect in a 
 This blending of worlds makes it the best suited platform for teams that want both writers and developers contributing to product and API documentation.
 
 Read the Docs is best thought of as a continuous documentation platform for Sphinx.
-Continuous documentation is analogous to continuous integration of code.
+Continuous documentation is analogous to continuous integration of code,
+which runs the tests on each commit.
 In practice it means that your documentation is built,
 tested, 
 and updated on every commit.
 
 Sphinx provides a documentation generator that is best-in-class for software docs.
 Sphinx documents are written in the reStructuredText markup language.
-which is similar to Markdown,
-but much more powerful.
-Read the Docs provides a hosting platform for Sphinx.
+reStructuredText is similar to Markdown,
+but much more powerful,
+as you'll see in this article.
+Read the Docs provides a hosting platform for Sphinx,
+running a build on each commit of your repository.
 
 As a writer who uses Sphinx,
 your day to day is writing reStructuredText in plain text files.
@@ -49,7 +52,7 @@ Generally it's easiest to output HTML for local writing and testing,
 and then you can let Read the Docs generate PDF's and other formats.
 
 This article provides an overview of the features of Sphinx and Read the Docs,
-and allow you to evaluate them for use in your organization.
+and enables you to evaluate them for use in your organization.
 
 Introduction to Sphinx
 ----------------------
@@ -67,7 +70,7 @@ such as:
     * Output HTML, PDF, ePub, and more
     * Content reuse through includes
     * Conditional includes based on content type and tags
-* Multiple mature HTML themes that look beautiful on mobile and desktop
+* Multiple mature HTML themes that provide great user experience on mobile and desktop
 * Referencing across pages, documents, and projects
 * Index and Glossary support
 * Internationalization support
@@ -79,7 +82,7 @@ including:
 * Including code comments in documentation output for many programming languages
 * Tools for documenting HTTP APIs
 * Extensions with the Python language
-* A vast array of third party extensions to do useful things
+* A vast array of third party extensions providing powerful new roles and directives
 
 This article isn't large enough to cover all of the power packed into this tool.
 But I hope to show enough to pique reader interest so that you can try these tools out and research their capacity for yourself.
@@ -114,7 +117,7 @@ In the ``figure``,
 ``screenshot-control-panel.jpg`` is an *argument*,
 ``:width:`` is an *option*,
 and the rest is the *content*
-They allow for customization of directives,
+They enable customization of directives,
 and show the full power of reStructuredText.
 
 .. note:: You'll notice that Sphinx uses whitespace to denote where a directive ends.
@@ -127,7 +130,7 @@ You can also write your own if you have someone on your team that knows Python.
 Inline Markup
 `````````````
 
-For extendability inside of a paragraph Sphinx uses roles.
+For extensibility inside of a paragraph Sphinx uses roles.
 Here is an example:
 
     You can learn more about this in :rfc:`1984`.
@@ -138,14 +141,14 @@ and then you can pass in a single argument.
 For the ``rfc`` role,
 it generates a link to the online reference for RFC 1984 with a text of ``RFC 1984``.
 
-The ``class`` is where things get interesting.
+The ``class`` role is where things get interesting.
 This acts as a reference to the class ``System.Security`` that is documented in your project,
 which is a hyperlink in the HTML output,
 but also a working link in PDF and other outputs as well.
 
 You can implement your own roles with Python.
-This allows you to create powerful semantic constructs into the actual *markup* you're using to write documentation.
-If you worked buildig software at a toy factory,
+This enables you to create powerful semantic constructs inside the actual *markup* you're using to write documentation.
+If you worked building software at a toy factory,
 you can create a custom semantic sytnax for our own software::
 
     Check out :jira:`199` for information on the :toy:`jump-rope`.
@@ -221,7 +224,7 @@ This uses the ``literalinclude`` directive::
        :language: ruby
        :emphasize-lines: 12,15-18
 
-The neat thing here is the ``:emphasize-lines:``.
+The neat addition here is the ``:emphasize-lines:``.
 This shows the lines highlighted in your output.
 This is quite useful for showing sets of code examples where a subset of the code changes.
 You can also specify just a subset of lines to show with the ``:lines:`` option,
@@ -237,7 +240,7 @@ Working with References
 
 A powerful reference system is a large part of the power of Sphinx.
 You are able to reference arbitrary headings and paragraphs in your content,
-but also semantically reference a large number of things as well.
+but also semantically reference a large number of programming concepts as well.
 On top of that,
 Sphinx includes ``intersphinx`` which allows referencing across Sphinx projects.
 This means that if you have multiple projects inside your company,
@@ -338,7 +341,7 @@ Internationalization
 
 Sphinx includes support for translating documentation into multiple languages.
 Since sphinx knows the structure of your documents,
-it is able to generate a catalog of content split by each paragraph.
+it is able to generate a translatable strings split by each paragraph, heading, or figure.
 
 Sphinx internationalization works using the *gettext* system.
 It ships with a builder that allows you to generate a catalog::
@@ -353,8 +356,8 @@ which gives you a web-based system for translating the documentation:
 .. image:: transifex.png
 
 You can then tell Sphinx what language to generate for its documentation when you build it by setting the ``language`` setting.
-Read the Docs also supports translation,
-allowing you to specify the language of the documentation.
+Read the Docs also supports internationalization,
+allowing you to host multiple languages of your project documentation.
 
 More information on Sphinx internationalization can be found here:
 
@@ -365,10 +368,10 @@ My blog
 -------
 
 Sphinx is quite versatile,
-which means you can use it for lots of different things.
+which means you can use it for a lot of different use cases.
 I use a package called ``ablog`` for hosting of my blog over at http://ericholscher.com.
 
-The simplest thing you do is specify that a document is a blog post with the ``post`` directive::
+The most basic usage allows you to specify that a document is a blog post with the ``post`` directive::
 
     .. post:: 2016-03-15 09:00
        :tags: writing, stc, sphinx
@@ -393,13 +396,13 @@ Sphinx supports custom builders to perform tasks beyond providing basic output f
 Some examples that ship with Sphinx:
 
 * A linkcheck builder that tells you about broken URL's
-* A builder that outputs all the things changed in the latest version of your code for a changelog
+* A builder that outputs all the changes in the latest version of your code for a changelog
 * An XML builder that outputs a representation of your documents in XML
 * A Man page builder that builds man pages from your documentation
 * JSON builder that outputs your pages as HTML inside of JSON, with some metadata, for embedding dynamically
 
 You can get as creative as you like with custom builders,
-as many current members of the Sphinx community have already done.
+which is another place to extend Sphinx outside of the markup.
 
 Tradeoffs with Sphinx
 ---------------------
@@ -444,13 +447,13 @@ and link your GitHub account.
 Then you select the GitHub repository you'd like to build documentation for,
 at which point the magic happens.
 
-Read the Docs:
+Read the Docs will:
 
-* Clones your repository
-* Builds HTML, PDF, and ePub versions of your documentation from your ``master`` branch.
-* Indexes your documentation to allow full-text-search
-* Creates Version objects from each *tag* and *branch* in your repository, allowing you to optionally host those as well
-* Activates a webhook on your repository, so when you push code to any branch, your documentation is rebuilt
+* Clone your repository
+* Build HTML, PDF, and ePub versions of your documentation from your ``master`` branch.
+* Index your documentation to allow full-text-search
+* Create Version objects from each *tag* and *branch* in your repository, allowing you to optionally host those as well
+* Activate a webhook on your repository, so when you push code to any branch, your documentation is rebuilt
 
 Now,
 whenever you commit new code or documentation to your repository,
@@ -515,7 +518,7 @@ Read the Docs also provides the following features:
 * Hosting of multiple languages for a specific project
 * Hosting of multiple projects on a single domain with "subprojects"
 
-Feel free to email me or find me at a conference if you want to talk more about these things,
+Feel free to email me or find me at a conference if you want to talk more about these concepts,
 or have ideas for other neat features.
 
 Real Life Examples
