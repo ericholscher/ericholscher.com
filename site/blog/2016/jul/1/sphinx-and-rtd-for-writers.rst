@@ -121,8 +121,8 @@ and show the full power of reStructuredText.
    The "Proceed with caution!" is still part of the ``warning``,
    and everything that continues to be indented will be part of that warning.
 
-Sphinx ships with a number of powerful directives,
-and you can also write your own if you have someone on your team that knows Python.
+Sphinx ships with a number of powerful directives for documenting code.
+You can also write your own if you have someone on your team that knows Python.
 
 Inline Markup
 `````````````
