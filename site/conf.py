@@ -5,6 +5,7 @@ import ablog
 
 extensions = [
     'ablog',
+    'sphinx.ext.intersphinx',
 ]
 blog_baseurl = 'http://ericholscher.com/blog/'
 blog_path = 'blog/archive'
@@ -52,6 +53,10 @@ texinfo_documents = [
      u'Eric Holscher', 'SurfinginKansas', 'One line description of project.',
      'Miscellaneous'),
 ]
+
+intersphinx_mapping = {
+    'sphinx': ('http://www.sphinx-doc.org/en/stable/', None)
+}
 
 
 def setup(app):
