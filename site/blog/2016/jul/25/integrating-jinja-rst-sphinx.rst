@@ -4,7 +4,7 @@
 The Power of Sphinx: Integrating Jinja with RST
 ===============================================
 
-Sphinx is a super powerful tool.
+:doc:`Sphinx <sphinx:index>`_ is a super powerful tool.
 This has its upsides and downsides.
 One of the major downsides is that historically it has been built as a framework that allows users to do just about anything.
 This is great,
