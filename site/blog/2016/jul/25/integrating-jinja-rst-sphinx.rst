@@ -1,8 +1,8 @@
 .. post:: 2016-07-25 09:00:00
    :tags: sphinx, training, jinja
 
-The Power of Sphinx: Integrating Jinja with RST inside of Sphinx
-================================================================
+The Power of Sphinx: Integrating Jinja with RST
+===============================================
 
 Sphinx is a super powerful tool.
 This has its upsides and downsides.
@@ -93,6 +93,8 @@ Then we can generate our ``staff.rst`` file:
     * {{ member.name }} (Emeritus)
     {% endif %}
     {% endfor %}
+
+.. note:: The Jinja templates will be rendered *before* the RST is processed.
 
 Allowing ourselves to use Jinja inside of RST gives us a whole set of logic that isn't available in the RST language itself.
 
