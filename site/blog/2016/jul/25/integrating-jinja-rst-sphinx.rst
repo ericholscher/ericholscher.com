@@ -11,7 +11,7 @@ This is great,
 except it also means that a lot of the specific value out of the modular design hasn't been documented or made explicit to users.
 I'm hoping to address some of this power in a set of blog posts.
 
-Today I'll cover integrating the templating language Jinja inside your RST files.
+Today I'll cover integrating the templating language `Jinja <http://jinja.pocoo.org/docs/dev/templates/>`_ inside your RST files.
 This is a really useful thing,
 and allows a large number of powerful display semantics inside of your RST files.
 
