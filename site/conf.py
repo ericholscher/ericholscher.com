@@ -7,8 +7,8 @@ extensions = [
     'ablog',
     'sphinx.ext.intersphinx',
 ]
-blog_baseurl = 'http://ericholscher.com/blog/'
 blog_path = 'blog/archive'
+blog_baseurl = 'http://ericholscher.com'
 blog_authors = {
     'Eric': ('Eric Holscher', 'http://ericholscher.com'),
 }
