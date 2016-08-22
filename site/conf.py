@@ -20,6 +20,7 @@ blog_locations = {
 blog_default_location = 'PDX'
 fontawesome_link_cdn = 'http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css'
 blog_feed_fulltext = True
+blog_feed_length = 10
 
 templates_path = ['_templates', ablog.get_html_templates_path()]
 source_suffix = '.rst'
