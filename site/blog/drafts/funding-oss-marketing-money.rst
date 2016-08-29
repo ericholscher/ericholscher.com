@@ -1,3 +1,6 @@
+.. post:: Sept 1, 2016
+   :tags: funding, oss, marketing
+
 Funding Open Source with Marketing Money
 =========================================
 
