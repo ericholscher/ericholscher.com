@@ -15,9 +15,9 @@ Over the years working on Read the Docs,
 we've tried a large number of ways to get sustainable funding.
 We've done:
 
-* Donations on Gittip
+* Donations
 * Corporate fundraising drives
-* Support Contracts
+* Support contracts
 * Contracting on documentation tooling
 * Training for documentation
 
@@ -46,7 +46,7 @@ Historically,
 open source funding has come from:
 
 * Donation budgets from individuals, who are very likely to also produce Open Source themselves
-* Donation budgets form corporations, which are vanishingly small
+* Donation budgets from corporations, which are vanishingly small
 * Technical budgets from Engineering organizations within corporations
 
 The last one is the least obvious.
@@ -59,7 +59,7 @@ You'll notice a trend in the above funding sources:
 
 * They are generally one-time payments instead of recurring
 * They are the first expenses to be cut 
-* They are generally less than 1% of a total organizations budget
+* They are generally less than 1% of a total organization's budget
 
 Marketing Money
 ---------------
@@ -68,7 +68,7 @@ Traditionally,
 open source funding has been attempting to scrape by with a tiny percentage of the overall company budget.
 In a lot of tech companies,
 the marketing and sales teams will account for up to half of the budget for the company.
-This money has been generally untouched by open source tools.
+This money has been generally untouched by open source funding.
 
 Focusing on doing advertising allows us to use this huge pile of money,
 and redirect it to fund open source software.
@@ -80,7 +80,7 @@ it would be great to point your marketing folks at us.**
 We have an audience of developers that almost certainly is interesting to them,
 and the money that might have historically gone to Google or Facebook will go to a worthwhile open source project.
 
-We're building an advertising platform that is ethical and `open source`_.
+We're building an advertising platform that is `ethical`_ and `open source`_.
 We hope it will be a way to create ongoing sustainable funding for Read the Docs,
 and other parts of the open source world as a whole.
 
@@ -89,3 +89,4 @@ and other parts of the open source world as a whole.
 .. _report: http://www.fordfoundation.org/library/reports-and-studies/roads-and-bridges-the-unseen-labor-behind-our-digital-infrastructure
 .. _advertising: https://blog.readthedocs.com/ads-on-read-the-docs/
 .. _open source: https://github.com/rtfd/readthedocs.org/tree/master/readthedocs/donate
+.. _ethical: http://docs.readthedocs.org/en/latest/ethical-advertising.html
