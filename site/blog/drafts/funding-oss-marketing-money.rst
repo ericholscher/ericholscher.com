@@ -75,15 +75,19 @@ and redirect it to fund open source software.
 We're unlocking a source of funding that was traditionally closed off,
 and which has a lot more money.
 
-**If you work at a company that sells to developers and believe in the work that Read the Docs does,
-it would be great to point your marketing folks at us.**
+Join Us
+-------
+
+If you work at a company that sells to developers and believe in the work that Read the Docs does,
+it would be great to point your marketing folks at us.
 We have an audience of developers that almost certainly is interesting to them,
 and the money that might have historically gone to Google or Facebook will go to a worthwhile open source project.
 
 We're building an advertising platform that is `ethical`_ and `open source`_.
-We hope it will be a way to create ongoing sustainable funding for Read the Docs,
-and other parts of the open source world as a whole.
+We hope that others will join us in this mission.
+We plan to lead by example and build a sustainable business model that respects user privacy.
 
+**Join us in this mission to make an advertising business model that works for open source, advertisers, and users.**
 
 .. _proven: http://www.fordfoundation.org/library/reports-and-studies/roads-and-bridges-the-unseen-labor-behind-our-digital-infrastructure
 .. _report: http://www.fordfoundation.org/library/reports-and-studies/roads-and-bridges-the-unseen-labor-behind-our-digital-infrastructure
