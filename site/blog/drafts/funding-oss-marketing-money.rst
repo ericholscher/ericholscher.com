@@ -75,16 +75,16 @@ and redirect it to fund open source software.
 We're unlocking a source of funding that was traditionally closed off,
 and which has a lot more money.
 
-Join Us
--------
+Help Us Help You
+----------------
 
 If you work at a company that sells to developers and believe in the work that Read the Docs does,
-it would be great to point your marketing folks at us.
+it would be great to `point`_ your marketing folks at us.
 We have an audience of developers that almost certainly is interesting to them,
 and the money that might have historically gone to Google or Facebook will go to a worthwhile open source project.
 
 We're building an advertising platform that is `ethical`_ and `open source`_.
-We hope that others will join us in this mission.
+We hope that you will join us in this mission.
 We plan to lead by example and build a sustainable business model that respects user privacy.
 
 **Join us in this mission to make an advertising business model that works for open source, advertisers, and users.**
@@ -94,3 +94,4 @@ We plan to lead by example and build a sustainable business model that respects 
 .. _advertising: https://blog.readthedocs.com/ads-on-read-the-docs/
 .. _open source: https://github.com/rtfd/readthedocs.org/tree/master/readthedocs/donate
 .. _ethical: http://docs.readthedocs.org/en/latest/ethical-advertising.html
+.. _point: http://docs.readthedocs.org/en/latest/ethical-advertising.html#ethical-buy-ads
