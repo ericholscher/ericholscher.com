@@ -7,12 +7,11 @@ Funding Open Source with Marketing Money
 Often times as developers we see funding open source as a charity.
 We will give our personal money to projects we believe in.
 If we're lucky,
-our company might have a matching donation program for OSS projects big enough to be inside an official non-profit.
-However,
-this has `proven`_ not to be a sustainable way to support open source.
+our company might have a matching program for our donations.
+This has `proven`_ not to be a sustainable way to support open source.
 
-Advertising
-----------------------
+Funding Read the Docs
+---------------------
 
 Over the years working on Read the Docs,
 we've tried a large number of ways to get sustainable funding.
@@ -41,8 +40,8 @@ the more money that we're able to make.
 It also is the only viable business model that seems to work for large,
 free websites on the internet.
 
-Traditional Open Source Funding
--------------------------------
+Traditional Funding Sources
+---------------------------
 
 Saying that we're building an advertising business to support open source isn't overly interesting on it's face.
 However,
