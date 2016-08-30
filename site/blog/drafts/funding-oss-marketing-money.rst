@@ -11,6 +11,9 @@ our company might have a matching donation program for OSS projects big enough t
 However,
 this has `proven`_ not to be a sustainable way to support open source.
 
+Advertising
+----------------------
+
 Over the years working on Read the Docs,
 we've tried a large number of ways to get sustainable funding.
 We've done:
@@ -25,10 +28,15 @@ However,
 at the end of the day doing this work takes away from the primary goal of providing a documentation hosting site.
 These are all side-businesses that take time and focus away from our primary goal as a project.
 
+Charging money for our product doesn't work,
+because our users are mostly working for free producing open source software.
+These are the last people we would want to charge money,
+because they are already working for free.
+
 At the end of the day,
 we've settled on `advertising`_ as the way forward.
-We believe that it aligns out incentives are publishers,
-as the more projects and users we serve,
+We believe that advertising aligns with our incentives as publishers:
+the more projects and users we serve,
 the more money that we're able to make.
 It also is the only viable business model that seems to work for large,
 free websites on the internet.
@@ -58,8 +66,8 @@ or other tricks to make the money come from another source in the budget.
 You'll notice a trend in the above funding sources:
 
 * They are generally one-time payments instead of recurring
-* They are the first expenses to be cut 
-* They are generally less than 1% of a total organization's budget
+* They are the first expenses to be cut
+* They are generally less than 1% of total budget
 
 Marketing Money
 ---------------
@@ -74,6 +82,11 @@ Focusing on doing advertising allows us to use this huge pile of money,
 and redirect it to fund open source software.
 We're unlocking a source of funding that was traditionally closed off,
 and which has a lot more money.
+
+Trying to create a new line item in a budget for "open source funding" is a pipe dream.
+We need to find a way to fit open source funding into existing budget items,
+and in a way that is legitimate and ongoing.
+We need to make sure that our funding isn't on the chopping block at the first sign of a downturn at a company.
 
 Help Us Help You
 ----------------
