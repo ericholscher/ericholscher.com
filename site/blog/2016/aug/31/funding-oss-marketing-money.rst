@@ -59,7 +59,7 @@ but I want to cover it in broad strokes.
 Historically,
 open source funding has come from:
 
-* Donation budgets from individuals, who are very likely to also produce Open Source themselves
+* Donation budgets from individuals, who are very likely to also produce open source themselves
 * Donation budgets from corporations, which are vanishingly small
 * Technical budgets from Engineering organizations within corporations
 
