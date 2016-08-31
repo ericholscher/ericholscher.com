@@ -40,7 +40,12 @@ the more money that we're able to make.
 It also is the only viable business model that seems to work for large,
 free websites on the internet.
 
+We aren't building a traditional advertising business.
+We're embarking to build a model that respects users,
+and we're calling it `Ethical Advertising`_
+
 .. _takes away: https://www.youtube.com/watch?v=mY8B2lXIu6g
+.. _Ethical Advertising: http://docs.readthedocs.org/en/latest/ethical-advertising.html
 
 Traditional Funding Sources
 ---------------------------
@@ -90,8 +95,8 @@ We need to make sure that our funding isn't on the chopping block at the first s
 
 By providing value to marketers,
 we make sure that our budget isn't the first thing to be cut.
-**Instead of being a charity,
-we're entering into a business relationship where both sides come out ahead.**
+Instead of being a charity,
+we're entering into a business relationship where both sides come out ahead.
 
 Help Us Help You
 ----------------
