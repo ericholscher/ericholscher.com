@@ -88,6 +88,11 @@ Trying to create a new line item in a budget for "open source funding" is a pipe
 and in a way that is legitimate and ongoing.**
 We need to make sure that our funding isn't on the chopping block at the first sign of a downturn at a company.
 
+By providing value to marketers,
+we make sure that our budget isn't the first thing to be cut.
+**Instead of being a charity,
+we're entering into a business relationship where both sides come out ahead.**
+
 Help Us Help You
 ----------------
 
