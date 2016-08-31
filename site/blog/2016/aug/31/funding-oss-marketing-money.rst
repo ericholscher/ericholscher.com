@@ -24,7 +24,7 @@ We've done:
 * Training for documentation
 
 However,
-at the end of the day doing this work takes away from the primary goal of providing a documentation hosting site.
+at the end of the day doing this work `takes away`_ from the primary goal of providing a documentation hosting site.
 **These are all side-businesses that take time and focus away from our primary goal as a project.**
 
 Charging money for our product doesn't work,
@@ -39,6 +39,8 @@ the more projects and users we serve,
 the more money that we're able to make.
 It also is the only viable business model that seems to work for large,
 free websites on the internet.
+
+.. _takes away: https://www.youtube.com/watch?v=mY8B2lXIu6g
 
 Traditional Funding Sources
 ---------------------------
