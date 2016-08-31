@@ -42,7 +42,7 @@ free websites on the internet.
 
 We aren't building a traditional advertising business.
 **We're embarking to build a model that respects users**,
-and we're calling it `Ethical Advertising`_
+and we're calling it `Ethical Advertising`_.
 
 .. _takes away: https://www.youtube.com/watch?v=mY8B2lXIu6g
 .. _Ethical Advertising: http://docs.readthedocs.org/en/latest/ethical-advertising.html
