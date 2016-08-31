@@ -58,7 +58,7 @@ open source funding has come from:
 
 The last one is the least obvious.
 Fitting donations into your expenses forces OSS funding into something that appears to be a legitimate business expense.
-Traditionally this has been in the form of "enterprise licenses" which provide no benefit,
+This has been in the form of "enterprise licenses" which provide no benefit,
 toothless "support" contracts,
 or other tricks to make the money come from another source in the budget.
 
@@ -71,8 +71,7 @@ You'll notice a trend in the above funding sources:
 Marketing Money
 ---------------
 
-Traditionally,
-open source funding has been attempting to scrape by with a tiny percentage of the overall company budget.
+Open source funding has been attempting to scrape by with a tiny percentage of the overall company budget.
 In a lot of tech companies,
 the marketing and sales teams will account for up to half of the budget for the company.
 This money has been generally untouched by open source funding.
