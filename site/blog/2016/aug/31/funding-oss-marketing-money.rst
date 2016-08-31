@@ -25,7 +25,7 @@ We've done:
 
 However,
 at the end of the day doing this work takes away from the primary goal of providing a documentation hosting site.
-These are all side-businesses that take time and focus away from our primary goal as a project.
+**These are all side-businesses that take time and focus away from our primary goal as a project.**
 
 Charging money for our product doesn't work,
 because our users are mostly working for free producing open source software.
@@ -51,7 +51,6 @@ but I want to cover it in broad strokes.
 
 Historically,
 open source funding has come from:
-
 * Donation budgets from individuals, who are very likely to also produce Open Source themselves
 * Donation budgets from corporations, which are vanishingly small
 * Technical budgets from Engineering organizations within corporations
@@ -82,8 +81,8 @@ We're unlocking a source of funding that was traditionally closed off,
 and which has a lot more money.
 
 Trying to create a new line item in a budget for "open source funding" is a pipe dream.
-We need to find a way to fit open source funding into existing budget items,
-and in a way that is legitimate and ongoing.
+**We need to find a way to fit open source funding into existing budget items,
+and in a way that is legitimate and ongoing.**
 We need to make sure that our funding isn't on the chopping block at the first sign of a downturn at a company.
 
 Help Us Help You
