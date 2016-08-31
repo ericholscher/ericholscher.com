@@ -89,7 +89,7 @@ Help Us Help You
 ----------------
 
 If you work at a company that sells to developers and believe in the work that Read the Docs does,
-it would be great to `point`_ your marketing folks at us.
+it would be great to `send a link`_ to your marketing folks.
 We have an audience of developers that almost certainly is interesting to them,
 and the money that might have historically gone to Google or Facebook will go to a worthwhile open source project.
 
@@ -104,4 +104,4 @@ We plan to lead by example and build a sustainable business model that respects 
 .. _advertising: https://blog.readthedocs.com/ads-on-read-the-docs/
 .. _open source: https://github.com/rtfd/readthedocs.org/tree/master/readthedocs/donate
 .. _ethical: http://docs.readthedocs.org/en/latest/ethical-advertising.html
-.. _point: http://docs.readthedocs.org/en/latest/ethical-advertising.html#ethical-buy-ads
+.. _send a link: http://docs.readthedocs.org/en/latest/ethical-advertising.html#ethical-buy-ads
