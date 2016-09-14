@@ -133,6 +133,7 @@ This allows you to:
 
 * Allows you to focus on communicating information, not thinking about what HTML class you need for a concept
 * Expand your own ability to think about your writing in terms of semantic nouns, allowing you to better structure your thoughts
+* Allows Sphinx to raise errors when you try to reference semantic concepts that doesn't exist (typos, etc.)
 * Give people updating your documents explicit information about what you're documenting 
 * Allows your documentation systems to crosslink information and provide a better experience for your user
 * Allows your designer to apply consistent styles to all types of information
