@@ -1,13 +1,13 @@
 .. post::
-   :tags: semantic meaning, markdown, restructredtext, semantics
+   :tags: semantic meaning, markdown, reStructuredText, semantics
 
 Semantic Meaning in Documentation
 =================================
 
-Semantic Meaning in documentation is the separation of what something *is* from what it *looks like*.
+Semantic Meaning in documentation is the separation of what something is from what it looks like.
 What we *mean* and what we *display* are very different things.
 
-We might want to **warn** someone in our writing,
+We might want to warn someone in our writing,
 but we don't want to think about how to display this.
 Writing with Semantic Meaning gives us this power.
 
@@ -16,20 +16,26 @@ Semantics
 
 As an example,
 if we were writing documentation in HTML,
-we could warn a user with bold::
+we could warn a user with bold:
+
+.. code-block:: html
 
     <b>Don't do this, it will break your system!</b>
 
 This has no semantics.
-**Bold doesn't mean "warning",
-it is simply a way of displaying text.**
+*Bold doesn't mean "warning",
+it is simply a way of displaying text.*
 A better example in HTML is:
+
+.. code-block:: html
 
     <span class="warning">Don't do this, it will break your system!</span>
 
 This allows you to write *what* something is,
 but not have to worry about what it looks like.
-Your designer might decide that warnings should be bold and red::
+Your designer might decide that warnings should be bold and red:
+
+.. code-block:: css
 
     .warning { 
         text-format: bold; 
@@ -37,26 +43,29 @@ Your designer might decide that warnings should be bold and red::
     }
 
 To go one step further,
-in reStructredText we can do::
+in `reStructuredText <http://www.sphinx-doc.org/en/stable/rest.html>`_ we can do:
+
+.. code-block:: rst
 
     .. warning:: Don't do this, it will break your system!
 
-Then Sphinx or some other tool will generate the proper HTML or PDF with styles for us.
-reStructredText is abstracted away from all of the output formats,
+Then `Sphinx <http://www.sphinx-doc.org>`_ or some other tool will generate the proper HTML or PDF with styles for us.
+reStructuredText is abstracted away from all of the output formats,
 so you write in one format,
 and it transforms it properly into HTML,
 PDF,
 XML,
 or any other format it supports.
-Without having to *think* about anything more than the semantic concepts you care about.
+This also allows you designers to work with a systematic and standardized set of class names,
+which makes their lives easier too.
 
 Value of Semantic Documentation
 -------------------------------
 
 When you write documentation,
 you form a mental model in your head of the document you're writing.
-When you use a powerful tool like reStructredText,
-you can **think** in terms of *warnings*,
+When you use a powerful tool like reStructuredText,
+you can *think* in terms of *warnings*,
 *references*,
 *classes*,
 *objects*,
@@ -66,15 +75,26 @@ You can also encode this information into the output:
 
 .. code-block:: rst
 
-    .. warning:: Make sure you :term:`instantiate` the Response objects before you use it.
+    .. warning:: Make sure you :term:`instantiate` 
+                 the Response objects before you use it.
 
-    You can read more about the :cls:`django.http.Response` in our :doc:`/api/response` page.
+    You can read more about the :cls:`django.http.Response`
+    in our :doc:`/api/response` page.
 
-**When you write with semantics,
+
+When I was writing the above section,
+I thought *Hey, maybe someone doesn't know what instantiate means.*
+I was able to simply link to the glossary with ``:term:``.
+I didn't have to look up the URL for our glossary and link to that.
+I didn't have to think about how to style glossary refs.
+I was able to simply write what I meant,
+and move on.
+
+When you write with semantics,
 you can encode more of your mental state into the words you write.
 Conversely,
 if you write without semantics,
-valuable information about your writing is lost.**
+valuable information about your writing is lost.
 
 Semantic information also acts as a type of documentation for our writing.
 Similar to `type systems`_ in programming,
@@ -84,17 +104,18 @@ it isn't immediately obvious *what* that is.
 When you write about a ``:cls:`django.http.Response```,
 it is explicitly defined what you're talking about.
 
-**When you write documentation in Markdown,
-there is no clear way to represent semantic information.**
-You can make something **bold**,
-but you can't make something a **warning**.
-As an author,
-this means that you are limited in how much data you can transfer at an absolute level.
-
 When you write something and make it bold,
 what are you actually trying to communicate?
 
-.. _type systems: TODO
+.. warning::
+        When you write documentation in Markdown,
+        there is no clear way to represent semantic information.
+        You can make something *bold*,
+        but you can't make something a *warning*.
+
+        Please :doc:`don't write documentation in Markdown </blog/2016/mar/15/dont-use-markdown-for-technical-docs>`.
+
+.. _type systems: https://en.wikipedia.org/wiki/Type_system
 
 Conclusion
 ----------
@@ -116,8 +137,8 @@ This allows you to:
 * Allows your documentation systems to crosslink information and provide a better experience for your user
 * Allows your designer to apply consistent styles to all types of information
 
-When you empower writers with the ability to write with powerful semantic constructs,
-writing becomes easier.
-It also standardizes the output for your designers,
-who will appreciate being able to have proper semantic classes in your HTML.
-Using standard tools that enforce these constraints will make both your writers and designers life easier.
+When you have the ability to write with powerful semantic constructs,
+writing becomes easier and more powerful.
+If you want to be the most efficient and useful writer,
+you write in a way that preserves the most of your mental model while writing.
+You write with a tool that gives you semantic meaning.
