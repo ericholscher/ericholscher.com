@@ -552,4 +552,4 @@ Tools that integrate documentation and development workflows make it much easier
 Sphinx and Read the Docs have been battle tested by hundreds of thousands of open source developers for years,
 and are a great choice for your software documentation project.
 
-.. note:: Eric Holscher offers consulting and contracting on work related to Sphinx. If you want help implementing it in your organization, feel free to reach out and hopefully we can work together.
+.. note:: Eric Holscher offers `consulting and contracting <https://readthedocs.com/services/>`_ on work related to Sphinx. If you want help implementing it in your organization, feel free to reach out and hopefully we can work together.
