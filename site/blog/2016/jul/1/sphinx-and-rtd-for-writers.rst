@@ -10,6 +10,9 @@ An introduction to Sphinx and Read the Docs for Technical Writers
 	he does consulting around software documentation and speaks at a number of industry events each year.
 	When he isn't expressing his views on software docs, he's getting views from the top of mountains.
 
+.. note:: Please send any feedback you have to me about this article!
+          I'd love to help expand and explain it better if possible.
+
 Treating documentation as code is becoming a major theme in the software industry.
 This is coming from both sides,
 with developers starting to treat documentation as a priority alongside tests and code,
