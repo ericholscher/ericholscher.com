@@ -1,12 +1,14 @@
+.. post:: Jul 1, 2016
+   :tags: sphinx, technical writers, rst, article
+
 An introduction to Sphinx and Read the Docs for Technical Writers
 =================================================================
 
-By: Eric Holscher
-
-Bio: Eric Holscher is the co-founder of Read the Docs and a co-organizer of the Write the Docs conference.
-Along with community organizing and open source work,
-he does consulting around software documentation and speaks at a number of industry events each year.
-When he isn't expressing his views on software docs, he's getting views from the top of mountains.
+.. 
+	Bio: Eric Holscher is the co-founder of Read the Docs and a co-organizer of the Write the Docs conference.
+	Along with community organizing and open source work,
+	he does consulting around software documentation and speaks at a number of industry events each year.
+	When he isn't expressing his views on software docs, he's getting views from the top of mountains.
 
 Treating documentation as code is becoming a major theme in the software industry.
 This is coming from both sides,
