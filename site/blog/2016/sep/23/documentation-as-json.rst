@@ -1,5 +1,5 @@
 .. post:: Sept 24, 2016
-   :tags: docs, why not how, tips, python
+   :tags: docs, why not how, tips
 
 A Selfish Appeal for Documentation
 ==================================
