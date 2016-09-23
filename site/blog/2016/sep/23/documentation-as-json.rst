@@ -8,7 +8,7 @@ Writing code is the act of building a mental model of a problem,
 and then translating that model into executable software.
 
 Writing documentation about software is the act of serializing this mental state.
-**You can think about documentation as JSON for the mental state of programming.**
+**You can think about documentation as JSON for your mental state while programming.**
 Documentation allows you to dump the information in your brain,
 in a format that allows others to reload into theirs.
 
