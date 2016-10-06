@@ -131,6 +131,7 @@ in a way that would be portable across versions.**
 Lack of Semantic Meaning
 ------------------------
 
+
 Though many people have added extensions to Markdown,
 almost none have any kind of semantic meaning.
 This means that you can't write a *Class* or a *Warning*,
@@ -162,6 +163,8 @@ Writing without semantic markup is a problem for a few reasons:
 * Your Markdown is now dependent on specific CSS classes in your display, meaning your writers have to think about how your page will be designed
 * Your content is no longer portable to other output formats (PDF, etc.)
 * Conversion to other markup tools and page designs becomes much harder
+
+.. note:: I have covered the ideas around semantics more in my post :ref:`semantic-meaning`.
 
 Lock In and Lack of Portability
 -------------------------------
