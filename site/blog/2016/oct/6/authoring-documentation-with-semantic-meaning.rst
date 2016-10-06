@@ -95,7 +95,7 @@ You can then encode this model into your document:
     in our :doc:`/api/response` page.
 
 
-When the above section,
+In the above section,
 I thought *Hey, maybe someone doesn't know what instantiate means.*
 I was able to link to the glossary with ``:term:``.
 I didn't have to look up the URL for our glossary and link to that.
