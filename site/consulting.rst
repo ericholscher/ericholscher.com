@@ -11,9 +11,9 @@ I help use this experience to help you understand how to leverage
 documentation in your business.
 
 Having great documentation lowers your support costs, gets users
-onboarded faster, and is a requirement for shipping quality software. We
-are experts in the tools and process that produce great documentation.
-Help us improve how your company does documentation today.
+onboarded faster, and is a requirement for shipping quality software. 
+Integrating documentation into your product process is a great way to enable quality docuemtation,
+and I can help build a culture around documentation in your company.
 
 Reach out to me at eric@ericholscher.com if you'd like to talk more.
 
