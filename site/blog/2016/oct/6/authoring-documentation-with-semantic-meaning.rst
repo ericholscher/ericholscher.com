@@ -117,7 +117,7 @@ it isn't immediately obvious *what* that is.
 When you write about a ``:cls:`django.http.Response```,
 it is explicitly defined what you're talking about.
 
-.. warning::
+.. note::
         When you write documentation in Markdown,
         there is no clear way to represent semantic information.
         You can make something *bold*,
