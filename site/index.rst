@@ -4,10 +4,18 @@ Home
 
 Welcome to the home of Eric Holscher on the web. 
 
-I talk about software development, mostly in the realm of Django. I am interested in the web, testing, mobile apps, documentation, and much more.
+I am the co-founder of `Read the Docs <https://readthedocs.org>`_ and `Write the Docs <http://www.writethedocs.org>`_,
+where I work to elevate the status of documentation in the software industry.
+The main content here is my blog,
+which covers various topics around documentation,
+Python & Django,
+conference organizing,
+and anything else that strikes my fancy.
 
-I currently live in Portland, Oregon, and love to explore the outdoors.
-Whether on bike or foot, I spend as much time as possible out and about,
+I currently live in Portland, Oregon,
+and love to explore the outdoors.
+Whether on bike or foot,
+I spend as much time as possible out and about,
 checking out the various beauty that the world holds.
 
 Information
@@ -17,9 +25,9 @@ Information
     :maxdepth: 1
 
     about
-    projects
     speaking
-    resume
+    consulting
+    interviews
 
 Activities
 ^^^^^^^^^^
@@ -30,16 +38,6 @@ Activities
     bike
     backpacking
 
-Random Tidbits
-^^^^^^^^^^^^^^
-
-.. toctree::
-    :maxdepth: 1
-    
-    pct/index
-    favorites
-
-
 Blog Entries
 ^^^^^^^^^^^^
 
@@ -47,4 +45,14 @@ Blog Entries
    :date: %b %d, %Y
    :list-style: circle
    :format: {date} - {title}
+
+
+.. toctree::
+    :maxdepth: 1
+    :hidden:
+    
+    pct/index
+    favorites
+    projects
+    resume
 

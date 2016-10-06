@@ -2,7 +2,7 @@ Résumé
 ======
 
 | Eric Holscher
-| 757 705 0532
+| eric@ericholscher.com
 | Portland, Oregon, Cascadia
 | https://github.com/ericholscher
 
@@ -38,21 +38,28 @@ Conferences
 -----------
 
 * Chair of the Write the Docs conference - http://conf.writethedocs.org
-* 2013 NA - Portland - 225 attendees
+* 2013 - Portland - 225 attendees
 * 2014 EU - Budapest - 100 attendees 
+* 2015 EU - Prague - 150 attendees 
+* 2016 EU - Prague - 225 attendees 
 * 2014 NA - Portland - 300 attendees 
+* 2015 NA - Portland - 350 attendees 
+* 2016 NA - Portland - 400 attendees 
 
 Speaking
 ---------
 
 Spoken at the following conferences on Read the Docs, IRC bots, Testing, and Documentation:
 
+* Keynote - Pycon Colombia 2017
+* Keynote - PyCaribbean 2016
+* Djangocon US 2015, 2011, 2010
+* Open Source & Feelings  2015
 * Keynote - Pycon Malaysia 2014
 * Pycon Phillipines 2014
 * Mulitple meetups across Taiwan in 2014
 * Open Source Bridge 2012, 2011
 * Pycon Web Summit 2012
-* Djangocon US 2011, 2010
 * OSCON 2011
 * Djangocon EU 2010, 2009
 
