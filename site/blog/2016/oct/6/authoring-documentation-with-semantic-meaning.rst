@@ -1,5 +1,5 @@
 .. post:: Oct 6, 2016
-   :tags: semantic meaning, markdown, reStructuredText, semantics
+   :tags: semantic meaning, markdown, reStructuredText, semantics, python
 
 .. _semantic-meaning:
 
