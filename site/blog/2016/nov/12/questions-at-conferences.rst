@@ -69,6 +69,8 @@ and forces them to be asked in a direct way.
 It also removes the "I have a statement, not a question" problem,
 because all questions are filtered through an intermediary.
 
+I've seen this work quite well at conferences like `Django Under The Hood <https://djangounderthehood.com/>`_ and `PyDX <http://pydx.org/>`_
+
 Questions are your responsibility
 ---------------------------------
 
