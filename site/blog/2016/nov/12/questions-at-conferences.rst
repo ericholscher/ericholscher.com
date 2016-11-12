@@ -75,7 +75,7 @@ This has a few benefits as well:
 * The speaker knows they won't get ambushed by the moderator
 * The moderator can blend the questions together into a narrative and group questions in a meaningful way
 
-I've seen this work quite well at conferences like `Django Under The Hood <https://djangounderthehood.com/>`_ and `PyDX <http://pydx.org/>`_
+I've seen this work quite well at conferences like `Django Under The Hood <https://djangounderthehood.com/>`_ and `PyDX <http://pydx.org/>`_.
 
 Questions are your responsibility
 ---------------------------------
