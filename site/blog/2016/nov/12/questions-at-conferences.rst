@@ -69,6 +69,12 @@ and forces them to be asked in a direct way.
 It also removes the "I have a statement, not a question" problem,
 because all questions are filtered through an intermediary.
 
+This has a few benefits as well:
+
+* People are still able to ask the speaker for clarifiaction/explanation on parts of their talk publicly, and it benefits everyone
+* The speaker knows they won't get ambushed by the moderator
+* The moderator can blend the questions together into a narrative and group questions in a meaningful way
+
 I've seen this work quite well at conferences like `Django Under The Hood <https://djangounderthehood.com/>`_ and `PyDX <http://pydx.org/>`_
 
 Questions are your responsibility
