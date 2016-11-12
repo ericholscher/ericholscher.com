@@ -13,6 +13,7 @@ Issues with questions
 ---------------------
 
 There are two primary audiences that have issues with questions:
+
 * Speakers
 * The audience
 
