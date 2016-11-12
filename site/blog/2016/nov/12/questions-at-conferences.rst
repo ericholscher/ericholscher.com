@@ -54,6 +54,9 @@ This achieves a couple beneficial results:
 * The speaker isn't worried about being "called out" in front of the full room
 * Everyone else in the audience is free to do whatever they want
 
+I stole this idea from `XOXO <https://xoxofest.com/>`_,
+but a lot of events do a version of this.
+
 Questions to the speaker are moderated
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
