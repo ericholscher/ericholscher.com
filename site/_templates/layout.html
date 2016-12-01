@@ -1,0 +1,34 @@
+{% extends "!layout.html" %}
+
+{# Nav should appear before content, not after #}
+{%- block content %}
+{%- if theme_fixed_sidebar|lower == 'true' %}
+  <div class="document">
+    {{ sidebar() }}
+    {%- block document %}
+      <div class="documentwrapper">
+      {%- if render_sidebar %}
+        <div class="bodywrapper">
+      {%- endif %}
+          <div class="body" role="main">
+            {% block body %} {% endblock %}
+            <div class="pitch" style="margin-top: 20px; margin-bottom: 20px; font-size: 20px;">
+            <i class="fa fa-info-circle"></i>
+            Hey there.
+            I'm Eric and I do <a href="{{ pathto('/consulting') }}">consulting</a> and other <a href="https://readthedocs.com/services/">services</a> around documentation systems.
+            Feel free to <a href="mailto:eric@ericholscher.com?subject=Documentation System Consulting">email me</a>,
+            or otherwise reach out if you want to chat.
+            </div>
+          </div>
+      {%- if render_sidebar %}
+        </div>
+      {%- endif %}
+      </div>
+    {%- endblock %}
+    <div class="clearer"></div>
+  </div>
+{%- else %}
+{{ super() }}
+{%- endif %}
+{%- endblock %}
+
