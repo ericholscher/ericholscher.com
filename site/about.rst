@@ -6,7 +6,7 @@ where I try to bike or hike as much as possible.
 I lived in the woods for over 2 months while walking 800 miles of the Pacific Crest Trail in 2013,
 and keep a lot of that experience with me in my approach to life.
 
-I work on <a href="https://readthedocs.org">Read the Docs</a> and <a href="http://writethedocs.org">Write the Docs</a> as my full-time job.
+I work on `Read the Docs <https://readthedocs.org>`_ and `Write the Docs <http://writethedocs.org>`_ as my full-time job.
 I care a lot about documentation in the software industry,
 and really hope to raise the profile of it as part of my work.
 

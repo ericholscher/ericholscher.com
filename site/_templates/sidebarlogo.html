@@ -7,8 +7,12 @@
             </div>
         </h1>
     </a>
-    <a href="{{ pathto('about') }}">
-        <img src="{{ pathto('/_static/img/headshot.jpg', 1) }}" alt='Picture of Eric'>
-        <h3>by Eric Holscher</h3>
-    </a>
+    <div class="headshot" style="margin-right: 40px;">
+        <a href="{{ pathto('about') }}" style="border-bottom: 0;">
+            <img src="{{ pathto('/_static/img/headshot-circle.png', 1) }}" alt='Picture of Eric'>
+            <div style="text-align: center; vertical-align: middle;">
+                <h4>by Eric Holscher</h4>
+            </div>
+        </a>
+    </div>
 </div>
