@@ -1,12 +1,9 @@
 {% block about %}
 
-
-
-<h3>
-Find me online
-</h3>
-
 <ul>
+<li>
+<a href="{{ pathto('about') }}">About Me</a>
+</li>
 <li>
 <a href="https://twitter.com/ericholscher" rel="me">Twitter</a>
 </li>
@@ -28,7 +25,7 @@ Hire Me
 </h2>
 
 <p>
-I provide <a href="/consulting/">consulting</a> around documentation processes and tooling
+I provide <a href="{{ pathto('consulting') }}">consulting</a> around documentation processes and tooling
 </p>
 
 <h2>
