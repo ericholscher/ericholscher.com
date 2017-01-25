@@ -39,7 +39,7 @@ html_sidebars = {
     '*': ['sidebarlogo.html', 'about.html', 'localtoc.html', 'searchbox.html'],
     'blog/**': ['sidebarlogo.html', 'postcard.html', 'about.html', 'localtoc.html', 'searchbox.html'],
 }
-html_title = "Surfing in Kansas"
+html_title = "Eric Holscher - Surfing in Kansas"
 html_favicon = '_static/img/favicon.ico'
 html_static_path = ['_static']
 htmlhelp_basename = 'SurfinginKansasdoc'
