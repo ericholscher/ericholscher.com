@@ -7,7 +7,7 @@ extensions = [
     'ablog',
     'sphinx.ext.intersphinx',
 ]
-blog_title = 'Eric Holscher - Surfing in Kansas'
+blog_title = u'Eric Holscher - Surfing in Kansas'
 blog_path = 'blog/archive'
 blog_baseurl = 'http://ericholscher.com'
 blog_authors = {
@@ -27,7 +27,7 @@ blog_feed_archives = True
 templates_path = ['_templates', ablog.get_html_templates_path()]
 source_suffix = '.rst'
 master_doc = 'index'
-project = u"Surfing in Kansas - Eric Holscher"
+project = blog_title
 copyright = u'2016, Eric Holscher'
 version = '1.0'
 release = '1.0'
@@ -39,7 +39,7 @@ html_sidebars = {
     '*': ['sidebarlogo.html', 'about.html', 'localtoc.html', 'searchbox.html'],
     'blog/**': ['sidebarlogo.html', 'postcard.html', 'about.html', 'localtoc.html', 'searchbox.html'],
 }
-html_title = project
+html_title = blog_title
 html_favicon = '_static/img/favicon.ico'
 html_static_path = ['_static']
 htmlhelp_basename = 'SurfinginKansasdoc'
