@@ -17,5 +17,9 @@ and I can help build a culture around documentation in your company.
 
 Reach out to me at eric@ericholscher.com if you'd like to talk more.
 
+My primary offering is a :doc:`Roadmapping Session <roadmap>`,
+which will help you figure out what documentation tool to choose and how to implement it.
+
+
 .. _largest: http://www.alexa.com/siteinfo/readthedocs.org
 .. _Write the Docs: http://www.writethedocs.org/
