@@ -1,4 +1,4 @@
-"My Code is Self Documenting"
+"My Code is Self-Documenting"
 =============================
 
 Self-documenting code is one of the biggest myths in the software industry.
