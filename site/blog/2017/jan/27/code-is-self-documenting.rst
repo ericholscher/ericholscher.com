@@ -17,7 +17,7 @@ Code comments have value
 Generally the argument for "self-documenting code" boils down to:
 
 * I can make small objects/functions that have one specific use
-* That specific use will be represented in it's name
+* That specific use will be represented in its name
 * I don't need to explain anything else because now it's obvious how this program works
 
 **Code comments document the why, not the how.**
