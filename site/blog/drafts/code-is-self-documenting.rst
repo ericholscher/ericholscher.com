@@ -19,6 +19,7 @@ Generally the argument for "self-documenting code" boils down to:
 
 **Code comments document the why, not the how.**
 They are import to transfer knowledge to both people reading the code or developers working on the code.
+
 Some common uses of comments:
 
 * Explaining previous approaches that didn't work
