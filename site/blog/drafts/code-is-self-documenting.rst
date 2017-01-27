@@ -1,7 +1,7 @@
 "My Code is Self-Documenting"
 =============================
 
-Self-documenting code is one of the biggest myths in the software industry.
+Self-documenting code is one of the biggest documentation myths in the software industry.
 This view generally conflates documentation with code comments.
 I'd like to make two arguments in this post:
 
@@ -25,6 +25,7 @@ Some common uses of comments:
 * Presenting an example usage of the function and example output
 * Explaining trade offs in the current implementation
 * Marking possible improvements (``TODO``s) in the code
+* Anything else you'd like to communicate with someone reading or developing the code
 
 **Object names document the what, not the why.**
 They are effectively inverses of each other.
