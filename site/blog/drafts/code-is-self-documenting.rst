@@ -24,7 +24,7 @@ Some common uses of comments:
 * Explaining previous approaches that didn't work
 * Presenting an example usage of the function and example output
 * Explaining trade offs in the current implementation
-* Marking possible improvements (``TODO``s) in the code
+* Marking possible improvements (TODOs) in the code
 * Anything else you'd like to communicate with someone reading or developing the code
 
 **Object names document the what, not the why.**
