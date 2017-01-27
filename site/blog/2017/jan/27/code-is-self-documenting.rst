@@ -1,3 +1,6 @@
+.. post:: Jan 27, 2017
+   :tags: self-documenting, docs, developers, software
+
 "My Code is Self-Documenting"
 =============================
 
