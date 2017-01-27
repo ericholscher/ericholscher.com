@@ -34,6 +34,12 @@ An argument against comments is an argument again communication.
 It's effectively saying *"anyone who needs to know how to use a piece of code is best served by reading that code"*.
 This is true for a vanishingly small amount of software users.
 
+Once you start writing quality code comments,
+you can use a tool like `Sphinx <http://www.sphinx-doc.org/en/stable/ext/autodoc.html>`_ to include them in your documentation.
+This allows you to include your up-to-date code comments in your tutorial and reference docs.
+Making use of your code comments this way adds incentive to keep them up to date,
+since they will be shown to your users.
+
 Documentation is more than code comments
 ----------------------------------------
 
