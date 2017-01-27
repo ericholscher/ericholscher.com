@@ -18,7 +18,7 @@ Generally the argument for "self-documenting code" boils down to:
 * I don't need to explain anything else because now it's obvious how this program works
 
 **Code comments document the why, not the how.**
-They are import to transfer knowledge to both people reading the code or developers working on the code.
+They are important to transfer knowledge to both people reading the code or developers working on the code.
 
 Some common uses of comments:
 
@@ -35,8 +35,8 @@ It's effectively saying *"anyone who needs to know how to use a piece of code is
 This is true for a vanishingly small amount of software users.
 
 Once you start writing quality code comments,
-you can use a tool like `Sphinx <http://www.sphinx-doc.org/en/stable/ext/autodoc.html>`_ to include them in your documentation.
-This allows you to include your up-to-date code comments in your tutorial and reference docs.
+you can use a tool like Sphinx or Javadoc to include them in your documentation.
+This allows you to include your up-to-date code comments in your guides and references.
 Making use of your code comments this way adds incentive to keep them up to date,
 since they will be shown to your users.
 
@@ -46,7 +46,7 @@ Documentation is more than code comments
 The other fatal flaw of the "self-documenting code" mindset is that it is myopic.
 It takes a developer-only point of view,
 only seeing the value of documentation as allowing people to understand how code works.
-**Documentation is for everyone.**
+**Documentation is for every possible user.**
 
 I have a few rhetorical questions about this philosophy:
 
