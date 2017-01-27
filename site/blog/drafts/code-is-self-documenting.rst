@@ -62,5 +62,5 @@ One of my goals in the world is to make software more usable.
 Having good documentation makes software approachable and usable by people who aren't developers.
 People who believe in a world of self-documenting code are making it harder for normal people to use our software.
 
-If you want to have impact with the software you write,
+If you want to have users for the software you write,
 you have to write documentation.
