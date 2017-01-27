@@ -49,7 +49,7 @@ I have a few rhetorical questions about this philosophy:
 * How many users does your self-documenting code have?
 
 Developers only thinking about developers when they are working on software is a problem.
-A majority of software users are people who develop that software.
+A vast majority of software users are not people who develop that software.
 **Saying that variable names are the only documentation needed means that only people who read your code can use it**.
 
 One of my goals in the world is to make software more usable.

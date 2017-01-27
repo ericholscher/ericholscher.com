@@ -38,6 +38,8 @@ html_theme = 'alabaster'
 html_sidebars = {
     '*': ['sidebarlogo.html', 'about.html', 'localtoc.html', 'searchbox.html'],
     'blog/**': ['sidebarlogo.html', 'postcard.html', 'about.html', 'localtoc.html', 'searchbox.html'],
+    'consulting': ['consultinglogo.html'],
+    'roadmap': ['consultinglogo.html'],
 }
 html_title = blog_title
 html_favicon = '_static/img/favicon.ico'
