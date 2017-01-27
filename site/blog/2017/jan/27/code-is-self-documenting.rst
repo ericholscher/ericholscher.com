@@ -31,7 +31,7 @@ Some common uses of comments:
 * Marking possible improvements (TODOs) in the code
 * Anything else you'd like to communicate with someone reading or developing the code
 
-**Object names document the what, not the why.**
+**Object names document the how, not the why.**
 They are effectively inverses of each other.
 An argument against comments is an argument again communication.
 It's effectively saying *"anyone who needs to know how to use a piece of code is best served by reading that code"*.
