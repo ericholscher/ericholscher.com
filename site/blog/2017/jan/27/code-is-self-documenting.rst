@@ -33,7 +33,7 @@ Some common uses of comments:
 
 **Object names document the how, not the why.**
 They are effectively inverses of each other.
-An argument against comments is an argument again communication.
+An argument against comments is an argument against communication.
 It's effectively saying *"anyone who needs to know how to use a piece of code is best served by reading that code"*.
 This is true for a vanishingly small amount of software users.
 

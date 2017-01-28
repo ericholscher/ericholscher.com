@@ -1,7 +1,7 @@
 Consulting
 ==========
 
-I have worked in the dcumentation work for over 7 years.
+I have worked in the documentation work for over 7 years.
 My primary projects are:
 
 -  The community site, https://readthedocs.org, which is the `largest`_ open source documentation hosting site in the world.
@@ -12,7 +12,7 @@ documentation in your business.
 
 Having great documentation lowers your support costs, gets users
 onboarded faster, and is a requirement for shipping quality software. 
-Integrating documentation into your product process is a great way to enable quality docuemtation,
+Integrating documentation into your product process is a great way to enable quality documentation,
 and I can help build a culture around documentation in your company.
 
 Reach out to me at eric@ericholscher.com if you'd like to talk more.
