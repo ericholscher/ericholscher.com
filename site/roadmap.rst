@@ -55,7 +55,7 @@ You are welcome to record the call for future reference.
 
 On our call,
 we first define the current state of your documentation.
-Then we identify your goals and the road blocks preventing with the current process.
+Then we identify your goals and the road blocks preventing success with your current process.
 Finally, we agree to a set of tools and tactics that fit your organization.
 
 Within a week,
