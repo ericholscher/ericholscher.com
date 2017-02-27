@@ -38,14 +38,12 @@ Learn exactly what to do next.
 Book a live 1-on-1 roadmapping session with me now. Why?
 
 * I run the largest_ open source documentation site in the world, `Read the Docs`_ 
-* I run which is the largest community documentation conference in the USA and Europe, `Write the Docs`_,
+* I run `Write the Docs`_, which is the largest community documentation conference in the USA and Europe
 * I have helped companies like Microsoft, Twitter, and Urban Airship navigate their documentation transitions
 
 .. _largest: http://www.alexa.com/siteinfo/readthedocs.org
 .. _Read the Docs: https://readthedocs.org
 .. _Write the Docs: http://www.writethedocs.org/
-
-
 
 Here’s How It Works:
 --------------------
