@@ -61,20 +61,23 @@ Finally, we agree to a set of tools and tactics that fit your organization.
 Within a week,
 I will deliver personalized,
 specific,
-step-by-step instructions for reaching your goals in a roadmap report.
+step-by-step instructions for reaching your goals in a report.
+This will include:
 
-Are you trying to pick a new documentation tool?
-Curious about *Docs as Code* but don't know where to start?
+* The recommended tools that fit your organization and workflow
+* Recommendations on processes to implement that will build documentation culture
+* Metrics to watch as you move forward to see how your transition is progressing
 
 Ready to get started?
 ---------------------
 
-Are you ready to take your business to the next level?
+Are you ready to take your documentation to the next level?
 Great!
 `Send me an email`_ to get started.
 Please include a short description of your current status and what your goals are for the project.
 The price is **$800.00**,
-which distinguishes those who are serious about solving this problem and is easily recouped through increased productivity.
+which may seem like a lot,
+but will be quickly recouped by saving time implementing this process in your organization.
 
 .. _Send me an email: mailto:eric@ericholscher.com?subject=Roadmapping%20Session
 
@@ -84,3 +87,4 @@ which distinguishes those who are serious about solving this problem and is easi
 I’m so sure that I can provide valuable perspective on the direction you should go that I offer a 100% money-back guarantee.
 If at the end of our call you feel you have not gotten your money’s worth,
 just let me know and I’ll refund your payment in full.
+
