@@ -7,7 +7,7 @@ I am staying with a fellow Python Programmer who I had never met,
 previous to staying here.
 After taking a train from Portland with 30 other programmers on the CascadiaJS Hacker Train.
 
-The excuse that I have for even visiting Vancouver is to attend a VanPyDay,
+The reason that I have for even visiting Vancouver is to attend a VanPyDay,
 an open source community event.
 
 Community
@@ -33,8 +33,9 @@ I believe that the main difference is that in academia,
 you are trying to discover something that already exists.
 In programming,
 you are trying to create something new.
-The act of building is an inherently more cooperative effort than discover.
-By definition only one person can discover something.
+The act of building is an inherently more cooperative effort than discovering.
+Normally,
+only one person can discover something.
 
 Meandering in the Woods
 -----------------------
@@ -52,7 +53,7 @@ trying to walk across the United States.
 If you are in the wilderness,
 three days from civilization.
 If someone needs something that you have,
-it is a no-brained to give it to them.
+it is a no-brainer to give it to them.
 This sense of comradery builds over time,
 and you become a very tight knit community. 
 

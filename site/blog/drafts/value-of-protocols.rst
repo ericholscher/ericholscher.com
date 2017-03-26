@@ -35,7 +35,7 @@ The protocol it uses for messags are very simple.
 	// ZenIRCBot Basic Message
 	{
 	    "version": 1,
-	    "type": "privmsg",
+	    "type": "msg",
 	    "data": {
 	        "sender": "",
 	        "channel": "",
@@ -65,7 +65,7 @@ It has a chat message format very similar to what ZenIRCBot uses::
 All our bots are belong to IRC
 ------------------------------
 
-The beauty of ZenIRCBot then comes to bare.
+Herein lies the beauty of ZenIRCBot.
 All of the existing bots that I had written as IRC bots can be ported to Whispering Gophers.
 All you need to do is transform the messages into the ZenIRCBot protocol format,
 and publish them to Redis.
