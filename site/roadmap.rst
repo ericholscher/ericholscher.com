@@ -75,7 +75,7 @@ Are you ready to take your documentation to the next level?
 Great!
 `Send me an email`_ to get started.
 Please include a short description of your current status and what your goals are for the project.
-The price is **$800.00**,
+The price is **$2,500**,
 which may seem like a lot,
 but will be quickly recouped by saving time implementing this process in your organization.
 
