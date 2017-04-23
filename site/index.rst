@@ -28,6 +28,7 @@ Information
     speaking
     consulting
     interviews
+    books
 
 Activities
 ^^^^^^^^^^
