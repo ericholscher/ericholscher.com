@@ -52,7 +52,7 @@ stand like a Pac-Man!
 The new person,
 who has been given permission to join your group,
 will gather up the courage,
-and join your new group.
+and join you!
 Another important point,
 the group should now readjust to leave another space for a new person.
 
