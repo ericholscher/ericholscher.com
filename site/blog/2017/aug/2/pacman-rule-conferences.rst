@@ -27,7 +27,9 @@ making a person feel empowered,
 and like they are *doing the right thing* by talking to new folks.
 There is a second part of this equation,
 which is the group of people a person joins,
-and that's where the Pacman Rule comes in.
+and that's where the *Pac-Man Rule* comes in.
+
+.. _pac-man-rule:
 
 The Pac-Man Rule
 ----------------
