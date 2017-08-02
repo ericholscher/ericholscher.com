@@ -1,3 +1,6 @@
+.. post:: Aug 2, 2017
+   :tags: conferences, inclusion, pacman
+
 The Pac-Man Rule at Conferences
 ===============================
 
