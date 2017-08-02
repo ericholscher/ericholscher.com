@@ -5,11 +5,14 @@ The Pac-Man Rule at Conferences
 ===============================
 
 I firmly believe that conferences can provide a large value for people in an industry.
-I think that especially for attendees,
-it can be a very important event that allows them to create a network and feel integrated in a community.
-However,
-this requires having attendees feel empowered,
-and giving them the space and permission to meet other people.
+Conferences allow people to create a network,
+which helps you feel integrated in a community and profession.
+
+In order to build a network,
+you need to actually meet other people at the events.
+This requires having attendees feel empowered to actually reach out and connect.
+We do this by having specific events that encourage collaboration,
+but also by giving people explicit permission to meet other people.
 
 Give people explicit permission to join groups
 ----------------------------------------------

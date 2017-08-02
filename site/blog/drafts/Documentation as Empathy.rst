@@ -1,3 +1,5 @@
+
+
 Documentation as Empathy
 ========================
 
