@@ -42,7 +42,7 @@ The rule is quite simply stated:
     always leave room for 1 person to join your group.**
 
 More memorably,
-stand like a Pac-Man!
+stand like Pac-Man!
 
 .. image:: /_static/img/pacman.png
    :width: 25%
