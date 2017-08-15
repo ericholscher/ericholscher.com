@@ -16,7 +16,7 @@ but also by giving people explicit permission to meet other people.
 Give people explicit permission to join groups
 ----------------------------------------------
 
-In the events that I help organize,
+In the `events <http://writethedocs.org>`_ that I help organize,
 I try to solve this problem by **giving people explicit permission to join new groups of people**.
 In the introduction of the event,
 I tell attendees their job is to meet people and make friends.
