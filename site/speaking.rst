@@ -28,6 +28,19 @@ Videos
 
 Here are a few videos of my previous talks.
 
+GitHub webcast: Using GitHub for documentation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Was featured on a GitHub webcast talking about using GitHub for documentation.
+You can see more information and get the video here:
+
+https://resources.github.com/webcasts/GitHub-writing-documentation-for-your-projects/
+
+.. raw:: html
+
+	<iframe src="https://player.vimeo.com/video/244950538" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	<p><a href="https://vimeo.com/244950538">How GitHub Uses GitHub - Writing documentation for your project</a> from <a href="https://vimeo.com/github">GitHub</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
 Introduction to Sphinx & Read the Docs - Djangocon 2015
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
