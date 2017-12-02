@@ -26,18 +26,20 @@ Our new rule
 
 The rule is simply stated:
 
-    For every year you have attended the event, you must meet that many new people each day.
+    **For every year you have attended the event, you must meet that many new people each day.**
 
 An example makes it clear:
     
     If you have attended this event for **three** years, you must meet **three** new people each day.
+
+.. seealso:: My post on the :ref:`pac-man-rule` for another useful event rule
 
 Outcomes
 --------
 
 * New people only have to meet **one** new person each day, a useful and attainable goal
 * People coming back for the second or third year feel a bit more responsibility to be stewards for the community, a valuable role for them to play
-* The organizers and long-time attendees have to meet the most people, and they are the most valuable in spreading the culture of the event
+* The organizers and long-time attendees need to meet the most people, and they are the most valuable in spreading the culture of the event
 
 In the events that I have run, this rule has turned out quite well.
 I have gotten feedback from people, who turned it into a game:
