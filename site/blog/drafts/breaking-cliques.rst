@@ -1,5 +1,5 @@
-Breaking Cliques at Conferences
-===============================
+Breaking Cliques at Events
+==========================
 
 I've been going to professional events for a number of years,
 and one of the trickiest dynamics I have seen is that most events develop an "insiders" group who has been going for a long time.
