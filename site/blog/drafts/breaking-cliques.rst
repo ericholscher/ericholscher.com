@@ -19,7 +19,7 @@ and also have the ability to help newcomers understand the norms and practices o
 **This means the primary responsibility to meet new people should be on the long-time attendees, not first-time attendees**.
 
 With that in mind,
-I draft a basic concept that I think assigns the responsibility properly.
+I drafted a new concept that I think assigns the responsibility properly.
 
 Our new rule
 ------------
