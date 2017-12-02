@@ -35,13 +35,13 @@ An example makes it clear:
 Outcomes
 --------
 
-In the events that I have run, this rule has turned out quite well.
-I have gotten a lot of feedback of people turning it into a game:
-"My friends and I competed to see how many new people we could meet each day"
+* New people only have to meet **one** new person each day, a useful and attainable goal
+* People coming back for the second or third year feel a bit more responsibility to be stewards for the community, a valuable role for them to play
+* The organizers and long-time attendees have to meet the most people, and they are the most valuable in spreading the culture of the event
 
-This also gives newcomers a job an attainable goal as well.
-Just meet one new person each day.
-That feels like an attainable goal that anyone can meet.
+In the events that I have run, this rule has turned out quite well.
+I have gotten feedback from people, who turned it into a game:
+"My friends and I competed to see how many new people we could meet each day"
 
 However, the most important outcome is how it changes the dynamic of the event itself.
 **It goes from an event where it feels like people aren't accessible, to one where people know it's their job to meet new people.**
