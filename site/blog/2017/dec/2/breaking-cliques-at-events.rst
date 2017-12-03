@@ -12,17 +12,17 @@ and actively hurt the community's goal of inclusion.
 I'd like to propose a simple rule that we have at the `events <http://www.writethedocs.org/>`_ I run,
 which I think makes inclusion easier for everyone.
 
-Who should make the effort?
----------------------------
+Difficulty meeting new people
+-----------------------------
 
 Meeting new people is scary, especially if you're new to a community and you're not sure if you belong.
 People that have been attending an event for years are much more firmly planted in the community.
-They are able to help newcomers understand the norms and practices of a place.
+They are able to help newcomers understand the norms and standards of a place.
 
 **This means that long-time attendees should be the ones introducing themselves to first-time attendees.**
 
 With that in mind,
-I drafted a new concept that I think assigns the responsibility properly.
+I drafted a new concept that I think assigns the concept properly.
 
 Our new rule
 ------------
@@ -36,6 +36,22 @@ An example makes it clear:
     If you have attended this event for *three years*, you should try to meet *three new people* each day.
 
 .. seealso:: My post on the :ref:`pac-man-rule` for another useful event rule
+
+The organizers responsibility
+-----------------------------
+
+As an organizer,
+this is quite a lot of work you're giving to your long-time attendees.
+Particularly in the software industry,
+a lot of people (including me!) have anxiety around meeting new people.
+That means it's your responsibility to make meeting new people easier.
+
+Generally as an organizer the best way you can encourage things is by providing structure for them to happen in.
+So here are a few ideas for how to make meeting new folks easier: [#]_
+
+* Organize lunches and dinners around topics so that people know they have shared interests
+* Have an unconference or open space, where there are tables or rooms labeled by topic in 30 minute blocks
+* Give folks "Ask me about ____" stickers to wear, so that breaking the ice is easy!
 
 Outcomes
 --------
@@ -55,3 +71,8 @@ make connections,
 and really build the valuable professional networks that we all need to be happy in our careers.
 
 **Giving everyone at the event the direction to meet new people makes it much easier to meet new people.**
+
+.. rubric:: Footnotes
+
+.. [#] Thanks to `Jacob Kaplan-Moss <http://jacobian.org/>`_ for feedback,
+       particularly around ideas on making things easier.
