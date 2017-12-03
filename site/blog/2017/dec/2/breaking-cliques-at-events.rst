@@ -37,8 +37,8 @@ An example makes it clear:
 
 .. seealso:: My post on the :ref:`pac-man-rule` for another useful event rule
 
-The organizers responsibility
------------------------------
+The organizer's responsibility
+------------------------------
 
 As an organizer,
 this is quite a lot of work you're giving to your long-time attendees.
