@@ -46,7 +46,9 @@ I have gotten feedback from people, who turned it into a game:
 "My friends and I competed to see how many new people we could meet each day"
 
 However, the most important outcome is how it changes the dynamic of the event itself.
-**It goes from an event where it feels like people aren't accessible, to one where people know it's their job to meet new people.**
+It goes from an event where it feels like people aren't accessible, to one where people know it's their job to meet new people.
 This makes it easier for everyone to meet new people,
 make connections,
 and really build the valuable professional networks that we all need to be happy in our careers.
+
+**Giving everyone at the event the direction to meet new people makes it much easier to meet new poeple.**
