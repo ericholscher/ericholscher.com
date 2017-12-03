@@ -12,14 +12,14 @@ and actively hurt the community's goal of inclusion.
 I'd like to propose a simple rule that we have at the `events <http://www.writethedocs.org/>`_ I run,
 which I think makes inclusion easier for everyone.
 
-The Responsibility to *Meet New People*
----------------------------------------
+Who should make the effort?
+---------------------------
 
 Meeting new people is scary, especially if you're new to a community and you're not sure if you belong.
 People that have been attending an event for years are much more firmly planted in the community,
 and also have the ability to help newcomers understand the norms and practices of a place.
 
-**This means the primary responsibility to meet new people should be on the long-time attendees, not first-time attendees**.
+**This means that long-time attendees should be the ones introducing themselves to first-time attendees.**
 
 With that in mind,
 I drafted a new concept that I think assigns the responsibility properly.
@@ -29,11 +29,11 @@ Our new rule
 
 The rule is simply stated:
 
-    **For every year you have attended the event, you must meet that many new people each day.**
+    **For every year you have attended the event, you should try to meet that many new people each day.**
 
 An example makes it clear:
     
-    If you have attended this event for *three years*, you must meet *three new people* each day.
+    If you have attended this event for *three years*, you should try to meet *three new people* each day.
 
 .. seealso:: My post on the :ref:`pac-man-rule` for another useful event rule
 
