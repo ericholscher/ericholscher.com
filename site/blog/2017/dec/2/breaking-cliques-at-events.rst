@@ -41,12 +41,13 @@ The organizer's responsibility
 ------------------------------
 
 As an organizer,
-this is quite a lot of work you're giving to your long-time attendees.
+you're asking a lot of the long-time attendees.
 Particularly in the software industry,
 a lot of people (including me!) have anxiety around meeting new people.
-That means it's your responsibility to make meeting new people easier.
 
-Generally as an organizer the best way you can encourage things is by providing structure for them to happen in.
+**By setting the above rule,
+it's your responsibility to make meeting new people easier.**
+
 So here are a few ideas for how to make meeting new folks easier: [#]_
 
 * Organize lunches and dinners around topics so that people know they have shared interests
