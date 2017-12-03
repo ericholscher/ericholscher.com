@@ -16,8 +16,8 @@ Who should make the effort?
 ---------------------------
 
 Meeting new people is scary, especially if you're new to a community and you're not sure if you belong.
-People that have been attending an event for years are much more firmly planted in the community,
-and also have the ability to help newcomers understand the norms and practices of a place.
+People that have been attending an event for years are much more firmly planted in the community.
+They are able to help newcomers understand the norms and practices of a place.
 
 **This means that long-time attendees should be the ones introducing themselves to first-time attendees.**
 
