@@ -1,3 +1,6 @@
+.. post:: Dec 2, 2017
+   :tags: conferences, inclusion, cliques, rules
+   
 Breaking Cliques at Events
 ==========================
 
