@@ -1,6 +1,6 @@
 .. post:: Dec 2, 2017
    :tags: conferences, inclusion, cliques, rules
-   
+
 Breaking Cliques at Events
 ==========================
 
@@ -54,4 +54,4 @@ This makes it easier for everyone to meet new people,
 make connections,
 and really build the valuable professional networks that we all need to be happy in our careers.
 
-**Giving everyone at the event the direction to meet new people makes it much easier to meet new poeple.**
+**Giving everyone at the event the direction to meet new people makes it much easier to meet new people.**
