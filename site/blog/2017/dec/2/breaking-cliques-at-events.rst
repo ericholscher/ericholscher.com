@@ -33,14 +33,14 @@ The rule is simply stated:
 
 An example makes it clear:
     
-    If you have attended this event for **three** years, you must meet **three** new people each day.
+    If you have attended this event for *three years*, you must meet *three new people* each day.
 
 .. seealso:: My post on the :ref:`pac-man-rule` for another useful event rule
 
 Outcomes
 --------
 
-* New people only have to meet **one** new person each day, a useful and attainable goal
+* New people only have to meet *one* new person each day, a useful and attainable goal
 * People coming back for the second or third year feel a bit more responsibility to be stewards for the community, a valuable role for them to play
 * The organizers and long-time attendees need to meet the most people, and they are the most valuable in spreading the culture of the event
 
