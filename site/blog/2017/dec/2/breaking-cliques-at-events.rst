@@ -26,8 +26,8 @@ I drafted a new concept that I think assigns the concept properly.
 
 .. _pac-man-plus-rule:
 
-The Pac-Man++ Rule[#]_
-----------------------
+The Pac-Man++ Rule [#]_
+-----------------------
 
 The rule is simply stated:
 
@@ -78,6 +78,6 @@ and really build the valuable professional networks that we all need to be happy
 
 .. rubric:: Footnotes
 
-.. [#] https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment_()
+.. [#] https://en.wikipedia.org/wiki/Increment_and_decrement_operators
 .. [#] Thanks to `Jacob Kaplan-Moss <http://jacobian.org/>`_ for feedback,
        particularly around ideas on making things easier.
