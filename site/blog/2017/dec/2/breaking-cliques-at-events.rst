@@ -2,7 +2,7 @@
    :tags: conferences, inclusion, cliques, rules
 
 Breaking Cliques at Events
-==========================
+==============================================
 
 I've been going to professional events for a number of years,
 and one of the trickiest dynamics I have seen is that most events develop an "insiders" group who has been going for a long time.
@@ -80,6 +80,6 @@ and really build the valuable professional networks that we all need to be happy
 
 .. rubric:: *Footnotes*
 
-.. [#] Inspired by: https://en.wikipedia.org/wiki/Increment_and_decrement_operators
+.. [#] The name is temporary, happy for suggestions! Inspired by: https://en.wikipedia.org/wiki/Increment_and_decrement_operators
 .. [#] Thanks to `Jacob Kaplan-Moss <http://jacobian.org/>`_ for feedback,
        particularly around ideas on making things easier.
