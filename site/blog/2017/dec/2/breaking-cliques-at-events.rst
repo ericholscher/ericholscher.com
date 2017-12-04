@@ -1,8 +1,8 @@
 .. post:: Dec 2, 2017
    :tags: conferences, inclusion, cliques, rules
 
-Breaking Cliques at Events
-==========================
+Breaking Cliques at Events: The Pac-Man++ Rule
+==============================================
 
 I've been going to professional events for a number of years,
 and one of the trickiest dynamics I have seen is that most events develop an "insiders" group who has been going for a long time.
