@@ -78,6 +78,6 @@ and really build the valuable professional networks that we all need to be happy
 
 .. rubric:: Footnotes
 
-.. [#] https://en.wikipedia.org/wiki/Increment_and_decrement_operators
+.. [#] Inspired by: https://en.wikipedia.org/wiki/Increment_and_decrement_operators
 .. [#] Thanks to `Jacob Kaplan-Moss <http://jacobian.org/>`_ for feedback,
        particularly around ideas on making things easier.
