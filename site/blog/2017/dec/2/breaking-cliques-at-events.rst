@@ -61,8 +61,8 @@ Outcomes
 --------
 
 * New people only have to meet *one* new person each day, a useful and attainable goal
-* People coming back for the second or third year feel a bit more responsibility to be stewards for the community, a valuable role for them to play
-* The organizers and long-time attendees need to meet the most people, and they are the most valuable in spreading the culture of the event
+* People coming back for the second or third year feel a bit more responsibility to be *stewards* for the community, a valuable role for them to play
+* The organizers and long-time attendees need to meet the most people, and they are the most valuable in spreading the culture of the event -- they are also the most exciting for new people to meet!
 
 In the events that I have run, this rule has turned out quite well.
 I have gotten feedback from people, who turned it into a game:
