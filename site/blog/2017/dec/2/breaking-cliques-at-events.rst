@@ -24,8 +24,10 @@ They are able to help newcomers understand the norms and standards of a place.
 With that in mind,
 I drafted a new concept that I think assigns the concept properly.
 
-Our new rule
-------------
+.. _pac-man-plus-rule:
+
+The Pac-Man++ Rule[#]
+---------------------
 
 The rule is simply stated:
 
@@ -76,5 +78,6 @@ and really build the valuable professional networks that we all need to be happy
 
 .. rubric:: Footnotes
 
+.. [#] https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment_()
 .. [#] Thanks to `Jacob Kaplan-Moss <http://jacobian.org/>`_ for feedback,
        particularly around ideas on making things easier.
