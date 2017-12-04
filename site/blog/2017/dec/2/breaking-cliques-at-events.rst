@@ -29,7 +29,7 @@ I drafted a new concept that I think assigns the concept properly.
 The Pac-Man++ Rule [#]_
 -----------------------
 
-The rule is simply stated:
+The rule is:
 
     **For every year you have attended the event, you should try to meet that many new people each day.**
 

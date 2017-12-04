@@ -36,7 +36,7 @@ and that's where the *Pac-Man Rule* comes in.
 The Pac-Man Rule
 ----------------
 
-The rule is quite simply stated:
+The rule is:
 
     **When standing as a group of people,
     always leave room for 1 person to join your group.**
