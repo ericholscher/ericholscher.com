@@ -26,8 +26,8 @@ I drafted a new concept that I think assigns the concept properly.
 
 .. _pac-man-plus-rule:
 
-The Pac-Man++ Rule[#]
----------------------
+The Pac-Man++ Rule[#]_
+----------------------
 
 The rule is simply stated:
 
