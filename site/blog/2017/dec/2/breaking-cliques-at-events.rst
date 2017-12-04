@@ -37,7 +37,7 @@ An example makes it clear:
     
     If you have attended this event for *three years*, you should try to meet *three new people* each day.
 
-.. seealso:: My post on the :ref:`pac-man-rule` for another useful event rule
+.. seealso:: My original post on the :ref:`pac-man-rule` for another useful event rule
 
 The organizer's responsibility
 ------------------------------

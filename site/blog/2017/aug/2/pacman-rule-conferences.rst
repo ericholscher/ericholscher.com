@@ -60,7 +60,7 @@ the group should now readjust to leave another space for a new person.
 It reduces the feeling of there being cliques,
 and allows people to integrate themselves into the community.
 
-.. seealso:: Love the Pac-Man Rule? Check out the :ref:`Pac-Man++ Rule<pac-man-plus-rule>`.
+.. seealso:: My follow up post on :ref:`Pac-Man++ Rule<pac-man-plus-rule>`.
 
 Your mission
 ------------
