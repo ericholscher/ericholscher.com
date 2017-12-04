@@ -54,7 +54,7 @@ So here are a few ideas for how to make meeting new folks easier: [#]_
 
 * Organize lunches and dinners around topics so that people know they have shared interests
 * Give folks "Ask me about ____" stickers to wear, so that breaking the ice is easy!
-* Have an `unconference <http://www.writethedocs.org/conf/portland/2018/unconference/>`_ or open space, where there are tables or rooms labeled by topic in 30 minute blocks
+* Have an `Unconference <http://www.writethedocs.org/conf/portland/2018/unconference/>`_ or open space, where there are tables or rooms labeled by topic in 30 minute blocks
 * Have a `Welcome Wagon <http://www.writethedocs.org/organizer-guide/confs/welcome-wagon/>`_, which is a few folks who are designated friendly faces for the event
 
 Outcomes
