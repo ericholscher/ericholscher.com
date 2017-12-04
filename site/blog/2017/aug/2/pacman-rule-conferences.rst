@@ -48,6 +48,7 @@ stand like Pac-Man!
    :width: 25%
    :align: center
 
+
 The new person,
 who has been given permission to join your group,
 will gather up the courage,
@@ -58,6 +59,8 @@ the group should now readjust to leave another space for a new person.
 **Leaving room for new people when standing in a group is a physical way to show an inclusive and welcoming environment.**
 It reduces the feeling of there being cliques,
 and allows people to integrate themselves into the community.
+
+.. seealso:: Love the Pac-Man Rule? Check out the :ref:`Pac-Man++ Rule<pac-man-plus-rule>`.
 
 Your mission
 ------------
