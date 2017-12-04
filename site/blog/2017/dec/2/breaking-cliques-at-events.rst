@@ -76,7 +76,9 @@ and really build the valuable professional networks that we all need to be happy
 
 **Giving everyone at the event the direction to meet new people makes it much easier to meet new people.**
 
-.. rubric:: Footnotes
+-----
+
+.. rubric:: *Footnotes*
 
 .. [#] Inspired by: https://en.wikipedia.org/wiki/Increment_and_decrement_operators
 .. [#] Thanks to `Jacob Kaplan-Moss <http://jacobian.org/>`_ for feedback,
