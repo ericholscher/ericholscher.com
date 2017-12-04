@@ -48,7 +48,7 @@ Particularly in the software industry,
 a lot of people (including me!) have anxiety around meeting new people.
 
 **By setting the above rule,
-it's your responsibility to make meeting new people easier.**
+it's the organizer's responsibility to make meeting new people easier.**
 
 So here are a few ideas for how to make meeting new folks easier: [#]_
 
