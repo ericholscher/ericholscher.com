@@ -1,0 +1,7 @@
+A Personal Statement on the Immigration Ban
+===========================================
+
+This travel ban is impacting many of the people I know in this world and care about. Even if you aren't a muslim from a muslim country, everyone who is here on any kind of visa has to be looking at how things are going and consider leaving. I've had multiple people tell me they can't attend the conference I'm putting on in May, because they can't depend on any assurance from our government on immigration.
+People who have been given valid travel documents to this country are being turned away. This instills fear and uncertainty in anyone who might choose to travel to our country. This is morally reprehensible, and incredibly stupid for economic, moral, political, safety, and all other reasons. I'm profoundly sad that our country is at this point.
+When will my ability to travel be restricted for speaking publicly against the administration? When will it be affected because of my religious beliefs? When will we start deporting people because of their political beliefs and nationality? This is profoundly disturbing, and I will continue to speak out against it for those who can't.
+Remember, if you don't protect the muslims, or the immigrants, they will eventually come for you.
