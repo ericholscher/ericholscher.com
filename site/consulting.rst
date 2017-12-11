@@ -1,7 +1,7 @@
 Consulting
 ==========
 
-I have worked in the documentation work for over 7 years.
+I have worked in software documentation since 2010.
 My primary projects are:
 
 -  The community site, https://readthedocs.org, which is the `largest`_ open source documentation hosting site in the world.
