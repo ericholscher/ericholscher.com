@@ -136,7 +136,7 @@ Inline Markup
 `````````````
 
 For extensibility inside of a paragraph Sphinx uses roles.
-Here is an example:
+Here is an example::
 
     You can learn more about this in :rfc:`1984`.
     It is implemented in our code at :class:`System.Security`
