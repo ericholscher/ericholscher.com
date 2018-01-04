@@ -9,8 +9,8 @@ Leading in to that lovely event there was an introduction thread where everyone 
 It caused me to really think deeply about the problems facing my two fledging but promising communities,
 and I wanted to record my answers here publicly.
 
-My post
--------
+My email to the DazzleCon attendees
+-----------------------------------
 
 Hey there fellow Zebras!
 
