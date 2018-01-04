@@ -4,10 +4,12 @@
 Business questions I'm working on in 2018
 =========================================
 
-Back in November there was a lovely gathering of independent business folks in Portland, Oregon called `DazzleCon <https://www.zebrasunite.com/dazzlecon/>`_.
+In November 2017 there was a lovely gathering of independent business folks in Portland, Oregon called `DazzleCon <https://www.zebrasunite.com/dazzlecon/>`_.
 Leading in to that lovely event there was an introduction thread where everyone explained their business.
 It caused me to really think deeply about the problems facing my two fledging but promising communities,
 and I wanted to record my answers here publicly.
+
+These are the big questions that I'm thinking about for the communities I help shepherd in 2018.
 
 My email to the DazzleCon attendees
 -----------------------------------
