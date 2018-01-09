@@ -16,5 +16,3 @@ I've previously worked at these awesome companies:
 
     * Urban Airship
     * Lawrence Journal-World
-
-
