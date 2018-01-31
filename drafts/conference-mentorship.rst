@@ -1,10 +1,10 @@
 .. post:: 
-   :tags: conference, mentorship, 
+   :tags: conference, mentorship
 
 Conference Mentorship
 =====================
 
-I have had the oppertunity to provide mentorship to folks who have organized conferences a few times in the past couple years.
+I have had the opportunity to provide mentorship to folks who have organized conferences a few times in the past couple years.
 Through this process I have realized the value in this practice,
 and I'd like to write this to promote others to do to same for first year conference organizers.
 
@@ -18,24 +18,26 @@ Looking back,
 I would say the role could be defined as this:
 
 * Provide a working example of major documents that a conference needs (budget, volunteer & organizer schedules, sponsorship prospectus, conference schedule)
-* No major organizational tasks would be assigned to me
 * Provide perspective when people had questions about how to do something, or were freaking out over small details that wouldn't matter. Focus the group on the right problems.
 * Play part-time cheer leader. Reminding people that we were **doing great at something really hard**, much better than a first-year conference had any right to be doing.
-
-
-The value provided
-------------------
+* No major organizational tasks would be assigned to me
 
 The total time commitment,
 outside of attending the conference,
 was around **20 hours**.
-I helped save a good deal more time for the other organizers.
 
-The major parts of this were:
+The value provided
+------------------
+
+I believe the value in this was on a number a levels.
+One of the biggest was really psychological,
+I believe it put the other organizers at ease knowing I had done this before.
+
+The major value that I provided as I see it was:
 
 * Having a starting point to work from, instead of creating things from scratch
-* Stopping additional work from happening that didn't need to happen
-* Reducing the amount of time spent stressing out over things
+* Stopping additional work from happening that didn't need to happen, based on my previous experience
+* Reducing the amount of time spent stressing out over things, and making people feel more confident that we could provide the event
 
 You should be a mentor
 ----------------------

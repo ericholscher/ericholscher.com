@@ -44,21 +44,6 @@ html_sidebars = {
 html_title = blog_title
 html_favicon = '_static/img/favicon.ico'
 html_static_path = ['_static']
-htmlhelp_basename = 'SurfinginKansasdoc'
-
-latex_documents = [
-    ('index', 'SurfinginKansas.tex', u'Surfing in Kansas Documentation',
-     u'Eric Holscher', 'manual'),
-]
-man_pages = [
-    ('index', 'surfinginkansas', u'Surfing in Kansas Documentation',
-     [u'Eric Holscher'], 1)
-]
-texinfo_documents = [
-    ('index', 'SurfinginKansas', u'Surfing in Kansas Documentation',
-     u'Eric Holscher', 'SurfinginKansas', 'One line description of project.',
-     'Miscellaneous'),
-]
 
 intersphinx_mapping = {
     'sphinx': ('http://www.sphinx-doc.org/en/stable/', None)
