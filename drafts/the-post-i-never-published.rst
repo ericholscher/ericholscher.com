@@ -4,8 +4,6 @@
 The post I never published
 ==========================
 
-**I burned out.**
-
 Looking back,
 the file was initially created on my 29th birthday:
 
@@ -13,9 +11,11 @@ the file was initially created on my 29th birthday:
 
    eric  staff  Jul  9  2016 read-the-docs-sucession-planning.rst
 
+I burned out.
+
 I started writing a blog post that you've seen around the internet time and time again.
 Another creator of another open source project steps down,
-proclaims the project up for grabs by the community.
+offers the project to anyone who will actually help maintain the thing.
 Maybe someone steps up,
 maybe not..
 
@@ -31,30 +31,14 @@ or published it.
 I actually forgot that I had written it,
 until looking back in my drafts for ideas of new posts to write.
 
-**Things are better now.**
-Read the Docs is sustainable.
-As of January 2018,
-we have a team of four people working on the project.
-It feels like we might still nudge the world a little bit.
-
-I got really close to quitting the project though,
-and I want to be vulnerable and transparent about that.
-
-Maintaining open source is hard.
-For every person who *goes nuclear*,
-there are 10 who have gotten close.
-I'm glad that things worked out okay for me.
-I hope that lessons we're learning with Read the Docs will make more open source work well.
-
-There's still a lot more work to do.
 
 The Post
 --------
 
-.. note:: This post is a first draft, 
-          written in July 2016,
-          and was never finished.
-          Refer above for the back story.
+This post is a first draft, 
+written in July 2016,
+and was never finished.
+Refer above for the back story.
 
 .. code-block:: rst
 
@@ -111,3 +95,32 @@ The Post
     * http://docs.readthedocs.io/en/latest/contribute.html
 
     We also have hundreds of possible projects that can be done from the operations and development side.
+
+That's all that I managed to write.
+
+Now
+---
+
+**Things are better now.**
+I don't recognize the person who wrote that post.
+They seem distant,
+a faint memory.
+
+Read the Docs is sustainable.
+As of January 2018,
+we have a team of four people working on the project.
+It feels like we might still nudge the world.
+
+I got really close to quitting the project though.
+It was really hard.
+I stuggled for a long time.
+For every person who *goes nuclear*,
+there are 10 who have gotten close.
+I'm glad that things worked out okay for me.
+
+I hope we can take some lessons from Read the Docs and apply them more broadly.
+I hope the work others are doing in this area makes it better.
+There are a lot of problems that I still don't know the answer to.
+
+There's still a lot more work to do.
+
