@@ -4,7 +4,7 @@
 The post I never published
 ==========================
 
-I burned out.
+**I burned out.**
 
 Looking back,
 the file was initially created on my 29th birthday:
