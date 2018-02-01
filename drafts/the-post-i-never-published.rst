@@ -1,17 +1,17 @@
 .. post::
-   :tags: burnout, open source, sustain, sustainability, python
+   :tags: burnout, open source, sustain, sustainability, python, vulnerability
 
 The post I never published
 ==========================
 
 Looking back,
-the file was initially created on my 29th birthday:
+the file was created on my 29th birthday:
 
 .. code-block:: none
 
    eric  staff  Jul  9  2016 read-the-docs-sucession-planning.rst
 
-I burned out.
+I had failed. I burned out.
 
 I started writing a blog post that you've seen around the internet time and time again.
 Another creator of another open source project steps down,
@@ -21,24 +21,19 @@ maybe not..
 
 * Is this the *only* way to get people to actually contribute to my project?
 * Is it *blackmail*?
-* How does using *the nuclear option* effect my career?
+* How does using *the nuclear option* affect my career?
 * *What will people think*?
 * Am I *really* a failure?
 * I could have done *more*
 
-There are a lot of reasons I never finished writing the post,
-or published it.
-I actually forgot that I had written it,
-until looking back in my drafts for ideas of new posts to write.
-
-
 The Post
 --------
 
+I actually forgot that I had written it,
+until looking back in my drafts for ideas of new posts to write.
 This post is a first draft, 
 written in July 2016,
 and was never finished.
-Refer above for the back story.
 
 .. code-block:: rst
 
@@ -110,13 +105,15 @@ Read the Docs is sustainable.
 As of January 2018,
 we have a team of four people working on the project.
 It feels like we might still nudge the world.
+I feel like I could keep working on this project for a long time.
 
 I got really close to quitting the project though.
 It was really hard.
 I stuggled for a long time.
 For every person who *goes nuclear*,
 there are 10 who have gotten close.
-I'm glad that things worked out okay for me.
+I'm glad that things worked out okay for me,
+but not everyone is so lucky.
 
 I hope we can take some lessons from Read the Docs and apply them more broadly.
 I hope the work others are doing in this area makes it better.
