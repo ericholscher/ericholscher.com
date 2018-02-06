@@ -37,7 +37,7 @@ The major value that I provided as I see it was:
 
 * Having a starting point to work from, instead of creating things from scratch
 * Stopping additional work from happening that didn't need to happen, based on my previous experience
-* Reducing the amount of time spent stressing out over things, and making people feel more confident that we could provide the event
+* Reducing the amount of time spent stressing out over things, and making people feel more confident that we could produce the event
 
 You should be a mentor
 ----------------------
