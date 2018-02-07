@@ -48,9 +48,8 @@ Financial Aid
 ~~~~~~~~~~~~~
 
 PyCascades was a first year conference.
-Thanks to the tireless effort of `Mariatta <https://twitter.com/mariatta>`_ we were really worried about being inclusive and bringing in a diverse crowd.
-That said,
-it was really hard to figure out how much to budget for financial aid,
+We were really worried about being inclusive and bringing in a diverse crowd.
+It was really hard to figure out how much to budget for financial aid,
 because it was dependent on how much sponsorship we got.
 
 This was a major source of stress for the organizers,
@@ -78,7 +77,7 @@ I knew that this was just part of the process and was able to resure folks:
     but if we keep up the good work we're doing,
     sponsors will come on board.
 
-Thanks to the tireless effort of the entire team,
+Thanks to the tireless effort of the `entire team <https://www.pycascades.com/about/organizers/>`_,
 we ended up with over 15 sponsors for a first year conference.
 But it didn't *feel* that way from the start.
 
