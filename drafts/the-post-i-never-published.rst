@@ -112,7 +112,7 @@ I feel like I could keep working on this project for a long time.
 
 I got really close to quitting the project though.
 It was really hard.
-I stuggled for a long time.
+I struggled for a long time.
 For every person who *goes nuclear*,
 there are 10 who have gotten close.
 I'm glad that things worked out okay for me,
