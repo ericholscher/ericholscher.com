@@ -9,7 +9,7 @@ the file was created on my 29th birthday:
 
 .. code-block:: none
 
-   eric  staff  Jul  9  2016 read-the-docs-sucession-planning.rst
+   Jul  9  2016 read-the-docs-sucession-planning.rst
 
 I had failed. I burned out.
 
@@ -34,6 +34,9 @@ until looking back in my drafts for ideas of new posts to write.
 This post is a first draft, 
 written in July 2016,
 and was never finished.
+
+I'm sharing it because I think it's important to talk about these things,
+and mental health is not something we talk about enough.
 
 .. code-block:: rst
 
@@ -91,7 +94,7 @@ and was never finished.
 
     We also have hundreds of possible projects that can be done from the operations and development side.
 
-That's all that I managed to write.
+*That's all that I managed to write.*
 
 Now
 ---
