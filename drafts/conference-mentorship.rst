@@ -1,5 +1,5 @@
 .. post:: 
-   :tags: conference, mentorship
+   :tags: conference, mentorship, python, pycascades
 
 Conference Mentorship
 =====================
