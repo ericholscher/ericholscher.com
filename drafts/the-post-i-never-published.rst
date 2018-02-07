@@ -11,7 +11,7 @@ the file was created on my 29th birthday:
 
    Jul  9  2016 read-the-docs-sucession-planning.rst
 
-I had failed. I burned out.
+I had failed. I burned out. *(I'm fine now, don't worry!)*
 
 I started writing a blog post that you've seen around the internet time and time again.
 Another creator of another open source project steps down,
@@ -38,6 +38,8 @@ and was never finished.**
 
 I'm sharing it because I think it's important to talk about these things,
 and mental health is not something we talk about enough.
+I'm doing well now,
+which makes it easier to talk about.
 
 .. code-block:: rst
 
