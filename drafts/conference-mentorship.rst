@@ -24,7 +24,7 @@ I would say the role could be defined as this:
 
 The total time commitment,
 outside of attending the conference,
-was around **20 hours**.
+was around **25 hours** over an entire calendar year.
 
 The value provided
 ------------------
@@ -38,6 +38,49 @@ The major value that I provided as I see it was:
 * Having a starting point to work from, instead of creating things from scratch
 * Stopping additional work from happening that didn't need to happen, based on my previous experience
 * Reducing the amount of time spent stressing out over things, and making people feel more confident that we could produce the event
+
+Examples
+--------
+
+I think having a few examples would be useful here to really drive home the value.
+
+Financial Aid
+~~~~~~~~~~~~~
+
+PyCascades was a first year conference.
+Thanks to the tireless effort of `Mariatta <https://twitter.com/mariatta>`_ we were really worried about being inclusive and bringing in a diverse crowd.
+That said,
+it was really hard to figure out how much to budget for financial aid,
+because it was dependent on how much sponsorship we got.
+
+This was a major source of stress for the organizers,
+but I tried to provide perspective:
+
+    We're a first year conference. Doing *any* financial aid is amazing, so we can't beat ourselves up over not having *enough*!
+
+We ended up having a great financial aid program that allowed folks to attend,
+but giving perspective really helped people *feel good* about what we were doing.
+
+Sponsorship
+~~~~~~~~~~~
+
+Small conferences are often dependent on sponsorship to be great.
+We budgeted tickets to cover the basics like the Venue,
+but depended on sponsorship for the nicer thing we were able to provide.
+
+After a couple months of trying to get sponsors,
+the other organizers were feeling unsure about the response.
+It felt like nobody was going to sponsor and everything would be terrible.
+I knew that this was just part of the process and was able to resure folks:
+
+    It takes *months* for organizers to process sponsorship applications.
+    This isn't a simple purchase,
+    but if we keep up the good work we're doing,
+    sponsors will come on board.
+
+Thanks to the tireless effort of the entire team,
+we ended up with over 15 sponsors for a first year conference.
+But it didn't *feel* that way from the start.
 
 You should be a mentor
 ----------------------
