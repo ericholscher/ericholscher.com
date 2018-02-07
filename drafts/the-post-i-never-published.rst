@@ -104,7 +104,7 @@ I don't recognize the person who wrote that post.
 They seem distant,
 a faint memory.
 
-Read the Docs is sustainable.
+**Read the Docs is sustainable.**
 As of January 2018,
 we have a team of four people paid to work on the project.
 It feels like we might still nudge the world.
