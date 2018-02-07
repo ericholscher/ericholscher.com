@@ -31,9 +31,10 @@ The Post
 
 I actually forgot that I had written it,
 until looking back in my drafts for ideas of new posts to write.
-This post is a first draft, 
+
+**This post is a first draft, 
 written in July 2016,
-and was never finished.
+and was never finished.**
 
 I'm sharing it because I think it's important to talk about these things,
 and mental health is not something we talk about enough.
