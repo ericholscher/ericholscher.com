@@ -1,4 +1,4 @@
-.. post::
+.. post:: Feb 7, 2018
    :tags: burnout, open source, sustain, sustainability, python, vulnerability
 
 The post I never published
