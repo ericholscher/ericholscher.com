@@ -106,7 +106,7 @@ a faint memory.
 
 Read the Docs is sustainable.
 As of January 2018,
-we have a team of four people working on the project.
+we have a team of four people paid to work on the project.
 It feels like we might still nudge the world.
 I feel like I could keep working on this project for a long time.
 
