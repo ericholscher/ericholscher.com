@@ -121,9 +121,8 @@ there are 10 who have gotten close.
 I'm glad that things worked out okay for me,
 but not everyone is so lucky.
 
-I hope we can take some lessons from Read the Docs and apply them more broadly.
-I hope the work others are doing in this area makes it better.
+I hope we can take some `lessons <http://ericholscher.com/blog/2016/aug/31/funding-oss-marketing-money/>`_ from Read the Docs and apply them more broadly.
+I hope the `work <https://changelog.com/rfc>`_ others are doing in this area makes it better.
 There are a lot of problems that I still don't know the answer to.
 
 There's still a lot more work to do.
-
