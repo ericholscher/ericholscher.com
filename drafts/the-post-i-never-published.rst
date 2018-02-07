@@ -26,7 +26,7 @@ maybe not..
 * Am I *really* a failure?
 * I could have done *more*
 
-The Post
+The post
 --------
 
 I actually forgot that I had written it,
