@@ -66,7 +66,7 @@ Sponsorship
 ~~~~~~~~~~~
 
 Small conferences are often dependent on sponsorship to be great.
-We budgeted tickets to cover the basics like the Venue,
+We budgeted tickets to cover the basics like the venue,
 but depended on sponsorship for the nicer thing we were able to provide.
 
 After a couple months of trying to get sponsors,
@@ -81,7 +81,8 @@ I knew that this was just part of the process and was able to resure folks:
 
 Thanks to the tireless effort of the `entire team <https://www.pycascades.com/about/organizers/>`_,
 we ended up with over 15 sponsors for a first year conference.
-But it didn't *feel* that way from the start.
+But it didn't *feel* that way from the start,
+and I was to show that it would just take time.
 
 You should be a mentor
 ----------------------
