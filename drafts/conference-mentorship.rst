@@ -1,14 +1,15 @@
-.. post:: 
-   :tags: conference, mentorship, python, pycascades
+.. post:: Feb 14, 2018
+   :tags: conference, mentorship, python, pycon, pycascades
 
 Conference Mentorship
 =====================
 
-I have had the opportunity to provide mentorship to folks who have organized conferences a few times in the past couple years.
+I have had the opportunity to provide mentorship to folks who have organized conferences twice in 2017.
 Through this process I have realized the value in this practice,
 and I'd like to write this to promote others to do to same for first year conference organizers.
 
 I think this is a practice that would be very valuable to build inside the global Pycon & Write the Docs community conferences.
+Having a mentor who has done it before will make life much easier for the people putting together their first conference.
 
 How to mentor
 -------------
@@ -18,13 +19,13 @@ Looking back,
 I would say the role could be defined as this:
 
 * Provide a working example of major documents that a conference needs (budget, volunteer & organizer schedules, sponsorship prospectus, conference schedule)
-* Provide perspective when people had questions about how to do something, or were freaking out over small details that wouldn't matter. Focus the group on the right problems.
+* Provide perspective when people had questions about how to do something, or worrying about small details that wouldn't matter. Focus the group on the right problems.
 * Play part-time cheer leader. Reminding people that we were **doing great at something really hard**, much better than a first-year conference had any right to be doing.
 * No major organizational tasks would be assigned to me
 
 The total time commitment,
-outside of attending the conference,
-was around **25 hours** over an entire calendar year.
+outside of attending the actual conference,
+was around **25 hours** over the entire calendar year.
 
 The value provided
 ------------------
@@ -37,7 +38,8 @@ The major value that I provided as I see it was:
 
 * Having a starting point to work from, instead of creating things from scratch
 * Stopping additional work from happening that didn't need to happen, based on my previous experience
-* Reducing the amount of time spent stressing out over things, and making people feel more confident that we could produce the event
+* Making people feel more confident that we could actually produce the event, making the entire thing possible in the first place
+* Reducing the amount of time spent stressing out over things that didn't matter in the end
 
 Examples
 --------
@@ -97,6 +99,3 @@ I think having a shared repository of basic conference starting documents would 
 and allowing mentors to learn from each other over time.
 It's all the same value that we get from open sourcing code,
 but for building a community in real life!
-
-
-
