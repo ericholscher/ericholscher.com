@@ -96,7 +96,7 @@ Using Sphinx
 ~~~~~~~~~~~~
 
 reStructuredText is a powerful language primarily because the syntax can be extended.
-reStructuredTest supports two types of extension:
+reStructuredText supports two types of extension:
 
 * Paragraph level (with Directives)
 * Inline level (with Interpreted Text Roles, or roles for short)
@@ -304,7 +304,7 @@ As you can see,
 you can include generated content in the file that you're writing by hand.
 This allows for building a narrative around generated code comments,
 instead of giving your users a separate User Guide and API Reference,
-which is often times just a alphabetical listing of code!
+which is often times just an alphabetical listing of code!
 
 Documentation is best written by humans.
 Pulling comments from source code is valuable,
