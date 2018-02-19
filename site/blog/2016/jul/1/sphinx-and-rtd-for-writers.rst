@@ -264,7 +264,7 @@ Examples of other semantic reference types that Sphinx provides:
 
 * ``:doc:`` for referencing documents
 * ``:cls:`` for referencing programming classes
-* ``:term:`` for referencing glosary terms
+* ``:term:`` for referencing glossary terms
 
 All references support ``intersphinx``,
 which allows you to prefix your references with a specific project name.
