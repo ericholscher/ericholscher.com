@@ -27,9 +27,9 @@ I'd like to propose an idea:
 
 I believe that this is a win/win/win for all involved:
 
-* **Venture Capalists** invest in the open source ecosystem that makes companies *much cheaper to build*. It's also *really good marketing* for the VC firms, to show they are investing in the common tools we all rely on.
-* **Startups** invest in the tools that they use, to *ensure continued support and maintanance*, and remove risk from their future. It will also make *hiring developers* much easier for the companies, because developers love companies that invest in open source.
-* **Open source projects** are able to *fund project management and maintanance* that is required to make them sustainable for the long term. This continues the *force multiplier* that open source has given to the software industry as a whole.
+* **Venture Capitalists** invest in the open source ecosystem that makes companies *much cheaper to build*. It's also *really good marketing* for the VC firms, to show they are investing in the common tools we all rely on.
+* **Startups** invest in the tools that they use, to *ensure continued support and maintenance*, and remove risk from their future. It will also make *hiring developers* much easier for the companies, because developers love companies that invest in open source.
+* **Open source projects** are able to *fund project management and maintenance* that is required to make them sustainable for the long term. This continues the *force multiplier* that open source has given to the software industry as a whole.
 
 Building a standard model for investing in open source,
 and a point in time where we do it,
@@ -74,6 +74,21 @@ There have been a few examples of companies investing in open source in an ad ho
 These are good examples,
 but we need many more companies to be doing similar investment in order to make progress.
 
+Help out
+--------
+
+I was inspired to write up my thoughts because I tweeted the idea,
+and it was well received:
+
+.. raw:: html
+
+   <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">We should start a movement called &quot;1% for OSS&quot;, a program where VC&#39;s and startup companies agree to invest 1% of their funding round into the infrastructure that their companies rely on. <a href="https://twitter.com/hashtag/sustain?src=hash&amp;ref_src=twsrc%5Etfw">#sustain</a> <a href="https://twitter.com/hashtag/sustainoss?src=hash&amp;ref_src=twsrc%5Etfw">#sustainoss</a></p>&mdash; Eric Holscher (@ericholscher) <a href="https://twitter.com/ericholscher/status/966845161194979328?ref_src=twsrc%5Etfw">February 23, 2018</a></blockquote>
+   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+I don't plan on actually building a new program for funding open source,
+so please contact me if this is something that you'd like to actually work on!
+I think something like this is a viable option for funding large amounts of open source,
+but it will require a lot of work to get it there.
 
 .. _funding problem: https://www.fordfoundation.org/library/reports-and-studies/roads-and-bridges-the-unseen-labor-behind-our-digital-infrastructure/
 .. _warning signs: https://gist.github.com/jdorfman/099954cffd018d0ca2037a1a0f86026f
@@ -83,7 +98,3 @@ but we need many more companies to be doing similar investment in order to make 
 .. _open source support: https://wiki.mozilla.org/MOSS
 
 
-.. raw:: html
-
-   <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">We should start a movement called &quot;1% for OSS&quot;, a program where VC&#39;s and startup companies agree to invest 1% of their funding round into the infrastructure that their companies rely on. <a href="https://twitter.com/hashtag/sustain?src=hash&amp;ref_src=twsrc%5Etfw">#sustain</a> <a href="https://twitter.com/hashtag/sustainoss?src=hash&amp;ref_src=twsrc%5Etfw">#sustainoss</a></p>&mdash; Eric Holscher (@ericholscher) <a href="https://twitter.com/ericholscher/status/966845161194979328?ref_src=twsrc%5Etfw">February 23, 2018</a></blockquote>
-   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
