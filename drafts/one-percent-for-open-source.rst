@@ -1,3 +1,6 @@
+.. post::
+   :tags: python, opensource, sustainability, sustain
+
 One Percent for Open Source
 ===========================
 
