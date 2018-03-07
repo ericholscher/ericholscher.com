@@ -76,14 +76,11 @@ A simple example for a Python project could be:
 Prior Art
 ---------
 
-There have been a few examples of companies investing in open source in an ad hoc manner:
+I have a few sources of inspiration for this idea:
 
 * `One Percent for the Planet`_ - I got the idea for a 1% investment from this wonderful non-profit.
 * Stripe's `open source retreat`_ - where they fund projects to work on specific features.
-* Mozilla's `open source support`_  - where they fund awards, including for projects that they specifically work on.
-
-These are good examples,
-but we need many more companies to be doing similar investment in order to make progress.
+* Mozilla's `open source support`_  - where they fund awards for projects that they use internally
 
 Help out
 --------
@@ -100,6 +97,8 @@ I don't plan on actually building a new program for funding open source,
 so please contact me if this is something that you'd like to actually work on!
 I think something like this is a viable option for funding large amounts of open source,
 but it will require a lot of work to get it there.
+I'm happy to help,
+but it will really take motivated people to execute on this idea and make it happen.
 
 .. _most valuable part: https://medium.com/@nayafia/open-source-was-worth-at-least-143m-of-instagram-s-1b-acquisition-808bb85e4681
 .. _funding problem: https://www.fordfoundation.org/library/reports-and-studies/roads-and-bridges-the-unseen-labor-behind-our-digital-infrastructure/
