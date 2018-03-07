@@ -18,8 +18,8 @@ enabled by the internet (which is also built on open source).
 Many people doing this work are burning out,
 giving up,
 or just never standing in the first place.
-We need to improve the sustainability of open source in order to protect this commons that we currently have,
-and help it grow into the future.
+We need to improve the sustainability of open source in order to protect the valuable ecosystem that we have built,
+and help it grow in the future.
 
 Funding Open Source
 -------------------
