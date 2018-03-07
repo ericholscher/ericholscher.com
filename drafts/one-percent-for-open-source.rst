@@ -31,7 +31,7 @@ I'd like to propose an idea:
 I believe that this is a win/win/win for all involved:
 
 * **Venture Capitalists** invest in the open source ecosystem that makes companies *much cheaper to build*. It's also *really good marketing* for the VC firms, to show they are investing in the common tools we all rely on.
-* **Startups** invest in the tools that they use, to *ensure continued support and maintenance*, and remove risk from their future. It will also make *hiring developers* much easier for the companies, because developers love companies that invest in open source.
+* **Startups** invest in the tools that they use, to *ensure continued support and maintenance*, to remove risk from their future, and have better tools to build their company with. It will also make *hiring developers* much easier for the companies, because developers love companies that invest in open source.
 * **Open source projects** are able to *fund project management and maintenance* that is required to make them sustainable for the long term. This continues the *force multiplier* that open source has given to the software industry as a whole.
 
 Why Venture Capital payments?
