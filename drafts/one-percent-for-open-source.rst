@@ -11,14 +11,14 @@ the operating system to the cryptography,
 all of it is open source.
 
 Open source has a `funding problem`_.
-There are many `warning signs`_ that the future is not as bright as the past.
+There are many `warning signs`_ that open source is an ecosystem in danger.
 
 Open source is maintained for "free" by people all over the world,
 enabled by the internet (which is also built on open source).
 Many people doing this work are burning out,
 giving up,
 or just never standing in the first place.
-We need to enable the sustainability of open source in order to protect this commons that we currently have,
+We need to improve the sustainability of open source in order to protect this commons that we currently have,
 and help it grow into the future.
 
 Funding Open Source
@@ -28,28 +28,35 @@ I'd like to propose an idea:
 
     A program called **1% for open source**: A program where Venture Capitalist's and startup companies agree to invest 1% of their funding round into the open source software that they use. 
 
+Building a standard model for investing in open source,
+and a point in time where we do it,
+will help create more investment in our existing ecosystem.
+New software projects will also be created,
+because now there is a more workable sustainability model.
+
 I believe that this is a win/win/win for all involved:
 
 * **Venture Capitalists** invest in the open source ecosystem that makes companies *much cheaper to build*. It's also *really good marketing* for the VC firms, to show they are investing in the common tools we all rely on.
 * **Startups** invest in the tools that they use, to *ensure continued support and maintenance*, and remove risk from their future. It will also make *hiring developers* much easier for the companies, because developers love companies that invest in open source.
 * **Open source projects** are able to *fund project management and maintenance* that is required to make them sustainable for the long term. This continues the *force multiplier* that open source has given to the software industry as a whole.
 
-Building a standard model for investing in open source,
-and a point in time where we do it,
-will help create more investment in our existing infrastructure.
-New software projects will also be created,
-because now there is a more workable sustainability model.
 
 Why Venture Capital payments?
 -----------------------------
 
-Everyone involved in the above transaction gets values from open source.
+Every party involved in a VC investment gets values from open source.
 I believe that everyone also gets value from the 1% for open source program,
 through marketing and better software over time.
+is a natural place to reinvest some of the money that is changing hands.
 
-Having a transaction that is already happening,
-with all parties benefiting,
-is a natural place to redistribute some of the money that is changing hands.
+Having a concrete point in time also makes it much easier to standardize when the money should be spent.
+Since money is already changing hands during an investment,
+reinvesting a small portion of that money into infrastructure is an easy thing to do.
+
+A lot of places have things like "Open Source Fridays" and "20% time",
+but those programs are the first to be cut when a company has issues.
+Investing in open source as a lump sum during funding rounds makes sure the investment up front,
+where it can't be removed as an ongoing program.
 
 How should we implement it?
 ---------------------------
@@ -59,11 +66,20 @@ The startup who has gotten the investment will reinvest 1% of the money from the
 There are many different ways this could be implemented as a lower level.
 A few of my ideas are:
 
-* Startup companies create a list of the OSS projects they use, using tools like http://libraries.io/, and then give money to the 10 largest projects that are accepting money
-* There could be a new non-profit foundation created, which gets all the donations, and has people on staff who manage distributing the money fairly
+* Startup companies create a list of the OSS projects they use, using tools like http://libraries.io/, and then give money to the 10 largest projects that have a way to accept money. This could be done during the license compliance phase of the invesetment process.
+* There could be a new non-profit foundation created, which gets all the donations and then has established criteria for how to reinvest the money as grants.
 * You could give the money to the existing foundations that focus on the area of open source that is most valuable to you 
 
 I think making the execution of the investment standard is an important part of making this actually happen.
+There should be standard processes and criteria for where your money will go,
+so that it's not adding additional overhead to your funding round.
+
+A simple example for a Python project could be:
+
+* You run a script that looks at all the projects in your `requirements.txt` that your project depends on
+* You give 1% of your Venture Capital investment to the Python Software Foundation
+* That list is cross-referenced with a list of the Python projects you use that need funding
+* The top 10 projects you use that need funding are each given 10% of your investment as a sustainability grant
 
 Prior Art
 ---------
