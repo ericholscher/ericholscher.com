@@ -28,31 +28,23 @@ I'd like to propose an idea:
 
     A program called **1% for open source**: A program where Venture Capitalist's and startup companies agree to invest 1% of their funding round into the open source software that they use. 
 
-Building a standard model for investing in open source,
-and a point in time where we do it,
-will help create more investment in our existing ecosystem.
-New software projects will also be created,
-because now there is a more workable sustainability model.
-
 I believe that this is a win/win/win for all involved:
 
 * **Venture Capitalists** invest in the open source ecosystem that makes companies *much cheaper to build*. It's also *really good marketing* for the VC firms, to show they are investing in the common tools we all rely on.
 * **Startups** invest in the tools that they use, to *ensure continued support and maintenance*, and remove risk from their future. It will also make *hiring developers* much easier for the companies, because developers love companies that invest in open source.
 * **Open source projects** are able to *fund project management and maintenance* that is required to make them sustainable for the long term. This continues the *force multiplier* that open source has given to the software industry as a whole.
 
-
 Why Venture Capital payments?
 -----------------------------
 
-Every party involved in a VC investment gets values from open source.
-I believe that everyone also gets value from the 1% for open source program,
-through marketing and better software over time.
-is a natural place to reinvest some of the money that is changing hands.
+The biggest reason is because all parties involved benefit from open source.
+Secondly,
+having a concrete point in time also makes it much easier to define when the money should be invested.
+Third,
+money is already changing hands during an investment,
+so having 1% that money to go open source is easy to communicate.
 
-Having a concrete point in time also makes it much easier to standardize when the money should be spent.
-Since money is already changing hands during an investment,
-reinvesting a small portion of that money into infrastructure is an easy thing to do.
-
+I also think monetary investment is required to make a real dent in this problem. 
 A lot of places have things like "Open Source Fridays" and "20% time",
 but those programs are the first to be cut when a company has issues.
 Investing in open source as a lump sum during funding rounds makes sure the investment up front,
@@ -61,12 +53,12 @@ where it can't be removed as an ongoing program.
 How should we implement it?
 ---------------------------
 
-The startup who has gotten the investment will reinvest 1% of the money from the VC firm into the open source projects that they use.
+The startup who has gotten the investment should invest 1% of the money from the VC firm into the open source projects that they use.
 
 There are many different ways this could be implemented as a lower level.
 A few of my ideas are:
 
-* Startup companies create a list of the OSS projects they use, using tools like http://libraries.io/, and then give money to the 10 largest projects that have a way to accept money. This could be done during the license compliance phase of the invesetment process.
+* Startup companies create a list of the OSS projects they use, using tools like http://libraries.io/, and then give money to the 10 largest projects that have a way to accept money. This could be done during the license compliance phase of the investment process.
 * There could be a new non-profit foundation created, which gets all the donations and then has established criteria for how to reinvest the money as grants.
 * You could give the money to the existing foundations that focus on the area of open source that is most valuable to you 
 
