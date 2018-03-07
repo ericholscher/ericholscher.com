@@ -17,7 +17,7 @@ Open source is maintained for "free" by people all over the world,
 enabled by the internet (which is also built on open source).
 Many people doing this work are burning out,
 giving up,
-or just never standing in the first place.
+or just never getting involved in the first place.
 We need to improve the sustainability of open source in order to protect the valuable ecosystem that we have built,
 and help it grow in the future.
 
@@ -50,6 +50,12 @@ but those programs are the first to be cut when a company has issues.
 Investing in open source as a lump sum during funding rounds makes sure the investment up front,
 where it can't be removed as an ongoing program.
 
+One notable downside is that this revenue source isn't consistent.
+My focus on this program is to *increase the total revenue* that all open source projects get.
+Once the money is in the projects,
+they can budget convervatively and create an ongoing cashflow.
+It's getting the money that is the part hard.
+
 How should we implement it?
 ---------------------------
 
@@ -71,7 +77,7 @@ A simple example for a Python project could be:
 * You give 1% of your Venture Capital investment to the Python Software Foundation
 * You run a script that looks at all the projects in your `requirements.txt` that your project depends on
 * That list is cross-referenced with a list of the Python projects you use that need funding
-* The top 10 projects you use that need funding, sorted by amount of funding needed, are each given 10% of your investment as a sustainability grant
+* The top 10 projects you use that need funding, sorted by the amount of funding gotten so far that year (lowest first), are each given 10% of your investment as a sustainability grant
 
 Prior Art
 ---------
