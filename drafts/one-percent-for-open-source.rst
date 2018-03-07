@@ -41,8 +41,8 @@ The biggest reason is because all parties involved benefit from open source.
 Secondly,
 having a concrete point in time also makes it much easier to define when the money should be invested.
 Third,
-money is already changing hands during an investment,
-so having 1% that money to go open source is easy to communicate.
+a set amount of money is already changing hands during an investment,
+so having 1% that money to go open source is easy.
 
 I also think monetary investment is required to make a real dent in this problem. 
 A lot of places have things like "Open Source Fridays" and "20% time",
