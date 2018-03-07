@@ -4,7 +4,7 @@
 One Percent for Open Source
 ===========================
 
-The open source ecosystem is the most valuable part of the software industry today.
+The open source ecosystem is the `most valuable part`_ of the software industry today.
 All of the companies and technologies that we build today are enabled by open source software.
 From the programming languages to the web frameworks,
 the operating system to the cryptography,
@@ -109,6 +109,7 @@ so please contact me if this is something that you'd like to actually work on!
 I think something like this is a viable option for funding large amounts of open source,
 but it will require a lot of work to get it there.
 
+.. _most valuable part: https://medium.com/@nayafia/open-source-was-worth-at-least-143m-of-instagram-s-1b-acquisition-808bb85e4681
 .. _funding problem: https://www.fordfoundation.org/library/reports-and-studies/roads-and-bridges-the-unseen-labor-behind-our-digital-infrastructure/
 .. _warning signs: https://gist.github.com/jdorfman/099954cffd018d0ca2037a1a0f86026f
 
