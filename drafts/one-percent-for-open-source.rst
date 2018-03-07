@@ -106,6 +106,13 @@ but it will require a lot of work to get it there.
 I'm happy to help,
 but it will really take motivated people to execute on this idea and make it happen.
 
+I see the next steps being:
+
+* Figure out the exact process for determining who gets money from a project
+* Figure out the proper entity to use (an existing non-profit, or a new one?)
+* Find a willing VC & Startup to do a test run
+* Iterate on what you learn, establishing standard processes for the next test run
+
 .. _most valuable part: https://medium.com/@nayafia/open-source-was-worth-at-least-143m-of-instagram-s-1b-acquisition-808bb85e4681
 .. _funding problem: https://www.fordfoundation.org/library/reports-and-studies/roads-and-bridges-the-unseen-labor-behind-our-digital-infrastructure/
 .. _warning signs: https://gist.github.com/jdorfman/099954cffd018d0ca2037a1a0f86026f
