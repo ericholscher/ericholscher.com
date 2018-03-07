@@ -68,10 +68,10 @@ so that it's not adding additional overhead to your funding round.
 
 A simple example for a Python project could be:
 
-* You run a script that looks at all the projects in your `requirements.txt` that your project depends on
 * You give 1% of your Venture Capital investment to the Python Software Foundation
+* You run a script that looks at all the projects in your `requirements.txt` that your project depends on
 * That list is cross-referenced with a list of the Python projects you use that need funding
-* The top 10 projects you use that need funding are each given 10% of your investment as a sustainability grant
+* The top 10 projects you use that need funding, sorted by amount of funding needed, are each given 10% of your investment as a sustainability grant
 
 Prior Art
 ---------
