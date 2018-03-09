@@ -16,19 +16,18 @@ There are not many ways for open source projects to capture the value that they 
 while being available for free and providing the furtile ecosystem that companies are built on today.
 
 There are many `warning signs`_ that open source is an ecosystem in danger.
-Open source is maintained for "free" by people all over the world.
 Many people doing this work are `burning out`_,
 `giving up`_,
 or just never getting involved in the first place.
-**We need to improve the sustainability of open source in order to protect the valuable ecosystem that we have built**,
-and help it grow in the future.
+We need to improve the sustainability of open source to protect the valuable ecosystem that we have built.
+
+We need a new funding model for open source.
 
 .. _most valuable part: https://medium.com/@nayafia/open-source-was-worth-at-least-143m-of-instagram-s-1b-acquisition-808bb85e4681
 .. _funding problem: https://www.fordfoundation.org/library/reports-and-studies/roads-and-bridges-the-unseen-labor-behind-our-digital-infrastructure/
 .. _warning signs: https://gist.github.com/jdorfman/099954cffd018d0ca2037a1a0f86026f
 .. _giving up: https://www.drmaciver.com/2015/08/throwing-in-the-towel/
 .. _burning out: https://thenewstack.io/darker-side-open-source/
-
 
 Funding Open Source
 -------------------
