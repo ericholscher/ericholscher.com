@@ -29,7 +29,7 @@ Funding Open Source
 
 I'd like to propose an idea:
 
-    A program called **1% for open source**: A program where Venture Capitalist's and startup companies agree to invest 1% of their funding round into the open source software that they use. 
+    A program called **1% for open source**: A program where Venture Capitalist's and startup companies agree to invest 1% of their funding round into the open source software that they use.
 
 I believe that this is a win/win/win for all involved:
 
@@ -37,8 +37,8 @@ I believe that this is a win/win/win for all involved:
 * **Startups** invest in the tools that they use, to *ensure continued support and maintenance*, to remove risk from their future, and have better tools to build their company with. It will also make *hiring developers* much easier for the companies, because developers love companies that invest in open source.
 * **Open source projects** are able to *fund project management and maintenance* that is required to make them sustainable for the long term. This continues the *force multiplier* that open source has given to the software industry as a whole.
 
-Why Venture Capital payments?
------------------------------
+Why Venture Capital investments?
+--------------------------------
 
 The biggest reason is because all parties involved benefit from open source.
 Secondly,
@@ -53,11 +53,19 @@ but those programs are the first to be cut when a company has issues.
 Investing in open source as a lump sum during funding rounds makes sure the investment up front,
 where it can't be removed as an ongoing program.
 
-One notable downside is that this revenue source isn't consistent.
-My focus on this program is to *increase the total revenue* that all open source projects get.
+Another approach
+----------------
+
+One notable downside of this approach is that this revenue source isn't consistent.
+My focus on this program is to **increase the total revenue that all open source projects get**.
 Once the money is in the projects,
 they can budget convervatively and create an ongoing cashflow.
 It's getting the money that is the part hard.
+
+Another downside is that there are 3 parties involved.
+A version of this with public companies reinvesting 1% of their revenue in open source is also a valuable model to explore.
+That would keep it between two parties (the companies and the projects),
+and it would be consistent yearly revenue.
 
 How should we implement it?
 ---------------------------
