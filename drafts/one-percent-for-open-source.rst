@@ -10,10 +10,10 @@ From the programming languages to the web frameworks,
 the operating system to the cryptography,
 everyone is using open source.
 
-Open source software is creating billions of dollars in value for comanies and Venture Capitalists,
+Open source software is creating billions of dollars in value for companies and Venture Capitalists,
 but it has a `funding problem`_ for itself.
 There are not many ways for open source projects to capture the value that they create,
-while being available for free and providing the furtile ecosystem that companies are built on today.
+while being available for free and providing the fertile ecosystem that companies are built on today.
 
 There are many `warning signs`_ that open source is an ecosystem in danger.
 Many people doing this work are `burning out`_,
@@ -59,9 +59,7 @@ where it can't be removed as an ongoing program.
 How should we implement it?
 ---------------------------
 
-The company who has gotten the investment should invest 1% of the money from the VC firm into the open source projects that they use.
-
-There are many different ways this could be implemented as a lower level.
+The company should invest 1% of the money into the open source projects that they use. There are many different ways this could be implemented.
 A few of my ideas are:
 
 * Companies create a list of the OSS projects they use, using tools like http://libraries.io/, and then give money to the 10 largest projects that have a way to accept money. This could be done during the license compliance phase of the investment process.
@@ -70,7 +68,7 @@ A few of my ideas are:
 
 Making the execution of the investment standard is an important part of making this actually happen.
 There should be standard processes and criteria for where your money will go,
-so that it's not adding additional overhead to your funding round.
+so that it's not adding additional overhead to companies who give back.
 
 A simple example for a Python project could be:
 
