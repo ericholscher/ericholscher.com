@@ -87,6 +87,14 @@ I have a few sources of inspiration for this idea:
 * `One Percent for the Planet`_ - I got the idea for a 1% investment from this wonderful non-profit.
 * Stripe's `open source retreat`_ - where they fund projects to work on specific features.
 * Mozilla's `open source support`_  - where they fund awards for projects that they use internally
+* Coinbase's `open source fund`_ - which is a monthly donation program
+* Segment's `open fellowship`_ - which gives 3 month fellowships, similar to Stripe
+
+.. _One Percent for the Planet: https://www.onepercentfortheplanet.org/
+.. _open source retreat: https://stripe.com/blog/open-source-retreat-2016
+.. _open source support: https://wiki.mozilla.org/MOSS
+.. _open source fund: https://engineering.coinbase.com/introducing-coinbase-open-source-fund-116617a1f6ec
+.. _open fellowship: https://open.segment.com/fellowship
 
 Help out
 --------
@@ -117,8 +125,5 @@ I see the next steps being:
 .. _funding problem: https://www.fordfoundation.org/library/reports-and-studies/roads-and-bridges-the-unseen-labor-behind-our-digital-infrastructure/
 .. _warning signs: https://gist.github.com/jdorfman/099954cffd018d0ca2037a1a0f86026f
 
-.. _One Percent for the Planet: https://www.onepercentfortheplanet.org/
-.. _open source retreat: https://stripe.com/blog/open-source-retreat-2016
-.. _open source support: https://wiki.mozilla.org/MOSS
 
 
