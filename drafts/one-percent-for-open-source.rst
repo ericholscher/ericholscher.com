@@ -10,7 +10,7 @@ From the programming languages to the web frameworks,
 the operating system to the cryptography,
 everyone is using open source.
 
-Open source software is creating billions of dollars in value for startups and Venture Capitalists,
+Open source software is creating billions of dollars in value for comanies and Venture Capitalists,
 but it has a `funding problem`_ for itself.
 There are not many ways for open source projects to capture the value that they create,
 while being available for free and providing the furtile ecosystem that companies are built on today.
@@ -39,7 +39,7 @@ I'd like to propose an idea:
 This is a win/win/win:
 
 * **Venture Capitalists (VC's)** invest in the open source ecosystem that makes companies *much cheaper to build*. It's also *really good marketing* for the VC firms, to show they are investing in the common tools we all rely on.
-* **Startups** invest in the tools that they use, to *ensure continued support and maintenance*, to remove risk from their future, and have better tools to build their company with. It will also make *hiring developers* much easier for the companies, because developers love companies that invest in open source.
+* **Companies** invest in the tools that they use, to *ensure continued support and maintenance*, to remove risk from their future, and have better tools to build their company with. It will also make *hiring developers* much easier for the companies, because developers love companies that invest in open source.
 * **Open source projects** are able to *fund project management and maintenance* that is required to make them sustainable for the long term. This continues the *force multiplier* that open source has given to the software industry as a whole.
 
 Why is this a good solution?
@@ -59,12 +59,12 @@ where it can't be removed as an ongoing program.
 How should we implement it?
 ---------------------------
 
-The startup who has gotten the investment should invest 1% of the money from the VC firm into the open source projects that they use.
+The company who has gotten the investment should invest 1% of the money from the VC firm into the open source projects that they use.
 
 There are many different ways this could be implemented as a lower level.
 A few of my ideas are:
 
-* Startup companies create a list of the OSS projects they use, using tools like http://libraries.io/, and then give money to the 10 largest projects that have a way to accept money. This could be done during the license compliance phase of the investment process.
+* Companies create a list of the OSS projects they use, using tools like http://libraries.io/, and then give money to the 10 largest projects that have a way to accept money. This could be done during the license compliance phase of the investment process.
 * There could be a new non-profit foundation created, which gets all the donations and then has established criteria for how to reinvest the money as grants.
 * You could give the money to the existing foundations that focus on the area of open source that is most valuable to you 
 
@@ -118,7 +118,7 @@ I see the next steps being:
 
 * Figure out the exact process for determining who gets money from a project
 * Figure out the proper entity to use (an existing non-profit, or a new one?)
-* Find a willing VC & Startup to do a test run
+* Find a willing VC or Company to do a test run
 * Iterate on what you learn, establishing standard processes for the next test run
 * Once you have a model that everyone is happy with, start expanding the program
 
