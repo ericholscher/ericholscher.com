@@ -34,12 +34,12 @@ Funding Open Source
 
 I'd like to propose an idea:
 
-    A program called **1% for open source**: A program where companies agree to invest 1% of their funding round or yearly profits into the open source software that they use.
+    A program called **1% for open source**: where companies agree to invest 1% of their funding round or yearly profits into the open source software that they use.
 
 This is a win/win/win:
 
 * **Venture Capitalists (VC's)** invest in the open source ecosystem that makes companies *much cheaper to build*. It's also *really good marketing* for the VC firms, to show they are investing in the common tools we all rely on.
-* **Companies** invest in the tools that they use, to *ensure continued support and maintenance*, to remove risk from their future, and have better tools to build their company with. It will also make *hiring developers* much easier for the companies, because developers love companies that invest in open source.
+* **Companies** invest in the tools that they use to *ensure continued development and support*. The companies can also use their support of open source to make hiring good developers easier.
 * **Open source projects** are able to *fund project management and maintenance* that is required to make them sustainable for the long term. This continues the *force multiplier* that open source has given to the software industry as a whole.
 
 Why is this a good solution?
