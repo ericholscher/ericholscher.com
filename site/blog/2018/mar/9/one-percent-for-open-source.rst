@@ -28,8 +28,8 @@ We need a new funding model for open source.
 .. _giving up: https://www.drmaciver.com/2015/08/throwing-in-the-towel/
 .. _burning out: https://thenewstack.io/darker-side-open-source/
 
-Funding Open Source
--------------------
+Funding the Open Source Ecosystem
+---------------------------------
 
 I'd like to propose an idea:
 
