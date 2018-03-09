@@ -10,7 +10,7 @@ From the programming languages to the web frameworks,
 the operating system to the cryptography,
 all of it is open source.
 
-Open source software is creating billions of dollars in value for startups and venture capitalists,
+Open source software is creating billions of dollars in value for startups and Venture Capitalists,
 but it has a `funding problem`_ for itself.
 There are not many ways for open source projects to capture the value that they create,
 while still being available to startup companies.
@@ -29,11 +29,11 @@ Funding Open Source
 
 I'd like to propose an idea:
 
-    A program called **1% for open source**: A program where Venture Capitalist's and startup companies agree to invest 1% of their funding round into the open source software that they use.
+    A program called **1% for open source**: A program where Veneure Capitalist's and startup companies agree to invest 1% of their funding round into the open source software that they use.
 
-I believe that this is a win/win/win for all involved:
+This is a win/win/win:
 
-* **Venture Capitalists** invest in the open source ecosystem that makes companies *much cheaper to build*. It's also *really good marketing* for the VC firms, to show they are investing in the common tools we all rely on.
+* **Venture Capitalists (VC's)** invest in the open source ecosystem that makes companies *much cheaper to build*. It's also *really good marketing* for the VC firms, to show they are investing in the common tools we all rely on.
 * **Startups** invest in the tools that they use, to *ensure continued support and maintenance*, to remove risk from their future, and have better tools to build their company with. It will also make *hiring developers* much easier for the companies, because developers love companies that invest in open source.
 * **Open source projects** are able to *fund project management and maintenance* that is required to make them sustainable for the long term. This continues the *force multiplier* that open source has given to the software industry as a whole.
 
@@ -47,15 +47,6 @@ Third,
 a set amount of money is already changing hands during an investment,
 so having 1% that money to go open source is easy.
 
-I also think monetary investment is required to make a real dent in this problem. 
-A lot of places have things like "Open Source Fridays" and "20% time",
-but those programs are the first to be cut when a company has issues.
-Investing in open source as a lump sum during funding rounds makes sure the investment up front,
-where it can't be removed as an ongoing program.
-
-Another approach
-----------------
-
 One notable downside of this approach is that this revenue source isn't consistent.
 My focus on this program is to **increase the total revenue that all open source projects get**.
 Once the money is in the projects,
@@ -63,9 +54,15 @@ they can budget convervatively and create an ongoing cashflow.
 It's getting the money that is the part hard.
 
 Another downside is that there are 3 parties involved.
-A version of this with public companies reinvesting 1% of their revenue in open source is also a valuable model to explore.
+**A version of this with public companies reinvesting 1% of their revenue in open source is also a valuable model to explore.**
 That would keep it between two parties (the companies and the projects),
 and it would be consistent yearly revenue.
+
+Monetary investment is required to make a real dent in this problem. 
+A lot of places have "Open Source Fridays" and "20% time",
+but those programs are the first to be cut when a company has issues.
+Investing in open source as a lump sum during funding rounds makes sure the investment up front,
+where it can't be removed as an ongoing program.
 
 How should we implement it?
 ---------------------------
@@ -79,13 +76,13 @@ A few of my ideas are:
 * There could be a new non-profit foundation created, which gets all the donations and then has established criteria for how to reinvest the money as grants.
 * You could give the money to the existing foundations that focus on the area of open source that is most valuable to you 
 
-I think making the execution of the investment standard is an important part of making this actually happen.
+Making the execution of the investment standard is an important part of making this actually happen.
 There should be standard processes and criteria for where your money will go,
 so that it's not adding additional overhead to your funding round.
 
 A simple example for a Python project could be:
 
-* You give 1% of your Venture Capital investment to the Python Software Foundation
+* You give 1% of your VC investment to the Python Software Foundation
 * You run a script that looks at all the projects in your `requirements.txt` that your project depends on
 * That list is cross-referenced with a list of the Python projects you use that need funding
 * The top 10 projects you use that need funding, sorted by least amount received that year, are each given 10% of your investment as a sustainability grant
@@ -120,8 +117,8 @@ and it was well received:
 
 I don't plan on actually building a new program for funding open source,
 so please contact me if this is something that you'd like to actually work on!
-I think something like this is a viable option for funding large amounts of open source,
-but it will require a lot of work to get it there.
+This is a viable option for funding large amounts of open source,
+but it will require a lot of work.
 I'm happy to help,
 but it will really take motivated people to execute on this idea and make it happen.
 
@@ -131,6 +128,7 @@ I see the next steps being:
 * Figure out the proper entity to use (an existing non-profit, or a new one?)
 * Find a willing VC & Startup to do a test run
 * Iterate on what you learn, establishing standard processes for the next test run
+* Once you have a model that everyone is happy with, start expanding the program
 
 .. _most valuable part: https://medium.com/@nayafia/open-source-was-worth-at-least-143m-of-instagram-s-1b-acquisition-808bb85e4681
 .. _funding problem: https://www.fordfoundation.org/library/reports-and-studies/roads-and-bridges-the-unseen-labor-behind-our-digital-infrastructure/
