@@ -59,7 +59,7 @@ Monetary investment is required to make a real dent in this problem.
 A lot of places have "Open Source Fridays" and "20% time",
 but those programs are the first to be cut when a company has issues.
 They also mix incentives,
-where the work that gets done is valuable to the company and not the project.
+where the work that gets done is more valuable to the company than the project.
 We need a program that invests real money in the infrastructure that we use,
 with the projects themselves choosing their own direction.
 
