@@ -49,12 +49,18 @@ The biggest reason is because all parties involved benefit from open source.
 Secondly,
 having a concrete point in time also makes it much easier to define when the money should be invested.
 
+We have tried `many different methods`_ of sustainability in open source,
+but many of them are project specific and don't address the ecosystem.
+Having a systematic way of increasing investment to infrastructure across the entire industry is the only solution that will work in the long term.
 My focus on this program is to **increase the total revenue that all open source projects get**.
 Monetary investment is required to make a real dent in this problem. 
+
 A lot of places have "Open Source Fridays" and "20% time",
 but those programs are the first to be cut when a company has issues.
 Investing in open source as a lump sum during funding rounds makes sure the investment up front,
 where it can't be removed as an ongoing program.
+
+.. _many different methods: https://en.wikipedia.org/wiki/Business_models_for_open-source_software
 
 How should we implement it?
 ---------------------------
