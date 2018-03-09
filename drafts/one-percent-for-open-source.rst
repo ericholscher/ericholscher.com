@@ -10,15 +10,18 @@ From the programming languages to the web frameworks,
 the operating system to the cryptography,
 all of it is open source.
 
-Open source has a `funding problem`_.
-There are many `warning signs`_ that open source is an ecosystem in danger.
+Open source software is creating billions of dollars in value for startups and venture capitalists,
+but it has a `funding problem`_ for itself.
+There are not many ways for open source projects to capture the value that they create,
+while still being available to startup companies.
 
+There are many `warning signs`_ that open source is an ecosystem in danger.
 Open source is maintained for "free" by people all over the world,
 enabled by the internet (which is also built on open source).
 Many people doing this work are burning out,
 giving up,
 or just never getting involved in the first place.
-We need to improve the sustainability of open source in order to protect the valuable ecosystem that we have built,
+**We need to improve the sustainability of open source in order to protect the valuable ecosystem that we have built**,
 and help it grow in the future.
 
 Funding Open Source
@@ -84,7 +87,7 @@ Prior Art
 
 I have a few sources of inspiration for this idea:
 
-* `One Percent for the Planet`_ - I got the idea for a 1% investment from this wonderful non-profit.
+* `One Percent for the Planet`_ - They ask established companies to give 1% of their revenue to help invest in the planet. This model for sustainability of an ecosystem was my inspiration here.
 * Stripe's `open source retreat`_ - where they fund projects to work on specific features.
 * Mozilla's `open source support`_  - where they fund awards for projects that they use internally
 * Coinbase's `open source fund`_ - which is a monthly donation program
