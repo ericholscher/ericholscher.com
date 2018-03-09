@@ -34,7 +34,7 @@ Funding Open Source
 
 I'd like to propose an idea:
 
-    A program called **1% for open source**: A program where Veneure Capitalist's and startup companies agree to invest 1% of their funding round into the open source software that they use.
+    A program called **1% for open source**: A program where companies agree to invest 1% of their funding round or yearly profits into the open source software that they use.
 
 This is a win/win/win:
 
@@ -42,27 +42,14 @@ This is a win/win/win:
 * **Startups** invest in the tools that they use, to *ensure continued support and maintenance*, to remove risk from their future, and have better tools to build their company with. It will also make *hiring developers* much easier for the companies, because developers love companies that invest in open source.
 * **Open source projects** are able to *fund project management and maintenance* that is required to make them sustainable for the long term. This continues the *force multiplier* that open source has given to the software industry as a whole.
 
-Why Venture Capital investments?
---------------------------------
+Why is this a good solution?
+----------------------------
 
 The biggest reason is because all parties involved benefit from open source.
 Secondly,
 having a concrete point in time also makes it much easier to define when the money should be invested.
-Third,
-a set amount of money is already changing hands during an investment,
-so having 1% that money to go open source is easy.
 
-One notable downside of this approach is that this revenue source isn't consistent.
 My focus on this program is to **increase the total revenue that all open source projects get**.
-Once the money is in the projects,
-they can budget convervatively and create an ongoing cashflow.
-It's getting the money that is the part hard.
-
-Another downside is that there are 3 parties involved.
-**A version of this with public companies reinvesting 1% of their revenue in open source is also a valuable model to explore.**
-That would keep it between two parties (the companies and the projects),
-and it would be consistent yearly revenue.
-
 Monetary investment is required to make a real dent in this problem. 
 A lot of places have "Open Source Fridays" and "20% time",
 but those programs are the first to be cut when a company has issues.
