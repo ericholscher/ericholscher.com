@@ -127,3 +127,14 @@ I see the next steps being:
 * Find a willing VC or Company to do a test run
 * Iterate on what you learn, establishing standard processes for the next test run
 * Once you have a model that everyone is happy with, start expanding the program
+
+Thanks
+------
+
+Thanks to everyone who gave me feedback on this post:
+
+* David Fischer
+* Russell Keith-Magee
+* Nadia Eghbal
+* Sam Wright
+
