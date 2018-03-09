@@ -52,9 +52,8 @@ to make budgeting easier.
 
 We have tried `many different methods`_ of sustainability in open source,
 but many of them are project specific and don't address the ecosystem.
-Having a systematic way of increasing investment to infrastructure across the entire industry is the only solution that will work in the long term.
+Increasing investment in infrastructure across the entire industry is the only solution that will work in the long term.
 My focus on this program is to **increase the total revenue for the entire open source ecosystem**.
-Monetary investment is required to make a real dent in this problem.
 
 A lot of places have "Open Source Fridays" and "20% time",
 but those programs are the first to be cut when a company has issues.
