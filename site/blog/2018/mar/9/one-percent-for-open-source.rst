@@ -5,14 +5,13 @@ One Percent for Open Source
 ===========================
 
 The open source ecosystem is the `most valuable part`_ of the software industry today.
-All software companies today use open source software.
 From the programming languages to the web frameworks,
 the operating system to the cryptography,
-everyone is using open source.
+all software companies today use open source.
 
 Open source software is creating billions of dollars in value for companies and venture capitalists,
 but it has a `funding problem`_ for itself.
-There are not many ways for open source projects to capture the value that they create,
+There are not good ways for open source projects to capture the value that they create,
 while being available for free and providing the fertile ecosystem that companies are built on today.
 
 There are many `warning signs`_ that open source is an ecosystem in danger.
