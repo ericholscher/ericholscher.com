@@ -38,7 +38,7 @@ I'd like to propose an idea:
 This is a win/win/win:
 
 * **Companies** invest in the tools that they use to *ensure continued development and support*. The companies can also use their support of open source to make hiring good developers easier.
-* **Open source projects** are able to *fund project management and maintenance* that is required to make them sustainable for the long term. This continues the *force multiplier* that open source has given to the software industry as a whole.
+* **Open source projects** are able to *fund project management and maintenance* that is required to make them sustainable for the long term. The project then continues to be a *force multiplier* for the entire software industry.
 * **Venture Capitalists (VC's)** invest in the open source ecosystem that makes companies *much cheaper to build*. It's also *really good marketing* for the VC firms, to show they are investing in the common tools we all rely on.
 
 Why is this a good solution?
