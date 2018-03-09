@@ -10,18 +10,18 @@ From the programming languages to the web frameworks,
 the operating system to the cryptography,
 everyone is using open source.
 
-Open source software is creating billions of dollars in value for startups and Venture Capitalists,
+Open source software is creating billions of dollars in value for companies and Venture Capitalists,
 but it has a `funding problem`_ for itself.
 There are not many ways for open source projects to capture the value that they create,
-while being available for free and providing the furtile ecosystem that companies are built on today.
+while being available for free and providing the fertile ecosystem that companies are built on today.
 
 There are many `warning signs`_ that open source is an ecosystem in danger.
-Open source is maintained for "free" by people all over the world.
 Many people doing this work are `burning out`_,
 `giving up`_,
 or just never getting involved in the first place.
-**We need to improve the sustainability of open source in order to protect the valuable ecosystem that we have built**,
-and help it grow in the future.
+We need to improve the sustainability of open source to protect the valuable ecosystem that we have built.
+
+We need a new funding model for open source.
 
 .. _most valuable part: https://medium.com/@nayafia/open-source-was-worth-at-least-143m-of-instagram-s-1b-acquisition-808bb85e4681
 .. _funding problem: https://www.fordfoundation.org/library/reports-and-studies/roads-and-bridges-the-unseen-labor-behind-our-digital-infrastructure/
@@ -29,41 +29,27 @@ and help it grow in the future.
 .. _giving up: https://www.drmaciver.com/2015/08/throwing-in-the-towel/
 .. _burning out: https://thenewstack.io/darker-side-open-source/
 
-
 Funding Open Source
 -------------------
 
 I'd like to propose an idea:
 
-    A program called **1% for open source**: A program where Veneure Capitalist's and startup companies agree to invest 1% of their funding round into the open source software that they use.
+    A program called **1% for open source**: A program where companies agree to invest 1% of their funding round or yearly profits into the open source software that they use.
 
 This is a win/win/win:
 
 * **Venture Capitalists (VC's)** invest in the open source ecosystem that makes companies *much cheaper to build*. It's also *really good marketing* for the VC firms, to show they are investing in the common tools we all rely on.
-* **Startups** invest in the tools that they use, to *ensure continued support and maintenance*, to remove risk from their future, and have better tools to build their company with. It will also make *hiring developers* much easier for the companies, because developers love companies that invest in open source.
+* **Companies** invest in the tools that they use, to *ensure continued support and maintenance*, to remove risk from their future, and have better tools to build their company with. It will also make *hiring developers* much easier for the companies, because developers love companies that invest in open source.
 * **Open source projects** are able to *fund project management and maintenance* that is required to make them sustainable for the long term. This continues the *force multiplier* that open source has given to the software industry as a whole.
 
-Why Venture Capital investments?
---------------------------------
+Why is this a good solution?
+----------------------------
 
 The biggest reason is because all parties involved benefit from open source.
 Secondly,
 having a concrete point in time also makes it much easier to define when the money should be invested.
-Third,
-a set amount of money is already changing hands during an investment,
-so having 1% that money to go open source is easy.
 
-One notable downside of this approach is that this revenue source isn't consistent.
 My focus on this program is to **increase the total revenue that all open source projects get**.
-Once the money is in the projects,
-they can budget convervatively and create an ongoing cashflow.
-It's getting the money that is the part hard.
-
-Another downside is that there are 3 parties involved.
-**A version of this with public companies reinvesting 1% of their revenue in open source is also a valuable model to explore.**
-That would keep it between two parties (the companies and the projects),
-and it would be consistent yearly revenue.
-
 Monetary investment is required to make a real dent in this problem. 
 A lot of places have "Open Source Fridays" and "20% time",
 but those programs are the first to be cut when a company has issues.
@@ -73,18 +59,16 @@ where it can't be removed as an ongoing program.
 How should we implement it?
 ---------------------------
 
-The startup who has gotten the investment should invest 1% of the money from the VC firm into the open source projects that they use.
-
-There are many different ways this could be implemented as a lower level.
+The company should invest 1% of the money into the open source projects that they use. There are many different ways this could be implemented.
 A few of my ideas are:
 
-* Startup companies create a list of the OSS projects they use, using tools like http://libraries.io/, and then give money to the 10 largest projects that have a way to accept money. This could be done during the license compliance phase of the investment process.
+* Companies create a list of the OSS projects they use, using tools like http://libraries.io/, and then give money to the 10 largest projects that have a way to accept money. This could be done during the license compliance phase of the investment process.
 * There could be a new non-profit foundation created, which gets all the donations and then has established criteria for how to reinvest the money as grants.
 * You could give the money to the existing foundations that focus on the area of open source that is most valuable to you 
 
 Making the execution of the investment standard is an important part of making this actually happen.
 There should be standard processes and criteria for where your money will go,
-so that it's not adding additional overhead to your funding round.
+so that it's not adding additional overhead to companies who give back.
 
 A simple example for a Python project could be:
 
@@ -132,9 +116,6 @@ I see the next steps being:
 
 * Figure out the exact process for determining who gets money from a project
 * Figure out the proper entity to use (an existing non-profit, or a new one?)
-* Find a willing VC & Startup to do a test run
+* Find a willing VC or Company to do a test run
 * Iterate on what you learn, establishing standard processes for the next test run
 * Once you have a model that everyone is happy with, start expanding the program
-
-
-
