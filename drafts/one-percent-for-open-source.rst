@@ -5,24 +5,30 @@ One Percent for Open Source
 ===========================
 
 The open source ecosystem is the `most valuable part`_ of the software industry today.
-All of the companies and technologies that we build today are enabled by open source software.
+All software companies today use open source software.
 From the programming languages to the web frameworks,
 the operating system to the cryptography,
-all of it is open source.
+everyone is using open source.
 
 Open source software is creating billions of dollars in value for startups and Venture Capitalists,
 but it has a `funding problem`_ for itself.
 There are not many ways for open source projects to capture the value that they create,
-while still being available to startup companies.
+while being available for free and providing the furtile ecosystem that companies are built on today.
 
 There are many `warning signs`_ that open source is an ecosystem in danger.
-Open source is maintained for "free" by people all over the world,
-enabled by the internet (which is also built on open source).
-Many people doing this work are burning out,
-giving up,
+Open source is maintained for "free" by people all over the world.
+Many people doing this work are `burning out`_,
+`giving up`_,
 or just never getting involved in the first place.
 **We need to improve the sustainability of open source in order to protect the valuable ecosystem that we have built**,
 and help it grow in the future.
+
+.. _most valuable part: https://medium.com/@nayafia/open-source-was-worth-at-least-143m-of-instagram-s-1b-acquisition-808bb85e4681
+.. _funding problem: https://www.fordfoundation.org/library/reports-and-studies/roads-and-bridges-the-unseen-labor-behind-our-digital-infrastructure/
+.. _warning signs: https://gist.github.com/jdorfman/099954cffd018d0ca2037a1a0f86026f
+.. _giving up: https://www.drmaciver.com/2015/08/throwing-in-the-towel/
+.. _burning out: https://thenewstack.io/darker-side-open-source/
+
 
 Funding Open Source
 -------------------
@@ -129,10 +135,6 @@ I see the next steps being:
 * Find a willing VC & Startup to do a test run
 * Iterate on what you learn, establishing standard processes for the next test run
 * Once you have a model that everyone is happy with, start expanding the program
-
-.. _most valuable part: https://medium.com/@nayafia/open-source-was-worth-at-least-143m-of-instagram-s-1b-acquisition-808bb85e4681
-.. _funding problem: https://www.fordfoundation.org/library/reports-and-studies/roads-and-bridges-the-unseen-labor-behind-our-digital-infrastructure/
-.. _warning signs: https://gist.github.com/jdorfman/099954cffd018d0ca2037a1a0f86026f
 
 
 
