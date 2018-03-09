@@ -133,8 +133,8 @@ Thanks
 
 Thanks to everyone who gave me feedback on this post:
 
+* Samuel Wright
 * David Fischer
 * Russell Keith-Magee
 * Nadia Eghbal
-* Sam Wright
 
