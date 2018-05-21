@@ -10,9 +10,11 @@ I work on `Read the Docs <https://readthedocs.org>`_ and `Write the Docs <http:/
 I care a lot about documentation in the software industry,
 and really hope to raise the profile of it as part of my work.
 
-I have previously lived in Lawrence, Kansas for 2.5 years from May 2008-Dec 2010. I lived the rest of my life in Virginia, migrating from the Shennendoah Valley, to Virginia Beach for high school, then to Fredericksburg for college.
+I have previously lived in Lawrence, Kansas for 2.5 years from May 2008-Dec 2010.
+I lived the rest of my life in Virginia,
+migrating from the Shennendoah Valley,
+to Virginia Beach for high school,
+then to Fredericksburg for college at the University of Mary Washington.
 
-I've previously worked at these awesome companies:
-
-    * Urban Airship
-    * Lawrence Journal-World
+You can read more about my work history in my :doc:`/resume`,
+and other hobbies on this site.
