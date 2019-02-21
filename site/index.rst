@@ -32,6 +32,7 @@ Information
     consulting
     interviews
     books
+    digital-nomad/index
 
 Activities
 ^^^^^^^^^^
