@@ -36,10 +36,8 @@ pygments_style = 'sphinx'
 html_theme_path = [alabaster.get_path()]
 html_theme = 'alabaster'
 html_sidebars = {
-    '*': ['logo.html', 'about.html', 'localtoc.html', 'searchbox.html'],
+    '**': ['logo.html', 'about.html', 'localtoc.html', 'searchbox.html'],
     'blog/**': ['blog_logo.html', 'postcard.html', 'about.html'],
-    'consulting': ['logo.html'],
-    'roadmap': ['logo.html'],
 }
 html_title = blog_title
 html_favicon = '_static/img/favicon.ico'
