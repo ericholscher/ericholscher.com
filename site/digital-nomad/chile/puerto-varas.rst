@@ -1,6 +1,9 @@
 Digital Nomad Guide to Puerto Varas, Chile
 ==========================================
 
+.. note:: Check out `Puerto Varas Wikivoyage <https://en.wikivoyage.org/wiki/Puerto_Varas>`_ for general tourist info.
+          This guide focuses on experiencing it as a digital nomad.
+
 Puerto Varas is a lovely little resort town.
 It has a population of around 50,000,
 but the small, dense downtown has more than you'd expect for that size.
@@ -14,7 +17,8 @@ and a Santander Work/Cafe (though it heavily blocks internet, including GitHub).
 Transit
 -------
 
-Buses go everywhere
+Buses go everywhere you need to go. 
+You can catch them across from the tourist office in downtown.
 
 Best Cafes
 ----------
