@@ -40,7 +40,7 @@ Best Cafes
 Weekends
 --------
 
-* Cochamo is an amazing place that looks like Yosemite. Great for hiking and climbing. **Make reservations for camping in advance in the high season**.
-* Chiloe island is a laid back place, worth a long weekend
-* Fruillar is close by (~30 minute bus) with another nice tourist area.
-* Bariloche, Argentina is just over the border, and you can hike there in a week if you want
+* **Cochamo** is an amazing place that looks like Yosemite. Great for hiking and climbing. **Make reservations for camping in advance in the high season**.
+* **Chiloe island** is a laid back place, worth a long weekend
+* **Frutillar** is close by (~30 minute bus) with another nice tourist area.
+* **Bariloche, Argentina** is just over the border, and you can hike there in a week if you want
