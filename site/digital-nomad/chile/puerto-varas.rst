@@ -1,7 +1,7 @@
 Digital Nomad Guide to Puerto Varas, Chile
 ==========================================
 
-:updated: February, 2019
+:updated: February 2019
 
 .. note:: Check out `Puerto Varas Wikivoyage <https://en.wikivoyage.org/wiki/Puerto_Varas>`_ for general tourist info.
           This guide focuses on experiencing it as a digital nomad.
