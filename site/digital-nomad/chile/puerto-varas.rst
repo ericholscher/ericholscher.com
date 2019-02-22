@@ -24,14 +24,18 @@ Best Cafes
 ----------
 
 * `Cafe Esquina <https://goo.gl/maps/YHPyfXQXzDw>`_
+
   - Wifi: 50Mbps
   - Food: Good coffee, decent lunch specials and menu
   - Cost: Medium/High
+  - Rating: 9/10
 
 * `Cafe Puerto Madero <https://goo.gl/maps/QJT3HJ2rPMN2>`_
+
   - Wifi: 20Mbps
   - Food: Pastries, decent lunch specials
   - Cost: Medium
+  - Rating: 6/10
 
 Weekends
 --------
