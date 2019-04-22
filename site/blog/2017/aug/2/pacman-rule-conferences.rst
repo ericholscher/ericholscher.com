@@ -60,7 +60,13 @@ the group should now readjust to leave another space for a new person.
 It reduces the feeling of there being cliques,
 and allows people to integrate themselves into the community.
 
-.. seealso:: My follow up post on :ref:`Pac-Man++ Rule<pac-man-plus-rule>`.
+Dylan Beattie has made a wonderful video that captures this quite well:
+
+.. raw:: html
+
+	<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Going to a conference? Yes! Introduce yourself. Say hello. Chat to people. They&#39;re lovely. Really! And if you&#39;re already chatting in a group, make your group approachable using <a href="https://twitter.com/ericholscher?ref_src=twsrc%5Etfw">@ericholscher</a>&#39;s Pac-Man Rule. <br><br>Here&#39;s how it works.<br><br>Have fun! <a href="https://t.co/QklklD43Me">pic.twitter.com/QklklD43Me</a></p>&mdash; Dylan Beattie 🇪🇺 (@dylanbeattie) <a href="https://twitter.com/dylanbeattie/status/1111619036809449472?ref_src=twsrc%5Etfw">March 29, 2019</a></blockquote>
+	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 
 Your mission
 ------------
