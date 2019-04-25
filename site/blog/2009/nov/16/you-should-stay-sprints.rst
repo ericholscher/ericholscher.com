@@ -22,13 +22,12 @@ new and interesting ideas. At the end of the day, your brain is
 saturated, and then the dinner and the nights happen. The
 unofficial reason to go to a conference is **networking**.
 Networking is such a crappy term though, I view it more as
-**drinking and making friends**. I now consider lots of
-ridiculously smart people friends from late night conference
-experiences.
+**hanging out and making friends**. I now consider lots of
+ridiculously smart people friends from conference outings.
 
 So now the conference is coming to an end, you have learned a ton,
 and you have met a ton of great new people. It all seems so short,
-and you're sad that you have to go home. **WRONG**. This is
+and you're sad that you have to go home. Nope. This is
 precisely the time that you want to stay and enjoy things more!
 That's what Sprints are for.
 
@@ -38,10 +37,10 @@ working with these awesome people, on problems that you care about,
 **in person**. You can take all of the knowledge that you have
 gained, all the ideas that you have had, and put **pen to paper**.
 
-The guy that gave the talk that inspired your idea, when you get
+The person that gave the talk that inspired your idea, when you get
 stuck, is sitting across the table from you. The people that you
-took shots of whiskey with 3 nights ago are helping you debug
-something in the Django Admin. You are helping your new crazy
+hung out with 3 nights ago is helping you debug
+something in the Django Admin. You are helping your new 
 friends conquer the concurrent turtle conundrum rife with GILs. You
 are absorbing the vibrant energy that emerges from rooms full of
 motivated, passionate, people **getting shit done**.
