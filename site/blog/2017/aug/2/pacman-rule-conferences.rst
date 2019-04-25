@@ -60,6 +60,9 @@ the group should now readjust to leave another space for a new person.
 It reduces the feeling of there being cliques,
 and allows people to integrate themselves into the community.
 
+Video
+-----
+
 Dylan Beattie has made a wonderful video that captures this quite well:
 
 .. raw:: html
