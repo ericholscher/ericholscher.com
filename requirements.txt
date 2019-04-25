@@ -1,4 +1,4 @@
-ablog==0.8.4
-Sphinx==1.5.2
+ablog==0.9.4
+Sphinx==1.8.5
 sphinx-autobuild
 
