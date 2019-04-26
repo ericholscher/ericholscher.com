@@ -63,7 +63,9 @@ and allows people to integrate themselves into the community.
 Video
 -----
 
-Dylan Beattie has made a wonderful video that captures this quite well:
+Dylan Beattie has made a wonderful video that captures this quite well.
+
+* :download:`Download video as an mp4 </_static/the-pac-man-rule.mp4>`
 
 .. raw:: html
 
