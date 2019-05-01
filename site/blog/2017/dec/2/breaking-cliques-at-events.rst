@@ -22,7 +22,7 @@ They are able to help newcomers understand the norms and standards of a place.
 **This means that long-time attendees should be the ones introducing themselves to first-time attendees.**
 
 With that in mind,
-I drafted a new concept that I think assigns the concept properly.
+I came up with a new rule that properly assigns the responsibility.
 
 .. _pac-man-plus-rule:
 
@@ -31,11 +31,11 @@ The Katamari Rule [#]_
 
 The rule is:
 
-    **For every year you have attended the event, you should try to meet that many new people each day.**
+    **For every year you have attended an event, you should try to meet that many new people each day.**
 
 An example makes it clear:
     
-    If you have attended this event for *three years*, you should try to meet *three new people* each day.
+    If you have attended an event for *three years*, you should try to meet *three new people* each day.
 
 .. seealso:: My original post on the :ref:`pac-man-rule` for another useful event rule
 
