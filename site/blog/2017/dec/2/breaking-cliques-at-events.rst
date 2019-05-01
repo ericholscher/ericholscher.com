@@ -26,8 +26,8 @@ I drafted a new concept that I think assigns the concept properly.
 
 .. _pac-man-plus-rule:
 
-The Community++ Rule [#]_
--------------------------
+The Katamari Rule [#]_
+----------------------
 
 The rule is:
 
