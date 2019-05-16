@@ -26,7 +26,7 @@ I came up with a new rule that properly assigns the responsibility.
 
 .. _pac-man-plus-rule:
 
-The Katamari Rule [#]_
+The Snowball Rule [#]_
 ----------------------
 
 The rule is:
