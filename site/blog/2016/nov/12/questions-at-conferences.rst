@@ -30,7 +30,7 @@ If there are 250 people in the room,
 each minute of the talk is over 4 hours of combined time.
 **When you offer up a microphone to anyone in the audience,
 you are now offering 4 hours of peoples life to an unaudited question and answer that likely only provides value to a small minority of attendees.**
-This is not a good use of anyones time,
+This is not a good use of anyone's time,
 and often audiences feel trapped in a talk room during Q&A time.
 
 Better approaches
