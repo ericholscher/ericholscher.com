@@ -1,7 +1,7 @@
 .. post:: Dec 2, 2017
    :tags: conferences, inclusion, cliques, rules, python
 
-Breaking Cliques at Events
+Breaking Cliques at Events: The Snowball Rule
 ==============================================
 
 I've been going to professional events for a number of years,
@@ -26,8 +26,8 @@ I came up with a new rule that properly assigns the responsibility.
 
 .. _pac-man-plus-rule:
 
-The Snowball Rule [#]_
-----------------------
+The Snowball Rule
+-----------------
 
 The rule is:
 
@@ -80,6 +80,5 @@ and really build the valuable professional networks that we all need to be happy
 
 .. rubric:: *Footnotes*
 
-.. [#] The name is temporary, happy for suggestions!
 .. [#] Thanks to `Jacob Kaplan-Moss <http://jacobian.org/>`_ for feedback,
        particularly around ideas on making things easier.
