@@ -22,25 +22,27 @@ Welcome Wagon Guide
 -------------------
 
 One major part of the Welcome Wagon is our `guide`_.
-It is a comprehensive set of information that covers:
+It acts as documentation on our community,
+a User Guide for the conference.
+It covers:
 
-* Common asked questions, like "How should I dress?" and "Where is everything?"
+* Common questions, like "How should I dress?" and "Where is everything?"
 * How to plan your time at the conference
 * What is expected of you while you're at the conference
 * Tips and tricks for having the best time at the event
 
-This is basically a frequently asked questions for the conference itself.
-It answers attendees most common questions *before the event*,
+We answer attendees most common questions before the event,
 making it more explicit what is expected of them and how they can make sure to enjoy themselves.
+This reduces anxiety and also makes it more likely that people will have a good first experience with our community.
 
 .. _guide: https://www.writethedocs.org/conf/portland/2019/welcome-wagon/
 
 Welcome Wagon Events
 --------------------
 
-The second major part of the Welcome Wagon is a set of events at the conference.
-We have a couple people who are the actual humans that are the "Welcome Wagon",
-and they lead the formal events at the conference.
+The second major part of the Welcome Wagon is a set of events at the conference itself.
+We have a team who are the humans that are the "Welcome Wagon",
+and they lead the events at the conference.
 Their picture is also in the guide to make it easy to find them at the event.
 
 Currently we do:
@@ -49,8 +51,10 @@ Currently we do:
 * Venue tours the evening before and morning of the conference
 * We also invite the attendees to ask the Welcome Wagon team questions any time throughout the conference
 
-These events allow us to meet with new community members in-person at the conferences.
-We are able to explain to them in a different format a bit more about how to get the most out of the conference.
+The goal of these events is to introduce the Welcome Wagon team to people,
+as well as to explain how the conference and community works.
+Attendees will ask the Welcome Wagon team questions throughout the conference,
+because they know their faces and that they will be helpful.
 
 Run a Welcome Wagon
 -------------------
