@@ -78,8 +78,6 @@ You can also look at our examples from our 2019 conferences in order to get a be
 Credits
 -------
 
-TODO: Check name spelling
-
 I wrote this blog post,
 but the Welcome Wagon wasn't my idea.
 It was created by Christy Lutz and Leona Campbell at our Portland conference.
