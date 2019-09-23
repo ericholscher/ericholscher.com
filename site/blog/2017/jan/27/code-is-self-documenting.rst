@@ -55,7 +55,7 @@ I have a few rhetorical questions about this philosophy:
 
 * Where does the tutorial go in your self-documenting code?
 * How do you put installation instructions in your variable names?
-* How many users does your self-documenting code have?
+* What do the answers to questions from your users go in the code?
 
 Developers only thinking about developers when they are working on software is a problem.
 A vast majority of software users are not people who develop that software.
