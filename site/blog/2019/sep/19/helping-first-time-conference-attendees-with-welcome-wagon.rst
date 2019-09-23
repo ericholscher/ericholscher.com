@@ -10,19 +10,19 @@ not knowing what is expected of you when you enter a new place.
 
 It's stressful to enter a new group without knowing what to expect.
 It breeds anxiety and self-doubt,
-and makes it much more likely you'll find excuses not to join.
+and makes it much less likely you'll join any activities.
 
 At Write the Docs,
 we're working to reduce the possibility of this happening.
-We have a program that we call the Welcome Wagon,
-that helps attendees at both the planning and the attending stage of the conference.
-We hope that this makes it much easier for them to interact and get the most value out of being in our community.
+We do this with the Welcome Wagon program,
+which helps attendees at both the planning and the attending stages of the conference.
+We hope that this breaks down barriers to help them get the most value from our community.
 
 Welcome Wagon Guide
 -------------------
 
 One major part of the Welcome Wagon is our `guide`_.
-It acts as documentation on our community,
+It documents how to successfully navigate our community. It's basically
 a User Guide for the conference.
 It covers:
 
@@ -32,7 +32,7 @@ It covers:
 * Tips and tricks for having the best time at the event
 
 We answer attendees most common questions before the event,
-making it more explicit what is expected of them and how they can make sure to enjoy themselves.
+making expectations more explicit and enabling people to focus on enjoying their time instead of spending it worrying.
 This reduces anxiety and also makes it more likely that people will have a good first experience with our community.
 
 .. _guide: https://www.writethedocs.org/conf/portland/2019/welcome-wagon/
@@ -41,19 +41,19 @@ Welcome Wagon Events
 --------------------
 
 The second major part of the Welcome Wagon is a set of events at the conference itself.
-We have a team who are the humans that are the "Welcome Wagon",
-and they lead the events at the conference.
-Their picture is also in the guide to make it easy to find them at the event.
+We have a team who are the humans who are the "Welcome Wagon",
+and they lead the Welcome Wagon events at the conference.
+You will find their pictures in the guide to make it easy to recognize them at the event.
 
-Currently we do:
+Currently we:
 
-* An introduction the evening before the conference
-* Venue tours the evening before and morning of the conference
-* We also invite the attendees to ask the Welcome Wagon team questions any time throughout the conference
+* Provide an introduction the evening before the conference
+* Give venue tours the evening before and the morning of the conference
+* Invite the attendees to ask the Welcome Wagon team questions any time throughout the conference
 
 The goal of these events is to introduce the Welcome Wagon team to people,
-as well as to explain how the conference and community works.
-Attendees will ask the Welcome Wagon team questions throughout the conference,
+as well as to explain how the conference and community work.
+Attendees can ask the Welcome Wagon team questions throughout the conference,
 because they know their faces and that they will be helpful.
 
 Run a Welcome Wagon
