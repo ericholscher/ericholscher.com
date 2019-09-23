@@ -1,4 +1,4 @@
-Helping First-Time Conference Attendees with the Welcome Wagon
+Using a Welcome Wagon to Help First-Time Conference Attendees
 ==============================================================
 
 You walk into the room and you're wearing the *wrong* thing.
