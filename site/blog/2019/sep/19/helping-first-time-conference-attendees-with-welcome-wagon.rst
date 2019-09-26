@@ -1,5 +1,5 @@
 Using a Welcome Wagon to Help First-Time Conference Attendees
-==============================================================
+=============================================================
 
 You walk into the room and you're wearing the *wrong* thing.
 Everyone else is dressed casually,
@@ -12,11 +12,13 @@ It's stressful to enter a new group without knowing what to expect.
 It breeds anxiety and self-doubt,
 and makes it much less likely you'll join any activities.
 
-At Write the Docs,
-we're working to reduce the possibility of this happening.
+At `Write the Docs`_,
+we're working to make the community easier to join because we want everyone to feel welcome.
 We do this with the Welcome Wagon program,
 which helps attendees at both the planning and the attending stages of the conference.
 We hope that this breaks down barriers to help them get the most value from our community.
+
+.. _Write the Docs: https://www.writethedocs.org/
 
 Welcome Wagon Guide
 -------------------
@@ -26,7 +28,7 @@ It documents how to successfully navigate our community. It's basically
 a User Guide for the conference.
 It covers:
 
-* Common questions, like "How should I dress?" and "Where is everything?"
+* Common questions, like "How do I take part in the unconference?" and "Where is everything?"
 * How to plan your time at the conference
 * What is expected of you while you're at the conference
 * Tips and tricks for having the best time at the event
