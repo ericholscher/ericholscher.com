@@ -24,8 +24,8 @@ Welcome Wagon Guide
 -------------------
 
 One major part of the Welcome Wagon is our `guide`_.
-It documents how to successfully navigate our community. It's basically
-a User Guide for the conference.
+It documents how to successfully navigate our community.
+It's basically a *User Guide* for the conference.
 It covers:
 
 * Common questions, like "How do I take part in the unconference?" and "Where is everything?"
@@ -74,6 +74,7 @@ You can also look at our examples from our 2019 conferences in order to get a be
 * `Portland 2019 Welcome Wagon`_ 
 * `Prague 2019 Welcome Wagon`_ 
 
+.. _organizer guide: http://www.writethedocs.org/organizer-guide/confs/welcome-wagon/
 .. _Portland 2019 Welcome Wagon: https://www.writethedocs.org/conf/portland/2019/welcome-wagon/
 .. _Prague 2019 Welcome Wagon: https://www.writethedocs.org/conf/prague/2019/welcome-wagon/
 
@@ -86,4 +87,3 @@ It was created by Christy Lutz and Leona Campbell at our Portland conference.
 We have been working to refine it over the years,
 and I'm just hoping to promote it so other people can learn from our work.
 
-.. _organizer guide: http://www.writethedocs.org/organizer-guide/confs/welcome-wagon/
