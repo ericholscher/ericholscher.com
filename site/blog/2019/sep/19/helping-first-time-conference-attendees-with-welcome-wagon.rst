@@ -1,3 +1,6 @@
+.. post:: Sep 26, 2019
+   :tags: conference, welcome-wagon, inclusion
+
 Using a Welcome Wagon to Help First-Time Conference Attendees
 =============================================================
 
