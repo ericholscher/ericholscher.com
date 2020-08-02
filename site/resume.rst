@@ -3,7 +3,7 @@ Résumé
 
 | Eric Holscher
 | eric@ericholscher.com
-| Portland, Oregon, Cascadia
+| Portland, Oregon
 | https://github.com/ericholscher
 
 Interests
@@ -18,55 +18,32 @@ Open Source Projects
 
 * Read the Docs - http://readthedocs.org
 
-    * Role: Primary maintainer for over 3 years
-    * Over 10,000 projects & 9 million page views a month
+    * Role: Primary maintainer since 2010
+    * Over 100,000 projects & 20 million page views/month (see `our yearly stats post <https://blog.readthedocs.com/archive/tag/year-in-review/>`_ for latest data)
     * Standard documentation hosting for Python community
 
-* Write the Docs Documentation - http://docs.writethedocs.org/
+* Write the Docs Conferences - http://www.writethedocs.org/
 
-    * Role: Maintainer and primary author
-    * A resource for people who want to write documentation
+    * Role: Co-founder and primary organizer of Portland conference
+    * 3 global conferences, Slack network with 8,000+ members, newsletter with 8,000+ subscribers, meetups on 4 continents
+    * See latest stats on `our yearly blog post <https://www.writethedocs.org/blog/archive/tag/year-in-review/>`_
 
-* Django - https://www.djangoproject.com/
+* Python Software Foundation - https://www.python.org/psf-landing/
 
-    * Role: Contributor and operations staff
-    * Help keep the main website and documentation up and functioning
-
-* Fellow at the Python Software Foundation
-
-Conferences
------------
-
-* Chair of the Write the Docs conference - http://conf.writethedocs.org
-* 2013 - Portland - 225 attendees
-* 2014 EU - Budapest - 100 attendees 
-* 2015 EU - Prague - 150 attendees 
-* 2016 EU - Prague - 225 attendees 
-* 2014 NA - Portland - 300 attendees 
-* 2015 NA - Portland - 350 attendees 
-* 2016 NA - Portland - 400 attendees 
-
-Speaking
----------
-
-Spoken at the following conferences on Read the Docs, IRC bots, Testing, and Documentation:
-
-* Keynote - Pycon Colombia 2017
-* Keynote - PyCaribbean 2016
-* Djangocon US 2015, 2011, 2010
-* Open Source & Feelings  2015
-* Keynote - Pycon Malaysia 2014
-* Pycon Phillipines 2014
-* Mulitple meetups across Taiwan in 2014
-* Open Source Bridge 2012, 2011
-* Pycon Web Summit 2012
-* OSCON 2011
-* Djangocon EU 2010, 2009
-
-More information available on Lanyrd: http://lanyrd.com/profile/ericholscher/past/speaking/
+    * Role: Board member from 2017-2020. Chair of Funding Working Group
+    * Work to expand funding access and success of Python infrastructure globally
 
 Work Experience
 ----------------
+
+August 2010-Current
+~~~~~~~~~~~~~~~~~~~
+
+Read the Docs
+`````````````
+
+* See `above <#open-source-projects>`_ for primary roles and impact
+* It has been my "day job" since 2014.
 
 January 2013 - July 2013
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -97,6 +74,25 @@ Lawrence Journal-World - Developer
 
 * The birthplace of Django, maintaining the world's oldest Django codebase
 * Worked as Lead developer and defacto sysadmin for the "Internal" team
+
+Speaking
+---------
+
+Spoken at the following conferences on Read the Docs, IRC bots, Testing, and Documentation:
+
+* Keynote - Pycon Colombia 2017
+* Keynote - PyCaribbean 2016
+* Djangocon US 2015, 2011, 2010
+* Open Source & Feelings  2015
+* Keynote - Pycon Malaysia 2014
+* Pycon Phillipines 2014
+* Mulitple meetups across Taiwan in 2014
+* Open Source Bridge 2012, 2011
+* Pycon Web Summit 2012
+* OSCON 2011
+* Djangocon EU 2010, 2009
+
+More information available on my website: https://www.ericholscher.com/speaking/
 
 Education
 ---------
