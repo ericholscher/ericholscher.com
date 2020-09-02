@@ -26,22 +26,12 @@ can easily be installed:
      apt-get install graphviz
      easy_install Werkzeug
 
-Video and Download
-~~~~~~~~~~~~~~~~~~
-
-A high-res version of the video is available
-`here <http://media.ericholscher.com/casts/Django%20Command%20Extensions.mov>`_
-(mov 21MB)
-
+Video
+~~~~~
 
 .. raw:: html
 
-   <object width="640" height="500">   
-   
-
-.. raw:: html
-
-   </object>
+    <div style="padding:78.57% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1720508" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
    
 Django Command Extensions from Eric Holscher on Vimeo.
 
