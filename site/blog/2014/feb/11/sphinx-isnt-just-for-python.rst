@@ -33,8 +33,8 @@ so here is a small sample of projects using Sphinx for things that aren't docume
 Creating your own language
 --------------------------
 
-* Julia: http://docs.julialang.org/en/release-0.2/
-* Hy: http://docs.hylang.org/en/latest/
+* Julia: https://docs.julialang.org/en/v1/
+* Hy: https://docs.hylang.org/en/stable/
 
 Javascript
 ----------
@@ -45,7 +45,7 @@ Javascript
 PHP
 ---
 
-* Doctrine 2: http://docs.doctrine-project.org/en/latest/
+* Doctrine 2: https://www.doctrine-project.org/projects/doctrine-orm/en/2.7/index.html
 * phpMyAdmin: http://docs.phpmyadmin.net/en/latest/
 * Guzzle: http://docs.guzzlephp.org/en/latest/
 * Phalcon: http://docs.phalconphp.com/en/latest/
@@ -60,7 +60,7 @@ Java
 Go
 --
 
-* Docker: http://docs.docker.io/en/latest/
+* Docker: https://docs.docker.com/
 
 
 Erlang
