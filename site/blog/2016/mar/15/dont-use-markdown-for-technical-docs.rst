@@ -3,6 +3,14 @@
 Why You Shouldn't Use "Markdown" for Documentation
 ==================================================
 
+.. note::
+
+   The blog post below is kept for historical reasons,
+   but lots of things have changed in the ecosystem since 2016.
+   In particular, `MyST-Parser <https://myst-parser.readthedocs.io/>`_
+   provides a way to write rich Markdown in Sphinx
+   with a syntax that extends CommonMark and supports its roles and directives.
+
 `"Markdown"`_ is the most commonly used lightweight markup language on the internet.
 It is great for a subset of tasks,
 mainly blog posts and commenting.
