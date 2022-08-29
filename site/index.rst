@@ -4,15 +4,18 @@ Home
 
 Welcome to the home of Eric Holscher on the web. 
 
-I am the co-founder of `Read the Docs <https://readthedocs.org>`_ and `Write the Docs <http://www.writethedocs.org>`_,
-where I work to elevate the status of documentation in the software industry.
-The main content here is my blog,
-which covers various topics around documentation,
-Python,
-Django,
-and conference organizing.
+I am the co-founder of `Read the Docs <https://readthedocs.org>`_, 
+`Write the Docs <http://www.writethedocs.org>`_,
+and `EthicalAds <https://www.ethicalads.io/>`__.
 
-I currently live in Portland, Oregon,
+My work has historically been around software documentation,
+but lately it has also verged into privacy and open source sustainability.
+
+The main content here is my blog,
+which isn't as active as I'd like,
+but there are a lot of useful old posts.
+
+I currently live in Bend, Oregon,
 and love to explore the outdoors.
 Whether on bike or foot,
 I spend as much time as possible out and about,
