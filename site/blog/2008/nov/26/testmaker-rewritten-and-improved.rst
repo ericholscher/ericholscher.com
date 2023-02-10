@@ -8,7 +8,7 @@ About a week ago, I went ahead and re-wrote
 it into my
 `django-test-utils <http://github.com/ericholscher/django-test-utils/tree/master>`_
 project on github. The syntax is now a bit different, and the whole
-thing is much improved. This is version 0.2. The `screencast <>`_
+thing is much improved. This is version 0.2. The screencast
 from the last release still shows the gist of the project, except
 for the changed syntax.
 

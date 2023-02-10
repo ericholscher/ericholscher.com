@@ -1,7 +1,7 @@
 .. post:: 2013-11-11 20:00:00
 
 Codes of Conduct, an Organizers Perspective
-==========================================
+===========================================
 
 I helped organize my first conference last year,
 `Write the Docs`_.

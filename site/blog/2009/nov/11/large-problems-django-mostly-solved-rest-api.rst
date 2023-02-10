@@ -25,7 +25,7 @@ of it with ease.
 Piston
 ~~~~~~
 
-`Piston <http://bitbucket.org/jespern/django-piston/>`_ has three
+Piston has three
 major philosophical concepts that are important; Resources,
 Handlers, and Emitters. A Resource is the "thing" that you are
 trying to represent in your API, the domain object. This could be a

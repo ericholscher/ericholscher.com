@@ -134,7 +134,7 @@ Are you using Haystack?
 If I'm preaching to the choir and you already use Haystack, there
 is a `growing list <http://haystacksearch.org/docs/who_uses.html>`_
 of users that are using haystack.
-`Daniel <http://toastdriven.com/>`_ would love for you to contact
+Daniel would love for you to contact
 him, and get yourself added to the list.
 
 Did I miss anything?

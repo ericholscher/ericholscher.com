@@ -4,15 +4,6 @@
 An introduction to Sphinx and Read the Docs for Technical Writers
 =================================================================
 
-.. 
-	Bio: Eric Holscher is the co-founder of Read the Docs and a co-organizer of the Write the Docs conference.
-	Along with community organizing and open source work,
-	he does consulting around software documentation and speaks at a number of industry events each year.
-	When he isn't expressing his views on software docs, he's getting views from the top of mountains.
-
-.. note:: Please send any feedback you have to me about this article!
-          I'd love to help expand and explain it better if possible.
-
 Treating documentation as code is becoming a major theme in the software industry.
 This is coming from both sides,
 with developers starting to treat documentation as a priority alongside tests and code,
@@ -198,7 +189,7 @@ More info on the ``toctree`` can be found here:
 * http://www.sphinx-doc.org/en/stable/markup/toctree.html
 
 Working with Code
-`````````````````
+-----------------
 
 Showing code examples is a common task in all documentation.
 Sphinx is quite well prepared for this task.
@@ -241,7 +232,7 @@ You can see the full documentation for them on the Sphinx website:
 * http://www.sphinx-doc.org/en/stable/markup/code.html
 
 Working with References
-```````````````````````
+-----------------------
 
 A powerful reference system is a large part of the power of Sphinx.
 You are able to reference arbitrary headings and paragraphs in your content,
@@ -283,7 +274,7 @@ You see the complete set of references in the Sphinx documentation:
 * Intersphinx - http://www.sphinx-doc.org/en/stable/ext/intersphinx.html
 
 Including comments form source code
-```````````````````````````````````
+-----------------------------------
 
 Integration with code is one of the largest benefits of Sphinx.
 You can easily embed software comments from multiple languages,

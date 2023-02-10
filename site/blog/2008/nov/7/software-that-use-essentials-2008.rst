@@ -198,7 +198,7 @@ Apps in the Cloud
    I'll check out the front page something, but the programming
    section seems to have some quality content a majority of the time.
    The `Python <http://www.reddit.com/r/python/>`_ and
-   `Django <http://www.reddit.com/r/django/>`_ sections also have a
+   `Django subreddit <http://www.reddit.com/r/django/>`_ sections also have a
    decent signal to noise ratio.
 -  `Hacker News <http://news.ycombinator.com/>`_ - I don't use
    reddit or HN that much, but Hacker news consistently has

@@ -337,7 +337,7 @@ Use a 3-level template hierarchy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This is referenced in the
-`Django docs <http://docs.djangoproject.com/en/dev/topics/templates/#id1>`_(about
+`Django docs <http://docs.djangoproject.com/en/dev/topics/templates/#id1>`_ (about
 a page down). But it works really well to do a base.html,
 app-base.html, and then templates on top of that. This gives you a
 really nice way to contain site-wide, app-wide, and view-wide

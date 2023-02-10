@@ -1,5 +1,5 @@
-Favorite Books
-==============
+Books I've liked
+================
 
 Here are some of my favorite books that I've read.
 I've written a bit about why I've enjoyed each one.
@@ -8,7 +8,7 @@ So good they can't ignore you
 -----------------------------
 
 :by: Cal Newport
-:link: `Goodreads <http://www.goodreads.com/book/show/13525945-so-good-they-can-t-ignore-you>`_
+:link: `Goodreads <http://www.goodreads.com/book/show/13525945-so-good-they-can-t-ignore-you>`__
 
 One in books that I love is that they take something I've intuitively understood,
 and give me concrete terms and concepts to describe it.
@@ -34,7 +34,7 @@ The Outsiders
 -------------
 
 :by: William N. Thorndike
-:link: `Goodreads <http://www.goodreads.com/book/show/13586932-the-outsiders>`_
+:link: `Goodreads <http://www.goodreads.com/book/show/13586932-the-outsiders>`__
 
 This book covers the unconventional approach of the 8 CEO's with the best stock market returns ever.
 I read it at a time when I was trying to understand more how to manage money ('capital allocation'),
@@ -47,7 +47,7 @@ Shoe Dog
 --------
 
 :by: Phil Knight
-:link: `Goodreads <https://www.goodreads.com/book/show/27220736-shoe-dog>`_
+:link: `Goodreads <https://www.goodreads.com/book/show/27220736-shoe-dog>`__
 
 I loved this book,
 as it tells the story behind the creation of Nike.
