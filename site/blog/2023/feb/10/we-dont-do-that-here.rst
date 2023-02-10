@@ -18,14 +18,18 @@ high cost, social anxiety, and lack of representation are the ones that I think 
 As organizers we need to be working to improve the spaces that we are responsible for,
 and I'd like to share one powerful idea.
 
-Tools for enforcing community norms
+
 -----------------------------------
 
 I came across another wonderful rule that I wanted to write about here.
+It's probably best to share a quote from the original blog post,
+so you can get a sense of the idea:
 
 .. epigraph::
 
-   If no one has told you yet, as your career in tech progresses you will eventually become a “custodian of culture.” If you run a meetup or a team, if you lead an open source project, or if you organize an event people will be looking to you to know what is and isn’t okay in that space. You get this responsibility whether you want it or not. You don’t have to be internet famous to have this responsibility. If there are people you work with who have been around for less time than you, then you are going to help set the culture for them.
+   If no one has told you yet, as your career in tech progresses you will eventually become a "custodian of culture.” If you run a meetup or a team, if you lead an open source project, or if you organize an event people will be looking to you to know what is and isn't okay in that space. You get this responsibility whether you want it or not. [...]
+
+   This is when I pull out "we don't do that here.” It is a conversation ender. If you are the newcomer and someone who has been around a long time says "we don't do that here”, it is hard to argue. This sentence doesn't push my morality on anyone. If they want to do whatever it is elsewhere, I'm not telling them not to.
 
    -- **Aja Hammerly**, `We don't do that here <https://thagomizer.com/blog/2017/09/29/we-don-t-do-that-here.html>`_
 
