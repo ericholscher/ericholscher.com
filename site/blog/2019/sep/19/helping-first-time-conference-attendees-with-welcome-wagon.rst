@@ -90,3 +90,8 @@ It was created by Christy Lutz and Leona Campbell at our Portland conference.
 We have been working to refine it over the years,
 and I'm just hoping to promote it so other people can learn from our work.
 
+.. seealso::
+
+   * :doc:`/blog/2017/aug/2/pacman-rule-conferences`
+   * :doc:`/blog/2019/sep/19/helping-first-time-conference-attendees-with-welcome-wagon`
+   * :doc:`/blog/2023/feb/10/we-dont-do-that-here`

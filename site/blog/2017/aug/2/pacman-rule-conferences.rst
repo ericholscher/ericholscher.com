@@ -82,3 +82,11 @@ Invite new people into your groups,
 make new friends,
 and build a community full of people who feel included.
 We all benefit.
+
+.. seealso::
+
+   * :doc:`/blog/2017/dec/2/breaking-cliques-at-events`
+   * :doc:`/blog/2019/sep/19/helping-first-time-conference-attendees-with-welcome-wagon`
+   * :doc:`/blog/2023/feb/10/we-dont-do-that-here`
+
+

@@ -76,6 +76,12 @@ and really build the valuable professional networks that we all need to be happy
 
 **Giving everyone at the event the direction to meet new people makes it much easier to meet new people.**
 
+.. seealso::
+
+   * :doc:`/blog/2017/aug/2/pacman-rule-conferences`
+   * :doc:`/blog/2019/sep/19/helping-first-time-conference-attendees-with-welcome-wagon`
+   * :doc:`/blog/2023/feb/10/we-dont-do-that-here`
+
 -----
 
 .. rubric:: *Footnotes*
