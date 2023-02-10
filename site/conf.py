@@ -18,9 +18,9 @@ blog_authors = {
 blog_default_author = "Eric"
 
 blog_locations = {
-    "PDX": ("Portland, Oregon", "http://www.portlandhikersfieldguide.org/"),
+    "Oregon": ("Oregon", "https://www.oregonhikers.org/field_guide/Main_Page"),
 }
-blog_default_location = "PDX"
+blog_default_location = "Oregon"
 fontawesome_link_cdn = (
     "https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"
 )
