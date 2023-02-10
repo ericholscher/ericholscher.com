@@ -8,11 +8,12 @@ extensions = [
     "sphinx.ext.intersphinx",
     "hoverxref.extension",
     "notfound.extension",
+    "sphinxext.opengraph",
 ]
 blog_title = "Eric Holscher"
 blog_path = "blog/archive"
 blog_baseurl = "http://ericholscher.com"
-post_date_format = '%b %d %Y'
+post_date_format = "%b %d %Y"
 
 # blog_authors = {
 #     "Eric": ("Eric Holscher", "http://ericholscher.com"),
