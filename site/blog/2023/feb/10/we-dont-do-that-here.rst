@@ -1,5 +1,6 @@
 .. post:: Feb 10, 2023
-   :tags: conference, inclusion
+   :tags: conference, inclusion, python
+   :category: conference-organizing
 
 `We don't do that here`: Setting social norms
 =============================================

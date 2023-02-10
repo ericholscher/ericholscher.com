@@ -12,15 +12,18 @@ extensions = [
 blog_title = "Eric Holscher"
 blog_path = "blog/archive"
 blog_baseurl = "http://ericholscher.com"
-blog_authors = {
-    "Eric": ("Eric Holscher", "http://ericholscher.com"),
-}
-blog_default_author = "Eric"
+post_date_format = '%b %d %Y'
 
-blog_locations = {
-    "Oregon": ("Oregon", "https://www.oregonhikers.org/field_guide/Main_Page"),
-}
-blog_default_location = "Oregon"
+# blog_authors = {
+#     "Eric": ("Eric Holscher", "http://ericholscher.com"),
+# }
+# blog_default_author = "Eric"
+
+# blog_locations = {
+#     "Oregon": ("Somewhere, Oregon", "https://www.oregonhikers.org/field_guide/Main_Page"),
+# }
+# blog_default_location = "Oregon"
+
 fontawesome_link_cdn = (
     "https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"
 )

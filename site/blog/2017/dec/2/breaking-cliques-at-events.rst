@@ -1,5 +1,6 @@
 .. post:: Dec 2, 2017
    :tags: conferences, inclusion, cliques, rules, python
+   :category: conference-organizing
 
 Breaking Cliques at Events: The Snowball Rule
 ==============================================
