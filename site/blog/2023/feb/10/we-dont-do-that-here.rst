@@ -52,7 +52,7 @@ My first attempt at making a rule from this concept is:
    As a person with a position of power,
    it's your responsibility to enforce community standards.
    Start by setting a good example of how a community member should act,
-   but "We don't do that here" is a powerful tool for shutting down negative behavior.
+   but `We don't do that here` is a powerful tool for shutting down negative behavior.
 
 `We don't do that here` allows you to reinforce culture in a way that can't be argued.
 However,
