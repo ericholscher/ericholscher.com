@@ -49,8 +49,6 @@ when used by someone in a position of cultural power.
 
 My first attempt at making a rule from this concept is:
 
-.. epigraph::
-
    As a person with a position of power,
    it's your responsibility to enforce community standards.
    Start by setting a good example of how a community member should act,
