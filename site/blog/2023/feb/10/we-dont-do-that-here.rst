@@ -1,6 +1,6 @@
 .. post:: Feb 10, 2023
    :tags: conference, inclusion, python
-   :category: conference-organizing
+   :category: social-ruleos
 
 `We don't do that here`: Setting social norms
 =============================================
@@ -13,11 +13,12 @@ but they have never been equally accessible to all people.
 As organizers we need to be working to improve the spaces that we are responsible for,
 and I'd like to share one powerful concept that can help.
 
------------------------------------
+A powerful tool for settings norms
+----------------------------------
 
-I came across another wonderful concept,
+I came across the concept of using `We don't do that here` as a backstop for settings norms,
 and I'm thinking about how we can apply it at `Write the Docs <https://www.writethedocs.org/>`_ events.
-Here is a quote from the original blog post,
+Here is a quote from the blog post where I heard this idea,
 so you can get a sense of the idea:
 
 .. epigraph::
@@ -39,11 +40,11 @@ I've written in the past about the value of having people dedicated to setting c
 most recently in :doc:`/blog/2015/oct/16/the-importance-of-being-welcoming`.
 The most powerful way to set culture is by being a good, positive example.
 Our Welcome Wagon does a wonderful job of this,
-showing how to be a welcoming and open member of a community.
+showing by example how to be a welcoming and open member of a community.
 
 That said,
-you sometimes need to be able to shut down behavior without wiggle room.
-"We don't do that here" is a powerful tool,
+you sometimes need to be able to shut down behavior as well.
+`We don't do that here` is a powerful tool,
 when used by someone in a position of cultural power.
 
 My first attempt at making a rule from this concept is:
@@ -53,18 +54,19 @@ My first attempt at making a rule from this concept is:
    As a person with a position of power,
    it's your responsibility to enforce community standards.
    Start by setting a good example of how a community member should act,
-   but "We don't do that here" is a wonderful tool for shutting down negative behavior.
+   but "We don't do that here" is a powerful tool for shutting down negative behavior.
 
-"We don't do that here" allows you to reinforce culture in a way that can't be argued.
+`We don't do that here` allows you to reinforce culture in a way that can't be argued.
 However,
-it fully depends on your position within the community to set the norms of the community.
+it fully depends on your position of power,
+to set the norms of the community.
 Being able to use it effectively,
-the community needs to agree ahead of time on what the standard are.
-This can often be the hardest part.
+the community needs to agree ahead of time on what the standards are.
+Deciding on a shared community vision for this can often be the hardest part.
 
 You must define and enforce community standards if you wish to grow a healthy community.
-"We don't do this here" is a powerful tool to keep,
-for the rare situation when you need it.
+`We don't do this here` is a powerful tool to keep,
+for the (hopefully) rare situation when you need it.
 
 Examples
 --------
@@ -78,7 +80,10 @@ so you have a good understanding of how to use this in a social setting.
    Them: “But I was trying to be funny.”
    Me (shrugging): “That isn’t relevant. We don’t do that here.”
 
-Read Aja's `full post <https://thagomizer.com/blog/2017/09/29/we-don-t-do-that-here.html>`_ for other examples.
+This is a wonderful example of being an ally,
+someone who speaks up to ensure that the space is more welcoming.
+
+Read the `full post <https://thagomizer.com/blog/2017/09/29/we-don-t-do-that-here.html>`_ for other examples.
 
 Further reading
 ---------------
