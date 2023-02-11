@@ -1,66 +1,65 @@
-****
 Home
-****
+====
 
-Welcome to the home of Eric Holscher on the web. 
+Welcome to my website.
+This page is primarily about my work,
+with a few hobbies thrown in.
 
-I am the co-founder of `Read the Docs <https://readthedocs.org>`_, 
+Quick bio
+---------
+
+Eric is the co-founder of `Read the Docs <https://readthedocs.org>`_, 
 `Write the Docs <http://www.writethedocs.org>`_,
 and `EthicalAds <https://www.ethicalads.io/>`__.
 
-My work has historically been around software documentation,
-but lately it has also verged into privacy and open source sustainability.
+His work has historically been around software documentation,
+but he's also been actively engaged in community building and open source sustainability for over 15 years.
 
-The main content here is my blog,
-which isn't as active as I'd like,
-but there are a lot of useful old posts.
-
-I currently live in Bend, Oregon,
-and love to explore the outdoors.
-Whether on bike or foot,
-I spend as much time as possible out and about,
+He currently lives in Bend, Oregon,
+and love to explore the outdoors,
 checking out the various beauty that the world holds.
+
+Information
+------------
 
 Below you can find out more information about me,
 and the various professional projects I'm a part of.
 
-Information
-^^^^^^^^^^^
 
 .. toctree::
     :maxdepth: 1
 
+    blog/index
     about
     speaking
-    consulting
     interviews
-    books
-    digital-nomad/index
-
-Activities
-^^^^^^^^^^
-
-.. toctree::
-    :maxdepth: 1
-
-    bike
-    backpacking
 
 Blog Entries
-^^^^^^^^^^^^
+------------
 
-.. postlist:: 
+Here are my 10 latest posts:
+
+.. postlist:: 10
    :date: %b %d, %Y
    :list-style: circle
-   :format: {date} - {title}
+   :format: {title} - {date}
+   :excerpts:
+
+See :doc:`all blog entries ➡ </blog/index>` 
+
 
 
 .. toctree::
     :maxdepth: 1
     :hidden:
     
-    pct/index
+    backpacking
+    bike
+    books
+    consulting
+    digital-nomad/index
     favorites
+    pct/index
     projects
     resume
-
+    roadmap
