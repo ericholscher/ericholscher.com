@@ -73,10 +73,11 @@ Aja's post had a couple good examples.
 I'll include one here,
 so you have a good understanding of how to use this in a social setting.
 
-   Them: Tells an off-color joke.
-   Me: “We don’t do that here.”
-   Them: “But I was trying to be funny.”
-   Me (shrugging): “That isn’t relevant. We don’t do that here.”
+
+   | Them: Tells an off-color joke.
+   | Me: “We don’t do that here.”
+   | Them: “But I was trying to be funny.”
+   | Me (shrugging): “That isn’t relevant. We don’t do that here.”
 
 This is a wonderful example of being an ally,
 someone who speaks up to ensure that the space is more welcoming.
