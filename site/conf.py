@@ -14,6 +14,7 @@ blog_title = "Eric Holscher"
 blog_path = "blog/archive"
 blog_baseurl = "http://ericholscher.com"
 post_date_format = "%b %d %Y"
+notfound_urls_prefix = None
 
 # blog_authors = {
 #     "Eric": ("Eric Holscher", "http://ericholscher.com"),
