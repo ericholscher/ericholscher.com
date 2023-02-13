@@ -15,6 +15,11 @@ blog_path = "blog/archive"
 blog_baseurl = "http://ericholscher.com"
 post_date_format = "%b %d %Y"
 notfound_urls_prefix = None
+ogp_social_cards = {
+    "line_color": "#4078c0",
+    "image": "_static/img/headshot-circle.png",
+}
+
 
 # blog_authors = {
 #     "Eric": ("Eric Holscher", "http://ericholscher.com"),
