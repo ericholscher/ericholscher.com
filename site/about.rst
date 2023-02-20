@@ -18,10 +18,10 @@ make sure to :doc:`leave room for others </blog/2017/aug/2/pacman-rule-conferenc
 Background
 -----------
 
-I currently lives in Bend, Oregon.
+I currently live in Bend, Oregon.
 
 I lived in Portland, Oregon from 2011-2018,
-drawn to the beautiful Pacific Northwest by it's lovely mountains,
+drawn to the beautiful Pacific Northwest by its lovely mountains,
 and the west coast tech industry.
 In 2019 and 2020,
 I tried the digital nomad life,
