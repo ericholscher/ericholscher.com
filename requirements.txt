@@ -105,7 +105,7 @@ sphinxcontrib-serializinghtml==1.1.5
     # via sphinx
 sphinxext-opengraph==0.8.1
     # via -r requirements.in
-tornado==6.2
+tornado==6.3.2
     # via livereload
 urllib3==1.26.14
     # via requests
