@@ -3,6 +3,8 @@
 Why You Shouldn't Use "Markdown" for Documentation
 ==================================================
 
+.. note:: This post was written in 2016, and the landscape here has changed. I still mostly agree with what is important, but the "Markdown" ecosystem has evolved and gotten other capabilities that might change the calculus of what is the right tool for your organization.
+
 `"Markdown"`_ is the most commonly used lightweight markup language on the internet.
 It is great for a subset of tasks,
 mainly blog posts and commenting.
