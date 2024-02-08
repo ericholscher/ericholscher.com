@@ -1,6 +1,6 @@
 .. post:: Feb 10, 2023
    :tags: conference, inclusion, python
-   :category: social-ruleos
+   :category: social-rules
 
 `We don't do that here`: Setting social norms
 =============================================
