@@ -25,6 +25,8 @@ You can catch them across from the tourist office in downtown.
 Best Cafes
 ----------
 
+.. note:: Sadly, both of these cafes have closed.
+
 * `Cafe Esquina <https://goo.gl/maps/YHPyfXQXzDw>`_
 
   - Wifi: 50Mbps
