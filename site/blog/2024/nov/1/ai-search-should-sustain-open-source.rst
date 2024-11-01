@@ -12,7 +12,7 @@ Historically the sustainability model that has worked the best is:
 * Publish open source and get a lot of users
 * Put advertising on your website, docs, and other web properties
 * Let Google index it for free
-* Have Google send traffic, which is monetized by `(ethical)<https://www.ethicalads.io/>`_ ads
+* Have Google send traffic, which is monetized by `(ethical) <https://www.ethicalads.io/>`_ ads
 
 This is obviously not a model that works for many open source projects,
 and requires large scale to work.
