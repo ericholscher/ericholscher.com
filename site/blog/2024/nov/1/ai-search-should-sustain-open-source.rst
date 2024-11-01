@@ -7,17 +7,17 @@ AI search should sustain open source, not just index it
 
 Open source funding has been a long standing issue,
 and something that I have been working on for almost 15 years now.
-Historically the model that has worked the best is:
+Historically the sustainability model that has worked the best is:
 
 * Publish open source and get a lot of users
 * Put advertising on your website, docs, and other web properties
 * Let Google index it for free
 * Have Google send traffic, which is monetized by `(ethical)<https://www.ethicalads.io/>`_ ads
 
-`Funding open source with advertising <https://www.ericholscher.com/blog/2016/aug/31/funding-oss-marketing-money/>`_ is a reasonable model,
-which is also how the news and other publishing industries have worked.
-However, it requires a large scale to even support a part-time developer,
-so we need to find additional revenue streams that scale.
+This is obviously not a model that works for many open source projects,
+and requires large scale to work.
+`Funding open source with advertising <https://www.ericholscher.com/blog/2016/aug/31/funding-oss-marketing-money/>`_ is a model that aligns incentives well,
+but we need to find additional revenue streams to make more projects sustainable.
 
 AI search: paying for content
 -----------------------------
