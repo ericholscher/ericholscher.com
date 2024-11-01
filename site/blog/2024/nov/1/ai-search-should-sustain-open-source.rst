@@ -79,7 +79,8 @@ This could enable a model that looks like:
 
 * Publish open source, write great docs, and get some users
 * AI companies pay for this content to be able to search it and use it in their models
-* AI search drives traffic to your site, which still probably has ads
+* AI models use this content to be able to provide better suggestions
+* AI search drives traffic to your site, which still monetizes with ads
 
 This would be a more sustainable model for open source projects,
 and importantly,
