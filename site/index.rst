@@ -1,38 +1,20 @@
 Home
 ====
 
-Welcome to my website.
-This page is primarily about my work,
-with a few hobbies thrown in.
+Welcome to my personal website.
+This is mostly a place to put my blog posts,
+with a few other things thrown in when I get excited about them.
 
-Quick bio
----------
-
-Eric is the co-founder of `Read the Docs <https://readthedocs.org>`_, 
-`Write the Docs <http://www.writethedocs.org>`_,
-and `EthicalAds <https://www.ethicalads.io/>`__.
-
-His work has historically been around software documentation,
-but he's also been actively engaged in community building and open source sustainability for over 15 years.
-
-He currently lives in Bend, Oregon,
-and love to explore the outdoors,
-checking out the various beauty that the world holds.
-
-Information
-------------
-
-Below you can find out more information about me,
-and the various professional projects I'm a part of.
-
+Contents
+--------
 
 .. toctree::
     :maxdepth: 1
 
     blog/index
     about
-    speaking
     interviews
+    speaking
 
 Blog Entries
 ------------

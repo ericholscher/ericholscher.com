@@ -1,16 +1,19 @@
 About me
 ========
 
-Bio
----
+Quick bio
+---------
 
-Eric is the co-founder of `Read the Docs <https://readthedocs.org>`_, 
+Eric is the co-founder of `Read the Docs <https://about.readthedocs.com/>`_, 
 `Write the Docs <http://www.writethedocs.org>`_,
 and `EthicalAds <https://www.ethicalads.io/>`__.
 
-He works full-time trying to improve the state of documentation in the software industry.
-As part of that work,
-he has also worked heavily in community organizing and open source sustainability.
+His work has historically been around software documentation,
+but he's also been actively engaged in community building and open source sustainability for over 15 years.
+
+He currently lives in Bend, Oregon,
+and love to explore the outdoors,
+checking out the various beauty that the world holds.
 
 If you run into him at an event,
 make sure to :doc:`leave room for others </blog/2017/aug/2/pacman-rule-conferences>` to join while you talk :)
