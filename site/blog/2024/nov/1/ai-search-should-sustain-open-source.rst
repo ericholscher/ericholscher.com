@@ -50,6 +50,26 @@ but it required a lot of traffic for any project to get real revenue.
 If we can find multiple revenue streams for open source projects,
 it would lower the size of project that would become sustainable.
 
-An initiative like this would also likely increase the standing of the AI companies in the tech community,
-where many people love their products,
-but are skeptical of the usage of IP is foundational to their business model.
+This could enable a model that looks like:
+
+* Publish open source, write great docs, and get some users
+* AI companies pay for this content to be able to search it and use it in their models
+* AI search drives traffic to your site, which still probably has ads
+
+AI companies need developer good will and open source code
+----------------------------------------------------------
+
+A lot of open source programmers didn't understand that training AI models would be a major use of their code when they chose their license.
+**This could lead to a longer term reduction in the amount of open source,
+and slow down the overall progress of the software industry.**
+I argued a while back of the `importance of open source for VC and startups <https://www.ericholscher.com/blog/2018/mar/9/one-percent-for-open-source/>`_,
+and this is very much true for AI companies as well.
+
+Putting some of the AI gold rush money into open source would achieve two important goals:
+
+* Increase the standing of the AI companies in the tech community, where many people love their products, but are skeptical of the usage of IP is foundational to their business model.
+* Increase the likelihood that more open source software is created, which sustains the ability of the models to be trained into the future.
+
+Outcomes of large structural changes in industry are hard to predict,
+but there need to be new incentives for people to create open source,
+otherwise we risk the foundations that the modern software industry is built on.
