@@ -1,5 +1,6 @@
 .. post:: Mar 9, 2018
    :tags: python, opensource, sustainability, sustain
+   :category: sustainability
 
 One Percent for Open Source
 ===========================
