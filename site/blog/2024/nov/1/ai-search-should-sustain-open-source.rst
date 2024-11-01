@@ -2,8 +2,8 @@
    :tags: open-source, sustainability, ai, python
    :category: sustainability
 
-AI search should sustain open source
-====================================
+AI search should sustain open source, not just index it
+=======================================================
 
 Open source funding has been a long standing issue,
 and something that I have been working on for almost 15 years now.
