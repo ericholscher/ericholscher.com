@@ -14,12 +14,11 @@ blog_title = "Eric Holscher"
 blog_path = "blog/archive"
 blog_baseurl = "http://ericholscher.com"
 post_date_format = "%b %d %Y"
-notfound_urls_prefix = None
+notfound_urls_prefix = ''
 ogp_social_cards = {
     "line_color": "#4078c0",
     "image": "_static/img/headshot-circle.png",
 }
-
 
 # blog_authors = {
 #     "Eric": ("Eric Holscher", "http://ericholscher.com"),
@@ -65,7 +64,7 @@ html_static_path = ["_static"]
 
 intersphinx_mapping = {"sphinx": ("http://www.sphinx-doc.org/en/stable/", None)}
 
-# html_css_files = ["eric.css"]
+# html_css_files = ["eric]
 
 hoverxref_auto_ref = True
 hoverxref_roles = ["numref", "confval", "setting"]
