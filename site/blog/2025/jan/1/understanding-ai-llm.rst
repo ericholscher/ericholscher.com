@@ -9,7 +9,7 @@ I've been getting more and more excited about Large Language Models (LLMs) latel
 and have been inspired by `Simon Willison's <https://simonwillison.net/2024/Dec/22/link-blog/>`_ call for more people to do link blogging.
 
 As I've read more into the subject, I've come to understand concepts like *Embeddings*,
-and even discussed how to `operationalize them in Django <https://www.ethicalads.io/blog/2024/04/using-embeddings-in-production-with-postgres-django-for-niche-ad-targeting/>`_.
+and even discussed how to `use them in Django <https://www.ethicalads.io/blog/2024/04/using-embeddings-in-production-with-postgres-django-for-niche-ad-targeting/>`_.
 
 However, there was still a significant gap in my understanding of how transformers work.
 I've watched a few YouTube videos and read several posts trying to clarify things.
