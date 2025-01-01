@@ -24,7 +24,7 @@ and I particularly loved this image:
    :alt: Understanding AI's explanation of Large Language Models
    :width: 80%
    :align: center
-   :target: https://www.understandingai.org/p/large-language-models-explained-with
+   :target: https://www.understandingai.org/i/135476638/transforming-word-vectors-into-word-predictions
 
 The post overall is a great introduction,
 and I recommend reading the whole thing.
