@@ -13,7 +13,7 @@ blog_title = "Eric Holscher"
 blog_path = "blog/archive"
 blog_baseurl = "http://ericholscher.com"
 post_date_format = "%b %d %Y"
-notfound_urls_prefix = ''
+post_show_prev_next = False
 ogp_social_cards = {
     "line_color": "#4078c0",
     "image": "_static/img/headshot-circle.png",
@@ -50,12 +50,13 @@ html_sidebars = {
     "**": [
         "logo.html",
         "ablog/postcard.html",
-        "localtoc.html",
         "about.html",
         "searchbox.html",
         "ablog/archives.html",
     ],
 }
+# globaltoc_collapse = False
+
 html_title = blog_title
 html_favicon = "_static/img/favicon.ico"
 html_static_path = ["_static"]

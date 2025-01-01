@@ -1,3 +1,5 @@
+:orphan:
+
 .. image:: /_static/img/backpack.jpg
    :height: 300px
 

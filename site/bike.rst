@@ -1,3 +1,5 @@
+:orphan:
+
 .. image:: /_static/img/bike.jpg
    :height: 300px
 

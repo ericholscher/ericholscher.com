@@ -1,3 +1,5 @@
+:orphan:
+
 Digital Nomad Guide
 ===================
 

@@ -1,3 +1,5 @@
+:orphan:
+
 Pacific Crest Trail
 ===================
 

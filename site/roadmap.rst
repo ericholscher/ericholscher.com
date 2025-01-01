@@ -1,3 +1,5 @@
+:orphan:
+
 Not sure what documentation tool to choose?
 ===========================================
 
