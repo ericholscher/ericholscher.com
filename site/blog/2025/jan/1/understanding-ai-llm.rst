@@ -20,11 +20,13 @@ The best resource I found was this post from Understanding AI:
 This post covers the topic in a really clear way,
 and I particularly loved this image:
 
-.. image:: /_static/img/transformers.png
+.. figure:: /_static/img/transformers.png
    :alt: Understanding AI's explanation of Large Language Models
    :width: 80%
    :align: center
    :target: https://www.understandingai.org/i/135476638/transforming-word-vectors-into-word-predictions
+
+   Overview of how transformers work
 
 The post overall is a great introduction,
 and I recommend reading the whole thing.
