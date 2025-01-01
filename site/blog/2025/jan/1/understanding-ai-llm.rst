@@ -1,3 +1,7 @@
+.. post:: Jan 1, 2025
+   :tags: link-blogging, llm, transformers
+   :category: links
+
 The best introduction to LLM's I've found
 =========================================
 
