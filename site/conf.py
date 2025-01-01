@@ -6,7 +6,6 @@ import ablog
 extensions = [
     "ablog",
     "sphinx.ext.intersphinx",
-    "hoverxref.extension",
     "notfound.extension",
     "sphinxext.opengraph",
 ]
@@ -37,8 +36,7 @@ blog_feed_fulltext = True
 blog_feed_length = 10
 blog_feed_archives = True
 
-templates_path = ["_templates", ablog.get_html_templates_path()]
-source_suffix = ".rst"
+templates_path = ["_templates"]
 master_doc = "index"
 project = blog_title
 copyright = " Eric Holscher"
@@ -51,11 +49,11 @@ html_theme = "alabaster"
 html_sidebars = {
     "**": [
         "logo.html",
-        "postcard.html",
+        "ablog/postcard.html",
         "localtoc.html",
         "about.html",
         "searchbox.html",
-        "archives.html",
+        "ablog/archives.html",
     ],
 }
 html_title = blog_title
@@ -63,15 +61,3 @@ html_favicon = "_static/img/favicon.ico"
 html_static_path = ["_static"]
 
 intersphinx_mapping = {"sphinx": ("http://www.sphinx-doc.org/en/stable/", None)}
-
-# html_css_files = ["eric]
-
-hoverxref_auto_ref = True
-hoverxref_roles = ["numref", "confval", "setting"]
-hoverxref_role_types = {
-    "hoverxref": "modal",
-    "ref": "modal",  # for hoverxref_auto_ref config
-    "confval": "tooltip",  # for custom object
-    "mod": "tooltip",  # for Python Sphinx Domain
-    "class": "tooltip",  # for Python Sphinx Domain
-}
