@@ -1,33 +1,30 @@
 .. post:: Jan 1, 2025
-   :tags: link-blogging, llm, transformers
-   :category: links
+   :tags: llm, transformers
+   :category: link-blog
 
-The best introduction to LLM's I've found
-=========================================
+The Best Introduction to LLMs I've Found
+========================================
 
-I've been getting more and more excited about Large Language Models lately,
+I've been getting more and more excited about Large Language Models (LLMs) lately,
 and have been inspired by `Simon Willison's <https://simonwillison.net/2024/Dec/22/link-blog/>`_ call for more people to do link blogging.
 
-As I've read more into the subject, I've understood things like Embeddings,
-and even talked about how to `operationalize them in Django <https://www.ethicalads.io/blog/2024/04/using-embeddings-in-production-with-postgres-django-for-niche-ad-targeting/>`_.
+As I've read more into the subject, I've come to understand concepts like *Embeddings*,
+and even discussed how to `operationalize them in Django <https://www.ethicalads.io/blog/2024/04/using-embeddings-in-production-with-postgres-django-for-niche-ad-targeting/>`_.
 
-There was still a pretty large gap in my understanding of how transformers worked though,
-and I've watched a few Youtube videos and read posts trying to clarify things.
+However, there was still a significant gap in my understanding of how transformers work.
+I've watched a few YouTube videos and read several posts trying to clarify things.
 The best resource I found was this post from Understanding AI:
 
-> `Large language models, explained with a minimum of math and jargon
- <https://www.understandingai.org/p/large-language-models-explained-with>`_
+   `Large language models, explained with a minimum of math and jargon <https://www.understandingai.org/p/large-language-models-explained-with>`_
 
 This post covers the topic in a really clear way,
-and I really loved this image:
+and I particularly loved this image:
 
-.. figure:: /img/transformers.png
+.. image:: /_static/img/transformers.png
    :alt: Understanding AI's explanation of Large Language Models
-   :width: 400px
+   :width: 80%
    :align: center
    :target: https://www.understandingai.org/p/large-language-models-explained-with
-
-   Understanding AI's explanation of Large Language Models
 
 The post overall is a great introduction,
 and I recommend reading the whole thing.
