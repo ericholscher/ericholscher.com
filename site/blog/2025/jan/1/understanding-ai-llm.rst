@@ -28,3 +28,6 @@ and I particularly loved this image:
 
 The post overall is a great introduction,
 and I recommend reading the whole thing.
+
+It seems fitting that my first link blog post of 2025 is about LLMs,
+and inspired in multiple ways by Simon :)
