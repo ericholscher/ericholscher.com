@@ -10,8 +10,13 @@ and it often comes with a loss of identity.
 It's hard to see folks who have been strongly defined by their job lose that identity,
 and not have a good sense of how to replace it.
 
-This is a great article from the founder of Loom, Vinay Hiremath,
+This is an article from the founder of Loom, Vinay Hiremath,
 which talks about this exact issue.
+He wanders between multiple different areas to focus,
+and ends up still not really knowing what to do with his life.
+It's an interesting salve to the idea that money will solve all your problems.
+It seems like he still doesn't know what will solve his,
+but it's a perennial question that many people face.
 
 > So I decided to go to the redwoods and figure it out.
 
