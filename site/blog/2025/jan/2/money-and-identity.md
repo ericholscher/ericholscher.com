@@ -10,8 +10,6 @@ and it often comes with a loss of identity.
 It's hard to see folks who have been strongly defined by their job lose that identity,
 and not have a good sense of how to replace it.
 
-> **[I am rich and have no idea what to do with my life](https://vinay.sh/i-am-rich-and-have-no-idea-what-to-do-with-my-life/)**
-
 This is a great article from the founder of Loom, Vinay Hiremath,
 which talks about this exact issue.
 
@@ -22,6 +20,8 @@ which talks about this exact issue.
 > What is the point of money if it not for freedom?
 
 > What is your most scarce resource if not time?
+
+> \- **[I am rich and have no idea what to do with my life](https://vinay.sh/i-am-rich-and-have-no-idea-what-to-do-with-my-life/)**
 
 This reminds me of the book [Psychology of Money](https://www.goodreads.com/book/show/49989169-the-psychology-of-money) from Morgan Housel,
 which I highly recommend.
