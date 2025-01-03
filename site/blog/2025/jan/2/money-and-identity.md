@@ -23,7 +23,7 @@ which talks about this exact issue.
 
 > \- **[I am rich and have no idea what to do with my life](https://vinay.sh/i-am-rich-and-have-no-idea-what-to-do-with-my-life/)**
 
-This reminds me of the book [Psychology of Money](https://www.goodreads.com/book/show/49989169-the-psychology-of-money) from Morgan Housel,
+This reminds me of the book [Psychology of Money](https://www.amazon.com/gp/product/0857199099/) from Morgan Housel,
 which I highly recommend.
 It talks about similar themes around money,
 and validates a lot of my own personal views on the topic,
