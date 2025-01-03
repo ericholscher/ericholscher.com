@@ -19,6 +19,7 @@ ogp_social_cards = {
     "line_color": "#4078c0",
     "image": "_static/img/headshot-circle.png",
 }
+notfound_urls_prefix = '/'
 
 # blog_authors = {
 #     "Eric": ("Eric Holscher", "http://ericholscher.com"),
