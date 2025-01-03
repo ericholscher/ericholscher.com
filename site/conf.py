@@ -8,6 +8,7 @@ extensions = [
     "sphinx.ext.intersphinx",
     "notfound.extension",
     "sphinxext.opengraph",
+    "myst_parser",
 ]
 blog_title = "Eric Holscher"
 blog_path = "blog/archive"

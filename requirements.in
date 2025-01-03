@@ -3,3 +3,4 @@ Sphinx
 sphinx-autobuild
 sphinx-notfound-page
 sphinxext-opengraph
+myst-parser
