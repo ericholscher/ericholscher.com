@@ -1,10 +1,8 @@
 ```{post} Jan 03, 2025
-:tags: databases, llms
 :category: link-blog
 ```
 
 # 2024 Tech Wrapups
-
 
 ## Databases
 
