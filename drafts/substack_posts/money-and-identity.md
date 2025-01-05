@@ -1,6 +1,8 @@
 ```{post} Jan 02, 2025
-:category: blog
+:category: link-blog
 ```
+
+# Money and Identity
 
 I've seen more and more people in my life retire lately, and it often
 comes with a loss of identity. It's hard to see folks who have been
