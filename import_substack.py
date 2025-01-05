@@ -35,8 +35,8 @@ for entry in feed.entries:
     # Convert HTML to Markdown
     convert_html_to_md(entry.content[0].value, md_file)
     
-    # Add metadata to the Markdown file
+    # Add metadata and title to the Markdown file
     with open(md_file, 'r+') as md:
         content = md.read()
         md.seek(0, 0)
-        md.write(create_metadata(entry) + '\n' + content)
+        md.write(create_metadata(entry) + '\n' + f"# {entry.title}\n\n" + content)

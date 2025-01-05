@@ -1,6 +1,8 @@
 ```{post} Jan 01, 2025
-:category: blog
+:category: link-blog
 ```
+
+# The Best Introduction to LLMs I’ve Found
 
 I've been getting more and more excited about Large Language Models
 (LLMs) lately, and have been inspired by [Simon
