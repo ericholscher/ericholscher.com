@@ -62,5 +62,3 @@ html_sidebars = {
 html_title = blog_title
 html_favicon = "_static/img/favicon.ico"
 html_static_path = ["_static"]
-
-intersphinx_mapping = {"sphinx": ("http://www.sphinx-doc.org/en/stable/", None)}

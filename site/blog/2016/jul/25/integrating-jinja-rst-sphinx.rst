@@ -23,7 +23,7 @@ The Extension
 -------------
 
 Most of the power of Sphinx comes from the ability to plug into any part of the documentation building process.
-Sphinx has an exhaustive list of :ref:`sphinx:events`,
+Sphinx has an exhaustive list of `Sphinx events <https://www.sphinx-doc.org/en/master/extdev/event_callbacks.html>`_,
 which I recommend reading up on.
 This extension will use the ``source-read`` hook,
 which fires when the actual RST file is read from the disk.
