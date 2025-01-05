@@ -3,6 +3,9 @@
 :category: link-blog
 ```
 
+# 2024 Tech Wrapups
+
+
 ## Databases
 
 I really enjoyed this post from **Andy Pavlo**, [Databases in 2024: A
