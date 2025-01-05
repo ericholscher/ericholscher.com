@@ -5,4 +5,5 @@ sphinx-notfound-page
 sphinxext-opengraph
 myst-parser
 feedparser
-pandoc
+requests
+beautifulsoup4
