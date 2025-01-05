@@ -28,3 +28,9 @@ It's like an audio version of the autobiography books that I've also enjoyed rea
 This show by PJ Vogt is a great follow up to Reply All where I used to listen to him.
 Each episode answers a topic,
 and they go deep into various topics with great story telling.
+
+## [Odd Lots](https://www.bloomberg.com/oddlots)
+
+This show by Joe Weisenthal and Tracy Alloway is a great mix of finance and economics.
+They interview the "perfect guest" for each episode,
+and dive into various topics that I find fascinating.
