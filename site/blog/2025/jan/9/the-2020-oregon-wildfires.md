@@ -110,8 +110,7 @@ locals](https://www.reuters.com/article/business/environment/how-a-hillbilly-bri
 who came to the rescue, because the fire response was spread so thin
 with so many fires.
 
-::: image-gallery-embed
-:::
+![The aftermath, September 12](/_static/img/substack/the-2020-oregon-wildfires_image_5.png)
 
 We were fortunate to be able to save the animals and the house, but this
 experience makes me so much more aware the heartache and worry that
