@@ -2,7 +2,7 @@
 :category: link-blog
 ```
 
-# Fabrizio Ferri Benedetti's technical writing predictions for 2025
+# [Fabrizio Ferri Benedetti's technical writing predictions for 2025](https://passo.uno/tech-writing-predictions-2025/)
 
 [Fabrizio Ferri Benedetti](https://passo.uno/about/) is someone is a
 blogged I've enjoyed reading for a while now, and I wanted to highlight
