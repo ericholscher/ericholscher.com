@@ -4,8 +4,8 @@
 
 # [Fabrizio Ferri Benedetti's technical writing predictions for 2025](https://passo.uno/tech-writing-predictions-2025/)
 
-[Fabrizio Ferri Benedetti](https://passo.uno/about/) is someone is a
-blogged I've enjoyed reading for a while now, and I wanted to highlight
+[Fabrizio Ferri Benedetti](https://passo.uno/about/) is a
+blogger I've enjoyed reading for a while now, and I wanted to highlight
 [his post on 2025
 predictions](https://passo.uno/tech-writing-predictions-2025/).
 
