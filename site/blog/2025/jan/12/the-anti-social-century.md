@@ -2,7 +2,7 @@
 :category: link-blog
 ```
 
-# The Anti-Social Century
+# [The Anti-Social Century](https://www.theatlantic.com/magazine/archive/2025/02/american-loneliness-personality-politics/681091/?gift=o6MjJQpusU9ebnFuymVdsMKo25mQ7_DimWNHAJNoVhY)
 
 I've been a fan of Derek Thompson for a while now, and his podcast
 [Plain
