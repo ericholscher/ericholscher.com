@@ -10,6 +10,7 @@ extensions = [
     "sphinxext.opengraph",
     "myst_parser",
 ]
+suppress_warnings = ["myst.header"]
 blog_title = "Eric Holscher"
 blog_path = "blog/archive"
 blog_baseurl = "http://ericholscher.com"
