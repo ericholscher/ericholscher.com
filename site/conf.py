@@ -63,3 +63,7 @@ html_sidebars = {
 html_title = blog_title
 html_favicon = "_static/img/favicon.ico"
 html_static_path = ["_static"]
+html_css_files = [
+    'css/custom.css',
+]
+
