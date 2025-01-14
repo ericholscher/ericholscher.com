@@ -40,8 +40,7 @@ in the industry:
 > of errors and typos. To meet the ridiculous deadline the writers fed
 > the first draft through an LLM to quickly fix the major issues.
 >
-> --- [Kayce
-> Basques](https://technicalwriting.dev/ml/reviews/2024.html#ml-reviews-2024)
+> -- [Kayce Basques](https://technicalwriting.dev/ml/reviews/2024.html#ml-reviews-2024)
 
 I had a pretty interesting experience with GitHub Copilot where I was
 able to [catch 3-4 cases of misplaced
