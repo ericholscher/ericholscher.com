@@ -13,14 +13,13 @@ extensions = [
 suppress_warnings = ["myst.header"]
 blog_title = "Eric Holscher"
 blog_path = "blog/archive"
-blog_baseurl = "http://ericholscher.com"
+blog_baseurl = "https://www.ericholscher.com"
 post_date_format = "%b %d %Y"
 post_show_prev_next = False
-ogp_social_cards = {
-    "line_color": "#4078c0",
-    "image": "_static/img/headshot-circle.png",
-}
 notfound_urls_prefix = '/'
+ogp_site_url = blog_baseurl
+ogp_image = "https://www.ericholscher.com/_static/img/headshot-circle.png"
+ogp_use_first_image = True
 
 # blog_authors = {
 #     "Eric": ("Eric Holscher", "http://ericholscher.com"),
