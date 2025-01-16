@@ -66,7 +66,7 @@ media_dir = os.path.join(site_dir, '_static/img/substack')
 os.makedirs(media_dir, exist_ok=True)
 
 # Process each entry in the feed
-for entry in feed.entries:
+for entry in feed.entries[:1]:
     slug = entry.link.split('/')[-1]
     md_file = os.path.join(output_dir, f"{slug}.md")
     
