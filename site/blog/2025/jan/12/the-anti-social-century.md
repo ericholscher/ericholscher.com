@@ -2,7 +2,7 @@
 :category: link-blog
 ```
 
-# [The Anti-Social Century](https://www.theatlantic.com/magazine/archive/2025/02/american-loneliness-personality-politics/681091/?gift=o6MjJQpusU9ebnFuymVdsMKo25mQ7_DimWNHAJNoVhY)
+# The Anti-Social Century
 
 I've been a fan of Derek Thompson for a while now, and his podcast
 [Plain
@@ -26,3 +26,12 @@ fewer friends than we used to:
 > live around us, which Dunkelman calls the village. "These are your
 > neighbors, the people in your town," he said. We used to know them
 > well; now we don't.
+
+## Also check out the podcast discussion
+
+Derek did a [podcast
+episode](https://www.theringer.com/podcasts/plain-english-with-derek-thompson/2025/01/10/the-anti-social-century-americas-epidemic-of-solitude-and-how-to-fix-it)
+as well, featuring Nick Epley who was interviewed for the piece. It
+talks a lot about the value of connecting with people in day to day
+life, and how that can meaningfully make you happier and more connected
+over time.

@@ -2,6 +2,7 @@ import feedparser
 import os
 import subprocess
 import requests
+import sys
 from datetime import datetime, timezone, timedelta
 from bs4 import BeautifulSoup
 
@@ -65,8 +66,14 @@ site_dir = os.path.join(os.path.dirname(__file__), 'site')
 media_dir = os.path.join(site_dir, '_static/img/substack')
 os.makedirs(media_dir, exist_ok=True)
 
+# Get the title filter from command-line arguments
+title_filter = sys.argv[1] if len(sys.argv) > 1 else None
+
 # Process each entry in the feed
-for entry in feed.entries[:1]:
+for entry in feed.entries:
+    if title_filter and title_filter.lower() not in entry.title.lower():
+        continue
+    
     slug = entry.link.split('/')[-1]
     md_file = os.path.join(output_dir, f"{slug}.md")
     
