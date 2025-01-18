@@ -1,3 +1,11 @@
+"""
+Usage:
+    python import_substack.py [title_filter] && python drafts/publish.py drafts/substack_posts/*
+
+Arguments:
+    title_filter (optional) - A substring to filter posts by title.
+"""
+
 import feedparser
 import os
 import subprocess
