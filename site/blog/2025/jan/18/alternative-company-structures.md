@@ -105,3 +105,7 @@ psychological and legal commitment. I love the idea of getting bonus
 points in life for building structures with collaborative ownership, but
 realistically most people and businesses only want a simple "buy a
 service that I can cancel" relationship.
+
+That said, I\'d love to see someone try it! I think it could work well
+in a niche environment, or something like a Kickstarter where people
+feel they helped bring something into being.
