@@ -31,7 +31,7 @@ but I'm excited to have more chance to see the world.
 
 The current plan is:
 
--   March 2 - March 9: Atlanta for a Read the Docs offsite.
+-   March 2 - March 9: **Atlanta,** for a Read the Docs offsite.
 
 -   March 10 - April 2: **Turks & Caicos**, visiting family and doing
     some diving and whale watching.
