@@ -10,20 +10,20 @@
 > unfold, I think there were a few important signals you could extract
 > from the storm of information. Basically, the lessons I take away from
 > the horrific L.A. fires are:
-
--   The insurance industry as we know it is in big trouble.
-
--   Climate change is making wildfires worse, but there's not much we
-    can do about that right now.
-
--   Forest management needs to get a lot more proactive, but is being
-    blocked by regulation.
-
--   Wildfire preparedness is just a lot more important than it used to
-    be.
-
-    --- [Noah
-    Smith](https://www.noahpinion.blog/p/learn-smart-lessons-from-the-la-fires?r=21p76&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false)
+>
+> -   The insurance industry as we know it is in big trouble.
+>
+> -   Climate change is making wildfires worse, but there's not much we
+>     can do about that right now.
+>
+> -   Forest management needs to get a lot more proactive, but is being
+>     blocked by regulation.
+>
+> -   Wildfire preparedness is just a lot more important than it used to
+>     be.
+>
+> [--- Noah
+> Smith](https://www.noahpinion.blog/p/learn-smart-lessons-from-the-la-fires?r=21p76&amp%3Butm_campaign=post&amp%3Butm_medium=web&amp%3BshowWelcomeOnShare=false)
 
 I thought this was a great post about our current wild fires and the
 reality of insurance in this moment. This is a live issue in Oregon,
