@@ -11,7 +11,4 @@ fair source, and how to build sustainable business.
 
 > ![](/_static/img/substack/adam-jacobs-on-open-source-business_image_1.png)
 
-::: {#youtube2-rmhYHzJpkuo .youtube-wrap}
-::: youtube-inner
-:::
-:::
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rmhYHzJpkuo?si=KWycXr9L8kuwtkTI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
