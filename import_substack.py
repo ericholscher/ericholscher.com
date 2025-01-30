@@ -99,3 +99,7 @@ for entry in feed.entries:
     
     # Output the name of the post processed
     print(f"Processed post: {entry.title}")
+
+    # Only run latest post if not filtered
+    if not title_filter:
+        break
