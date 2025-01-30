@@ -25,7 +25,7 @@ provide some additional context, which is probably useful to share on
 the blog:
 
 > I\'ve been working in this space for a long time, where I\'m one of
-> the co-founders of Write the Docs: https://www.writethedocs.org/ \--
+> the co-founders of [Write the Docs](https://www.writethedocs.org) \--
 > we focus more on software docs.
 >
 > The view from the industry is basically that STC was a bit behind the
