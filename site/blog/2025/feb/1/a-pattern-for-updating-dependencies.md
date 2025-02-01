@@ -32,7 +32,8 @@ takes a couple seconds.
 I use this pattern often when the command is pretty heavy and I don't
 want to rerun the whole docker build process.
 
-I don't use this often enough to
+I don't use this often enough to automate, but it would be pretty easy
+to do with a line of awk :)
 
 ## Use Docker caching?
 
