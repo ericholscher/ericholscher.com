@@ -25,7 +25,9 @@ Then you need to save the image. You could pretty easily script this to
 pull the hash name from the `ps` output, but doing it manually only
 takes a couple seconds.
 
-    docker ps  # Get hash docker commit -p $hash $container
+    docker ps
+    # Get hash
+    docker commit -p $hash $container
 
 I use this pattern often when the command is pretty heavy and I don't
 want to rerun the whole docker build process.
