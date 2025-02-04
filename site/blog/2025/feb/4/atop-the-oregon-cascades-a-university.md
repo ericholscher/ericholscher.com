@@ -4,6 +4,9 @@
 
 # Atop the Oregon Cascades, a University of Oregon team finds a huge buried aquifer
 
+![Clear Lake, where the McKenzie River originates. (Photo by Laurel
+Hamers)](/_static/img/substack/atop-the-oregon-cascades-a-university_image_1.jpeg "blue alpine lake")
+
 I've always had a love for the massive spring-fed rivers in Oregon. I
 actually got married along the [Metolius
 River](https://en.wikipedia.org/wiki/Metolius_River), and have done many
