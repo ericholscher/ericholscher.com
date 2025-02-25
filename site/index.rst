@@ -15,7 +15,6 @@ Here are my 10 latest posts:
    :list-style: circle
    :format: {title} - {date}
    :excerpts:
-   :expand: Read more ...
 
 
 See :doc:`all blog entries ➡ </blog/index>` 
