@@ -1,4 +1,4 @@
-```{post} Apr 29, 2025
+```{post} May 2, 2025
 :category: hiking
 ```
 # Thoughts on the Camino de Costa Rica
