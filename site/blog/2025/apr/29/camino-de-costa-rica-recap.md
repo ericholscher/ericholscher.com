@@ -99,10 +99,11 @@ A few high-level recommendations based on having done the trail:
 
 * Don't skip the canal section at the start -- it was one of our highlights. It's like a boat wildlife safari, and you see lots of animals.
 * Also don't skip the zero day for rafting. It was a really fun way to spend the day, and take a break from hiking after the previous 2 hard stages.
-* Taking the Palo Verde alternate -- it cost us $6, but it was a nice trail and the ranger at the station was lovely. Lots of humming birds, and we heard quetzals!
+* Take the Palo Verde alternate -- it cost us $6, but it was a nice trail and the ranger at the station was lovely. Lots of humming birds, and we heard quetzals!
+* Bring plenty of cash, which is easy to get at the airport. Most of the guest houses and restaurants only take cash. There are only a couple ATMs along the way, and they don't always work. We used the one in La Suiza. 
 * Orosi Lodge was a really nice break in the middle with a nice bakery and pizza. We wished we'd taken a zero day here to explore Tapanti National Park and hit the hot springs and swimming holes nearby. If you have time, it's nice to have a break in the middle.
 * Bugs were only notably bad on the coasts, and not terrible. Bring some bug spray, but we didn't end up using a ton of it.
-* Don't forget to make a Manual Antonio park booking once you land in Quepos. It was a lovely park with lots of wildlife, and beautiful beach. Quite the shock to have so many tourists after 2 weeks of solitude.
+* Don't forget to make a Manual Antonio park booking for once you land in Quepos, probably before the start of your trip. It was a lovely park with lots of wildlife, and beautiful beach. Though quite the shock to have so many tourists after 2 weeks of solitude.
 * I'd be less likely to recommend the trail if you don't have at least a basic grasp of Spanish. Many of our hosts, and most people we encountered didn't speak much English -- it was more enjoyable, and kept us from making mistakes by being able to ask folks for help in Spanish.
 
 ## Self-supported Camino De Costa Rica Gear list
@@ -127,6 +128,7 @@ with clothes taking up the vast majority of space in my bags.
 * Sun umbrella (Important -- used for both sun and rain!)
 * Binoculars (Important -- lots of wildlife!)
 * Warm fleece (Important -- it gets cold!)
+* Lots of Colones (Important! -- most places only take cash, and there are few ATMs along the way)
 * 2L water capacity
 * Water filter (the water in the mountains is delicious)
 * Headlight
