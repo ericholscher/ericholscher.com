@@ -14,10 +14,21 @@ with some days having over 4,000 ft (1,200 m) of gain or loss.
 We ranged from the oppressive Caribbean coastal plain to chilly cloud forests at over 7,000 ft.
 Costa Rica is a varied and steep country!
 
+```{figure} /_static/img/camino-sunset.png
+:alt: Sunset over the Pacific Ocean
+:width: 600px
+:align: center
+
+Sunset over the Pacific Ocean, at the end of the trail.
+```
+
 ## Highlights
 
 Overall, it was an amazing experience,
 with the highlights being the authentic connection with locals and the abundant wildlife.
+
+If you want to see the highlights of our trip,
+check out the [Instagram highlights](https://www.instagram.com/stories/highlights/18074081002687329/) that I made.
 
 ### The people
 
