@@ -27,8 +27,8 @@ Sunset over the Pacific Ocean, at the end of the trail.
 Overall, it was an amazing experience,
 with the highlights being the authentic connection with locals and the abundant wildlife.
 
-If you want to see the highlights of our trip,
-check out the [Instagram highlights](https://www.instagram.com/stories/highlights/18074081002687329/) that I made.
+If you want to see more photos of our trip,
+check out the [Instagram posts](https://www.instagram.com/stories/highlights/18074081002687329/) that I made.
 
 ### The people
 
