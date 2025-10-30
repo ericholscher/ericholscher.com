@@ -18,7 +18,7 @@ post_date_format = "%b %d %Y"
 post_show_prev_next = False
 notfound_urls_prefix = '/'
 ogp_site_url = blog_baseurl
-ogp_image = "https://www.ericholscher.com/_static/img/headshot-circle.png"
+ogp_image = "https://www.ericholscher.com/_static/img/opengraph.jpg"
 ogp_use_first_image = True
 
 # blog_authors = {
