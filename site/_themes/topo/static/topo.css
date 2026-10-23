@@ -94,13 +94,17 @@ img { max-width: 100%; height: auto; }
 .topo-hero-copy p { font-size: 18px; line-height: 1.6; color: var(--text-2); margin: 0 0 12px; }
 .topo-hero-copy p:last-child { margin-bottom: 0; }
 .topo-hero-copy .headerlink { display: none; }
-.topo-hero-art { min-width: 0; display: flex; justify-content: flex-end; align-items: center; }
-.topo-contour { width: 100%; max-width: 440px; height: auto; color: var(--contour); opacity: .85; display: block; }
-.topo-trail { stroke: var(--link); }
+.topo-hero-art { min-width: 0; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; margin: 0; }
+.topo-map img {
+  width: 100%; max-width: 460px; height: auto; aspect-ratio: 4 / 3; object-fit: cover; display: block;
+  border: 1px solid var(--rule-strong); border-radius: 2px;
+  filter: sepia(.45) saturate(.7) contrast(1.02); mix-blend-mode: multiply;
+}
+.topo-map figcaption { font-family: var(--mono); font-size: 11px; color: var(--muted); }
 @media (max-width: 760px) {
   .topo-hero { grid-template-columns: minmax(0, 1fr); gap: 8px; padding-top: 20px; padding-bottom: 28px; }
-  .topo-hero-art { order: -1; justify-content: center; }
-  .topo-contour { max-width: none; width: 100%; height: 96px; opacity: .7; }
+  .topo-hero-art { order: -1; align-items: stretch; margin-bottom: 8px; }
+  .topo-map img { max-width: none; aspect-ratio: auto; height: 132px; object-position: 52% 58%; }
   .topo-hero-copy h1 { font-size: 32px; }
   .topo-hero-copy p { font-size: 17px; }
 }

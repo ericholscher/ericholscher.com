@@ -29,22 +29,7 @@
 {%- block relbar1 %}{% endblock %}
 {%- block relbar2 %}{% endblock %}
 
-{%- macro contour() %}
-{#- Concentric contour lines. Lives in its own grid cell so it never sits under copy. -#}
-<svg class="topo-contour" viewBox="0 0 520 360" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
-  <g fill="none" stroke="currentColor" stroke-width="1">
-    <path transform="translate(260 180) scale(2.55)" d="M-90 0 C-85 -30 -50 -48 -10 -44 C30 -40 70 -30 85 -5 C98 20 70 42 30 46 C-10 50 -60 44 -82 25 C-95 15 -94 8 -90 0 Z"></path>
-    <path transform="translate(264 182) scale(2.15) rotate(-3)" d="M-90 0 C-85 -30 -50 -48 -10 -44 C30 -40 70 -30 85 -5 C98 20 70 42 30 46 C-10 50 -60 44 -82 25 C-95 15 -94 8 -90 0 Z"></path>
-    <path transform="translate(268 184) scale(1.78) rotate(-6)" d="M-90 0 C-85 -30 -50 -48 -10 -44 C30 -40 70 -30 85 -5 C98 20 70 42 30 46 C-10 50 -60 44 -82 25 C-95 15 -94 8 -90 0 Z"></path>
-    <path transform="translate(272 186) scale(1.44) rotate(-9)" d="M-90 0 C-85 -30 -50 -48 -10 -44 C30 -40 70 -30 85 -5 C98 20 70 42 30 46 C-10 50 -60 44 -82 25 C-95 15 -94 8 -90 0 Z" stroke-width="1.6"></path>
-    <path transform="translate(276 188) scale(1.12) rotate(-12)" d="M-90 0 C-85 -30 -50 -48 -10 -44 C30 -40 70 -30 85 -5 C98 20 70 42 30 46 C-10 50 -60 44 -82 25 C-95 15 -94 8 -90 0 Z"></path>
-    <path transform="translate(280 190) scale(.83) rotate(-15)" d="M-90 0 C-85 -30 -50 -48 -10 -44 C30 -40 70 -30 85 -5 C98 20 70 42 30 46 C-10 50 -60 44 -82 25 C-95 15 -94 8 -90 0 Z"></path>
-    <path transform="translate(284 192) scale(.56) rotate(-18)" d="M-90 0 C-85 -30 -50 -48 -10 -44 C30 -40 70 -30 85 -5 C98 20 70 42 30 46 C-10 50 -60 44 -82 25 C-95 15 -94 8 -90 0 Z"></path>
-    <path transform="translate(288 194) scale(.31) rotate(-21)" d="M-90 0 C-85 -30 -50 -48 -10 -44 C30 -40 70 -30 85 -5 C98 20 70 42 30 46 C-10 50 -60 44 -82 25 C-95 15 -94 8 -90 0 Z" stroke-width="1.6"></path>
-  </g>
-  <path class="topo-trail" d="M20 330 C 90 312 160 296 240 304 C 330 314 410 306 500 280" fill="none" stroke-width="1.2" stroke-dasharray="1 4"></path>
-</svg>
-{%- endmacro %}
+{#- Hero art: a USGS topographic map (public domain, from the USGS National Map), toned into the page by CSS. -#}
 
 {%- macro glyph(post) %}
   {%- set cats = post.category|map('string')|list if post.category else [] %}
@@ -64,7 +49,10 @@
     <div class="topo-hero-copy body" role="main">
       {% block body %} {% endblock %}
     </div>
-    <div class="topo-hero-art">{{ contour() }}</div>
+    <figure class="topo-hero-art topo-map">
+      <img src="{{ pathto('_static/img/three-sisters-usgs.jpg', 1) }}" width="1600" height="1200" alt="USGS topographic map of the Three Sisters, with the Pacific Crest Trail running north to south between the peaks">
+      <figcaption>USGS topographic map, Three Sisters Wilderness</figcaption>
+    </figure>
   </section>
   {%- endif %}
 
