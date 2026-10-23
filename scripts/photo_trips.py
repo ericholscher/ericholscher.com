@@ -21,10 +21,17 @@ list stays on your machine:
 
     [
       {"name": "Family in Virginia", "lat": 39.15, "lon": -77.98, "km": 25},
-      {"name": "Parents", "lat": 43.07, "lon": -89.40}
+      {"name": "Parents", "lat": 43.07, "lon": -89.40},
+      {"place": "Virginia"},
+      {"place": "*Beach*"}
     ]
 
-"km" defaults to --home-radius. For a one-off, pass --skip-near LAT,LON[,KM].
+A "lat"/"lon" entry skips photos within "km" of it (default --home-radius).
+A "place" entry skips photos whose location has that name anywhere: city,
+state, region, country, landmark, or the full address. It ignores case, must
+match a whole name, and takes * wildcards, so "Virginia" leaves West Virginia
+alone and "*Beach*" catches any beach town. For one-offs, pass
+--skip-near LAT,LON[,KM] or --skip-place NAME.
 
 If your library is shared, other people's trips show up too; delete those rows.
 
@@ -35,6 +42,7 @@ and people are ignored, and nothing leaves your machine.
 import argparse
 import collections
 import csv
+import fnmatch
 import json
 import math
 import sys
@@ -90,14 +98,27 @@ def load_homes(path):
         return []
 
 
+def all_place_names(photo):
+    """Every name Photos gives a photo's location, lowercased, for --skip-place matching."""
+    place = photo.get("place") or {}
+    out = {str(place["name"]).lower()} if place.get("name") else set()
+    for values in (place.get("names") or {}).values():
+        for v in [values] if isinstance(values, str) else values or []:
+            out.add(str(v).lower())
+    return out
+
+
 def load_skips(path, default_km):
-    """Places to leave out besides home, as ((lat, lon), km) pairs. A missing file means none."""
+    """Places to leave out besides home: ((lat, lon), km) pairs and lowercased name patterns.
+    A missing file means none."""
     try:
         with open(path) as f:
             entries = json.load(f)
     except FileNotFoundError:
-        return []
-    return [((float(e["lat"]), float(e["lon"])), float(e.get("km", default_km))) for e in entries]
+        return [], []
+    near = [((float(e["lat"]), float(e["lon"])), float(e.get("km", default_km))) for e in entries if "lat" in e]
+    names = [str(e["place"]).lower() for e in entries if "place" in e]
+    return near, names
 
 
 def parse_near(value):
@@ -118,6 +139,7 @@ def main():
     ap.add_argument("--home-radius", type=float, default=15, help="km around a home to ignore (default 15)")
     ap.add_argument("--skip", default="photo-skip.json", help="local list of family and other places to ignore (default photo-skip.json)")
     ap.add_argument("--skip-near", action="append", default=[], type=parse_near, metavar="LAT,LON[,KM]", help="another place to ignore; repeatable")
+    ap.add_argument("--skip-place", action="append", default=[], metavar="NAME", help="ignore photos at a place with this name (* wildcards); repeatable")
     ap.add_argument("--merge-km", type=float, default=150, help="merge consecutive days closer than this (default 150)")
     ap.add_argument("--min-photos", type=int, default=5, help="drop trips with fewer photos (default 5)")
     ap.add_argument("--outdoor-only", action="store_true", help="keep trips that look outdoorsy")
@@ -127,7 +149,9 @@ def main():
     with open(args.export) as f:
         photos = json.load(f)
     skip = [(h, args.home_radius) for h in load_homes(args.homes)]
-    skip += load_skips(args.skip, args.home_radius)
+    near, skip_names = load_skips(args.skip, args.home_radius)
+    skip += near
+    skip_names += [n.lower() for n in args.skip_place]
     skip += [(at, km if km is not None else args.home_radius) for at, km in args.skip_near]
 
     days = collections.defaultdict(list)
@@ -138,7 +162,8 @@ def main():
         if not c or len(when) != 10:
             continue
         names, ishome = place_names(p)
-        if ishome or any(haversine_km(c, at) <= km for at, km in skip):
+        if (ishome or any(haversine_km(c, at) <= km for at, km in skip)
+                or skip_names and any(fnmatch.fnmatchcase(n, pat) for n in all_place_names(p) for pat in skip_names)):
             skipped += 1
             continue
         labels = {str(x).lower() for x in (p.get("labels") or [])}
