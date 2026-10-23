@@ -1,6 +1,11 @@
 About me
 ========
 
+.. image:: /_static/img/headshot.jpg
+   :alt: Eric Holscher, smiling, in a blue-gray collared shirt against a dark gray backdrop
+   :width: 280px
+   :align: right
+
 Quick bio
 ---------
 
