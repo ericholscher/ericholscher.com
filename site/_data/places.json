@@ -582,24 +582,6 @@
     "note": "Rainforest and wildlife"
   },
   {
-    "name": "Kathmandu",
-    "lat": 27.71,
-    "lon": 85.32,
-    "kind": "visited",
-    "years": [
-      2026
-    ]
-  },
-  {
-    "name": "Dhaulagiri region",
-    "lat": 28.58,
-    "lon": 83.81,
-    "kind": "hiked",
-    "years": [
-      2026
-    ]
-  },
-  {
     "name": "Long Beach",
     "lat": 33.77,
     "lon": -118.19,
