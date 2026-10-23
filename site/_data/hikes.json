@@ -283,6 +283,22 @@
     "note": "A week-long loop that followed the Pacific Crest Trail."
   },
   {
+    "year": "2022",
+    "kind": "cruise",
+    "when": "July 28 to August 6, 2022",
+    "name": "Alaska cruise",
+    "where": "Inside Passage, from Vancouver",
+    "note": "Up the coast by way of Tracy Arm and Sitka, before a week around Denali by car."
+  },
+  {
+    "year": "2022",
+    "kind": "road-trip",
+    "when": "September 15 to October 5, 2022",
+    "name": "Porto and northern Portugal",
+    "where": "Porto and Peneda-Gerês, by way of Iceland",
+    "note": "A stopover in Iceland, a few days in Porto, then two weeks driving the north around Peneda-Gerês National Park."
+  },
+  {
     "year": "2023",
     "kind": "rafting",
     "when": "May 2023",

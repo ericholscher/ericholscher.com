@@ -1567,5 +1567,23 @@
     "years": [
       2014
     ]
+  },
+  {
+    "name": "Tracy Arm",
+    "lat": 57.85,
+    "lon": -133.2,
+    "kind": "visited",
+    "years": [
+      2022
+    ]
+  },
+  {
+    "name": "Sitka",
+    "lat": 57.05,
+    "lon": -135.33,
+    "kind": "visited",
+    "years": [
+      2022
+    ]
   }
 ]
