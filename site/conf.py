@@ -83,9 +83,21 @@ html_sidebars = {
 }
 # globaltoc_collapse = False
 
-# Old page URLs that moved into posts (:redirect: on the post) forward right away.
-post_redirect_refresh = 0
-
 html_title = blog_title
 html_favicon = "_static/img/favicon.svg"
 html_static_path = ["_static"]
+
+# Old pages that were folded into others: old docname -> where it now forwards.
+topo_redirects = {
+    "backpacking": "adventures",
+    "bike": "adventures",
+}
+
+
+def topo_redirect_pages(app):
+    for old, new in topo_redirects.items():
+        yield (old, {"redirect": new}, "topo/redirect.html")
+
+
+def setup(app):
+    app.connect("html-collect-pages", topo_redirect_pages)

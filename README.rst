@@ -13,6 +13,8 @@ The home page leads with "Most read", a hand-kept list of post docnames in ``htm
 then the eight most recent titles and the topic cards.
 ``blog/index`` shows the 20 latest posts, then pages by year: ABlog's year pages (``blog/archive/<year>/``) get
 newer and older year links. The Archive page (``blog/archive/archive/``) lists every title by year.
+Retired pages forward elsewhere through ``topo_redirects`` in ``site/conf.py`` (old docname to new), for example ``/bike/`` and
+``/backpacking/`` to the Adventures page.
 Posts in the ``link-blog`` category get a small "link" label next to their date.
 
 Topics are ABlog categories. The ones listed in ``html_context["topo_categories"]`` in ``site/conf.py``
