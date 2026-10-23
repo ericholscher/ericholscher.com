@@ -17,8 +17,10 @@ and `EthicalAds <https://www.ethicalads.io/>`__.
 His work has historically been around software documentation,
 but he's also been actively engaged in community building and open source sustainability for over 15 years.
 
-He currently lives in Bend, Oregon,
-and love to explore the outdoors,
+He's based in Bend, Oregon,
+but in 2025 and 2026 he's been nomadic again,
+working from the road and walking long trails around the world.
+He loves to explore the outdoors,
 checking out the various beauty that the world holds.
 
 If you run into him at an event,
@@ -27,7 +29,10 @@ make sure to :doc:`leave room for others </blog/2017/aug/2/pacman-rule-conferenc
 Background
 -----------
 
-I currently live in Bend, Oregon.
+Bend, Oregon is home,
+though in 2025 and 2026 I've been nomadic again,
+traveling and working from the road.
+Every trip is on the :doc:`Adventures </adventures>` page.
 
 I lived in Portland, Oregon from 2011-2018,
 drawn to the beautiful Pacific Northwest by its lovely mountains,
