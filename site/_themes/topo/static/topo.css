@@ -60,7 +60,6 @@ img { max-width: 100%; height: auto; }
 }
 .topo-wordmark { display: inline-flex; align-items: center; gap: 12px; font-family: var(--serif); font-weight: 500; font-size: 28px; line-height: 1; letter-spacing: -0.005em; color: var(--sign-text); border-bottom: 0; }
 .topo-mark { display: block; flex: none; color: var(--sign-text); --mark-snow: var(--sign); }
-.topo-wordmark .topo-mark text { fill: var(--sign-text); }
 .topo-wordmark:hover { color: var(--sign-gold); }
 .topo-nav { display: flex; flex-wrap: wrap; gap: 8px 22px; }
 .topo-nav a { color: var(--sign-text); border-bottom: 0; font-size: 15px; padding: 4px 0; letter-spacing: .01em; }
@@ -122,7 +121,7 @@ img { max-width: 100%; height: auto; }
 }
 .topo-entry:last-of-type { border-bottom: 1px solid var(--rule); }
 .topo-entry-date { font-family: var(--mono); font-size: 12px; color: var(--muted); white-space: nowrap; }
-.topo-entry-glyph { color: var(--forest); line-height: 0; position: relative; top: -1px; }
+.topo-entry-glyph { color: var(--sign); line-height: 0; position: relative; top: -1px; }
 .topo-glyph { display: inline-block; vertical-align: baseline; }
 .topo-entry-body { min-width: 0; overflow-wrap: anywhere; }
 .topo-entry-body h3 { font-family: var(--serif); font-weight: 500; font-size: 27px; line-height: 1.15; margin: 0; }
