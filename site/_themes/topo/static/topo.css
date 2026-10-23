@@ -1,10 +1,11 @@
 /* Topo — theme for ericholscher.com. Inherits basic.css for docutils markup. */
 
-@font-face { font-family: "Newsreader"; font-style: normal; font-weight: 400 700; font-display: swap; src: url("fonts/Newsreader-Variable.woff2") format("woff2"); }
-@font-face { font-family: "Newsreader"; font-style: italic; font-weight: 400 700; font-display: swap; src: url("fonts/Newsreader-Italic-Variable.woff2") format("woff2"); }
-@font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 100 700; font-display: swap; src: url("fonts/IBMPlexSans-Variable.woff2") format("woff2"); }
-@font-face { font-family: "IBM Plex Sans"; font-style: italic; font-weight: 100 700; font-display: swap; src: url("fonts/IBMPlexSans-Italic.woff2") format("woff2"); }
-@font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/IBMPlexMono-Regular.woff2") format("woff2"); }
+/* optional, not swap: if a font is late, the fallback stays for that page view instead of swapping mid-read (the load flash). The main fonts are preloaded in layout.html. */
+@font-face { font-family: "Newsreader"; font-style: normal; font-weight: 400 700; font-display: optional; src: url("fonts/Newsreader-Variable.woff2") format("woff2"); }
+@font-face { font-family: "Newsreader"; font-style: italic; font-weight: 400 700; font-display: optional; src: url("fonts/Newsreader-Italic-Variable.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 100 700; font-display: optional; src: url("fonts/IBMPlexSans-Variable.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Sans"; font-style: italic; font-weight: 100 700; font-display: optional; src: url("fonts/IBMPlexSans-Italic.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 400; font-display: optional; src: url("fonts/IBMPlexMono-Regular.woff2") format("woff2"); }
 
 :root {
   --paper: #F2EBDC;

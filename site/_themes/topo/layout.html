@@ -6,6 +6,14 @@
 {%- set is_post = ablog is defined and pagename in ablog %}
 {%- set is_archive = pagename == 'blog/index' %}
 
+{%- block extrahead %}
+  {#- Fetch the three main fonts alongside the HTML instead of after the CSS, so text draws in them from the start. -#}
+  {%- for f in ['Newsreader-Variable', 'IBMPlexSans-Variable', 'IBMPlexMono-Regular'] %}
+  <link rel="preload" href="{{ pathto('_static/fonts/' ~ f ~ '.woff2', 1) }}" as="font" type="font/woff2" crossorigin>
+  {%- endfor %}
+  {{ super() }}
+{%- endblock %}
+
 {%- block htmltitle %}
   {%- if is_home %}
     <title>{{ docstitle|e }}</title>

@@ -7,6 +7,7 @@ with a few other things thrown in when I get excited about them.
 
 I'm Eric. I co-founded `Read the Docs <https://about.readthedocs.com/>`_,
 `Write the Docs <https://www.writethedocs.org>`_,
+`PyCascades <https://www.pycascades.com/>`_,
 and `EthicalAds <https://www.ethicalads.io/>`_,
 and I've spent most of my working life on how software gets explained.
 Most posts here are about documentation and open source;

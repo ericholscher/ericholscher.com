@@ -6,6 +6,7 @@ Quick bio
 
 Eric is the co-founder of `Read the Docs <https://about.readthedocs.com/>`_, 
 `Write the Docs <http://www.writethedocs.org>`_,
+`PyCascades <https://www.pycascades.com/>`__,
 and `EthicalAds <https://www.ethicalads.io/>`__.
 
 His work has historically been around software documentation,
