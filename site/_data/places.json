@@ -862,13 +862,14 @@
     "note": "La Vélodyssée, by bike"
   },
   {
-    "name": "Valais, Switzerland",
+    "name": "Haute Route",
     "lat": 46.2,
     "lon": 7.6,
     "kind": "hiked",
     "years": [
       2018
-    ]
+    ],
+    "note": "Chamonix to Zermatt"
   },
   {
     "name": "Caminito del Rey",

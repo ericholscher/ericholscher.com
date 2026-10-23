@@ -171,11 +171,12 @@
   },
   {
     "year": "2018",
-    "kind": "hiking",
+    "kind": "trek",
     "when": "August 2018",
-    "name": "Valais, Switzerland",
-    "where": "Swiss Alps",
-    "note": "Five weeks of hiking in the Alps during the first summer on the road."
+    "name": "Haute Route",
+    "where": "Chamonix to Zermatt, France and Switzerland",
+    "note": "Hut to hut across the Alps, part of five weeks there during the first summer on the road.",
+    "feature": true
   },
   {
     "year": "2018",
