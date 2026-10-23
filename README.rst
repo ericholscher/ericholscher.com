@@ -38,7 +38,10 @@ with dates, place names, and a guessed kind, to help fill ``hikes.json`` and ``p
     uvx --python 3.12 osxphotos query --location --json > photo-places.json
     python3 scripts/photo_trips.py photo-places.json --outdoor-only > trips.csv
 
-Both files are gitignored. The script uses only the standard library.
+Photos near any "lived" place in ``places.json`` are left out. To also leave out family and other
+places, list them in ``photo-skip.json`` next to the export (``[{"name": ..., "lat": ..., "lon": ..., "km": 25}]``),
+or pass ``--skip-near LAT,LON[,KM]``.
+All three files are gitignored, so those places stay on your machine. The script uses only the standard library.
 
 Dependencies live in ``pyproject.toml`` and are pinned in ``uv.lock``; Read the Docs installs the ``docs`` group with uv.
 To build locally::
