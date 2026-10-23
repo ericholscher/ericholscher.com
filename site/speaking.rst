@@ -18,8 +18,9 @@ I am interested in speaking on the following topics:
 
     * Documentation
     * Read the Docs & Sphinx
+    * Open source sustainability
+    * Community building and events
     * Django & Python
-    * Leading Open Source Projects
 
 If you would like me to speak at your event,
 feel free to `email me`_
@@ -83,26 +84,24 @@ Past Events
 I have spoken at the following events,
 on a number of topics including Read the Docs, IRC bots, Testing, and Documentation:
 
-* ConFoo 2016 Vancouver
-* Keynote: Pycon Colombia 2016
-* Keynote: PyCaribbean 2015
-* Open Source & Feelings, 2015
+* Keynote: PyCon Colombia 2017
+* Keynote: PyCaribbean 2016
+* ConFoo Vancouver 2016
+* Open Source & Feelings 2015
 * Django Under the Hood 2015
-* Djangocon US 2015, 2011, 2010
+* DjangoCon US 2015, 2011, 2010
 * Django Birthday 2015
-* Keynote: Pycon Malaysia 2014
-* Pycon Phillipines 2014
+* Keynote: PyCon Malaysia 2014
+* PyCon Philippines 2014
 * Open Source Bridge 2014, 2012, 2011
-* Pycon Web Summit 2012
+* PyCon Web Summit 2012
 * OSCON 2011
-* Djangocon Europe 2010, 2009
+* DjangoCon Europe 2010, 2009
 
 Organizing & Speaking
 ---------------------
 
-* Write the Docs 2013-2016
-* Write the Docs EU 2014-2016
-
-More information available on Lanyrd: http://lanyrd.com/profile/ericholscher/past/speaking/
+* Write the Docs Portland, 2013 to present
+* PyCascades, co-founder, 2018
 
 .. _email me: mailto:eric@ericholscher.com?subject=Speaking%20Engagement
