@@ -63,6 +63,68 @@
     "link": "bike"
   },
   {
+    "year": "2014",
+    "kind": "backpacking",
+    "when": "July 5 to 6, 2014",
+    "name": "Mount St. Helens overnight",
+    "where": "Mount St. Helens National Volcanic Monument, Washington"
+  },
+  {
+    "year": "2015",
+    "kind": "backpacking",
+    "when": "July 3 to 5, 2015",
+    "name": "Three Sisters Wilderness",
+    "where": "McKenzie side, Oregon",
+    "note": "Fourth of July weekend in the Cascades."
+  },
+  {
+    "year": "2016",
+    "kind": "backpacking",
+    "when": "June 11 to 13, 2016",
+    "name": "Mount Shasta",
+    "where": "Northern California",
+    "note": "Three days on the mountain, still deep in snow."
+  },
+  {
+    "year": "2016",
+    "kind": "backpacking",
+    "when": "July 1 to 4, 2016",
+    "name": "Olympic National Park",
+    "where": "Olympic Peninsula, Washington",
+    "note": "Fourth of July weekend on the wet side of the peninsula."
+  },
+  {
+    "year": "2016",
+    "kind": "backpacking",
+    "when": "July 31 to August 13, 2016",
+    "name": "Wind River Range",
+    "where": "Pinedale to the Popo Agie Wilderness, Wyoming",
+    "note": "Two weeks in the Winds."
+  },
+  {
+    "year": "2016",
+    "kind": "backpacking",
+    "when": "September 3 to 5, 2016",
+    "name": "Goat Rocks Wilderness",
+    "where": "Washington Cascades",
+    "note": "Labor Day weekend."
+  },
+  {
+    "year": "2017",
+    "kind": "backpacking",
+    "when": "June 23 to 25, 2017",
+    "name": "Olympic coast",
+    "where": "Olympic National Park, Washington"
+  },
+  {
+    "year": "2017",
+    "kind": "backpacking",
+    "when": "August 19 to 26, 2017",
+    "name": "Eagle Cap Wilderness",
+    "where": "Wallowa Mountains, Oregon",
+    "note": "Eight days in the Wallowas."
+  },
+  {
     "year": "2018",
     "kind": "bike",
     "when": "June and July 2018",

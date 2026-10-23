@@ -40,7 +40,8 @@
     "lon": -122.19,
     "kind": "hiked",
     "years": [
-      2013
+      2013,
+      2014
     ]
   },
   {
@@ -50,6 +51,7 @@
     "kind": "hiked",
     "years": [
       2012,
+      2014,
       2019,
       2024
     ],
@@ -133,6 +135,8 @@
     "note": "EuroDjangoCon, then Write the Docs",
     "years": [
       2009,
+      2014,
+      2016,
       2018,
       2019
     ]
@@ -156,6 +160,7 @@
     "kind": "visited",
     "note": "Humpback whale season",
     "years": [
+      2016,
       2018,
       2022,
       2025
@@ -188,6 +193,7 @@
     "kind": "visited",
     "note": "A week by bike",
     "years": [
+      2015,
       2019,
       2025
     ]
@@ -208,6 +214,7 @@
     "lon": -7.7,
     "kind": "visited",
     "years": [
+      2016,
       2025
     ]
   },
@@ -411,11 +418,12 @@
     "note": "Car camping"
   },
   {
-    "name": "Three Sisters loop",
+    "name": "Three Sisters Wilderness",
     "lat": 44.12,
     "lon": -121.77,
     "kind": "hiked",
     "years": [
+      2015,
       2020
     ]
   },
@@ -529,6 +537,7 @@
     "lon": 103.83,
     "kind": "visited",
     "years": [
+      2014,
       2026
     ]
   },
@@ -548,6 +557,7 @@
     "lon": 99.0,
     "kind": "visited",
     "years": [
+      2014,
       2026
     ],
     "note": "Diving"
@@ -635,6 +645,7 @@
     "lon": -9.14,
     "kind": "visited",
     "years": [
+      2017,
       2018,
       2026
     ]
@@ -748,6 +759,7 @@
     "lon": 98.98,
     "kind": "visited",
     "years": [
+      2014,
       2018
     ]
   },
@@ -785,6 +797,7 @@
     "lon": 103.87,
     "kind": "visited",
     "years": [
+      2014,
       2018
     ]
   },
@@ -794,6 +807,7 @@
     "lon": 121.62,
     "kind": "visited",
     "years": [
+      2014,
       2018
     ]
   },
@@ -803,6 +817,7 @@
     "lon": 121.56,
     "kind": "visited",
     "years": [
+      2014,
       2018
     ]
   },
@@ -1240,6 +1255,7 @@
     "lon": -124.1,
     "kind": "visited",
     "years": [
+      2017,
       2024
     ],
     "note": "Jedediah Smith"
@@ -1311,5 +1327,222 @@
       2021
     ],
     "note": "A week-long loop"
+  },
+  {
+    "name": "Grand Turk",
+    "lat": 21.47,
+    "lon": -71.14,
+    "kind": "visited",
+    "years": [
+      2012
+    ]
+  },
+  {
+    "name": "Wallowa Lake",
+    "lat": 45.29,
+    "lon": -117.21,
+    "kind": "visited",
+    "years": [
+      2013,
+      2016
+    ]
+  },
+  {
+    "name": "Bangkok",
+    "lat": 13.75,
+    "lon": 100.5,
+    "kind": "visited",
+    "years": [
+      2014
+    ]
+  },
+  {
+    "name": "Manila",
+    "lat": 14.58,
+    "lon": 120.98,
+    "kind": "visited",
+    "years": [
+      2014
+    ]
+  },
+  {
+    "name": "Kuala Lumpur",
+    "lat": 3.14,
+    "lon": 101.69,
+    "kind": "visited",
+    "years": [
+      2014
+    ]
+  },
+  {
+    "name": "Budapest",
+    "lat": 47.5,
+    "lon": 19.04,
+    "kind": "visited",
+    "years": [
+      2014
+    ]
+  },
+  {
+    "name": "Szeged",
+    "lat": 46.25,
+    "lon": 20.15,
+    "kind": "visited",
+    "years": [
+      2014
+    ]
+  },
+  {
+    "name": "Paris",
+    "lat": 48.86,
+    "lon": 2.35,
+    "kind": "visited",
+    "years": [
+      2014
+    ]
+  },
+  {
+    "name": "Montréal",
+    "lat": 45.5,
+    "lon": -73.57,
+    "kind": "visited",
+    "years": [
+      2014
+    ]
+  },
+  {
+    "name": "Big Sur",
+    "lat": 36.27,
+    "lon": -121.81,
+    "kind": "visited",
+    "years": [
+      2014
+    ]
+  },
+  {
+    "name": "Zugspitze",
+    "lat": 47.42,
+    "lon": 10.98,
+    "kind": "visited",
+    "years": [
+      2015
+    ]
+  },
+  {
+    "name": "Leavenworth",
+    "lat": 47.6,
+    "lon": -120.66,
+    "kind": "visited",
+    "years": [
+      2015
+    ]
+  },
+  {
+    "name": "Santo Domingo",
+    "lat": 18.47,
+    "lon": -69.89,
+    "kind": "visited",
+    "years": [
+      2016
+    ]
+  },
+  {
+    "name": "Mount Shasta",
+    "lat": 41.41,
+    "lon": -122.19,
+    "kind": "hiked",
+    "years": [
+      2016
+    ]
+  },
+  {
+    "name": "Olympic National Park",
+    "lat": 47.86,
+    "lon": -123.93,
+    "kind": "hiked",
+    "years": [
+      2016
+    ]
+  },
+  {
+    "name": "Wind River Range",
+    "lat": 42.95,
+    "lon": -109.45,
+    "kind": "hiked",
+    "years": [
+      2016
+    ]
+  },
+  {
+    "name": "Goat Rocks Wilderness",
+    "lat": 46.49,
+    "lon": -121.45,
+    "kind": "hiked",
+    "years": [
+      2016
+    ]
+  },
+  {
+    "name": "Guatapé",
+    "lat": 6.23,
+    "lon": -75.16,
+    "kind": "visited",
+    "years": [
+      2017
+    ]
+  },
+  {
+    "name": "Bogotá",
+    "lat": 4.71,
+    "lon": -74.07,
+    "kind": "visited",
+    "years": [
+      2017
+    ]
+  },
+  {
+    "name": "Sonoma coast",
+    "lat": 38.57,
+    "lon": -123.33,
+    "kind": "visited",
+    "years": [
+      2017
+    ]
+  },
+  {
+    "name": "Olympic coast",
+    "lat": 48.15,
+    "lon": -124.67,
+    "kind": "hiked",
+    "years": [
+      2017
+    ]
+  },
+  {
+    "name": "San Juan Islands",
+    "lat": 48.6,
+    "lon": -122.95,
+    "kind": "visited",
+    "years": [
+      2017
+    ]
+  },
+  {
+    "name": "Eagle Cap Wilderness",
+    "lat": 45.15,
+    "lon": -117.35,
+    "kind": "hiked",
+    "years": [
+      2017
+    ]
+  },
+  {
+    "name": "Summer Lake Hot Springs",
+    "lat": 42.72,
+    "lon": -120.64,
+    "kind": "visited",
+    "years": [
+      2017
+    ]
   }
 ]
