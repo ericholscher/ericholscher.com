@@ -363,7 +363,8 @@
     "when": "July 2025",
     "name": "Peaks of the Balkans",
     "where": "Montenegro, Albania, and Kosovo",
-    "note": "A loop trail across three borders."
+    "note": "A loop trail across three borders.",
+    "feature": true
   },
   {
     "year": "2025",
@@ -380,7 +381,8 @@
     "when": "August 2025",
     "name": "Carnic Alps High Route",
     "where": "Austrian and Italian border",
-    "note": "Hut to hut along a high ridge, with the Dolomites in view the whole way. A highlight of the summer."
+    "note": "Hut to hut along a high ridge, with the Dolomites in view the whole way. A highlight of the summer.",
+    "feature": true
   },
   {
     "year": "2025",
@@ -420,7 +422,8 @@
     "when": "June 2026",
     "name": "Camino del Norte",
     "where": "Basque Country, Spain",
-    "note": "Eleven days along the northern coast of Spain, finishing with a day in Bilbao."
+    "note": "Eleven days along the northern coast of Spain, finishing with a day in Bilbao.",
+    "feature": true
   },
   {
     "year": "2026",
