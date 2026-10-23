@@ -2,3 +2,7 @@ _build
 .DS_Store
 .env
 .vscode
+
+# Personal photo exports used by scripts/photo_trips.py; never commit these
+photo-places.json
+trips.csv

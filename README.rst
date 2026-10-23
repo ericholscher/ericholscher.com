@@ -17,6 +17,17 @@ The Outside landing page also renders a hike timeline from ``site/_data/hikes.js
 from ``site/_data/places.json``; both are plain JSON meant to be edited by hand.
 Each hike has a ``kind``: ``thru-hike``, ``backpacking``, ``summit``, ``day-hike``, ``camping``, or ``bike``.
 
+Finding trips in your photos
+----------------------------
+
+``scripts/photo_trips.py`` turns an osxphotos export into one row per trip,
+with dates, place names, and a guessed kind, to help fill ``hikes.json`` and ``places.json``::
+
+    uvx --python 3.12 osxphotos query --location --json > photo-places.json
+    python3 scripts/photo_trips.py photo-places.json --outdoor-only > trips.csv
+
+Both files are gitignored. The script uses only the standard library.
+
 To build locally::
 
     python -m venv .venv
