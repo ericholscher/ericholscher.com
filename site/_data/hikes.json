@@ -466,5 +466,12 @@
     "name": "Picos de Europa",
     "where": "Asturias, Spain",
     "note": "Two weeks in the limestone peaks of northern Spain."
+  },
+  {
+    "year": "2026",
+    "kind": "hiking",
+    "when": "October 2026",
+    "name": "Karwendel",
+    "where": "Austrian Alps, Tyrol"
   }
 ]
