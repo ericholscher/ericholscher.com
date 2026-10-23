@@ -259,7 +259,7 @@ ul.postlist p.ablog-post-excerpt { font-size: 16px; color: var(--text-2); margin
 .topo-tl { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--rule-strong); margin-left: 44px; }
 .topo-tl-item { position: relative; padding: 0 0 22px 24px; }
 .topo-tl-item::before { content: ""; position: absolute; left: -7px; top: 8px; width: 12px; height: 12px; background: var(--sign); transform: rotate(45deg); box-shadow: 0 0 0 2px var(--paper); }
-.topo-tl-year { position: absolute; left: -56px; top: 6px; width: 40px; text-align: right; font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.topo-tl-year { position: absolute; left: -66px; top: 6px; width: 40px; text-align: right; font-family: var(--mono); font-size: 12px; color: var(--muted); }
 .topo-tl-body h3 { font-family: var(--serif); font-weight: 500; font-size: 22px; line-height: 1.15; margin: 0 0 4px; }
 .topo-tl-body h3 a { color: var(--ink); border-bottom: 0; }
 .topo-tl-body h3 a:hover { color: var(--link-hover); }
