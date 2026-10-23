@@ -333,9 +333,15 @@ ul.postlist p.ablog-post-excerpt { font-size: 16px; color: var(--text-2); margin
 .topo-year-filter button:hover, .topo-map-tools button:hover, .topo-log-map:hover { border-color: var(--sign); }
 .topo-year-filter button[aria-pressed="true"], .topo-map-close { background: var(--sign) !important; border-color: var(--sign) !important; color: var(--sign-text) !important; }
 .topo-year-filter button:focus-visible, .topo-map-tools button:focus-visible, .topo-map-expand:focus-visible, .topo-log-map:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
-.topo-map-zoom { min-width: 34px; font-size: 16px !important; line-height: 1; }
+.topo-map-zoombox { position: absolute; right: 8px; bottom: 8px; display: flex; flex-direction: column; gap: 4px; }
+.topo-map-zoombox[hidden] { display: none; }
+.topo-map-frame { -webkit-user-select: none; user-select: none; }
+.topo-map-zoom { width: 32px; height: 32px; padding: 0; font: inherit; font-size: 18px; line-height: 1; border: 1px solid var(--sign); border-radius: 3px; background: var(--sign); color: var(--sign-text); cursor: pointer; box-shadow: 0 1px 3px rgba(51,42,32,.25); }
+.topo-map-zoom:hover { background: var(--sign-2); }
+.topo-map-zoom:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
 .topo-map-frame { position: relative; }
-.topo-map-scroll { background: var(--hero); border: 1px solid var(--rule-strong); border-radius: 3px; overflow: hidden; }
+.topo-map-scroll { background: var(--hero); border: 1px solid var(--rule-strong); border-radius: 3px; overflow: hidden; touch-action: pan-x pan-y; }
+.topo-map.is-zoomed .topo-map-scroll { overflow: auto; overscroll-behavior: contain; cursor: grab; }
 .is-enhanced .topo-map-scroll { cursor: zoom-in; }
 .topo-world { width: 100%; height: auto; display: block; max-width: none; }
 .topo-land { fill: #DCD2BA; stroke: #C9BD9F; stroke-width: .6; vector-effect: non-scaling-stroke; }
@@ -366,8 +372,8 @@ html.topo-map-open, html.topo-map-open body { overflow: hidden; }
 .topo-map.is-expanded .topo-year-filter { flex-wrap: nowrap; overflow-x: auto; margin: 0; padding-bottom: 2px; scrollbar-width: thin; }
 .topo-map.is-expanded .topo-year-filter button { flex: none; }
 .topo-map.is-expanded .topo-map-frame { flex: 1 1 auto; min-height: 0; display: flex; }
-.topo-map.is-expanded .topo-map-scroll { flex: 1 1 auto; overflow: auto; overscroll-behavior: contain; cursor: grab; }
-.topo-map.is-expanded.is-dragging .topo-map-scroll { cursor: grabbing; user-select: none; }
+.topo-map.is-expanded .topo-map-scroll { flex: 1 1 auto; aspect-ratio: auto !important; overflow: auto; overscroll-behavior: contain; cursor: grab; }
+.topo-map.is-dragging .topo-map-scroll { cursor: grabbing; user-select: none; }
 .topo-map.is-expanded .topo-map-expand { display: none; }
 .topo-map.is-expanded .topo-map-readout { display: block; }
 .topo-map.is-expanded .topo-map-legend { margin: 0; }

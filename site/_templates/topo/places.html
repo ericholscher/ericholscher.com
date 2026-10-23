@@ -14,14 +14,13 @@
         {%- for y in all_years %}<button type="button" data-year="{{ y }}" aria-pressed="false">{{ y }}</button>{% endfor %}
       </div>
       <div class="topo-map-tools">
-        <button type="button" class="topo-map-zoom" data-step="0.5" aria-label="Zoom out">&minus;</button>
-        <button type="button" class="topo-map-zoom" data-step="2" aria-label="Zoom in">+</button>
         <button type="button" class="topo-map-close">Close</button>
       </div>
     </div>
+    {%- set VBH = ((75 - (-56)) / (TOP - BOT) * H)|round(0) %}
     <div class="topo-map-frame">
-      <div class="topo-map-scroll">
-        <svg class="topo-world" viewBox="0 {{ ((TOP - 75) / (TOP - BOT) * H)|round(0) }} {{ W }} {{ ((75 - (-56)) / (TOP - BOT) * H)|round(0) }}" role="img" aria-label="World map with places lived, walked, and visited">
+      <div class="topo-map-scroll" style="aspect-ratio: {{ W }} / {{ VBH }}">
+        <svg class="topo-world" viewBox="0 {{ ((TOP - 75) / (TOP - BOT) * H)|round(0) }} {{ W }} {{ VBH }}" role="img" aria-label="World map with places lived, walked, and visited">
           {% include "topo/world-land.html" %}
           {%- for p in topo_places %}
           {%- set x = ((p.lon + 180) / 360 * W)|round(1) %}{% set y = ((TOP - p.lat) / (TOP - BOT) * H)|round(1) %}
@@ -33,9 +32,13 @@
         <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M2 6V2h4M10 2h4v4M14 10v4h-4M6 14H2v-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
         Expand
       </button>
+      <div class="topo-map-zoombox" hidden>
+        <button type="button" class="topo-map-zoom" data-step="2" aria-label="Zoom in">+</button>
+        <button type="button" class="topo-map-zoom" data-step="0.5" aria-label="Zoom out">&minus;</button>
+      </div>
       <div class="topo-map-tip" role="status" hidden></div>
     </div>
-    <p class="topo-map-readout" aria-live="polite">Tap a pin to name it.</p>
+    <p class="topo-map-readout" aria-live="polite">Pinch or scroll to zoom. Tap a pin to name it.</p>
     <p class="topo-map-legend">
       <span class="topo-legend topo-legend-lived">Lived</span>
       <span class="topo-legend topo-legend-hiked">Walked, rode, or floated</span>
@@ -59,10 +62,10 @@
     var frame = map.querySelector('.topo-map-frame');
     var tip = map.querySelector('.topo-map-tip');
     var vb = svg.viewBox.baseVal;
-    var expanded = false, zoom = 1, active = null, hovered = null, drag = null, dragged = false;
+    var expanded = false, zoom = 1, active = null, hovered = null, drag = null, dragged = false, pinch = null;
     // The hover label below replaces the browser's own tooltips, which stay for pages without JavaScript.
     svg.querySelectorAll('.topo-pin title').forEach(function (t) { t.remove(); });
-    bar.hidden = false; expand.hidden = false;
+    bar.hidden = false; expand.hidden = false; map.querySelector('.topo-map-zoombox').hidden = false;
     map.classList.add('is-enhanced');
 
     // Pins keep a steady size on screen, whatever the map's width or zoom.
@@ -86,13 +89,16 @@
       scroller.scrollLeft = (x0 + x1) / 2 * unit - scroller.clientWidth / 2;
       scroller.scrollTop = (y0 + y1) / 2 * unit - scroller.clientHeight / 2;
     }
-    function setZoom(z) {
-      var fx = (scroller.scrollLeft + scroller.clientWidth / 2) / scroller.scrollWidth;
-      var fy = (scroller.scrollTop + scroller.clientHeight / 2) / scroller.scrollHeight;
+    // Zoom, keeping the map point under (x, y) on screen where it is; the middle by default.
+    function setZoom(z, x, y) {
+      var s = scroller.getBoundingClientRect();
+      var ax = x == null ? scroller.clientWidth / 2 : x - s.left, ay = y == null ? scroller.clientHeight / 2 : y - s.top;
+      var fx = (scroller.scrollLeft + ax) / scroller.scrollWidth, fy = (scroller.scrollTop + ay) / scroller.scrollHeight;
       zoom = Math.max(1, Math.min(12, z));
-      svg.style.width = (zoom * 100) + '%';
-      scroller.scrollLeft = fx * scroller.scrollWidth - scroller.clientWidth / 2;
-      scroller.scrollTop = fy * scroller.scrollHeight - scroller.clientHeight / 2;
+      svg.style.width = zoom === 1 ? '' : (zoom * 100) + '%';
+      map.classList.toggle('is-zoomed', zoom > 1);
+      scroller.scrollLeft = fx * scroller.scrollWidth - ax;
+      scroller.scrollTop = fy * scroller.scrollHeight - ay;
       sizePins();
     }
     function setExpanded(on) {
@@ -107,8 +113,7 @@
         close.focus();
       } else {
         map.removeAttribute('role'); map.removeAttribute('aria-modal');
-        zoom = 1; svg.style.width = '';
-        sizePins();
+        setZoom(1);
         expand.focus();
       }
     }
@@ -130,6 +135,27 @@
     });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && expanded) setExpanded(false); });
     window.addEventListener('resize', function () { sizePins(); });
+
+    // Wheel and trackpad: the open map zooms on any scroll; the small one only on a pinch
+    // (which browsers send as ctrl + wheel), so ordinary scrolling still moves the page.
+    scroller.addEventListener('wheel', function (e) {
+      if (!expanded && !e.ctrlKey) return;
+      e.preventDefault();
+      setZoom(zoom * Math.exp(-e.deltaY * (e.ctrlKey ? 0.01 : 0.002)), e.clientX, e.clientY);
+    }, { passive: false });
+    scroller.addEventListener('dblclick', function (e) { if (expanded) setZoom(zoom * 2, e.clientX, e.clientY); });
+    // Two-finger pinch on touch screens; one finger still scrolls.
+    function spread(t) { return Math.hypot(t[0].clientX - t[1].clientX, t[0].clientY - t[1].clientY); }
+    scroller.addEventListener('touchstart', function (e) {
+      if (e.touches.length === 2) pinch = { d: spread(e.touches), z: zoom };
+    }, { passive: true });
+    scroller.addEventListener('touchmove', function (e) {
+      if (!pinch || e.touches.length !== 2) return;
+      e.preventDefault();
+      var t = e.touches;
+      setZoom(pinch.z * spread(t) / pinch.d, (t[0].clientX + t[1].clientX) / 2, (t[0].clientY + t[1].clientY) / 2);
+    }, { passive: false });
+    scroller.addEventListener('touchend', function (e) { if (e.touches.length < 2) pinch = null; });
 
     function label(p) {
       return p.dataset.name + (p.dataset.note ? ' · ' + p.dataset.note : '') +
@@ -164,9 +190,10 @@
     }
     // A tap on the small map opens it; once open, a tap near a pin names it.
     scroller.addEventListener('click', function (e) {
+      if (dragged) return;
       if (!expanded) { setExpanded(true); return; }
       var p = nearest(e);
-      if (!p || dragged) return;
+      if (!p) return;
       if (active) active.classList.remove('is-active');
       active = p; p.classList.add('is-active');
       readout.textContent = label(p);
@@ -178,7 +205,7 @@
     scroller.addEventListener('scroll', function () { showTip(null); });
     // Drag to pan with a mouse; touch screens already scroll.
     scroller.addEventListener('pointerdown', function (e) {
-      if (!expanded || e.pointerType !== 'mouse') return;
+      if (!(expanded || zoom > 1) || e.pointerType !== 'mouse') return;
       drag = { x: e.clientX, y: e.clientY, left: scroller.scrollLeft, top: scroller.scrollTop }; dragged = false;
     });
     window.addEventListener('pointermove', function (e) {
