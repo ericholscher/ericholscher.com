@@ -40,8 +40,11 @@ with dates, place names, and a guessed kind, to help fill ``hikes.json`` and ``p
 
 Both files are gitignored. The script uses only the standard library.
 
+Dependencies live in ``pyproject.toml`` and are pinned in ``uv.lock``; Read the Docs installs the ``docs`` group with uv.
 To build locally::
 
-    python -m venv .venv
-    .venv/bin/pip install -r requirements.txt
-    cd site && ../.venv/bin/sphinx-build -b dirhtml . _build/dirhtml
+    uv sync
+    cd site && uv run sphinx-build -b dirhtml . _build/dirhtml
+
+``uv sync --all-groups`` also installs ``sphinx-autobuild`` (``uv run sphinx-autobuild site site/_build/dirhtml -b dirhtml``)
+and what ``import_substack.py`` needs. To update everything, run ``uv lock --upgrade`` and rebuild.
