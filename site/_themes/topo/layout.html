@@ -4,7 +4,7 @@
 
 {%- set is_home = pagename == root_doc %}
 {%- set is_post = ablog is defined and pagename in ablog %}
-{%- set is_archive = pagename == 'blog/index' %}
+{%- set is_archive = pagename == 'blog/index' or topo_page is defined %}
 
 {%- block htmltitle %}
   {%- if is_home %}
@@ -42,6 +42,23 @@
 
 {%- from "topo/entries.html" import kind with context %}
 
+{%- macro page_url(n) %}{{ pathto('blog/index') if n == 1 else pathto('blog/page/' ~ n) }}{% endmacro %}
+{%- macro pager(page, pages) %}
+{%- if pages > 1 %}
+<nav class="topo-pager" aria-label="Blog pages">
+  <div class="topo-pager-step">
+    {%- if page > 1 %}<a rel="prev" href="{{ page_url(page - 1) }}">&larr; Newer</a>{% endif %}
+    {%- if page < pages %}<a rel="next" href="{{ page_url(page + 1) }}">Older &rarr;</a>{% endif %}
+  </div>
+  <ol class="topo-pager-pages">
+    {%- for n in range(1, pages + 1) %}
+    <li>{% if n == page %}<span aria-current="page">{{ n }}</span>{% else %}<a href="{{ page_url(n) }}">{{ n }}</a>{% endif %}</li>
+    {%- endfor %}
+  </ol>
+</nav>
+{%- endif %}
+{%- endmacro %}
+
 {%- block content %}
 <div class="topo-page">
   {%- if is_home %}
@@ -66,6 +83,7 @@
             {{ kind(post) }}
           </p>
         {%- endif %}
+        {%- if topo_page is defined %}<h1>Blog</h1>{% endif %}
         {{ self.body() }}
         {%- if is_post %}
         <aside class="topo-pitch">
@@ -101,9 +119,14 @@
         {{ topics(pagename, 3) }}
       </section>
       {%- elif is_archive and ablog is defined %}
+      {%- set per = topo_per_page %}
+      {%- set page = topo_page if topo_page is defined else 1 %}
+      {%- set all_posts = ablog.recent(None)|list %}
+      {%- set pages = (all_posts|length + per - 1) // per %}
       <section class="topo-recent" id="recent">
-        <div class="topo-recent-head"><h2>All posts</h2></div>
-        {{ entries(ablog.recent(None, pagename), pagename) }}
+        <div class="topo-recent-head"><h2>{% if page == 1 %}Latest posts{% else %}Page {{ page }} of {{ pages }}{% endif %}</h2><a href="{{ pathto(ablog.archive.docname) }}" class="topo-more-link">Every title, by year &rarr;</a></div>
+        {{ entries(all_posts[(page - 1) * per:page * per], pagename) }}
+        {{ pager(page, pages) }}
       </section>
       {%- endif %}
     </main>
