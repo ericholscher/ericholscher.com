@@ -139,7 +139,8 @@
     "note": "DjangoCon Europe, then Write the Docs",
     "years": [
       2010,
-      2025
+      2025,
+      2026
     ]
   },
   {
@@ -358,7 +359,8 @@
     "kind": "visited",
     "note": "Temples in the hills",
     "years": [
-      2025
+      2025,
+      2026
     ]
   },
   {
@@ -367,7 +369,7 @@
     "lon": 132.45,
     "kind": "visited",
     "years": [
-      2025
+      2026
     ]
   },
   {
@@ -416,5 +418,315 @@
       2020
     ],
     "note": "By bike, car-free in spring"
+  },
+  {
+    "name": "London",
+    "lat": 51.51,
+    "lon": -0.13,
+    "kind": "visited",
+    "years": [
+      2025
+    ]
+  },
+  {
+    "name": "Monteverde and Arenal",
+    "lat": 10.38,
+    "lon": -84.76,
+    "kind": "visited",
+    "years": [
+      2025
+    ],
+    "note": "Cloud forest and volcano, after the Camino"
+  },
+  {
+    "name": "Nairobi",
+    "lat": -1.29,
+    "lon": 36.82,
+    "kind": "visited",
+    "years": [
+      2025
+    ]
+  },
+  {
+    "name": "Hakone and Kamakura",
+    "lat": 35.23,
+    "lon": 139.1,
+    "kind": "visited",
+    "years": [
+      2025
+    ]
+  },
+  {
+    "name": "Kanazawa",
+    "lat": 36.56,
+    "lon": 136.66,
+    "kind": "visited",
+    "years": [
+      2025
+    ]
+  },
+  {
+    "name": "Yamanouchi, Nagano",
+    "lat": 36.73,
+    "lon": 138.46,
+    "kind": "visited",
+    "years": [
+      2025
+    ],
+    "note": "Snow monkeys"
+  },
+  {
+    "name": "Tokyo",
+    "lat": 35.68,
+    "lon": 139.69,
+    "kind": "visited",
+    "years": [
+      2025,
+      2026
+    ]
+  },
+  {
+    "name": "Himeji",
+    "lat": 34.84,
+    "lon": 134.69,
+    "kind": "visited",
+    "years": [
+      2026
+    ]
+  },
+  {
+    "name": "Nara",
+    "lat": 34.68,
+    "lon": 135.83,
+    "kind": "visited",
+    "years": [
+      2026
+    ]
+  },
+  {
+    "name": "Miyajima",
+    "lat": 34.3,
+    "lon": 132.32,
+    "kind": "visited",
+    "years": [
+      2026
+    ]
+  },
+  {
+    "name": "Singapore",
+    "lat": 1.31,
+    "lon": 103.83,
+    "kind": "visited",
+    "years": [
+      2026
+    ]
+  },
+  {
+    "name": "Bali",
+    "lat": -8.5,
+    "lon": 115.26,
+    "kind": "visited",
+    "years": [
+      2026
+    ],
+    "note": "Diving, and Ubud"
+  },
+  {
+    "name": "Andaman coast, Thailand",
+    "lat": 7.46,
+    "lon": 99.0,
+    "kind": "visited",
+    "years": [
+      2026
+    ],
+    "note": "Diving"
+  },
+  {
+    "name": "Raja Ampat",
+    "lat": -0.54,
+    "lon": 130.52,
+    "kind": "visited",
+    "years": [
+      2026
+    ],
+    "note": "Diving"
+  },
+  {
+    "name": "Bohol, Philippines",
+    "lat": 9.63,
+    "lon": 123.75,
+    "kind": "visited",
+    "years": [
+      2026
+    ],
+    "note": "Diving"
+  },
+  {
+    "name": "Malapascua, Philippines",
+    "lat": 11.3,
+    "lon": 124.13,
+    "kind": "visited",
+    "years": [
+      2026
+    ],
+    "note": "Diving"
+  },
+  {
+    "name": "Sabah, Borneo",
+    "lat": 5.77,
+    "lon": 117.59,
+    "kind": "visited",
+    "years": [
+      2026
+    ],
+    "note": "Rainforest and wildlife"
+  },
+  {
+    "name": "Kathmandu",
+    "lat": 27.71,
+    "lon": 85.32,
+    "kind": "visited",
+    "years": [
+      2026
+    ]
+  },
+  {
+    "name": "Dhaulagiri region",
+    "lat": 28.58,
+    "lon": 83.81,
+    "kind": "hiked",
+    "years": [
+      2026
+    ]
+  },
+  {
+    "name": "Long Beach",
+    "lat": 33.77,
+    "lon": -118.19,
+    "kind": "visited",
+    "years": [
+      2026
+    ],
+    "note": "PyCon US"
+  },
+  {
+    "name": "Athens",
+    "lat": 37.98,
+    "lon": 23.73,
+    "kind": "visited",
+    "years": [
+      2026
+    ]
+  },
+  {
+    "name": "Vikos-Aoös National Park",
+    "lat": 39.95,
+    "lon": 20.73,
+    "kind": "hiked",
+    "years": [
+      2026
+    ]
+  },
+  {
+    "name": "Bilbao",
+    "lat": 43.26,
+    "lon": -2.93,
+    "kind": "visited",
+    "years": [
+      2026
+    ]
+  },
+  {
+    "name": "Lisbon",
+    "lat": 38.72,
+    "lon": -9.14,
+    "kind": "visited",
+    "years": [
+      2026
+    ]
+  },
+  {
+    "name": "Sequoia and Kings Canyon",
+    "lat": 37.08,
+    "lon": -118.71,
+    "kind": "hiked",
+    "years": [
+      2026
+    ],
+    "note": "High Sierra"
+  },
+  {
+    "name": "White River National Forest",
+    "lat": 39.52,
+    "lon": -106.38,
+    "kind": "hiked",
+    "years": [
+      2026
+    ],
+    "note": "Colorado Rockies"
+  },
+  {
+    "name": "Mexico City",
+    "lat": 19.43,
+    "lon": -99.13,
+    "kind": "visited",
+    "years": [
+      2026
+    ]
+  },
+  {
+    "name": "Chicago",
+    "lat": 41.88,
+    "lon": -87.63,
+    "kind": "visited",
+    "years": [
+      2026
+    ]
+  },
+  {
+    "name": "Copenhagen",
+    "lat": 55.68,
+    "lon": 12.57,
+    "kind": "visited",
+    "years": [
+      2026
+    ]
+  },
+  {
+    "name": "Sarajevo",
+    "lat": 43.86,
+    "lon": 18.41,
+    "kind": "visited",
+    "years": [
+      2026
+    ]
+  },
+  {
+    "name": "Utrecht",
+    "lat": 52.09,
+    "lon": 5.12,
+    "kind": "visited",
+    "years": [
+      2025,
+      2026
+    ]
+  },
+  {
+    "name": "Madrid",
+    "lat": 40.42,
+    "lon": -3.7,
+    "kind": "visited",
+    "years": [
+      2026
+    ]
+  },
+  {
+    "name": "Picos de Europa",
+    "lat": 43.27,
+    "lon": -4.86,
+    "kind": "hiked",
+    "years": [
+      2026
+    ]
   }
 ]

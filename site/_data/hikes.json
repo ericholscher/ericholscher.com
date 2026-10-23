@@ -139,7 +139,7 @@
   },
   {
     "year": "2025",
-    "kind": "thru-hike",
+    "kind": "trek",
     "when": "July 2025",
     "name": "Peaks of the Balkans",
     "where": "Montenegro, Albania, and Kosovo",
@@ -147,7 +147,7 @@
   },
   {
     "year": "2025",
-    "kind": "thru-hike",
+    "kind": "trek",
     "when": "July and August 2025",
     "name": "Via Alpina",
     "where": "Switzerland",
@@ -155,7 +155,7 @@
   },
   {
     "year": "2025",
-    "kind": "thru-hike",
+    "kind": "trek",
     "when": "August 2025",
     "name": "Carnic Alps High Route",
     "where": "Austrian and Italian border",
@@ -171,7 +171,7 @@
   },
   {
     "year": "2025",
-    "kind": "thru-hike",
+    "kind": "trek",
     "when": "September 2025",
     "name": "Alta Via 1",
     "where": "Dolomites, Italy",
@@ -184,5 +184,45 @@
     "name": "Kakamega Forest",
     "where": "Western Kenya",
     "note": "Days of walking a rainforest reserve with a local guide, reached by local transport."
+  },
+  {
+    "year": "2026",
+    "kind": "trek",
+    "when": "May 2026",
+    "name": "Dhaulagiri region",
+    "where": "Nepal",
+    "note": "Six days of trekking in the Himalaya."
+  },
+  {
+    "year": "2026",
+    "kind": "trek",
+    "when": "May and June 2026",
+    "name": "Vikos-Aoös National Park",
+    "where": "Epirus, Greece",
+    "note": "Two weeks of hiking in the mountains of northern Greece, ending near Meteora."
+  },
+  {
+    "year": "2026",
+    "kind": "backpacking",
+    "when": "July 2026",
+    "name": "High Sierra",
+    "where": "Sequoia and Kings Canyon Wilderness, California",
+    "note": "Three weeks in the backcountry, back in the range where the 2013 PCT walk ended."
+  },
+  {
+    "year": "2026",
+    "kind": "backpacking",
+    "when": "August 2026",
+    "name": "Colorado Rockies",
+    "where": "White River National Forest, near Aspen",
+    "note": "Eleven days in the mountains."
+  },
+  {
+    "year": "2026",
+    "kind": "trek",
+    "when": "September and October 2026",
+    "name": "Picos de Europa",
+    "where": "Asturias, Spain",
+    "note": "Two weeks in the limestone peaks of northern Spain."
   }
 ]

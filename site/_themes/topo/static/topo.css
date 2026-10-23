@@ -269,7 +269,7 @@ ul.postlist p.ablog-post-excerpt { font-size: 16px; color: var(--text-2); margin
 .topo-tl-item h4 a:hover { color: var(--link-hover); }
 .topo-tl-meta { font-family: var(--mono); font-size: 12px; color: var(--muted); margin: 0 0 6px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
 .topo-tl-meta .topo-kind { border-color: var(--rule-strong); }
-.topo-kind-thru-hike { color: var(--forest); border-color: var(--forest) !important; }
+.topo-kind-thru-hike, .topo-kind-trek { color: var(--forest); border-color: var(--forest) !important; }
 .body .topo-tl-note, .topo-tl-note { margin: 0; font-size: 15px; line-height: 1.55; color: var(--text-2); max-width: 60ch; }
 
 /* Places map */

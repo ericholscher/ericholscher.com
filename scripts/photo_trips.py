@@ -13,7 +13,9 @@ Then:
 Photos are grouped by day, days near home are dropped, and consecutive days
 close to each other are merged into one trip. Each trip gets the most common
 place names, the Photos scene labels it saw, and a guessed kind
-(bike, thru-hike, backpacking, day-hike, or visited).
+(bike, trek, backpacking, day-hike, coast, or visited).
+
+If your library is shared, other people's trips show up too; delete those rows.
 
 Only dates, coordinates, place names, and scene labels are read. Filenames
 and people are ignored, and nothing leaves your machine.
@@ -26,12 +28,17 @@ import json
 import math
 import sys
 from datetime import date, timedelta
+from statistics import median
 
-OUTDOOR = {
-    "mountain", "hiking", "trail", "forest", "tree", "snow", "glacier", "lake", "river",
-    "waterfall", "canyon", "cliff", "rock", "desert", "tent", "camping", "backpack",
-    "hill", "valley", "wilderness", "volcano", "meadow", "creek", "sky", "outdoor",
+# Scene labels that point at hiking, at towns, and at the coast. "outdoor" and "sky"
+# show up in city photos too, so they don't count as evidence of a hike.
+HIKING = {
+    "mountain", "mountain range", "landscape", "wilderness", "natural environment", "rocks",
+    "hill", "fell", "glacier", "trail", "path", "forest", "waterfall", "canyon", "cliff",
+    "tent", "camping", "backpack", "valley", "volcano", "meadow", "creek",
 }
+URBAN = {"building", "urban area", "city", "skyscraper", "art", "interior room", "crowd", "furniture", "statue", "arch"}
+COAST = {"sea", "ocean", "beach", "coast", "water body"}
 BIKE = {"bicycle", "bike", "cycling", "cyclist"}
 PLACE_KEYS = ("area_of_interest", "inland_water", "body_of_water", "region", "city", "state_province", "country")
 
@@ -105,7 +112,10 @@ def main():
     trips, current = [], None
     for day in sorted(days):
         pts = days[day]
-        centroid = (sum(c[0] for c, _, _ in pts) / len(pts), sum(c[1] for c, _, _ in pts) / len(pts))
+        # Travel days mix far-apart places. Keep the photos near the day's median spot.
+        med = (median(c[0] for c, _, _ in pts), median(c[1] for c, _, _ in pts))
+        pts = [x for x in pts if haversine_km(x[0], med) <= args.merge_km] or pts
+        centroid = (median(c[0] for c, _, _ in pts), median(c[1] for c, _, _ in pts))
         d = date.fromisoformat(day)
         if current and d - current["end"] <= timedelta(days=1) and haversine_km(centroid, current["last"]) <= args.merge_km:
             current["end"], current["last"] = d, centroid
@@ -115,33 +125,33 @@ def main():
             trips.append(current)
 
     out = csv.writer(sys.stdout)
-    out.writerow(["start", "end", "days", "photos", "kind_guess", "name_guess", "where", "lat", "lon", "outdoor_share", "top_labels"])
+    out.writerow(["start", "end", "days", "photos", "kind_guess", "name_guess", "where", "lat", "lon", "hiking_share", "top_labels"])
     kept = 0
     for t in trips:
         pts = t["photos"]
         if len(pts) < args.min_photos or (args.year and str(t["start"].year) != args.year):
             continue
         ndays = (t["end"] - t["start"]).days + 1
-        outdoor = sum(1 for _, _, l in pts if l & OUTDOOR) / len(pts)
-        bike = sum(1 for _, _, l in pts if l & BIKE) / len(pts)
-        if args.outdoor_only and outdoor < 0.3:
+        share = lambda tags: sum(1 for _, _, l in pts if l & tags) / len(pts)
+        hiking, urban, coast, bike = share(HIKING), share(URBAN), share(COAST), share(BIKE)
+        if args.outdoor_only and hiking < 0.25 and bike < 0.15:
             continue
         if bike >= 0.15:
             kind = "bike"
-        elif outdoor >= 0.5 and ndays >= 5:
-            kind = "thru-hike"
-        elif outdoor >= 0.5 and ndays >= 2:
-            kind = "backpacking"
-        elif outdoor >= 0.5:
-            kind = "day-hike"
+        elif hiking >= 0.35 and urban < 0.3:
+            kind = "trek" if ndays >= 5 else "backpacking" if ndays >= 2 else "day-hike"
+        elif coast >= 0.3:
+            kind = "coast"
         else:
             kind = "visited"
-        counts = {k: collections.Counter(n[k] for _, n, _ in pts if k in n) for k in PLACE_KEYS}
-        top = lambda k: counts[k].most_common(1)[0][0] if counts[k] else ""
-        name = top("area_of_interest") or top("inland_water") or top("region") or top("city")
-        where = ", ".join(x for x in (top("city"), top("state_province"), top("country")) if x)
-        lat = sum(c[0] for c, _, _ in pts) / len(pts)
-        lon = sum(c[1] for c, _, _ in pts) / len(pts)
+        lat = median(c[0] for c, _, _ in pts)
+        lon = median(c[1] for c, _, _ in pts)
+        # Name the trip from one photo near its middle, so city, state, and country agree.
+        rep = min(pts, key=lambda x: haversine_km(x[0], (lat, lon)))[1]
+        aoi = collections.Counter(n["area_of_interest"] for _, n, _ in pts if "area_of_interest" in n)
+        name = (aoi.most_common(1)[0][0] if aoi else "") or rep.get("inland_water") or rep.get("region") or rep.get("city", "")
+        where = ", ".join(x for x in (rep.get("city"), rep.get("state_province"), rep.get("country")) if x)
+        outdoor = hiking
         labels = collections.Counter(x for _, _, l in pts for x in l).most_common(6)
         out.writerow([t["start"], t["end"], ndays, len(pts), kind, name, where, f"{lat:.3f}", f"{lon:.3f}",
                       f"{outdoor:.2f}", "; ".join(x for x, _ in labels)])

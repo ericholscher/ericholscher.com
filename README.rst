@@ -15,7 +15,7 @@ Topics are ABlog categories. The ones listed in ``html_context["topo_categories"
 get a landing page with an intro, and a card on the home page. A post joins a topic with ``:category: <slug>``.
 The Outside landing page also renders a hike timeline from ``site/_data/hikes.json`` and a places map
 from ``site/_data/places.json``; both are plain JSON meant to be edited by hand.
-Each hike has a ``kind``: ``thru-hike``, ``backpacking``, ``summit``, ``day-hike``, ``camping``, or ``bike``.
+Each hike has a ``kind``: ``thru-hike`` (end to end), ``trek`` (multi-day, hut or village based), ``backpacking``, ``summit``, ``day-hike``, ``camping``, or ``bike``.
 
 Finding trips in your photos
 ----------------------------
