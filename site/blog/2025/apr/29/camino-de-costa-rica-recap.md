@@ -1,5 +1,5 @@
 ```{post} May 2, 2025
-:category: outside
+:category: outside, hiking
 ```
 # Thoughts on the Camino de Costa Rica
 
