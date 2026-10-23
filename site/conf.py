@@ -91,6 +91,7 @@ html_static_path = ["_static"]
 topo_redirects = {
     "backpacking": "adventures",
     "bike": "adventures",
+    "pct/thoughts": "pct/index",
 }
 
 
