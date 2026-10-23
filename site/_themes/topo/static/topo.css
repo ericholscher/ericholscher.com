@@ -322,6 +322,19 @@ ul.postlist p.ablog-post-excerpt { font-size: 16px; color: var(--text-2); margin
 .body .topo-log-placelist, .topo-log-placelist { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 16px; }
 .body .topo-log-placelist li, .topo-log-placelist li { margin: 0; font-size: 14.5px; line-height: 1.45; color: var(--ink); }
 .topo-log-map[hidden] { display: none; }
+.topo-log-kinds { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 10px; }
+a.topo-kind { text-decoration: none; }
+a.topo-kind:hover { color: var(--link-hover); border-color: var(--link-hover) !important; }
+.topo-log-kinds .topo-kind { font-size: 11px; padding: 3px 8px; }
+.topo-kind-count { color: var(--muted); margin-left: 2px; }
+.topo-log-kinds a.is-active { background: var(--sign); border-color: var(--sign) !important; color: var(--sign-text); }
+.topo-log-kinds a.is-active .topo-kind-count { color: var(--sign-gold); }
+.topo-log-filter { margin: 0 0 6px; padding: 8px 12px; background: #F7F1E4; border: 1px solid var(--rule-strong); border-radius: 3px; font-size: 15px; }
+.topo-log-filter[hidden], .topo-log-year[hidden], .topo-tl-item[hidden] { display: none; }
+.topo-log.is-kind .topo-log-places, .topo-log.is-kind .topo-log-foot { display: none; }
+.topo-log-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin: 12px 0 0; }
+.topo-log-foot .topo-log-map { margin-top: 0; }
+.topo-log-permalink { font-family: var(--mono); font-size: 12px; }
 
 /* Places map. Expands to fill the screen, with zoom and drag to pan. */
 .topo-places { margin: 0 0 40px; }

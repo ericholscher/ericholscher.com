@@ -21,7 +21,9 @@ Topics are ABlog categories. The ones listed in ``html_context["topo_categories"
 get a landing page with an intro, and a card on the home page. A post joins a topic with ``:category: <slug>``.
 The Adventures page (``site/adventures.rst``) renders trips from ``site/_data/hikes.json`` and a places map
 from ``site/_data/places.json``; both are plain JSON meant to be edited by hand.
-Trips marked ``"feature": true`` show as cards under "The long ones", there and on the Outside landing page.
+Trips marked ``"feature": true`` show as cards under "The long ones".
+Years and trip types are permalinks: ``/adventures/#2016`` opens that year and sets the map to it,
+``/adventures/#trek`` shows only treks.
 Every trip and place also shows in a year-by-year log, one collapsible section per year.
 The map expands to fill the screen, with drag to pan, a label on hover (or tap) naming each pin, and zoom by pinch, ctrl+scroll, or the on-map buttons
 (plain scroll and double-click also zoom once it is expanded).
@@ -38,8 +40,11 @@ with dates, place names, and a guessed kind, to help fill ``hikes.json`` and ``p
 
 Both files are gitignored. The script uses only the standard library.
 
+Dependencies live in ``pyproject.toml`` and are pinned in ``uv.lock``; Read the Docs installs the ``docs`` group with uv.
 To build locally::
 
-    python -m venv .venv
-    .venv/bin/pip install -r requirements.txt
-    cd site && ../.venv/bin/sphinx-build -b dirhtml . _build/dirhtml
+    uv sync
+    cd site && uv run sphinx-build -b dirhtml . _build/dirhtml
+
+``uv sync --all-groups`` also installs ``sphinx-autobuild`` (``uv run sphinx-autobuild site site/_build/dirhtml -b dirhtml``)
+and what ``import_substack.py`` needs. To update everything, run ``uv lock --upgrade`` and rebuild.

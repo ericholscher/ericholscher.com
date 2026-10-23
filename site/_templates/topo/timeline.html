@@ -1,15 +1,23 @@
 {#- Year-by-year log: trips from hikes.json and places from places.json, newest year first.
-    Each year is a <details>, so the page reads as a short list of years until one is opened. -#}
-{%- set ns = namespace(years=[]) %}
-{%- for h in topo_hikes %}{% if h.year not in ns.years %}{% set ns.years = ns.years + [h.year] %}{% endif %}{% endfor %}
+    Each year is a <details>, so the page reads as a short list of years until one is opened.
+    Years and trip types are permalinks: /adventures/#2016 opens that year (and sets the map to it),
+    /adventures/#trek shows only treks. Without JavaScript, #2016 still jumps to the year. -#}
+{%- set ns = namespace(years=[], kinds=[]) %}
+{%- for h in topo_hikes %}{% if h.year not in ns.years %}{% set ns.years = ns.years + [h.year] %}{% endif %}{% if h.kind not in ns.kinds %}{% set ns.kinds = ns.kinds + [h.kind] %}{% endif %}{% endfor %}
 {%- for p in topo_places %}{% for y in p.years or [] %}{% if y|string not in ns.years %}{% set ns.years = ns.years + [y|string] %}{% endif %}{% endfor %}{% endfor %}
 <section class="topo-log" id="hikes">
   <h2 class="topo-plaque">Year by year</h2>
+  <p class="topo-log-kinds">
+    {%- for k in ns.kinds|sort %}
+    <a class="topo-kind topo-kind-{{ k }}" href="#{{ k }}">{{ k|replace("-", " ") }} <span class="topo-kind-count">{{ topo_hikes|selectattr('kind', 'equalto', k)|list|length }}</span></a>
+    {%- endfor %}
+  </p>
+  <p class="topo-log-filter" hidden>Showing only <strong></strong> trips. <a href="#hikes">Show everything</a></p>
   {%- for y in ns.years|sort(reverse=true) %}
   {%- set trips = topo_hikes|selectattr('year', 'equalto', y)|list %}
   {%- set pl = namespace(items=[]) %}
   {%- for p in topo_places if p.years and y|int in p.years %}{% set pl.items = pl.items + [p] %}{% endfor %}
-  <details class="topo-log-year" id="hikes-{{ y }}"{% if loop.first %} open{% endif %}>
+  <details class="topo-log-year" id="{{ y }}"{% if loop.first %} open{% endif %}>
     <summary>
       <span class="topo-log-yearnum">{{ y }}</span>
       <span class="topo-log-gist">{{ (trips or pl.items)|map(attribute='name')|join(' · ') }}</span>
@@ -22,9 +30,9 @@
       {%- if trips %}
       <ol class="topo-tl-list">
       {%- for h in trips %}
-        <li class="topo-tl-item">
+        <li class="topo-tl-item" data-kind="{{ h.kind }}">
           <h4>{% if h.link %}<a href="{{ pathto(h.link) }}">{{ h.name }}</a>{% else %}{{ h.name }}{% endif %}</h4>
-          <p class="topo-tl-meta"><span class="topo-kind topo-kind-{{ h.kind }}">{{ h.kind|replace("-", " ") }}</span>{{ h.when|replace(", " ~ y, "")|replace(" " ~ y, "") }}{% if h.where %} &middot; {{ h.where }}{% endif %}</p>
+          <p class="topo-tl-meta"><a class="topo-kind topo-kind-{{ h.kind }}" href="#{{ h.kind }}">{{ h.kind|replace("-", " ") }}</a>{{ h.when|replace(", " ~ y, "")|replace(" " ~ y, "") }}{% if h.where %} &middot; {{ h.where }}{% endif %}</p>
           {%- if h.note %}<p class="topo-tl-note">{{ h.note }}</p>{% endif %}
         </li>
       {%- endfor %}
@@ -38,10 +46,70 @@
           <li><span class="topo-dot topo-dot-{{ p.kind }}" aria-hidden="true"></span>{{ p.name }}</li>
         {%- endfor %}
         </ul>
-        <button type="button" class="topo-log-map" data-map-year="{{ y }}" hidden>Show {{ y }} on the map</button>
       </div>
       {%- endif %}
+      <p class="topo-log-foot">
+        {%- if pl.items %}<button type="button" class="topo-log-map" data-map-year="{{ y }}" hidden>Show {{ y }} on the map</button>{% endif %}
+        <a class="topo-log-permalink" href="#{{ y }}">Link to {{ y }}</a>
+      </p>
     </div>
   </details>
   {%- endfor %}
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var log = document.getElementById('hikes'); if (!log) return;
+    var years = log.querySelectorAll('.topo-log-year');
+    var items = log.querySelectorAll('.topo-tl-item');
+    var bar = log.querySelector('.topo-log-filter');
+    var kinds = [].map.call(log.querySelectorAll('.topo-log-kinds a'), function (a) { return a.hash.slice(1); });
+    var opened = [].map.call(years, function (d) { return d.open; });
+
+    function showKind(kind) {
+      log.classList.toggle('is-kind', !!kind);
+      bar.hidden = !kind;
+      if (kind) bar.querySelector('strong').textContent = kind.replace(/-/g, ' ');
+      log.querySelectorAll('.topo-log-kinds a').forEach(function (a) {
+        var on = a.hash.slice(1) === kind;
+        a.classList.toggle('is-active', on);
+        if (on) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
+      });
+      items.forEach(function (li) { li.hidden = !!kind && li.dataset.kind !== kind; });
+      years.forEach(function (d, i) {
+        var any = !kind || d.querySelector('.topo-tl-item[data-kind="' + kind + '"]');
+        d.hidden = !any;
+        d.open = kind ? !!any : opened[i];
+      });
+    }
+    // The address bar is the state: #2016 opens a year (and the map follows), #trek filters by type.
+    function apply(scroll) {
+      var h = decodeURIComponent(location.hash.slice(1));
+      var year = /^\d{4}$/.test(h) && document.getElementById(h);
+      if (kinds.indexOf(h) !== -1) {
+        showKind(h);
+        if (scroll) log.scrollIntoView();
+      } else {
+        showKind(null);
+        if (year) {
+          year.open = true;
+          document.dispatchEvent(new CustomEvent('topo:year', { detail: h }));
+          if (scroll) year.scrollIntoView();
+        }
+      }
+    }
+    window.addEventListener('hashchange', function () { apply(true); });
+    // Opening a year, or picking one on the map, updates the address bar without jumping the page.
+    years.forEach(function (d) {
+      d.querySelector('summary').addEventListener('click', function () {
+        if (!d.open && !log.classList.contains('is-kind')) history.replaceState(null, '', '#' + d.id);
+      });
+    });
+    document.addEventListener('topo:map-year', function (e) {
+      showKind(null);
+      history.replaceState(null, '', e.detail === 'all' ? location.pathname : '#' + e.detail);
+      var d = document.getElementById(e.detail);
+      if (d && d.classList.contains('topo-log-year')) d.open = true;
+    });
+    if (location.hash) apply(true);
+  });
+  </script>
 </section>

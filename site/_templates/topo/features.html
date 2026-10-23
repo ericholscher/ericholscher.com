@@ -4,7 +4,7 @@
   <ul class="topo-feature-grid">
   {%- for h in topo_hikes|selectattr('feature')|list|reverse %}
     <li class="topo-feature">
-      <p class="topo-feature-meta"><span>{{ h.year }}</span><span class="topo-kind topo-kind-{{ h.kind }}">{{ h.kind|replace("-", " ") }}</span></p>
+      <p class="topo-feature-meta"><span>{{ h.year }}</span><a class="topo-kind topo-kind-{{ h.kind }}" href="#{{ h.kind }}">{{ h.kind|replace("-", " ") }}</a></p>
       <h3>{% if h.link %}<a href="{{ pathto(h.link) }}">{{ h.name }}</a>{% else %}{{ h.name }}{% endif %}</h3>
       <p class="topo-feature-where">{{ h.where }}</p>
     </li>

@@ -1,0 +1,31 @@
+[project]
+name = "ericholscher-com"
+version = "0"
+description = "Eric Holscher's website, built with Sphinx and ABlog."
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+# What Read the Docs installs to build the site (see .readthedocs.yaml).
+docs = [
+    "ablog",
+    "myst-parser",
+    "sphinx",
+    "sphinx-notfound-page",
+    "sphinxext-opengraph",
+]
+# Live-reloading local preview (see README)
+dev = [
+    "sphinx-autobuild",
+]
+# import_substack.py
+scripts = [
+    "beautifulsoup4",
+    "feedparser",
+    "requests",
+]
+
+[tool.uv]
+package = false
+# Read the Docs and a plain `uv sync` get only what the build needs; `uv sync --all-groups` adds the rest.
+default-groups = ["docs"]

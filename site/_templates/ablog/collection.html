@@ -9,10 +9,6 @@
   {%- if meta %}
   <h1>{{ meta[0] }}</h1>
   <p class="topo-landing-intro">{{ meta[1] }}</p>
-  {%- if collection.name == 'outside' %}
-  {% include "topo/features.html" %}
-  <p class="topo-more topo-adv-link"><a href="{{ pathto('adventures') }}">Every trip, year by year, with a map &rarr;</a></p>
-  {%- endif %}
   <div class="topo-recent-head"><h2>{{ collection|length }} post{% if collection|length != 1 %}s{% endif %}</h2></div>
   {%- elif is_year %}
   <h1>{{ collection }}</h1>

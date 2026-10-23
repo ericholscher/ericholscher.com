@@ -94,10 +94,12 @@ Speaking
 Spoken at the following conferences on Read the Docs, IRC bots, Testing, and Documentation:
 
 * Write the Docs Portland, 2013 to present
+* DjangoCon US 2022
 * Keynote - PyCon Colombia 2017
 * Keynote - PyCaribbean 2016
+* PyCon US 2016
 * ConFoo Vancouver 2016
-* DjangoCon US 2015, 2011, 2010
+* DjangoCon US 2015, 2011, 2010, 2009
 * Django Under the Hood 2015
 * Django Birthday 2015
 * Open Source & Feelings 2015
