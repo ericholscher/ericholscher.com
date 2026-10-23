@@ -33,6 +33,7 @@
         <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M2 6V2h4M10 2h4v4M14 10v4h-4M6 14H2v-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
         Expand
       </button>
+      <div class="topo-map-tip" role="status" hidden></div>
     </div>
     <p class="topo-map-readout" aria-live="polite">Tap a pin to name it.</p>
     <p class="topo-map-legend">
@@ -55,8 +56,12 @@
     var expand = map.querySelector('.topo-map-expand');
     var close = map.querySelector('.topo-map-close');
     var readout = map.querySelector('.topo-map-readout');
+    var frame = map.querySelector('.topo-map-frame');
+    var tip = map.querySelector('.topo-map-tip');
     var vb = svg.viewBox.baseVal;
-    var expanded = false, zoom = 1, active = null, drag = null, dragged = false;
+    var expanded = false, zoom = 1, active = null, hovered = null, drag = null, dragged = false;
+    // The hover label below replaces the browser's own tooltips, which stay for pages without JavaScript.
+    svg.querySelectorAll('.topo-pin title').forEach(function (t) { t.remove(); });
     bar.hidden = false; expand.hidden = false;
     map.classList.add('is-enhanced');
 
@@ -113,6 +118,7 @@
         var on = year === 'all' || p.classList.contains('topo-pin-lived') || p.dataset.years.split(' ').indexOf(year) !== -1;
         p.classList.toggle('is-dim', !on);
       });
+      showTip(null);
       if (expanded) center();
     }
 
@@ -125,6 +131,25 @@
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && expanded) setExpanded(false); });
     window.addEventListener('resize', function () { sizePins(); });
 
+    function label(p) {
+      return p.dataset.name + (p.dataset.note ? ' · ' + p.dataset.note : '') +
+        (p.dataset.years ? ' · ' + p.dataset.years.split(' ').join(', ') : '');
+    }
+    // A label over the pin under the mouse, kept inside the map's frame.
+    function showTip(p) {
+      if (p === hovered) return;
+      if (hovered) hovered.classList.remove('is-hover');
+      hovered = p;
+      if (!p) { tip.hidden = true; return; }
+      p.classList.add('is-hover');
+      tip.textContent = label(p);
+      tip.hidden = false;
+      var r = svg.getBoundingClientRect(), f = frame.getBoundingClientRect(), unit = r.width / vb.width;
+      var x = r.left - f.left + (+p.dataset.x - vb.x) * unit, y = r.top - f.top + (+p.dataset.y - vb.y) * unit;
+      var top = y - tip.offsetHeight - 10;
+      tip.style.left = Math.max(4, Math.min(f.width - tip.offsetWidth - 4, x - tip.offsetWidth / 2)) + 'px';
+      tip.style.top = (top < 4 ? y + 12 : top) + 'px';
+    }
     // The pin nearest a tap, if one is within reach of a fingertip.
     function nearest(e) {
       var rect = svg.getBoundingClientRect(), unit = rect.width / vb.width;
@@ -144,9 +169,13 @@
       if (!p || dragged) return;
       if (active) active.classList.remove('is-active');
       active = p; p.classList.add('is-active');
-      readout.textContent = p.dataset.name + (p.dataset.note ? ' · ' + p.dataset.note : '') +
-        (p.dataset.years ? ' · ' + p.dataset.years.split(' ').join(', ') : '');
+      readout.textContent = label(p);
     });
+    scroller.addEventListener('pointermove', function (e) {
+      if (e.pointerType === 'mouse' && !drag) showTip(nearest(e));
+    });
+    scroller.addEventListener('pointerleave', function () { showTip(null); });
+    scroller.addEventListener('scroll', function () { showTip(null); });
     // Drag to pan with a mouse; touch screens already scroll.
     scroller.addEventListener('pointerdown', function (e) {
       if (!expanded || e.pointerType !== 'mouse') return;

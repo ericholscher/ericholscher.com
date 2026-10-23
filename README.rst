@@ -23,7 +23,7 @@ The Adventures page (``site/adventures.rst``) renders trips from ``site/_data/hi
 from ``site/_data/places.json``; both are plain JSON meant to be edited by hand.
 Trips marked ``"feature": true`` show as cards under "The long ones", there and on the Outside landing page.
 Every trip and place also shows in a year-by-year log, one collapsible section per year.
-The map expands to fill the screen, with zoom, drag to pan, and tap a pin to name it.
+The map expands to fill the screen, with zoom, drag to pan, and a label on hover (or tap) naming each pin.
 Each hike has a ``kind``: ``thru-hike`` (end to end), ``trek`` (multi-day, hut or village based), ``hiking`` (a stay spent hiking from a base), ``backpacking``, ``summit``, ``day-hike``, ``camping``, ``rafting``, ``kayak``, ``cruise``, ``road-trip``, or ``bike``.
 
 Finding trips in your photos

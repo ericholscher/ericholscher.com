@@ -341,7 +341,9 @@ ul.postlist p.ablog-post-excerpt { font-size: 16px; color: var(--text-2); margin
 .topo-land { fill: #DCD2BA; stroke: #C9BD9F; stroke-width: .6; vector-effect: non-scaling-stroke; }
 .topo-pin-dot { stroke: var(--paper); stroke-width: 1.5; vector-effect: non-scaling-stroke; transition: opacity .15s ease; }
 .topo-pin.is-dim .topo-pin-dot { opacity: .15; }
-.topo-pin.is-active .topo-pin-dot { stroke: var(--ink); stroke-width: 2.5; }
+.topo-pin.is-active .topo-pin-dot, .topo-pin.is-hover .topo-pin-dot { stroke: var(--ink); stroke-width: 2.5; }
+.topo-map-tip { position: absolute; z-index: 2; pointer-events: none; max-width: min(280px, calc(100% - 8px)); padding: 5px 9px; border-radius: 3px; background: var(--sign); color: var(--sign-text); font-size: 13px; line-height: 1.35; box-shadow: 0 2px 6px rgba(51,42,32,.3); }
+.topo-map-tip[hidden] { display: none; }
 @media (prefers-reduced-motion: reduce) { .topo-pin-dot { transition: none; } }
 .topo-pin-lived .topo-pin-dot { fill: var(--sign); }
 .topo-pin-hiked .topo-pin-dot { fill: var(--forest); }
