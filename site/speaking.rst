@@ -1,7 +1,5 @@
-.. figure:: /_static/img/speaking-wtd.jpg
-   :alt: Eric on stage with a microphone and a yellow lanyard, projected slide text behind him
-
-   Closing Write the Docs Portland, 2019. Photo by `Write the Docs <https://www.flickr.com/photos/writethedocs/47967664442/>`_, CC BY-NC-SA.
+.. figure:: /_static/img/speaking-stage.jpg
+   :alt: Eric on a dark stage with a headset microphone, smiling and gesturing toward the audience with a slide clicker in hand
 
 Speaking
 ========
