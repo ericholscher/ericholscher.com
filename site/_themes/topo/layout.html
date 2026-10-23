@@ -38,15 +38,10 @@
 </svg>
 {%- endmacro %}
 
-{%- macro glyph(post) %}
-  {%- set cats = post.category|map('string')|list if post.category else [] %}
-  {%- if 'photo' in cats or 'photos' in cats %}
-    <svg class="topo-glyph" width="12" height="12" viewBox="0 0 12 12" role="img" aria-label="Photo"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="var(--blaze)" stroke-width="1.4"></rect><circle cx="6" cy="6" r="1.6" fill="var(--blaze)"></circle></svg>
-  {%- elif 'link-blog' in cats %}
-    <svg class="topo-glyph" width="12" height="12" viewBox="0 0 12 12" role="img" aria-label="Note"><polygon points="6,1 11,6 6,11 1,6" fill="none" stroke="currentColor" stroke-width="1.2"></polygon></svg>
-  {%- else %}
-    <svg class="topo-glyph" width="12" height="12" viewBox="0 0 12 12" role="img" aria-label="Essay"><polygon points="6,0.5 11.5,6 6,11.5 0.5,6" fill="currentColor"></polygon></svg>
-  {%- endif %}
+{%- macro kind(post) %}
+{#- A small label for link-blog posts, which are short pointers rather than writing. -#}
+{%- set cats = post.category|map('string')|list if post.category else [] %}
+{%- if 'link-blog' in cats %}<span class="topo-kind">link</span>{% endif %}
 {%- endmacro %}
 
 {%- block content %}
@@ -68,9 +63,9 @@
         {%- if is_post %}
           {%- set post = ablog[pagename] %}
           <p class="topo-dateline">
-            <span class="topo-dateline-glyph">{{ glyph(post) }}</span>
             {%- if post.date %}<time datetime="{{ post.date.strftime('%Y-%m-%d') }}">{{ post.date.strftime('%B %-d, %Y') }}</time>{% else %}Draft{% endif %}
             {%- if post.tags %} &middot; {% for tag in post.tags %}<a href="{{ pathto(tag.docname) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}{% endif %}
+            {{ kind(post) }}
           </p>
         {%- endif %}
         {{ self.body() }}
@@ -86,12 +81,10 @@
       <section class="topo-recent" id="recent">
         <div class="topo-recent-head">
           {%- if is_home %}<h2>Recently</h2>{% else %}<h2>All posts</h2>{% endif %}
-          <span class="topo-key" aria-hidden="true">&#9670; essay &nbsp; &#9671; note &nbsp; &#9633; photo</span>
         </div>
         {%- for post in ablog.recent(10 if is_home else None, pagename) %}
         <article class="topo-entry">
-          <time class="topo-entry-date" datetime="{{ post.date.strftime('%Y-%m-%d') }}">{{ post.date.strftime('%b %-d, %Y') }}</time>
-          <span class="topo-entry-glyph">{{ glyph(post) }}</span>
+          <div class="topo-entry-meta"><time class="topo-entry-date" datetime="{{ post.date.strftime('%Y-%m-%d') }}">{{ post.date.strftime('%b %-d, %Y') }}</time>{{ kind(post) }}</div>
           <div class="topo-entry-body">
             <h3><a href="{{ pathto(post.docname) }}{{ anchor(post) }}">{{ post.title }}</a></h3>
             <div class="topo-entry-excerpt">{{ post.to_html(pagename) }}</div>

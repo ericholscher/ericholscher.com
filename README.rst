@@ -8,9 +8,8 @@ It inherits Sphinx's ``basic`` theme and adds its own layout and stylesheet.
 Fonts are self-hosted under ``site/_themes/topo/static/fonts/``.
 Sidebar blocks are plain Jinja templates in ``site/_templates/sidebar/`` and are safe to edit by hand.
 
-The home page and ``blog/index`` listings are rendered by the theme from ABlog's post data,
-so the glyph next to each post comes from its ``:category:``:
-``link-blog`` posts get an open circle, a ``photo`` category gets a triangle, everything else is an essay.
+The home page and ``blog/index`` listings are rendered by the theme from ABlog's post data.
+Posts in the ``link-blog`` category get a small "link" label next to their date.
 
 To build locally::
 
