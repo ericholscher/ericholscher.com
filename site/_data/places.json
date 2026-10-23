@@ -406,5 +406,15 @@
     "years": [
       2020
     ]
+  },
+  {
+    "name": "McKenzie Pass",
+    "lat": 44.26,
+    "lon": -121.81,
+    "kind": "hiked",
+    "years": [
+      2020
+    ],
+    "note": "By bike, car-free in spring"
   }
 ]
