@@ -92,7 +92,9 @@
       </section>
       <section class="topo-recent" id="recent">
         <div class="topo-recent-head"><h2>Recently</h2><a href="{{ pathto('blog/index') }}" class="topo-more-link">All posts &rarr;</a></div>
-        {{ titles(ablog.recent(8, pagename), pagename) }}
+        {%- set rec = namespace(posts=[]) %}
+        {%- for post in ablog.recent(20, pagename) if post.docname not in topo_popular and rec.posts|length < 8 %}{% set rec.posts = rec.posts + [post] %}{% endfor %}
+        {{ titles(rec.posts, pagename) }}
       </section>
       <section class="topo-topics-section" id="topics">
         <div class="topo-recent-head"><h2>By topic</h2><a href="{{ pathto(ablog.category.docname) }}" class="topo-more-link">All topics &rarr;</a></div>
