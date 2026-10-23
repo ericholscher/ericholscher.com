@@ -256,14 +256,16 @@ ul.postlist p.ablog-post-excerpt { font-size: 16px; color: var(--text-2); margin
 
 /* Timeline */
 .topo-timeline { margin: 8px 0 40px; }
-.topo-tl { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--rule-strong); margin-left: 44px; }
+.body .topo-tl, .topo-tl { list-style: none; margin: 0 0 0 60px; padding: 0; border-left: 2px solid var(--rule-strong); }
 .topo-tl-item { position: relative; padding: 0 0 22px 24px; }
 .topo-tl-item::before { content: ""; position: absolute; left: -7px; top: 8px; width: 12px; height: 12px; background: var(--sign); transform: rotate(45deg); box-shadow: 0 0 0 2px var(--paper); }
-.topo-tl-year { position: absolute; left: -66px; top: 6px; width: 40px; text-align: right; font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.topo-tl-year { position: absolute; left: -62px; top: 6px; width: 42px; text-align: right; font-family: var(--mono); font-size: 12px; color: var(--muted); }
 .topo-tl-body h3 { font-family: var(--serif); font-weight: 500; font-size: 22px; line-height: 1.15; margin: 0 0 4px; }
 .topo-tl-body h3 a { color: var(--ink); border-bottom: 0; }
 .topo-tl-body h3 a:hover { color: var(--link-hover); }
-.topo-tl-meta { font-family: var(--mono); font-size: 12px; color: var(--muted); margin: 0 0 6px; }
+.topo-tl-meta { font-family: var(--mono); font-size: 12px; color: var(--muted); margin: 0 0 6px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
+.topo-tl-meta .topo-kind { border-color: var(--rule-strong); }
+.topo-kind-thru-hike { color: var(--forest); border-color: var(--forest) !important; }
 .topo-tl-body p { margin: 0; font-size: 15px; line-height: 1.55; color: var(--text-2); max-width: 60ch; }
 
 /* Places map */
@@ -283,7 +285,11 @@ ul.postlist p.ablog-post-excerpt { font-size: 16px; color: var(--text-2); margin
 .topo-place-list { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 28px; font-size: 15px; line-height: 1.5; }
 .topo-place-list li { break-inside: avoid; margin-bottom: 4px; }
 .topo-place-note { color: var(--muted); font-size: 13px; }
-@media (max-width: 600px) { .topo-place-list { columns: 1; } .topo-tl { margin-left: 40px; } }
+@media (max-width: 600px) {
+  .topo-place-list { columns: 1; }
+  .body .topo-tl, .topo-tl { margin-left: 8px; }
+  .topo-tl-year { position: static; display: block; width: auto; text-align: left; margin-bottom: 2px; }
+}
 
 /* Sidebar */
 .topo-side-block { padding: 20px 0; border-top: 1px solid var(--rule); }
