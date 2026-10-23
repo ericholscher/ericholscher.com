@@ -85,7 +85,7 @@
       {%- if (is_home or is_archive) and ablog is defined %}
       <section class="topo-recent" id="recent">
         <div class="topo-recent-head">
-          {%- if is_home %}<h2>Recently</h2>{% else %}<h2>All posts, newest first</h2>{% endif %}
+          {%- if is_home %}<h2>Recently</h2>{% else %}<h2>All posts</h2>{% endif %}
           <span class="topo-key" aria-hidden="true">&#9670; essay &nbsp; &#9671; note &nbsp; &#9633; photo</span>
         </div>
         {%- for post in ablog.recent(10 if is_home else None, pagename) %}
