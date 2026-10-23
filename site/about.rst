@@ -37,7 +37,7 @@ Every trip is on the :doc:`Adventures </adventures>` page.
 I lived in Portland, Oregon from 2011-2018,
 drawn to the beautiful Pacific Northwest by its lovely mountains,
 and the west coast tech industry.
-In 2019 and 2020,
+In 2018 and 2019,
 I tried the digital nomad life,
 traveling around the world working.
 Then in 2020,
