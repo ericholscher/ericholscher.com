@@ -195,11 +195,19 @@
   },
   {
     "year": "2026",
-    "kind": "backpacking",
+    "kind": "trek",
+    "when": "June 2026",
+    "name": "Camino del Norte",
+    "where": "Basque Country, Spain",
+    "note": "Eleven days along the northern coast of Spain, finishing with a day in Bilbao."
+  },
+  {
+    "year": "2026",
+    "kind": "thru-hike",
     "when": "July 2026",
-    "name": "High Sierra",
-    "where": "Sequoia and Kings Canyon Wilderness, California",
-    "note": "Three weeks in the backcountry, back in the range where the 2013 PCT walk ended."
+    "name": "John Muir Trail",
+    "where": "Yosemite to Mount Whitney, California",
+    "note": "22 days on the JMT, back in the range where the 2013 PCT walk ended."
   },
   {
     "year": "2026",

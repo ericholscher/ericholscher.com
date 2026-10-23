@@ -628,14 +628,14 @@
     ]
   },
   {
-    "name": "Sequoia and Kings Canyon",
-    "lat": 37.08,
-    "lon": -118.71,
+    "name": "John Muir Trail",
+    "lat": 37.3,
+    "lon": -118.85,
     "kind": "hiked",
     "years": [
       2026
     ],
-    "note": "High Sierra"
+    "note": "Yosemite to Mount Whitney"
   },
   {
     "name": "White River National Forest",
@@ -710,5 +710,15 @@
     "years": [
       2026
     ]
+  },
+  {
+    "name": "Camino del Norte",
+    "lat": 43.34,
+    "lon": -2.75,
+    "kind": "hiked",
+    "years": [
+      2026
+    ],
+    "note": "Basque coast"
   }
 ]
