@@ -1,9 +1,6 @@
-:orphan:
-
-.. image:: /_static/img/bike.jpg
-   :height: 300px
-
-Photo: My bike on the Williamette Valley Scenic Bikeway
+.. post:: 2013-09-10
+   :category: outside
+   :redirect: bike
 
 Bike Touring
 ============
@@ -12,6 +9,10 @@ After my PCT injury,
 I wondered what I could use all of my lightweight camping gear for.
 I turned to bike touring,
 allowing a machine to handle the stress that my foot obviously isn't capable of.
+
+.. figure:: /_static/img/bike.jpg
+
+   My bike on the Willamette Valley Scenic Bikeway.
 
 August 24, 2013: First overnight
 --------------------------------

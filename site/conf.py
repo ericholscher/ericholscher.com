@@ -83,6 +83,9 @@ html_sidebars = {
 }
 # globaltoc_collapse = False
 
+# Old page URLs that moved into posts (:redirect: on the post) forward right away.
+post_redirect_refresh = 0
+
 html_title = blog_title
 html_favicon = "_static/img/favicon.svg"
 html_static_path = ["_static"]
