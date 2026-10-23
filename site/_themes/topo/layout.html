@@ -51,9 +51,9 @@
   {%- if 'photo' in cats or 'photos' in cats %}
     <svg class="topo-glyph" width="12" height="12" viewBox="0 0 12 12" role="img" aria-label="Photo"><polygon points="6,1 11,11 1,11" fill="#D9772F"></polygon></svg>
   {%- elif 'link-blog' in cats %}
-    <svg class="topo-glyph" width="12" height="12" viewBox="0 0 12 12" role="img" aria-label="Note"><circle cx="6" cy="6" r="4.5" fill="none" stroke="currentColor"></circle></svg>
+    <svg class="topo-glyph" width="12" height="12" viewBox="0 0 12 12" role="img" aria-label="Note"><polygon points="6,1 11,6 6,11 1,6" fill="none" stroke="currentColor" stroke-width="1.2"></polygon></svg>
   {%- else %}
-    <svg class="topo-glyph" width="12" height="12" viewBox="0 0 12 12" role="img" aria-label="Essay"><circle cx="6" cy="6" r="5" fill="currentColor"></circle></svg>
+    <svg class="topo-glyph" width="12" height="12" viewBox="0 0 12 12" role="img" aria-label="Essay"><polygon points="6,0.5 11.5,6 6,11.5 0.5,6" fill="currentColor"></polygon></svg>
   {%- endif %}
 {%- endmacro %}
 
@@ -93,7 +93,7 @@
       <section class="topo-recent" id="recent">
         <div class="topo-recent-head">
           {%- if is_home %}<h2>Recently</h2>{% else %}<h2>All posts, newest first</h2>{% endif %}
-          <span class="topo-key" aria-hidden="true">&#9679; essay &nbsp; &#9675; note &nbsp; &#9651; photo</span>
+          <span class="topo-key" aria-hidden="true">&#9670; essay &nbsp; &#9671; note &nbsp; &#9651; photo</span>
         </div>
         {%- for post in ablog.recent(10 if is_home else None, pagename) %}
         <article class="topo-entry">
@@ -115,6 +115,9 @@
 {%- endblock %}
 
 {%- block footer %}
+<svg class="topo-ridge" viewBox="0 0 1280 48" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+  <polygon points="0,48 0,38 60,28 120,34 200,14 260,26 340,6 400,22 470,16 560,30 640,10 710,26 790,20 880,36 960,22 1040,30 1120,12 1200,26 1280,32 1280,48"></polygon>
+</svg>
 <footer class="topo-footer">
   <span>&copy; {{ copyright|e }} &middot; Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a href="https://ablog.readthedocs.io/">ABlog</a></span>
   <span class="topo-footer-note">Contour interval: one post</span>
