@@ -232,6 +232,8 @@ ul.postlist p.ablog-post-excerpt { font-size: 16px; color: var(--text-2); margin
 
 /* Topic blocks */
 .topo-topics-section { margin-top: 44px; }
+.topo-popular + .topo-recent { margin-top: 44px; }
+.topo-popular + .topo-recent .topo-recent-head { margin-bottom: 14px; }
 .topo-more-link { font-family: var(--mono); font-size: 12px; border-bottom: 0; }
 .topo-topics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 28px; margin-top: 6px; }
 .topo-topic { min-width: 0; border-top: 1px solid var(--rule); padding-top: 14px; }

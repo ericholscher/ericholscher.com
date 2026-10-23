@@ -56,6 +56,16 @@ html_context = {
         "outside": ("Outside", "Long trails, bike tours, and the places they go through."),
         "link-blog": ("Notes", "Short pointers to things worth reading, with a line or two of why."),
     },
+    # Home page "Most read", in order. Picked from Hacker News points plus posts that travelled
+    # widely by other routes (the Pac-Man rule, We don't do that here). Edit by hand.
+    "topo_popular": [
+        "blog/2014/feb/27/how-i-judge-documentation-quality",
+        "blog/2016/mar/15/dont-use-markdown-for-technical-docs",
+        "blog/2017/aug/2/pacman-rule-conferences",
+        "blog/2023/feb/10/we-dont-do-that-here",
+        "blog/2017/jan/27/code-is-self-documenting",
+        "blog/2018/mar/9/one-percent-for-open-source",
+    ],
     "topo_hikes": json.loads((_data / "hikes.json").read_text()),
     "topo_places": json.loads((_data / "places.json").read_text()),
 }
