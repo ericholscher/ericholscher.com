@@ -64,6 +64,14 @@
   },
   {
     "year": "2018",
+    "kind": "bike",
+    "when": "June and July 2018",
+    "name": "La Vélodyssée",
+    "where": "Roscoff to the Basque coast, France",
+    "note": "Down France's Atlantic coast by bike, from Brittany past La Rochelle and Bordeaux."
+  },
+  {
+    "year": "2018",
     "kind": "hiking",
     "when": "August 2018",
     "name": "Valais, Switzerland",
@@ -71,12 +79,20 @@
     "note": "Five weeks of hiking in the Alps during the first summer on the road."
   },
   {
+    "year": "2018",
+    "kind": "trek",
+    "when": "December 2018",
+    "name": "Salkantay trek",
+    "where": "Cusco region, Peru",
+    "note": "Over the Salkantay pass to Machu Picchu, around the new year."
+  },
+  {
     "year": "2019",
     "kind": "trek",
     "when": "March 2019",
-    "name": "Torres del Paine",
+    "name": "Torres del Paine O Circuit",
     "where": "Patagonia, Chile",
-    "note": "Two and a half weeks in and around the park."
+    "note": "The full O circuit around the Paine massif."
   },
   {
     "year": "2019",
@@ -94,6 +110,22 @@
     "name": "Oregon Cascades",
     "where": "Willamette and Deschutes national forests",
     "note": "Several overnight trips after coming home from South America."
+  },
+  {
+    "year": "2019",
+    "kind": "backpacking",
+    "when": "August 2019",
+    "name": "PCT in Washington",
+    "where": "Near Lake Chelan, Washington",
+    "note": "A week back on the Pacific Crest Trail, six years after the first walk."
+  },
+  {
+    "year": "2019",
+    "kind": "backpacking",
+    "when": "September 2019",
+    "name": "Mount Hood",
+    "where": "Oregon",
+    "note": "Labor Day weekend on the mountain."
   },
   {
     "year": "2019",

@@ -49,7 +49,8 @@
     "lon": -121.7,
     "kind": "hiked",
     "years": [
-      2012
+      2012,
+      2019
     ]
   },
   {
@@ -823,19 +824,21 @@
     "name": "La Rochelle",
     "lat": 46.16,
     "lon": -1.15,
-    "kind": "visited",
+    "kind": "hiked",
     "years": [
       2018
-    ]
+    ],
+    "note": "La Vélodyssée, by bike"
   },
   {
     "name": "Bordeaux",
     "lat": 44.84,
     "lon": -0.58,
-    "kind": "visited",
+    "kind": "hiked",
     "years": [
       2018
-    ]
+    ],
+    "note": "La Vélodyssée, by bike"
   },
   {
     "name": "Valais, Switzerland",
@@ -916,12 +919,12 @@
     "name": "Machu Picchu and the Sacred Valley",
     "lat": -13.16,
     "lon": -72.55,
-    "kind": "visited",
+    "kind": "hiked",
     "years": [
       2018,
       2019
     ],
-    "note": "Over the new year"
+    "note": "End of the Salkantay trek"
   },
   {
     "name": "Cusco",
@@ -984,7 +987,8 @@
     "kind": "hiked",
     "years": [
       2019
-    ]
+    ],
+    "note": "O Circuit"
   },
   {
     "name": "Buenos Aires",
@@ -1077,5 +1081,44 @@
     "years": [
       2019
     ]
+  },
+  {
+    "name": "Roscoff",
+    "lat": 48.73,
+    "lon": -3.98,
+    "kind": "hiked",
+    "years": [
+      2018
+    ],
+    "note": "Start of La Vélodyssée"
+  },
+  {
+    "name": "Ondres",
+    "lat": 43.57,
+    "lon": -1.45,
+    "kind": "hiked",
+    "years": [
+      2018
+    ],
+    "note": "La Vélodyssée, near the Basque coast"
+  },
+  {
+    "name": "Salkantay pass",
+    "lat": -13.33,
+    "lon": -72.54,
+    "kind": "hiked",
+    "years": [
+      2018
+    ]
+  },
+  {
+    "name": "PCT, Washington",
+    "lat": 48.31,
+    "lon": -120.66,
+    "kind": "hiked",
+    "years": [
+      2019
+    ],
+    "note": "A week near Lake Chelan"
   }
 ]
