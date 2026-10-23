@@ -1383,7 +1383,8 @@
     "lon": 19.04,
     "kind": "visited",
     "years": [
-      2014
+      2014,
+      2026
     ]
   },
   {
@@ -1612,6 +1613,15 @@
     "kind": "visited",
     "years": [
       2019
+    ]
+  },
+  {
+    "name": "Karwendel",
+    "lat": 47.43,
+    "lon": 11.5,
+    "kind": "hiked",
+    "years": [
+      2026
     ]
   }
 ]

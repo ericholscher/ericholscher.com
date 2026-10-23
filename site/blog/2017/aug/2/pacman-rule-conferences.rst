@@ -48,7 +48,7 @@ stand like Pac-Man!
 .. image:: /_static/img/pacman.png
    :width: 160px
    :align: center
-   :class: plain
+   :class: plain no-scaled-link
    :alt: Pac-Man, with a gap in the circle for one more person
 
 
