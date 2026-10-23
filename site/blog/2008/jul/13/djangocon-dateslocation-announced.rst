@@ -1,4 +1,5 @@
 .. post:: 2008-07-13 07:49:10
+   :category: community
 
 DjangoCon September 6-7, at Google!
 ===================================

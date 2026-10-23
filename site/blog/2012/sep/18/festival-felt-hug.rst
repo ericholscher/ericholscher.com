@@ -1,4 +1,5 @@
 .. post:: 2012-09-18 13:29:38
+   :category: community
 
 The festival that felt like a hug
 =================================

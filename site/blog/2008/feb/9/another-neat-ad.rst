@@ -1,4 +1,5 @@
 .. post:: 2008-02-09 07:37:19
+   :category: code
 
 Another neat ad
 ===============

@@ -1,4 +1,5 @@
 .. post:: 2016-07-25 09:00:00
+   :category: documentation
    :tags: sphinx, training, jinja
 
 The Power of Sphinx: Integrating Jinja with RST

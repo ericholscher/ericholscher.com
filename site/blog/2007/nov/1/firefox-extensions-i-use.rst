@@ -1,4 +1,5 @@
 .. post:: 2007-11-01 15:39:32
+   :category: code
 
 Firefox Extensions I Use
 ========================

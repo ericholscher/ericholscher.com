@@ -1,4 +1,5 @@
 .. post:: Feb 13, 2018
+   :category: community
    :tags: conference, mentorship, python, pycon, pycascades
 
 Conference Mentorship

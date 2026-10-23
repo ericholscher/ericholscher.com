@@ -1,4 +1,5 @@
 .. post:: 2007-03-06 15:37:21
+   :category: code
 
 Network KVM
 ===========

@@ -1,4 +1,5 @@
 .. post:: 2008-09-02 00:55:21
+   :category: code
 
 Using pdb to debug management commands and unit tests (Debugging Django Series,Part 4)
 ======================================================================================

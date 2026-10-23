@@ -1,4 +1,5 @@
 .. post:: 2008-07-26 12:21:08
+   :category: code
 
 Testmaker .002 (Even easier automated testing in Django)
 ========================================================

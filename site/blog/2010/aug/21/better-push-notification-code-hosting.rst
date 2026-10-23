@@ -1,4 +1,5 @@
 .. post:: 2010-08-21 13:00:00
+   :category: code
 
 A better webhook for code hosting
 =================================

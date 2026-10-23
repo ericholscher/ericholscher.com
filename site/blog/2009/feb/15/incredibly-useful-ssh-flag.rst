@@ -1,4 +1,5 @@
 .. post:: 2009-02-15 17:05:59
+   :category: code
 
 Incredibly useful SSH flag
 ==========================

@@ -1,4 +1,5 @@
 .. post:: 2009-11-19 20:36:12
+   :category: code
 
 Writing Code with Designers
 ===========================

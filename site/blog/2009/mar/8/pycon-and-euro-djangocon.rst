@@ -1,4 +1,5 @@
 .. post:: 2009-03-08 15:45:22
+   :category: community
 
 Pycon and Euro Djangocon
 ========================

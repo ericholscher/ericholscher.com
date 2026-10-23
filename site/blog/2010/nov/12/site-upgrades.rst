@@ -1,4 +1,5 @@
 .. post:: 2010-11-12 19:48:34
+   :category: code
 
 Site upgrades
 =============

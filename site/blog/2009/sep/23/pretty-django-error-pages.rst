@@ -1,4 +1,5 @@
 .. post:: 2009-09-23 15:14:29
+   :category: code
 
 Pretty Django Error Pages
 =========================

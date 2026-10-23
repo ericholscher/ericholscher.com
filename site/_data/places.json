@@ -1,0 +1,1617 @@
+[
+  {
+    "name": "Washington, D.C.",
+    "lat": 38.9,
+    "lon": -77.04,
+    "kind": "lived",
+    "note": "Born here"
+  },
+  {
+    "name": "Virginia",
+    "lat": 37.3,
+    "lon": -78.5,
+    "kind": "lived",
+    "note": "Shenandoah Valley, Virginia Beach, Fredericksburg"
+  },
+  {
+    "name": "Lawrence, Kansas",
+    "lat": 38.97,
+    "lon": -95.24,
+    "kind": "lived",
+    "note": "2008 to 2010, the Journal-World years"
+  },
+  {
+    "name": "Portland, Oregon",
+    "lat": 45.52,
+    "lon": -122.68,
+    "kind": "lived",
+    "note": "2011 to 2018"
+  },
+  {
+    "name": "Bend, Oregon",
+    "lat": 44.06,
+    "lon": -121.31,
+    "kind": "lived",
+    "note": "2020 to 2025"
+  },
+  {
+    "name": "Mount St. Helens",
+    "lat": 46.19,
+    "lon": -122.19,
+    "kind": "hiked",
+    "years": [
+      2013,
+      2014,
+      2015,
+      2016
+    ]
+  },
+  {
+    "name": "Mount Hood",
+    "lat": 45.37,
+    "lon": -121.7,
+    "kind": "hiked",
+    "years": [
+      2012,
+      2014,
+      2019,
+      2024
+    ],
+    "note": "Timberline Trail in 2024"
+  },
+  {
+    "name": "Crater Lake",
+    "lat": 42.94,
+    "lon": -122.1,
+    "kind": "hiked",
+    "years": [
+      2012,
+      2021
+    ]
+  },
+  {
+    "name": "Pacific Crest Trail, Campo",
+    "lat": 32.61,
+    "lon": -116.47,
+    "kind": "hiked",
+    "note": "Southern terminus of the PCT",
+    "years": [
+      2013
+    ]
+  },
+  {
+    "name": "Mount Whitney",
+    "lat": 36.58,
+    "lon": -118.29,
+    "kind": "hiked",
+    "note": "On the PCT",
+    "years": [
+      2013
+    ]
+  },
+  {
+    "name": "Lake Tahoe",
+    "lat": 39.1,
+    "lon": -120.04,
+    "kind": "hiked",
+    "note": "Tahoe Rim Trail",
+    "years": [
+      2024
+    ]
+  },
+  {
+    "name": "Puerto Varas, Chile",
+    "lat": -41.32,
+    "lon": -72.98,
+    "kind": "visited",
+    "note": "Working remotely",
+    "years": [
+      2019
+    ]
+  },
+  {
+    "name": "El Chaltén",
+    "lat": -49.33,
+    "lon": -72.89,
+    "kind": "hiked",
+    "years": [
+      2019
+    ],
+    "note": "Below Fitz Roy"
+  },
+  {
+    "name": "Costa Rica",
+    "lat": 9.9,
+    "lon": -83.9,
+    "kind": "hiked",
+    "note": "Camino de Costa Rica",
+    "years": [
+      2025
+    ]
+  },
+  {
+    "name": "Prague",
+    "lat": 50.08,
+    "lon": 14.43,
+    "kind": "visited",
+    "note": "EuroDjangoCon, then Write the Docs",
+    "years": [
+      2009,
+      2014,
+      2016,
+      2018,
+      2019
+    ]
+  },
+  {
+    "name": "Berlin",
+    "lat": 52.52,
+    "lon": 13.4,
+    "kind": "visited",
+    "note": "DjangoCon Europe, then Write the Docs",
+    "years": [
+      2010,
+      2025,
+      2026
+    ]
+  },
+  {
+    "name": "Salt Cay, Turks and Caicos",
+    "lat": 21.33,
+    "lon": -71.2,
+    "kind": "visited",
+    "note": "Humpback whale season",
+    "years": [
+      2016,
+      2018,
+      2022,
+      2025
+    ]
+  },
+  {
+    "name": "Jarabacoa, Dominican Republic",
+    "lat": 19.12,
+    "lon": -70.64,
+    "kind": "visited",
+    "note": "River rafting",
+    "years": [
+      2025
+    ]
+  },
+  {
+    "name": "Pittsburgh",
+    "lat": 40.44,
+    "lon": -79.99,
+    "kind": "visited",
+    "note": "PyCon US",
+    "years": [
+      2025
+    ]
+  },
+  {
+    "name": "Amsterdam",
+    "lat": 52.37,
+    "lon": 4.9,
+    "kind": "visited",
+    "note": "A week by bike",
+    "years": [
+      2015,
+      2019,
+      2025
+    ]
+  },
+  {
+    "name": "Scotland",
+    "lat": 56.8,
+    "lon": -4.2,
+    "kind": "visited",
+    "years": [
+      2018,
+      2025
+    ]
+  },
+  {
+    "name": "Ireland",
+    "lat": 53.3,
+    "lon": -7.7,
+    "kind": "visited",
+    "years": [
+      2016,
+      2025
+    ]
+  },
+  {
+    "name": "Dubrovnik and Kotor",
+    "lat": 42.42,
+    "lon": 18.77,
+    "kind": "visited",
+    "note": "By ferry",
+    "years": [
+      2025
+    ]
+  },
+  {
+    "name": "Durmitor National Park",
+    "lat": 43.13,
+    "lon": 19.03,
+    "kind": "hiked",
+    "years": [
+      2025
+    ]
+  },
+  {
+    "name": "Peaks of the Balkans",
+    "lat": 42.55,
+    "lon": 19.95,
+    "kind": "hiked",
+    "years": [
+      2025
+    ]
+  },
+  {
+    "name": "Via Alpina, Switzerland",
+    "lat": 46.6,
+    "lon": 7.9,
+    "kind": "hiked",
+    "note": "Kandersteg, Grindelwald",
+    "years": [
+      2025
+    ]
+  },
+  {
+    "name": "Milan",
+    "lat": 45.46,
+    "lon": 9.19,
+    "kind": "visited",
+    "note": "Waiting out the rain",
+    "years": [
+      2025
+    ]
+  },
+  {
+    "name": "Munich",
+    "lat": 48.14,
+    "lon": 11.58,
+    "kind": "visited",
+    "years": [
+      2025
+    ]
+  },
+  {
+    "name": "Carnic Alps High Route",
+    "lat": 46.62,
+    "lon": 12.9,
+    "kind": "hiked",
+    "years": [
+      2025
+    ]
+  },
+  {
+    "name": "Triglav National Park",
+    "lat": 46.37,
+    "lon": 13.84,
+    "kind": "hiked",
+    "note": "Lake Bled, Ljubljana",
+    "years": [
+      2025
+    ]
+  },
+  {
+    "name": "Alta Via 1, Dolomites",
+    "lat": 46.55,
+    "lon": 12.05,
+    "kind": "hiked",
+    "years": [
+      2025
+    ]
+  },
+  {
+    "name": "Venice",
+    "lat": 45.44,
+    "lon": 12.33,
+    "kind": "visited",
+    "years": [
+      2025
+    ]
+  },
+  {
+    "name": "Istanbul",
+    "lat": 41.01,
+    "lon": 28.98,
+    "kind": "visited",
+    "years": [
+      2025
+    ]
+  },
+  {
+    "name": "Turkish Mediterranean coast",
+    "lat": 36.2,
+    "lon": 29.64,
+    "kind": "visited",
+    "note": "Diving",
+    "years": [
+      2025
+    ]
+  },
+  {
+    "name": "Maasai Mara",
+    "lat": -1.5,
+    "lon": 35.15,
+    "kind": "visited",
+    "note": "Safari",
+    "years": [
+      2025
+    ]
+  },
+  {
+    "name": "Amboseli",
+    "lat": -2.65,
+    "lon": 37.26,
+    "kind": "visited",
+    "note": "Safari",
+    "years": [
+      2025
+    ]
+  },
+  {
+    "name": "Diani Beach, Kenya",
+    "lat": -4.32,
+    "lon": 39.58,
+    "kind": "visited",
+    "years": [
+      2025
+    ]
+  },
+  {
+    "name": "Kakamega Forest",
+    "lat": 0.28,
+    "lon": 34.86,
+    "kind": "hiked",
+    "years": [
+      2025
+    ]
+  },
+  {
+    "name": "Kyoto",
+    "lat": 35.01,
+    "lon": 135.77,
+    "kind": "visited",
+    "note": "Temples in the hills",
+    "years": [
+      2025,
+      2026
+    ]
+  },
+  {
+    "name": "Hiroshima",
+    "lat": 34.39,
+    "lon": 132.45,
+    "kind": "visited",
+    "years": [
+      2026
+    ]
+  },
+  {
+    "name": "Elkhorn Mountains",
+    "lat": 44.85,
+    "lon": -118.1,
+    "kind": "hiked",
+    "years": [
+      2020
+    ]
+  },
+  {
+    "name": "Sawtooth Mountains",
+    "lat": 44.05,
+    "lon": -114.95,
+    "kind": "hiked",
+    "years": [
+      2020
+    ]
+  },
+  {
+    "name": "Alvord Desert and Steens Mountain",
+    "lat": 42.55,
+    "lon": -118.55,
+    "kind": "visited",
+    "years": [
+      2020
+    ],
+    "note": "Car camping"
+  },
+  {
+    "name": "Three Sisters Wilderness",
+    "lat": 44.12,
+    "lon": -121.77,
+    "kind": "hiked",
+    "years": [
+      2015,
+      2020
+    ]
+  },
+  {
+    "name": "McKenzie Pass",
+    "lat": 44.26,
+    "lon": -121.81,
+    "kind": "hiked",
+    "years": [
+      2020
+    ],
+    "note": "By bike, car-free in spring"
+  },
+  {
+    "name": "London",
+    "lat": 51.51,
+    "lon": -0.13,
+    "kind": "visited",
+    "years": [
+      2018,
+      2025
+    ]
+  },
+  {
+    "name": "Monteverde and Arenal",
+    "lat": 10.38,
+    "lon": -84.76,
+    "kind": "visited",
+    "years": [
+      2025
+    ],
+    "note": "Cloud forest and volcano, after the Camino"
+  },
+  {
+    "name": "Nairobi",
+    "lat": -1.29,
+    "lon": 36.82,
+    "kind": "visited",
+    "years": [
+      2025
+    ]
+  },
+  {
+    "name": "Hakone and Kamakura",
+    "lat": 35.23,
+    "lon": 139.1,
+    "kind": "visited",
+    "years": [
+      2025
+    ]
+  },
+  {
+    "name": "Kanazawa",
+    "lat": 36.56,
+    "lon": 136.66,
+    "kind": "visited",
+    "years": [
+      2025
+    ]
+  },
+  {
+    "name": "Yamanouchi, Nagano",
+    "lat": 36.73,
+    "lon": 138.46,
+    "kind": "visited",
+    "years": [
+      2025
+    ],
+    "note": "Snow monkeys"
+  },
+  {
+    "name": "Tokyo",
+    "lat": 35.68,
+    "lon": 139.69,
+    "kind": "visited",
+    "years": [
+      2025,
+      2026
+    ]
+  },
+  {
+    "name": "Himeji",
+    "lat": 34.84,
+    "lon": 134.69,
+    "kind": "visited",
+    "years": [
+      2026
+    ]
+  },
+  {
+    "name": "Nara",
+    "lat": 34.68,
+    "lon": 135.83,
+    "kind": "visited",
+    "years": [
+      2026
+    ]
+  },
+  {
+    "name": "Miyajima",
+    "lat": 34.3,
+    "lon": 132.32,
+    "kind": "visited",
+    "years": [
+      2026
+    ]
+  },
+  {
+    "name": "Singapore",
+    "lat": 1.31,
+    "lon": 103.83,
+    "kind": "visited",
+    "years": [
+      2014,
+      2026
+    ]
+  },
+  {
+    "name": "Bali",
+    "lat": -8.5,
+    "lon": 115.26,
+    "kind": "visited",
+    "years": [
+      2026
+    ],
+    "note": "Diving, and Ubud"
+  },
+  {
+    "name": "Andaman coast, Thailand",
+    "lat": 7.46,
+    "lon": 99.0,
+    "kind": "visited",
+    "years": [
+      2014,
+      2026
+    ],
+    "note": "Diving"
+  },
+  {
+    "name": "Raja Ampat",
+    "lat": -0.54,
+    "lon": 130.52,
+    "kind": "visited",
+    "years": [
+      2026
+    ],
+    "note": "Diving"
+  },
+  {
+    "name": "Bohol, Philippines",
+    "lat": 9.63,
+    "lon": 123.75,
+    "kind": "visited",
+    "years": [
+      2026
+    ],
+    "note": "Diving"
+  },
+  {
+    "name": "Malapascua, Philippines",
+    "lat": 11.3,
+    "lon": 124.13,
+    "kind": "visited",
+    "years": [
+      2026
+    ],
+    "note": "Diving"
+  },
+  {
+    "name": "Sabah, Borneo",
+    "lat": 5.77,
+    "lon": 117.59,
+    "kind": "visited",
+    "years": [
+      2026
+    ],
+    "note": "Rainforest and wildlife"
+  },
+  {
+    "name": "Long Beach",
+    "lat": 33.77,
+    "lon": -118.19,
+    "kind": "visited",
+    "years": [
+      2026
+    ],
+    "note": "PyCon US"
+  },
+  {
+    "name": "Athens",
+    "lat": 37.98,
+    "lon": 23.73,
+    "kind": "visited",
+    "years": [
+      2026
+    ]
+  },
+  {
+    "name": "Vikos-Aoös National Park",
+    "lat": 39.95,
+    "lon": 20.73,
+    "kind": "hiked",
+    "years": [
+      2026
+    ]
+  },
+  {
+    "name": "Bilbao",
+    "lat": 43.26,
+    "lon": -2.93,
+    "kind": "visited",
+    "years": [
+      2026
+    ]
+  },
+  {
+    "name": "Lisbon",
+    "lat": 38.72,
+    "lon": -9.14,
+    "kind": "visited",
+    "years": [
+      2017,
+      2018,
+      2026
+    ]
+  },
+  {
+    "name": "John Muir Trail",
+    "lat": 37.3,
+    "lon": -118.85,
+    "kind": "hiked",
+    "years": [
+      2026
+    ],
+    "note": "Yosemite to Mount Whitney"
+  },
+  {
+    "name": "White River National Forest",
+    "lat": 39.52,
+    "lon": -106.38,
+    "kind": "hiked",
+    "years": [
+      2026
+    ],
+    "note": "Colorado Rockies"
+  },
+  {
+    "name": "Mexico City",
+    "lat": 19.43,
+    "lon": -99.13,
+    "kind": "visited",
+    "years": [
+      2026
+    ]
+  },
+  {
+    "name": "Chicago",
+    "lat": 41.88,
+    "lon": -87.63,
+    "kind": "visited",
+    "years": [
+      2026
+    ]
+  },
+  {
+    "name": "Copenhagen",
+    "lat": 55.68,
+    "lon": 12.57,
+    "kind": "visited",
+    "years": [
+      2026
+    ]
+  },
+  {
+    "name": "Sarajevo",
+    "lat": 43.86,
+    "lon": 18.41,
+    "kind": "visited",
+    "years": [
+      2026
+    ]
+  },
+  {
+    "name": "Utrecht",
+    "lat": 52.09,
+    "lon": 5.12,
+    "kind": "visited",
+    "years": [
+      2025,
+      2026
+    ]
+  },
+  {
+    "name": "Madrid",
+    "lat": 40.42,
+    "lon": -3.7,
+    "kind": "visited",
+    "years": [
+      2026
+    ]
+  },
+  {
+    "name": "Picos de Europa",
+    "lat": 43.27,
+    "lon": -4.86,
+    "kind": "hiked",
+    "years": [
+      2026
+    ]
+  },
+  {
+    "name": "Camino del Norte",
+    "lat": 43.34,
+    "lon": -2.75,
+    "kind": "hiked",
+    "years": [
+      2026
+    ],
+    "note": "Basque coast"
+  },
+  {
+    "name": "Hong Kong",
+    "lat": 22.3,
+    "lon": 114.17,
+    "kind": "visited",
+    "years": [
+      2018
+    ]
+  },
+  {
+    "name": "Chiang Mai",
+    "lat": 18.79,
+    "lon": 98.98,
+    "kind": "visited",
+    "years": [
+      2014,
+      2018
+    ]
+  },
+  {
+    "name": "Hoi An",
+    "lat": 15.88,
+    "lon": 108.33,
+    "kind": "visited",
+    "years": [
+      2018
+    ]
+  },
+  {
+    "name": "Ninh Binh",
+    "lat": 20.25,
+    "lon": 105.97,
+    "kind": "visited",
+    "years": [
+      2018
+    ],
+    "note": "Tràng An"
+  },
+  {
+    "name": "Luang Prabang",
+    "lat": 19.89,
+    "lon": 102.13,
+    "kind": "visited",
+    "years": [
+      2018
+    ]
+  },
+  {
+    "name": "Angkor",
+    "lat": 13.41,
+    "lon": 103.87,
+    "kind": "visited",
+    "years": [
+      2014,
+      2018
+    ]
+  },
+  {
+    "name": "Taroko Gorge",
+    "lat": 24.16,
+    "lon": 121.62,
+    "kind": "visited",
+    "years": [
+      2014,
+      2018
+    ]
+  },
+  {
+    "name": "Taipei",
+    "lat": 25.03,
+    "lon": 121.56,
+    "kind": "visited",
+    "years": [
+      2014,
+      2018
+    ]
+  },
+  {
+    "name": "Dover and Deal",
+    "lat": 51.2,
+    "lon": 1.38,
+    "kind": "visited",
+    "years": [
+      2018
+    ]
+  },
+  {
+    "name": "Dartmoor",
+    "lat": 50.57,
+    "lon": -3.92,
+    "kind": "visited",
+    "years": [
+      2018
+    ]
+  },
+  {
+    "name": "La Rochelle",
+    "lat": 46.16,
+    "lon": -1.15,
+    "kind": "hiked",
+    "years": [
+      2018
+    ],
+    "note": "La Vélodyssée, by bike"
+  },
+  {
+    "name": "Bordeaux",
+    "lat": 44.84,
+    "lon": -0.58,
+    "kind": "hiked",
+    "years": [
+      2018
+    ],
+    "note": "La Vélodyssée, by bike"
+  },
+  {
+    "name": "Haute Route",
+    "lat": 46.2,
+    "lon": 7.6,
+    "kind": "hiked",
+    "years": [
+      2018
+    ],
+    "note": "Chamonix to Zermatt"
+  },
+  {
+    "name": "Caminito del Rey",
+    "lat": 36.93,
+    "lon": -4.79,
+    "kind": "visited",
+    "years": [
+      2018
+    ],
+    "note": "Near Málaga"
+  },
+  {
+    "name": "Costa Vicentina",
+    "lat": 37.15,
+    "lon": -8.85,
+    "kind": "visited",
+    "years": [
+      2018
+    ]
+  },
+  {
+    "name": "Sintra",
+    "lat": 38.8,
+    "lon": -9.39,
+    "kind": "visited",
+    "years": [
+      2018
+    ]
+  },
+  {
+    "name": "Split",
+    "lat": 43.51,
+    "lon": 16.44,
+    "kind": "visited",
+    "years": [
+      2018
+    ]
+  },
+  {
+    "name": "Plitvice Lakes",
+    "lat": 44.88,
+    "lon": 15.62,
+    "kind": "visited",
+    "years": [
+      2018
+    ]
+  },
+  {
+    "name": "Velebit coast",
+    "lat": 44.53,
+    "lon": 15.07,
+    "kind": "visited",
+    "years": [
+      2018
+    ],
+    "note": "Karlobag"
+  },
+  {
+    "name": "Lima",
+    "lat": -12.05,
+    "lon": -77.04,
+    "kind": "visited",
+    "years": [
+      2018,
+      2019
+    ]
+  },
+  {
+    "name": "Machu Picchu and the Sacred Valley",
+    "lat": -13.16,
+    "lon": -72.55,
+    "kind": "hiked",
+    "years": [
+      2018,
+      2019
+    ],
+    "note": "End of the Salkantay trek"
+  },
+  {
+    "name": "Cusco",
+    "lat": -13.53,
+    "lon": -71.97,
+    "kind": "visited",
+    "years": [
+      2019
+    ]
+  },
+  {
+    "name": "Lake Titicaca",
+    "lat": -15.84,
+    "lon": -70.02,
+    "kind": "visited",
+    "years": [
+      2019
+    ]
+  },
+  {
+    "name": "Colca Canyon",
+    "lat": -15.64,
+    "lon": -71.88,
+    "kind": "visited",
+    "years": [
+      2019
+    ]
+  },
+  {
+    "name": "Huacachina",
+    "lat": -14.09,
+    "lon": -75.76,
+    "kind": "visited",
+    "years": [
+      2019
+    ]
+  },
+  {
+    "name": "Valparaíso and Santiago",
+    "lat": -33.25,
+    "lon": -71.0,
+    "kind": "visited",
+    "years": [
+      2019
+    ]
+  },
+  {
+    "name": "Punta Arenas",
+    "lat": -53.16,
+    "lon": -70.91,
+    "kind": "visited",
+    "years": [
+      2019
+    ]
+  },
+  {
+    "name": "Torres del Paine",
+    "lat": -50.94,
+    "lon": -73.0,
+    "kind": "hiked",
+    "years": [
+      2019
+    ],
+    "note": "O Circuit"
+  },
+  {
+    "name": "Buenos Aires",
+    "lat": -34.6,
+    "lon": -58.38,
+    "kind": "visited",
+    "years": [
+      2019
+    ]
+  },
+  {
+    "name": "Aruba",
+    "lat": 12.52,
+    "lon": -69.97,
+    "kind": "visited",
+    "years": [
+      2019
+    ]
+  },
+  {
+    "name": "Oregon Cascades",
+    "lat": 44.5,
+    "lon": -121.8,
+    "kind": "hiked",
+    "years": [
+      2019
+    ],
+    "note": "Overnights in June"
+  },
+  {
+    "name": "Barcelona",
+    "lat": 41.39,
+    "lon": 2.17,
+    "kind": "visited",
+    "years": [
+      2019
+    ]
+  },
+  {
+    "name": "Dolomites",
+    "lat": 46.54,
+    "lon": 12.14,
+    "kind": "hiked",
+    "years": [
+      2019
+    ],
+    "note": "Cortina d'Ampezzo"
+  },
+  {
+    "name": "Cinque Terre",
+    "lat": 44.13,
+    "lon": 9.71,
+    "kind": "visited",
+    "years": [
+      2019
+    ]
+  },
+  {
+    "name": "Rome",
+    "lat": 41.9,
+    "lon": 12.5,
+    "kind": "visited",
+    "years": [
+      2019
+    ]
+  },
+  {
+    "name": "Pompeii",
+    "lat": 40.75,
+    "lon": 14.49,
+    "kind": "visited",
+    "years": [
+      2019
+    ]
+  },
+  {
+    "name": "Taghazout, Morocco",
+    "lat": 30.54,
+    "lon": -9.71,
+    "kind": "visited",
+    "years": [
+      2019
+    ]
+  },
+  {
+    "name": "Seville",
+    "lat": 37.39,
+    "lon": -5.98,
+    "kind": "visited",
+    "years": [
+      2019
+    ]
+  },
+  {
+    "name": "Roscoff",
+    "lat": 48.73,
+    "lon": -3.98,
+    "kind": "hiked",
+    "years": [
+      2018
+    ],
+    "note": "Start of La Vélodyssée"
+  },
+  {
+    "name": "Ondres",
+    "lat": 43.57,
+    "lon": -1.45,
+    "kind": "hiked",
+    "years": [
+      2018
+    ],
+    "note": "La Vélodyssée, near the Basque coast"
+  },
+  {
+    "name": "Salkantay pass",
+    "lat": -13.33,
+    "lon": -72.54,
+    "kind": "hiked",
+    "years": [
+      2018
+    ]
+  },
+  {
+    "name": "PCT, Washington",
+    "lat": 48.31,
+    "lon": -120.66,
+    "kind": "hiked",
+    "years": [
+      2019
+    ],
+    "note": "A week near Lake Chelan"
+  },
+  {
+    "name": "Painted Hills and John Day",
+    "lat": 44.65,
+    "lon": -120.25,
+    "kind": "visited",
+    "years": [
+      2020,
+      2023,
+      2024
+    ],
+    "note": "John Day Fossil Beds"
+  },
+  {
+    "name": "Columbia River Gorge",
+    "lat": 45.7,
+    "lon": -121.25,
+    "kind": "visited",
+    "years": [
+      2021,
+      2022
+    ]
+  },
+  {
+    "name": "Vancouver",
+    "lat": 49.28,
+    "lon": -123.12,
+    "kind": "visited",
+    "years": [
+      2022
+    ]
+  },
+  {
+    "name": "Inside Passage, Alaska",
+    "lat": 58.3,
+    "lon": -134.42,
+    "kind": "visited",
+    "years": [
+      2022
+    ],
+    "note": "Wrangell, Juneau, Tracy Arm, Sitka"
+  },
+  {
+    "name": "Denali",
+    "lat": 63.73,
+    "lon": -148.91,
+    "kind": "visited",
+    "years": [
+      2022
+    ],
+    "note": "By car"
+  },
+  {
+    "name": "Reykjavík and Þingvellir",
+    "lat": 64.26,
+    "lon": -21.13,
+    "kind": "visited",
+    "years": [
+      2022
+    ]
+  },
+  {
+    "name": "Porto",
+    "lat": 41.15,
+    "lon": -8.61,
+    "kind": "visited",
+    "years": [
+      2022
+    ]
+  },
+  {
+    "name": "Peneda-Gerês National Park",
+    "lat": 41.73,
+    "lon": -8.15,
+    "kind": "visited",
+    "years": [
+      2022
+    ],
+    "note": "A road trip through northern Portugal"
+  },
+  {
+    "name": "Salt Lake City",
+    "lat": 40.76,
+    "lon": -111.89,
+    "kind": "visited",
+    "years": [
+      2023
+    ],
+    "note": "PyCon US"
+  },
+  {
+    "name": "Jasper National Park",
+    "lat": 52.87,
+    "lon": -118.08,
+    "kind": "hiked",
+    "years": [
+      2023
+    ],
+    "note": "Three-day backpacking trips"
+  },
+  {
+    "name": "Panama",
+    "lat": 8.6,
+    "lon": -80.13,
+    "kind": "visited",
+    "years": [
+      2024
+    ],
+    "note": "Panama City and El Valle de Antón"
+  },
+  {
+    "name": "Redwoods",
+    "lat": 41.77,
+    "lon": -124.1,
+    "kind": "visited",
+    "years": [
+      2017,
+      2024
+    ],
+    "note": "Jedediah Smith"
+  },
+  {
+    "name": "La Paz, Baja California Sur",
+    "lat": 24.14,
+    "lon": -110.31,
+    "kind": "visited",
+    "years": [
+      2024
+    ]
+  },
+  {
+    "name": "Black Hills",
+    "lat": 43.76,
+    "lon": -103.4,
+    "kind": "visited",
+    "years": [
+      2024
+    ],
+    "note": "Custer State Park"
+  },
+  {
+    "name": "Theodore Roosevelt National Park",
+    "lat": 46.92,
+    "lon": -103.53,
+    "kind": "visited",
+    "years": [
+      2024
+    ]
+  },
+  {
+    "name": "John Day River",
+    "lat": 44.95,
+    "lon": -120.4,
+    "kind": "hiked",
+    "years": [
+      2023,
+      2024
+    ],
+    "note": "Rafting"
+  },
+  {
+    "name": "Oregon Coast Trail",
+    "lat": 45.76,
+    "lon": -123.96,
+    "kind": "hiked",
+    "years": [
+      2024
+    ],
+    "note": "Around Oswald West"
+  },
+  {
+    "name": "Strawberry Mountain Wilderness",
+    "lat": 44.31,
+    "lon": -118.72,
+    "kind": "hiked",
+    "years": [
+      2021
+    ]
+  },
+  {
+    "name": "PCT, Snoqualmie Pass",
+    "lat": 47.47,
+    "lon": -121.25,
+    "kind": "hiked",
+    "years": [
+      2021
+    ],
+    "note": "A week-long loop"
+  },
+  {
+    "name": "Grand Turk",
+    "lat": 21.47,
+    "lon": -71.14,
+    "kind": "visited",
+    "years": [
+      2012
+    ]
+  },
+  {
+    "name": "Wallowa Lake",
+    "lat": 45.29,
+    "lon": -117.21,
+    "kind": "visited",
+    "years": [
+      2013,
+      2016
+    ]
+  },
+  {
+    "name": "Bangkok",
+    "lat": 13.75,
+    "lon": 100.5,
+    "kind": "visited",
+    "years": [
+      2014
+    ]
+  },
+  {
+    "name": "Manila",
+    "lat": 14.58,
+    "lon": 120.98,
+    "kind": "visited",
+    "years": [
+      2014
+    ]
+  },
+  {
+    "name": "Kuala Lumpur",
+    "lat": 3.14,
+    "lon": 101.69,
+    "kind": "visited",
+    "years": [
+      2014
+    ]
+  },
+  {
+    "name": "Budapest",
+    "lat": 47.5,
+    "lon": 19.04,
+    "kind": "visited",
+    "years": [
+      2014
+    ]
+  },
+  {
+    "name": "Szeged",
+    "lat": 46.25,
+    "lon": 20.15,
+    "kind": "visited",
+    "years": [
+      2014
+    ]
+  },
+  {
+    "name": "Paris",
+    "lat": 48.86,
+    "lon": 2.35,
+    "kind": "visited",
+    "years": [
+      2014
+    ]
+  },
+  {
+    "name": "Montréal",
+    "lat": 45.5,
+    "lon": -73.57,
+    "kind": "visited",
+    "years": [
+      2014
+    ]
+  },
+  {
+    "name": "Big Sur",
+    "lat": 36.27,
+    "lon": -121.81,
+    "kind": "visited",
+    "years": [
+      2014
+    ]
+  },
+  {
+    "name": "Zugspitze",
+    "lat": 47.42,
+    "lon": 10.98,
+    "kind": "visited",
+    "years": [
+      2015
+    ]
+  },
+  {
+    "name": "Leavenworth",
+    "lat": 47.6,
+    "lon": -120.66,
+    "kind": "visited",
+    "years": [
+      2015
+    ]
+  },
+  {
+    "name": "Santo Domingo",
+    "lat": 18.47,
+    "lon": -69.89,
+    "kind": "visited",
+    "years": [
+      2016
+    ]
+  },
+  {
+    "name": "Mount Shasta",
+    "lat": 41.41,
+    "lon": -122.19,
+    "kind": "hiked",
+    "years": [
+      2016
+    ]
+  },
+  {
+    "name": "Olympic National Park",
+    "lat": 47.86,
+    "lon": -123.93,
+    "kind": "hiked",
+    "years": [
+      2016
+    ]
+  },
+  {
+    "name": "Wind River Range",
+    "lat": 42.95,
+    "lon": -109.45,
+    "kind": "hiked",
+    "years": [
+      2016
+    ]
+  },
+  {
+    "name": "Goat Rocks Wilderness",
+    "lat": 46.49,
+    "lon": -121.45,
+    "kind": "hiked",
+    "years": [
+      2016
+    ]
+  },
+  {
+    "name": "Guatapé",
+    "lat": 6.23,
+    "lon": -75.16,
+    "kind": "visited",
+    "years": [
+      2017
+    ]
+  },
+  {
+    "name": "Bogotá",
+    "lat": 4.71,
+    "lon": -74.07,
+    "kind": "visited",
+    "years": [
+      2017
+    ]
+  },
+  {
+    "name": "Sonoma coast",
+    "lat": 38.57,
+    "lon": -123.33,
+    "kind": "visited",
+    "years": [
+      2017
+    ]
+  },
+  {
+    "name": "Olympic coast",
+    "lat": 48.27,
+    "lon": -124.68,
+    "kind": "hiked",
+    "years": [
+      2017
+    ],
+    "note": "Shi Shi Beach"
+  },
+  {
+    "name": "San Juan Islands",
+    "lat": 48.6,
+    "lon": -122.95,
+    "kind": "hiked",
+    "years": [
+      2017
+    ],
+    "note": "By kayak"
+  },
+  {
+    "name": "Eagle Cap Wilderness",
+    "lat": 45.15,
+    "lon": -117.35,
+    "kind": "hiked",
+    "years": [
+      2017
+    ]
+  },
+  {
+    "name": "Summer Lake Hot Springs",
+    "lat": 42.72,
+    "lon": -120.64,
+    "kind": "visited",
+    "years": [
+      2017
+    ]
+  },
+  {
+    "name": "Mount Adams",
+    "lat": 46.2,
+    "lon": -121.49,
+    "kind": "hiked",
+    "years": [
+      2016
+    ]
+  },
+  {
+    "name": "Vancouver to Bellingham",
+    "lat": 49.0,
+    "lon": -122.75,
+    "kind": "hiked",
+    "note": "By bike",
+    "years": [
+      2014
+    ]
+  },
+  {
+    "name": "Tracy Arm",
+    "lat": 57.85,
+    "lon": -133.2,
+    "kind": "visited",
+    "years": [
+      2022
+    ]
+  },
+  {
+    "name": "Sitka",
+    "lat": 57.05,
+    "lon": -135.33,
+    "kind": "visited",
+    "years": [
+      2022
+    ]
+  },
+  {
+    "name": "Huế",
+    "lat": 16.46,
+    "lon": 107.59,
+    "kind": "visited",
+    "years": [
+      2018
+    ]
+  },
+  {
+    "name": "Cleveland",
+    "lat": 41.5,
+    "lon": -81.69,
+    "kind": "visited",
+    "years": [
+      2019
+    ]
+  },
+  {
+    "name": "Malta",
+    "lat": 35.91,
+    "lon": 14.5,
+    "kind": "visited",
+    "years": [
+      2019
+    ]
+  }
+]

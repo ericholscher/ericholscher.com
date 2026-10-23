@@ -1,4 +1,5 @@
 .. post:: 2008-03-14 11:18:54
+   :category: code
 
 All majors are the same
 =======================

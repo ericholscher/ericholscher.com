@@ -1,4 +1,5 @@
 .. post:: 2011-01-11 02:00:00
+   :category: documentation
 
 Read the Docs Updates
 =====================

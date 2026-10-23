@@ -1,4 +1,5 @@
 .. post:: 2008-09-18 18:52:54
+   :category: code
 
 Getting started with Pinax
 ==========================

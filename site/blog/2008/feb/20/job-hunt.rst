@@ -1,4 +1,5 @@
 .. post:: 2008-02-20 14:56:23
+   :category: code
 
 Job hunt
 ========

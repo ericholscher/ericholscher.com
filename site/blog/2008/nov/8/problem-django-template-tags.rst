@@ -1,4 +1,5 @@
 .. post:: 2008-11-08 00:00:00
+   :category: code
 
 The problem with Django's Template Tags
 =======================================

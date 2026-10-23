@@ -1,4 +1,5 @@
 .. post:: 2013-09-28 01:00:00
+   :category: outside
 
 A letter to an old friend
 =========================

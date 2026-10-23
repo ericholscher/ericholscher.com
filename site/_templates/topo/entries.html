@@ -1,0 +1,64 @@
+{#- Shared post-list markup for the home page, the archive, and category landing pages. -#}
+{%- macro kind(post) %}
+{%- set cats = post.category|map('string')|list if post.category else [] %}
+{%- if 'link-blog' in cats %}<span class="topo-kind">link</span>{% endif %}
+{%- endmacro %}
+
+{%- macro entries(posts, pagename) %}
+{%- for post in posts %}
+<article class="topo-entry">
+  <div class="topo-entry-meta"><time class="topo-entry-date" datetime="{{ post.date.strftime('%Y-%m-%d') }}">{{ post.date.strftime('%b %-d, %Y') }}</time>{{ kind(post) }}</div>
+  <div class="topo-entry-body">
+    <h3><a href="{{ pathto(post.docname) }}{{ anchor(post) }}">{{ post.title }}</a></h3>
+    <div class="topo-entry-excerpt">{{ post.to_html(pagename) }}</div>
+  </div>
+</article>
+{%- endfor %}
+{%- endmacro %}
+
+{#- Compact list without excerpts, for topic blocks. -#}
+{%- macro titles(posts, pagename) %}
+<ul class="topo-titles">
+{%- for post in posts %}
+  <li><time datetime="{{ post.date.strftime('%Y-%m-%d') }}">{{ post.date.strftime('%b %Y') }}</time><a href="{{ pathto(post.docname) }}{{ anchor(post) }}">{{ post.title }}</a></li>
+{%- endfor %}
+</ul>
+{%- endmacro %}
+
+{#- Topic cards: one per category in topo_categories that has posts. -#}
+{%- macro topics(pagename, per=3) %}
+<div class="topo-topics">
+{%- for slug, meta in topo_categories.items() %}
+{%- set coll = ablog.category[slug] %}
+{%- if coll and coll|length %}
+  <section class="topo-topic">
+    <h3><a href="{{ pathto(coll.docname) }}">{{ meta[0] }}</a> <span class="topo-topic-count">{{ coll|length }}</span></h3>
+    <p>{{ meta[1] }}</p>
+    {%- set recent = [] %}
+    {%- for post in coll %}{% if loop.index <= per %}{% set _ = recent.append(post) %}{% endif %}{% endfor %}
+    {{ titles(recent, pagename) }}
+  </section>
+{%- endif %}
+{%- endfor %}
+</div>
+{%- endmacro %}
+
+{#- Paging through the blog by year, using ABlog's year pages, newest first. -#}
+{%- macro year_pager(current=None) %}
+{%- set ys = namespace(list=[], i=-1) %}
+{%- for c in ablog.archive if c %}{% set ys.list = ys.list + [c] %}{% endfor %}
+{%- for c in ys.list %}{% if current and c.name == current.name %}{% set ys.i = loop.index0 %}{% endif %}{% endfor %}
+<nav class="topo-pager" aria-label="Posts by year">
+  {%- if ys.i >= 0 %}
+  <div class="topo-pager-step">
+    {%- if ys.i > 0 %}<a rel="prev" href="{{ pathto(ys.list[ys.i - 1].docname) }}">&larr; {{ ys.list[ys.i - 1] }}</a>{% endif %}
+    {%- if ys.i < ys.list|length - 1 %}<a rel="next" href="{{ pathto(ys.list[ys.i + 1].docname) }}">{{ ys.list[ys.i + 1] }} &rarr;</a>{% endif %}
+  </div>
+  {%- endif %}
+  <ol class="topo-pager-pages">
+    {%- for c in ys.list %}
+    <li>{% if loop.index0 == ys.i %}<span aria-current="page">{{ c }}</span>{% else %}<a href="{{ pathto(c.docname) }}">{{ c }}</a>{% endif %}</li>
+    {%- endfor %}
+  </ol>
+</nav>
+{%- endmacro %}

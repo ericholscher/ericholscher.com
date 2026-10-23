@@ -1,4 +1,5 @@
 .. post:: 2008-07-07 12:03:44
+   :category: community
 
 DjangoCon 2008
 ==============

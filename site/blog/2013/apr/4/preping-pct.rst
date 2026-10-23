@@ -1,4 +1,5 @@
 .. post:: 2013-04-04 19:00:00
+   :category: outside
 
 Prepping for the Pacific Crest Trail
 ====================================

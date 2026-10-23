@@ -1,4 +1,5 @@
 .. post:: 2010-11-03 20:45:00
+   :category: code
 
 Django Testing Mailing List
 ===========================

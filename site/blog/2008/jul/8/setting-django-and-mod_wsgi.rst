@@ -1,4 +1,5 @@
 .. post:: 2008-07-08 20:11:06
+   :category: code
 
 Setting up Django and mod_wsgi
 ==============================

@@ -1,4 +1,5 @@
 .. post:: 2010-08-28 11:00:00
+   :category: documentation
 
 New features on Read The Docs
 =============================

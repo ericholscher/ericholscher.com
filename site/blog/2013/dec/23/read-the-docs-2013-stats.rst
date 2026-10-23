@@ -1,4 +1,5 @@
 .. post:: 2013-12-23 10:00:00
+   :category: documentation
 
 Read the Docs 2013 Stats
 ========================

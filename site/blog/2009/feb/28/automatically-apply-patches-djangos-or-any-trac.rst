@@ -1,4 +1,5 @@
 .. post:: 2009-02-28 20:18:07
+   :category: code
 
 Automatically apply patches from Django's (or any) Trac
 =======================================================

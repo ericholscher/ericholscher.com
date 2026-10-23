@@ -1,0 +1,47 @@
+{#- Year-by-year log: trips from hikes.json and places from places.json, newest year first.
+    Each year is a <details>, so the page reads as a short list of years until one is opened. -#}
+{%- set ns = namespace(years=[]) %}
+{%- for h in topo_hikes %}{% if h.year not in ns.years %}{% set ns.years = ns.years + [h.year] %}{% endif %}{% endfor %}
+{%- for p in topo_places %}{% for y in p.years or [] %}{% if y|string not in ns.years %}{% set ns.years = ns.years + [y|string] %}{% endif %}{% endfor %}{% endfor %}
+<section class="topo-log" id="hikes">
+  <h2 class="topo-plaque">Year by year</h2>
+  {%- for y in ns.years|sort(reverse=true) %}
+  {%- set trips = topo_hikes|selectattr('year', 'equalto', y)|list %}
+  {%- set pl = namespace(items=[]) %}
+  {%- for p in topo_places if p.years and y|int in p.years %}{% set pl.items = pl.items + [p] %}{% endfor %}
+  <details class="topo-log-year" id="hikes-{{ y }}"{% if loop.first %} open{% endif %}>
+    <summary>
+      <span class="topo-log-yearnum">{{ y }}</span>
+      <span class="topo-log-gist">{{ (trips or pl.items)|map(attribute='name')|join(' · ') }}</span>
+      <span class="topo-log-count">
+        {%- if trips %}{{ trips|length }} {{ 'trip' if trips|length == 1 else 'trips' }}{% endif %}
+        {%- if trips and pl.items %} · {% endif %}
+        {%- if pl.items %}{{ pl.items|length }} {{ 'place' if pl.items|length == 1 else 'places' }}{% endif %}</span>
+    </summary>
+    <div class="topo-log-body">
+      {%- if trips %}
+      <ol class="topo-tl-list">
+      {%- for h in trips %}
+        <li class="topo-tl-item">
+          <h4>{% if h.link %}<a href="{{ pathto(h.link) }}">{{ h.name }}</a>{% else %}{{ h.name }}{% endif %}</h4>
+          <p class="topo-tl-meta"><span class="topo-kind topo-kind-{{ h.kind }}">{{ h.kind|replace("-", " ") }}</span>{{ h.when|replace(", " ~ y, "")|replace(" " ~ y, "") }}{% if h.where %} &middot; {{ h.where }}{% endif %}</p>
+          {%- if h.note %}<p class="topo-tl-note">{{ h.note }}</p>{% endif %}
+        </li>
+      {%- endfor %}
+      </ol>
+      {%- endif %}
+      {%- if pl.items %}
+      <div class="topo-log-places">
+        <h4 class="topo-log-label">Places</h4>
+        <ul class="topo-log-placelist">
+        {%- for p in pl.items %}
+          <li><span class="topo-dot topo-dot-{{ p.kind }}" aria-hidden="true"></span>{{ p.name }}</li>
+        {%- endfor %}
+        </ul>
+        <button type="button" class="topo-log-map" data-map-year="{{ y }}" hidden>Show {{ y }} on the map</button>
+      </div>
+      {%- endif %}
+    </div>
+  </details>
+  {%- endfor %}
+</section>

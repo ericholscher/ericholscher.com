@@ -1,4 +1,5 @@
 .. post:: 2013-01-28 09:05:26
+   :category: documentation
 
 Announcing Write the Docs
 =========================

@@ -1,4 +1,5 @@
 .. post:: 2010-01-07 16:49:02
+   :category: code
 
 A simple Perl IRCBot
 ====================

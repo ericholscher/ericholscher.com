@@ -1,4 +1,5 @@
 .. post:: 2009-01-21 15:24:04
+   :category: code
 
 Review of Pro Django by Marty Alchin (1/2)
 ==========================================

@@ -1,4 +1,5 @@
 .. post:: 2013-10-01 19:00:00
+   :category: documentation
 
 Sphinx Live Preview
 ===================

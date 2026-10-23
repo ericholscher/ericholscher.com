@@ -1,4 +1,5 @@
 .. post:: Jan 4, 2018
+   :category: open-source
    :tags: business, questions, dazzlecon, zebras
 
 Business questions I'm working on in 2018

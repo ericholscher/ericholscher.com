@@ -1,4 +1,5 @@
 .. post:: 2009-11-02 17:34:04
+   :category: code
 
 Large Problems in Django, Mostly Solved: Search
 ===============================================

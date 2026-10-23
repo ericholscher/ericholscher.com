@@ -1,45 +1,7 @@
 {% extends "!layout.html" %}
 
 {% block extrahead %}
-
 <!-- 100% privacy friendly analytics -->
 <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
-
 {% endblock %}
-
-{# Nav should appear before content, not after #}
-{%- block content %}
-{%- if theme_fixed_sidebar|lower == 'true' %}
-  <div class="document">
-    {{ sidebar() }}
-    {%- block document %}
-      <div class="documentwrapper">
-      {%- if render_sidebar %}
-        <div class="bodywrapper">
-      {%- endif %}
-          <div class="body" role="main">
-            {% block body %} {% endblock %}
-            <br>
-            {% if pagename.startswith('blog') %}
-            <hr>
-            <div class="pitch" style="margin-top: 20px; margin-bottom: 20px; font-size: 20px;">
-            <i class="fa fa-info-circle"></i>
-            Hey there!
-            I'm Eric and I work on communities in the world of software documentation.
-            Feel free to <a href="mailto:eric@ericholscher.com?subject=Blog Comments">email me</a> if you have comments on this post!
-            </div>
-            {% endif %}
-          </div>
-      {%- if render_sidebar %}
-        </div>
-      {%- endif %}
-      </div>
-    {%- endblock %}
-    <div class="clearer"></div>
-  </div>
-{%- else %}
-{{ super() }}
-{%- endif %}
-{%- endblock %}
-

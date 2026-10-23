@@ -1,4 +1,5 @@
 .. post:: 2008-11-03 21:03:37
+   :category: code
 
 Introduction to Python/Django testing: Basic Unit Tests
 =======================================================

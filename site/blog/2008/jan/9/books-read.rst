@@ -1,4 +1,5 @@
 .. post:: 2008-01-09 15:22:31
+   :category: code
 
 Books to read
 =============

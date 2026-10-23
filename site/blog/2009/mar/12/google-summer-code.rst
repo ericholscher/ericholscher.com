@@ -1,4 +1,5 @@
 .. post:: 2009-03-12 07:18:27
+   :category: code
 
 Google Summer of Code
 =====================

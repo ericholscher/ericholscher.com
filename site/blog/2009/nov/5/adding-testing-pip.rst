@@ -1,4 +1,5 @@
 .. post:: 2009-11-05 15:22:38
+   :category: code
 
 Adding testing to pip
 =====================

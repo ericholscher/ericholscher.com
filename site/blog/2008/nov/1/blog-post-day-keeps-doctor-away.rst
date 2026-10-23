@@ -1,4 +1,5 @@
 .. post:: 2008-11-01 03:00:00
+   :category: code
 
 A blog post a day keeps the doctor away
 =======================================

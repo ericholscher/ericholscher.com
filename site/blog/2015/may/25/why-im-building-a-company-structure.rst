@@ -1,4 +1,5 @@
 .. post:: 2015-05-25 12:00:00
+   :category: documentation
 
 Why I'm building a company: Structure
 =====================================

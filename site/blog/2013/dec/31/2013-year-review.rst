@@ -1,4 +1,5 @@
 .. post:: Dec 31, 2013
+   :category: outside
 
 2013 Year in Review
 ===================

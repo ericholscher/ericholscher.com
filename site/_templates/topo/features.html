@@ -1,0 +1,13 @@
+{#- The long ones: hikes.json entries marked "feature": true, newest first. -#}
+<section class="topo-features" id="long-ones">
+  <h2 class="topo-plaque">The long ones</h2>
+  <ul class="topo-feature-grid">
+  {%- for h in topo_hikes|selectattr('feature')|list|reverse %}
+    <li class="topo-feature">
+      <p class="topo-feature-meta"><span>{{ h.year }}</span><span class="topo-kind topo-kind-{{ h.kind }}">{{ h.kind|replace("-", " ") }}</span></p>
+      <h3>{% if h.link %}<a href="{{ pathto(h.link) }}">{{ h.name }}</a>{% else %}{{ h.name }}{% endif %}</h3>
+      <p class="topo-feature-where">{{ h.where }}</p>
+    </li>
+  {%- endfor %}
+  </ul>
+</section>

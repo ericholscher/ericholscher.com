@@ -1,6 +1,7 @@
-.. image:: /_static/img/speaking.jpg
-   :align: right
-   :height: 450px
+.. figure:: /_static/img/speaking-wtd.jpg
+   :alt: Eric on stage with a microphone and a yellow lanyard, projected slide text behind him
+
+   Closing Write the Docs Portland, 2019. Photo by `Write the Docs <https://www.flickr.com/photos/writethedocs/47967664442/>`_, CC BY-NC-SA.
 
 Speaking
 ========
@@ -12,6 +13,8 @@ I believe that speakers should be part of the conference as well as presenting t
 A lot of the value in conferences comes from the hallways.
 If I speak at your conference,
 I will also attend.
+
+If you'd rather listen than read, I keep a list of :doc:`podcast interviews </interviews>` as well.
 
 I am interested in speaking on the following topics:
 

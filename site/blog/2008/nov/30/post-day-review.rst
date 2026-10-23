@@ -1,4 +1,5 @@
 .. post:: 2008-11-30 17:29:05
+   :category: code
 
 Post a day in review
 ====================

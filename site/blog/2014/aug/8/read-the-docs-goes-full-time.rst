@@ -1,4 +1,5 @@
 .. post:: Aug 8, 2014
+   :category: documentation
 
 Read the Docs goes full-time
 ============================

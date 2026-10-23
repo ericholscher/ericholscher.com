@@ -1,4 +1,5 @@
 .. post:: 2009-11-11 18:42:40
+   :category: code
 
 Large Problems in Django, Mostly Solved: APIs
 =============================================

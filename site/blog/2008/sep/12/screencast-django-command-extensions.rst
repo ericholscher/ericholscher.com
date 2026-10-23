@@ -1,4 +1,5 @@
 .. post:: 2008-09-12 16:01:35
+   :category: code
 
 Screencast: Django Command Extensions
 =====================================

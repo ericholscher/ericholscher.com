@@ -1,4 +1,5 @@
 .. post:: 2008-11-14 15:59:51
+   :category: code
 
 Should reusable apps have templates?
 ====================================

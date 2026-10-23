@@ -1,0 +1,127 @@
+{#- Topo: a theme for ericholscher.com. Inherits Sphinx's basic theme. -#}
+{%- extends "basic/layout.html" %}
+{%- from "topo/entries.html" import entries, titles, topics, year_pager with context %}
+
+{%- set is_home = pagename == root_doc %}
+{%- set is_post = ablog is defined and pagename in ablog %}
+{%- set is_archive = pagename == 'blog/index' %}
+
+{%- block htmltitle %}
+  {%- if is_home %}
+    <title>{{ docstitle|e }}</title>
+  {%- else %}
+    <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
+  {%- endif %}
+{%- endblock %}
+
+{%- block header %}
+<header class="topo-masthead">
+  <a class="topo-wordmark" href="{{ pathto(root_doc) }}">{{ mark(30) }}<span>{{ docstitle|e }}</span></a>
+  <nav class="topo-nav" aria-label="Main">
+    <a href="{{ pathto('blog/index') }}">Blog</a>
+    {%- if ablog is defined and ablog.category['outside'] %}<a href="{{ pathto(ablog.category['outside'].docname) }}">Outside</a>{% endif %}
+    <a href="{{ pathto('speaking') }}">Speaking</a>
+    <a href="{{ pathto('about') }}">About</a>
+  </nav>
+</header>
+{%- endblock %}
+
+{%- block relbar1 %}{% endblock %}
+{%- block relbar2 %}{% endblock %}
+
+{#- Hero art: a USGS topographic map (public domain, from the USGS National Map), toned into the page by CSS. -#}
+
+{%- macro mark(size) %}
+{#- The site mark: a diamond trail blaze with a pilcrow in it. Text and trail in one shape. -#}
+<svg class="topo-mark" width="{{ size }}" height="{{ size }}" viewBox="0 0 64 64" role="img" aria-label="Eric Holscher">
+  <polygon points="32,5 59,32 32,59 5,32" fill="currentColor" stroke="currentColor" stroke-width="6" stroke-linejoin="round"></polygon>
+  <polygon points="32,10 54,32 32,54 10,32" fill="none" stroke="var(--sign-gold)" stroke-width="1.5" stroke-linejoin="round" opacity=".85"></polygon>
+  <path d="M675.7 1350.0V667.2H443.0Q306.7 667.2 220.7 711.0Q134.7 754.8 94.2 830.6Q53.7 906.4 53.7 1002.2Q53.7 1095.1 93.2 1174.3Q132.8 1253.5 218.4 1301.8Q304.0 1350.0 443.1 1350.0ZM707.8 -250.0H607.6V1350.0H881.9V1255.1H707.8ZM958.6 -250.0H858.4V1350.0H1123.2V1312.0L958.6 1263.3Z" fill="var(--mark-snow)" transform="translate(21.996 41.33) scale(0.01700 -0.01700)"></path>
+</svg>
+{%- endmacro %}
+
+{%- from "topo/entries.html" import kind with context %}
+
+{%- block content %}
+<div class="topo-page">
+  {%- if is_home %}
+  <section class="topo-hero">
+    {#- The map is a CSS background texture behind the copy; see .topo-hero::before in topo.css -#}
+    <div class="topo-hero-copy body" role="main">
+      {% block body %} {% endblock %}
+    </div>
+    <span class="topo-map-credit">Map: USGS, Three Sisters Wilderness</span>
+  </section>
+  {%- endif %}
+
+  <div class="topo-columns">
+    <main class="topo-main">
+      {%- if not is_home %}
+      <div class="body" role="main">
+        {%- if is_post %}
+          {%- set post = ablog[pagename] %}
+          <p class="topo-dateline">
+            {%- if post.date %}<time datetime="{{ post.date.strftime('%Y-%m-%d') }}">{{ post.date.strftime('%B %-d, %Y') }}</time>{% else %}Draft{% endif %}
+            {%- if post.tags %} &middot; {% for tag in post.tags %}<a href="{{ pathto(tag.docname) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}{% endif %}
+            {{ kind(post) }}
+          </p>
+        {%- endif %}
+        {{ self.body() }}
+        {%- if is_post %}
+        <aside class="topo-pitch">
+          <p>Hi, I'm Eric. I work on communities in the world of software documentation. If you have thoughts on this post, <a href="mailto:eric@ericholscher.com?subject=Blog Comments">email me</a>.</p>
+        </aside>
+        {%- endif %}
+      </div>
+      {%- if pagename == 'adventures' %}
+      {% include "topo/features.html" %}
+      {% include "topo/places.html" %}
+      {% include "topo/timeline.html" %}
+      {%- if ablog is defined and ablog.category['outside'] %}
+      <p class="topo-more"><a href="{{ pathto(ablog.category['outside'].docname) }}">Writing from these trips &rarr;</a></p>
+      {%- endif %}
+      {%- endif %}
+      {%- endif %}
+
+      {%- if is_home and ablog is defined %}
+      {%- set pop = namespace(posts=[]) %}
+      {%- for d in topo_popular if d in ablog %}{% set pop.posts = pop.posts + [ablog[d]] %}{% endfor %}
+      <section class="topo-recent topo-popular" id="popular">
+        <div class="topo-recent-head"><h2>Most read</h2></div>
+        {{ entries(pop.posts, pagename) }}
+      </section>
+      <section class="topo-recent" id="recent">
+        <div class="topo-recent-head"><h2>Recently</h2><a href="{{ pathto('blog/index') }}" class="topo-more-link">All posts &rarr;</a></div>
+        {%- set rec = namespace(posts=[]) %}
+        {%- for post in ablog.recent(20, pagename) if post.docname not in topo_popular and rec.posts|length < 8 %}{% set rec.posts = rec.posts + [post] %}{% endfor %}
+        {{ titles(rec.posts, pagename) }}
+      </section>
+      <section class="topo-topics-section" id="topics">
+        <div class="topo-recent-head"><h2>By topic</h2><a href="{{ pathto(ablog.category.docname) }}" class="topo-more-link">All topics &rarr;</a></div>
+        {{ topics(pagename, 3) }}
+      </section>
+      {%- elif is_archive and ablog is defined %}
+      <section class="topo-recent" id="recent">
+        <div class="topo-recent-head"><h2>Latest posts</h2><a href="{{ pathto(ablog.archive.docname) }}" class="topo-more-link">Every title, by year &rarr;</a></div>
+        {{ entries(ablog.recent(20, pagename), pagename) }}
+      </section>
+      <section class="topo-years-section">
+        <div class="topo-recent-head"><h2>Keep reading, by year</h2></div>
+        {{ year_pager() }}
+      </section>
+      {%- endif %}
+    </main>
+    {{ sidebar() }}
+  </div>
+</div>
+{%- endblock %}
+
+{%- block footer %}
+<svg class="topo-ridge" viewBox="0 0 1280 48" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+  <polygon points="0,48 0,38 60,28 120,34 200,14 260,26 340,6 400,22 470,16 560,30 640,10 710,26 790,20 880,36 960,22 1040,30 1120,12 1200,26 1280,32 1280,48"></polygon>
+</svg>
+<footer class="topo-footer">
+  <span>&copy; {{ copyright|e }} &middot; Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a href="https://ablog.readthedocs.io/">ABlog</a></span>
+  <span class="topo-footer-note">Contour interval: one post</span>
+</footer>
+{%- endblock %}

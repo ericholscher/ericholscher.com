@@ -1,4 +1,5 @@
 .. post:: 2011-01-23 21:25:40
+   :category: code
 
 Using Reviewboard with Git
 ==========================

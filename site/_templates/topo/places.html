@@ -1,0 +1,230 @@
+{#- Places map, data in site/_data/places.json. Equirectangular to match world-land.html.
+    Everything past the static map is progressive enhancement: the year filter, expanding the map
+    to fill the screen (with zoom and drag to pan), and tapping a pin to name it. -#}
+{%- set W = 1000 %}{% set TOP = 84 %}{% set BOT = -58 %}{% set H = (W * (TOP - BOT) / 360)|round(0) %}
+{%- set ns = namespace(years=[]) %}
+{%- for p in topo_places %}{% for y in p.years or [] %}{% if y not in ns.years %}{% set ns.years = ns.years + [y] %}{% endif %}{% endfor %}{% endfor %}
+{%- set all_years = ns.years|sort(reverse=true) %}
+<section class="topo-places" id="places">
+  <h2 class="topo-plaque">Places</h2>
+  <div class="topo-map" aria-label="Map of places">
+    <div class="topo-map-bar">
+      <div class="topo-year-filter" role="group" aria-label="Show places by year" hidden>
+        <button type="button" data-year="all" aria-pressed="true">All</button>
+        {%- for y in all_years %}<button type="button" data-year="{{ y }}" aria-pressed="false">{{ y }}</button>{% endfor %}
+      </div>
+      <div class="topo-map-tools">
+        <button type="button" class="topo-map-close">Close</button>
+      </div>
+    </div>
+    {%- set VBH = ((75 - (-56)) / (TOP - BOT) * H)|round(0) %}
+    <div class="topo-map-frame">
+      <div class="topo-map-scroll" style="aspect-ratio: {{ W }} / {{ VBH }}">
+        <svg class="topo-world" viewBox="0 {{ ((TOP - 75) / (TOP - BOT) * H)|round(0) }} {{ W }} {{ VBH }}" role="img" aria-label="World map with places lived, walked, and visited">
+          {% include "topo/world-land.html" %}
+          {%- for p in topo_places %}
+          {%- set x = ((p.lon + 180) / 360 * W)|round(1) %}{% set y = ((TOP - p.lat) / (TOP - BOT) * H)|round(1) %}
+          <g class="topo-pin topo-pin-{{ p.kind }}" data-years="{{ (p.years or [])|join(' ') }}" data-name="{{ p.name|e }}"{% if p.note %} data-note="{{ p.note|e }}"{% endif %} data-x="{{ x }}" data-y="{{ y }}"><circle class="topo-pin-dot" cx="{{ x }}" cy="{{ y }}" r="{% if p.kind == 'lived' %}5.5{% else %}4{% endif %}"><title>{{ p.name }}{% if p.note %} · {{ p.note }}{% endif %}</title></circle></g>
+          {%- endfor %}
+        </svg>
+      </div>
+      <button type="button" class="topo-map-expand" aria-label="Expand map" hidden>
+        <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M2 6V2h4M10 2h4v4M14 10v4h-4M6 14H2v-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        Expand
+      </button>
+      <div class="topo-map-zoombox" hidden>
+        <button type="button" class="topo-map-zoom" data-step="2" aria-label="Zoom in">+</button>
+        <button type="button" class="topo-map-zoom" data-step="0.5" aria-label="Zoom out">&minus;</button>
+      </div>
+      <div class="topo-map-tip" role="status" hidden></div>
+    </div>
+    <p class="topo-map-readout" aria-live="polite">Pinch or scroll to zoom. Tap a pin to name it.</p>
+    <p class="topo-map-legend">
+      <span class="topo-legend topo-legend-lived">Lived</span>
+      <span class="topo-legend topo-legend-hiked">Walked, rode, or floated</span>
+      <span class="topo-legend topo-legend-visited">Visited</span>
+    </p>
+  </div>
+  <p class="topo-home-line">Home, over the years:
+    {%- for p in topo_places if p.kind == 'lived' %} <span class="topo-home-place">{{ p.name }}</span>{% if not loop.last %} &middot;{% endif %}{% endfor %}</p>
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var root = document.getElementById('places'); if (!root) return;
+    var map = root.querySelector('.topo-map');
+    var svg = map.querySelector('.topo-world');
+    var scroller = map.querySelector('.topo-map-scroll');
+    var bar = map.querySelector('.topo-year-filter');
+    var buttons = bar.querySelectorAll('button');
+    var pins = svg.querySelectorAll('.topo-pin');
+    var expand = map.querySelector('.topo-map-expand');
+    var close = map.querySelector('.topo-map-close');
+    var readout = map.querySelector('.topo-map-readout');
+    var frame = map.querySelector('.topo-map-frame');
+    var tip = map.querySelector('.topo-map-tip');
+    var vb = svg.viewBox.baseVal;
+    var expanded = false, zoom = 1, active = null, hovered = null, drag = null, dragged = false, pinch = null;
+    // The hover label below replaces the browser's own tooltips, which stay for pages without JavaScript.
+    svg.querySelectorAll('.topo-pin title').forEach(function (t) { t.remove(); });
+    bar.hidden = false; expand.hidden = false; map.querySelector('.topo-map-zoombox').hidden = false;
+    map.classList.add('is-enhanced');
+
+    // Pins keep a steady size on screen, whatever the map's width or zoom.
+    function sizePins() {
+      var unit = svg.getBoundingClientRect().width / vb.width; if (!unit) return;
+      pins.forEach(function (p) {
+        var lived = p.classList.contains('topo-pin-lived');
+        p.querySelector('.topo-pin-dot').setAttribute('r', ((lived ? 5 : 4) / unit).toFixed(2));
+      });
+    }
+    // Scroll the expanded map to the middle of the pins in view.
+    function center() {
+      var x0 = Infinity, x1 = -Infinity, y0 = Infinity, y1 = -Infinity;
+      pins.forEach(function (p) {
+        if (p.classList.contains('is-dim') || p.classList.contains('topo-pin-lived')) return;
+        var x = +p.dataset.x, y = +p.dataset.y - vb.y;
+        x0 = Math.min(x0, x); x1 = Math.max(x1, x); y0 = Math.min(y0, y); y1 = Math.max(y1, y);
+      });
+      if (x0 === Infinity) return;
+      var unit = svg.getBoundingClientRect().width / vb.width;
+      scroller.scrollLeft = (x0 + x1) / 2 * unit - scroller.clientWidth / 2;
+      scroller.scrollTop = (y0 + y1) / 2 * unit - scroller.clientHeight / 2;
+    }
+    // Zoom, keeping the map point under (x, y) on screen where it is; the middle by default.
+    function setZoom(z, x, y) {
+      var s = scroller.getBoundingClientRect();
+      var ax = x == null ? scroller.clientWidth / 2 : x - s.left, ay = y == null ? scroller.clientHeight / 2 : y - s.top;
+      var fx = (scroller.scrollLeft + ax) / scroller.scrollWidth, fy = (scroller.scrollTop + ay) / scroller.scrollHeight;
+      zoom = Math.max(1, Math.min(12, z));
+      svg.style.width = zoom === 1 ? '' : (zoom * 100) + '%';
+      map.classList.toggle('is-zoomed', zoom > 1);
+      scroller.scrollLeft = fx * scroller.scrollWidth - ax;
+      scroller.scrollTop = fy * scroller.scrollHeight - ay;
+      sizePins();
+    }
+    function setExpanded(on) {
+      expanded = on;
+      map.classList.toggle('is-expanded', on);
+      document.documentElement.classList.toggle('topo-map-open', on);
+      if (on) {
+        map.setAttribute('role', 'dialog'); map.setAttribute('aria-modal', 'true');
+        // Start zoomed in far enough that the map fills the screen top to bottom.
+        setZoom(scroller.clientHeight / (scroller.clientWidth * vb.height / vb.width));
+        center();
+        close.focus();
+      } else {
+        map.removeAttribute('role'); map.removeAttribute('aria-modal');
+        setZoom(1);
+        expand.focus();
+      }
+    }
+    function show(year) {
+      buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.year === year)); });
+      pins.forEach(function (p) {
+        var on = year === 'all' || p.classList.contains('topo-pin-lived') || p.dataset.years.split(' ').indexOf(year) !== -1;
+        p.classList.toggle('is-dim', !on);
+      });
+      showTip(null);
+      if (expanded) center();
+    }
+
+    buttons.forEach(function (b) { b.addEventListener('click', function () { show(b.dataset.year); }); });
+    expand.addEventListener('click', function () { setExpanded(true); });
+    close.addEventListener('click', function () { setExpanded(false); });
+    map.querySelectorAll('.topo-map-zoom').forEach(function (b) {
+      b.addEventListener('click', function () { setZoom(zoom * +b.dataset.step); });
+    });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && expanded) setExpanded(false); });
+    window.addEventListener('resize', function () { sizePins(); });
+
+    // Wheel and trackpad: the open map zooms on any scroll; the small one only on a pinch
+    // (which browsers send as ctrl + wheel), so ordinary scrolling still moves the page.
+    scroller.addEventListener('wheel', function (e) {
+      if (!expanded && !e.ctrlKey) return;
+      e.preventDefault();
+      setZoom(zoom * Math.exp(-e.deltaY * (e.ctrlKey ? 0.01 : 0.002)), e.clientX, e.clientY);
+    }, { passive: false });
+    scroller.addEventListener('dblclick', function (e) { if (expanded) setZoom(zoom * 2, e.clientX, e.clientY); });
+    // Two-finger pinch on touch screens; one finger still scrolls.
+    function spread(t) { return Math.hypot(t[0].clientX - t[1].clientX, t[0].clientY - t[1].clientY); }
+    scroller.addEventListener('touchstart', function (e) {
+      if (e.touches.length === 2) pinch = { d: spread(e.touches), z: zoom };
+    }, { passive: true });
+    scroller.addEventListener('touchmove', function (e) {
+      if (!pinch || e.touches.length !== 2) return;
+      e.preventDefault();
+      var t = e.touches;
+      setZoom(pinch.z * spread(t) / pinch.d, (t[0].clientX + t[1].clientX) / 2, (t[0].clientY + t[1].clientY) / 2);
+    }, { passive: false });
+    scroller.addEventListener('touchend', function (e) { if (e.touches.length < 2) pinch = null; });
+
+    function label(p) {
+      return p.dataset.name + (p.dataset.note ? ' · ' + p.dataset.note : '') +
+        (p.dataset.years ? ' · ' + p.dataset.years.split(' ').join(', ') : '');
+    }
+    // A label over the pin under the mouse, kept inside the map's frame.
+    function showTip(p) {
+      if (p === hovered) return;
+      if (hovered) hovered.classList.remove('is-hover');
+      hovered = p;
+      if (!p) { tip.hidden = true; return; }
+      p.classList.add('is-hover');
+      tip.textContent = label(p);
+      tip.hidden = false;
+      var r = svg.getBoundingClientRect(), f = frame.getBoundingClientRect(), unit = r.width / vb.width;
+      var x = r.left - f.left + (+p.dataset.x - vb.x) * unit, y = r.top - f.top + (+p.dataset.y - vb.y) * unit;
+      var top = y - tip.offsetHeight - 10;
+      tip.style.left = Math.max(4, Math.min(f.width - tip.offsetWidth - 4, x - tip.offsetWidth / 2)) + 'px';
+      tip.style.top = (top < 4 ? y + 12 : top) + 'px';
+    }
+    // The pin nearest a tap, if one is within reach of a fingertip.
+    function nearest(e) {
+      var rect = svg.getBoundingClientRect(), unit = rect.width / vb.width;
+      var ux = (e.clientX - rect.left) / unit + vb.x, uy = (e.clientY - rect.top) / unit + vb.y;
+      var best = null, bestD = 18 / unit;
+      pins.forEach(function (p) {
+        if (p.classList.contains('is-dim')) return;
+        var d = Math.hypot(+p.dataset.x - ux, +p.dataset.y - uy);
+        if (d < bestD) { best = p; bestD = d; }
+      });
+      return best;
+    }
+    // A tap on the small map opens it; once open, a tap near a pin names it.
+    scroller.addEventListener('click', function (e) {
+      if (dragged) return;
+      if (!expanded) { setExpanded(true); return; }
+      var p = nearest(e);
+      if (!p) return;
+      if (active) active.classList.remove('is-active');
+      active = p; p.classList.add('is-active');
+      readout.textContent = label(p);
+    });
+    scroller.addEventListener('pointermove', function (e) {
+      if (e.pointerType === 'mouse' && !drag) showTip(nearest(e));
+    });
+    scroller.addEventListener('pointerleave', function () { showTip(null); });
+    scroller.addEventListener('scroll', function () { showTip(null); });
+    // Drag to pan with a mouse; touch screens already scroll.
+    scroller.addEventListener('pointerdown', function (e) {
+      if (!(expanded || zoom > 1) || e.pointerType !== 'mouse') return;
+      drag = { x: e.clientX, y: e.clientY, left: scroller.scrollLeft, top: scroller.scrollTop }; dragged = false;
+    });
+    window.addEventListener('pointermove', function (e) {
+      if (!drag) return;
+      var dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+      if (Math.abs(dx) + Math.abs(dy) > 4) { dragged = true; map.classList.add('is-dragging'); }
+      scroller.scrollLeft = drag.left - dx; scroller.scrollTop = drag.top - dy;
+    });
+    window.addEventListener('pointerup', function () {
+      drag = null; map.classList.remove('is-dragging');
+      setTimeout(function () { dragged = false; }, 0);
+    });
+
+    // "Show 2016 on the map" buttons in the year-by-year log.
+    document.querySelectorAll('[data-map-year]').forEach(function (b) {
+      b.hidden = false;
+      b.addEventListener('click', function () { show(b.dataset.mapYear); root.scrollIntoView({ block: 'start' }); });
+    });
+    sizePins();
+  });
+  </script>
+</section>

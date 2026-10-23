@@ -1,4 +1,5 @@
 .. post:: 2008-08-28 17:01:22
+   :category: code
 
 Screencast: Debugging with the Django Error Page
 ================================================

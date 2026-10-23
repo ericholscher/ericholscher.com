@@ -1,4 +1,5 @@
 .. post:: 2013-09-30 09:00:00
+   :category: documentation
 
 Writing a Beginners Guide to Documentation
 ==========================================

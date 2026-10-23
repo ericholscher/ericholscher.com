@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import alabaster
 import ablog
 
 extensions = [
@@ -31,9 +30,6 @@ ogp_use_first_image = True
 # }
 # blog_default_location = "Oregon"
 
-fontawesome_link_cdn = (
-    "https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"
-)
 blog_feed_fulltext = True
 blog_feed_length = 10
 blog_feed_archives = True
@@ -46,23 +42,63 @@ version = "1.0"
 release = "1.0"
 exclude_patterns = ["_build", "include/*"]
 pygments_style = "sphinx"
-html_theme_path = [alabaster.get_path()]
-html_theme = "alabaster"
+import json
+from pathlib import Path
+
+_data = Path(__file__).parent / "_data"
+html_context = {
+    # Category landing pages: slug -> title and intro. Posts opt in with :category: <slug>.
+    "topo_categories": {
+        "documentation": ("Documentation", "How software gets explained: Read the Docs, Write the Docs, Sphinx, and the craft of docs."),
+        "open-source": ("Open source", "Sustaining open source projects and the businesses around them."),
+        "community": ("Community", "Conferences, events, and making rooms that are easier to walk into."),
+        "code": ("Code", "Django, Python, and the tools of the trade. Much of it from the early years."),
+        "outside": ("Outside", "Long trails, bike tours, and the places they go through."),
+        "link-blog": ("Notes", "Short pointers to things worth reading, with a line or two of why."),
+    },
+    # Home page "Most read", in order. Hand-picked; edit freely.
+    "topo_popular": [
+        "blog/2017/aug/2/pacman-rule-conferences",
+        "blog/2023/feb/10/we-dont-do-that-here",
+        "blog/2025/apr/29/camino-de-costa-rica-recap",
+        "blog/2017/jan/27/code-is-self-documenting",
+        "blog/2018/feb/7/the-post-i-never-published",
+        "blog/2018/mar/9/one-percent-for-open-source",
+        "blog/2019/sep/19/helping-first-time-conference-attendees-with-welcome-wagon",
+    ],
+    "topo_hikes": json.loads((_data / "hikes.json").read_text()),
+    "topo_places": json.loads((_data / "places.json").read_text()),
+}
+
+html_theme_path = ["_themes"]
+html_theme = "topo"
 html_sidebars = {
     "**": [
-        "logo.html",
-        "ablog/postcard.html",
-        "about.html",
+        "sidebar/about.html",
+        "sidebar/archive.html",
+        "sidebar/walking.html",
+        "sidebar/elsewhere.html",
         "searchbox.html",
-        "ablog/archives.html",
     ],
 }
 # globaltoc_collapse = False
 
 html_title = blog_title
-html_favicon = "_static/img/favicon.ico"
+html_favicon = "_static/img/favicon.svg"
 html_static_path = ["_static"]
-html_css_files = [
-    'css/custom.css',
-]
 
+# Old pages that were folded into others: old docname -> where it now forwards.
+topo_redirects = {
+    "backpacking": "adventures",
+    "bike": "adventures",
+    "pct/thoughts": "pct/index",
+}
+
+
+def topo_redirect_pages(app):
+    for old, new in topo_redirects.items():
+        yield (old, {"redirect": new}, "topo/redirect.html")
+
+
+def setup(app):
+    app.connect("html-collect-pages", topo_redirect_pages)

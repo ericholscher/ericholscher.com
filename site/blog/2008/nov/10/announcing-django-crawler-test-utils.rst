@@ -1,4 +1,5 @@
 .. post:: 2008-11-10 11:15:54
+   :category: code
 
 Announcing Django Crawler and django-test-utils
 ===============================================

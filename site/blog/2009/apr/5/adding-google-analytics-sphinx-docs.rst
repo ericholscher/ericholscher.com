@@ -1,4 +1,5 @@
 .. post:: 2009-04-05 10:12:42
+   :category: code
 
 Adding Google Analytics to Sphinx Docs
 ======================================

@@ -1,4 +1,5 @@
 .. post:: 2008-08-14 10:20:51
+   :category: code
 
 Using Mock objects in Django for testing the current date
 =========================================================

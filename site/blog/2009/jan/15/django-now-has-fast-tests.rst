@@ -1,4 +1,5 @@
 .. post:: 2009-01-15 19:01:28
+   :category: code
 
 Django now has fast tests
 =========================

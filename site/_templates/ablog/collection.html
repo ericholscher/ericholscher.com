@@ -1,0 +1,26 @@
+{#- Category, archive, and tag pages. Categories listed in topo_categories become landing pages. -#}
+{%- extends "page.html" %}
+{%- from "topo/entries.html" import entries, year_pager with context %}
+{%- set is_category = collection.catalog.name == 'category' %}
+{%- set meta = topo_categories.get(collection.name) if is_category else None %}
+{%- set is_year = collection.catalog is defined and collection.catalog.name == 'archive' %}
+{%- block body %}
+<div class="topo-collection{% if meta %} topo-landing{% endif %}">
+  {%- if meta %}
+  <h1>{{ meta[0] }}</h1>
+  <p class="topo-landing-intro">{{ meta[1] }}</p>
+  {%- if collection.name == 'outside' %}
+  {% include "topo/features.html" %}
+  <p class="topo-more topo-adv-link"><a href="{{ pathto('adventures') }}">Every trip, year by year, with a map &rarr;</a></p>
+  {%- endif %}
+  <div class="topo-recent-head"><h2>{{ collection|length }} post{% if collection|length != 1 %}s{% endif %}</h2></div>
+  {%- elif is_year %}
+  <h1>{{ collection }}</h1>
+  <div class="topo-recent-head"><h2>{{ collection|length }} post{% if collection|length != 1 %}s{% endif %}</h2><a href="{{ pathto('blog/index') }}" class="topo-more-link">Latest posts &rarr;</a></div>
+  {%- else %}
+  <h1>{{ header }} {{ collection }}</h1>
+  {%- endif %}
+  {{ entries(collection, pagename) }}
+  {%- if is_year %}{{ year_pager(collection) }}{% endif %}
+</div>
+{%- endblock %}

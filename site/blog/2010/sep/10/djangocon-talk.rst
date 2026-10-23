@@ -1,4 +1,5 @@
 .. post:: 2010-09-10 14:00:00
+   :category: community
 
 Djangocon Talk
 ==============

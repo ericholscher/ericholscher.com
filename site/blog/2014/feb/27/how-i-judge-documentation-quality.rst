@@ -1,4 +1,5 @@
 .. post:: 2014-02-27 22:00:00
+   :category: documentation
 
 How I Judge the Quality of Documentation in 30 Seconds
 ======================================================

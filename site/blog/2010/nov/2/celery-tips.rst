@@ -1,4 +1,5 @@
 .. post:: 2010-11-02 16:15:00
+   :category: code
 
 Celery Tips
 ===========

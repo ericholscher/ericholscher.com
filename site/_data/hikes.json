@@ -1,0 +1,470 @@
+[
+  {
+    "year": "2012",
+    "kind": "bike",
+    "when": "June 2012",
+    "name": "Petal Pedal century",
+    "where": "Willamette Valley and Silver Falls, Oregon",
+    "note": "100 miles and 5,000 feet of climbing, after a spring of training rides.",
+    "link": "blog/2012/dec/31/2012-year-review"
+  },
+  {
+    "year": "2012",
+    "kind": "backpacking",
+    "when": "Summer 2012",
+    "name": "Mount Hood weekends",
+    "where": "Cairn Basin, Paradise Park, Mirror Lake",
+    "note": "First backpacking season, including the PCT from Timberline Lodge to Cairn Basin.",
+    "link": "blog/2012/dec/31/2012-year-review"
+  },
+  {
+    "year": "2012",
+    "kind": "camping",
+    "when": "Summer 2012",
+    "name": "Crater Lake and Lava Lake",
+    "where": "Southern and central Oregon",
+    "note": "A night on the rim of Crater Lake, then up to camp at Lava Lake near Bend.",
+    "link": "blog/2012/dec/31/2012-year-review"
+  },
+  {
+    "year": "2013",
+    "kind": "summit",
+    "when": "March 2013",
+    "name": "Mount St. Helens",
+    "where": "Washington",
+    "note": "Summit, as a training hike for the PCT."
+  },
+  {
+    "year": "2013",
+    "kind": "thru-hike",
+    "when": "April 15 to June 16, 2013",
+    "name": "Pacific Crest Trail",
+    "where": "Campo, California, to Kearsarge Pass",
+    "note": "About 800 miles, including a sunrise on Mount Whitney, before a stress fracture ended the walk.",
+    "link": "pct/index",
+    "feature": true
+  },
+  {
+    "year": "2013",
+    "kind": "bike",
+    "when": "August 24, 2013",
+    "name": "First bike overnight",
+    "where": "Dodge Park, Oregon",
+    "note": "Bike camping while the foot healed."
+  },
+  {
+    "year": "2013",
+    "kind": "bike",
+    "when": "September 7 to 10, 2013",
+    "name": "Portland to Eugene",
+    "where": "Willamette Valley Scenic Bikeway, Oregon",
+    "note": "First bike tour: 185 miles over three days."
+  },
+  {
+    "year": "2014",
+    "kind": "backpacking",
+    "when": "July 5 to 6, 2014",
+    "name": "Mount St. Helens overnight",
+    "where": "Mount St. Helens National Volcanic Monument, Washington"
+  },
+  {
+    "year": "2014",
+    "kind": "bike",
+    "when": "July 11 to 21, 2014",
+    "name": "Vancouver to Bellingham",
+    "where": "British Columbia and Washington"
+  },
+  {
+    "year": "2015",
+    "kind": "backpacking",
+    "when": "July 3 to 5, 2015",
+    "name": "Three Sisters Wilderness",
+    "where": "McKenzie side, Oregon",
+    "note": "Fourth of July weekend in the Cascades."
+  },
+  {
+    "year": "2015",
+    "kind": "summit",
+    "when": "September 19 to 20, 2015",
+    "name": "Mount St. Helens",
+    "where": "Washington"
+  },
+  {
+    "year": "2016",
+    "kind": "summit",
+    "when": "April 30, 2016",
+    "name": "Mount St. Helens",
+    "where": "Washington",
+    "note": "A spring climb, still on snow."
+  },
+  {
+    "year": "2016",
+    "kind": "summit",
+    "when": "May 7 to 8, 2016",
+    "name": "Mount Adams",
+    "where": "Washington"
+  },
+  {
+    "year": "2016",
+    "kind": "summit",
+    "when": "June 11 to 13, 2016",
+    "name": "Mount Shasta",
+    "where": "Northern California",
+    "note": "Three days on the mountain, still deep in snow."
+  },
+  {
+    "year": "2016",
+    "kind": "backpacking",
+    "when": "July 1 to 4, 2016",
+    "name": "Olympic National Park",
+    "where": "Olympic Peninsula, Washington",
+    "note": "Fourth of July weekend on the wet side of the peninsula."
+  },
+  {
+    "year": "2016",
+    "kind": "backpacking",
+    "when": "July 31 to August 13, 2016",
+    "name": "Wind River Range",
+    "where": "Pinedale to the Popo Agie Wilderness, Wyoming",
+    "note": "Two weeks in the Winds, partly on the Wind River High Route.",
+    "feature": true
+  },
+  {
+    "year": "2016",
+    "kind": "backpacking",
+    "when": "September 3 to 5, 2016",
+    "name": "Goat Rocks Wilderness",
+    "where": "Washington Cascades",
+    "note": "Labor Day weekend."
+  },
+  {
+    "year": "2017",
+    "kind": "backpacking",
+    "when": "June 23 to 25, 2017",
+    "name": "Shi Shi Beach",
+    "where": "Olympic coast, Washington"
+  },
+  {
+    "year": "2017",
+    "kind": "kayak",
+    "when": "July 1 to 8, 2017",
+    "name": "San Juan Islands",
+    "where": "Washington",
+    "note": "A week of paddling between the islands."
+  },
+  {
+    "year": "2017",
+    "kind": "backpacking",
+    "when": "August 19 to 26, 2017",
+    "name": "Eagle Cap Wilderness",
+    "where": "Wallowa Mountains, Oregon",
+    "note": "Eight days in the Wallowas, timed for the 2017 eclipse."
+  },
+  {
+    "year": "2018",
+    "kind": "bike",
+    "when": "June and July 2018",
+    "name": "La Vélodyssée",
+    "where": "Roscoff to the Basque coast, France",
+    "note": "Down France's Atlantic coast by bike, from Brittany past La Rochelle and Bordeaux.",
+    "feature": true
+  },
+  {
+    "year": "2018",
+    "kind": "trek",
+    "when": "August 2018",
+    "name": "Haute Route",
+    "where": "Chamonix to Zermatt, France and Switzerland",
+    "note": "Hut to hut across the Alps, part of five weeks there during the first summer on the road.",
+    "feature": true
+  },
+  {
+    "year": "2018",
+    "kind": "trek",
+    "when": "December 2018",
+    "name": "Salkantay trek",
+    "where": "Cusco region, Peru",
+    "note": "Over the Salkantay pass to Machu Picchu, around the new year."
+  },
+  {
+    "year": "2019",
+    "kind": "trek",
+    "when": "March 2019",
+    "name": "Torres del Paine O Circuit",
+    "where": "Patagonia, Chile",
+    "note": "The full O circuit around the Paine massif.",
+    "feature": true
+  },
+  {
+    "year": "2019",
+    "kind": "day-hike",
+    "when": "March 2019",
+    "name": "El Chaltén",
+    "where": "Patagonia, Argentina",
+    "note": "Hiking below Fitz Roy."
+  },
+  {
+    "year": "2019",
+    "kind": "backpacking",
+    "when": "June 2019",
+    "name": "Oregon Cascades",
+    "where": "Willamette and Deschutes national forests",
+    "note": "Several overnight trips after coming home from South America."
+  },
+  {
+    "year": "2019",
+    "kind": "backpacking",
+    "when": "August 2019",
+    "name": "PCT in Washington",
+    "where": "Near Lake Chelan, Washington",
+    "note": "A week back on the Pacific Crest Trail, six years after the first walk."
+  },
+  {
+    "year": "2019",
+    "kind": "backpacking",
+    "when": "September 2019",
+    "name": "Mount Hood",
+    "where": "Oregon",
+    "note": "Labor Day weekend on the mountain."
+  },
+  {
+    "year": "2019",
+    "kind": "hiking",
+    "when": "September and October 2019",
+    "name": "Dolomites",
+    "where": "Cortina d'Ampezzo, Italy",
+    "note": "Three weeks of hiking around Cortina."
+  },
+  {
+    "year": "2020",
+    "kind": "bike",
+    "when": "June 2020",
+    "name": "McKenzie Pass, car-free",
+    "where": "McKenzie Pass Scenic Highway, Oregon",
+    "note": "Riding the pass before it opened to cars for the season."
+  },
+  {
+    "year": "2020",
+    "kind": "backpacking",
+    "when": "July 2020",
+    "name": "Elkhorn and Sawtooth Mountains",
+    "where": "Elkhorn Mountains, Oregon, and Sawtooth Mountains, Idaho",
+    "note": "Camping and backpacking in two mountain ranges."
+  },
+  {
+    "year": "2020",
+    "kind": "camping",
+    "when": "September 2020",
+    "name": "Alvord Desert and Steens Mountain",
+    "where": "Southeast Oregon",
+    "note": "Car camping in the high desert."
+  },
+  {
+    "year": "2020",
+    "kind": "backpacking",
+    "when": "September and October 2020",
+    "name": "Three Sisters loop",
+    "where": "Three Sisters Wilderness, Oregon",
+    "note": "The loop around all three peaks, retracing a trip from a few years earlier."
+  },
+  {
+    "year": "2021",
+    "kind": "backpacking",
+    "when": "August 2021",
+    "name": "Strawberry Mountain Wilderness",
+    "where": "Eastern Oregon",
+    "note": "Five days in the Strawberry Range."
+  },
+  {
+    "year": "2021",
+    "kind": "backpacking",
+    "when": "September 2021",
+    "name": "PCT loop from Snoqualmie Pass",
+    "where": "Washington Cascades",
+    "note": "A week-long loop that followed the Pacific Crest Trail."
+  },
+  {
+    "year": "2022",
+    "kind": "cruise",
+    "when": "July 28 to August 6, 2022",
+    "name": "Alaska cruise",
+    "where": "Inside Passage, from Vancouver",
+    "note": "Up the coast by way of Tracy Arm and Sitka, before a week around Denali by car."
+  },
+  {
+    "year": "2022",
+    "kind": "road-trip",
+    "when": "September 15 to October 5, 2022",
+    "name": "Porto and northern Portugal",
+    "where": "Porto and Peneda-Gerês, by way of Iceland",
+    "note": "A stopover in Iceland, a few days in Porto, then two weeks driving the north around Peneda-Gerês National Park."
+  },
+  {
+    "year": "2023",
+    "kind": "rafting",
+    "when": "May 2023",
+    "name": "John Day River",
+    "where": "Central Oregon",
+    "note": "A multi-day float through the canyons of the John Day."
+  },
+  {
+    "year": "2023",
+    "kind": "backpacking",
+    "when": "August and September 2023",
+    "name": "Jasper backcountry",
+    "where": "Jasper National Park, Alberta",
+    "note": "A few three-day backpacking trips over two weeks in the Canadian Rockies."
+  },
+  {
+    "year": "2024",
+    "kind": "rafting",
+    "when": "May 2024",
+    "name": "Lower John Day River",
+    "where": "North-central Oregon",
+    "note": "Five days on the river, a year after the first trip."
+  },
+  {
+    "year": "2024",
+    "kind": "backpacking",
+    "when": "August 2024",
+    "name": "Oregon Coast Trail",
+    "where": "North coast, around Oswald West",
+    "note": "Five days of beaches, headlands, and coastal forest."
+  },
+  {
+    "year": "2024",
+    "kind": "thru-hike",
+    "when": "August 2024",
+    "name": "Tahoe Rim Trail",
+    "where": "California and Nevada",
+    "note": "The full loop over 16 days, with Meredith.",
+    "feature": true
+  },
+  {
+    "year": "2024",
+    "kind": "backpacking",
+    "when": "September 2024",
+    "name": "Timberline Trail",
+    "where": "Mount Hood, Oregon",
+    "note": "The full loop around Mount Hood over five days."
+  },
+  {
+    "year": "2025",
+    "kind": "thru-hike",
+    "when": "April 2025",
+    "name": "Camino de Costa Rica",
+    "where": "Caribbean coast to the Pacific",
+    "note": "165 miles and 30,000 feet of climbing in 14 days, unguided.",
+    "link": "blog/2025/apr/29/camino-de-costa-rica-recap",
+    "feature": true
+  },
+  {
+    "year": "2025",
+    "kind": "bike",
+    "when": "May 2025",
+    "name": "Cycling the Netherlands",
+    "where": "Amsterdam and around",
+    "note": "A week of riding, between conferences in Portland and Pittsburgh."
+  },
+  {
+    "year": "2025",
+    "kind": "day-hike",
+    "when": "June 2025",
+    "name": "Durmitor National Park",
+    "where": "Montenegro",
+    "note": "The start of a summer of hiking in Europe, in big limestone country."
+  },
+  {
+    "year": "2025",
+    "kind": "trek",
+    "when": "July 2025",
+    "name": "Peaks of the Balkans",
+    "where": "Montenegro, Albania, and Kosovo",
+    "note": "A loop trail across three borders.",
+    "feature": true
+  },
+  {
+    "year": "2025",
+    "kind": "trek",
+    "when": "July and August 2025",
+    "name": "Via Alpina",
+    "where": "Switzerland",
+    "note": "Most of the way across Switzerland, with days of 6,000 feet up and down. A rain delay in Milan, then extra time in Kandersteg and Grindelwald.",
+    "feature": true
+  },
+  {
+    "year": "2025",
+    "kind": "trek",
+    "when": "August 2025",
+    "name": "Carnic Alps High Route",
+    "where": "Austrian and Italian border",
+    "note": "Hut to hut along a high ridge, with the Dolomites in view the whole way. A highlight of the summer.",
+    "feature": true
+  },
+  {
+    "year": "2025",
+    "kind": "day-hike",
+    "when": "August 2025",
+    "name": "Triglav National Park",
+    "where": "Slovenia",
+    "note": "Hiking around the Julian Alps, plus Lake Bled and Ljubljana."
+  },
+  {
+    "year": "2025",
+    "kind": "trek",
+    "when": "September 2025",
+    "name": "Alta Via 1",
+    "where": "Dolomites, Italy",
+    "note": "Rugged hut-to-hut walking through the heart of the Dolomites."
+  },
+  {
+    "year": "2025",
+    "kind": "day-hike",
+    "when": "October 2025",
+    "name": "Kakamega Forest",
+    "where": "Western Kenya",
+    "note": "Days of walking a rainforest reserve with a local guide, reached by local transport."
+  },
+  {
+    "year": "2026",
+    "kind": "trek",
+    "when": "May and June 2026",
+    "name": "Vikos-Aoös National Park",
+    "where": "Epirus, Greece",
+    "note": "Two weeks of hiking in the mountains of northern Greece, ending near Meteora."
+  },
+  {
+    "year": "2026",
+    "kind": "trek",
+    "when": "June 2026",
+    "name": "Camino del Norte",
+    "where": "Basque Country, Spain",
+    "note": "Eleven days along the northern coast of Spain, finishing with a day in Bilbao.",
+    "feature": true
+  },
+  {
+    "year": "2026",
+    "kind": "thru-hike",
+    "when": "July 2026",
+    "name": "John Muir Trail",
+    "where": "Cottonwood Pass to Yosemite, California",
+    "note": "22 days northbound, starting from Cottonwood Pass, back in the range where the 2013 PCT walk ended.",
+    "feature": true
+  },
+  {
+    "year": "2026",
+    "kind": "backpacking",
+    "when": "August 2026",
+    "name": "Colorado Rockies",
+    "where": "White River National Forest, near Aspen",
+    "note": "Eleven days in the mountains."
+  },
+  {
+    "year": "2026",
+    "kind": "trek",
+    "when": "September and October 2026",
+    "name": "Picos de Europa",
+    "where": "Asturias, Spain",
+    "note": "Two weeks in the limestone peaks of northern Spain."
+  }
+]

@@ -1,4 +1,5 @@
 .. post:: 2008-11-27 05:00:00
+   :category: code
 
 The value of conventions, aka testmaker for template tags.
 ==========================================================

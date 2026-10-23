@@ -1,4 +1,5 @@
 .. post:: 2010-11-09 17:00:00
+   :category: code
 
 Building a Django App Server with Chef: Part 2
 ==============================================

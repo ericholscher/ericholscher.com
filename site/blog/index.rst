@@ -1,11 +1,5 @@
-Blog posts
-----------
-
-.. postlist:: 
-   :date: %b %d, %Y
-   :list-style: circle
-   :format: {title} - {date}
-   :excerpts:
+Blog
+====
 
 .. toctree::
    :maxdepth: 1
@@ -13,4 +7,3 @@ Blog posts
    :glob:
 
    */*
-

@@ -1,4 +1,5 @@
 .. post:: 2013-11-04 10:00:00
+   :category: documentation
 
 A New Theme for Read the Docs
 =============================

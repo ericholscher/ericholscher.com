@@ -1,4 +1,5 @@
 .. post:: 2010-08-08 07:01:00
+   :category: community
 
 Conference Fun
 ==============

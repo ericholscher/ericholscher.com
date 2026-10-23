@@ -1,4 +1,5 @@
 .. post:: Jul 1, 2016
+   :category: documentation
    :tags: sphinx, technical writers, rst, article
 
 An introduction to Sphinx and Read the Docs for Technical Writers

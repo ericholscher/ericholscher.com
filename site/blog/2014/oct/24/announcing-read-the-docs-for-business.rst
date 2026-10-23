@@ -1,4 +1,5 @@
 .. post:: 2014-10-24 10:00:00
+   :category: documentation
 
 Announcing Read the Docs for Business
 =====================================

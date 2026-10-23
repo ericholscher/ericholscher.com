@@ -1,4 +1,5 @@
 .. post:: Sept 24, 2016
+   :category: documentation
    :tags: docs, why not how, tips
 
 A Selfish Appeal for Documentation

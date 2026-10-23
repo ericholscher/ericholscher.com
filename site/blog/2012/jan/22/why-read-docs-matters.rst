@@ -1,4 +1,5 @@
 .. post:: 2012-01-22 14:08:01
+   :category: documentation
 
 Why Read the Docs matters 
 ==========================
