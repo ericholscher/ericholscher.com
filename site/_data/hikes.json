@@ -138,23 +138,23 @@
   {
     "year": "2020",
     "kind": "bike",
-    "when": "Spring 2020",
+    "when": "June 2020",
     "name": "McKenzie Pass, car-free",
     "where": "McKenzie Pass Scenic Highway, Oregon",
-    "note": "Riding the pass in spring, before it opens to cars for the season."
+    "note": "Riding the pass before it opened to cars for the season."
   },
   {
     "year": "2020",
     "kind": "backpacking",
-    "when": "2020",
+    "when": "July 2020",
     "name": "Elkhorn and Sawtooth Mountains",
-    "where": "Eastern Oregon and Idaho",
+    "where": "Elkhorn Mountains, Oregon, and Sawtooth Mountains, Idaho",
     "note": "Camping and backpacking in two mountain ranges."
   },
   {
     "year": "2020",
     "kind": "camping",
-    "when": "2020",
+    "when": "September 2020",
     "name": "Alvord Desert and Steens Mountain",
     "where": "Southeast Oregon",
     "note": "Car camping in the high desert."
@@ -162,7 +162,7 @@
   {
     "year": "2020",
     "kind": "backpacking",
-    "when": "2020",
+    "when": "September and October 2020",
     "name": "Three Sisters loop",
     "where": "Three Sisters Wilderness, Oregon",
     "note": "The loop around all three peaks, retracing a trip from a few years earlier."
@@ -170,10 +170,10 @@
   {
     "year": "2024",
     "kind": "thru-hike",
-    "when": "Summer 2024",
+    "when": "August 2024",
     "name": "Tahoe Rim Trail",
     "where": "California and Nevada",
-    "note": "With Meredith, within driving distance of home.",
+    "note": "The full loop over 16 days, with Meredith.",
     "link": "blog/2025/jan/15/the-camino-de-costa-rica"
   },
   {

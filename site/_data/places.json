@@ -59,7 +59,8 @@
     "lon": -122.1,
     "kind": "hiked",
     "years": [
-      2012
+      2012,
+      2021
     ]
   },
   {
@@ -154,6 +155,7 @@
     "note": "Humpback whale season",
     "years": [
       2018,
+      2022,
       2025
     ]
   },
@@ -1120,5 +1122,158 @@
       2019
     ],
     "note": "A week near Lake Chelan"
+  },
+  {
+    "name": "Painted Hills and John Day",
+    "lat": 44.65,
+    "lon": -120.25,
+    "kind": "visited",
+    "years": [
+      2020,
+      2023,
+      2024
+    ],
+    "note": "John Day Fossil Beds"
+  },
+  {
+    "name": "Columbia River Gorge",
+    "lat": 45.7,
+    "lon": -121.25,
+    "kind": "visited",
+    "years": [
+      2021,
+      2022
+    ]
+  },
+  {
+    "name": "Vancouver",
+    "lat": 49.28,
+    "lon": -123.12,
+    "kind": "visited",
+    "years": [
+      2022
+    ]
+  },
+  {
+    "name": "Inside Passage, Alaska",
+    "lat": 58.3,
+    "lon": -134.42,
+    "kind": "visited",
+    "years": [
+      2022
+    ],
+    "note": "Wrangell, Juneau, Tracy Arm, Sitka"
+  },
+  {
+    "name": "Denali",
+    "lat": 63.73,
+    "lon": -148.91,
+    "kind": "visited",
+    "years": [
+      2022
+    ]
+  },
+  {
+    "name": "Reykjavík and Þingvellir",
+    "lat": 64.26,
+    "lon": -21.13,
+    "kind": "visited",
+    "years": [
+      2022
+    ]
+  },
+  {
+    "name": "Porto",
+    "lat": 41.15,
+    "lon": -8.61,
+    "kind": "visited",
+    "years": [
+      2022
+    ]
+  },
+  {
+    "name": "Peneda-Gerês National Park",
+    "lat": 41.73,
+    "lon": -8.15,
+    "kind": "visited",
+    "years": [
+      2022
+    ]
+  },
+  {
+    "name": "Salt Lake City",
+    "lat": 40.76,
+    "lon": -111.89,
+    "kind": "visited",
+    "years": [
+      2023
+    ],
+    "note": "PyCon US"
+  },
+  {
+    "name": "Jasper National Park",
+    "lat": 52.87,
+    "lon": -118.08,
+    "kind": "visited",
+    "years": [
+      2023
+    ]
+  },
+  {
+    "name": "Shenandoah National Park",
+    "lat": 38.53,
+    "lon": -78.44,
+    "kind": "visited",
+    "years": [
+      2023
+    ]
+  },
+  {
+    "name": "Panama",
+    "lat": 8.6,
+    "lon": -80.13,
+    "kind": "visited",
+    "years": [
+      2024
+    ],
+    "note": "Panama City and El Valle de Antón"
+  },
+  {
+    "name": "Redwoods",
+    "lat": 41.77,
+    "lon": -124.1,
+    "kind": "visited",
+    "years": [
+      2024
+    ],
+    "note": "Jedediah Smith"
+  },
+  {
+    "name": "La Paz, Baja California Sur",
+    "lat": 24.14,
+    "lon": -110.31,
+    "kind": "visited",
+    "years": [
+      2024
+    ]
+  },
+  {
+    "name": "Black Hills",
+    "lat": 43.76,
+    "lon": -103.4,
+    "kind": "visited",
+    "years": [
+      2024
+    ],
+    "note": "Custer State Park"
+  },
+  {
+    "name": "Theodore Roosevelt National Park",
+    "lat": 46.92,
+    "lon": -103.53,
+    "kind": "visited",
+    "years": [
+      2024
+    ]
   }
 ]
