@@ -1,7 +1,7 @@
 .. figure:: /_static/img/speaking-wtd.jpg
-   :alt: Eric at a lectern on stage, beside a slide that reads "We still have no idea what we're doing"
+   :alt: Eric on stage with a microphone and a yellow lanyard, projected slide text behind him
 
-   Opening Write the Docs Portland, 2019. Photo by `Write the Docs <https://www.flickr.com/photos/writethedocs/47892284061/>`_, CC BY-NC-SA.
+   Closing Write the Docs Portland, 2019. Photo by `Write the Docs <https://www.flickr.com/photos/writethedocs/47967664442/>`_, CC BY-NC-SA.
 
 Speaking
 ========
