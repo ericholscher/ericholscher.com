@@ -56,6 +56,6 @@ html_sidebars = {
 # globaltoc_collapse = False
 
 html_title = blog_title
-html_favicon = "_static/img/favicon.ico"
+html_favicon = "_static/img/favicon.svg"
 html_static_path = ["_static"]
 
