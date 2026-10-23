@@ -1,68 +1,174 @@
 {#- Places map, data in site/_data/places.json. Equirectangular to match world-land.html.
-    Year buttons are a small progressive enhancement: without JavaScript every pin and group shows. -#}
+    Everything past the static map is progressive enhancement: the year filter, expanding the map
+    to fill the screen (with zoom and drag to pan), and tapping a pin to name it. -#}
 {%- set W = 1000 %}{% set TOP = 84 %}{% set BOT = -58 %}{% set H = (W * (TOP - BOT) / 360)|round(0) %}
 {%- set ns = namespace(years=[]) %}
 {%- for p in topo_places %}{% for y in p.years or [] %}{% if y not in ns.years %}{% set ns.years = ns.years + [y] %}{% endif %}{% endfor %}{% endfor %}
 {%- set all_years = ns.years|sort(reverse=true) %}
 <section class="topo-places" id="places">
   <h2 class="topo-plaque">Places</h2>
-  <div class="topo-year-filter" role="group" aria-label="Show places by year" hidden>
-    <button type="button" data-year="all" aria-pressed="true">All</button>
-    {%- for y in all_years %}<button type="button" data-year="{{ y }}" aria-pressed="false">{{ y }}</button>{% endfor %}
-  </div>
-  <figure class="topo-map-figure">
-    <svg class="topo-world" viewBox="0 {{ ((TOP - 75) / (TOP - BOT) * H)|round(0) }} {{ W }} {{ ((75 - (-56)) / (TOP - BOT) * H)|round(0) }}" role="img" aria-label="World map with places lived, walked, and visited">
-      {% include "topo/world-land.html" %}
-      {%- for p in topo_places %}
-      {%- set x = ((p.lon + 180) / 360 * W)|round(1) %}{% set y = ((TOP - p.lat) / (TOP - BOT) * H)|round(1) %}
-      <g class="topo-pin topo-pin-{{ p.kind }}" data-years="{{ (p.years or [])|join(' ') }}"><circle cx="{{ x }}" cy="{{ y }}" r="{% if p.kind == 'lived' %}5.5{% else %}4{% endif %}"><title>{{ p.name }}{% if p.note %} · {{ p.note }}{% endif %}</title></circle></g>
-      {%- endfor %}
-    </svg>
-    <figcaption>
+  <div class="topo-map" aria-label="Map of places">
+    <div class="topo-map-bar">
+      <div class="topo-year-filter" role="group" aria-label="Show places by year" hidden>
+        <button type="button" data-year="all" aria-pressed="true">All</button>
+        {%- for y in all_years %}<button type="button" data-year="{{ y }}" aria-pressed="false">{{ y }}</button>{% endfor %}
+      </div>
+      <div class="topo-map-tools">
+        <button type="button" class="topo-map-zoom" data-step="0.5" aria-label="Zoom out">&minus;</button>
+        <button type="button" class="topo-map-zoom" data-step="2" aria-label="Zoom in">+</button>
+        <button type="button" class="topo-map-close">Close</button>
+      </div>
+    </div>
+    <div class="topo-map-frame">
+      <div class="topo-map-scroll">
+        <svg class="topo-world" viewBox="0 {{ ((TOP - 75) / (TOP - BOT) * H)|round(0) }} {{ W }} {{ ((75 - (-56)) / (TOP - BOT) * H)|round(0) }}" role="img" aria-label="World map with places lived, walked, and visited">
+          {% include "topo/world-land.html" %}
+          {%- for p in topo_places %}
+          {%- set x = ((p.lon + 180) / 360 * W)|round(1) %}{% set y = ((TOP - p.lat) / (TOP - BOT) * H)|round(1) %}
+          <g class="topo-pin topo-pin-{{ p.kind }}" data-years="{{ (p.years or [])|join(' ') }}" data-name="{{ p.name|e }}"{% if p.note %} data-note="{{ p.note|e }}"{% endif %} data-x="{{ x }}" data-y="{{ y }}"><circle class="topo-pin-dot" cx="{{ x }}" cy="{{ y }}" r="{% if p.kind == 'lived' %}5.5{% else %}4{% endif %}"><title>{{ p.name }}{% if p.note %} · {{ p.note }}{% endif %}</title></circle></g>
+          {%- endfor %}
+        </svg>
+      </div>
+      <button type="button" class="topo-map-expand" aria-label="Expand map" hidden>
+        <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M2 6V2h4M10 2h4v4M14 10v4h-4M6 14H2v-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        Expand
+      </button>
+    </div>
+    <p class="topo-map-readout" aria-live="polite">Tap a pin to name it.</p>
+    <p class="topo-map-legend">
       <span class="topo-legend topo-legend-lived">Lived</span>
       <span class="topo-legend topo-legend-hiked">Walked, rode, or floated</span>
       <span class="topo-legend topo-legend-visited">Visited</span>
-    </figcaption>
-  </figure>
-  <div class="topo-place-groups">
-  {%- for y in all_years %}
-    <section class="topo-place-group" data-year="{{ y }}">
-      <h3>{{ y }}</h3>
-      <ul class="topo-place-list">
-      {%- for p in topo_places if p.years and y in p.years %}
-        <li><span class="topo-dot topo-dot-{{ p.kind }}" aria-hidden="true"></span><span class="topo-place-name">{{ p.name }}</span>{% if p.note %}<span class="topo-place-note">{{ p.note }}</span>{% endif %}</li>
-      {%- endfor %}
-      </ul>
-    </section>
-  {%- endfor %}
-    <section class="topo-place-group topo-place-home" data-year="home">
-      <h3>Home, over the years</h3>
-      <ul class="topo-place-list">
-      {%- for p in topo_places if p.kind == 'lived' %}
-        <li><span class="topo-dot topo-dot-lived" aria-hidden="true"></span><span class="topo-place-name">{{ p.name }}</span>{% if p.note %}<span class="topo-place-note">{{ p.note }}</span>{% endif %}</li>
-      {%- endfor %}
-      </ul>
-    </section>
+    </p>
   </div>
+  <p class="topo-home-line">Home, over the years:
+    {%- for p in topo_places if p.kind == 'lived' %} <span class="topo-home-place">{{ p.name }}</span>{% if not loop.last %} &middot;{% endif %}{% endfor %}</p>
   <script>
-  (function () {
+  document.addEventListener('DOMContentLoaded', function () {
     var root = document.getElementById('places'); if (!root) return;
-    var bar = root.querySelector('.topo-year-filter'); bar.hidden = false;
+    var map = root.querySelector('.topo-map');
+    var svg = map.querySelector('.topo-world');
+    var scroller = map.querySelector('.topo-map-scroll');
+    var bar = map.querySelector('.topo-year-filter');
     var buttons = bar.querySelectorAll('button');
-    var pins = root.querySelectorAll('.topo-pin');
-    var groups = root.querySelectorAll('.topo-place-group');
+    var pins = svg.querySelectorAll('.topo-pin');
+    var expand = map.querySelector('.topo-map-expand');
+    var close = map.querySelector('.topo-map-close');
+    var readout = map.querySelector('.topo-map-readout');
+    var vb = svg.viewBox.baseVal;
+    var expanded = false, zoom = 1, active = null, drag = null, dragged = false;
+    bar.hidden = false; expand.hidden = false;
+    map.classList.add('is-enhanced');
+
+    // Pins keep a steady size on screen, whatever the map's width or zoom.
+    function sizePins() {
+      var unit = svg.getBoundingClientRect().width / vb.width; if (!unit) return;
+      pins.forEach(function (p) {
+        var lived = p.classList.contains('topo-pin-lived');
+        p.querySelector('.topo-pin-dot').setAttribute('r', ((lived ? 5 : 4) / unit).toFixed(2));
+      });
+    }
+    // Scroll the expanded map to the middle of the pins in view.
+    function center() {
+      var x0 = Infinity, x1 = -Infinity, y0 = Infinity, y1 = -Infinity;
+      pins.forEach(function (p) {
+        if (p.classList.contains('is-dim') || p.classList.contains('topo-pin-lived')) return;
+        var x = +p.dataset.x, y = +p.dataset.y - vb.y;
+        x0 = Math.min(x0, x); x1 = Math.max(x1, x); y0 = Math.min(y0, y); y1 = Math.max(y1, y);
+      });
+      if (x0 === Infinity) return;
+      var unit = svg.getBoundingClientRect().width / vb.width;
+      scroller.scrollLeft = (x0 + x1) / 2 * unit - scroller.clientWidth / 2;
+      scroller.scrollTop = (y0 + y1) / 2 * unit - scroller.clientHeight / 2;
+    }
+    function setZoom(z) {
+      var fx = (scroller.scrollLeft + scroller.clientWidth / 2) / scroller.scrollWidth;
+      var fy = (scroller.scrollTop + scroller.clientHeight / 2) / scroller.scrollHeight;
+      zoom = Math.max(1, Math.min(12, z));
+      svg.style.width = (zoom * 100) + '%';
+      scroller.scrollLeft = fx * scroller.scrollWidth - scroller.clientWidth / 2;
+      scroller.scrollTop = fy * scroller.scrollHeight - scroller.clientHeight / 2;
+      sizePins();
+    }
+    function setExpanded(on) {
+      expanded = on;
+      map.classList.toggle('is-expanded', on);
+      document.documentElement.classList.toggle('topo-map-open', on);
+      if (on) {
+        map.setAttribute('role', 'dialog'); map.setAttribute('aria-modal', 'true');
+        // Start zoomed in far enough that the map fills the screen top to bottom.
+        setZoom(scroller.clientHeight / (scroller.clientWidth * vb.height / vb.width));
+        center();
+        close.focus();
+      } else {
+        map.removeAttribute('role'); map.removeAttribute('aria-modal');
+        zoom = 1; svg.style.width = '';
+        sizePins();
+        expand.focus();
+      }
+    }
     function show(year) {
       buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.year === year)); });
       pins.forEach(function (p) {
-        var ys = p.dataset.years.split(' ');
-        var on = year === 'all' || p.classList.contains('topo-pin-lived') || ys.indexOf(year) !== -1;
+        var on = year === 'all' || p.classList.contains('topo-pin-lived') || p.dataset.years.split(' ').indexOf(year) !== -1;
         p.classList.toggle('is-dim', !on);
       });
-      groups.forEach(function (g) {
-        g.hidden = !(year === 'all' || g.dataset.year === year || g.dataset.year === 'home');
-      });
+      if (expanded) center();
     }
+
     buttons.forEach(function (b) { b.addEventListener('click', function () { show(b.dataset.year); }); });
-  })();
+    expand.addEventListener('click', function () { setExpanded(true); });
+    close.addEventListener('click', function () { setExpanded(false); });
+    map.querySelectorAll('.topo-map-zoom').forEach(function (b) {
+      b.addEventListener('click', function () { setZoom(zoom * +b.dataset.step); });
+    });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && expanded) setExpanded(false); });
+    window.addEventListener('resize', function () { sizePins(); });
+
+    // The pin nearest a tap, if one is within reach of a fingertip.
+    function nearest(e) {
+      var rect = svg.getBoundingClientRect(), unit = rect.width / vb.width;
+      var ux = (e.clientX - rect.left) / unit + vb.x, uy = (e.clientY - rect.top) / unit + vb.y;
+      var best = null, bestD = 18 / unit;
+      pins.forEach(function (p) {
+        if (p.classList.contains('is-dim')) return;
+        var d = Math.hypot(+p.dataset.x - ux, +p.dataset.y - uy);
+        if (d < bestD) { best = p; bestD = d; }
+      });
+      return best;
+    }
+    // A tap on the small map opens it; once open, a tap near a pin names it.
+    scroller.addEventListener('click', function (e) {
+      if (!expanded) { setExpanded(true); return; }
+      var p = nearest(e);
+      if (!p || dragged) return;
+      if (active) active.classList.remove('is-active');
+      active = p; p.classList.add('is-active');
+      readout.textContent = p.dataset.name + (p.dataset.note ? ' · ' + p.dataset.note : '') +
+        (p.dataset.years ? ' · ' + p.dataset.years.split(' ').join(', ') : '');
+    });
+    // Drag to pan with a mouse; touch screens already scroll.
+    scroller.addEventListener('pointerdown', function (e) {
+      if (!expanded || e.pointerType !== 'mouse') return;
+      drag = { x: e.clientX, y: e.clientY, left: scroller.scrollLeft, top: scroller.scrollTop }; dragged = false;
+    });
+    window.addEventListener('pointermove', function (e) {
+      if (!drag) return;
+      var dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+      if (Math.abs(dx) + Math.abs(dy) > 4) { dragged = true; map.classList.add('is-dragging'); }
+      scroller.scrollLeft = drag.left - dx; scroller.scrollTop = drag.top - dy;
+    });
+    window.addEventListener('pointerup', function () {
+      drag = null; map.classList.remove('is-dragging');
+      setTimeout(function () { dragged = false; }, 0);
+    });
+
+    // "Show 2016 on the map" buttons in the year-by-year log.
+    document.querySelectorAll('[data-map-year]').forEach(function (b) {
+      b.hidden = false;
+      b.addEventListener('click', function () { show(b.dataset.mapYear); root.scrollIntoView({ block: 'start' }); });
+    });
+    sizePins();
+  });
   </script>
 </section>

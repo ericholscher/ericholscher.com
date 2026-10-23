@@ -17,6 +17,7 @@ the rest are about walking.
    :hidden:
 
    blog/index
+   adventures
    about
    interviews
    speaking

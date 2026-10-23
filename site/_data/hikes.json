@@ -42,7 +42,8 @@
     "name": "Pacific Crest Trail",
     "where": "Campo, California, to Kearsarge Pass",
     "note": "About 800 miles, including a sunrise on Mount Whitney, before a stress fracture ended the walk.",
-    "link": "pct/index"
+    "link": "pct/index",
+    "feature": true
   },
   {
     "year": "2013",
@@ -70,6 +71,13 @@
     "where": "Mount St. Helens National Volcanic Monument, Washington"
   },
   {
+    "year": "2014",
+    "kind": "bike",
+    "when": "July 11 to 21, 2014",
+    "name": "Vancouver to Bellingham",
+    "where": "British Columbia and Washington"
+  },
+  {
     "year": "2015",
     "kind": "backpacking",
     "when": "July 3 to 5, 2015",
@@ -78,8 +86,30 @@
     "note": "Fourth of July weekend in the Cascades."
   },
   {
+    "year": "2015",
+    "kind": "summit",
+    "when": "September 19 to 20, 2015",
+    "name": "Mount St. Helens",
+    "where": "Washington"
+  },
+  {
     "year": "2016",
-    "kind": "backpacking",
+    "kind": "summit",
+    "when": "April 30, 2016",
+    "name": "Mount St. Helens",
+    "where": "Washington",
+    "note": "A spring climb, still on snow."
+  },
+  {
+    "year": "2016",
+    "kind": "summit",
+    "when": "May 7 to 8, 2016",
+    "name": "Mount Adams",
+    "where": "Washington"
+  },
+  {
+    "year": "2016",
+    "kind": "summit",
     "when": "June 11 to 13, 2016",
     "name": "Mount Shasta",
     "where": "Northern California",
@@ -99,7 +129,8 @@
     "when": "July 31 to August 13, 2016",
     "name": "Wind River Range",
     "where": "Pinedale to the Popo Agie Wilderness, Wyoming",
-    "note": "Two weeks in the Winds."
+    "note": "Two weeks in the Winds, partly on the Wind River High Route.",
+    "feature": true
   },
   {
     "year": "2016",
@@ -113,8 +144,16 @@
     "year": "2017",
     "kind": "backpacking",
     "when": "June 23 to 25, 2017",
-    "name": "Olympic coast",
-    "where": "Olympic National Park, Washington"
+    "name": "Shi Shi Beach",
+    "where": "Olympic coast, Washington"
+  },
+  {
+    "year": "2017",
+    "kind": "kayak",
+    "when": "July 1 to 8, 2017",
+    "name": "San Juan Islands",
+    "where": "Washington",
+    "note": "A week of paddling between the islands."
   },
   {
     "year": "2017",
@@ -122,7 +161,7 @@
     "when": "August 19 to 26, 2017",
     "name": "Eagle Cap Wilderness",
     "where": "Wallowa Mountains, Oregon",
-    "note": "Eight days in the Wallowas."
+    "note": "Eight days in the Wallowas, timed for the 2017 eclipse."
   },
   {
     "year": "2018",
@@ -130,7 +169,8 @@
     "when": "June and July 2018",
     "name": "La Vélodyssée",
     "where": "Roscoff to the Basque coast, France",
-    "note": "Down France's Atlantic coast by bike, from Brittany past La Rochelle and Bordeaux."
+    "note": "Down France's Atlantic coast by bike, from Brittany past La Rochelle and Bordeaux.",
+    "feature": true
   },
   {
     "year": "2018",
@@ -154,7 +194,8 @@
     "when": "March 2019",
     "name": "Torres del Paine O Circuit",
     "where": "Patagonia, Chile",
-    "note": "The full O circuit around the Paine massif."
+    "note": "The full O circuit around the Paine massif.",
+    "feature": true
   },
   {
     "year": "2019",
@@ -284,7 +325,8 @@
     "name": "Tahoe Rim Trail",
     "where": "California and Nevada",
     "note": "The full loop over 16 days, with Meredith.",
-    "link": "blog/2025/jan/15/the-camino-de-costa-rica"
+    "link": "blog/2025/jan/15/the-camino-de-costa-rica",
+    "feature": true
   },
   {
     "year": "2024",
@@ -301,7 +343,8 @@
     "name": "Camino de Costa Rica",
     "where": "Caribbean coast to the Pacific",
     "note": "165 miles and 30,000 feet of climbing in 14 days, unguided.",
-    "link": "blog/2025/apr/29/camino-de-costa-rica-recap"
+    "link": "blog/2025/apr/29/camino-de-costa-rica-recap",
+    "feature": true
   },
   {
     "year": "2025",
@@ -333,7 +376,8 @@
     "when": "July and August 2025",
     "name": "Via Alpina",
     "where": "Switzerland",
-    "note": "Most of the way across Switzerland, with days of 6,000 feet up and down. A rain delay in Milan, then extra time in Kandersteg and Grindelwald."
+    "note": "Most of the way across Switzerland, with days of 6,000 feet up and down. A rain delay in Milan, then extra time in Kandersteg and Grindelwald.",
+    "feature": true
   },
   {
     "year": "2025",
@@ -389,7 +433,8 @@
     "when": "July 2026",
     "name": "John Muir Trail",
     "where": "Yosemite to Mount Whitney, California",
-    "note": "22 days on the JMT, back in the range where the 2013 PCT walk ended."
+    "note": "22 days on the JMT, back in the range where the 2013 PCT walk ended.",
+    "feature": true
   },
   {
     "year": "2026",

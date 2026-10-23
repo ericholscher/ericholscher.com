@@ -41,7 +41,9 @@
     "kind": "hiked",
     "years": [
       2013,
-      2014
+      2014,
+      2015,
+      2016
     ]
   },
   {
@@ -1511,21 +1513,23 @@
   },
   {
     "name": "Olympic coast",
-    "lat": 48.15,
-    "lon": -124.67,
+    "lat": 48.27,
+    "lon": -124.68,
     "kind": "hiked",
     "years": [
       2017
-    ]
+    ],
+    "note": "Shi Shi Beach"
   },
   {
     "name": "San Juan Islands",
     "lat": 48.6,
     "lon": -122.95,
-    "kind": "visited",
+    "kind": "hiked",
     "years": [
       2017
-    ]
+    ],
+    "note": "By kayak"
   },
   {
     "name": "Eagle Cap Wilderness",
@@ -1543,6 +1547,25 @@
     "kind": "visited",
     "years": [
       2017
+    ]
+  },
+  {
+    "name": "Mount Adams",
+    "lat": 46.2,
+    "lon": -121.49,
+    "kind": "hiked",
+    "years": [
+      2016
+    ]
+  },
+  {
+    "name": "Vancouver to Bellingham",
+    "lat": 49.0,
+    "lon": -122.75,
+    "kind": "hiked",
+    "note": "By bike",
+    "years": [
+      2014
     ]
   }
 ]

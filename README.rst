@@ -13,9 +13,12 @@ Posts in the ``link-blog`` category get a small "link" label next to their date.
 
 Topics are ABlog categories. The ones listed in ``html_context["topo_categories"]`` in ``site/conf.py``
 get a landing page with an intro, and a card on the home page. A post joins a topic with ``:category: <slug>``.
-The Outside landing page also renders a hike timeline from ``site/_data/hikes.json`` and a places map
+The Adventures page (``site/adventures.rst``) renders trips from ``site/_data/hikes.json`` and a places map
 from ``site/_data/places.json``; both are plain JSON meant to be edited by hand.
-Each hike has a ``kind``: ``thru-hike`` (end to end), ``trek`` (multi-day, hut or village based), ``hiking`` (a stay spent hiking from a base), ``backpacking``, ``summit``, ``day-hike``, ``camping``, ``rafting``, or ``bike``.
+Trips marked ``"feature": true`` show as cards under "The long ones", there and on the Outside landing page.
+Every trip and place also shows in a year-by-year log, one collapsible section per year.
+The map expands to fill the screen, with zoom, drag to pan, and tap a pin to name it.
+Each hike has a ``kind``: ``thru-hike`` (end to end), ``trek`` (multi-day, hut or village based), ``hiking`` (a stay spent hiking from a base), ``backpacking``, ``summit``, ``day-hike``, ``camping``, ``rafting``, ``kayak``, or ``bike``.
 
 Finding trips in your photos
 ----------------------------

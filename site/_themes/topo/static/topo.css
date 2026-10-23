@@ -254,60 +254,105 @@ ul.postlist p.ablog-post-excerpt { font-size: 16px; color: var(--text-2); margin
 .body .topo-plaque, .topo-plaque { font-family: var(--mono); font-weight: 400; font-size: 12px; line-height: 1.5; letter-spacing: .12em; text-transform: uppercase; margin: 0 0 16px; color: var(--sign-text); background: var(--sign); padding: 6px 12px; border-radius: 3px; display: inline-block; box-shadow: inset 0 0 0 1px var(--sign-2), inset 0 0 0 2px rgba(219,166,62,.55); }
 .topo-catalog-block h2 { font-size: 24px; margin: 18px 0 0; }
 
-/* Timeline: grouped by year, newest first */
-.topo-timeline { margin: 8px 0 40px; }
-.topo-tl { border-left: 2px solid var(--rule-strong); margin-left: 8px; }
-.topo-tl-year-block { position: relative; padding-bottom: 8px; }
-.body .topo-tl-yearhead, .topo-tl-yearhead { position: relative; margin: 0 0 14px; padding: 0 0 0 26px; font-family: var(--serif); font-weight: 500; font-size: 30px; line-height: 1; color: var(--sign); display: flex; align-items: baseline; gap: 12px; }
-.topo-tl-yearhead::before { content: ""; position: absolute; left: -11px; top: 6px; width: 18px; height: 18px; background: var(--sign); transform: rotate(45deg); box-shadow: 0 0 0 3px var(--paper), 0 0 0 4px var(--sign-gold); }
-.topo-tl-count { font-family: var(--mono); font-size: 12px; font-weight: 400; color: var(--muted); letter-spacing: .02em; }
+/* Adventures: the long ones as cards, then a map, then a year-by-year log */
+.topo-features { margin: 8px 0 36px; }
+.body .topo-feature-grid, .topo-feature-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 12px; }
+.topo-feature { margin: 0; padding: 12px 14px 14px; background: #F7F1E4; border: 1px solid var(--rule-strong); border-top: 3px solid var(--forest); border-radius: 3px; }
+.body .topo-feature-meta, .topo-feature-meta { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin: 0 0 6px; font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.body .topo-feature h3, .topo-feature h3 { font-family: var(--serif); font-weight: 500; font-size: 20px; line-height: 1.15; margin: 0 0 4px; color: var(--ink); }
+.topo-feature h3 a { color: var(--ink); border-bottom: 0; }
+.topo-feature h3 a:hover { color: var(--link-hover); }
+.body .topo-feature-where, .topo-feature-where { margin: 0; font-size: 14px; line-height: 1.4; color: var(--text-2); }
+@media (max-width: 480px) {
+  .body .topo-feature-grid, .topo-feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .topo-feature { padding: 10px 11px 12px; }
+  .body .topo-feature h3, .topo-feature h3 { font-size: 17px; }
+  .body .topo-feature-where, .topo-feature-where { font-size: 13px; }
+  .topo-feature-meta .topo-kind { display: none; }
+}
+.topo-adv-link { margin: -16px 0 8px; }
+
+.topo-log { margin: 0 0 32px; }
+.topo-log .topo-plaque { margin-bottom: 8px; }
+.topo-log-year { border-bottom: 1px solid var(--rule); }
+.topo-log-year > summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 76px minmax(0, 1fr) 16px; gap: 2px 14px; align-items: baseline; padding: 14px 0; }
+.topo-log-year > summary::-webkit-details-marker { display: none; }
+.topo-log-year > summary::after { content: ""; grid-column: 3; grid-row: 1 / span 2; align-self: center; width: 7px; height: 7px; border-right: 2px solid var(--sign); border-bottom: 2px solid var(--sign); transform: rotate(45deg); margin-top: -4px; }
+.topo-log-year[open] > summary::after { transform: rotate(225deg); margin-top: 4px; }
+.topo-log-year > summary:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+.topo-log-yearnum { grid-column: 1; grid-row: 1 / span 2; font-family: var(--serif); font-weight: 500; font-size: 30px; line-height: 1; color: var(--sign); }
+.topo-log-year > summary:hover .topo-log-yearnum { color: var(--link-hover); }
+.topo-log-gist { grid-column: 2; font-size: 15.5px; line-height: 1.4; color: var(--ink); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.topo-log-count { grid-column: 2; font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.topo-log-year[open] .topo-log-gist { display: none; }
+.topo-log-body { padding: 0 0 18px 90px; }
+@media (max-width: 560px) {
+  .topo-log-year > summary { grid-template-columns: 62px minmax(0, 1fr) 16px; gap: 2px 10px; }
+  .topo-log-yearnum { font-size: 26px; }
+  .topo-log-body { padding-left: 0; }
+}
 .body .topo-tl-list, .topo-tl-list { list-style: none; margin: 0; padding: 0; }
-.topo-tl-item { position: relative; padding: 0 0 20px 26px; margin: 0; }
-.topo-tl-item::before { content: ""; position: absolute; left: -6px; top: 9px; width: 10px; height: 10px; background: var(--paper); border: 2px solid var(--sign); box-sizing: border-box; transform: rotate(45deg); }
-.body .topo-tl-item h4, .topo-tl-item h4 { font-family: var(--serif); font-weight: 500; font-size: 21px; line-height: 1.2; margin: 0 0 4px; color: var(--ink); }
+.topo-tl-item { position: relative; padding: 0 0 16px 22px; margin: 0; }
+.topo-tl-item::before { content: ""; position: absolute; left: 2px; top: 8px; width: 9px; height: 9px; background: var(--paper); border: 2px solid var(--sign); box-sizing: border-box; transform: rotate(45deg); }
+.body .topo-tl-item h4, .topo-tl-item h4 { font-family: var(--serif); font-weight: 500; font-size: 19px; line-height: 1.2; margin: 0 0 4px; color: var(--ink); }
 .topo-tl-item h4 a { color: var(--ink); border-bottom: 0; }
 .topo-tl-item h4 a:hover { color: var(--link-hover); }
-.topo-tl-meta { font-family: var(--mono); font-size: 12px; color: var(--muted); margin: 0 0 6px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
-.topo-tl-meta .topo-kind { border-color: var(--rule-strong); }
+.topo-tl-meta { font-family: var(--mono); font-size: 12px; color: var(--muted); margin: 0 0 4px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
 .topo-kind-thru-hike, .topo-kind-trek { color: var(--forest); border-color: var(--forest) !important; }
-.body .topo-tl-note, .topo-tl-note { margin: 0; font-size: 15px; line-height: 1.55; color: var(--text-2); max-width: 60ch; }
+.body .topo-tl-note, .topo-tl-note { margin: 0; font-size: 15px; line-height: 1.5; color: var(--text-2); max-width: 60ch; }
+.topo-log-places { padding-top: 12px; border-top: 1px dashed var(--rule-strong); }
+.body .topo-log-label, .topo-log-label { font-family: var(--mono); font-weight: 400; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0 0 8px; }
+.body .topo-log-placelist, .topo-log-placelist { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 16px; }
+.body .topo-log-placelist li, .topo-log-placelist li { margin: 0; font-size: 14.5px; line-height: 1.45; color: var(--ink); }
+.topo-log-map[hidden] { display: none; }
 
-/* Places map */
+/* Places map. Expands to fill the screen, with zoom and drag to pan. */
 .topo-places { margin: 0 0 40px; }
-.topo-map-figure { margin: 0 0 14px; }
-.topo-world { width: 100%; height: auto; display: block; background: var(--hero); border: 1px solid var(--rule-strong); border-radius: 3px; }
-.topo-land { fill: #DCD2BA; stroke: #C9BD9F; stroke-width: .6; }
-.topo-pin circle { stroke: var(--paper); stroke-width: 1.5; transition: opacity .15s ease; }
-.topo-pin.is-dim circle { opacity: .15; }
-.topo-year-filter { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; }
+.topo-map-bar { display: flex; align-items: flex-start; gap: 8px; }
+.topo-map-tools { display: none; flex: none; gap: 6px; }
+.topo-year-filter { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; flex: 1 1 auto; min-width: 0; }
 .topo-year-filter[hidden] { display: none; }
-.topo-year-filter button { font: inherit; font-family: var(--mono); font-size: 12px; padding: 5px 10px; border: 1px solid var(--rule-strong); border-radius: 3px; background: transparent; color: var(--text); cursor: pointer; min-height: 32px; }
-.topo-year-filter button:hover { border-color: var(--sign); }
-.topo-year-filter button[aria-pressed="true"] { background: var(--sign); border-color: var(--sign); color: var(--sign-text); }
-.topo-year-filter button:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
-@media (prefers-reduced-motion: reduce) { .topo-pin circle { transition: none; } }
-.topo-pin-lived circle { fill: var(--sign); }
-.topo-pin-hiked circle { fill: var(--forest); }
-.topo-pin-visited circle { fill: var(--blaze); }
-.topo-map-figure figcaption { display: flex; gap: 18px; font-family: var(--mono); font-size: 12px; color: var(--muted); margin-top: 8px; }
+.topo-year-filter button, .topo-map-tools button, .topo-log-map { font: inherit; font-family: var(--mono); font-size: 12px; padding: 5px 10px; border: 1px solid var(--rule-strong); border-radius: 3px; background: transparent; color: var(--text); cursor: pointer; min-height: 32px; }
+.topo-log-map { margin-top: 12px; }
+.topo-year-filter button:hover, .topo-map-tools button:hover, .topo-log-map:hover { border-color: var(--sign); }
+.topo-year-filter button[aria-pressed="true"], .topo-map-close { background: var(--sign) !important; border-color: var(--sign) !important; color: var(--sign-text) !important; }
+.topo-year-filter button:focus-visible, .topo-map-tools button:focus-visible, .topo-map-expand:focus-visible, .topo-log-map:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+.topo-map-zoom { min-width: 34px; font-size: 16px !important; line-height: 1; }
+.topo-map-frame { position: relative; }
+.topo-map-scroll { background: var(--hero); border: 1px solid var(--rule-strong); border-radius: 3px; overflow: hidden; }
+.is-enhanced .topo-map-scroll { cursor: zoom-in; }
+.topo-world { width: 100%; height: auto; display: block; max-width: none; }
+.topo-land { fill: #DCD2BA; stroke: #C9BD9F; stroke-width: .6; vector-effect: non-scaling-stroke; }
+.topo-pin-dot { stroke: var(--paper); stroke-width: 1.5; vector-effect: non-scaling-stroke; transition: opacity .15s ease; }
+.topo-pin.is-dim .topo-pin-dot { opacity: .15; }
+.topo-pin.is-active .topo-pin-dot { stroke: var(--ink); stroke-width: 2.5; }
+@media (prefers-reduced-motion: reduce) { .topo-pin-dot { transition: none; } }
+.topo-pin-lived .topo-pin-dot { fill: var(--sign); }
+.topo-pin-hiked .topo-pin-dot { fill: var(--forest); }
+.topo-pin-visited .topo-pin-dot { fill: var(--blaze); }
+.topo-map-expand { position: absolute; top: 8px; right: 8px; display: inline-flex; align-items: center; gap: 6px; font: inherit; font-family: var(--mono); font-size: 12px; padding: 5px 10px; min-height: 32px; border: 1px solid var(--sign); border-radius: 3px; background: var(--sign); color: var(--sign-text); cursor: pointer; box-shadow: 0 1px 3px rgba(51,42,32,.25); }
+.topo-map-expand[hidden] { display: none; }
+.topo-map-expand:hover { background: var(--sign-2); }
+.topo-map-readout { display: none; margin: 0; font-size: 15px; color: var(--ink); min-height: 1.5em; }
+.topo-map-legend { display: flex; flex-wrap: wrap; gap: 4px 18px; font-family: var(--mono); font-size: 12px; color: var(--muted); margin: 8px 0 0; }
 .topo-legend::before, .topo-dot { content: ""; display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 6px; vertical-align: 0; }
 .topo-legend-lived::before, .topo-dot-lived { background: var(--sign); }
 .topo-legend-hiked::before, .topo-dot-hiked { background: var(--forest); }
 .topo-legend-visited::before, .topo-dot-visited { background: var(--blaze); }
-.topo-place-groups { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px 24px; align-items: start; }
-.body .topo-place-group h3, .topo-place-group h3 { font-family: var(--serif); font-weight: 500; font-size: 22px; line-height: 1.1; color: var(--sign); margin: 0 0 10px; }
-.topo-place-group[hidden] { display: none; }
-.topo-place-home h3 { font-family: var(--mono) !important; font-size: 12px !important; letter-spacing: .1em; text-transform: uppercase; color: var(--muted) !important; padding-top: 8px; }
-.body .topo-place-list, .topo-place-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
-.body .topo-place-list li, .topo-place-list li { margin: 0; font-size: 15px; line-height: 1.35; display: grid; grid-template-columns: 15px minmax(0, 1fr); }
-.topo-place-list .topo-dot { margin: 5px 0 0; }
-.topo-place-list .topo-place-note { grid-column: 2; }
-.topo-place-name { display: block; color: var(--ink); grid-column: 2; }
-.topo-place-note { display: block; color: var(--muted); font-size: 12.5px; }
-@media (max-width: 760px) { .topo-place-groups { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 600px) {
-  .topo-place-groups { grid-template-columns: minmax(0, 1fr); }
-}
+.topo-home-line { margin: 10px 0 0; font-size: 14.5px; color: var(--text-2); }
+.topo-home-place { color: var(--ink); }
+
+html.topo-map-open, html.topo-map-open body { overflow: hidden; }
+.topo-map.is-expanded { position: fixed; inset: 0; z-index: 1000; margin: 0; display: flex; flex-direction: column; gap: 8px; background: var(--paper); padding: max(12px, env(safe-area-inset-top)) var(--gutter) max(10px, env(safe-area-inset-bottom)); }
+.topo-map.is-expanded .topo-map-tools { display: flex; }
+.topo-map.is-expanded .topo-year-filter { flex-wrap: nowrap; overflow-x: auto; margin: 0; padding-bottom: 2px; scrollbar-width: thin; }
+.topo-map.is-expanded .topo-year-filter button { flex: none; }
+.topo-map.is-expanded .topo-map-frame { flex: 1 1 auto; min-height: 0; display: flex; }
+.topo-map.is-expanded .topo-map-scroll { flex: 1 1 auto; overflow: auto; overscroll-behavior: contain; cursor: grab; }
+.topo-map.is-expanded.is-dragging .topo-map-scroll { cursor: grabbing; user-select: none; }
+.topo-map.is-expanded .topo-map-expand { display: none; }
+.topo-map.is-expanded .topo-map-readout { display: block; }
+.topo-map.is-expanded .topo-map-legend { margin: 0; }
 
 /* Sidebar */
 .topo-side-block { padding: 20px 0; border-top: 1px solid var(--rule); }
