@@ -63,13 +63,45 @@
     "link": "bike"
   },
   {
+    "year": "2018",
+    "kind": "hiking",
+    "when": "August 2018",
+    "name": "Valais, Switzerland",
+    "where": "Swiss Alps",
+    "note": "Five weeks of hiking in the Alps during the first summer on the road."
+  },
+  {
+    "year": "2019",
+    "kind": "trek",
+    "when": "March 2019",
+    "name": "Torres del Paine",
+    "where": "Patagonia, Chile",
+    "note": "Two and a half weeks in and around the park."
+  },
+  {
+    "year": "2019",
+    "kind": "day-hike",
+    "when": "March 2019",
+    "name": "El Chaltén",
+    "where": "Patagonia, Argentina",
+    "note": "Hiking below Fitz Roy.",
+    "link": "blog/2025/jan/20/international-travel-and-community"
+  },
+  {
     "year": "2019",
     "kind": "backpacking",
-    "when": "2019",
-    "name": "Patagonia",
-    "where": "Argentina and Chile",
-    "note": "Hiking below the spires during two years on the road.",
-    "link": "blog/2025/jan/20/international-travel-and-community"
+    "when": "June 2019",
+    "name": "Oregon Cascades",
+    "where": "Willamette and Deschutes national forests",
+    "note": "Several overnight trips after coming home from South America."
+  },
+  {
+    "year": "2019",
+    "kind": "hiking",
+    "when": "September and October 2019",
+    "name": "Dolomites",
+    "where": "Cortina d'Ampezzo, Italy",
+    "note": "Three weeks of hiking around Cortina."
   },
   {
     "year": "2020",

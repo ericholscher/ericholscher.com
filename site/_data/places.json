@@ -102,13 +102,14 @@
     ]
   },
   {
-    "name": "Patagonia",
+    "name": "El Chaltén",
     "lat": -49.33,
     "lon": -72.89,
     "kind": "hiked",
     "years": [
       2019
-    ]
+    ],
+    "note": "Below Fitz Roy"
   },
   {
     "name": "Costa Rica",
@@ -128,6 +129,7 @@
     "note": "EuroDjangoCon, then Write the Docs",
     "years": [
       2009,
+      2018,
       2019
     ]
   },
@@ -150,6 +152,7 @@
     "kind": "visited",
     "note": "Humpback whale season",
     "years": [
+      2018,
       2025
     ]
   },
@@ -180,6 +183,7 @@
     "kind": "visited",
     "note": "A week by bike",
     "years": [
+      2019,
       2025
     ]
   },
@@ -189,6 +193,7 @@
     "lon": -4.2,
     "kind": "visited",
     "years": [
+      2018,
       2025
     ]
   },
@@ -425,6 +430,7 @@
     "lon": -0.13,
     "kind": "visited",
     "years": [
+      2018,
       2025
     ]
   },
@@ -624,6 +630,7 @@
     "lon": -9.14,
     "kind": "visited",
     "years": [
+      2018,
       2026
     ]
   },
@@ -720,5 +727,355 @@
       2026
     ],
     "note": "Basque coast"
+  },
+  {
+    "name": "Hong Kong",
+    "lat": 22.3,
+    "lon": 114.17,
+    "kind": "visited",
+    "years": [
+      2018
+    ]
+  },
+  {
+    "name": "Chiang Mai",
+    "lat": 18.79,
+    "lon": 98.98,
+    "kind": "visited",
+    "years": [
+      2018
+    ]
+  },
+  {
+    "name": "Hoi An",
+    "lat": 15.88,
+    "lon": 108.33,
+    "kind": "visited",
+    "years": [
+      2018
+    ]
+  },
+  {
+    "name": "Ninh Binh",
+    "lat": 20.25,
+    "lon": 105.97,
+    "kind": "visited",
+    "years": [
+      2018
+    ],
+    "note": "Tràng An"
+  },
+  {
+    "name": "Luang Prabang",
+    "lat": 19.89,
+    "lon": 102.13,
+    "kind": "visited",
+    "years": [
+      2018
+    ]
+  },
+  {
+    "name": "Angkor",
+    "lat": 13.41,
+    "lon": 103.87,
+    "kind": "visited",
+    "years": [
+      2018
+    ]
+  },
+  {
+    "name": "Taroko Gorge",
+    "lat": 24.16,
+    "lon": 121.62,
+    "kind": "visited",
+    "years": [
+      2018
+    ]
+  },
+  {
+    "name": "Taipei",
+    "lat": 25.03,
+    "lon": 121.56,
+    "kind": "visited",
+    "years": [
+      2018
+    ]
+  },
+  {
+    "name": "Dover and Deal",
+    "lat": 51.2,
+    "lon": 1.38,
+    "kind": "visited",
+    "years": [
+      2018
+    ]
+  },
+  {
+    "name": "Dartmoor",
+    "lat": 50.57,
+    "lon": -3.92,
+    "kind": "visited",
+    "years": [
+      2018
+    ]
+  },
+  {
+    "name": "La Rochelle",
+    "lat": 46.16,
+    "lon": -1.15,
+    "kind": "visited",
+    "years": [
+      2018
+    ]
+  },
+  {
+    "name": "Bordeaux",
+    "lat": 44.84,
+    "lon": -0.58,
+    "kind": "visited",
+    "years": [
+      2018
+    ]
+  },
+  {
+    "name": "Valais, Switzerland",
+    "lat": 46.2,
+    "lon": 7.6,
+    "kind": "hiked",
+    "years": [
+      2018
+    ]
+  },
+  {
+    "name": "Caminito del Rey",
+    "lat": 36.93,
+    "lon": -4.79,
+    "kind": "visited",
+    "years": [
+      2018
+    ],
+    "note": "Near Málaga"
+  },
+  {
+    "name": "Costa Vicentina",
+    "lat": 37.15,
+    "lon": -8.85,
+    "kind": "visited",
+    "years": [
+      2018
+    ]
+  },
+  {
+    "name": "Sintra",
+    "lat": 38.8,
+    "lon": -9.39,
+    "kind": "visited",
+    "years": [
+      2018
+    ]
+  },
+  {
+    "name": "Split",
+    "lat": 43.51,
+    "lon": 16.44,
+    "kind": "visited",
+    "years": [
+      2018
+    ]
+  },
+  {
+    "name": "Plitvice Lakes",
+    "lat": 44.88,
+    "lon": 15.62,
+    "kind": "visited",
+    "years": [
+      2018
+    ]
+  },
+  {
+    "name": "Velebit coast",
+    "lat": 44.53,
+    "lon": 15.07,
+    "kind": "visited",
+    "years": [
+      2018
+    ],
+    "note": "Karlobag"
+  },
+  {
+    "name": "Lima",
+    "lat": -12.05,
+    "lon": -77.04,
+    "kind": "visited",
+    "years": [
+      2018,
+      2019
+    ]
+  },
+  {
+    "name": "Machu Picchu and the Sacred Valley",
+    "lat": -13.16,
+    "lon": -72.55,
+    "kind": "visited",
+    "years": [
+      2018,
+      2019
+    ],
+    "note": "Over the new year"
+  },
+  {
+    "name": "Cusco",
+    "lat": -13.53,
+    "lon": -71.97,
+    "kind": "visited",
+    "years": [
+      2019
+    ]
+  },
+  {
+    "name": "Lake Titicaca",
+    "lat": -15.84,
+    "lon": -70.02,
+    "kind": "visited",
+    "years": [
+      2019
+    ]
+  },
+  {
+    "name": "Colca Canyon",
+    "lat": -15.64,
+    "lon": -71.88,
+    "kind": "visited",
+    "years": [
+      2019
+    ]
+  },
+  {
+    "name": "Huacachina",
+    "lat": -14.09,
+    "lon": -75.76,
+    "kind": "visited",
+    "years": [
+      2019
+    ]
+  },
+  {
+    "name": "Valparaíso and Santiago",
+    "lat": -33.25,
+    "lon": -71.0,
+    "kind": "visited",
+    "years": [
+      2019
+    ]
+  },
+  {
+    "name": "Punta Arenas",
+    "lat": -53.16,
+    "lon": -70.91,
+    "kind": "visited",
+    "years": [
+      2019
+    ]
+  },
+  {
+    "name": "Torres del Paine",
+    "lat": -50.94,
+    "lon": -73.0,
+    "kind": "hiked",
+    "years": [
+      2019
+    ]
+  },
+  {
+    "name": "Buenos Aires",
+    "lat": -34.6,
+    "lon": -58.38,
+    "kind": "visited",
+    "years": [
+      2019
+    ]
+  },
+  {
+    "name": "Aruba",
+    "lat": 12.52,
+    "lon": -69.97,
+    "kind": "visited",
+    "years": [
+      2019
+    ]
+  },
+  {
+    "name": "Oregon Cascades",
+    "lat": 44.5,
+    "lon": -121.8,
+    "kind": "hiked",
+    "years": [
+      2019
+    ],
+    "note": "Overnights in June"
+  },
+  {
+    "name": "Barcelona",
+    "lat": 41.39,
+    "lon": 2.17,
+    "kind": "visited",
+    "years": [
+      2019
+    ]
+  },
+  {
+    "name": "Dolomites",
+    "lat": 46.54,
+    "lon": 12.14,
+    "kind": "hiked",
+    "years": [
+      2019
+    ],
+    "note": "Cortina d'Ampezzo"
+  },
+  {
+    "name": "Cinque Terre",
+    "lat": 44.13,
+    "lon": 9.71,
+    "kind": "visited",
+    "years": [
+      2019
+    ]
+  },
+  {
+    "name": "Rome",
+    "lat": 41.9,
+    "lon": 12.5,
+    "kind": "visited",
+    "years": [
+      2019
+    ]
+  },
+  {
+    "name": "Pompeii",
+    "lat": 40.75,
+    "lon": 14.49,
+    "kind": "visited",
+    "years": [
+      2019
+    ]
+  },
+  {
+    "name": "Taghazout, Morocco",
+    "lat": 30.54,
+    "lon": -9.71,
+    "kind": "visited",
+    "years": [
+      2019
+    ]
+  },
+  {
+    "name": "Seville",
+    "lat": 37.39,
+    "lon": -5.98,
+    "kind": "visited",
+    "years": [
+      2019
+    ]
   }
 ]
