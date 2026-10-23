@@ -1,4 +1,5 @@
 .. post:: 2009-01-29 08:56:33
+   :category: code
 
 Using rsync with django
 =======================

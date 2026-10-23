@@ -1,4 +1,5 @@
 .. post:: 2012-09-20 12:04:59
+   :category: documentation
 
 Help fund Read the Docs 
 ========================

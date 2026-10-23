@@ -1,4 +1,5 @@
 .. post:: 2010-08-16 19:10:00
+   :category: documentation
 
 Announcing Read The Docs
 ========================

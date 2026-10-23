@@ -1,4 +1,5 @@
 .. post:: 2013-11-11 20:00:00
+   :category: code
 
 Codes of Conduct, an Organizers Perspective
 ===========================================

@@ -1,4 +1,5 @@
 .. post:: 2009-11-18 19:46:22
+   :category: code
 
 Finding Missing Indexes That Django Wants (Postgres)
 ====================================================

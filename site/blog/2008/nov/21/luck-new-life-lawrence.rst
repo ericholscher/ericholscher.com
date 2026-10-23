@@ -1,4 +1,5 @@
 .. post:: 2008-11-21 19:58:49
+   :category: code
 
 Luck and a New Life in Lawrence
 ===============================

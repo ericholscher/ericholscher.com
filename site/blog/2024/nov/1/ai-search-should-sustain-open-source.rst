@@ -1,6 +1,6 @@
 .. post:: Nov 1, 2024
    :tags: open-source, sustainability, ai, python
-   :category: sustainability
+   :category: open-source
 
 AI search should sustain open source, not just index it
 =======================================================

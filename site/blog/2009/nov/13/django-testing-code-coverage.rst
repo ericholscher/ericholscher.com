@@ -1,4 +1,5 @@
 .. post:: 2009-11-13 19:01:09
+   :category: code
 
 Django Testing Code Coverage
 ============================

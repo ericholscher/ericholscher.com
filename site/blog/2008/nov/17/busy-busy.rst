@@ -1,4 +1,5 @@
 .. post:: 2008-11-17 18:42:55
+   :category: code
 
 Busy Busy
 =========

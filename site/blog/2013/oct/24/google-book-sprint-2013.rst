@@ -1,4 +1,5 @@
 .. post:: 10-24-13 10:00:00
+   :category: documentation
 
 Google Summer of Code Book Sprint 2013
 ======================================

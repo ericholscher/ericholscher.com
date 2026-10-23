@@ -1,4 +1,5 @@
 .. post:: 2013-11-21 20:00:00
+   :category: code
 
 A Better Javascript Workflow with Django
 ========================================

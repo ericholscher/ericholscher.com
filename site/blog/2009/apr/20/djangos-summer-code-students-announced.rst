@@ -1,4 +1,5 @@
 .. post:: 2009-04-20 12:45:26
+   :category: code
 
 Django's Summer of Code students announced!
 ===========================================

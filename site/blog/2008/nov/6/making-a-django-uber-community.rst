@@ -1,4 +1,5 @@
 .. post:: 2008-11-06 11:01:01
+   :category: code
 
 Making a Django Uber-Community
 ==============================

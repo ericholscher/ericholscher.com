@@ -1,4 +1,5 @@
 .. post:: 2007-12-21 13:32:07
+   :category: code
 
 Python Easy Install
 ===================

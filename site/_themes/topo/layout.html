@@ -1,5 +1,6 @@
 {#- Topo: a theme for ericholscher.com. Inherits Sphinx's basic theme. -#}
 {%- extends "basic/layout.html" %}
+{%- from "topo/entries.html" import entries, topics with context %}
 
 {%- set is_home = pagename == root_doc %}
 {%- set is_post = ablog is defined and pagename in ablog %}
@@ -18,6 +19,7 @@
   <a class="topo-wordmark" href="{{ pathto(root_doc) }}">{{ mark(30) }}<span>{{ docstitle|e }}</span></a>
   <nav class="topo-nav" aria-label="Main">
     <a href="{{ pathto('blog/index') }}">Blog</a>
+    {%- if ablog is defined and ablog.category['outside'] %}<a href="{{ pathto(ablog.category['outside'].docname) }}">Outside</a>{% endif %}
     <a href="{{ pathto('speaking') }}">Speaking</a>
     <a href="{{ pathto('about') }}">About</a>
   </nav>
@@ -38,11 +40,7 @@
 </svg>
 {%- endmacro %}
 
-{%- macro kind(post) %}
-{#- A small label for link-blog posts, which are short pointers rather than writing. -#}
-{%- set cats = post.category|map('string')|list if post.category else [] %}
-{%- if 'link-blog' in cats %}<span class="topo-kind">link</span>{% endif %}
-{%- endmacro %}
+{%- from "topo/entries.html" import kind with context %}
 
 {%- block content %}
 <div class="topo-page">
@@ -82,17 +80,15 @@
         <div class="topo-recent-head">
           {%- if is_home %}<h2>Recently</h2>{% else %}<h2>All posts</h2>{% endif %}
         </div>
-        {%- for post in ablog.recent(10 if is_home else None, pagename) %}
-        <article class="topo-entry">
-          <div class="topo-entry-meta"><time class="topo-entry-date" datetime="{{ post.date.strftime('%Y-%m-%d') }}">{{ post.date.strftime('%b %-d, %Y') }}</time>{{ kind(post) }}</div>
-          <div class="topo-entry-body">
-            <h3><a href="{{ pathto(post.docname) }}{{ anchor(post) }}">{{ post.title }}</a></h3>
-            <div class="topo-entry-excerpt">{{ post.to_html(pagename) }}</div>
-          </div>
-        </article>
-        {%- endfor %}
+        {{ entries(ablog.recent(10 if is_home else None, pagename), pagename) }}
         {%- if is_home %}<p class="topo-more"><a href="{{ pathto('blog/index') }}">Older posts &rarr;</a></p>{% endif %}
       </section>
+      {%- if is_home %}
+      <section class="topo-topics-section" id="topics">
+        <div class="topo-recent-head"><h2>By topic</h2><a href="{{ pathto(ablog.category.docname) }}" class="topo-more-link">All topics &rarr;</a></div>
+        {{ topics(pagename, 3) }}
+      </section>
+      {%- endif %}
       {%- endif %}
     </main>
     {{ sidebar() }}

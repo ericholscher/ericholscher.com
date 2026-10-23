@@ -1,4 +1,5 @@
 .. post:: 2008-11-22 16:09:35
+   :category: code
 
 Django Aggregator v2 now has tagging, and you should too.
 =========================================================

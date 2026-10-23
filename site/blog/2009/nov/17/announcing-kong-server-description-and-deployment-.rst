@@ -1,4 +1,5 @@
 .. post:: 2009-11-17 20:14:49
+   :category: code
 
 Announcing Kong: A server description and deployment testing tool
 =================================================================

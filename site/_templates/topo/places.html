@@ -1,0 +1,24 @@
+{#- Places map, data in site/_data/places.json. Equirectangular to match world-land.html. -#}
+{%- set W = 1000 %}{% set TOP = 84 %}{% set BOT = -58 %}{% set H = (W * (TOP - BOT) / 360)|round(0) %}
+<section class="topo-places" id="places">
+  <h2 class="topo-plaque">Places</h2>
+  <figure class="topo-map-figure">
+    <svg class="topo-world" viewBox="0 {{ ((TOP - 75) / (TOP - BOT) * H)|round(0) }} {{ W }} {{ ((75 - (-56)) / (TOP - BOT) * H)|round(0) }}" role="img" aria-label="World map with places lived, hiked, and visited">
+      {% include "topo/world-land.html" %}
+      {%- for p in topo_places %}
+      {%- set x = ((p.lon + 180) / 360 * W)|round(1) %}{% set y = ((TOP - p.lat) / (TOP - BOT) * H)|round(1) %}
+      <g class="topo-pin topo-pin-{{ p.kind }}"><circle cx="{{ x }}" cy="{{ y }}" r="{% if p.kind == 'lived' %}5.5{% else %}4{% endif %}"><title>{{ p.name }}{% if p.note %} · {{ p.note }}{% endif %}</title></circle></g>
+      {%- endfor %}
+    </svg>
+    <figcaption>
+      <span class="topo-legend topo-legend-lived">Lived</span>
+      <span class="topo-legend topo-legend-hiked">Walked</span>
+      <span class="topo-legend topo-legend-visited">Visited</span>
+    </figcaption>
+  </figure>
+  <ul class="topo-place-list">
+  {%- for p in topo_places %}
+    <li><span class="topo-dot topo-dot-{{ p.kind }}"></span>{{ p.name }}{% if p.note %} <span class="topo-place-note">{{ p.note }}</span>{% endif %}</li>
+  {%- endfor %}
+  </ul>
+</section>

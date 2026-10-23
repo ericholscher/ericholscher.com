@@ -11,6 +11,11 @@ Sidebar blocks are plain Jinja templates in ``site/_templates/sidebar/`` and are
 The home page and ``blog/index`` listings are rendered by the theme from ABlog's post data.
 Posts in the ``link-blog`` category get a small "link" label next to their date.
 
+Topics are ABlog categories. The ones listed in ``html_context["topo_categories"]`` in ``site/conf.py``
+get a landing page with an intro, and a card on the home page. A post joins a topic with ``:category: <slug>``.
+The Outside landing page also renders a hike timeline from ``site/_data/hikes.json`` and a places map
+from ``site/_data/places.json``; both are plain JSON meant to be edited by hand.
+
 To build locally::
 
     python -m venv .venv

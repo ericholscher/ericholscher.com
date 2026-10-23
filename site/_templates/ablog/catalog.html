@@ -1,0 +1,17 @@
+{#- The index of categories, tags, or archives. Categories render as topic cards. -#}
+{%- extends "page.html" %}
+{%- from "topo/entries.html" import topics with context %}
+{%- block body %}
+{%- if catalog.name == 'category' %}
+<h1>Topics</h1>
+<p class="topo-landing-intro">Posts grouped by what they are about. Older posts are sorted in loosely; the archive has everything by year.</p>
+{{ topics(pagename, 4) }}
+{%- else %}
+<h1>{{ header }}</h1>
+{%- for collection in catalog %}{% if collection %}
+<section class="topo-catalog-block">
+  <h2><a href="{{ pathto(collection.docname) }}">{{ collection }}</a> <span class="topo-topic-count">{{ collection|length }}</span></h2>
+</section>
+{%- endif %}{% endfor %}
+{%- endif %}
+{%- endblock %}

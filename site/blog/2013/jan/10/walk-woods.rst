@@ -1,4 +1,5 @@
 .. post:: 2013-01-10 19:08:43
+   :category: outside
 
 .. _walk-woods:
 

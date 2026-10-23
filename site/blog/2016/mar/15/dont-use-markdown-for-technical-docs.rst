@@ -1,4 +1,5 @@
 .. post:: 2016-03-15 09:00:00
+   :category: documentation
 
 Why You Shouldn't Use "Markdown" for Documentation
 ==================================================

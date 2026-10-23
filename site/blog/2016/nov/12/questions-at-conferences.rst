@@ -1,4 +1,5 @@
 .. post:: Nov 12, 2016
+   :category: community
    :tags: conferences, organization, questions
 
 Questions after talks at conferences

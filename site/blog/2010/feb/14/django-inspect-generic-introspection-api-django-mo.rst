@@ -1,4 +1,5 @@
 .. post:: 2010-02-14 08:48:20
+   :category: code
 
 Django Inspect: A generic introspection API for Django models
 =============================================================

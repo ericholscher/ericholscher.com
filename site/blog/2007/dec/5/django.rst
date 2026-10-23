@@ -1,4 +1,5 @@
 .. post:: 2007-12-05 15:42:45
+   :category: code
 
 Django
 ======

@@ -1,4 +1,5 @@
 .. post:: 2009-06-29 20:33:07
+   :category: code
 
 Enable setup.py test in your Django apps
 ========================================

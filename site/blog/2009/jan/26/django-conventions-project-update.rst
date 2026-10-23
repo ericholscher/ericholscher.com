@@ -1,4 +1,5 @@
 .. post:: 2009-01-26 21:41:26
+   :category: code
 
 Django Conventions Project Update
 =================================

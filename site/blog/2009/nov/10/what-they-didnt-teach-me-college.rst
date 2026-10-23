@@ -1,4 +1,5 @@
 .. post:: 2009-11-10 18:46:16
+   :category: code
 
 What they didn't teach me in college
 ====================================

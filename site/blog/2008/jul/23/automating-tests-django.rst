@@ -1,4 +1,5 @@
 .. post:: 2008-07-23 15:19:32
+   :category: code
 
 Automating tests in Django
 ==========================

@@ -1,4 +1,5 @@
 .. post:: 2013-10-08 10:38
+   :category: documentation
 
 Announcing Grok the Docs
 ========================

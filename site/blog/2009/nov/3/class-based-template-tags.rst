@@ -1,4 +1,5 @@
 .. post:: 2009-11-03 15:32:07
+   :category: code
 
 Class Based Template Tags
 =========================

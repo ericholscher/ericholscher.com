@@ -1,4 +1,5 @@
 .. post:: 2015-04-10 12:00:00
+   :category: open-source
 
 
 Making Read the Docs Sustainable

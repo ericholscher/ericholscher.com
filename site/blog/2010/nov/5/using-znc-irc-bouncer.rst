@@ -1,4 +1,5 @@
 .. post:: 2010-11-05 17:00:00
+   :category: code
 
 Using ZNC, an IRC bouncer
 =========================

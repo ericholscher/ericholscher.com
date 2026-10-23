@@ -1,4 +1,5 @@
 .. post:: 2008-02-21 21:06:07
+   :category: code
 
 Awesome 3d
 ==========

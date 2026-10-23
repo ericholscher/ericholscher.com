@@ -1,4 +1,5 @@
 .. post:: 2010-02-06 10:02:32
+   :category: code
 
 The role of designers in the Django community
 =============================================

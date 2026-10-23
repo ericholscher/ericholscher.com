@@ -1,4 +1,5 @@
 .. post:: 2009-10-15 23:12:10
+   :category: code
 
 Easily Running the Django Test Suite
 ====================================

@@ -1,4 +1,5 @@
 .. post:: 2011-01-10 19:09:27
+   :category: code
 
 Handling Django Settings Files
 ==============================

@@ -42,6 +42,24 @@ version = "1.0"
 release = "1.0"
 exclude_patterns = ["_build", "include/*"]
 pygments_style = "sphinx"
+import json
+from pathlib import Path
+
+_data = Path(__file__).parent / "_data"
+html_context = {
+    # Category landing pages: slug -> title and intro. Posts opt in with :category: <slug>.
+    "topo_categories": {
+        "documentation": ("Documentation", "How software gets explained: Read the Docs, Write the Docs, Sphinx, and the craft of docs."),
+        "open-source": ("Open source", "Sustaining open source projects and the businesses around them."),
+        "community": ("Community", "Conferences, events, and making rooms that are easier to walk into."),
+        "code": ("Code", "Django, Python, and the tools of the trade. Much of it from the early years."),
+        "outside": ("Outside", "Long trails, bike tours, and the places they go through."),
+        "link-blog": ("Notes", "Short pointers to things worth reading, with a line or two of why."),
+    },
+    "topo_hikes": json.loads((_data / "hikes.json").read_text()),
+    "topo_places": json.loads((_data / "places.json").read_text()),
+}
+
 html_theme_path = ["_themes"]
 html_theme = "topo"
 html_sidebars = {

@@ -1,4 +1,5 @@
 .. post:: 2009-11-09 15:33:37
+   :category: code
 
 Correct way to handle mobile browsers
 =====================================

@@ -1,4 +1,5 @@
 .. post:: 2008-11-26 20:41:05
+   :category: code
 
 Testmaker 0.2: Rewritten and improved
 =====================================

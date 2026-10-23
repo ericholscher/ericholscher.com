@@ -1,4 +1,5 @@
 .. post:: 2008-11-07 17:13:36
+   :category: code
 
 Software that I use: Essentials 2008
 ====================================

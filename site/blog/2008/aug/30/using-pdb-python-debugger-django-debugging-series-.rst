@@ -1,4 +1,5 @@
 .. post:: 2008-08-30 21:36:21
+   :category: code
 
 Using pdb, the Python Debugger (Django Debugging Series, Part 3)
 ================================================================

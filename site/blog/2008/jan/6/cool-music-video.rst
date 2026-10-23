@@ -1,4 +1,5 @@
 .. post:: 2008-01-06 06:56:11
+   :category: code
 
 Cool Music Video
 ================

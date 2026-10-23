@@ -1,0 +1,44 @@
+{#- Shared post-list markup for the home page, the archive, and category landing pages. -#}
+{%- macro kind(post) %}
+{%- set cats = post.category|map('string')|list if post.category else [] %}
+{%- if 'link-blog' in cats %}<span class="topo-kind">link</span>{% endif %}
+{%- endmacro %}
+
+{%- macro entries(posts, pagename) %}
+{%- for post in posts %}
+<article class="topo-entry">
+  <div class="topo-entry-meta"><time class="topo-entry-date" datetime="{{ post.date.strftime('%Y-%m-%d') }}">{{ post.date.strftime('%b %-d, %Y') }}</time>{{ kind(post) }}</div>
+  <div class="topo-entry-body">
+    <h3><a href="{{ pathto(post.docname) }}{{ anchor(post) }}">{{ post.title }}</a></h3>
+    <div class="topo-entry-excerpt">{{ post.to_html(pagename) }}</div>
+  </div>
+</article>
+{%- endfor %}
+{%- endmacro %}
+
+{#- Compact list without excerpts, for topic blocks. -#}
+{%- macro titles(posts, pagename) %}
+<ul class="topo-titles">
+{%- for post in posts %}
+  <li><time datetime="{{ post.date.strftime('%Y-%m-%d') }}">{{ post.date.strftime('%b %Y') }}</time><a href="{{ pathto(post.docname) }}{{ anchor(post) }}">{{ post.title }}</a></li>
+{%- endfor %}
+</ul>
+{%- endmacro %}
+
+{#- Topic cards: one per category in topo_categories that has posts. -#}
+{%- macro topics(pagename, per=3) %}
+<div class="topo-topics">
+{%- for slug, meta in topo_categories.items() %}
+{%- set coll = ablog.category[slug] %}
+{%- if coll and coll|length %}
+  <section class="topo-topic">
+    <h3><a href="{{ pathto(coll.docname) }}">{{ meta[0] }}</a> <span class="topo-topic-count">{{ coll|length }}</span></h3>
+    <p>{{ meta[1] }}</p>
+    {%- set recent = [] %}
+    {%- for post in coll %}{% if loop.index <= per %}{% set _ = recent.append(post) %}{% endif %}{% endfor %}
+    {{ titles(recent, pagename) }}
+  </section>
+{%- endif %}
+{%- endfor %}
+</div>
+{%- endmacro %}

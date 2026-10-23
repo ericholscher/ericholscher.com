@@ -1,4 +1,5 @@
 .. post:: Oct 6, 2016
+   :category: documentation
    :tags: semantic meaning, markdown, reStructuredText, semantics, python
 
 .. _semantic-meaning:

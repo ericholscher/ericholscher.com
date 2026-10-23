@@ -1,4 +1,5 @@
 .. post:: 2008-01-07 09:51:05
+   :category: code
 
 Code on Launchpad
 =================

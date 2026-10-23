@@ -1,4 +1,5 @@
 .. post:: 2009-11-22 16:05:26
+   :category: code
 
 Correct way to handle default model fields.
 ===========================================

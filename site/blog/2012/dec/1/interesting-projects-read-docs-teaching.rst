@@ -1,4 +1,5 @@
 .. post:: 2012-12-01 18:27:15
+   :category: documentation
 
 Interesting projects on Read the Docs: Teaching
 ===============================================

@@ -1,4 +1,5 @@
 .. post:: 2008-11-15 17:27:37
+   :category: code
 
 Debugging Django in Production Environments
 ===========================================

@@ -1,4 +1,5 @@
 .. post:: 2010-11-16 21:01:00
+   :category: code
 
 Using Haystack to index non-database content
 ============================================

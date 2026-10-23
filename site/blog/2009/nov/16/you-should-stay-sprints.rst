@@ -1,4 +1,5 @@
 .. post:: 2009-11-16 18:24:41
+   :category: community
 
 You should stay for the sprints
 ===============================

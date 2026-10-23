@@ -1,4 +1,5 @@
 .. post:: 2008-10-05 20:09:24
+   :category: code
 
 Big list of Django tips (and some python tips too) 
 ===================================================

@@ -1,4 +1,5 @@
 .. post:: 2008-11-20 20:24:01
+   :category: code
 
 Gentlemans agreement on Django templates
 ========================================

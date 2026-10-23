@@ -1,4 +1,5 @@
 .. post:: 2009-11-03 20:55:35
+   :category: code
 
 Making Template Tag Parsing Easier
 ==================================

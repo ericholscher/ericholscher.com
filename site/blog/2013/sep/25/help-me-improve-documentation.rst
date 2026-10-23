@@ -1,4 +1,5 @@
 .. post:: 2013-09-25 01:00:00
+   :category: documentation
 
 Help me improve documentation
 =============================

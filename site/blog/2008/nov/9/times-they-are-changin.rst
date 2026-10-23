@@ -1,4 +1,5 @@
 .. post:: 2008-11-09 11:49:43
+   :category: code
 
 The times, they are a changin
 =============================

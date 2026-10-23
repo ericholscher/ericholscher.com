@@ -1,4 +1,5 @@
 .. post:: 2008-11-13 16:43:02
+   :category: code
 
 Encouraging Testing in Django
 =============================

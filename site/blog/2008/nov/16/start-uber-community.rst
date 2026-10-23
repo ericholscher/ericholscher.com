@@ -1,4 +1,5 @@
 .. post:: 2008-11-16 06:34:57
+   :category: code
 
 A start to the uber community
 =============================

@@ -1,4 +1,5 @@
 .. post:: Feb 13, 2017
+   :category: documentation
    :tags: docs, json, brain, analogy, python
 
 Documentation is JSON for the Brain

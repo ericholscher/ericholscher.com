@@ -1,4 +1,5 @@
 .. post:: 2008-11-02 21:01:00
+   :category: code
 
 Python gems of my own
 =====================

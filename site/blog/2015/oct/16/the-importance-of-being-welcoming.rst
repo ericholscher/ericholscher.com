@@ -1,4 +1,5 @@
 .. post:: 2015-10-16 12:00:00
+   :category: community
 
 The Importance of Being Welcoming
 =================================

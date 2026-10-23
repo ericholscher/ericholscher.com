@@ -1,4 +1,5 @@
 .. post:: 2010-08-22 12:00:00
+   :category: code
 
 Lessons Learned From The Dash: Nginx SSI
 ========================================

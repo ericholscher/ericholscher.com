@@ -1,4 +1,5 @@
 .. post:: 2007-12-20 20:00:00
+   :category: code
 
 Browser Tabs
 ============

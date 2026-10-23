@@ -1,4 +1,5 @@
 .. post:: 2009-04-16 11:16:18
+   :category: code
 
 Testing AJAX Views in Django
 ============================

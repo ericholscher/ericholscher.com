@@ -1,4 +1,5 @@
 .. post:: 2008-11-05 03:10:17
+   :category: code
 
 Introduction to Python/Django tests: Fixtures
 =============================================

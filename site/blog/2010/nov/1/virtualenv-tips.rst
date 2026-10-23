@@ -1,4 +1,5 @@
 .. post:: 2010-11-01 18:00:00
+   :category: code
 
 Virtualenv Tips
 ===============

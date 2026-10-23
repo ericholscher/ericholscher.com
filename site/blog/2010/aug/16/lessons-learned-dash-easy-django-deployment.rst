@@ -1,4 +1,5 @@
 .. post:: 2010-08-16 18:00:00
+   :category: code
 
 Lessons Learned From The Dash: Easy Django Deployment
 =====================================================
