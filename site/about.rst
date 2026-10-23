@@ -5,6 +5,7 @@ About me
    :alt: Eric Holscher, smiling, in a blue-gray collared shirt against a dark gray backdrop
    :width: 280px
    :align: right
+   :class: no-scaled-link
 
 Quick bio
 ---------
