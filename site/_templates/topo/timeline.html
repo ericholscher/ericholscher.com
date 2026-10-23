@@ -1,16 +1,20 @@
-{#- Hike timeline, data in site/_data/hikes.json -#}
+{#- Hike timeline, data in site/_data/hikes.json. Grouped by year, newest year first. -#}
 <section class="topo-timeline" id="hikes">
   <h2 class="topo-plaque">Long walks and rides</h2>
-  <ol class="topo-tl">
-  {%- for h in topo_hikes %}
-    <li class="topo-tl-item">
-      <span class="topo-tl-year">{{ h.year }}</span>
-      <div class="topo-tl-body">
-        <h3>{% if h.link %}<a href="{{ pathto(h.link) }}">{{ h.name }}</a>{% else %}{{ h.name }}{% endif %}</h3>
-        <p class="topo-tl-meta">{% if h.kind %}<span class="topo-kind topo-kind-{{ h.kind }}">{{ h.kind|replace("-", " ") }}</span>{% endif %}{{ h.when }}{% if h.where %} &middot; {{ h.where }}{% endif %}</p>
-        {%- if h.note %}<p>{{ h.note }}</p>{% endif %}
-      </div>
-    </li>
+  <div class="topo-tl">
+  {%- for year, items in topo_hikes|groupby('year')|list|reverse %}
+    <section class="topo-tl-year-block" id="hikes-{{ year }}">
+      <h3 class="topo-tl-yearhead">{{ year }} <span class="topo-tl-count">{{ items|length }} {{ 'trip' if items|length == 1 else 'trips' }}</span></h3>
+      <ol class="topo-tl-list">
+      {%- for h in items %}
+        <li class="topo-tl-item">
+          <h4>{% if h.link %}<a href="{{ pathto(h.link) }}">{{ h.name }}</a>{% else %}{{ h.name }}{% endif %}</h4>
+          <p class="topo-tl-meta">{% if h.kind %}<span class="topo-kind topo-kind-{{ h.kind }}">{{ h.kind|replace("-", " ") }}</span>{% endif %}{{ h.when }}{% if h.where %} &middot; {{ h.where }}{% endif %}</p>
+          {%- if h.note %}<p class="topo-tl-note">{{ h.note }}</p>{% endif %}
+        </li>
+      {%- endfor %}
+      </ol>
+    </section>
   {%- endfor %}
-  </ol>
+  </div>
 </section>

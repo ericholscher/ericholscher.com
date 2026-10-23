@@ -1,13 +1,21 @@
-{#- Places map, data in site/_data/places.json. Equirectangular to match world-land.html. -#}
+{#- Places map, data in site/_data/places.json. Equirectangular to match world-land.html.
+    Year buttons are a small progressive enhancement: without JavaScript every pin and group shows. -#}
 {%- set W = 1000 %}{% set TOP = 84 %}{% set BOT = -58 %}{% set H = (W * (TOP - BOT) / 360)|round(0) %}
+{%- set ns = namespace(years=[]) %}
+{%- for p in topo_places %}{% for y in p.years or [] %}{% if y not in ns.years %}{% set ns.years = ns.years + [y] %}{% endif %}{% endfor %}{% endfor %}
+{%- set all_years = ns.years|sort(reverse=true) %}
 <section class="topo-places" id="places">
   <h2 class="topo-plaque">Places</h2>
+  <div class="topo-year-filter" role="group" aria-label="Show places by year" hidden>
+    <button type="button" data-year="all" aria-pressed="true">All</button>
+    {%- for y in all_years %}<button type="button" data-year="{{ y }}" aria-pressed="false">{{ y }}</button>{% endfor %}
+  </div>
   <figure class="topo-map-figure">
-    <svg class="topo-world" viewBox="0 {{ ((TOP - 75) / (TOP - BOT) * H)|round(0) }} {{ W }} {{ ((75 - (-56)) / (TOP - BOT) * H)|round(0) }}" role="img" aria-label="World map with places lived, hiked, and visited">
+    <svg class="topo-world" viewBox="0 {{ ((TOP - 75) / (TOP - BOT) * H)|round(0) }} {{ W }} {{ ((75 - (-56)) / (TOP - BOT) * H)|round(0) }}" role="img" aria-label="World map with places lived, walked, and visited">
       {% include "topo/world-land.html" %}
       {%- for p in topo_places %}
       {%- set x = ((p.lon + 180) / 360 * W)|round(1) %}{% set y = ((TOP - p.lat) / (TOP - BOT) * H)|round(1) %}
-      <g class="topo-pin topo-pin-{{ p.kind }}"><circle cx="{{ x }}" cy="{{ y }}" r="{% if p.kind == 'lived' %}5.5{% else %}4{% endif %}"><title>{{ p.name }}{% if p.note %} · {{ p.note }}{% endif %}</title></circle></g>
+      <g class="topo-pin topo-pin-{{ p.kind }}" data-years="{{ (p.years or [])|join(' ') }}"><circle cx="{{ x }}" cy="{{ y }}" r="{% if p.kind == 'lived' %}5.5{% else %}4{% endif %}"><title>{{ p.name }}{% if p.note %} · {{ p.note }}{% endif %}</title></circle></g>
       {%- endfor %}
     </svg>
     <figcaption>
@@ -17,15 +25,44 @@
     </figcaption>
   </figure>
   <div class="topo-place-groups">
-  {%- for kind, label in [("lived", "Lived"), ("hiked", "Walked"), ("visited", "Visited")] %}
-    <section class="topo-place-group">
-      <h3><span class="topo-dot topo-dot-{{ kind }}"></span>{{ label }}</h3>
+  {%- for y in all_years %}
+    <section class="topo-place-group" data-year="{{ y }}">
+      <h3>{{ y }}</h3>
       <ul class="topo-place-list">
-      {%- for p in topo_places if p.kind == kind %}
-        <li><span class="topo-place-name">{{ p.name }}</span>{% if p.note %}<span class="topo-place-note">{{ p.note }}</span>{% endif %}</li>
+      {%- for p in topo_places if p.years and y in p.years %}
+        <li><span class="topo-dot topo-dot-{{ p.kind }}" aria-hidden="true"></span><span class="topo-place-name">{{ p.name }}</span>{% if p.note %}<span class="topo-place-note">{{ p.note }}</span>{% endif %}</li>
       {%- endfor %}
       </ul>
     </section>
   {%- endfor %}
+    <section class="topo-place-group topo-place-home" data-year="home">
+      <h3>Home, over the years</h3>
+      <ul class="topo-place-list">
+      {%- for p in topo_places if p.kind == 'lived' %}
+        <li><span class="topo-dot topo-dot-lived" aria-hidden="true"></span><span class="topo-place-name">{{ p.name }}</span>{% if p.note %}<span class="topo-place-note">{{ p.note }}</span>{% endif %}</li>
+      {%- endfor %}
+      </ul>
+    </section>
   </div>
+  <script>
+  (function () {
+    var root = document.getElementById('places'); if (!root) return;
+    var bar = root.querySelector('.topo-year-filter'); bar.hidden = false;
+    var buttons = bar.querySelectorAll('button');
+    var pins = root.querySelectorAll('.topo-pin');
+    var groups = root.querySelectorAll('.topo-place-group');
+    function show(year) {
+      buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.year === year)); });
+      pins.forEach(function (p) {
+        var ys = p.dataset.years.split(' ');
+        var on = year === 'all' || p.classList.contains('topo-pin-lived') || ys.indexOf(year) !== -1;
+        p.classList.toggle('is-dim', !on);
+      });
+      groups.forEach(function (g) {
+        g.hidden = !(year === 'all' || g.dataset.year === year || g.dataset.year === 'home');
+      });
+    }
+    buttons.forEach(function (b) { b.addEventListener('click', function () { show(b.dataset.year); }); });
+  })();
+  </script>
 </section>
