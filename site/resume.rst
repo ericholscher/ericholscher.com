@@ -33,7 +33,7 @@ Projects & Organizations
 
 * PyCascades - https://www.pycascades.com/
 
-    * Role: Co-founder
+    * Role: Co-founder, organizer 2018-2020, and co-chair of PyCascades 2020 in Portland
     * Regional Python conference in the Pacific Northwest, first held in 2018
 
 * EthicalAds - https://www.ethicalads.io/

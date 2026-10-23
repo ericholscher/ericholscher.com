@@ -102,6 +102,6 @@ Organizing & Speaking
 ---------------------
 
 * Write the Docs Portland, 2013 to present
-* PyCascades, co-founder, 2018
+* PyCascades: co-founder, organizer 2018-2020, co-chair of PyCascades 2020 in Portland
 
 .. _email me: mailto:eric@ericholscher.com?subject=Speaking%20Engagement
