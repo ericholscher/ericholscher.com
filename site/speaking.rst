@@ -29,6 +29,13 @@ Videos
 ------
 
 Here are a few videos of my previous talks.
+Most of my recorded talks, back to 2009, are collected `on PyVideo <https://pyvideo.org/speaker/eric-holscher.html>`_.
+
+Documenting Django Code in 2022 - DjangoCon US 2022
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+How to document a Django project today, with Sphinx and Read the Docs.
+The recording is `on PyVideo <https://pyvideo.org/djangocon-us-2022/documenting-django-code-in-2022.html>`__.
 
 GitHub webcast: Using GitHub for documentation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -84,12 +91,14 @@ Past Events
 I have spoken at the following events,
 on a number of topics including Read the Docs, IRC bots, Testing, and Documentation:
 
+* DjangoCon US 2022
 * Keynote: PyCon Colombia 2017
 * Keynote: PyCaribbean 2016
+* PyCon US 2016
 * ConFoo Vancouver 2016
 * Open Source & Feelings 2015
 * Django Under the Hood 2015
-* DjangoCon US 2015, 2011, 2010
+* DjangoCon US 2015, 2011, 2010, 2009
 * Django Birthday 2015
 * Keynote: PyCon Malaysia 2014
 * PyCon Philippines 2014
