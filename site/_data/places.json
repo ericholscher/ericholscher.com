@@ -1586,5 +1586,23 @@
     "years": [
       2022
     ]
+  },
+  {
+    "name": "Huế",
+    "lat": 16.46,
+    "lon": 107.59,
+    "kind": "visited",
+    "years": [
+      2018
+    ]
+  },
+  {
+    "name": "Cleveland",
+    "lat": 41.5,
+    "lon": -81.69,
+    "kind": "visited",
+    "years": [
+      2019
+    ]
   }
 ]
