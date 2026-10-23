@@ -1604,5 +1604,14 @@
     "years": [
       2019
     ]
+  },
+  {
+    "name": "Malta",
+    "lat": 35.91,
+    "lon": 14.5,
+    "kind": "visited",
+    "years": [
+      2019
+    ]
   }
 ]
