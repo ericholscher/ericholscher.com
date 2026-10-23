@@ -27,7 +27,7 @@
   <a class="topo-wordmark" href="{{ pathto(root_doc) }}">{{ mark(30) }}<span>{{ docstitle|e }}</span></a>
   <nav class="topo-nav" aria-label="Main">
     <a href="{{ pathto('blog/index') }}">Blog</a>
-    {%- if ablog is defined and ablog.category['outside'] %}<a href="{{ pathto(ablog.category['outside'].docname) }}">Outside</a>{% endif %}
+    <a href="{{ pathto('adventures') }}">Adventures</a>
     <a href="{{ pathto('speaking') }}">Speaking</a>
     <a href="{{ pathto('about') }}">About</a>
   </nav>

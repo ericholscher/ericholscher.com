@@ -127,7 +127,14 @@
       if (expanded) center();
     }
 
-    buttons.forEach(function (b) { b.addEventListener('click', function () { show(b.dataset.year); }); });
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () {
+        show(b.dataset.year);
+        document.dispatchEvent(new CustomEvent('topo:map-year', { detail: b.dataset.year }));
+      });
+    });
+    // A year permalink (#2016) sets the map to that year; see timeline.html.
+    document.addEventListener('topo:year', function (e) { show(e.detail); });
     expand.addEventListener('click', function () { setExpanded(true); });
     close.addEventListener('click', function () { setExpanded(false); });
     map.querySelectorAll('.topo-map-zoom').forEach(function (b) {
@@ -222,7 +229,11 @@
     // "Show 2016 on the map" buttons in the year-by-year log.
     document.querySelectorAll('[data-map-year]').forEach(function (b) {
       b.hidden = false;
-      b.addEventListener('click', function () { show(b.dataset.mapYear); root.scrollIntoView({ block: 'start' }); });
+      b.addEventListener('click', function () {
+        show(b.dataset.mapYear);
+        document.dispatchEvent(new CustomEvent('topo:map-year', { detail: b.dataset.mapYear }));
+        root.scrollIntoView({ block: 'start' });
+      });
     });
     sizePins();
   });
