@@ -168,6 +168,30 @@
     "note": "The loop around all three peaks, retracing a trip from a few years earlier."
   },
   {
+    "year": "2023",
+    "kind": "rafting",
+    "when": "May 2023",
+    "name": "John Day River",
+    "where": "Central Oregon",
+    "note": "A multi-day float through the canyons of the John Day."
+  },
+  {
+    "year": "2024",
+    "kind": "rafting",
+    "when": "May 2024",
+    "name": "Lower John Day River",
+    "where": "North-central Oregon",
+    "note": "Five days on the river, a year after the first trip."
+  },
+  {
+    "year": "2024",
+    "kind": "backpacking",
+    "when": "August 2024",
+    "name": "Oregon Coast Trail",
+    "where": "North coast, around Oswald West",
+    "note": "Five days of beaches, headlands, and coastal forest."
+  },
+  {
     "year": "2024",
     "kind": "thru-hike",
     "when": "August 2024",
@@ -175,6 +199,14 @@
     "where": "California and Nevada",
     "note": "The full loop over 16 days, with Meredith.",
     "link": "blog/2025/jan/15/the-camino-de-costa-rica"
+  },
+  {
+    "year": "2024",
+    "kind": "backpacking",
+    "when": "September 2024",
+    "name": "Timberline Trail",
+    "where": "Mount Hood, Oregon",
+    "note": "The full loop around Mount Hood over five days."
   },
   {
     "year": "2025",
