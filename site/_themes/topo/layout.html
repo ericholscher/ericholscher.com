@@ -18,10 +18,8 @@
   <a class="topo-wordmark" href="{{ pathto(root_doc) }}">{{ mark(30) }}<span>{{ docstitle|e }}</span></a>
   <nav class="topo-nav" aria-label="Main">
     <a href="{{ pathto('blog/index') }}">Blog</a>
-    <a href="{{ pathto('about') }}">About</a>
     <a href="{{ pathto('speaking') }}">Speaking</a>
-    <a href="{{ pathto('interviews') }}">Interviews</a>
-    <a href="{{ pathto('backpacking') }}">Backpacking</a>
+    <a href="{{ pathto('about') }}">About</a>
   </nav>
 </header>
 {%- endblock %}
@@ -55,13 +53,11 @@
 <div class="topo-page">
   {%- if is_home %}
   <section class="topo-hero">
+    {#- The map is a CSS background texture behind the copy; see .topo-hero::before in topo.css -#}
     <div class="topo-hero-copy body" role="main">
       {% block body %} {% endblock %}
     </div>
-    <figure class="topo-hero-art topo-map">
-      <img src="{{ pathto('_static/img/three-sisters-usgs.jpg', 1) }}" width="1600" height="1200" alt="USGS topographic map of the Three Sisters, with the Pacific Crest Trail running north to south between the peaks">
-      <figcaption>USGS topographic map, Three Sisters Wilderness</figcaption>
-    </figure>
+    <span class="topo-map-credit">Map: USGS, Three Sisters Wilderness</span>
   </section>
   {%- endif %}
 

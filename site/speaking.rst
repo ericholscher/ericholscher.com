@@ -13,6 +13,8 @@ A lot of the value in conferences comes from the hallways.
 If I speak at your conference,
 I will also attend.
 
+If you'd rather listen than read, I keep a list of :doc:`podcast interviews </interviews>` as well.
+
 I am interested in speaking on the following topics:
 
     * Documentation
