@@ -168,12 +168,36 @@
     "note": "The loop around all three peaks, retracing a trip from a few years earlier."
   },
   {
+    "year": "2021",
+    "kind": "backpacking",
+    "when": "August 2021",
+    "name": "Strawberry Mountain Wilderness",
+    "where": "Eastern Oregon",
+    "note": "Five days in the Strawberry Range."
+  },
+  {
+    "year": "2021",
+    "kind": "backpacking",
+    "when": "September 2021",
+    "name": "PCT loop from Snoqualmie Pass",
+    "where": "Washington Cascades",
+    "note": "A week-long loop that followed the Pacific Crest Trail."
+  },
+  {
     "year": "2023",
     "kind": "rafting",
     "when": "May 2023",
     "name": "John Day River",
     "where": "Central Oregon",
     "note": "A multi-day float through the canyons of the John Day."
+  },
+  {
+    "year": "2023",
+    "kind": "backpacking",
+    "when": "August and September 2023",
+    "name": "Jasper backcountry",
+    "where": "Jasper National Park, Alberta",
+    "note": "A few three-day backpacking trips over two weeks in the Canadian Rockies."
   },
   {
     "year": "2024",

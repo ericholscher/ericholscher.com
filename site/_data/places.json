@@ -1173,7 +1173,8 @@
     "kind": "visited",
     "years": [
       2022
-    ]
+    ],
+    "note": "By car"
   },
   {
     "name": "Reykjavík and Þingvellir",
@@ -1200,7 +1201,8 @@
     "kind": "visited",
     "years": [
       2022
-    ]
+    ],
+    "note": "A road trip through northern Portugal"
   },
   {
     "name": "Salt Lake City",
@@ -1216,10 +1218,11 @@
     "name": "Jasper National Park",
     "lat": 52.87,
     "lon": -118.08,
-    "kind": "visited",
+    "kind": "hiked",
     "years": [
       2023
-    ]
+    ],
+    "note": "Three-day backpacking trips"
   },
   {
     "name": "Panama",
@@ -1289,5 +1292,24 @@
       2024
     ],
     "note": "Around Oswald West"
+  },
+  {
+    "name": "Strawberry Mountain Wilderness",
+    "lat": 44.31,
+    "lon": -118.72,
+    "kind": "hiked",
+    "years": [
+      2021
+    ]
+  },
+  {
+    "name": "PCT, Snoqualmie Pass",
+    "lat": 47.47,
+    "lon": -121.25,
+    "kind": "hiked",
+    "years": [
+      2021
+    ],
+    "note": "A week-long loop"
   }
 ]
