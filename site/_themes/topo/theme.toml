@@ -1,0 +1,8 @@
+[theme]
+inherit = "basic"
+stylesheets = ["topo.css"]
+sidebars = ["sidebar/about.html", "sidebar/archive.html", "sidebar/walking.html", "sidebar/elsewhere.html", "searchbox.html"]
+pygments_style = { default = "friendly" }
+
+[options]
+nosidebar = "false"

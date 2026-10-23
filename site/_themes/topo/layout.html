@@ -1,0 +1,122 @@
+{#- Topo: a theme for ericholscher.com. Inherits Sphinx's basic theme. -#}
+{%- extends "basic/layout.html" %}
+
+{%- set is_home = pagename == root_doc %}
+{%- set is_post = ablog is defined and pagename in ablog %}
+{%- set is_archive = pagename == 'blog/index' %}
+
+{%- block htmltitle %}
+  {%- if is_home %}
+    <title>{{ docstitle|e }}</title>
+  {%- else %}
+    <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
+  {%- endif %}
+{%- endblock %}
+
+{%- block header %}
+<header class="topo-masthead">
+  <a class="topo-wordmark" href="{{ pathto(root_doc) }}">{{ docstitle|e }}</a>
+  <nav class="topo-nav" aria-label="Main">
+    <a href="{{ pathto('blog/index') }}">Blog</a>
+    <a href="{{ pathto('about') }}">About</a>
+    <a href="{{ pathto('speaking') }}">Speaking</a>
+    <a href="{{ pathto('interviews') }}">Interviews</a>
+    <a href="{{ pathto('backpacking') }}">Backpacking</a>
+  </nav>
+</header>
+{%- endblock %}
+
+{%- block relbar1 %}{% endblock %}
+{%- block relbar2 %}{% endblock %}
+
+{%- macro contour() %}
+{#- Concentric contour lines. Lives in its own grid cell so it never sits under copy. -#}
+<svg class="topo-contour" viewBox="0 0 520 360" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+  <g fill="none" stroke="currentColor" stroke-width="1">
+    <path transform="translate(260 180) scale(2.55)" d="M-90 0 C-85 -30 -50 -48 -10 -44 C30 -40 70 -30 85 -5 C98 20 70 42 30 46 C-10 50 -60 44 -82 25 C-95 15 -94 8 -90 0 Z"></path>
+    <path transform="translate(264 182) scale(2.15) rotate(-3)" d="M-90 0 C-85 -30 -50 -48 -10 -44 C30 -40 70 -30 85 -5 C98 20 70 42 30 46 C-10 50 -60 44 -82 25 C-95 15 -94 8 -90 0 Z"></path>
+    <path transform="translate(268 184) scale(1.78) rotate(-6)" d="M-90 0 C-85 -30 -50 -48 -10 -44 C30 -40 70 -30 85 -5 C98 20 70 42 30 46 C-10 50 -60 44 -82 25 C-95 15 -94 8 -90 0 Z"></path>
+    <path transform="translate(272 186) scale(1.44) rotate(-9)" d="M-90 0 C-85 -30 -50 -48 -10 -44 C30 -40 70 -30 85 -5 C98 20 70 42 30 46 C-10 50 -60 44 -82 25 C-95 15 -94 8 -90 0 Z" stroke-width="1.6"></path>
+    <path transform="translate(276 188) scale(1.12) rotate(-12)" d="M-90 0 C-85 -30 -50 -48 -10 -44 C30 -40 70 -30 85 -5 C98 20 70 42 30 46 C-10 50 -60 44 -82 25 C-95 15 -94 8 -90 0 Z"></path>
+    <path transform="translate(280 190) scale(.83) rotate(-15)" d="M-90 0 C-85 -30 -50 -48 -10 -44 C30 -40 70 -30 85 -5 C98 20 70 42 30 46 C-10 50 -60 44 -82 25 C-95 15 -94 8 -90 0 Z"></path>
+    <path transform="translate(284 192) scale(.56) rotate(-18)" d="M-90 0 C-85 -30 -50 -48 -10 -44 C30 -40 70 -30 85 -5 C98 20 70 42 30 46 C-10 50 -60 44 -82 25 C-95 15 -94 8 -90 0 Z"></path>
+    <path transform="translate(288 194) scale(.31) rotate(-21)" d="M-90 0 C-85 -30 -50 -48 -10 -44 C30 -40 70 -30 85 -5 C98 20 70 42 30 46 C-10 50 -60 44 -82 25 C-95 15 -94 8 -90 0 Z" stroke-width="1.6"></path>
+  </g>
+  <path class="topo-trail" d="M20 330 C 90 312 160 296 240 304 C 330 314 410 306 500 280" fill="none" stroke-width="1.2" stroke-dasharray="1 4"></path>
+</svg>
+{%- endmacro %}
+
+{%- macro glyph(post) %}
+  {%- set cats = post.category|map('string')|list if post.category else [] %}
+  {%- if 'photo' in cats or 'photos' in cats %}
+    <svg class="topo-glyph" width="12" height="12" viewBox="0 0 12 12" role="img" aria-label="Photo"><polygon points="6,1 11,11 1,11" fill="#D9772F"></polygon></svg>
+  {%- elif 'link-blog' in cats %}
+    <svg class="topo-glyph" width="12" height="12" viewBox="0 0 12 12" role="img" aria-label="Note"><circle cx="6" cy="6" r="4.5" fill="none" stroke="currentColor"></circle></svg>
+  {%- else %}
+    <svg class="topo-glyph" width="12" height="12" viewBox="0 0 12 12" role="img" aria-label="Essay"><circle cx="6" cy="6" r="5" fill="currentColor"></circle></svg>
+  {%- endif %}
+{%- endmacro %}
+
+{%- block content %}
+<div class="topo-page">
+  {%- if is_home %}
+  <section class="topo-hero">
+    <div class="topo-hero-copy body" role="main">
+      {% block body %} {% endblock %}
+    </div>
+    <div class="topo-hero-art">{{ contour() }}</div>
+  </section>
+  {%- endif %}
+
+  <div class="topo-columns">
+    <main class="topo-main">
+      {%- if not is_home %}
+      <div class="body" role="main">
+        {%- if is_post %}
+          {%- set post = ablog[pagename] %}
+          <p class="topo-dateline">
+            <span class="topo-dateline-glyph">{{ glyph(post) }}</span>
+            {%- if post.date %}<time datetime="{{ post.date.strftime('%Y-%m-%d') }}">{{ post.date.strftime('%B %-d, %Y') }}</time>{% else %}Draft{% endif %}
+            {%- if post.tags %} &middot; {% for tag in post.tags %}<a href="{{ pathto(tag.docname) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}{% endif %}
+          </p>
+        {%- endif %}
+        {{ self.body() }}
+        {%- if is_post %}
+        <aside class="topo-pitch">
+          <p>Hi, I'm Eric. I work on communities in the world of software documentation. If you have thoughts on this post, <a href="mailto:eric@ericholscher.com?subject=Blog Comments">email me</a>.</p>
+        </aside>
+        {%- endif %}
+      </div>
+      {%- endif %}
+
+      {%- if (is_home or is_archive) and ablog is defined %}
+      <section class="topo-recent" id="recent">
+        <div class="topo-recent-head">
+          {%- if is_home %}<h2>Recently</h2>{% else %}<h2>All posts, newest first</h2>{% endif %}
+          <span class="topo-key" aria-hidden="true">&#9679; essay &nbsp; &#9675; note &nbsp; &#9651; photo</span>
+        </div>
+        {%- for post in ablog.recent(10 if is_home else None, pagename) %}
+        <article class="topo-entry">
+          <time class="topo-entry-date" datetime="{{ post.date.strftime('%Y-%m-%d') }}">{{ post.date.strftime('%b %-d, %Y') }}</time>
+          <span class="topo-entry-glyph">{{ glyph(post) }}</span>
+          <div class="topo-entry-body">
+            <h3><a href="{{ pathto(post.docname) }}{{ anchor(post) }}">{{ post.title }}</a></h3>
+            <div class="topo-entry-excerpt">{{ post.to_html(pagename) }}</div>
+          </div>
+        </article>
+        {%- endfor %}
+        {%- if is_home %}<p class="topo-more"><a href="{{ pathto('blog/index') }}">Older posts &rarr;</a></p>{% endif %}
+      </section>
+      {%- endif %}
+    </main>
+    {{ sidebar() }}
+  </div>
+</div>
+{%- endblock %}
+
+{%- block footer %}
+<footer class="topo-footer">
+  <span>&copy; {{ copyright|e }} &middot; Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a href="https://ablog.readthedocs.io/">ABlog</a></span>
+  <span class="topo-footer-note">Contour interval: one post</span>
+</footer>
+{%- endblock %}

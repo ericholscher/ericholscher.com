@@ -1,0 +1,14 @@
+{%- if ablog is defined and ablog.archive %}
+<div class="topo-side-block">
+  <h3 class="topo-side-label"><a href="{{ pathto(ablog.archive.docname) }}">Archive</a></h3>
+  <div class="topo-years">
+    {%- for coll in ablog.archive %}{% if coll %}
+    <a href="{{ pathto(coll.docname) }}">{{ coll }}</a>
+    {%- endif %}{% endfor %}
+  </div>
+  <p class="topo-side-small">
+    Or browse by <a href="{{ pathto(ablog.tags.docname) }}">tag</a>
+    or <a href="{{ pathto(ablog.category.docname) }}">category</a>.
+  </p>
+</div>
+{%- endif %}

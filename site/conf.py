@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import alabaster
 import ablog
 
 extensions = [
@@ -31,9 +30,6 @@ ogp_use_first_image = True
 # }
 # blog_default_location = "Oregon"
 
-fontawesome_link_cdn = (
-    "https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"
-)
 blog_feed_fulltext = True
 blog_feed_length = 10
 blog_feed_archives = True
@@ -46,15 +42,15 @@ version = "1.0"
 release = "1.0"
 exclude_patterns = ["_build", "include/*"]
 pygments_style = "sphinx"
-html_theme_path = [alabaster.get_path()]
-html_theme = "alabaster"
+html_theme_path = ["_themes"]
+html_theme = "topo"
 html_sidebars = {
     "**": [
-        "logo.html",
-        "ablog/postcard.html",
-        "about.html",
+        "sidebar/about.html",
+        "sidebar/archive.html",
+        "sidebar/walking.html",
+        "sidebar/elsewhere.html",
         "searchbox.html",
-        "ablog/archives.html",
     ],
 }
 # globaltoc_collapse = False
@@ -62,7 +58,4 @@ html_sidebars = {
 html_title = blog_title
 html_favicon = "_static/img/favicon.ico"
 html_static_path = ["_static"]
-html_css_files = [
-    'css/custom.css',
-]
 
