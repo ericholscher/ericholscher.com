@@ -282,11 +282,15 @@ ul.postlist p.ablog-post-excerpt { font-size: 16px; color: var(--text-2); margin
 .topo-legend-lived::before, .topo-dot-lived { background: var(--sign); }
 .topo-legend-hiked::before, .topo-dot-hiked { background: var(--forest); }
 .topo-legend-visited::before, .topo-dot-visited { background: var(--blaze); }
-.topo-place-list { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 28px; font-size: 15px; line-height: 1.5; }
-.topo-place-list li { break-inside: avoid; margin-bottom: 4px; }
-.topo-place-note { color: var(--muted); font-size: 13px; }
+.topo-place-groups { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px 24px; align-items: start; }
+.topo-place-group h3 { font-family: var(--mono); font-weight: 400; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; display: flex; align-items: center; }
+.body .topo-place-list, .topo-place-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.body .topo-place-list li, .topo-place-list li { margin: 0; font-size: 15px; line-height: 1.35; }
+.topo-place-name { display: block; color: var(--ink); }
+.topo-place-note { display: block; color: var(--muted); font-size: 12.5px; }
+@media (max-width: 760px) { .topo-place-groups { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 600px) {
-  .topo-place-list { columns: 1; }
+  .topo-place-groups { grid-template-columns: minmax(0, 1fr); }
   .body .topo-tl, .topo-tl { margin-left: 8px; }
   .topo-tl-year { position: static; display: block; width: auto; text-align: left; margin-bottom: 2px; }
 }

@@ -1,18 +1,282 @@
 [
-  {"name": "Washington, D.C.", "lat": 38.9, "lon": -77.04, "kind": "lived", "note": "Born here"},
-  {"name": "Virginia", "lat": 37.3, "lon": -78.5, "kind": "lived", "note": "Shenandoah Valley, Virginia Beach, Fredericksburg"},
-  {"name": "Lawrence, Kansas", "lat": 38.97, "lon": -95.24, "kind": "lived", "note": "2008 to 2010, the Journal-World years"},
-  {"name": "Portland, Oregon", "lat": 45.52, "lon": -122.68, "kind": "lived", "note": "2011 to 2018"},
-  {"name": "Bend, Oregon", "lat": 44.06, "lon": -121.31, "kind": "lived", "note": "2020 to 2025"},
-  {"name": "Mount St. Helens", "lat": 46.19, "lon": -122.19, "kind": "hiked", "note": "2013"},
-  {"name": "Mount Hood", "lat": 45.37, "lon": -121.7, "kind": "hiked", "note": "2012"},
-  {"name": "Crater Lake", "lat": 42.94, "lon": -122.1, "kind": "hiked", "note": "2012"},
-  {"name": "Pacific Crest Trail, Campo", "lat": 32.61, "lon": -116.47, "kind": "hiked", "note": "Start, April 2013"},
-  {"name": "Mount Whitney", "lat": 36.58, "lon": -118.29, "kind": "hiked", "note": "PCT, 2013"},
-  {"name": "Lake Tahoe", "lat": 39.1, "lon": -120.04, "kind": "hiked", "note": "Tahoe Rim Trail, 2024"},
-  {"name": "Puerto Varas, Chile", "lat": -41.32, "lon": -72.98, "kind": "visited", "note": "2019, working remotely"},
-  {"name": "Patagonia", "lat": -49.33, "lon": -72.89, "kind": "hiked", "note": "2019"},
-  {"name": "Costa Rica", "lat": 9.9, "lon": -83.9, "kind": "hiked", "note": "Camino de Costa Rica, 2025"},
-  {"name": "Prague", "lat": 50.08, "lon": 14.43, "kind": "visited", "note": "Write the Docs Prague"},
-  {"name": "Berlin", "lat": 52.52, "lon": 13.4, "kind": "visited", "note": "Conferences"}
+  {
+    "name": "Washington, D.C.",
+    "lat": 38.9,
+    "lon": -77.04,
+    "kind": "lived",
+    "note": "Born here"
+  },
+  {
+    "name": "Virginia",
+    "lat": 37.3,
+    "lon": -78.5,
+    "kind": "lived",
+    "note": "Shenandoah Valley, Virginia Beach, Fredericksburg"
+  },
+  {
+    "name": "Lawrence, Kansas",
+    "lat": 38.97,
+    "lon": -95.24,
+    "kind": "lived",
+    "note": "2008 to 2010, the Journal-World years"
+  },
+  {
+    "name": "Portland, Oregon",
+    "lat": 45.52,
+    "lon": -122.68,
+    "kind": "lived",
+    "note": "2011 to 2018"
+  },
+  {
+    "name": "Bend, Oregon",
+    "lat": 44.06,
+    "lon": -121.31,
+    "kind": "lived",
+    "note": "2020 to 2025"
+  },
+  {
+    "name": "Mount St. Helens",
+    "lat": 46.19,
+    "lon": -122.19,
+    "kind": "hiked",
+    "note": "2013"
+  },
+  {
+    "name": "Mount Hood",
+    "lat": 45.37,
+    "lon": -121.7,
+    "kind": "hiked",
+    "note": "2012"
+  },
+  {
+    "name": "Crater Lake",
+    "lat": 42.94,
+    "lon": -122.1,
+    "kind": "hiked",
+    "note": "2012"
+  },
+  {
+    "name": "Pacific Crest Trail, Campo",
+    "lat": 32.61,
+    "lon": -116.47,
+    "kind": "hiked",
+    "note": "Start, April 2013"
+  },
+  {
+    "name": "Mount Whitney",
+    "lat": 36.58,
+    "lon": -118.29,
+    "kind": "hiked",
+    "note": "PCT, 2013"
+  },
+  {
+    "name": "Lake Tahoe",
+    "lat": 39.1,
+    "lon": -120.04,
+    "kind": "hiked",
+    "note": "Tahoe Rim Trail, 2024"
+  },
+  {
+    "name": "Puerto Varas, Chile",
+    "lat": -41.32,
+    "lon": -72.98,
+    "kind": "visited",
+    "note": "2019, working remotely"
+  },
+  {
+    "name": "Patagonia",
+    "lat": -49.33,
+    "lon": -72.89,
+    "kind": "hiked",
+    "note": "2019"
+  },
+  {
+    "name": "Costa Rica",
+    "lat": 9.9,
+    "lon": -83.9,
+    "kind": "hiked",
+    "note": "Camino de Costa Rica, 2025"
+  },
+  {
+    "name": "Prague",
+    "lat": 50.08,
+    "lon": 14.43,
+    "kind": "visited",
+    "note": "Write the Docs Prague"
+  },
+  {
+    "name": "Berlin",
+    "lat": 52.52,
+    "lon": 13.4,
+    "kind": "visited",
+    "note": "Conferences, most recently Write the Docs in 2025"
+  },
+  {
+    "name": "Salt Cay, Turks and Caicos",
+    "lat": 21.33,
+    "lon": -71.2,
+    "kind": "visited",
+    "note": "Humpback whale season, 2025"
+  },
+  {
+    "name": "Jarabacoa, Dominican Republic",
+    "lat": 19.12,
+    "lon": -70.64,
+    "kind": "visited",
+    "note": "River rafting, 2025"
+  },
+  {
+    "name": "Pittsburgh",
+    "lat": 40.44,
+    "lon": -79.99,
+    "kind": "visited",
+    "note": "PyCon US, 2025"
+  },
+  {
+    "name": "Amsterdam",
+    "lat": 52.37,
+    "lon": 4.9,
+    "kind": "visited",
+    "note": "A week by bike, 2025"
+  },
+  {
+    "name": "Scotland",
+    "lat": 56.8,
+    "lon": -4.2,
+    "kind": "visited",
+    "note": "2025"
+  },
+  {
+    "name": "Ireland",
+    "lat": 53.3,
+    "lon": -7.7,
+    "kind": "visited",
+    "note": "2025"
+  },
+  {
+    "name": "Dubrovnik and Kotor",
+    "lat": 42.42,
+    "lon": 18.77,
+    "kind": "visited",
+    "note": "By ferry, 2025"
+  },
+  {
+    "name": "Durmitor National Park",
+    "lat": 43.13,
+    "lon": 19.03,
+    "kind": "hiked",
+    "note": "2025"
+  },
+  {
+    "name": "Peaks of the Balkans",
+    "lat": 42.55,
+    "lon": 19.95,
+    "kind": "hiked",
+    "note": "2025"
+  },
+  {
+    "name": "Via Alpina, Switzerland",
+    "lat": 46.6,
+    "lon": 7.9,
+    "kind": "hiked",
+    "note": "Kandersteg, Grindelwald, 2025"
+  },
+  {
+    "name": "Milan",
+    "lat": 45.46,
+    "lon": 9.19,
+    "kind": "visited",
+    "note": "Waiting out the rain, 2025"
+  },
+  {
+    "name": "Munich",
+    "lat": 48.14,
+    "lon": 11.58,
+    "kind": "visited",
+    "note": "2025"
+  },
+  {
+    "name": "Carnic Alps High Route",
+    "lat": 46.62,
+    "lon": 12.9,
+    "kind": "hiked",
+    "note": "2025"
+  },
+  {
+    "name": "Triglav National Park",
+    "lat": 46.37,
+    "lon": 13.84,
+    "kind": "hiked",
+    "note": "Lake Bled, Ljubljana, 2025"
+  },
+  {
+    "name": "Alta Via 1, Dolomites",
+    "lat": 46.55,
+    "lon": 12.05,
+    "kind": "hiked",
+    "note": "2025"
+  },
+  {
+    "name": "Venice",
+    "lat": 45.44,
+    "lon": 12.33,
+    "kind": "visited",
+    "note": "2025"
+  },
+  {
+    "name": "Istanbul",
+    "lat": 41.01,
+    "lon": 28.98,
+    "kind": "visited",
+    "note": "2025"
+  },
+  {
+    "name": "Turkish Mediterranean coast",
+    "lat": 36.2,
+    "lon": 29.64,
+    "kind": "visited",
+    "note": "Diving, 2025"
+  },
+  {
+    "name": "Maasai Mara",
+    "lat": -1.5,
+    "lon": 35.15,
+    "kind": "visited",
+    "note": "Safari, 2025"
+  },
+  {
+    "name": "Amboseli",
+    "lat": -2.65,
+    "lon": 37.26,
+    "kind": "visited",
+    "note": "Safari, 2025"
+  },
+  {
+    "name": "Diani Beach, Kenya",
+    "lat": -4.32,
+    "lon": 39.58,
+    "kind": "visited",
+    "note": "2025"
+  },
+  {
+    "name": "Kakamega Forest",
+    "lat": 0.28,
+    "lon": 34.86,
+    "kind": "hiked",
+    "note": "2025"
+  },
+  {
+    "name": "Kyoto",
+    "lat": 35.01,
+    "lon": 135.77,
+    "kind": "visited",
+    "note": "Temples in the hills, 2025"
+  },
+  {
+    "name": "Hiroshima",
+    "lat": 34.39,
+    "lon": 132.45,
+    "kind": "visited",
+    "note": "2025"
+  }
 ]

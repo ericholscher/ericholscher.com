@@ -16,9 +16,16 @@
       <span class="topo-legend topo-legend-visited">Visited</span>
     </figcaption>
   </figure>
-  <ul class="topo-place-list">
-  {%- for p in topo_places %}
-    <li><span class="topo-dot topo-dot-{{ p.kind }}"></span>{{ p.name }}{% if p.note %} <span class="topo-place-note">{{ p.note }}</span>{% endif %}</li>
+  <div class="topo-place-groups">
+  {%- for kind, label in [("lived", "Lived"), ("hiked", "Walked"), ("visited", "Visited")] %}
+    <section class="topo-place-group">
+      <h3><span class="topo-dot topo-dot-{{ kind }}"></span>{{ label }}</h3>
+      <ul class="topo-place-list">
+      {%- for p in topo_places if p.kind == kind %}
+        <li><span class="topo-place-name">{{ p.name }}</span>{% if p.note %}<span class="topo-place-note">{{ p.note }}</span>{% endif %}</li>
+      {%- endfor %}
+      </ul>
+    </section>
   {%- endfor %}
-  </ul>
+  </div>
 </section>
