@@ -11,8 +11,8 @@ Sidebar blocks are plain Jinja templates in ``site/_templates/sidebar/`` and are
 The home page and ``blog/index`` listings are rendered by the theme from ABlog's post data.
 The home page leads with "Most read", a hand-kept list of post docnames in ``html_context["topo_popular"]`` in ``site/conf.py``,
 then the eight most recent titles and the topic cards.
-The blog list is paginated: ``blog/index`` is page 1 and ``blog/page/<n>/`` the rest, generated from ``setup()`` in ``site/conf.py``
-(``topo_per_page`` sets the size). The Archive page (``blog/archive/archive/``) lists every title by year.
+``blog/index`` shows the 20 latest posts, then pages by year: ABlog's year pages (``blog/archive/<year>/``) get
+newer and older year links. The Archive page (``blog/archive/archive/``) lists every title by year.
 Posts in the ``link-blog`` category get a small "link" label next to their date.
 
 Topics are ABlog categories. The ones listed in ``html_context["topo_categories"]`` in ``site/conf.py``

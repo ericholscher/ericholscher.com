@@ -59,7 +59,7 @@ img { max-width: 100%; height: auto; }
   box-shadow: inset 0 -1px 0 var(--sign-2);
 }
 .topo-wordmark { display: inline-flex; align-items: center; gap: 12px; font-family: var(--serif); font-weight: 500; font-size: 28px; line-height: 1; letter-spacing: -0.005em; color: var(--sign-text); border-bottom: 0; }
-.topo-mark { display: block; flex: none; color: var(--sign-text); --mark-snow: var(--sign); }
+.topo-mark { display: block; flex: none; color: var(--sign-text); --mark-snow: var(--sign); position: relative; top: -2.5px; } /* centers the blaze on the letters, not the line box */
 .topo-wordmark:hover { color: var(--sign-gold); }
 .topo-nav { display: flex; flex-wrap: wrap; gap: 8px 22px; }
 .topo-nav a { color: var(--sign-text); border-bottom: 0; font-size: 15px; line-height: 1; padding: 6px 0; letter-spacing: .01em; }
@@ -167,6 +167,7 @@ img { max-width: 100%; height: auto; }
 .body div[style*="width"] { max-width: 100%; box-sizing: border-box; }
 .body iframe[width][height] { aspect-ratio: 16 / 9; height: auto; }
 .body img, .body figure img, .body .figure img { display: block; max-width: 100%; height: auto !important; border: 1px solid var(--rule-strong); }
+.body img.plain { border: 0; } /* transparent illustrations; photos keep the frame */
 .body img.align-right { float: right; max-width: 46%; margin: 4px 0 16px 28px; }
 .body img.align-left { float: left; max-width: 46%; margin: 4px 28px 16px 0; }
 .body img.align-center { margin-left: auto; margin-right: auto; }
@@ -232,6 +233,8 @@ ul.postlist p.ablog-post-excerpt { font-size: 16px; color: var(--text-2); margin
 
 /* Topic blocks */
 .topo-topics-section { margin-top: 44px; }
+.topo-years-section { margin-top: 44px; }
+.topo-years-section .topo-pager { margin-top: 12px; border-top: 0; padding-top: 0; }
 .topo-pager { margin: 32px 0 0; padding-top: 18px; border-top: 1px solid var(--rule); display: flex; flex-direction: column; gap: 14px; }
 .topo-pager-step { display: flex; justify-content: space-between; gap: 12px; font-size: 16px; }
 .topo-pager-step a[rel="next"] { margin-left: auto; }

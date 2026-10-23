@@ -68,8 +68,6 @@ html_context = {
     ],
     "topo_hikes": json.loads((_data / "hikes.json").read_text()),
     "topo_places": json.loads((_data / "places.json").read_text()),
-    # Posts per page on the blog list; page 1 is blog/index, the rest blog/page/<n>.
-    "topo_per_page": 20,
 }
 
 html_theme_path = ["_themes"]
@@ -88,17 +86,3 @@ html_sidebars = {
 html_title = blog_title
 html_favicon = "_static/img/favicon.svg"
 html_static_path = ["_static"]
-
-
-def topo_blog_pages(app):
-    """Older pages of the blog list, blog/page/2 and on. The theme's layout renders them."""
-    from ablog.blog import Blog
-
-    per = html_context["topo_per_page"]
-    pages = -(-len(Blog(app).posts) // per)
-    for n in range(2, pages + 1):
-        yield (f"blog/page/{n}", {"title": f"Blog, page {n}", "topo_page": n}, "page.html")
-
-
-def setup(app):
-    app.connect("html-collect-pages", topo_blog_pages)

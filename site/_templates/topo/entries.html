@@ -42,3 +42,23 @@
 {%- endfor %}
 </div>
 {%- endmacro %}
+
+{#- Paging through the blog by year, using ABlog's year pages, newest first. -#}
+{%- macro year_pager(current=None) %}
+{%- set ys = namespace(list=[], i=-1) %}
+{%- for c in ablog.archive if c %}{% set ys.list = ys.list + [c] %}{% endfor %}
+{%- for c in ys.list %}{% if current and c.name == current.name %}{% set ys.i = loop.index0 %}{% endif %}{% endfor %}
+<nav class="topo-pager" aria-label="Posts by year">
+  {%- if ys.i >= 0 %}
+  <div class="topo-pager-step">
+    {%- if ys.i > 0 %}<a rel="prev" href="{{ pathto(ys.list[ys.i - 1].docname) }}">&larr; {{ ys.list[ys.i - 1] }}</a>{% endif %}
+    {%- if ys.i < ys.list|length - 1 %}<a rel="next" href="{{ pathto(ys.list[ys.i + 1].docname) }}">{{ ys.list[ys.i + 1] }} &rarr;</a>{% endif %}
+  </div>
+  {%- endif %}
+  <ol class="topo-pager-pages">
+    {%- for c in ys.list %}
+    <li>{% if loop.index0 == ys.i %}<span aria-current="page">{{ c }}</span>{% else %}<a href="{{ pathto(c.docname) }}">{{ c }}</a>{% endif %}</li>
+    {%- endfor %}
+  </ol>
+</nav>
+{%- endmacro %}

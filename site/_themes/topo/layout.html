@@ -1,10 +1,10 @@
 {#- Topo: a theme for ericholscher.com. Inherits Sphinx's basic theme. -#}
 {%- extends "basic/layout.html" %}
-{%- from "topo/entries.html" import entries, titles, topics with context %}
+{%- from "topo/entries.html" import entries, titles, topics, year_pager with context %}
 
 {%- set is_home = pagename == root_doc %}
 {%- set is_post = ablog is defined and pagename in ablog %}
-{%- set is_archive = pagename == 'blog/index' or topo_page is defined %}
+{%- set is_archive = pagename == 'blog/index' %}
 
 {%- block htmltitle %}
   {%- if is_home %}
@@ -36,28 +36,11 @@
 <svg class="topo-mark" width="{{ size }}" height="{{ size }}" viewBox="0 0 64 64" role="img" aria-label="Eric Holscher">
   <polygon points="32,5 59,32 32,59 5,32" fill="currentColor" stroke="currentColor" stroke-width="6" stroke-linejoin="round"></polygon>
   <polygon points="32,10 54,32 32,54 10,32" fill="none" stroke="var(--sign-gold)" stroke-width="1.5" stroke-linejoin="round" opacity=".85"></polygon>
-  <path d="M675.7 1350.0V667.2H443.0Q306.7 667.2 220.7 711.0Q134.7 754.8 94.2 830.6Q53.7 906.4 53.7 1002.2Q53.7 1095.1 93.2 1174.3Q132.8 1253.5 218.4 1301.8Q304.0 1350.0 443.1 1350.0ZM707.8 -250.0H607.6V1350.0H881.9V1255.1H707.8ZM958.6 -250.0H858.4V1350.0H1123.2V1312.0L958.6 1263.3Z" fill="var(--mark-snow)" transform="translate(21.996 44) scale(0.01700 -0.01700)"></path>
+  <path d="M675.7 1350.0V667.2H443.0Q306.7 667.2 220.7 711.0Q134.7 754.8 94.2 830.6Q53.7 906.4 53.7 1002.2Q53.7 1095.1 93.2 1174.3Q132.8 1253.5 218.4 1301.8Q304.0 1350.0 443.1 1350.0ZM707.8 -250.0H607.6V1350.0H881.9V1255.1H707.8ZM958.6 -250.0H858.4V1350.0H1123.2V1312.0L958.6 1263.3Z" fill="var(--mark-snow)" transform="translate(21.996 41.33) scale(0.01700 -0.01700)"></path>
 </svg>
 {%- endmacro %}
 
 {%- from "topo/entries.html" import kind with context %}
-
-{%- macro page_url(n) %}{{ pathto('blog/index') if n == 1 else pathto('blog/page/' ~ n) }}{% endmacro %}
-{%- macro pager(page, pages) %}
-{%- if pages > 1 %}
-<nav class="topo-pager" aria-label="Blog pages">
-  <div class="topo-pager-step">
-    {%- if page > 1 %}<a rel="prev" href="{{ page_url(page - 1) }}">&larr; Newer</a>{% endif %}
-    {%- if page < pages %}<a rel="next" href="{{ page_url(page + 1) }}">Older &rarr;</a>{% endif %}
-  </div>
-  <ol class="topo-pager-pages">
-    {%- for n in range(1, pages + 1) %}
-    <li>{% if n == page %}<span aria-current="page">{{ n }}</span>{% else %}<a href="{{ page_url(n) }}">{{ n }}</a>{% endif %}</li>
-    {%- endfor %}
-  </ol>
-</nav>
-{%- endif %}
-{%- endmacro %}
 
 {%- block content %}
 <div class="topo-page">
@@ -83,7 +66,6 @@
             {{ kind(post) }}
           </p>
         {%- endif %}
-        {%- if topo_page is defined %}<h1>Blog</h1>{% endif %}
         {{ self.body() }}
         {%- if is_post %}
         <aside class="topo-pitch">
@@ -119,14 +101,13 @@
         {{ topics(pagename, 3) }}
       </section>
       {%- elif is_archive and ablog is defined %}
-      {%- set per = topo_per_page %}
-      {%- set page = topo_page if topo_page is defined else 1 %}
-      {%- set all_posts = ablog.recent(None)|list %}
-      {%- set pages = (all_posts|length + per - 1) // per %}
       <section class="topo-recent" id="recent">
-        <div class="topo-recent-head"><h2>{% if page == 1 %}Latest posts{% else %}Page {{ page }} of {{ pages }}{% endif %}</h2><a href="{{ pathto(ablog.archive.docname) }}" class="topo-more-link">Every title, by year &rarr;</a></div>
-        {{ entries(all_posts[(page - 1) * per:page * per], pagename) }}
-        {{ pager(page, pages) }}
+        <div class="topo-recent-head"><h2>Latest posts</h2><a href="{{ pathto(ablog.archive.docname) }}" class="topo-more-link">Every title, by year &rarr;</a></div>
+        {{ entries(ablog.recent(20, pagename), pagename) }}
+      </section>
+      <section class="topo-years-section">
+        <div class="topo-recent-head"><h2>Keep reading, by year</h2></div>
+        {{ year_pager() }}
       </section>
       {%- endif %}
     </main>

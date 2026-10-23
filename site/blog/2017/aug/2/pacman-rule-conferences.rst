@@ -46,8 +46,10 @@ More memorably,
 stand like Pac-Man!
 
 .. image:: /_static/img/pacman.png
-   :width: 25%
+   :width: 160px
    :align: center
+   :class: plain
+   :alt: Pac-Man, with a gap in the circle for one more person
 
 
 The new person,
