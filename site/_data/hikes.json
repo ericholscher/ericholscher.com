@@ -182,9 +182,9 @@
     "year": "2018",
     "kind": "road-trip",
     "when": "September and October 2018",
-    "name": "Croatia",
-    "where": "Split, Krka, Plitvice, and the Velebit coast",
-    "note": "A month in Croatia."
+    "name": "Month in Croatia",
+    "where": "Split, Krka, Plitvice, and the Velebit coast, Croatia",
+    "note": "The Dalmatian coast and Croatia's national parks."
   },
   {
     "year": "2018",
@@ -198,8 +198,8 @@
     "year": "2019",
     "kind": "road-trip",
     "when": "February 2019",
-    "name": "Lakes District",
-    "where": "Puerto Varas and Cochamó, Chile",
+    "name": "Chile's Lakes District",
+    "where": "Puerto Varas and Cochamó, northern Patagonia",
     "note": "Patagonia's Lakes District, before Torres del Paine."
   },
   {
@@ -368,9 +368,9 @@
     "year": "2024",
     "kind": "diving",
     "when": "October 2024",
-    "name": "Cabo Pulmo",
-    "where": "Baja California Sur, Mexico",
-    "note": "Diving around a wedding in Baja."
+    "name": "Diving in Baja",
+    "where": "Cabo Pulmo, Baja California Sur, Mexico",
+    "note": "Diving around a wedding."
   },
   {
     "year": "2025",
@@ -461,25 +461,25 @@
     "year": "2025",
     "kind": "train",
     "when": "December 2025 to January 2026",
-    "name": "Japan by train",
-    "where": "Hakone, Kyoto, Kanazawa, Nagano, and Hiroshima",
-    "note": "A month getting around Japan by train."
+    "name": "Month in Japan by train",
+    "where": "Honshu, Japan",
+    "note": "Hakone, Kyoto, Kanazawa, Nagano, and Hiroshima."
   },
   {
     "year": "2026",
     "kind": "diving",
     "when": "February and March 2026",
-    "name": "Raja Ampat",
-    "where": "West Papua, Indonesia",
-    "note": "Diving in Raja Ampat."
+    "name": "Diving in Indonesia",
+    "where": "Raja Ampat, West Papua",
+    "note": "Diving the reefs of Raja Ampat."
   },
   {
     "year": "2026",
     "kind": "day-hike",
     "when": "April 2026",
-    "name": "Sabah",
-    "where": "Kinabalu and Sandakan, Malaysian Borneo",
-    "note": "Day hiking near Kinabalu and a river safari."
+    "name": "Hiking in Borneo",
+    "where": "Sabah, Malaysia",
+    "note": "Day hiking near Mount Kinabalu and a river safari."
   },
   {
     "year": "2026",
