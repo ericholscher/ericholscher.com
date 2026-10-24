@@ -348,6 +348,23 @@ a.topo-kind:hover { color: var(--link-hover); border-color: var(--link-hover) !i
 .topo-log-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin: 12px 0 0; }
 .topo-log-foot .topo-log-map { margin-top: 0; }
 .topo-log-permalink { font-family: var(--mono); font-size: 12px; }
+.topo-log-letter { font-weight: 600; }
+
+/* Year letters (adventures/<year>): the year at a glance, then a few photos for each month. */
+.topo-year-summary { margin: 8px 0 32px; }
+.topo-year-map { margin: 0 0 12px; }
+.topo-year-map .topo-world { border: 1px solid var(--rule-strong); border-radius: 3px; background: var(--hero); }
+.topo-year-map figcaption { display: flex; flex-wrap: wrap; gap: 4px 18px; font-family: var(--mono); font-size: 12px; color: var(--muted); margin-top: 8px; }
+.body .topo-year-trips, .topo-year-trips { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.body .topo-year-trips li, .topo-year-trips li { margin: 0; font-size: 15.5px; line-height: 1.45; }
+.topo-year-trips .topo-kind { margin-right: 6px; }
+.topo-year-trip-when { color: var(--muted); font-size: 14px; }
+.topo-year-more { font-size: 14px; margin: 12px 0 0; }
+.topo-photos { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 16px 0 28px; }
+.body .topo-photos figure, .topo-photos figure { margin: 0; }
+.body .topo-photos img, .topo-photos img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; margin: 0; }
+.body .topo-photos figcaption, .topo-photos figcaption { font-size: 13.5px; line-height: 1.4; color: var(--muted); margin-top: 6px; }
+@media (max-width: 480px) { .topo-photos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; } }
 
 /* Places map. Expands to fill the screen, with zoom and drag to pan. */
 .topo-places { margin: 0 0 40px; }

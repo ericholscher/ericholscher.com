@@ -18,6 +18,10 @@ docs = [
 dev = [
     "sphinx-autobuild",
 ]
+# scripts/prepare_photos.py, for year letters
+photos = [
+    "pillow",
+]
 # import_substack.py
 scripts = [
     "beautifulsoup4",

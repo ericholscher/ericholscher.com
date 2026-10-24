@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 
+import re
+
 import ablog
+from docutils import nodes
+from docutils.parsers.rst import Directive
 
 extensions = [
     "ablog",
@@ -109,5 +113,35 @@ def topo_redirect_pages(app):
         yield (old, {"redirect": new}, "topo/redirect.html")
 
 
+# Year letters: site/adventures/<year>.md, one story per year with photos for each month.
+# A letter is an ABlog post (unlisted draft until its post directive has a date), and the
+# adventure-summary directive marks where the year's trips and map are filled in.
+TOPO_YEAR_LETTER = re.compile(r"^adventures/(\d{4})$")
+TOPO_SUMMARY_SLOT = '<div class="topo-year-summary-slot"></div>'
+
+
+class AdventureSummary(Directive):
+    """The year's trips and a map of its places, from hikes.json and places.json."""
+
+    def run(self):
+        return [nodes.raw("", TOPO_SUMMARY_SLOT, format="html")]
+
+
+def topo_year_letters(app, pagename, templatename, context, doctree):
+    from ablog.blog import Blog
+
+    published = {p.docname for p in Blog(app).posts}
+    # Years with a published letter, for the Adventures page to link to.
+    context["topo_year_letters"] = {
+        m.group(1): doc for doc in published if (m := TOPO_YEAR_LETTER.match(doc))
+    }
+    m = TOPO_YEAR_LETTER.match(pagename)
+    if m and TOPO_SUMMARY_SLOT in context.get("body", ""):
+        html = app.builder.templates.render("topo/year-summary.html", {**context, "year": m.group(1)})
+        context["body"] = context["body"].replace(TOPO_SUMMARY_SLOT, html, 1)
+
+
 def setup(app):
     app.connect("html-collect-pages", topo_redirect_pages)
+    app.add_directive("adventure-summary", AdventureSummary)
+    app.connect("html-page-context", topo_year_letters)

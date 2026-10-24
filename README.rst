@@ -30,6 +30,37 @@ The map expands to fill the screen, with drag to pan, a label on hover (or tap) 
 (plain scroll and double-click also zoom once it is expanded).
 Each hike has a ``kind``: ``thru-hike`` (end to end), ``trek`` (multi-day, hut or village based), ``hiking`` (a stay spent hiking from a base), ``backpacking``, ``summit``, ``day-hike``, ``camping``, ``rafting``, ``kayak``, ``cruise``, ``road-trip``, or ``bike``.
 
+Year letters
+------------
+
+Each year can have a letter at ``site/adventures/<year>.md``: a short story of the year, month by month,
+with a few photos for each month. ``2025.md`` and ``2026.md`` are started as drafts.
+
+* **Drafts and publishing.** A letter starts with ``{post}`` and no date, which ABlog treats as a draft:
+  it builds at ``/adventures/<year>/`` but isn't listed anywhere. Give it a date (```{post} 2026-12-31```)
+  and it is published like any post, in the blog, the feeds, and the Outside topic, and the Adventures
+  page links to it from that year ("Read the 2026 letter").
+* **The year at a glance.** The ``adventure-summary`` directive near the top fills in that year's trips from
+  ``hikes.json`` and a map of its places from ``places.json``, cropped to where they are. Write the story;
+  the data takes care of itself.
+* **Photos.** Export a few picks per month from Photos as JPEG, then make clean copies, resized and with all
+  location and camera metadata removed so nothing private lands in this public repo::
+
+      uv run --group photos scripts/prepare_photos.py ~/Desktop/picks/*.jpg --out site/_static/photos/2026
+
+  Name them for the month and place (``04-camino-sunset.jpg``). Lay out two or three in a row under a month::
+
+      ````{container} topo-photos
+      ```{figure} /_static/photos/2026/04-camino-sunset.jpg
+      Sunset over the Pacific, at the end of the trail.
+      ```
+      ```{figure} /_static/photos/2026/04-cloud-forest.jpg
+      Cloud forest above San Gerardo.
+      ```
+      ````
+
+  The row crops each photo to 4:3 and shows two across on phones.
+
 Finding trips in your photos
 ----------------------------
 
