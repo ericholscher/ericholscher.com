@@ -245,7 +245,7 @@
   },
   {
     "year": "2019",
-    "kind": "hiking",
+    "kind": "road-trip",
     "when": "September and October 2019",
     "name": "Three weeks in the Dolomites",
     "where": "Cortina d'Ampezzo, Italy",
@@ -475,11 +475,11 @@
   },
   {
     "year": "2026",
-    "kind": "island-hopping",
+    "kind": "diving",
     "when": "February 2026",
     "name": "Thailand's Andaman coast",
     "where": "Phuket to Langkawi, by way of the Similans and Ko Lanta",
-    "note": "Three weeks going island to island down the coast."
+    "note": "Three weeks of diving, island to island down the coast."
   },
   {
     "year": "2026",
