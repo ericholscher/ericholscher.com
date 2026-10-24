@@ -108,7 +108,7 @@
     "year": "2016",
     "kind": "summit",
     "when": "June 11 to 13, 2016",
-    "name": "Climbing Mount Shasta",
+    "name": "Mount Shasta",
     "where": "Northern California",
     "note": "Three days on the mountain, still deep in snow."
   },
@@ -164,8 +164,8 @@
     "year": "2018",
     "kind": "bike",
     "when": "June and July 2018",
-    "name": "Biking the coast of France",
-    "where": "La Vélodyssée, from Dartmoor and Roscoff to the Basque coast",
+    "name": "La Vélodyssée",
+    "where": "Dartmoor, then Roscoff to the Basque coast",
     "note": "From Dartmoor, then down France's Atlantic coast by bike, from Brittany past La Rochelle and Bordeaux.",
     "feature": true
   },
@@ -173,7 +173,7 @@
     "year": "2018",
     "kind": "trek",
     "when": "August 2018",
-    "name": "Haute Route across the Alps",
+    "name": "Haute Route",
     "where": "Chamonix to Zermatt, France and Switzerland",
     "note": "Hut to hut across the Alps, part of five weeks there during the first summer on the road.",
     "feature": true
@@ -190,7 +190,7 @@
     "year": "2018",
     "kind": "trek",
     "when": "December 2018",
-    "name": "Salkantay trek to Machu Picchu",
+    "name": "Salkantay trek",
     "where": "Cusco region, Peru",
     "note": "Over the Salkantay pass to Machu Picchu, around the new year."
   },
@@ -206,7 +206,7 @@
     "year": "2019",
     "kind": "trek",
     "when": "March 2019",
-    "name": "Circling Torres del Paine",
+    "name": "Torres del Paine O Circuit",
     "where": "Patagonia, Chile",
     "note": "The full O circuit around the Paine massif.",
     "feature": true
@@ -402,8 +402,8 @@
     "year": "2025",
     "kind": "day-hike",
     "when": "June 2025",
-    "name": "Hiking in Montenegro",
-    "where": "Durmitor National Park, Montenegro",
+    "name": "Durmitor National Park",
+    "where": "Montenegro",
     "note": "The start of a summer of hiking in Europe, in big limestone country."
   },
   {
@@ -428,7 +428,7 @@
     "year": "2025",
     "kind": "trek",
     "when": "August 2025",
-    "name": "Hut to hut in the Carnic Alps",
+    "name": "Carnic Alps High Route",
     "where": "Austrian and Italian border",
     "note": "Hut to hut along a high ridge, with the Dolomites in view the whole way. A highlight of the summer.",
     "feature": true
@@ -437,15 +437,15 @@
     "year": "2025",
     "kind": "day-hike",
     "when": "August 2025",
-    "name": "Hiking in Slovenia",
-    "where": "Triglav National Park, Slovenia",
+    "name": "Triglav National Park",
+    "where": "Slovenia",
     "note": "Hiking around the Julian Alps, plus Lake Bled and Ljubljana."
   },
   {
     "year": "2025",
     "kind": "trek",
     "when": "September 2025",
-    "name": "Alta Via 1 in the Dolomites",
+    "name": "Alta Via 1",
     "where": "Dolomites, Italy",
     "note": "Rugged hut-to-hut walking through the heart of the Dolomites."
   },
@@ -453,8 +453,8 @@
     "year": "2025",
     "kind": "day-hike",
     "when": "October 2025",
-    "name": "Rainforest walks in Kenya",
-    "where": "Kakamega Forest, western Kenya",
+    "name": "Kakamega Forest",
+    "where": "Western Kenya",
     "note": "Days of walking a rainforest reserve with a local guide, reached by local transport."
   },
   {
@@ -485,15 +485,15 @@
     "year": "2026",
     "kind": "trek",
     "when": "May and June 2026",
-    "name": "Hiking in northern Greece",
-    "where": "Vikos-Aoös National Park, Epirus",
+    "name": "Vikos-Aoös National Park",
+    "where": "Epirus, Greece",
     "note": "Two weeks of hiking in the mountains of northern Greece, ending near Meteora."
   },
   {
     "year": "2026",
     "kind": "trek",
     "when": "June 2026",
-    "name": "Camino del Norte in Spain",
+    "name": "Camino del Norte",
     "where": "Basque Country, Spain",
     "note": "Eleven days along the northern coast of Spain, finishing with a day in Bilbao.",
     "feature": true
@@ -519,7 +519,7 @@
     "year": "2026",
     "kind": "trek",
     "when": "September and October 2026",
-    "name": "Spain's Picos de Europa",
+    "name": "Picos de Europa",
     "where": "Asturias, Spain",
     "note": "Two weeks in the limestone peaks of northern Spain."
   },
