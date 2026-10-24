@@ -451,6 +451,14 @@
   },
   {
     "year": "2025",
+    "kind": "safari",
+    "when": "September 2025",
+    "name": "Safari in Kenya",
+    "where": "Maasai Mara, Lake Nakuru, and Amboseli",
+    "note": "A week across three parks."
+  },
+  {
+    "year": "2025",
     "kind": "hiking",
     "when": "October 2025",
     "name": "Kakamega Forest",
@@ -483,11 +491,11 @@
   },
   {
     "year": "2026",
-    "kind": "hiking",
+    "kind": "safari",
     "when": "April 2026",
-    "name": "Hiking in Borneo",
+    "name": "Hiking and river safari in Borneo",
     "where": "Sabah, Malaysia",
-    "note": "Day hiking near Mount Kinabalu and a river safari."
+    "note": "Day hiking near Mount Kinabalu, and a water safari on the river."
   },
   {
     "year": "2026",
