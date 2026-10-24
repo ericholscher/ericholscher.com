@@ -467,6 +467,14 @@
   },
   {
     "year": "2026",
+    "kind": "island-hopping",
+    "when": "February 2026",
+    "name": "Thailand's Andaman coast",
+    "where": "Phuket to Langkawi, by way of the Similans and Ko Lanta",
+    "note": "Three weeks going island to island down the coast."
+  },
+  {
+    "year": "2026",
     "kind": "diving",
     "when": "February and March 2026",
     "name": "Diving in Indonesia",
