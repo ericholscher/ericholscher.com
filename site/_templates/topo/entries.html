@@ -4,10 +4,16 @@
 {%- if 'link-blog' in cats %}<span class="topo-kind">link</span>{% endif %}
 {%- endmacro %}
 
+{#- A post's date, or "Draft" for an undated post (ABlog's drafts). -#}
+{%- macro date(post, fmt, cls='') %}
+{%- if post.date %}<time{% if cls %} class="{{ cls }}"{% endif %} datetime="{{ post.date.strftime('%Y-%m-%d') }}">{{ post.date.strftime(fmt) }}</time>
+{%- else %}<span{% if cls %} class="{{ cls }}"{% endif %}>Draft</span>{% endif %}
+{%- endmacro %}
+
 {%- macro entries(posts, pagename) %}
 {%- for post in posts %}
 <article class="topo-entry">
-  <div class="topo-entry-meta"><time class="topo-entry-date" datetime="{{ post.date.strftime('%Y-%m-%d') }}">{{ post.date.strftime('%b %-d, %Y') }}</time>{{ kind(post) }}</div>
+  <div class="topo-entry-meta">{{ date(post, '%b %-d, %Y', 'topo-entry-date') }}{{ kind(post) }}</div>
   <div class="topo-entry-body">
     <h3><a href="{{ pathto(post.docname) }}{{ anchor(post) }}">{{ post.title }}</a></h3>
     <div class="topo-entry-excerpt">{{ post.to_html(pagename) }}</div>
@@ -20,7 +26,7 @@
 {%- macro featured(items, pagename) %}
 {%- for post, summary in items %}
 <article class="topo-entry">
-  <div class="topo-entry-meta"><time class="topo-entry-date" datetime="{{ post.date.strftime('%Y-%m-%d') }}">{{ post.date.strftime('%b %-d, %Y') }}</time>{{ kind(post) }}</div>
+  <div class="topo-entry-meta">{{ date(post, '%b %-d, %Y', 'topo-entry-date') }}{{ kind(post) }}</div>
   <div class="topo-entry-body">
     <h3><a href="{{ pathto(post.docname) }}{{ anchor(post) }}">{{ post.title }}</a></h3>
     <p class="topo-entry-excerpt">{{ summary }}</p>
@@ -33,7 +39,7 @@
 {%- macro titles(posts, pagename) %}
 <ul class="topo-titles">
 {%- for post in posts %}
-  <li><time datetime="{{ post.date.strftime('%Y-%m-%d') }}">{{ post.date.strftime('%b %Y') }}</time><a href="{{ pathto(post.docname) }}{{ anchor(post) }}">{{ post.title }}</a></li>
+  <li>{{ date(post, '%b %Y') }}<a href="{{ pathto(post.docname) }}{{ anchor(post) }}">{{ post.title }}</a></li>
 {%- endfor %}
 </ul>
 {%- endmacro %}
