@@ -1,6 +1,8 @@
 .. figure:: /_static/img/speaking-stage.jpg
    :alt: Eric on a dark stage with a headset microphone, smiling and gesturing toward the audience with a slide clicker in hand
 
+   Photo by Kay Smoljak.
+
 Speaking
 ========
 

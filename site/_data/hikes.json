@@ -469,9 +469,10 @@
   },
   {
     "year": "2026",
-    "kind": "hiking",
+    "kind": "road-trip",
     "when": "October 2026",
-    "name": "Karwendel",
-    "where": "Austrian Alps, Tyrol"
+    "name": "Austrian Alps",
+    "where": "Karwendel and Tyrol, Austria",
+    "note": "A road trip with hiking days in the Karwendel."
   }
 ]
