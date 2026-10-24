@@ -24,8 +24,12 @@ I am interested in speaking on the following topics:
     * Community building and events
     * Django & Python
 
-If you would like me to speak at your event,
-feel free to `email me`_
+.. raw:: html
+
+   <aside class="topo-cta">
+     <p>Want me to speak at your event? I'm happy to talk about the topics above, or something that fits your audience.</p>
+     <p class="topo-cta-actions"><a class="topo-button" href="mailto:eric@ericholscher.com?subject=Speaking%20Engagement">Email me about speaking</a></p>
+   </aside>
 
 Videos
 ------
@@ -118,4 +122,3 @@ Organizing & Speaking
 * Write the Docs Portland, 2013 to present
 * PyCascades: co-founder, organizer 2018-2020, co-chair of PyCascades 2020 in Portland
 
-.. _email me: mailto:eric@ericholscher.com?subject=Speaking%20Engagement
