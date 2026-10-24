@@ -162,6 +162,13 @@
   },
   {
     "year": "2018",
+    "kind": "train",
+    "when": "April 2018",
+    "name": "Two weeks in Taiwan by train",
+    "where": "Taroko, Taitung, and Maolin"
+  },
+  {
+    "year": "2018",
     "kind": "bike",
     "when": "June and July 2018",
     "name": "La Vélodyssée",
