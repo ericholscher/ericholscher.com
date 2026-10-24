@@ -165,8 +165,8 @@
     "kind": "bike",
     "when": "June and July 2018",
     "name": "La Vélodyssée",
-    "where": "Roscoff to the Basque coast, France",
-    "note": "Down France's Atlantic coast by bike, from Brittany past La Rochelle and Bordeaux.",
+    "where": "Dartmoor, then Roscoff to the Basque coast",
+    "note": "From Dartmoor, then down France's Atlantic coast by bike, from Brittany past La Rochelle and Bordeaux.",
     "feature": true
   },
   {
@@ -180,11 +180,27 @@
   },
   {
     "year": "2018",
+    "kind": "road-trip",
+    "when": "September and October 2018",
+    "name": "Croatia",
+    "where": "Split, Krka, Plitvice, and the Velebit coast",
+    "note": "A month in Croatia."
+  },
+  {
+    "year": "2018",
     "kind": "trek",
     "when": "December 2018",
     "name": "Salkantay trek",
     "where": "Cusco region, Peru",
     "note": "Over the Salkantay pass to Machu Picchu, around the new year."
+  },
+  {
+    "year": "2019",
+    "kind": "road-trip",
+    "when": "February 2019",
+    "name": "Lakes District",
+    "where": "Puerto Varas and Cochamó, Chile",
+    "note": "Patagonia's Lakes District, before Torres del Paine."
   },
   {
     "year": "2019",
@@ -311,8 +327,8 @@
     "year": "2023",
     "kind": "backpacking",
     "when": "August and September 2023",
-    "name": "Jasper backcountry",
-    "where": "Jasper National Park, Alberta",
+    "name": "Canadian Rockies",
+    "where": "Banff and Jasper National Parks, Alberta",
     "note": "A few three-day backpacking trips over two weeks in the Canadian Rockies."
   },
   {
@@ -349,6 +365,14 @@
     "note": "The full loop around Mount Hood over five days."
   },
   {
+    "year": "2024",
+    "kind": "diving",
+    "when": "October 2024",
+    "name": "Cabo Pulmo",
+    "where": "Baja California Sur, Mexico",
+    "note": "Diving around a wedding in Baja."
+  },
+  {
     "year": "2025",
     "kind": "thru-hike",
     "when": "April 2025",
@@ -365,6 +389,14 @@
     "name": "Cycling the Netherlands",
     "where": "Amsterdam and around",
     "note": "A week of riding, between conferences in Portland and Pittsburgh."
+  },
+  {
+    "year": "2025",
+    "kind": "road-trip",
+    "when": "June 2025",
+    "name": "Scotland and Ireland",
+    "where": "Cairngorms, Glencoe, Connemara, and Wicklow",
+    "note": "Two weeks across the Highlands and the west of Ireland."
   },
   {
     "year": "2025",
@@ -424,6 +456,30 @@
     "name": "Kakamega Forest",
     "where": "Western Kenya",
     "note": "Days of walking a rainforest reserve with a local guide, reached by local transport."
+  },
+  {
+    "year": "2025",
+    "kind": "train",
+    "when": "December 2025 to January 2026",
+    "name": "Japan by train",
+    "where": "Hakone, Kyoto, Kanazawa, Nagano, and Hiroshima",
+    "note": "A month getting around Japan by train."
+  },
+  {
+    "year": "2026",
+    "kind": "diving",
+    "when": "February and March 2026",
+    "name": "Raja Ampat",
+    "where": "West Papua, Indonesia",
+    "note": "Diving in Raja Ampat."
+  },
+  {
+    "year": "2026",
+    "kind": "day-hike",
+    "when": "April 2026",
+    "name": "Sabah",
+    "where": "Kinabalu and Sandakan, Malaysian Borneo",
+    "note": "Day hiking near Kinabalu and a river safari."
   },
   {
     "year": "2026",
