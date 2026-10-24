@@ -364,7 +364,12 @@ a.topo-kind:hover { color: var(--link-hover); border-color: var(--link-hover) !i
 .body .topo-photos figure, .topo-photos figure { margin: 0; }
 .body .topo-photos img, .topo-photos img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; margin: 0; }
 .body .topo-photos figcaption, .topo-photos figcaption { font-size: 13.5px; line-height: 1.4; color: var(--muted); margin-top: 6px; }
-@media (max-width: 480px) { .topo-photos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; } }
+@media (max-width: 480px) {
+  .topo-photos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  /* Two to a row on a phone, so the odd one out of a row of three takes the full width. */
+  .topo-photos figure:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .body .topo-photos figure:last-child:nth-child(odd) img { aspect-ratio: 3 / 2; }
+}
 
 /* Places map. Expands to fill the screen, with zoom and drag to pan. */
 .topo-places { margin: 0 0 40px; }
