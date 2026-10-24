@@ -62,6 +62,7 @@ and how to use it well.
 .. raw:: html 
 
    <iframe width="640" height="360" src="https://www.youtube.com/embed/eWNiwMwMcr4" frameborder="0" allowfullscreen></iframe>
+   <p class="topo-video-link"><a href="https://www.youtube.com/watch?v=eWNiwMwMcr4">Watch on YouTube</a></p>
 
 
 Documentation as Empathy - Open Source & Feelings
@@ -73,6 +74,7 @@ My thoughts on how Documentation plays a role in the open source world.
 .. raw:: html 
 
    <iframe width="640" height="360" src="https://www.youtube.com/embed/CvhJG_HfKac" frameborder="0" allowfullscreen></iframe>
+   <p class="topo-video-link"><a href="https://www.youtube.com/watch?v=CvhJG_HfKac">Watch on YouTube</a></p>
 
 
 Documentation as Empathy - Django Birthday
@@ -85,6 +87,7 @@ and how we need to continue to improve documentation to keep them in the industr
 .. raw:: html 
 
    <iframe width="640" height="360" src="https://www.youtube.com/embed/m6F5MQ9prgE" frameborder="0" allowfullscreen></iframe>
+   <p class="topo-video-link"><a href="https://www.youtube.com/watch?v=m6F5MQ9prgE">Watch on YouTube</a></p>
 
 
 Past Events

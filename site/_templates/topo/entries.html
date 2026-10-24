@@ -16,6 +16,19 @@
 {%- endfor %}
 {%- endmacro %}
 
+{#- Featured posts with a hand-written summary instead of the opening lines: (post, summary) pairs. -#}
+{%- macro featured(items, pagename) %}
+{%- for post, summary in items %}
+<article class="topo-entry">
+  <div class="topo-entry-meta"><time class="topo-entry-date" datetime="{{ post.date.strftime('%Y-%m-%d') }}">{{ post.date.strftime('%b %-d, %Y') }}</time>{{ kind(post) }}</div>
+  <div class="topo-entry-body">
+    <h3><a href="{{ pathto(post.docname) }}{{ anchor(post) }}">{{ post.title }}</a></h3>
+    <p class="topo-entry-excerpt">{{ summary }}</p>
+  </div>
+</article>
+{%- endfor %}
+{%- endmacro %}
+
 {#- Compact list without excerpts, for topic blocks. -#}
 {%- macro titles(posts, pagename) %}
 <ul class="topo-titles">

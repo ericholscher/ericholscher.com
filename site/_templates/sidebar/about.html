@@ -1,9 +1,9 @@
+{#- Skipped on the About page, which already has the portrait and the full story. -#}
+{%- if pagename != 'about' %}
 <div class="topo-side-block topo-side-about">
-  {%- if pagename != 'about' %}{# the About page shows the full headshot #}
   <a href="{{ pathto('about') }}" class="topo-side-portrait">
     <img src="{{ pathto('_static/img/headshot-circle.png', 1) }}" alt="Eric Holscher" width="88" height="88" loading="lazy">
   </a>
-  {%- endif %}
   <p>
     I co-founded <a href="https://about.readthedocs.com/">Read the Docs</a>,
     <a href="https://www.writethedocs.org">Write the Docs</a>,
@@ -13,3 +13,4 @@
     <a href="{{ pathto('about') }}">More about me</a>.
   </p>
 </div>
+{%- endif %}
