@@ -59,7 +59,7 @@ with a few photos for each month. ``2025.md`` and ``2026.md`` are started as dra
       ```
       ````
 
-  The row crops each photo to 4:3 and shows two across on phones.
+  The photos in a row share one height and keep their own shape, so nothing is cropped. On a phone they stack.
 
 Finding trips in your photos
 ----------------------------

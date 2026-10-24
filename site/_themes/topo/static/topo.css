@@ -360,15 +360,15 @@ a.topo-kind:hover { color: var(--link-hover); border-color: var(--link-hover) !i
 .topo-year-trips .topo-kind { margin-right: 6px; }
 .topo-year-trip-when { color: var(--muted); font-size: 14px; }
 .topo-year-more { font-size: 14px; margin: 12px 0 0; }
-.topo-photos { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 16px 0 28px; }
-.body .topo-photos figure, .topo-photos figure { margin: 0; }
-.body .topo-photos img, .topo-photos img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; margin: 0; }
+/* Photo rows: the build sets each figure's width from its photo's shape, so the row shares one
+   height and nothing is cropped. On a phone they stack at full width. */
+.topo-photos { display: flex; gap: 12px; align-items: flex-start; margin: 16px 0 28px; }
+.body .topo-photos figure, .topo-photos figure { margin: 0; min-width: 0; }
+.body .topo-photos img, .topo-photos img { display: block; width: 100%; height: auto; margin: 0; border: 0; outline: 1px solid var(--rule-strong); outline-offset: -1px; }
 .body .topo-photos figcaption, .topo-photos figcaption { font-size: 13.5px; line-height: 1.4; color: var(--muted); margin-top: 6px; }
 @media (max-width: 480px) {
-  .topo-photos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
-  /* Two to a row on a phone, so the odd one out of a row of three takes the full width. */
-  .topo-photos figure:last-child:nth-child(odd) { grid-column: 1 / -1; }
-  .body .topo-photos figure:last-child:nth-child(odd) img { aspect-ratio: 3 / 2; }
+  .topo-photos { flex-direction: column; gap: 16px; }
+  .body .topo-photos figure, .topo-photos figure { width: 100% !important; }
 }
 
 /* Places map. Expands to fill the screen, with zoom and drag to pan. */
