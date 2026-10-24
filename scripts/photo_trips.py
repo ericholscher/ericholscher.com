@@ -10,10 +10,28 @@ Then:
     python3 scripts/photo_trips.py photo-places.json > trips.csv
     python3 scripts/photo_trips.py photo-places.json --outdoor-only --year 2021
 
-Photos are grouped by day, days near home are dropped, and consecutive days
+Photos are grouped by day, photos near home are dropped, and consecutive days
 close to each other are merged into one trip. Each trip gets the most common
 place names, the Photos scene labels it saw, and a guessed kind
 (bike, trek, backpacking, day-hike, coast, or visited).
+
+Home is every "lived" place in site/_data/places.json. Family and other places
+to leave out go in photo-skip.json next to your export, which git ignores so the
+list stays on your machine:
+
+    [
+      {"name": "Family in Virginia", "lat": 39.15, "lon": -77.98, "km": 25},
+      {"name": "Parents", "lat": 43.07, "lon": -89.40},
+      {"place": "Virginia"},
+      {"place": "*Beach*"}
+    ]
+
+A "lat"/"lon" entry skips photos within "km" of it (default --home-radius).
+A "place" entry skips photos whose location has that name anywhere: city,
+state, region, country, landmark, or the full address. It ignores case, must
+match a whole name, and takes * wildcards, so "Virginia" leaves West Virginia
+alone and "*Beach*" catches any beach town. For one-offs, pass
+--skip-near LAT,LON[,KM] or --skip-place NAME.
 
 If your library is shared, other people's trips show up too; delete those rows.
 
@@ -24,6 +42,7 @@ and people are ignored, and nothing leaves your machine.
 import argparse
 import collections
 import csv
+import fnmatch
 import json
 import math
 import sys
@@ -79,11 +98,48 @@ def load_homes(path):
         return []
 
 
+def all_place_names(photo):
+    """Every name Photos gives a photo's location, lowercased, for --skip-place matching."""
+    place = photo.get("place") or {}
+    out = {str(place["name"]).lower()} if place.get("name") else set()
+    for values in (place.get("names") or {}).values():
+        for v in [values] if isinstance(values, str) else values or []:
+            out.add(str(v).lower())
+    return out
+
+
+def load_skips(path, default_km):
+    """Places to leave out besides home: ((lat, lon), km) pairs and lowercased name patterns.
+    A missing file means none."""
+    try:
+        with open(path) as f:
+            entries = json.load(f)
+    except FileNotFoundError:
+        return [], []
+    near = [((float(e["lat"]), float(e["lon"])), float(e.get("km", default_km))) for e in entries if "lat" in e]
+    names = [str(e["place"]).lower() for e in entries if "place" in e]
+    return near, names
+
+
+def parse_near(value):
+    """--skip-near LAT,LON[,KM]; a missing KM is filled in from --home-radius."""
+    try:
+        parts = [float(x) for x in value.split(",")]
+    except ValueError:
+        parts = []
+    if len(parts) not in (2, 3):
+        raise argparse.ArgumentTypeError(f"{value!r}: use LAT,LON or LAT,LON,KM")
+    return (parts[0], parts[1]), parts[2] if len(parts) == 3 else None
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("export", help="JSON written by `osxphotos query --json`")
     ap.add_argument("--homes", default="site/_data/places.json", help="places.json; 'lived' entries count as home")
     ap.add_argument("--home-radius", type=float, default=15, help="km around a home to ignore (default 15)")
+    ap.add_argument("--skip", default="photo-skip.json", help="local list of family and other places to ignore (default photo-skip.json)")
+    ap.add_argument("--skip-near", action="append", default=[], type=parse_near, metavar="LAT,LON[,KM]", help="another place to ignore; repeatable")
+    ap.add_argument("--skip-place", action="append", default=[], metavar="NAME", help="ignore photos at a place with this name (* wildcards); repeatable")
     ap.add_argument("--merge-km", type=float, default=150, help="merge consecutive days closer than this (default 150)")
     ap.add_argument("--min-photos", type=int, default=5, help="drop trips with fewer photos (default 5)")
     ap.add_argument("--outdoor-only", action="store_true", help="keep trips that look outdoorsy")
@@ -92,18 +148,23 @@ def main():
 
     with open(args.export) as f:
         photos = json.load(f)
-    homes = load_homes(args.homes)
+    skip = [(h, args.home_radius) for h in load_homes(args.homes)]
+    near, skip_names = load_skips(args.skip, args.home_radius)
+    skip += near
+    skip_names += [n.lower() for n in args.skip_place]
+    skip += [(at, km if km is not None else args.home_radius) for at, km in args.skip_near]
 
     days = collections.defaultdict(list)
-    skipped_home = 0
+    skipped = 0
     for p in photos:
         c = coords(p)
         when = (p.get("date") or "")[:10]
         if not c or len(when) != 10:
             continue
         names, ishome = place_names(p)
-        if ishome or any(haversine_km(c, h) <= args.home_radius for h in homes):
-            skipped_home += 1
+        if (ishome or any(haversine_km(c, at) <= km for at, km in skip)
+                or skip_names and any(fnmatch.fnmatchcase(n, pat) for n in all_place_names(p) for pat in skip_names)):
+            skipped += 1
             continue
         labels = {str(x).lower() for x in (p.get("labels") or [])}
         days[when].append((c, names, labels))
@@ -157,7 +218,7 @@ def main():
                       f"{outdoor:.2f}", "; ".join(x for x, _ in labels)])
         kept += 1
 
-    print(f"{len(photos)} photos read, {skipped_home} near home skipped, {len(trips)} trips found, {kept} written",
+    print(f"{len(photos)} photos read, {skipped} near home or a skipped place left out, {len(trips)} trips found, {kept} written",
           file=sys.stderr)
 
 
