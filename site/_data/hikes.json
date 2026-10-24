@@ -124,7 +124,7 @@
     "year": "2016",
     "kind": "backpacking",
     "when": "July 31 to August 13, 2016",
-    "name": "Two weeks in Wyoming's Wind Rivers",
+    "name": "Wind River Range",
     "where": "Pinedale to the Popo Agie Wilderness, Wyoming",
     "note": "Two weeks in the Winds, partly on the Wind River High Route.",
     "feature": true
@@ -213,7 +213,7 @@
   },
   {
     "year": "2019",
-    "kind": "day-hike",
+    "kind": "hiking",
     "when": "March 2019",
     "name": "Hiking under Fitz Roy",
     "where": "El Chaltén, Patagonia, Argentina",
@@ -400,7 +400,7 @@
   },
   {
     "year": "2025",
-    "kind": "day-hike",
+    "kind": "hiking",
     "when": "June 2025",
     "name": "Durmitor National Park",
     "where": "Montenegro",
@@ -435,7 +435,7 @@
   },
   {
     "year": "2025",
-    "kind": "day-hike",
+    "kind": "hiking",
     "when": "August 2025",
     "name": "Triglav National Park",
     "where": "Slovenia",
@@ -451,7 +451,7 @@
   },
   {
     "year": "2025",
-    "kind": "day-hike",
+    "kind": "hiking",
     "when": "October 2025",
     "name": "Kakamega Forest",
     "where": "Western Kenya",
@@ -475,7 +475,7 @@
   },
   {
     "year": "2026",
-    "kind": "day-hike",
+    "kind": "hiking",
     "when": "April 2026",
     "name": "Hiking in Borneo",
     "where": "Sabah, Malaysia",
