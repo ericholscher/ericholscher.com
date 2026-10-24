@@ -84,6 +84,7 @@ html_theme = "topo"
 html_sidebars = {
     "**": [
         "sidebar/about.html",
+        "sidebar/subscribe.html",
         "sidebar/archive.html",
         "sidebar/walking.html",
         "sidebar/elsewhere.html",

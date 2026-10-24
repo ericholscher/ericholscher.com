@@ -216,8 +216,19 @@ div[class^="highlight-"] { margin: 0 0 1.2em; }
 .topo-dateline { font-family: var(--mono); font-size: 13px; color: var(--muted); margin: 0 0 14px; display: flex; flex-wrap: wrap; align-items: center; gap: 0 8px; }
 .topo-dateline a { color: var(--muted); border-bottom-color: var(--rule); }
 .topo-dateline a:hover { color: var(--ink); }
-.topo-pitch { margin: 48px 0 0; padding: 18px 0 0; border-top: 1px solid var(--rule); color: var(--text-2); font-size: 15px; }
-.topo-pitch p { margin: 0; font-size: 15px; }
+/* Calls to action: a paper card with a forest edge, and one button style everywhere,
+   forest green with the trail-sign gold inset line. The quiet variant is for a second action. */
+.topo-cta { margin: 32px 0; padding: 18px 20px 20px; background: #F7F1E4; border: 1px solid var(--rule-strong); border-top: 3px solid var(--forest); border-radius: 3px; }
+.body .topo-cta p, .topo-cta p { margin: 0 0 14px; font-size: 16px; line-height: 1.55; color: var(--text); }
+.body .topo-cta-actions, .topo-cta-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 !important; }
+.topo-pitch { margin-top: 48px; }
+.topo-button { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 18px; box-sizing: border-box; border: 0; border-radius: 3px; background: var(--forest); color: var(--sign-text); font-family: var(--sans); font-size: 15px; font-weight: 600; line-height: 1.2; text-align: center; box-shadow: inset 0 0 0 1px rgba(0,0,0,.2), inset 0 0 0 2px rgba(219,166,62,.55); }
+.topo-button:hover { background: #1B4632; color: var(--sign-text); border-bottom: 0; }
+.topo-button:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+.topo-button-quiet { background: transparent; color: var(--forest); box-shadow: inset 0 0 0 1px var(--forest); }
+.topo-button-quiet:hover { background: rgba(37,90,66,.08); color: var(--forest); }
+.topo-side-subscribe .topo-cta-actions { margin-top: 12px !important; }
+.topo-side-subscribe .topo-button { width: 100%; }
 
 /* ABlog pages (archive, tags, categories) */
 ul.postlist { list-style: none; padding: 0; margin: 0; }

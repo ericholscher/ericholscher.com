@@ -77,8 +77,12 @@
         {%- endif %}
         {{ self.body() }}
         {%- if is_post %}
-        <aside class="topo-pitch">
-          <p>Hi, I'm Eric. I work on communities in the world of software documentation. If you have thoughts on this post, <a href="mailto:eric@ericholscher.com?subject=Blog Comments">email me</a>.</p>
+        <aside class="topo-cta topo-pitch">
+          <p>Hi, I'm Eric. I work on communities in the world of software documentation. New posts go out by email, and I'm always happy to hear what you think of this one.</p>
+          <p class="topo-cta-actions">
+            <a class="topo-button" href="https://ericholscher.substack.com/">Subscribe by email</a>
+            <a class="topo-button topo-button-quiet" href="mailto:eric@ericholscher.com?subject={{ ('Re: ' ~ title|striptags)|urlencode }}">Reply by email</a>
+          </p>
         </aside>
         {%- endif %}
       </div>
