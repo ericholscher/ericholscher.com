@@ -56,7 +56,7 @@ html_context = {
         "outside": ("Outside", "Long trails, bike tours, and the places they go through."),
         "link-blog": ("Notes", "Short pointers to things worth reading, with a line or two of why."),
     },
-    # Home page favorites, in order: the first three are featured with their summary,
+    # Home page favorites, in order: the first topo_featured_count are featured with their summary,
     # the rest listed by title further down. Hand-picked; edit freely.
     "topo_popular": [
         ("blog/2017/aug/2/pacman-rule-conferences",
@@ -65,16 +65,16 @@ html_context = {
          "A short phrase that lets organizers hold the line on social norms without winning a debate every time."),
         ("blog/2025/apr/29/camino-de-costa-rica-recap",
          "Walking Costa Rica coast to coast without a guide: 165 miles and 30,000 feet of climbing in 14 days."),
+        ("blog/2018/mar/9/one-percent-for-open-source",
+         "A proposal: companies put 1% of a funding round or yearly profits into the open source they use."),
         ("blog/2017/jan/27/code-is-self-documenting",
          "Comments explain the why, and documentation does more than explain how the code works."),
         ("blog/2018/feb/7/the-post-i-never-published",
          "A draft from 2016, written while burned out on Read the Docs, shared to talk more openly about it."),
-        ("blog/2018/mar/9/one-percent-for-open-source",
-         "A proposal: companies put 1% of a funding round or yearly profits into the open source they use."),
         ("blog/2019/sep/19/helping-first-time-conference-attendees-with-welcome-wagon",
          "How Write the Docs helps first-time attendees know what to expect, before and during the conference."),
     ],
-    "topo_featured_count": 3,
+    "topo_featured_count": 4,
     "topo_hikes": json.loads((_data / "hikes.json").read_text()),
     "topo_places": json.loads((_data / "places.json").read_text()),
 }
