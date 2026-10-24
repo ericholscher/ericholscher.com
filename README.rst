@@ -43,6 +43,8 @@ Photos near any "lived" place in ``places.json`` are left out. To also leave out
 places, list them in ``photo-skip.json`` next to the export: by coordinates (``{"lat": ..., "lon": ..., "km": 25}``)
 or by place name (``{"place": "Virginia"}``, matched against city, state, region, country, and address, with ``*`` wildcards).
 For one-offs, pass ``--skip-near LAT,LON[,KM]`` or ``--skip-place NAME``.
+Each row lists the trip's main towns in ``towns``, with days photographed in each. Tune the depth with
+``--towns`` (most per trip, default 3) and ``--town-share`` (a town with this share of the photos is listed even if it never led a day, default 0.2).
 All three files are gitignored, so those places stay on your machine. The script uses only the standard library.
 
 Dependencies live in ``pyproject.toml`` and are pinned in ``uv.lock``; Read the Docs installs the ``docs`` group with uv.
