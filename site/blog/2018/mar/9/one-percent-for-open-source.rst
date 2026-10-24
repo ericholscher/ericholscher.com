@@ -112,7 +112,7 @@ and it was well received:
 .. raw:: html
 
    <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">We should start a movement called &quot;1% for OSS&quot;, a program where VC&#39;s and startup companies agree to invest 1% of their funding round into the infrastructure that their companies rely on. <a href="https://twitter.com/hashtag/sustain?src=hash&amp;ref_src=twsrc%5Etfw">#sustain</a> <a href="https://twitter.com/hashtag/sustainoss?src=hash&amp;ref_src=twsrc%5Etfw">#sustainoss</a></p>&mdash; Eric Holscher (@ericholscher) <a href="https://twitter.com/ericholscher/status/966845161194979328?ref_src=twsrc%5Etfw">February 23, 2018</a></blockquote>
-   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+   
 
 I don't plan on actually building a new program for funding open source,
 so please contact me if this is something that you'd like to actually work on!

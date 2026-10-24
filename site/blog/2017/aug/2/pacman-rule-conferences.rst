@@ -68,12 +68,15 @@ Video
 
 Dylan Beattie has made a wonderful video that captures this quite well.
 
-* :download:`Download video as an mp4 </_static/the-pac-man-rule.mp4>`
-
 .. raw:: html
 
-	<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Going to a conference? Yes! Introduce yourself. Say hello. Chat to people. They&#39;re lovely. Really! And if you&#39;re already chatting in a group, make your group approachable using <a href="https://twitter.com/ericholscher?ref_src=twsrc%5Etfw">@ericholscher</a>&#39;s Pac-Man Rule. <br><br>Here&#39;s how it works.<br><br>Have fun! <a href="https://t.co/QklklD43Me">pic.twitter.com/QklklD43Me</a></p>&mdash; Dylan Beattie 🇪🇺 (@dylanbeattie) <a href="https://twitter.com/dylanbeattie/status/1111619036809449472?ref_src=twsrc%5Etfw">March 29, 2019</a></blockquote>
-	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	<figure class="topo-video">
+	  <video controls preload="none" poster="/_static/img/pacman-rule-poster.jpg" width="1152" height="720">
+	    <source src="/_static/the-pac-man-rule.mp4" type="video/mp4">
+	    <a href="/_static/the-pac-man-rule.mp4">Download the Pac-Man Rule video (mp4)</a>
+	  </video>
+	  <figcaption>The Pac-Man Rule, by Dylan Beattie (<a href="https://twitter.com/dylanbeattie/status/1111619036809449472">his original post</a>, March 2019). <a href="/_static/the-pac-man-rule.mp4" download>Download the mp4</a>.</figcaption>
+	</figure>
 
 
 Your mission
