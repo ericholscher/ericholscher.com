@@ -3,7 +3,7 @@
     "year": "2012",
     "kind": "bike",
     "when": "June 2012",
-    "name": "Century ride in Oregon",
+    "name": "Petal Pedal century",
     "where": "Willamette Valley and Silver Falls, Oregon",
     "note": "100 miles and 5,000 feet of climbing, after a spring of training rides.",
     "link": "blog/2012/dec/31/2012-year-review"
@@ -12,7 +12,7 @@
     "year": "2012",
     "kind": "backpacking",
     "when": "Summer 2012",
-    "name": "Backpacking weekends on Mount Hood",
+    "name": "Mount Hood weekends",
     "where": "Cairn Basin, Paradise Park, Mirror Lake",
     "note": "First backpacking season, including the PCT from Timberline Lodge to Cairn Basin.",
     "link": "blog/2012/dec/31/2012-year-review"
@@ -21,7 +21,7 @@
     "year": "2012",
     "kind": "camping",
     "when": "Summer 2012",
-    "name": "Camping at Crater Lake",
+    "name": "Crater Lake and Lava Lake",
     "where": "Southern and central Oregon",
     "note": "A night on the rim of Crater Lake, then up to camp at Lava Lake near Bend.",
     "link": "blog/2012/dec/31/2012-year-review"
@@ -30,7 +30,7 @@
     "year": "2013",
     "kind": "summit",
     "when": "March 2013",
-    "name": "Climbing Mount St. Helens",
+    "name": "Mount St. Helens",
     "where": "Washington",
     "note": "Summit, as a training hike for the PCT."
   },
@@ -56,7 +56,7 @@
     "year": "2013",
     "kind": "bike",
     "when": "September 7 to 10, 2013",
-    "name": "Biking Portland to Eugene",
+    "name": "Portland to Eugene",
     "where": "Willamette Valley Scenic Bikeway, Oregon",
     "note": "First bike tour: 185 miles over three days."
   },
@@ -71,14 +71,14 @@
     "year": "2014",
     "kind": "bike",
     "when": "July 11 to 21, 2014",
-    "name": "Biking Vancouver to Bellingham",
+    "name": "Vancouver to Bellingham",
     "where": "British Columbia and Washington"
   },
   {
     "year": "2015",
     "kind": "backpacking",
     "when": "July 3 to 5, 2015",
-    "name": "Backpacking Oregon's Three Sisters",
+    "name": "Three Sisters Wilderness",
     "where": "McKenzie side, Oregon",
     "note": "Fourth of July weekend in the Cascades."
   },
@@ -86,14 +86,14 @@
     "year": "2015",
     "kind": "summit",
     "when": "September 19 to 20, 2015",
-    "name": "Climbing Mount St. Helens",
+    "name": "Mount St. Helens",
     "where": "Washington"
   },
   {
     "year": "2016",
     "kind": "summit",
     "when": "April 30, 2016",
-    "name": "Climbing Mount St. Helens",
+    "name": "Mount St. Helens",
     "where": "Washington",
     "note": "A spring climb, still on snow."
   },
@@ -101,7 +101,7 @@
     "year": "2016",
     "kind": "summit",
     "when": "May 7 to 8, 2016",
-    "name": "Climbing Mount Adams",
+    "name": "Mount Adams",
     "where": "Washington"
   },
   {
@@ -116,7 +116,7 @@
     "year": "2016",
     "kind": "backpacking",
     "when": "July 1 to 4, 2016",
-    "name": "Olympic rainforest",
+    "name": "Olympic National Park",
     "where": "Olympic Peninsula, Washington",
     "note": "Fourth of July weekend on the wet side of the peninsula."
   },
@@ -133,22 +133,22 @@
     "year": "2016",
     "kind": "backpacking",
     "when": "September 3 to 5, 2016",
-    "name": "Washington's Goat Rocks",
-    "where": "Goat Rocks Wilderness, Washington Cascades",
+    "name": "Goat Rocks Wilderness",
+    "where": "Washington Cascades",
     "note": "Labor Day weekend."
   },
   {
     "year": "2017",
     "kind": "backpacking",
     "when": "June 23 to 25, 2017",
-    "name": "Backpacking the Olympic coast",
+    "name": "Shi Shi Beach",
     "where": "Olympic coast, Washington"
   },
   {
     "year": "2017",
     "kind": "kayak",
     "when": "July 1 to 8, 2017",
-    "name": "Kayaking the San Juan Islands",
+    "name": "San Juan Islands",
     "where": "Washington",
     "note": "A week of paddling between the islands."
   },
@@ -156,8 +156,8 @@
     "year": "2017",
     "kind": "backpacking",
     "when": "August 19 to 26, 2017",
-    "name": "Eclipse week in Oregon's Wallowas",
-    "where": "Eagle Cap Wilderness, Oregon",
+    "name": "Eagle Cap Wilderness",
+    "where": "Wallowa Mountains, Oregon",
     "note": "Eight days in the Wallowas, timed for the 2017 eclipse."
   },
   {
@@ -239,7 +239,7 @@
     "year": "2019",
     "kind": "backpacking",
     "when": "September 2019",
-    "name": "Labor Day on Mount Hood",
+    "name": "Mount Hood",
     "where": "Oregon",
     "note": "Labor Day weekend on the mountain."
   },
@@ -255,7 +255,7 @@
     "year": "2020",
     "kind": "bike",
     "when": "June 2020",
-    "name": "Riding McKenzie Pass before cars",
+    "name": "McKenzie Pass, car-free",
     "where": "McKenzie Pass Scenic Highway, Oregon",
     "note": "Riding the pass before it opened to cars for the season."
   },
@@ -263,7 +263,7 @@
     "year": "2020",
     "kind": "backpacking",
     "when": "July 2020",
-    "name": "Mountains of Oregon and Idaho",
+    "name": "Elkhorn and Sawtooth Mountains",
     "where": "Elkhorn Mountains, Oregon, and Sawtooth Mountains, Idaho",
     "note": "Camping and backpacking in two mountain ranges."
   },
@@ -271,15 +271,15 @@
     "year": "2020",
     "kind": "camping",
     "when": "September 2020",
-    "name": "Camping in the Oregon desert",
-    "where": "Alvord Desert and Steens Mountain, southeast Oregon",
+    "name": "Alvord Desert and Steens Mountain",
+    "where": "Southeast Oregon",
     "note": "Car camping in the high desert."
   },
   {
     "year": "2020",
     "kind": "backpacking",
     "when": "September and October 2020",
-    "name": "Around Oregon's Three Sisters",
+    "name": "Three Sisters loop",
     "where": "Three Sisters Wilderness, Oregon",
     "note": "The loop around all three peaks, retracing a trip from a few years earlier."
   },
@@ -287,15 +287,15 @@
     "year": "2021",
     "kind": "backpacking",
     "when": "August 2021",
-    "name": "Five days in eastern Oregon",
-    "where": "Strawberry Mountain Wilderness, eastern Oregon",
+    "name": "Strawberry Mountain Wilderness",
+    "where": "Eastern Oregon",
     "note": "Five days in the Strawberry Range."
   },
   {
     "year": "2021",
     "kind": "backpacking",
     "when": "September 2021",
-    "name": "PCT loop in Washington",
+    "name": "PCT loop from Snoqualmie Pass",
     "where": "Washington Cascades",
     "note": "A week-long loop that followed the Pacific Crest Trail."
   },
@@ -319,7 +319,7 @@
     "year": "2023",
     "kind": "rafting",
     "when": "May 2023",
-    "name": "Rafting Oregon's John Day River",
+    "name": "John Day River",
     "where": "Central Oregon",
     "note": "A multi-day float through the canyons of the John Day."
   },
@@ -335,7 +335,7 @@
     "year": "2024",
     "kind": "rafting",
     "when": "May 2024",
-    "name": "Rafting the lower John Day",
+    "name": "Lower John Day River",
     "where": "North-central Oregon",
     "note": "Five days on the river, a year after the first trip."
   },
@@ -360,8 +360,8 @@
     "year": "2024",
     "kind": "backpacking",
     "when": "September 2024",
-    "name": "Around Mount Hood",
-    "where": "Timberline Trail, Mount Hood, Oregon",
+    "name": "Timberline Trail",
+    "where": "Mount Hood, Oregon",
     "note": "The full loop around Mount Hood over five days."
   },
   {
