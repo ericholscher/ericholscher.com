@@ -65,7 +65,7 @@
     "kind": "backpacking",
     "when": "July 5 to 6, 2014",
     "name": "Mount St. Helens overnight",
-    "where": "Mount St. Helens National Volcanic Monument, Washington"
+    "where": "Washington"
   },
   {
     "year": "2014",
@@ -117,7 +117,7 @@
     "kind": "backpacking",
     "when": "July 1 to 4, 2016",
     "name": "Olympic National Park",
-    "where": "Olympic Peninsula, Washington",
+    "where": "Washington",
     "note": "Fourth of July weekend on the wet side of the peninsula."
   },
   {
@@ -162,11 +162,18 @@
   },
   {
     "year": "2018",
+    "kind": "train",
+    "when": "April 2018",
+    "name": "Two weeks in Taiwan by train",
+    "where": "Taroko, Taitung, and Maolin"
+  },
+  {
+    "year": "2018",
     "kind": "bike",
     "when": "June and July 2018",
     "name": "La Vélodyssée",
-    "where": "Roscoff to the Basque coast, France",
-    "note": "Down France's Atlantic coast by bike, from Brittany past La Rochelle and Bordeaux.",
+    "where": "Dartmoor, then Roscoff to the Basque coast",
+    "note": "From Dartmoor, then down France's Atlantic coast by bike, from Brittany past La Rochelle and Bordeaux.",
     "feature": true
   },
   {
@@ -180,11 +187,27 @@
   },
   {
     "year": "2018",
+    "kind": "road-trip",
+    "when": "September and October 2018",
+    "name": "Month in Croatia",
+    "where": "Split, Krka, Plitvice, and the Velebit coast",
+    "note": "The Dalmatian coast and Croatia's national parks."
+  },
+  {
+    "year": "2018",
     "kind": "trek",
     "when": "December 2018",
     "name": "Salkantay trek",
     "where": "Cusco region, Peru",
     "note": "Over the Salkantay pass to Machu Picchu, around the new year."
+  },
+  {
+    "year": "2019",
+    "kind": "road-trip",
+    "when": "February 2019",
+    "name": "Chile's Lakes District",
+    "where": "Puerto Varas and Cochamó, northern Patagonia",
+    "note": "Patagonia's Lakes District, before Torres del Paine."
   },
   {
     "year": "2019",
@@ -197,10 +220,10 @@
   },
   {
     "year": "2019",
-    "kind": "day-hike",
+    "kind": "hiking",
     "when": "March 2019",
-    "name": "El Chaltén",
-    "where": "Patagonia, Argentina",
+    "name": "Hiking under Fitz Roy",
+    "where": "El Chaltén, Patagonia, Argentina",
     "note": "Hiking below Fitz Roy."
   },
   {
@@ -216,7 +239,7 @@
     "kind": "backpacking",
     "when": "August 2019",
     "name": "PCT in Washington",
-    "where": "Near Lake Chelan, Washington",
+    "where": "Near Lake Chelan",
     "note": "A week back on the Pacific Crest Trail, six years after the first walk."
   },
   {
@@ -229,9 +252,9 @@
   },
   {
     "year": "2019",
-    "kind": "hiking",
+    "kind": "road-trip",
     "when": "September and October 2019",
-    "name": "Dolomites",
+    "name": "Three weeks in the Dolomites",
     "where": "Cortina d'Ampezzo, Italy",
     "note": "Three weeks of hiking around Cortina."
   },
@@ -240,7 +263,7 @@
     "kind": "bike",
     "when": "June 2020",
     "name": "McKenzie Pass, car-free",
-    "where": "McKenzie Pass Scenic Highway, Oregon",
+    "where": "Oregon Cascades",
     "note": "Riding the pass before it opened to cars for the season."
   },
   {
@@ -248,7 +271,7 @@
     "kind": "backpacking",
     "when": "July 2020",
     "name": "Elkhorn and Sawtooth Mountains",
-    "where": "Elkhorn Mountains, Oregon, and Sawtooth Mountains, Idaho",
+    "where": "Oregon and Idaho",
     "note": "Camping and backpacking in two mountain ranges."
   },
   {
@@ -264,7 +287,7 @@
     "kind": "backpacking",
     "when": "September and October 2020",
     "name": "Three Sisters loop",
-    "where": "Three Sisters Wilderness, Oregon",
+    "where": "Oregon Cascades",
     "note": "The loop around all three peaks, retracing a trip from a few years earlier."
   },
   {
@@ -296,7 +319,7 @@
     "kind": "road-trip",
     "when": "September 15 to October 5, 2022",
     "name": "Porto and northern Portugal",
-    "where": "Porto and Peneda-Gerês, by way of Iceland",
+    "where": "Peneda-Gerês, by way of Iceland",
     "note": "A stopover in Iceland, a few days in Porto, then two weeks driving the north around Peneda-Gerês National Park."
   },
   {
@@ -311,8 +334,8 @@
     "year": "2023",
     "kind": "backpacking",
     "when": "August and September 2023",
-    "name": "Jasper backcountry",
-    "where": "Jasper National Park, Alberta",
+    "name": "Canadian Rockies",
+    "where": "Banff and Jasper National Parks, Alberta",
     "note": "A few three-day backpacking trips over two weeks in the Canadian Rockies."
   },
   {
@@ -328,7 +351,7 @@
     "kind": "backpacking",
     "when": "August 2024",
     "name": "Oregon Coast Trail",
-    "where": "North coast, around Oswald West",
+    "where": "Around Oswald West",
     "note": "Five days of beaches, headlands, and coastal forest."
   },
   {
@@ -347,6 +370,14 @@
     "name": "Timberline Trail",
     "where": "Mount Hood, Oregon",
     "note": "The full loop around Mount Hood over five days."
+  },
+  {
+    "year": "2024",
+    "kind": "diving",
+    "when": "October 2024",
+    "name": "Diving in Baja",
+    "where": "Cabo Pulmo, Mexico",
+    "note": "Diving around a wedding."
   },
   {
     "year": "2025",
@@ -368,7 +399,15 @@
   },
   {
     "year": "2025",
-    "kind": "day-hike",
+    "kind": "road-trip",
+    "when": "June 2025",
+    "name": "Scotland and Ireland",
+    "where": "Cairngorms, Glencoe, Connemara, and Wicklow",
+    "note": "Two weeks across the Highlands and the west of Ireland."
+  },
+  {
+    "year": "2025",
+    "kind": "hiking",
     "when": "June 2025",
     "name": "Durmitor National Park",
     "where": "Montenegro",
@@ -403,7 +442,7 @@
   },
   {
     "year": "2025",
-    "kind": "day-hike",
+    "kind": "hiking",
     "when": "August 2025",
     "name": "Triglav National Park",
     "where": "Slovenia",
@@ -419,11 +458,51 @@
   },
   {
     "year": "2025",
-    "kind": "day-hike",
+    "kind": "safari",
+    "when": "September 2025",
+    "name": "Safari in Kenya",
+    "where": "Maasai Mara, Lake Nakuru, and Amboseli",
+    "note": "A week across three parks."
+  },
+  {
+    "year": "2025",
+    "kind": "hiking",
     "when": "October 2025",
     "name": "Kakamega Forest",
     "where": "Western Kenya",
     "note": "Days of walking a rainforest reserve with a local guide, reached by local transport."
+  },
+  {
+    "year": "2025",
+    "kind": "train",
+    "when": "December 2025 to January 2026",
+    "name": "Month in Japan by train",
+    "where": "Honshu",
+    "note": "Hakone, Kyoto, Kanazawa, Nagano, and Hiroshima."
+  },
+  {
+    "year": "2026",
+    "kind": "diving",
+    "when": "February 2026",
+    "name": "Thailand's Andaman coast",
+    "where": "Phuket to Langkawi, by way of the Similans and Ko Lanta",
+    "note": "Three weeks of diving, island to island down the coast."
+  },
+  {
+    "year": "2026",
+    "kind": "diving",
+    "when": "February and March 2026",
+    "name": "Diving in Indonesia",
+    "where": "Raja Ampat, West Papua",
+    "note": "Diving the reefs of Raja Ampat."
+  },
+  {
+    "year": "2026",
+    "kind": "safari",
+    "when": "April 2026",
+    "name": "Hiking and river safari in Borneo",
+    "where": "Sabah, Malaysia",
+    "note": "Day hiking near Mount Kinabalu, and a water safari on the river."
   },
   {
     "year": "2026",
