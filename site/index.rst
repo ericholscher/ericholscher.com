@@ -1,7 +1,7 @@
 My home on the web
 ==================
 
-I'm Eric. I build documentation communities, walk long trails, and otherwise spend time outside.
+I'm Eric. I build documentation communities and otherwise spend time outside.
 
 I co-founded `Read the Docs <https://about.readthedocs.com/>`_,
 `Write the Docs <https://www.writethedocs.org>`_,
