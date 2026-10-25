@@ -5,7 +5,7 @@
 
 # Single-track conferences with a formalized hallway track
 
-I've helped organize around 50 conferences over the years, mostly Write the Docs and PyCascades events,
+I've helped organize around 50 conferences over the years, mostly [Write the Docs](https://www.writethedocs.org/) and [PyCascades](https://www.pycascades.com/) events,
 and attended around 50 more.
 Over this time, I've come to build a preference for a certain kind of event:
 the single-track conference with a formalized hallway track,
@@ -30,7 +30,7 @@ a formalized hallway track.
 
 It's really important to have a secondary space
 where people can self-coordinate around the topics they're interested in.
-We call it an Unconference; sometimes it's called an Open Space.
+We call it an [Unconference](https://www.writethedocs.org/conf/portland/2026/unconference/); sometimes it's called an [Open Space](https://en.wikipedia.org/wiki/Open_space_technology).
 **The main thing is that it isn't scheduled in advance,
 and allows people interested in similar topics to find each other.**
 
@@ -59,12 +59,12 @@ because this is how you build community and help ensure a more dynamic conferenc
 The Unconference, or formalized hallway track, is one place to do that.
 
 But we also want to put some of that on the main stage,
-and that's where lightning talks come in.
+and that's where [lightning talks](https://www.writethedocs.org/conf/portland/2026/lightning-talks/) come in.
 They're five-minute talks that are submitted the week of the conference, or the day of.
 They give people the chance to get up on stage,
 and I find they're the best way to break the ice for getting people on stage
 and building a group of speakers.
-That's the way I gave my first conference talk.
+That's the way I gave [my first conference talk](/blog/2008/dec/31/year-review/).
 
 A lot of people start speaking with lightning talks,
 then maybe give a meetup talk,
