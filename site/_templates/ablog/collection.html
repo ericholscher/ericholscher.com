@@ -7,8 +7,8 @@
 {%- block body %}
 <div class="topo-collection{% if meta %} topo-landing{% endif %}">
   {%- if meta %}
-  <h1>{{ meta[0] }}</h1>
-  <p class="topo-landing-intro">{{ meta[1] }}</p>
+  <h1>{{ meta.title }}</h1>
+  <p class="topo-landing-intro">{{ meta.intro }}</p>
   <div class="topo-recent-head"><h2>{{ collection|length }} post{% if collection|length != 1 %}s{% endif %}</h2></div>
   {%- elif is_year %}
   <h1>{{ collection }}</h1>

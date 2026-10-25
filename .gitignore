@@ -8,3 +8,4 @@ photo-places.json
 trips.csv
 photo-skip.json
 .venv/
+__pycache__/

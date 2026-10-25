@@ -51,8 +51,8 @@
 {%- set coll = ablog.category[slug] %}
 {%- if coll and coll|length %}
   <section class="topo-topic">
-    <h3><a href="{{ pathto(coll.docname) }}">{{ meta[0] }}</a> <span class="topo-topic-count">{{ coll|length }}</span></h3>
-    <p>{{ meta[1] }}</p>
+    <h3><a href="{{ pathto(coll.docname) }}">{{ meta.title }}</a> <span class="topo-topic-count">{{ coll|length }}</span></h3>
+    <p>{{ meta.intro }}</p>
     {%- set recent = [] %}
     {%- for post in coll %}{% if loop.index <= per %}{% set _ = recent.append(post) %}{% endif %}{% endfor %}
     {{ titles(recent, pagename) }}

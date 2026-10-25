@@ -1,0 +1,26 @@
+{
+  "documentation": {
+    "title": "Documentation",
+    "intro": "How software gets explained: Read the Docs, Write the Docs, Sphinx, and the craft of docs."
+  },
+  "open-source": {
+    "title": "Open source",
+    "intro": "Sustaining open source projects and the businesses around them."
+  },
+  "community": {
+    "title": "Community",
+    "intro": "Conferences, events, and making rooms that are easier to walk into."
+  },
+  "code": {
+    "title": "Code",
+    "intro": "Django, Python, and the tools of the trade. Much of it from the early years."
+  },
+  "outside": {
+    "title": "Outside",
+    "intro": "Long trails, bike tours, and the places they go through."
+  },
+  "link-blog": {
+    "title": "Notes",
+    "intro": "Short pointers to things worth reading, with a line or two of why."
+  }
+}
