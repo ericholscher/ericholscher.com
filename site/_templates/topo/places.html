@@ -1,17 +1,26 @@
-{#- Places map, data in site/_data/places.json. Equirectangular to match world-land.html.
-    Everything past the static map is progressive enhancement: the year filter, expanding the map
-    to fill the screen (with zoom and drag to pan), and tapping a pin to name it. -#}
+{#- Places map, data in site/_data/places.json, grouped into trips by site/_data/trips.json.
+    Equirectangular to match world-land.html. Without JavaScript this is the whole world's pins and a
+    list of trips. Everything else is progressive enhancement: stepping through trips (the map zooms to
+    each and names its pins), a strip of years to filter by, expanding the map to fill the screen (with
+    zoom and drag to pan), and tapping a pin to name it. A trip permalink (#europe-2018) opens that trip. -#}
 {%- set W = 1000 %}{% set TOP = 84 %}{% set BOT = -58 %}{% set H = (W * (TOP - BOT) / 360)|round(0) %}
 {%- set ns = namespace(years=[]) %}
-{%- for p in topo_places %}{% for y in p.years or [] %}{% if y not in ns.years %}{% set ns.years = ns.years + [y] %}{% endif %}{% endfor %}{% endfor %}
-{%- set all_years = ns.years|sort(reverse=true) %}
+{%- for p in topo_places %}{% for y in p.years or [] %}{% set ns.years = ns.years + [y] %}{% endfor %}{% endfor %}
+{%- set y0 = ns.years|min %}{% set y1 = ns.years|max %}
+{%- set ns2 = namespace(most=1) %}
+{%- for y in range(y0, y1 + 1) %}{% set ns2.most = [ns2.most, ns.years|select('equalto', y)|list|length]|max %}{% endfor %}
 <section class="topo-places" id="places">
   <h2 class="topo-plaque">Places</h2>
   <div class="topo-map" aria-label="Map of places">
     <div class="topo-map-bar">
-      <div class="topo-year-filter" role="group" aria-label="Show places by year" hidden>
-        <button type="button" data-year="all" aria-pressed="true">All</button>
-        {%- for y in all_years %}<button type="button" data-year="{{ y }}" aria-pressed="false">{{ y }}</button>{% endfor %}
+      <div class="topo-tripnav" hidden>
+        <button type="button" class="topo-tripnav-step" data-step="-1" aria-label="Newer">&lsaquo;</button>
+        <div class="topo-tripnav-head" aria-live="polite">
+          <p class="topo-tripnav-title">All places</p>
+          <p class="topo-tripnav-when">{{ topo_trips|length }} trips, newest first</p>
+        </div>
+        <button type="button" class="topo-tripnav-step" data-step="1" aria-label="Older">&rsaquo;</button>
+        <button type="button" class="topo-tripnav-all" hidden>All trips</button>
       </div>
       <div class="topo-map-tools">
         <button type="button" class="topo-map-close">Close</button>
@@ -26,6 +35,7 @@
           {%- set x = ((p.lon + 180) / 360 * W)|round(1) %}{% set y = ((TOP - p.lat) / (TOP - BOT) * H)|round(1) %}
           <g class="topo-pin topo-pin-{{ p.kind }}" data-years="{{ (p.years or [])|join(' ') }}" data-name="{{ p.name|e }}"{% if p.note %} data-note="{{ p.note|e }}"{% endif %} data-x="{{ x }}" data-y="{{ y }}"><circle class="topo-pin-dot" cx="{{ x }}" cy="{{ y }}" r="{% if p.kind == 'lived' %}5.5{% else %}4{% endif %}"><title>{{ p.name }}{% if p.note %} · {{ p.note }}{% endif %}</title></circle></g>
           {%- endfor %}
+          <g class="topo-pin-labels" aria-hidden="true"></g>
         </svg>
       </div>
       <button type="button" class="topo-map-expand" aria-label="Expand map" hidden>
@@ -38,6 +48,15 @@
       </div>
       <div class="topo-map-tip" role="status" hidden></div>
     </div>
+    {#- Years as a strip of bars, each as tall as that year's count of places; tap one to show its places. #}
+    <div class="topo-spark" role="group" aria-label="Places by year" hidden>
+      <div class="topo-spark-bars">
+        {%- for y in range(y0, y1 + 1) %}{% set n = ns.years|select('equalto', y)|list|length %}
+        <button type="button" data-year="{{ y }}" aria-pressed="false" title="{{ y }}: {{ n }} {{ 'place' if n == 1 else 'places' }}" aria-label="{{ y }}, {{ n }} {{ 'place' if n == 1 else 'places' }}"{% if not n %} disabled{% endif %}><span style="--n: {{ (n / ns2.most)|round(3) }}"></span></button>
+        {%- endfor %}
+      </div>
+      <p class="topo-spark-axis"><span>{{ y0 }}</span><span class="topo-spark-note">Tap a year</span><span>{{ y1 }}</span></p>
+    </div>
     <p class="topo-map-readout" aria-live="polite">Pinch or scroll to zoom. Tap a pin to name it.</p>
     <p class="topo-map-legend">
       <span class="topo-legend topo-legend-lived">Lived</span>
@@ -45,6 +64,27 @@
       <span class="topo-legend topo-legend-visited">Visited</span>
     </p>
   </div>
+  <h3 class="topo-log-label topo-triplist-head">Trips</h3>
+  <ol class="topo-triplist">
+    {%- for t in topo_trips %}
+    <li class="topo-trip" id="{{ t.slug }}" data-places="{{ t.places|join('|')|e }}" data-years="{{ (t.years or [])|join(' ') }}">
+      <h4><a href="#{{ t.slug }}">{{ t.name }}</a></h4>
+      <p class="topo-trip-when">{% if t.when %}{{ t.when }} &middot; {% endif %}{{ t.places|length }} {{ 'place' if t.places|length == 1 else 'places' }}</p>
+      <div class="topo-trip-more">
+        {%- if t.along %}
+        <h5 class="topo-log-label">Along the way</h5>
+        <ul class="topo-trip-along">
+          {%- for name in t.along %}{% for h in topo_hikes if h.name == name and (not t.years or h.year|int in t.years) %}
+          <li><a href="#{{ h.year }}">{{ h.name }}</a> <span>{{ h.when }}</span></li>
+          {%- endfor %}{% endfor %}
+        </ul>
+        {%- endif %}
+        <h5 class="topo-log-label">Places</h5>
+        <p class="topo-trip-places">{{ t.places|join(' · ') }}</p>
+      </div>
+    </li>
+    {%- endfor %}
+  </ol>
   <p class="topo-home-line">Home, over the years:
     {%- for p in topo_places if p.kind == 'lived' %} <span class="topo-home-place">{{ p.name }}</span>{% if not loop.last %} &middot;{% endif %}{% endfor %}</p>
   <script>
@@ -53,52 +93,115 @@
     var map = root.querySelector('.topo-map');
     var svg = map.querySelector('.topo-world');
     var scroller = map.querySelector('.topo-map-scroll');
-    var bar = map.querySelector('.topo-year-filter');
-    var buttons = bar.querySelectorAll('button');
-    var pins = svg.querySelectorAll('.topo-pin');
+    var pins = [].slice.call(svg.querySelectorAll('.topo-pin'));
+    var labels = svg.querySelector('.topo-pin-labels');
+    var nav = map.querySelector('.topo-tripnav');
+    var title = nav.querySelector('.topo-tripnav-title'), when = nav.querySelector('.topo-tripnav-when');
+    var steps = nav.querySelectorAll('.topo-tripnav-step'), allTrips = nav.querySelector('.topo-tripnav-all');
+    var spark = map.querySelector('.topo-spark');
+    var bars = [].slice.call(spark.querySelectorAll('button'));
+    var sparkNote = spark.querySelector('.topo-spark-note');
+    var trips = [].slice.call(root.querySelectorAll('.topo-trip'));
     var expand = map.querySelector('.topo-map-expand');
     var close = map.querySelector('.topo-map-close');
     var readout = map.querySelector('.topo-map-readout');
     var frame = map.querySelector('.topo-map-frame');
     var tip = map.querySelector('.topo-map-tip');
     var vb = svg.viewBox.baseVal;
+    var allTitle = title.textContent, allWhen = when.textContent;
+    var years = bars.filter(function (b) { return !b.disabled; }).map(function (b) { return b.dataset.year; }).reverse();
     var expanded = false, zoom = 1, active = null, hovered = null, drag = null, dragged = false, pinch = null;
+    // What the map shows: everything, one year, or one trip ({ trip: li } or { year: '2016' }).
+    var focus = null;
+    var byName = {};
+    pins.forEach(function (p) { byName[p.dataset.name] = p; });
+    trips.forEach(function (li) {
+      li.pins = li.dataset.places.split('|').map(function (n) { return byName[n]; }).filter(Boolean);
+    });
     // The hover label below replaces the browser's own tooltips, which stay for pages without JavaScript.
     svg.querySelectorAll('.topo-pin title').forEach(function (t) { t.remove(); });
-    bar.hidden = false; expand.hidden = false; map.querySelector('.topo-map-zoombox').hidden = false;
-    map.classList.add('is-enhanced');
+    nav.hidden = false; spark.hidden = false; expand.hidden = false; map.querySelector('.topo-map-zoombox').hidden = false;
+    map.classList.add('is-enhanced'); root.classList.add('is-enhanced');
 
-    // Pins keep a steady size on screen, whatever the map's width or zoom.
+    function unitNow() { return svg.getBoundingClientRect().width / vb.width; }
+    function lit() { return pins.filter(function (p) { return !p.classList.contains('is-dim'); }); }
+    // Pins keep a steady size on screen, whatever the map's width or zoom, and get their names
+    // once there's room: on a trip or year, or zoomed in.
     function sizePins() {
-      var unit = svg.getBoundingClientRect().width / vb.width; if (!unit) return;
+      var unit = unitNow(); if (!unit) return;
       pins.forEach(function (p) {
         var lived = p.classList.contains('topo-pin-lived');
         p.querySelector('.topo-pin-dot').setAttribute('r', ((lived ? 5 : 4) / unit).toFixed(2));
       });
+      nameOnMap(unit);
     }
-    // Scroll the expanded map to the middle of the pins in view.
-    function center() {
-      var x0 = Infinity, x1 = -Infinity, y0 = Infinity, y1 = -Infinity;
-      pins.forEach(function (p) {
-        if (p.classList.contains('is-dim') || p.classList.contains('topo-pin-lived')) return;
-        var x = +p.dataset.x, y = +p.dataset.y - vb.y;
-        x0 = Math.min(x0, x); x1 = Math.max(x1, x); y0 = Math.min(y0, y); y1 = Math.max(y1, y);
+    // Name each lit pin to its right, or its left if that's taken; skip it if both are.
+    function nameOnMap(unit) {
+      labels.textContent = '';
+      if (!focus && zoom < 3) return;
+      var fs = 12.5 / unit, gap = 7 / unit, r = 5 / unit;
+      // Names steer clear of the lit pins, as well as each other.
+      var boxes = lit().map(function (p) { return { x0: +p.dataset.x - r, x1: +p.dataset.x + r, y0: +p.dataset.y - r, y1: +p.dataset.y + r }; });
+      // Only names that land inside the frame, as it's scrolled now.
+      var view = { x0: vb.x + scroller.scrollLeft / unit, y0: vb.y + scroller.scrollTop / unit };
+      view.x1 = view.x0 + scroller.clientWidth / unit; view.y1 = view.y0 + scroller.clientHeight / unit;
+      var order = { 'topo-pin-hiked': 0, 'topo-pin-lived': 1, 'topo-pin-visited': 2 };
+      function kind(p) { return order[p.classList[1]] || 0; }
+      // Homes stay lit for every year, so they're only named when they're part of the trip.
+      lit().filter(function (p) { return focus && focus.trip || !p.classList.contains('topo-pin-lived'); })
+      .sort(function (a, b) { return kind(a) - kind(b); }).forEach(function (p) {
+        var x = +p.dataset.x, y = +p.dataset.y, w = p.dataset.name.length * fs * 0.52;
+        var spots = [{ x: x + gap, a: 'start' }, { x: x - gap - w, a: 'end' }];
+        for (var i = 0; i < spots.length; i++) {
+          var b = { x0: spots[i].x, x1: spots[i].x + w, y0: y - fs * 0.6, y1: y + fs * 0.6 };
+          if (b.x0 < view.x0 || b.x1 > view.x1 || b.y0 < view.y0 || b.y1 > view.y1) continue;
+          var hit = boxes.some(function (o) { return b.x0 < o.x1 && b.x1 > o.x0 && b.y0 < o.y1 && b.y1 > o.y0; });
+          if (hit) continue;
+          boxes.push(b);
+          var t = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+          t.textContent = p.dataset.name;
+          t.setAttribute('x', (spots[i].a === 'start' ? x + gap : x - gap).toFixed(2));
+          t.setAttribute('y', (y + fs * 0.35).toFixed(2));
+          t.setAttribute('text-anchor', spots[i].a);
+          t.setAttribute('font-size', fs.toFixed(2));
+          t.setAttribute('stroke-width', (3 / unit).toFixed(2));
+          labels.appendChild(t);
+          return;
+        }
       });
-      if (x0 === Infinity) return;
-      var unit = svg.getBoundingClientRect().width / vb.width;
-      scroller.scrollLeft = (x0 + x1) / 2 * unit - scroller.clientWidth / 2;
-      scroller.scrollTop = (y0 + y1) / 2 * unit - scroller.clientHeight / 2;
     }
     // Zoom, keeping the map point under (x, y) on screen where it is; the middle by default.
     function setZoom(z, x, y) {
       var s = scroller.getBoundingClientRect();
       var ax = x == null ? scroller.clientWidth / 2 : x - s.left, ay = y == null ? scroller.clientHeight / 2 : y - s.top;
       var fx = (scroller.scrollLeft + ax) / scroller.scrollWidth, fy = (scroller.scrollTop + ay) / scroller.scrollHeight;
-      zoom = Math.max(1, Math.min(12, z));
+      // Never smaller than the frame, so the map always fills it.
+      var least = Math.max(1, scroller.clientHeight / (scroller.clientWidth * vb.height / vb.width));
+      zoom = Math.max(least, Math.min(16, z));
       svg.style.width = zoom === 1 ? '' : (zoom * 100) + '%';
       map.classList.toggle('is-zoomed', zoom > 1);
       scroller.scrollLeft = fx * scroller.scrollWidth - ax;
       scroller.scrollTop = fy * scroller.scrollHeight - ay;
+      sizePins();
+    }
+    // Zoom and scroll so the lit pins fill the frame, with room for their names. Lived pins
+    // don't count, since they stay lit for every year.
+    function fit() {
+      var on = lit().filter(function (p) { return !focus || focus.trip || !p.classList.contains('topo-pin-lived'); });
+      if (!on.length) { setZoom(1); return; }
+      var x0 = Infinity, x1 = -Infinity, y0 = Infinity, y1 = -Infinity;
+      on.forEach(function (p) {
+        x0 = Math.min(x0, +p.dataset.x); x1 = Math.max(x1, +p.dataset.x);
+        y0 = Math.min(y0, +p.dataset.y); y1 = Math.max(y1, +p.dataset.y);
+      });
+      var base = scroller.clientWidth / vb.width, cw = scroller.clientWidth, ch = scroller.clientHeight;
+      // Margins in screen pixels: wider on the right, where the names go.
+      var left = 40, right = Math.min(150, cw / 3);
+      var z = Math.min((cw - left - right) / ((x1 - x0) * base || 1), (ch - 60) / ((y1 - y0) * base || 1), 16);
+      setZoom(z);
+      var unit = base * zoom;
+      scroller.scrollLeft = ((x0 + x1) / 2 - vb.x) * unit - (cw + left - right) / 2;
+      scroller.scrollTop = ((y0 + y1) / 2 - vb.y) * unit - ch / 2;
       sizePins();
     }
     function setExpanded(on) {
@@ -107,41 +210,97 @@
       document.documentElement.classList.toggle('topo-map-open', on);
       if (on) {
         map.setAttribute('role', 'dialog'); map.setAttribute('aria-modal', 'true');
-        // Start zoomed in far enough that the map fills the screen top to bottom.
-        setZoom(scroller.clientHeight / (scroller.clientWidth * vb.height / vb.width));
-        center();
+        fit();
         close.focus();
       } else {
         map.removeAttribute('role'); map.removeAttribute('aria-modal');
-        setZoom(1);
+        if (focus) fit(); else setZoom(1);
         expand.focus();
       }
     }
-    function show(year) {
-      buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.year === year)); });
+    function plural(n, one) { return n + ' ' + one + (n === 1 ? '' : 's'); }
+    // Show everything (null), one year ({ year }), or one trip ({ trip }).
+    function setFocus(f, quiet) {
+      focus = f;
+      var year = f && f.year, trip = f && f.trip;
       pins.forEach(function (p) {
-        var on = year === 'all' || p.classList.contains('topo-pin-lived') || p.dataset.years.split(' ').indexOf(year) !== -1;
+        var on = !f || (trip ? trip.pins.indexOf(p) !== -1 :
+          p.classList.contains('topo-pin-lived') || p.dataset.years.split(' ').indexOf(year) !== -1);
         p.classList.toggle('is-dim', !on);
       });
+      map.classList.toggle('is-focused', !!f);
+      root.classList.toggle('is-trip', !!trip);
+      trips.forEach(function (li) {
+        li.classList.toggle('is-current', li === trip);
+        li.hidden = !!trip ? li !== trip : !!year && li.dataset.years.split(' ').indexOf(year) === -1;
+      });
+      var tripYears = trip ? trip.dataset.years.split(' ') : [];
+      bars.forEach(function (b) {
+        b.setAttribute('aria-pressed', String(b.dataset.year === year));
+        b.classList.toggle('is-trip', tripYears.indexOf(b.dataset.year) !== -1);
+      });
+      if (trip) {
+        title.textContent = trip.querySelector('h4').textContent;
+        when.textContent = trip.querySelector('.topo-trip-when').textContent;
+      } else if (year) {
+        var n = lit().filter(function (p) { return !p.classList.contains('topo-pin-lived'); }).length;
+        var t = trips.filter(function (li) { return !li.hidden; }).length;
+        title.textContent = year;
+        when.textContent = plural(n, 'place') + (t ? ' · ' + plural(t, 'trip') : '');
+      } else {
+        title.textContent = allTitle; when.textContent = allWhen;
+      }
+      sparkNote.textContent = year ? year : trip && tripYears[0] ? tripYears.join('–') : 'Tap a year';
+      allTrips.hidden = !f;
+      steps[0].disabled = !f;
+      steps[1].disabled = !!trip && trip === trips[trips.length - 1] || !!year && year === years[years.length - 1];
       showTip(null);
-      if (expanded) center();
+      // The small map grows taller for a trip or year, so wait for the new size before fitting.
+      requestAnimationFrame(function () { if (f) fit(); else setZoom(1); });
+      if (!quiet) {
+        if (year) document.dispatchEvent(new CustomEvent('topo:map-year', { detail: year }));
+        else history.replaceState(null, '', trip ? '#' + trip.id : location.pathname + location.search);
+      }
     }
-
-    buttons.forEach(function (b) {
+    // The arrows step through trips, newest first, or through years when a year is showing.
+    steps.forEach(function (b) {
       b.addEventListener('click', function () {
-        show(b.dataset.year);
-        document.dispatchEvent(new CustomEvent('topo:map-year', { detail: b.dataset.year }));
+        var d = +b.dataset.step;
+        if (focus && focus.year) {
+          var y = years[years.indexOf(focus.year) + d];
+          return setFocus(y ? { year: y } : null);
+        }
+        var i = focus ? trips.indexOf(focus.trip) + d : d > 0 ? 0 : -1;
+        setFocus(trips[i] ? { trip: trips[i] } : null);
       });
     });
-    // A year permalink (#2016) sets the map to that year; see timeline.html.
-    document.addEventListener('topo:year', function (e) { show(e.detail); });
+    allTrips.addEventListener('click', function () { setFocus(null); });
+    bars.forEach(function (b) {
+      b.addEventListener('click', function () {
+        setFocus(focus && focus.year === b.dataset.year ? null : { year: b.dataset.year });
+      });
+    });
+    trips.forEach(function (li) {
+      li.querySelector('h4 a').addEventListener('click', function (e) {
+        e.preventDefault();
+        setFocus({ trip: li });
+        root.scrollIntoView({ block: 'start' });
+      });
+    });
+    // A year permalink (#2016) sets the map to that year; see timeline.html. A trip permalink opens the trip.
+    document.addEventListener('topo:year', function (e) { setFocus({ year: e.detail }, true); });
+    function fromHash() {
+      var li = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (li && li.classList.contains('topo-trip')) { setFocus({ trip: li }, true); root.scrollIntoView({ block: 'start' }); }
+    }
+    window.addEventListener('hashchange', fromHash);
     expand.addEventListener('click', function () { setExpanded(true); });
     close.addEventListener('click', function () { setExpanded(false); });
     map.querySelectorAll('.topo-map-zoom').forEach(function (b) {
       b.addEventListener('click', function () { setZoom(zoom * +b.dataset.step); });
     });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && expanded) setExpanded(false); });
-    window.addEventListener('resize', function () { sizePins(); });
+    window.addEventListener('resize', function () { if (focus) fit(); else sizePins(); });
 
     // Wheel and trackpad: the open map zooms on any scroll; the small one only on a pinch
     // (which browsers send as ctrl + wheel), so ordinary scrolling still moves the page.
@@ -188,8 +347,7 @@
       var rect = svg.getBoundingClientRect(), unit = rect.width / vb.width;
       var ux = (e.clientX - rect.left) / unit + vb.x, uy = (e.clientY - rect.top) / unit + vb.y;
       var best = null, bestD = 18 / unit;
-      pins.forEach(function (p) {
-        if (p.classList.contains('is-dim')) return;
+      lit().forEach(function (p) {
         var d = Math.hypot(+p.dataset.x - ux, +p.dataset.y - uy);
         if (d < bestD) { best = p; bestD = d; }
       });
@@ -209,7 +367,12 @@
       if (e.pointerType === 'mouse' && !drag) showTip(nearest(e));
     });
     scroller.addEventListener('pointerleave', function () { showTip(null); });
-    scroller.addEventListener('scroll', function () { showTip(null); });
+    // Names follow the view: renamed once a scroll or drag settles.
+    var renaming;
+    scroller.addEventListener('scroll', function () {
+      showTip(null);
+      clearTimeout(renaming); renaming = setTimeout(function () { nameOnMap(unitNow()); }, 80);
+    });
     // Drag to pan with a mouse; touch screens already scroll.
     scroller.addEventListener('pointerdown', function (e) {
       if (!(expanded || zoom > 1) || e.pointerType !== 'mouse') return;
@@ -230,12 +393,12 @@
     document.querySelectorAll('[data-map-year]').forEach(function (b) {
       b.hidden = false;
       b.addEventListener('click', function () {
-        show(b.dataset.mapYear);
-        document.dispatchEvent(new CustomEvent('topo:map-year', { detail: b.dataset.mapYear }));
+        setFocus({ year: b.dataset.mapYear });
         root.scrollIntoView({ block: 'start' });
       });
     });
     sizePins();
+    fromHash();
   });
   </script>
 </section>

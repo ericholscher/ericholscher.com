@@ -10,9 +10,12 @@ import re
 from pathlib import Path
 
 import yaml
+from sphinx.util import logging
 
 from docutils import nodes
 from docutils.parsers.rst import Directive
+
+logger = logging.getLogger(__name__)
 
 
 def topo_data_context(app, pagename, templatename, context, doctree):
@@ -81,6 +84,25 @@ def topo_excerpt(text, limit=220):
     return text[:limit].rsplit(" ", 1)[0].rstrip(",;:") + "…"
 
 
+# Trips in _data/trips.json name their places (from places.json) and the trips along the way
+# (from hikes.json, within the trip's years). A name that doesn't match would quietly drop out
+# of the map or the list, so say so.
+def topo_check_trips(app):
+    places = {p["name"]: p for p in app.topo_data.get("topo_places", [])}
+    hikes = app.topo_data.get("topo_hikes", [])
+    for t in app.topo_data.get("topo_trips", []):
+        years = set(t.get("years", []))
+        for name in t["places"]:
+            p = places.get(name)
+            if not p:
+                logger.warning("trips.json: %s names a place not in places.json: %s", t["slug"], name)
+            elif years and not years & set(p.get("years", [])):
+                logger.warning("trips.json: %s has %s, but not in %s", t["slug"], name, sorted(years))
+        for name in t.get("along", []):
+            if not any(h["name"] == name and (not years or int(h["year"]) in years) for h in hikes):
+                logger.warning("trips.json: %s names a trip not in hikes.json for its years: %s", t["slug"], name)
+
+
 def topo_template_filters(app):
     if hasattr(app.builder, "templates"):
         app.builder.templates.environment.filters["topo_excerpt"] = topo_excerpt
@@ -117,4 +139,5 @@ def setup(app):
     app.connect("html-page-context", topo_year_summary)
     app.connect("doctree-resolved", topo_photo_rows)
     app.connect("builder-inited", topo_template_filters)
+    app.connect("builder-inited", topo_check_trips)
     return {"parallel_read_safe": True, "parallel_write_safe": True}

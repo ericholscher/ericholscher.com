@@ -23,7 +23,9 @@ writes a meta-refresh page at each old URL that no longer has a page of its own 
 Topics are ABlog categories. The ones listed in ``site/_data/categories.json`` (slug to title and intro)
 get a landing page with an intro, and a card on the home page. A post joins a topic with ``:category: <slug>``.
 The Adventures page (``site/adventures.rst``) renders trips from ``site/_data/hikes.json`` and a places map
-from ``site/_data/places.json``; both are plain JSON meant to be edited by hand.
+from ``site/_data/places.json``; both are plain JSON meant to be edited by hand. ``site/_data/trips.json``
+groups those places into trips, which the map steps through one at a time; ``/adventures/#europe-2018``
+links to one.
 Trips marked ``"feature": true`` show as cards under "The long ones".
 Years and trip types are permalinks: ``/adventures/#2016`` opens that year and sets the map to it,
 ``/adventures/#trek`` shows only treks.
