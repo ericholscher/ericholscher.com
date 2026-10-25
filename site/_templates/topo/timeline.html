@@ -51,8 +51,8 @@
       <p class="topo-log-foot">
         {%- if pl.items %}<button type="button" class="topo-log-map" data-map-year="{{ y }}" hidden>Show {{ y }} on the map</button>{% endif %}
         <a class="topo-log-permalink" href="#{{ y }}">Link to {{ y }}</a>
-        {%- if topo_year_letters is defined and y in topo_year_letters %}
-        <a class="topo-log-letter" href="{{ pathto(topo_year_letters[y]) }}">Read the {{ y }} letter &rarr;</a>
+        {%- if ablog is defined and 'adventures/' ~ y in ablog.posts %}
+        <a class="topo-log-letter" href="{{ pathto('adventures/' ~ y) }}">Read the {{ y }} letter &rarr;</a>
         {%- endif %}
       </p>
     </div>
