@@ -75,16 +75,14 @@ and of getting more of that dynamic energy into the event.
 ## More conference thoughts
 
 I've written about conferences quite a bit over the years.
-10 years ago, I wrote about [how to handle questions]((/blog/2016/nov/12/questions-at-conferences/)),
+10 years ago, I wrote about [how to handle questions](/blog/2016/nov/12/questions-at-conferences/),
 which I still believe today.
 
 Check out some of the other posts as well:
 
-.. seealso::
-
-   * :doc:`/blog/2017/aug/2/pacman-rule-conferences`
-   * :doc:`/blog/2017/dec/2/breaking-cliques-at-events`
-   * :doc:`/blog/2019/sep/19/helping-first-time-conference-attendees-with-welcome-wagon`
-   * :doc:`/blog/2023/feb/10/we-dont-do-that-here`
-
-
+```{seealso}
+- {doc}`/blog/2017/aug/2/pacman-rule-conferences`
+- {doc}`/blog/2017/dec/2/breaking-cliques-at-events`
+- {doc}`/blog/2019/sep/19/helping-first-time-conference-attendees-with-welcome-wagon`
+- {doc}`/blog/2023/feb/10/we-dont-do-that-here`
+```
