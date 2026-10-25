@@ -14,9 +14,11 @@ USGS 3DEP data. Tiles are cached in .skyline-cache/.
 
     uv run --group photos python scripts/skyline.py
 
-Prints the polygon points for the ``topo-ridge`` SVG in site/_themes/topo/layout.html.
+Writes site/_data/skyline.json: the polygon points for the footer SVG, and where each named peak's
+summit lands, for the labels above it (see the footer in site/_themes/topo/layout.html).
 """
 
+import json
 import math
 import urllib.request
 from pathlib import Path
@@ -35,6 +37,21 @@ WIDTH, HEIGHT = 1280, 48
 FLOOR, FOOTHILLS = 0.2, 1.0  # degrees above level: where the drawing starts, and the foothills' top
 FOOTHILL_PX, HEADROOM_PX = 12, 2
 TOLERANCE = 0.35  # px, for simplifying the outline
+OUTPUT = Path(__file__).resolve().parent.parent / "site" / "_data" / "skyline.json"
+
+# Summits to label, south to north.
+PEAKS = [
+    ("Mt. Bachelor", 43.9792, -121.6886),
+    ("Broken Top", 44.0827, -121.6993),
+    ("South Sister", 44.1034, -121.7693),
+    ("Middle Sister", 44.1484, -121.7836),
+    ("North Sister", 44.1665, -121.7700),
+    ("Mt. Washington", 44.3323, -121.8378),
+    ("Black Butte", 44.3998, -121.6415),
+    ("Three Fingered Jack", 44.4795, -121.8442),
+    ("Mt. Jefferson", 44.6743, -121.7997),
+]
+LABEL_CHAR_PX = 6.7  # IBM Plex Mono at 11px, for spotting labels that would collide
 
 EARTH = 6_371_000
 REFRACTION = 0.13
@@ -123,10 +140,31 @@ def simplify(points):
     return simplify(points[: i + 1])[:-1] + simplify(points[i:])
 
 
+def bearing_to(lat, lon):
+    lat0, lon0 = VIEW
+    dx = (lon - lon0) * math.cos(math.radians(lat0))
+    return math.degrees(math.atan2(dx, lat - lat0)) % 360
+
+
+def labels(points):
+    """Each peak's x (as a percentage of the width), summit y, label row (so neighbors don't collide),
+    and where its label ends at full scale (so a narrow screen can drop labels it would cut off)."""
+    peaks, row_ends = [], [-1e9, -1e9]
+    for name, lat, lon in PEAKS:
+        x = WIDTH * (bearing_to(lat, lon) - BEARINGS[0]) / (BEARINGS[1] - BEARINGS[0])
+        y = min((py for px, py in points if abs(px - x) <= 6), default=HEIGHT)  # the summit near that bearing
+        half = len(name) * LABEL_CHAR_PX / 2 + 6
+        row = 0 if x - half > row_ends[0] else 1
+        row_ends[row] = x + half
+        peaks.append({"name": name, "x": round(100 * x / WIDTH, 2), "y": round(y, 1), "row": row, "right": round(x + half)})
+    return peaks
+
+
 def main():
-    points = simplify(to_points(skyline()))
+    full = to_points(skyline())
+    points = simplify(full)
     coords = [f"0,{HEIGHT}"] + [f"{round(x)},{round(y, 1):g}" for x, y in points] + [f"{WIDTH},{HEIGHT}"]
-    print(" ".join(coords))
+    OUTPUT.write_text(json.dumps({"points": " ".join(coords), "peaks": labels(full)}, indent=2) + "\n")
 
 
 if __name__ == "__main__":

@@ -606,8 +606,17 @@ div.tooltip[data-linkpreview-href] .arrow { background: var(--paper); }
 body .doc-diff-chunk-selected { background-color: color-mix(in srgb, var(--sign-gold) 22%, transparent); }
 
 /* Footer */
-.topo-ridge { overflow: hidden; background: var(--paper); }
-.topo-ridge svg { display: block; width: 100%; min-width: 1280px; height: 48px; fill: var(--forest); }
+.topo-ridge { overflow: hidden; background: var(--paper); container-type: inline-size; }
+.topo-ridge-inner { position: relative; min-width: 1280px; padding-top: 32px; }
+.topo-ridge svg { display: block; width: 100%; height: 48px; fill: var(--forest); }
+/* Peak names sit in two rows above the ridge, each with a hairline down to its summit (--summit is the
+   summit's y in the 48px drawing). Rows come from scripts/skyline.py, which keeps neighbors apart. */
+.topo-peaks { list-style: none; margin: 0; padding: 0; }
+/* A label the crop would cut off (its end, --right, past the visible width) drops out of view below the ridge. */
+.topo-peak { position: absolute; top: 0; transform: translate(-50%, clamp(0px, (var(--right) - 100cqw) * 1000, 999px)); font-family: var(--mono); font-size: 11px; line-height: 14px; color: var(--muted); white-space: nowrap; }
+.topo-peak-row1 { top: 14px; }
+.topo-peak::after { content: ""; position: absolute; left: 50%; top: 15px; width: 1px; height: calc(var(--summit) + 14px); background: var(--rule-strong); }
+.topo-peak-row1::after { height: max(2px, calc(var(--summit) + 0px)); }
 .topo-footer {
   display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 32px;
   padding: 18px var(--gutter) 22px; background: var(--forest); border-top: 3px solid var(--sign-gold);
