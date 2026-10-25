@@ -35,21 +35,21 @@ We call it an [Unconference](https://www.writethedocs.org/conf/portland/2026/unc
 and allows people interested in similar topics to find each other.**
 
 ```{figure} /_static/img/wtd-unconference-board.jpg
-:alt: The unconference sessions board at Write the Docs Portland 2026
+:alt: The Unconference sessions board at Write the Docs Portland 2026
 :width: 600px
 :align: center
 
-The unconference sessions board at Write the Docs Portland 2026
+The Unconference sessions board at Write the Docs Portland 2026
 ([Flickr](https://www.flickr.com/photos/writethedocs/55266138806/), CC0)
 ```
 
 The Unconference track should be timed in the same blocks as the primary talks.
 We use 35 minute blocks with 10 minute breaks,
 so the break is a natural "change places" time for the whole event.
-This naturally groups people who are interested in similar topics together,
-on topics that are often far afield from the primary talk content.
+This naturally groups people around shared interests,
+which are often far afield from the main talks
 
-Being scheduled day-of also means that the content will be up-to-date,
+The Unconference being scheduled day-of also means that the content will be up-to-date,
 even if it's about something that happened only one or two weeks ago.
 With technology moving faster and faster,
 it's important that people can talk about the latest and greatest things.
