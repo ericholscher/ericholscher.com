@@ -532,6 +532,23 @@ ul.search li a { font-family: var(--serif); font-size: 22px; }
 /* "Show diff" highlights. RTD adopts these styles after ours, so they need the extra specificity. */
 body .doc-diff-added { background-color: color-mix(in srgb, var(--forest) 20%, transparent); }
 body .doc-diff-removed { background-color: color-mix(in srgb, var(--blaze) 25%, transparent); text-decoration: line-through; text-decoration-color: color-mix(in srgb, var(--blaze) 60%, transparent); }
+/* Link previews: the card RTD shows when hovering a link to another page. It's a plain div at the end of
+   body, styled by a sheet RTD adopts after ours, so these selectors carry the data attribute to win. */
+div.tooltip[data-linkpreview-href] {
+  max-width: min(440px, calc(100vw - 20px)); max-height: min(380px, 60vh); min-height: 0;
+  background: var(--paper); border: 1px solid var(--rule-strong); border-radius: 3px;
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--ink) 20%, transparent);
+}
+div.tooltip[data-linkpreview-href] .tooltip-content { padding: 16px 20px; color: var(--text); font-family: var(--sans); font-size: 14px; line-height: 1.55; }
+div.tooltip[data-linkpreview-href] .tooltip-content > :first-child { margin-top: 0; }
+div.tooltip[data-linkpreview-href] :is(h1, h2, h3, h4) { font-family: var(--serif); font-weight: 500; line-height: 1.15; color: var(--ink); margin: 18px 0 6px; }
+div.tooltip[data-linkpreview-href] h1 { font-size: 24px; margin-top: 2px; }
+div.tooltip[data-linkpreview-href] h2 { font-size: 19px; }
+div.tooltip[data-linkpreview-href] :is(h3, h4) { font-size: 16px; }
+div.tooltip[data-linkpreview-href] :is(h1, h2, h3, h4) a { color: inherit; border-bottom: 0; }
+div.tooltip[data-linkpreview-href] p { margin: 0 0 10px; }
+div.tooltip[data-linkpreview-href] img { max-height: 180px; width: auto; }
+div.tooltip[data-linkpreview-href] .arrow { background: var(--paper); }
 body .doc-diff-chunk-selected { background-color: color-mix(in srgb, var(--sign-gold) 22%, transparent); }
 
 /* Footer */
