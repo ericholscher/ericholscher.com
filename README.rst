@@ -17,7 +17,9 @@ newer and older year links. The Archive page (``blog/archive/archive/``) lists e
 Retired pages forward elsewhere through Read the Docs redirects, kept in ``redirects.yml`` at the repo root, for example
 ``/bike/`` and ``/backpacking/`` to the Adventures page. The ``Sync redirects`` GitHub workflow applies the file with
 `readthedocs-cli <https://pypi.org/project/readthedocs-cli/>`_ on pushes to ``main`` (a dry run on pull requests), using
-an ``RTD_TOKEN`` repository secret. Redirects only fire for URLs that 404, so delete the old page when adding one.
+an ``RTD_TOKEN`` repository secret, and skips with a notice until that secret exists. Until then the build also
+writes a meta-refresh page at each old URL that no longer has a page of its own (``topo_redirect_pages`` in
+``site/conf.py``). Read the Docs only redirects URLs that 404, so remove those pages once the sync is running.
 Posts in the ``link-blog`` category get a small "link" label next to their date.
 
 Topics are ABlog categories. The ones listed in ``html_context["topo_categories"]`` in ``site/conf.py``

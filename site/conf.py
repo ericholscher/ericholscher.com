@@ -84,6 +84,22 @@ html_title = blog_title
 html_favicon = "_static/img/favicon.svg"
 html_static_path = ["_static"]
 
+# Redirects live in redirects.yml at the repo root, synced to Read the Docs by a GitHub workflow.
+# Until that sync has a token, each redirect also gets a meta-refresh page at its old URL, unless
+# a real page is still there. Read the Docs only redirects URLs that 404, so drop these pages
+# once the sync is running.
+def topo_redirect_pages(app):
+    import yaml
+
+    redirects = yaml.safe_load((Path(app.confdir).parent / "redirects.yml").read_text())
+    for r in redirects:
+        old, new = (r[k].strip("/") for k in ("from_url", "to_url"))
+        if r["type"] == "page" and old not in app.env.found_docs:
+            if f"{new}/index" in app.env.found_docs:
+                new = f"{new}/index"
+            yield (old, {"redirect": new or app.config.root_doc}, "topo/redirect.html")
+
+
 # Year letters: site/adventures/<year>.md, one story per year with photos for each month.
 # A letter is an ABlog post (unlisted draft until its post directive has a date), and the
 # adventure-summary directive marks where the year's trips and map are filled in.
@@ -190,6 +206,7 @@ def topo_photo_rows(app, doctree, docname):
 
 
 def setup(app):
+    app.connect("html-collect-pages", topo_redirect_pages)
     app.add_directive("favorite-posts", FavoritePosts)
     app.connect("env-purge-doc", topo_favorites_purge)
     app.connect("env-merge-info", topo_favorites_merge)
