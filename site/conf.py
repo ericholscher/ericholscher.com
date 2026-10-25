@@ -94,8 +94,9 @@ def topo_redirect_pages(app):
     redirects = yaml.safe_load((Path(app.confdir).parent / "redirects.yml").read_text())
     for r in redirects:
         old, new = (r[k].strip("/") for k in ("from_url", "to_url"))
-        if r["type"] == "page" and old not in app.env.found_docs:
-            if f"{new}/index" in app.env.found_docs:
+        docs = app.env.found_docs
+        if r["type"] == "page" and old not in docs and f"{old}/index" not in docs:
+            if f"{new}/index" in docs:
                 new = f"{new}/index"
             yield (old, {"redirect": new or app.config.root_doc}, "topo/redirect.html")
 
