@@ -1,0 +1,13 @@
+{#- Forwarding page for an old URL. The list lives in redirects.yml at the repo root. -#}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Moved</title>
+  <meta name="robots" content="noindex">
+  <meta http-equiv="refresh" content="0; url={{ pathto(redirect) }}">
+</head>
+<body>
+  <p>This page moved to <a href="{{ pathto(redirect) }}">{{ pathto(redirect) }}</a>.</p>
+</body>
+</html>
