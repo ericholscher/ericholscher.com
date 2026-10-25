@@ -5,6 +5,18 @@ I've given a few different interviews on podcasts and other formats over the yea
 This page keeps track of all of them,
 in case you want to hear my thoughts about things at certain points in time.
 
+Maintainer Stories
+------------------
+
+.. rst-class:: topo-talk-meta
+
+GitHub video, February 2017
+
+.. raw:: html
+
+   <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/us_3IGG6leM" title="Maintainer Stories - Eric Holscher" frameborder="0" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+   <p class="topo-video-link"><a href="https://www.youtube.com/watch?v=us_3IGG6leM">Watch on YouTube</a></p>
+
 2020s
 -----
 
@@ -50,14 +62,6 @@ in case you want to hear my thoughts about things at certain points in time.
 * `Founding ideas behind Write the Docs <https://podcast.writethedocs.org/2017/12/13/founding-principles-of-write-the-docs/>`__
 
   *Write the Docs Podcast* #12, December 2017
-
-* `Maintainer Stories <https://www.youtube.com/watch?v=us_3IGG6leM>`__
-
-  *GitHub* video, February 2017
-
-  .. raw:: html
-
-     <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/us_3IGG6leM" title="Maintainer Stories - Eric Holscher" frameborder="0" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
 
 * `Are we failing to fund Python's core infrastructure? <https://talkpython.fm/episodes/show/84/are-we-failing-to-fund-python-s-core-infrastructure>`__
 

@@ -217,7 +217,6 @@ img { max-width: 100%; height: auto; }
 .body ul.topo-media-list > li:last-child { border-bottom: 1px solid var(--rule); }
 .body ul.topo-media-list > li > p { margin: 0; }
 .body ul.topo-media-list > li > p + p { margin-top: 2px; font-size: 14px; color: var(--muted); }
-.body ul.topo-media-list iframe { display: block; margin-top: 10px; }
 .body dl.footnote, .body aside.footnote { font-size: 14px; }
 .body .toctree-wrapper ul { list-style: none; padding-left: 0; }
 
