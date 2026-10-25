@@ -63,10 +63,10 @@ and that's where lightning talks come in.
 They're five-minute talks that are submitted the week of the conference, or the day of.
 They give people the chance to get up on stage,
 and I find they're the best way to break the ice for getting people on stage
-and building a community of speakers.
+and building a group of speakers.
 That's the way I gave my first conference talk.
 
-A lot of people in our community start with lightning talks,
+A lot of people start speaking with lightning talks,
 then maybe give a meetup talk,
 and then end up on our main stage.
 I think that's a really important way of building community,
