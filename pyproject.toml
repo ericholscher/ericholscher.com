@@ -22,6 +22,12 @@ dev = [
 photos = [
     "pillow",
 ]
+# tests/: the masthead checks (see the module docstring)
+tests = [
+    "pillow",
+    "playwright",
+    "pytest",
+]
 # import_substack.py
 scripts = [
     "beautifulsoup4",
@@ -33,3 +39,6 @@ scripts = [
 package = false
 # Read the Docs and a plain `uv sync` get only what the build needs; `uv sync --all-groups` adds the rest.
 default-groups = ["docs"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

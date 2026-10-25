@@ -71,6 +71,7 @@ img { max-width: 100%; height: auto; }
 .topo-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 0 10px; }
 .topo-nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 6px; color: var(--sign-text); border-bottom: 0; font-size: 15px; line-height: 1; letter-spacing: .01em; }
 .topo-nav a:focus-visible { outline: 2px solid var(--sign-gold); outline-offset: -4px; border-radius: 3px; }
+.topo-nav a span { text-box: trim-both cap alphabetic; } /* centers the labels' capitals, so the search icon lines up in any font */
 .topo-nav-search { min-width: 44px; justify-content: center; }
 .topo-nav-search svg { display: block; }
 .topo-nav a:hover { color: var(--sign-gold); }
