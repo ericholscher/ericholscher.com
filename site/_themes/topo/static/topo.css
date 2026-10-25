@@ -219,6 +219,7 @@ img { max-width: 100%; height: auto; }
 .body .table-wrapper, .body .wy-table-responsive { overflow-x: auto; }
 .body .footnote, .body .citation { font-size: 14px; color: var(--text-2); }
 /* Interviews and Speaking: one recording per row, its title over the show or event and date. */
+.body p.topo-plaque + section > h2, .body p.topo-plaque + section > h3 { margin-top: 0; }
 .body p.topo-talk-meta { margin: -4px 0 10px; font-size: 14px; color: var(--muted); }
 .body ul.topo-media-list { list-style: none; padding-left: 0; margin: 0 0 24px; }
 .body ul.topo-media-list > li { margin: 0; padding: 14px 0; border-top: 1px solid var(--rule); }

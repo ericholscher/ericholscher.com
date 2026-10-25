@@ -36,6 +36,10 @@ Videos
 
 Here are a few videos of my recent talks, with older recordings listed below.
 
+.. rst-class:: topo-plaque
+
+Favorite
+
 Conference introduction and community update
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -44,11 +48,12 @@ Conference introduction and community update
 Write the Docs Portland, May 2022
 
 The opening of Write the Docs Portland 2022,
-with an update on the Write the Docs community.
+and the values behind the Write the Docs community.
+The clip stops before the conference logistics.
 
 .. raw:: html
 
-   <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/a6-VYEmV7tM" title="Conference introduction and community update - Write the Docs Portland 2022" frameborder="0" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+   <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/a6-VYEmV7tM?end=342" title="Conference introduction and community update - Write the Docs Portland 2022" frameborder="0" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
    <p class="topo-video-link"><a href="https://www.youtube.com/watch?v=a6-VYEmV7tM">Watch on YouTube</a></p>
 
 Documenting Django Code in 2022
