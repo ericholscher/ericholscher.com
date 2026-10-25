@@ -77,6 +77,10 @@ and of getting more of that dynamic energy into the event.
 
 ## More conference thoughts
 
+Overall the goal is to ensure people can find the others who care about the same things,
+and are given the ability to make the event their own.
+These are some of the [principles](https://www.writethedocs.org/about-us/#guiding-principles) that I think are important to running events.
+
 I've written about conferences quite a bit over the years.
 10 years ago, I wrote about [how to handle questions](/blog/2016/nov/12/questions-at-conferences/),
 which I still believe today.
