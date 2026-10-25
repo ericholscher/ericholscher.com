@@ -48,22 +48,6 @@ with an update on the Write the Docs community.
    <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/a6-VYEmV7tM" title="Conference introduction and community update - Write the Docs Portland 2022" frameborder="0" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
    <p class="topo-video-link"><a href="https://www.youtube.com/watch?v=a6-VYEmV7tM">Watch on YouTube</a></p>
 
-Documenting Django Code in 2022 - DjangoCon US 2022
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-How to document a Django project today, with Sphinx and Read the Docs.
-The recording is `on PyVideo <https://pyvideo.org/djangocon-us-2022/documenting-django-code-in-2022.html>`__.
-
-GitHub webcast: Using GitHub for documentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Was featured on a GitHub webcast talking about using GitHub for documentation.
-You can see more information and get the video here:
-
-https://resources.github.com/webcasts/GitHub-writing-documentation-for-your-projects/
-
-The recording, `How GitHub Uses GitHub - Writing documentation for your project <https://vimeo.com/244950538>`__, is on Vimeo.
-
 Introduction to Sphinx & Read the Docs - Djangocon 2015
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -100,6 +84,13 @@ and how we need to continue to improve documentation to keep them in the industr
 
    <iframe width="640" height="360" src="https://www.youtube.com/embed/m6F5MQ9prgE" frameborder="0" allowfullscreen></iframe>
    <p class="topo-video-link"><a href="https://www.youtube.com/watch?v=m6F5MQ9prgE">Watch on YouTube</a></p>
+
+
+More recordings
+~~~~~~~~~~~~~~~
+
+* `Documenting Django Code in 2022 <https://pyvideo.org/djangocon-us-2022/documenting-django-code-in-2022.html>`__, DjangoCon US 2022
+* `Using GitHub for documentation <https://vimeo.com/244950538>`__, a GitHub webcast
 
 
 Past Events
