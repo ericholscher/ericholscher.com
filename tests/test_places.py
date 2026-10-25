@@ -85,7 +85,8 @@ def test_long_ones_link_to_their_trips(page, site_url):
     link = page.locator(".topo-feature-list a").first
     slug = link.get_attribute("href").lstrip("#")
     link.click()
-    assert page.locator(f"#{slug}").get_attribute("open") is not None
+    # The trip opens on hashchange, which fires after the click returns.
+    page.wait_for_function(f"document.getElementById('{slug}').open")
     assert page.locator(f"#{slug} .topo-long-mark").count() >= 1
 
 
@@ -112,5 +113,5 @@ def test_filter_narrows_the_list_and_the_map(page, site_url, built):
     lit = page.eval_on_selector_all("#places .topo-pin:not(.is-dim)", "ps => ps.map(p => p.dataset.trips)")
     assert lit and all(set(t.split()) & set(shown) for t in lit)
     page.click(".topo-log-filter a")
-    assert page.locator(".topo-trip-item[hidden]").count() == 0
+    page.wait_for_function("!document.querySelector('.topo-trip-item[hidden]')")
     assert page.locator("#places .topo-pin.is-dim").count() == 0
