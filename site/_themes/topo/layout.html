@@ -122,7 +122,7 @@
       </section>
       {%- if pop.items|length > topo_featured_count %}
       <section class="topo-recent topo-favorites" id="favorites">
-        <div class="topo-recent-head"><h2>More favorites</h2><a href="{{ pathto('most-read') }}" class="topo-more-link">All, with a line on each &rarr;</a></div>
+        <div class="topo-recent-head"><h2>More favorites</h2><a href="{{ pathto('most-read') }}" class="topo-more-link">See all &rarr;</a></div>
         {{ titles(pop.items[topo_featured_count:]|map('first')|list, pagename) }}
       </section>
       {%- endif %}
