@@ -180,7 +180,17 @@ img { max-width: 100%; height: auto; }
 .body iframe[width][height] { aspect-ratio: 16 / 9; height: auto; }
 .body img, .body figure img, .body .figure img { display: block; max-width: 100%; height: auto !important; border: 1px solid var(--rule-strong); }
 .body img.plain { border: 0; } /* transparent illustrations; photos keep the frame */
-.body img.topo-project-logo { height: 40px !important; width: auto; margin: 4px 0 14px; } /* Projects page: one row height for every logo */
+/* Projects page: each project is a card, its logo in a fixed tile beside the name and text. */
+.body section.topo-project { display: grid; grid-template-columns: 168px minmax(0, 1fr); column-gap: 24px; align-items: start; margin: 24px 0; padding: 20px; background: #F7F1E4; border: 1px solid var(--rule); border-radius: 3px; }
+.body section.topo-project > * { grid-column: 2; }
+.body section.topo-project > h2 { margin: 0 0 6px; font-size: 24px; }
+.body section.topo-project > p:last-child { margin-bottom: 0; }
+.body img.topo-project-logo { grid-column: 1; grid-row: 1 / span 6; box-sizing: border-box; width: 168px; height: 84px !important; padding: 16px 18px; object-fit: contain; background: var(--paper); border: 1px solid var(--rule); border-radius: 3px; margin: 0; }
+@media (max-width: 560px) {
+  .body section.topo-project { grid-template-columns: minmax(0, 1fr); padding: 16px; }
+  .body section.topo-project > * { grid-column: 1; }
+  .body img.topo-project-logo { grid-row: auto; order: -1; width: 100%; height: 72px !important; margin-bottom: 14px; }
+}
 .body img.align-right { float: right; max-width: 46%; margin: 4px 0 16px 28px; }
 .body img.align-left { float: left; max-width: 46%; margin: 4px 28px 16px 0; }
 .body img.align-center { margin-left: auto; margin-right: auto; }
