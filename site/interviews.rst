@@ -51,6 +51,10 @@ in case you want to hear my thoughts about things at certain points in time.
 
   *Write the Docs Podcast* #12, December 2017
 
+* `Maintainer Stories <https://www.youtube.com/watch?v=us_3IGG6leM>`__
+
+  *GitHub* video, February 2017
+
 * `Are we failing to fund Python's core infrastructure? <https://talkpython.fm/episodes/show/84/are-we-failing-to-fund-python-s-core-infrastructure>`__
 
   *Talk Python* #84, November 2016
