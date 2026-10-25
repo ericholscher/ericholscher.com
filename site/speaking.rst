@@ -48,49 +48,23 @@ with an update on the Write the Docs community.
    <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/a6-VYEmV7tM" title="Conference introduction and community update - Write the Docs Portland 2022" frameborder="0" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
    <p class="topo-video-link"><a href="https://www.youtube.com/watch?v=a6-VYEmV7tM">Watch on YouTube</a></p>
 
-Introduction to Sphinx & Read the Docs - Djangocon 2015
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Documenting Django Code in 2022 - DjangoCon US 2022
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-My thoughts on why Documentation is important,
-how Sphinx thinks about documentation,
-and how to use it well.
+How to document a Django project today, with Sphinx and Read the Docs.
 
-.. raw:: html 
+.. raw:: html
 
-   <iframe width="640" height="360" src="https://www.youtube.com/embed/eWNiwMwMcr4" frameborder="0" allowfullscreen></iframe>
-   <p class="topo-video-link"><a href="https://www.youtube.com/watch?v=eWNiwMwMcr4">Watch on YouTube</a></p>
-
-
-Documentation as Empathy - Open Source & Feelings
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-My thoughts on how Documentation plays a role in the open source world.
-
-
-.. raw:: html 
-
-   <iframe width="640" height="360" src="https://www.youtube.com/embed/CvhJG_HfKac" frameborder="0" allowfullscreen></iframe>
-   <p class="topo-video-link"><a href="https://www.youtube.com/watch?v=CvhJG_HfKac">Watch on YouTube</a></p>
-
-
-Documentation as Empathy - Django Birthday
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-This talk tells the story of how Documentation was a large part of my entry into the tech world.
-I relate this to other folks who are trying to get into the tech world,
-and how we need to continue to improve documentation to keep them in the industry.
-
-.. raw:: html 
-
-   <iframe width="640" height="360" src="https://www.youtube.com/embed/m6F5MQ9prgE" frameborder="0" allowfullscreen></iframe>
-   <p class="topo-video-link"><a href="https://www.youtube.com/watch?v=m6F5MQ9prgE">Watch on YouTube</a></p>
-
+   <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/mqn0D4xat58" title="Documenting Django Code in 2022 - DjangoCon US 2022" frameborder="0" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+   <p class="topo-video-link"><a href="https://www.youtube.com/watch?v=mqn0D4xat58">Watch on YouTube</a></p>
 
 More recordings
 ~~~~~~~~~~~~~~~
 
-* `Documenting Django Code in 2022 <https://pyvideo.org/djangocon-us-2022/documenting-django-code-in-2022.html>`__, DjangoCon US 2022
 * `Using GitHub for documentation <https://vimeo.com/244950538>`__, a GitHub webcast
+* `Introduction to Sphinx & Read the Docs <https://www.youtube.com/watch?v=eWNiwMwMcr4>`__, DjangoCon US 2015
+* `Documentation as Empathy <https://www.youtube.com/watch?v=CvhJG_HfKac>`__, Open Source & Feelings 2015
+* `Documentation as Empathy <https://www.youtube.com/watch?v=m6F5MQ9prgE>`__, Django Birthday
 
 
 Past Events
