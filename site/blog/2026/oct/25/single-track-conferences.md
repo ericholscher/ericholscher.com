@@ -67,7 +67,7 @@ They give people the chance to get up on stage,
 and I find they're the best way to break the ice for getting people on stage
 and building a group of speakers.
 That's the way I gave [my first conference talk](https://www.ericholscher.com/blog/2008/dec/31/year-review/#lawrence-chronicles)
-([video](https://www.youtube.com/watch?v=61u9Y5Zi0_w&t=1422s)).
+([cringey video](https://www.youtube.com/watch?v=61u9Y5Zi0_w&t=1422s)).
 
 A lot of people start speaking with lightning talks,
 then maybe give a meetup talk,
