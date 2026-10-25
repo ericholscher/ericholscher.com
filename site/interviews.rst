@@ -55,6 +55,10 @@ in case you want to hear my thoughts about things at certain points in time.
 
   *GitHub* video, February 2017
 
+  .. raw:: html
+
+     <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/us_3IGG6leM" title="Maintainer Stories - Eric Holscher" frameborder="0" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+
 * `Are we failing to fund Python's core infrastructure? <https://talkpython.fm/episodes/show/84/are-we-failing-to-fund-python-s-core-infrastructure>`__
 
   *Talk Python* #84, November 2016
