@@ -527,8 +527,10 @@ ul.search li a { font-family: var(--serif); font-size: 22px; }
   --readthedocs-notification-inverted-title-color: var(--sign-text);
   --readthedocs-notification-inverted-link-color: var(--sign-gold);
 }
-/* On a phone the diff bar spans the top edge; make room so it doesn't cover the wordmark. */
-@media (max-width: 768px) { body:has(> readthedocs-filetreediff) { padding-top: 38px; } }
+/* The diff bar is position: fixed inside RTD's shadow DOM. contain: layout makes the host its containing
+   block, and body is a flex column, so order: -1 sets it in a strip above the masthead that scrolls away. */
+readthedocs-filetreediff { display: block; order: -1; contain: layout; height: 31px; background: var(--sign-2); }
+@media (max-width: 768px) { readthedocs-filetreediff { height: 38px; } }
 /* "Show diff" highlights. RTD adopts these styles after ours, so they need the extra specificity. */
 body .doc-diff-added { background-color: color-mix(in srgb, var(--forest) 20%, transparent); }
 body .doc-diff-removed { background-color: color-mix(in srgb, var(--blaze) 25%, transparent); text-decoration: line-through; text-decoration-color: color-mix(in srgb, var(--blaze) 60%, transparent); }
