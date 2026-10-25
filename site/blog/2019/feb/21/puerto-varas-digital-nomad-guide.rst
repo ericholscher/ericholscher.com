@@ -1,9 +1,6 @@
-.. post::
+.. post:: Feb 21, 2019
    :category: outside
    :tags: travel, digital nomad
-
-.. A draft until the post directive above gets a date. Then move it to blog/<year>/<mon>/<day>/
-.. and point the digital-nomad entries in topo_redirects at the new path.
 
 Digital Nomad Guide to Puerto Varas, Chile
 ==========================================
