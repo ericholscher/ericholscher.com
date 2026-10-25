@@ -1,7 +1,10 @@
+{%- from "topo/entries.html" import year_sparkline with context %}
 {#- Skipped on the Blog page, which has its own year chips, and on Adventures, whose years are trip years. -#}
 {%- if ablog is defined and ablog.archive and pagename not in ('blog/index', 'adventures') %}
 <div class="topo-side-block">
   <h2 class="topo-side-label"><a href="{{ pathto(ablog.archive.docname) }}">Archive</a></h2>
+  {#- The archive and year pages have the chart at the top already. -#}
+  {%- if not pagename.startswith(ablog.archive.docname.rpartition('/')[0] ~ '/') %}{{ year_sparkline(caption=False) }}{% endif %}
   <div class="topo-years">
     {%- for coll in ablog.archive %}{% if coll %}
     <a href="{{ pathto(coll.docname) }}">{{ coll }}</a>

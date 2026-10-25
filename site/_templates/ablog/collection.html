@@ -1,6 +1,6 @@
 {#- Category, archive, and tag pages. Categories listed in topo_categories become landing pages. -#}
 {%- extends "page.html" %}
-{%- from "topo/entries.html" import entries, year_pager with context %}
+{%- from "topo/entries.html" import entries, year_pager, year_sparkline with context %}
 {%- set is_category = collection.catalog.name == 'category' %}
 {%- set meta = topo_categories.get(collection.name) if is_category else None %}
 {%- set is_year = collection.catalog is defined and collection.catalog.name == 'archive' %}
@@ -12,6 +12,7 @@
   <div class="topo-recent-head"><h2>{{ collection|length }} post{% if collection|length != 1 %}s{% endif %}</h2></div>
   {%- elif is_year %}
   <h1>{{ collection }}</h1>
+  {{ year_sparkline(collection) }}
   <div class="topo-recent-head"><h2>{{ collection|length }} post{% if collection|length != 1 %}s{% endif %}</h2><a href="{{ pathto('blog/index') }}" class="topo-more-link">Latest posts &rarr;</a></div>
   {%- else %}
   <h1>{{ header }} {{ collection }}</h1>

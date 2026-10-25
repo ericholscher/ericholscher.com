@@ -83,8 +83,9 @@
 
 {#- Posts per year as small columns, oldest to newest; each column links to its year page.
     Years with no posts get a short tick so gaps read as gaps. The year chips below it carry the
-    same links in a size you can tap, so the chart is hidden from screen readers and skipped by Tab. -#}
-{%- macro year_sparkline() %}
+    same links in a size you can tap, so the chart is hidden from screen readers and skipped by Tab.
+    current marks one year's column (on that year's page); caption=False drops "Posts per year". -#}
+{%- macro year_sparkline(current=None, caption=True) %}
 {%- set sp = namespace(counts={}, top=1) %}
 {%- for c in ablog.archive if c %}{% set _ = sp.counts.update({c.name|int: c}) %}{% if c|length > sp.top %}{% set sp.top = c|length %}{% endif %}{% endfor %}
 {%- if sp.counts %}
@@ -101,7 +102,7 @@
     {%- set r = [2, bh / 2]|min %}
     <a href="{{ pathto(c.docname) }}" tabindex="-1"><title>{{ y }}: {{ c|length }} post{{ '' if c|length == 1 else 's' }}</title>
       <rect class="topo-spark-hit" x="{{ x }}" y="0" width="{{ w + gap }}" height="{{ h }}"></rect>
-      <path class="topo-spark-bar" d="M{{ x }} {{ h }}V{{ h - bh + r }}Q{{ x }} {{ h - bh }} {{ x + r }} {{ h - bh }}H{{ x + w - r }}Q{{ x + w }} {{ h - bh }} {{ x + w }} {{ h - bh + r }}V{{ h }}Z"></path>
+      <path class="topo-spark-bar{% if current and y|string == current.name|string %} is-current{% endif %}" d="M{{ x }} {{ h }}V{{ h - bh + r }}Q{{ x }} {{ h - bh }} {{ x + r }} {{ h - bh }}H{{ x + w - r }}Q{{ x + w }} {{ h - bh }} {{ x + w }} {{ h - bh + r }}V{{ h }}Z"></path>
     </a>
     {%- else %}
     <rect class="topo-spark-empty" x="{{ x }}" y="{{ h - 1 }}" width="{{ w }}" height="1"><title>{{ y }}: no posts</title></rect>
@@ -110,7 +111,7 @@
     <text class="topo-spark-label" x="0" y="{{ h + 14 }}">{{ first }}</text>
     <text class="topo-spark-label" x="{{ width }}" y="{{ h + 14 }}" text-anchor="end">{{ last }}</text>
   </svg>
-  <figcaption>Posts per year</figcaption>
+  {%- if caption %}<figcaption>Posts per year</figcaption>{% endif %}
 </figure>
 {%- endif %}
 {%- endmacro %}
