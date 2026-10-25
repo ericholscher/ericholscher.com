@@ -10,6 +10,7 @@ dependencies = []
 docs = [
     "ablog",
     "myst-parser",
+    "pillow",
     "sphinx",
     "sphinx-notfound-page",
     "sphinxext-opengraph",
