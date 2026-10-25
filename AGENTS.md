@@ -42,7 +42,11 @@ Headless Chromium can't play H.264, so a video that "won't play" there is not a 
 - `redirects.yml` maps retired URLs to where they now forward. Read the Docs serves them; `.github/workflows/sync-redirects.yml` syncs the file with readthedocs-cli. Add redirects there, never in the Read the Docs dashboard, since the sync deletes anything not in the file. Until the `RTD_TOKEN` secret is added, the build also writes meta-refresh pages from this file.
 - `site/_data/favorites.yml` holds the favorite posts: each a post path and a hand-written summary. The `/favorite-posts/` page shows all of them, and the home page shows only the first `featured` few, with a link to the rest.
 - `site/_data/hikes.json` and `places.json` hold the Adventures timeline and map data. They are the source of truth for trips; edit them by hand.
-- `site/_data/trips.json` groups the map's places into trips (a region and season, like "Southeast Asia, winter 2026"), each with the `hikes.json` entries along the way. Europe gets its own trip for each year. The map and the year-by-year log both use these trips, through `topo_log` in `topo_site.py`, so their names and counts match. The build warns if a trip names a place or hike that isn't in the other files.
+- `site/_data/trips.json` groups the places and `hikes.json` entries into trips (a region and season, like "Southeast Asia, winter 2026"). Europe gets its own trip for each year. The Adventures page is one list of these trips by year, built by `site/_ext/topo_trips.py`:
+  - Every entry lands in exactly one trip. The `"home": true` trip ("Close to home") splits by year; an entry no trip names becomes a trip of its own.
+  - A place in no trip goes on its year's "Also" line. The world map links into the same trips, so names and counts match.
+  - Each trip's map is `site/_static/maps/<slug>.svg`, drawn by `scripts/trip_maps.py` from Natural Earth. Rerun it after changing a trip's places, and commit the output.
+  - The build warns if a trip names a place or entry that isn't in the other files, or a map is missing.
 - `scripts/photo_trips.py` turns an osxphotos export into candidate trip rows. See the README.
 
 ## Design

@@ -1,6 +1,6 @@
 {#- The long ones: hikes.json entries marked "feature": true, newest first, one row per year.
-    Kept short so it sits above the map: each name opens its trip on the map (see places.html),
-    or without JavaScript jumps to its year in the log. -#}
+    Kept short so it sits above the map: each name links to its trip in the list below (timeline.html),
+    which opens it. -#}
 {%- set ns = namespace(years=[]) %}
 {%- for h in topo_hikes|selectattr('feature')|list|reverse %}{% if h.year not in ns.years %}{% set ns.years = ns.years + [h.year] %}{% endif %}{% endfor %}
 <section class="topo-features" id="long-ones">
@@ -10,7 +10,7 @@
     <dt>{{ y }}</dt>
     <dd>
       {%- for h in topo_hikes|selectattr('feature')|selectattr('year', 'equalto', y)|list|reverse %}
-      <a href="#{{ y }}"{% if h.trip %} data-trip="{{ h.trip }}"{% endif %}>{{ h.name }}</a>{% if not loop.last %}<span class="topo-feature-sep" aria-hidden="true"> · </span>{% endif %}
+      <a href="#{{ h.trip }}">{{ h.name }}</a>{% if not loop.last %}<span class="topo-feature-sep" aria-hidden="true"> · </span>{% endif %}
       {%- endfor %}
     </dd>
   {%- endfor %}

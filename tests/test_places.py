@@ -1,12 +1,33 @@
-"""The places map on the Adventures page: trips from site/_data/trips.json, the year strip, and
-how they line up with the year-by-year log below.
+"""The Adventures page: trips, year by year, each with its own map, and the world map above them.
 
-Build the site first (see test_masthead.py).
+Every hikes.json entry should be listed once, in its trip; every trip once, under the year it
+started; and the world map should link into the same trips. Build the site first (see
+test_masthead.py).
 """
+
+import json
+import sys
+from pathlib import Path
 
 import pytest
 
-TRIP = "southeast-asia-2026"
+SITE = Path(__file__).resolve().parent.parent / "site"
+sys.path.insert(0, str(SITE / "_ext"))
+
+import topo_trips  # noqa: E402
+
+TRIP = "europe-2025"
+
+
+def load(name):
+    return json.loads((SITE / "_data" / name).read_text())
+
+
+@pytest.fixture(scope="module")
+def built():
+    hikes, places = load("hikes.json"), load("places.json")
+    trips, years, problems = topo_trips.build(hikes, places, load("trips.json"))
+    return {"hikes": hikes, "places": places, "trips": trips, "years": years, "problems": problems}
 
 
 @pytest.fixture(params=[390, 1280], ids=lambda w: f"{w}px")
@@ -14,58 +35,82 @@ def page(browser, site_url, request):
     page = browser.new_page(viewport={"width": request.param, "height": 844})
     errors = []
     page.on("pageerror", lambda e: errors.append(str(e)))
+    page.on("console", lambda m: m.type == "error" and errors.append(m.text))
     yield page
     page.close()
     assert not errors, errors
 
 
-def test_trip_permalink_fits_and_names_its_pins(page, site_url):
+def test_every_entry_and_place_has_one_home(built):
+    assert not built["problems"]
+    assert sorted(id(h) for t in built["trips"] for h in t["entries"]) == sorted(id(h) for h in built["hikes"])
+    slugs = [t["slug"] for t in built["trips"]]
+    assert len(slugs) == len(set(slugs))
+    # Each year's places are in one of its trips or on its "Also" line.
+    for yr in built["years"]:
+        y = int(yr["year"])
+        in_trips = {p["name"] for t in built["trips"] if y in t["years"] for p in t["places"]}
+        assert {p["name"] for p in yr["places"]} <= in_trips | {p["name"] for p in yr["other"]}
+
+
+def test_list_shows_every_trip_and_entry_once(page, site_url, built):
+    page.goto(f"{site_url}adventures/")
+    ids = page.eval_on_selector_all("details.topo-trip", "ds => ds.map(d => d.id)")
+    assert ids == [t["slug"] for t in built["trips"]]
+    # A trip of one entry shows that entry in its summary; the others list theirs inside.
+    assert page.locator(".topo-tl-item").count() + page.locator("details.is-solo").count() == len(built["hikes"])
+    for t in built["trips"]:
+        if t["map"]:
+            assert (SITE / "_static" / "maps" / f"{t['slug']}.svg").exists(), t["slug"]
+    assert page.evaluate("document.documentElement.scrollWidth - innerWidth") == 0
+
+
+def test_trip_permalink_opens_and_names_its_pins(page, site_url):
     page.goto(f"{site_url}adventures/#{TRIP}")
     page.wait_for_timeout(300)
     trip = page.locator(f"#{TRIP}")
-    assert page.locator(".topo-tripnav-title").text_content() == trip.get_attribute("data-name")
-    names = trip.get_attribute("data-places").split("|")
-    lit = page.eval_on_selector_all(".topo-pin:not(.is-dim)", "ps => ps.map(p => p.dataset.name)")
-    assert sorted(lit) == sorted(names)
-    # Every pin of the trip is in the frame, and so is every name drawn on the map.
-    frame = page.locator(".topo-map-scroll").bounding_box()
+    assert trip.get_attribute("open") is not None
+    frame = trip.locator(".topo-trip-map").bounding_box()
     inside = lambda b: frame["x"] - 1 <= b["x"] and b["x"] + b["width"] <= frame["x"] + frame["width"] + 1 and frame["y"] - 1 <= b["y"] and b["y"] + b["height"] <= frame["y"] + frame["height"] + 1
-    for b in page.eval_on_selector_all(".topo-pin:not(.is-dim) circle", "cs => cs.map(c => c.getBoundingClientRect().toJSON())"):
-        assert inside(b), b
-    labels = page.eval_on_selector_all(".topo-pin-labels text", "ts => ts.map(t => t.getBoundingClientRect().toJSON())")
-    assert len(labels) >= len(names) // 2
-    for b in labels:
+    pins = trip.locator(".topo-pin circle").evaluate_all("cs => cs.map(c => c.getBoundingClientRect().toJSON())")
+    labels = trip.locator(".topo-pin-labels text").evaluate_all("ts => ts.map(t => t.getBoundingClientRect().toJSON())")
+    assert pins and len(labels) >= len(pins) // 3
+    for b in pins + labels:
         assert inside(b), b
     assert page.evaluate("document.documentElement.scrollWidth - innerWidth") == 0
 
 
-def test_arrows_step_through_trips(page, site_url):
+def test_long_ones_link_to_their_trips(page, site_url):
     page.goto(f"{site_url}adventures/")
-    first = page.locator(".topo-trip").first
-    page.click('.topo-tripnav-step[data-step="1"]')
-    assert page.locator(".topo-tripnav-title").text_content() == first.get_attribute("data-name")
-    assert page.evaluate("location.hash") == "#" + first.get_attribute("id")
-    page.click('.topo-tripnav-step[data-step="-1"]')
-    assert page.locator(".topo-tripnav-title").text_content() == "All places"
-    assert page.evaluate("location.hash") == ""
+    link = page.locator(".topo-feature-list a").first
+    slug = link.get_attribute("href").lstrip("#")
+    link.click()
+    assert page.locator(f"#{slug}").get_attribute("open") is not None
+    assert page.locator(f"#{slug} .topo-long-mark").count() >= 1
 
 
-def test_year_strip_shows_a_year(page, site_url):
-    page.goto(f"{site_url}adventures/")
-    page.click('.topo-spark button[data-year="2016"]')
-    assert page.locator(".topo-tripnav-title").text_content() == "2016"
-    assert page.evaluate("location.hash") == "#2016"
-    assert page.locator('details[id="2016"]').get_attribute("open") is not None
-    years = page.eval_on_selector_all(".topo-pin:not(.is-dim):not(.topo-pin-lived)", "ps => ps.map(p => p.dataset.years)")
-    assert years and all("2016" in y.split() for y in years)
-
-
-def test_map_and_log_agree_on_a_year(page, site_url):
+def test_year_strip_links_to_that_years_trips(page, site_url):
     page.goto(f"{site_url}adventures/")
     for year in ("2026", "2018", "2016"):
         page.click(f'.topo-spark button[data-year="{year}"]')
-        log = page.locator(f'details[id="{year}"]')
-        assert page.locator(".topo-tripnav-when").text_content() == log.locator(".topo-log-count").text_content().strip()
-        on_map = page.locator(f'.topo-yeartrips[data-year="{year}"] > li > a').all_text_contents()
-        in_log = log.locator(".topo-log-body > .topo-tl-list > li > :is(h3, .topo-log-trip-name)").all_text_contents()
-        assert on_map == [t.strip() for t in in_log]
+        on_map = page.locator(".topo-map-readout a").all_text_contents()
+        in_list = page.locator(f'.topo-log-year[data-year="{year}"] .topo-trip-name').all_text_contents()
+        assert on_map == in_list
+        years = page.eval_on_selector_all("#places .topo-pin:not(.is-dim):not(.topo-pin-lived)", "ps => ps.map(p => p.dataset.years)")
+        assert years and all(year in y.split() for y in years)
+        page.click(f'.topo-spark button[data-year="{year}"]')
+    page.click('.topo-spark button[data-year="2018"]')
+    page.locator(".topo-map-readout a").first.click()
+    assert page.locator(f'.topo-log-year[data-year="2018"] details.topo-trip').first.get_attribute("open") is not None
+
+
+def test_filter_narrows_the_list_and_the_map(page, site_url, built):
+    page.goto(f"{site_url}adventures/#long")
+    page.wait_for_timeout(300)
+    shown = page.eval_on_selector_all(".topo-trip-item:not([hidden]) details", "ds => ds.map(d => d.id)")
+    assert shown == [t["slug"] for t in built["trips"] if t["long"]]
+    lit = page.eval_on_selector_all("#places .topo-pin:not(.is-dim)", "ps => ps.map(p => p.dataset.trips)")
+    assert lit and all(set(t.split()) & set(shown) for t in lit)
+    page.click(".topo-log-filter a")
+    assert page.locator(".topo-trip-item[hidden]").count() == 0
+    assert page.locator("#places .topo-pin.is-dim").count() == 0

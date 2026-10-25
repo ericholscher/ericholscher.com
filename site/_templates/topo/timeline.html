@@ -1,139 +1,179 @@
-{#- Year-by-year log, newest year first: each year's trips (trips.json, the same ones the map steps
-    through), with their entries from hikes.json and their places from places.json. An entry that's in
-    no trip stands on its own. topo_log, built in _ext/topo_site.py, does the grouping.
-    Each year is a <details>, so the page reads as a short list of years until one is opened.
-    Years and trip types are permalinks: /adventures/#2016 opens that year (and sets the map to it),
-    /adventures/#trek shows only treks. Without JavaScript, #2016 still jumps to the year. -#}
+{#- Trips, year by year: the backbone of the Adventures page. topo_log (built by _ext/topo_trips.py)
+    has every year, newest first, with the trips that started that year. Every hikes.json entry is in
+    exactly one trip, and every place is in a trip or on the year's "Also" line, so nothing is listed
+    twice and the counts match the map above.
+    Each trip is a <details>: its name and gist when closed, and its own map, entries, and places
+    when open. Trips, years, and filters are permalinks: #europe-2018 opens that trip, #2016 jumps
+    to the year, #long and #trek show only those trips (and the map follows). -#}
 {%- set ns = namespace(kinds=[]) %}
 {%- for h in topo_hikes %}{% if h.kind not in ns.kinds %}{% set ns.kinds = ns.kinds + [h.kind] %}{% endif %}{% endfor %}
+{%- macro count(n, one, many) %}{{ n }} {{ one if n == 1 else many }}{% endmacro %}
 <section class="topo-log" id="hikes">
-  <h2 class="topo-plaque">Year by year</h2>
-  <p class="topo-log-kinds">
+  <h2 class="topo-plaque">Trips, year by year</h2>
+  <p class="topo-log-kinds" aria-label="Show only">
+    <a class="topo-kind topo-kind-long" href="#long">long ones <span class="topo-kind-count">{{ topo_trip_list|selectattr('long')|list|length }}</span></a>
     {%- for k in ns.kinds|sort %}
-    <a class="topo-kind topo-kind-{{ k }}" href="#{{ k }}">{{ k|replace("-", " ") }} <span class="topo-kind-count">{{ topo_hikes|selectattr('kind', 'equalto', k)|list|length }}</span></a>
+    <a class="topo-kind topo-kind-{{ k }}" href="#{{ k }}">{{ k|replace("-", " ") }} {% set c = namespace(n=0) %}{% for t in topo_trip_list if k in t.kinds %}{% set c.n = c.n + 1 %}{% endfor %}<span class="topo-kind-count">{{ c.n }}</span></a>
     {%- endfor %}
   </p>
-  <p class="topo-log-filter" hidden>Showing only <strong></strong> trips. <a href="#hikes">Show everything</a></p>
-  {%- macro entry(h, y, tag) %}
-        <li class="topo-tl-item" data-kind="{{ h.kind }}">
-          <{{ tag }}>{% if h.link %}<a class="internal" href="{{ pathto(h.link) }}">{{ h.name }}</a>{% else %}{{ h.name }}{% endif %}</{{ tag }}>
-          <p class="topo-tl-meta"><a class="topo-kind topo-kind-{{ h.kind }}" href="#{{ h.kind }}">{{ h.kind|replace("-", " ") }}</a>{{ h.when|replace(", " ~ y, "")|replace(" " ~ y, "") }}{% if h.where %} &middot; {{ h.where }}{% endif %}</p>
-          {%- if h.note %}<p class="topo-tl-note">{{ h.note }}</p>{% endif %}
-        </li>
-  {%- endmacro %}
+  <p class="topo-log-filter" hidden>Showing <strong></strong>. <a href="#hikes">Show every trip</a></p>
   {%- for yr in topo_log %}{% set y = yr.year %}
-  <details class="topo-log-year" id="{{ y }}"{% if loop.first %} open{% endif %}>
-    <summary>
-      <span class="topo-log-yearnum">{{ y }}</span>
-      <span class="topo-log-gist">
-        {%- for g in yr.groups %}{{ g.trip.name if g.trip else g.entries[0].name }}{% if not loop.last %} · {% endif %}{% endfor %}
-        {%- if not yr.groups %}{{ yr.places|map(attribute='name')|join(' · ') }}{% endif %}</span>
-      <span class="topo-log-count">
-        {%- if yr.groups %}{{ yr.groups|length }} {{ 'trip' if yr.groups|length == 1 else 'trips' }}{% endif %}
-        {%- if yr.groups and yr.places %} · {% endif %}
-        {%- if yr.places %}{{ yr.places|length }} {{ 'place' if yr.places|length == 1 else 'places' }}{% endif %}</span>
-    </summary>
+  <section class="topo-log-year" data-year="{{ y }}">
+    <h3 class="topo-log-yearnum" id="{{ y }}">{{ y }}</h3>
     <div class="topo-log-body">
-      <ol class="topo-tl-list">
-      {%- for g in yr.groups %}
-        {%- if g.trip %}
-        <li class="topo-log-trip">
-          <h3 class="topo-log-trip-name">{{ g.trip.name }}</h3>
-          <p class="topo-log-trip-meta">
-            {%- if g.trip.when %}<span>{{ g.trip.when }}</span>{% endif %}
-            <button type="button" class="topo-log-tripmap" data-map-trip="{{ g.trip.slug }}" hidden>Show on the map</button></p>
-          {%- if g.places %}
-          <ul class="topo-log-placelist">
-            {%- for p in g.places %}<li><span class="topo-dot topo-dot-{{ p.kind }}" aria-hidden="true"></span>{{ p.name }}</li>{% endfor %}
-          </ul>
-          {%- endif %}
-          {%- if g.entries %}
-          <ol class="topo-tl-list">
-            {%- for h in g.entries %}{{ entry(h, y, 'h4') }}{% endfor %}
-          </ol>
-          {%- endif %}
+      {%- if yr.trips %}
+      <ul class="topo-trips">
+      {%- for t in yr.trips %}
+        <li class="topo-trip-item" data-kinds="{{ t.kinds|join(' ') }}"{% if t.long %} data-long{% endif %}>
+          <details class="topo-trip{% if t.solo %} is-solo{% endif %}" id="{{ t.slug }}">
+            <summary>
+              <span class="topo-trip-name">{{ t.name }}</span>
+              {%- if t.entries and not t.solo %}
+              <span class="topo-trip-gist">
+                {%- for h in t.entries %}<span class="topo-trip-gist-item">{% if h.feature %}<span class="topo-long-mark" title="One of the long ones"></span>{% endif %}{{ h.name }}{% if not loop.last %} ·{% endif %}</span>{% if not loop.last %} {% endif %}{% endfor %}</span>
+              {%- endif %}
+              <span class="topo-trip-meta">
+                {%- if t.solo %}{% set h = t.entries[0] %}{% if h.feature %}<span class="topo-long-mark" title="One of the long ones"></span>{% endif %}{{ h.kind|replace("-", " ") }} · {{ h.when|replace(", " ~ y, "")|replace(" " ~ y, "") }}{% if h.where %} · {{ h.where }}{% endif %}
+                {%- else %}{% if t.when %}{{ t.when }} · {% endif %}{{ count(t.places|length, 'place', 'places') }}{% endif %}</span>
+            </summary>
+            <div class="topo-trip-body">
+              {%- if t.map %}{% set b = t.map.box %}
+              <figure class="topo-trip-map">
+                <img src="{{ pathto('_static/maps/' ~ t.slug ~ '.svg', 1) }}" alt="" loading="lazy" width="{{ b[2] }}" height="{{ b[3] }}">
+                <svg class="topo-trip-pins" viewBox="{{ b|join(' ') }}" role="img" aria-label="Map of {{ t.name }}">
+                  {%- for pin in t.map.pins %}
+                  <g class="topo-pin topo-pin-{{ pin.place.kind }}" data-x="{{ pin.x }}" data-y="{{ pin.y }}" data-name="{{ pin.place.name|e }}"><circle class="topo-pin-dot" cx="{{ pin.x }}" cy="{{ pin.y }}" r="{{ (b[2] / 120)|round(2) }}"><title>{{ pin.place.name }}</title></circle></g>
+                  {%- endfor %}
+                  <g class="topo-pin-labels" aria-hidden="true"></g>
+                </svg>
+              </figure>
+              {%- endif %}
+              {%- if t.solo %}{% set h = t.entries[0] %}
+              {%- if h.note %}<p class="topo-tl-note">{{ h.note }}</p>{% endif %}
+              {%- if h.link %}<p class="topo-trip-post"><a class="internal" href="{{ pathto(h.link) }}">Read about it &rarr;</a></p>{% endif %}
+              {%- elif t.entries %}
+              <ol class="topo-tl-list">
+                {%- for h in t.entries %}
+                <li class="topo-tl-item{% if h.feature %} is-long{% endif %}" data-kind="{{ h.kind }}">
+                  <h4>{% if h.link %}<a class="internal" href="{{ pathto(h.link) }}">{{ h.name }}</a>{% else %}{{ h.name }}{% endif %}</h4>
+                  <p class="topo-tl-meta"><a class="topo-kind topo-kind-{{ h.kind }}" href="#{{ h.kind }}">{{ h.kind|replace("-", " ") }}</a>{{ h.when|replace(", " ~ y, "")|replace(" " ~ y, "") }}{% if h.where %} &middot; {{ h.where }}{% endif %}</p>
+                  {%- if h.note %}<p class="topo-tl-note">{{ h.note }}</p>{% endif %}
+                </li>
+                {%- endfor %}
+              </ol>
+              {%- endif %}
+              {%- if t.places and not (t.solo and t.places|length == 1) %}
+              <ul class="topo-log-placelist">
+                {%- for p in t.places %}<li><span class="topo-dot topo-dot-{{ p.kind }}" aria-hidden="true"></span>{{ p.name }}</li>{% endfor %}
+              </ul>
+              {%- endif %}
+              <p class="topo-trip-foot"><a class="topo-log-permalink" href="#{{ t.slug }}">Link to this trip</a></p>
+            </div>
+          </details>
         </li>
-        {%- else %}{{ entry(g.entries[0], y, 'h3') }}
-        {%- endif %}
       {%- endfor %}
-      </ol>
-      {%- if yr.other %}
-      <div class="topo-log-places">
-        <h3 class="topo-log-label">{{ 'Other places' if yr.groups else 'Places' }}</h3>
-        <ul class="topo-log-placelist">
-        {%- for p in yr.other %}
-          <li><span class="topo-dot topo-dot-{{ p.kind }}" aria-hidden="true"></span>{{ p.name }}</li>
-        {%- endfor %}
-        </ul>
-      </div>
+      </ul>
       {%- endif %}
-      <p class="topo-log-foot">
-        {%- if yr.places %}<button type="button" class="topo-log-map" data-map-year="{{ y }}" hidden>Show {{ y }} on the map</button>{% endif %}
-        <a class="topo-log-permalink" href="#{{ y }}">Link to {{ y }}</a>
-        {%- if ablog is defined and 'adventures/' ~ y in ablog.posts %}
-        <a class="topo-log-letter" href="{{ pathto('adventures/' ~ y) }}">Read the {{ y }} letter &rarr;</a>
-        {%- endif %}
-      </p>
+      {%- if yr.other %}
+      <p class="topo-log-also"><span class="topo-log-label">{{ 'Also' if yr.trips else 'Places' }}</span>
+        {%- for p in yr.other %} <span class="topo-log-also-place"><span class="topo-dot topo-dot-{{ p.kind }}" aria-hidden="true"></span>{{ p.name }}</span>{% if not loop.last %} &middot;{% endif %}{% endfor %}</p>
+      {%- endif %}
+      {%- if ablog is defined and 'adventures/' ~ y in ablog.posts %}
+      <p class="topo-log-foot"><a class="topo-log-letter" href="{{ pathto('adventures/' ~ y) }}">Read the {{ y }} letter &rarr;</a></p>
+      {%- endif %}
     </div>
-  </details>
+  </section>
   {%- endfor %}
   <script>
   document.addEventListener('DOMContentLoaded', function () {
     var log = document.getElementById('hikes'); if (!log) return;
+    var items = [].slice.call(log.querySelectorAll('.topo-trip-item'));
     var years = log.querySelectorAll('.topo-log-year');
-    var items = log.querySelectorAll('.topo-tl-item');
     var bar = log.querySelector('.topo-log-filter');
-    var kinds = [].map.call(log.querySelectorAll('.topo-log-kinds a'), function (a) { return a.hash.slice(1); });
-    var opened = [].map.call(years, function (d) { return d.open; });
+    var chips = [].slice.call(log.querySelectorAll('.topo-log-kinds a'));
+    var kinds = chips.map(function (a) { return a.hash.slice(1); });
 
+    // Name each pin on a trip's map where there's room, skipping any that would
+    // overlap another name or pin or run off the map. Sizes are in screen pixels.
+    function nameTrip(d) {
+      var svg = d.querySelector('.topo-trip-pins'); if (!svg || !d.open) return;
+      var vb = svg.viewBox.baseVal, unit = svg.getBoundingClientRect().width / vb.width; if (!unit) return;
+      var labels = svg.querySelector('.topo-pin-labels'), pins = [].slice.call(svg.querySelectorAll('.topo-pin'));
+      var fs = 13 / unit, gap = 7 / unit, r = 5 / unit;
+      labels.textContent = '';
+      var boxes = pins.map(function (p) {
+        p.querySelector('.topo-pin-dot').setAttribute('r', r.toFixed(3));
+        return { x0: +p.dataset.x - r, x1: +p.dataset.x + r, y0: +p.dataset.y - r, y1: +p.dataset.y + r };
+      });
+      pins.forEach(function (p) {
+        var x = +p.dataset.x, y = +p.dataset.y, w = p.dataset.name.length * fs * 0.52;
+        // To the right, the left, above, or below: s.x is where the name starts, s.y its middle.
+        [{ x: x + gap, y: y, a: 'start' }, { x: x - gap - w, y: y, a: 'end' },
+         { x: x - w / 2, y: y - gap - fs * 0.4, a: 'middle' }, { x: x - w / 2, y: y + gap + fs * 0.4, a: 'middle' }].some(function (s) {
+          var b = { x0: s.x, x1: s.x + w, y0: s.y - fs * 0.6, y1: s.y + fs * 0.6 };
+          if (b.x0 < vb.x || b.x1 > vb.x + vb.width || b.y0 < vb.y || b.y1 > vb.y + vb.height) return false;
+          if (boxes.some(function (o) { return b.x0 < o.x1 && b.x1 > o.x0 && b.y0 < o.y1 && b.y1 > o.y0; })) return false;
+          boxes.push(b);
+          var t = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+          t.textContent = p.dataset.name;
+          t.setAttribute('x', ({ start: x + gap, end: x - gap, middle: x })[s.a].toFixed(3));
+          t.setAttribute('y', (s.y + fs * 0.35).toFixed(3));
+          t.setAttribute('text-anchor', s.a);
+          t.setAttribute('font-size', fs.toFixed(3));
+          t.setAttribute('stroke-width', (3 / unit).toFixed(3));
+          labels.appendChild(t);
+          return true;
+        });
+      });
+    }
+    log.querySelectorAll('details.topo-trip').forEach(function (d) {
+      // The browser's own tooltips are only for pages without JavaScript; the names are on the map.
+      d.querySelectorAll('.topo-pin title').forEach(function (t) { t.remove(); });
+      d.addEventListener('toggle', function () {
+        nameTrip(d);
+        if (d.open) history.replaceState(null, '', '#' + d.id);
+      });
+    });
+    window.addEventListener('resize', function () { log.querySelectorAll('details.topo-trip[open]').forEach(nameTrip); });
+
+    // Show only the long ones, or one kind of trip. The map above dims everything else.
     function showKind(kind) {
+      var shown = [];
+      items.forEach(function (li) {
+        var on = !kind || (kind === 'long' ? li.hasAttribute('data-long') : li.dataset.kinds.split(' ').indexOf(kind) !== -1);
+        li.hidden = !on;
+        if (on) shown.push(li.querySelector('.topo-trip').id);
+      });
+      years.forEach(function (s) { s.hidden = !!kind && !s.querySelector('.topo-trip-item:not([hidden])'); });
       log.classList.toggle('is-kind', !!kind);
       bar.hidden = !kind;
-      if (kind) bar.querySelector('strong').textContent = kind.replace(/-/g, ' ');
-      log.querySelectorAll('.topo-log-kinds a').forEach(function (a) {
+      if (kind) {
+        bar.querySelector('strong').textContent = shown.length + (shown.length === 1 ? ' trip' : ' trips') +
+          (kind === 'long' ? ' with a long one' : ' with ' + kind.replace(/-/g, ' '));
+      }
+      chips.forEach(function (a) {
         var on = a.hash.slice(1) === kind;
         a.classList.toggle('is-active', on);
         if (on) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
       });
-      items.forEach(function (li) { li.hidden = !!kind && li.dataset.kind !== kind; });
-      log.querySelectorAll('.topo-log-trip').forEach(function (li) {
-        li.hidden = !!kind && !li.querySelector('.topo-tl-item[data-kind="' + kind + '"]');
-      });
-      years.forEach(function (d, i) {
-        var any = !kind || d.querySelector('.topo-tl-item[data-kind="' + kind + '"]');
-        d.hidden = !any;
-        d.open = kind ? !!any : opened[i];
-      });
+      document.dispatchEvent(new CustomEvent('topo:filter', { detail: kind ? shown : null }));
     }
-    // The address bar is the state: #2016 opens a year (and the map follows), #trek filters by type.
+    // The address bar is the state: #trek filters, #europe-2018 opens that trip.
     function apply(scroll) {
       var h = decodeURIComponent(location.hash.slice(1));
-      var year = /^\d{4}$/.test(h) && document.getElementById(h);
       if (kinds.indexOf(h) !== -1) {
         showKind(h);
         if (scroll) log.scrollIntoView();
-      } else {
-        showKind(null);
-        if (year) {
-          year.open = true;
-          document.dispatchEvent(new CustomEvent('topo:year', { detail: h }));
-          if (scroll) year.scrollIntoView();
-        }
+        return;
+      }
+      showKind(null);
+      var el = h && document.getElementById(h);
+      if (el && el.matches('details.topo-trip')) {
+        el.open = true;
+        if (scroll) el.scrollIntoView();
       }
     }
     window.addEventListener('hashchange', function () { apply(true); });
-    // Opening a year, or picking one on the map, updates the address bar without jumping the page.
-    years.forEach(function (d) {
-      d.querySelector('summary').addEventListener('click', function () {
-        if (!d.open && !log.classList.contains('is-kind')) history.replaceState(null, '', '#' + d.id);
-      });
-    });
-    document.addEventListener('topo:map-year', function (e) {
-      showKind(null);
-      history.replaceState(null, '', e.detail === 'all' ? location.pathname : '#' + e.detail);
-      var d = document.getElementById(e.detail);
-      if (d && d.classList.contains('topo-log-year')) d.open = true;
-    });
     if (location.hash) apply(true);
   });
   </script>

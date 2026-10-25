@@ -176,6 +176,19 @@
     ]
   },
   {
+    "slug": "canadian-rockies-2023",
+    "name": "Canadian Rockies",
+    "years": [
+      2023
+    ],
+    "places": [
+      "Jasper National Park"
+    ],
+    "along": [
+      "Canadian Rockies"
+    ]
+  },
+  {
     "slug": "alaska-2022",
     "name": "Alaska, 2022",
     "when": "July and August 2022",
@@ -183,6 +196,7 @@
       2022
     ],
     "places": [
+      "Vancouver",
       "Inside Passage, Alaska",
       "Denali",
       "Tracy Arm",
@@ -406,9 +420,9 @@
     ]
   },
   {
-    "slug": "oregon-and-washington",
-    "name": "Oregon and Washington",
-    "when": "Close to home, over the years",
+    "slug": "close-to-home",
+    "name": "Close to home",
+    "home": true,
     "places": [
       "Portland, Oregon",
       "Bend, Oregon",
@@ -436,7 +450,8 @@
       "Eagle Cap Wilderness",
       "Summer Lake Hot Springs",
       "Mount Adams",
-      "Vancouver to Bellingham"
+      "Vancouver to Bellingham",
+      "Sawtooth Mountains"
     ],
     "along": [
       "Petal Pedal century",

@@ -10,3 +10,4 @@ photo-skip.json
 .venv/
 __pycache__/
 .skyline-cache/
+.trip-maps-cache/
