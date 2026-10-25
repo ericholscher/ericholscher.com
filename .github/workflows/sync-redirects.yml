@@ -1,0 +1,29 @@
+# Syncs redirects.yml to the Read the Docs project with readthedocs-cli.
+# Pull requests get a dry run that shows what would change; main applies it.
+# Needs an RTD_TOKEN repository secret: a Read the Docs API token
+# (https://app.readthedocs.org/accounts/tokens/).
+name: Sync redirects
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - redirects.yml
+      - .github/workflows/sync-redirects.yml
+  pull_request:
+    paths:
+      - redirects.yml
+      - .github/workflows/sync-redirects.yml
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - name: Sync to Read the Docs
+        env:
+          RTD_TOKEN: ${{ secrets.RTD_TOKEN }}
+          MODE: ${{ github.event_name == 'pull_request' && '--dry-run' || '--wet-run' }}
+        run: uvx --from readthedocs-cli==5 rtd projects ericholscher.com redirects sync -f redirects.yml $MODE

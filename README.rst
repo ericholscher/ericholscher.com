@@ -9,13 +9,15 @@ Fonts are self-hosted under ``site/_themes/topo/static/fonts/``.
 Sidebar blocks are plain Jinja templates in ``site/_templates/sidebar/`` and are safe to edit by hand.
 
 The home page and ``blog/index`` listings are rendered by the theme from ABlog's post data.
-The home page leads with "Most read": the first ``topo_featured_count`` (3) entries of ``html_context["topo_popular"]``
-in ``site/conf.py``, each a (post docname, one-line summary) pair, then the eight most recent posts, then the rest of
+The home page leads with "Favorite posts": the first few entries (``:featured: 3``) of the ``favorite-posts`` list in
+``site/favorite-posts.rst``, each a post's path with a one-line summary indented under it, then the eight most recent posts, then the rest of
 the favorites as a short list, then the topic cards.
 ``blog/index`` shows the 20 latest posts, then pages by year: ABlog's year pages (``blog/archive/<year>/``) get
 newer and older year links. The Archive page (``blog/archive/archive/``) lists every title by year.
-Retired pages forward elsewhere through ``topo_redirects`` in ``site/conf.py`` (old docname to new), for example ``/bike/`` and
-``/backpacking/`` to the Adventures page.
+Retired pages forward elsewhere through Read the Docs redirects, kept in ``redirects.yml`` at the repo root, for example
+``/bike/`` and ``/backpacking/`` to the Adventures page. The ``Sync redirects`` GitHub workflow applies the file with
+`readthedocs-cli <https://pypi.org/project/readthedocs-cli/>`_ on pushes to ``main`` (a dry run on pull requests), using
+an ``RTD_TOKEN`` repository secret. Redirects only fire for URLs that 404, so delete the old page when adding one.
 Posts in the ``link-blog`` category get a small "link" label next to their date.
 
 Topics are ABlog categories. The ones listed in ``html_context["topo_categories"]`` in ``site/conf.py``
