@@ -1,4 +1,5 @@
-:orphan:
+.. post:: Feb 10, 2023
+   :tags: books
 
 Books I've liked
 ================
@@ -58,4 +59,10 @@ and this is one of the best I've read.
 It stays fun throughout,
 and teaches some good life lessons along the way.
 
+Favorite graduation speeches
+----------------------------
 
+Not books, but two more favorites:
+
+* `Bill Watterson <http://web.mit.edu/jmorzins/www/C-H-speech.html>`__
+* `Steve Jobs <https://www.youtube.com/watch?v=D1R-jKKp3NA>`__

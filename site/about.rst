@@ -56,5 +56,5 @@ but lived mostly in the Shenandoah Valley through middle school,
 and finally in Virginia Beach for high school,
 I finished off my time in Virginia in Fredericksburg for college at the University of Mary Washington.
 
-You can read more about my work history in my :doc:`/resume`,
+You can read more about my work in :doc:`/projects` and my :doc:`/resume`,
 and other hobbies on this site.

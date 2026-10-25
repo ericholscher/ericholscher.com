@@ -20,5 +20,6 @@ or you can dive into the ``Adventures`` if you want to talk with me about travel
    blog/index
    adventures
    about
+   projects
    interviews
    speaking

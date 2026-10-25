@@ -1,3 +1,7 @@
+.. post:: Feb 21, 2019
+   :category: outside
+   :tags: travel, digital nomad
+
 Digital Nomad Guide to Puerto Varas, Chile
 ==========================================
 
