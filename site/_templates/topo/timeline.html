@@ -31,7 +31,7 @@
       <ol class="topo-tl-list">
       {%- for h in trips %}
         <li class="topo-tl-item" data-kind="{{ h.kind }}">
-          <h4>{% if h.link %}<a href="{{ pathto(h.link) }}">{{ h.name }}</a>{% else %}{{ h.name }}{% endif %}</h4>
+          <h4>{% if h.link %}<a class="internal" href="{{ pathto(h.link) }}">{{ h.name }}</a>{% else %}{{ h.name }}{% endif %}</h4>
           <p class="topo-tl-meta"><a class="topo-kind topo-kind-{{ h.kind }}" href="#{{ h.kind }}">{{ h.kind|replace("-", " ") }}</a>{{ h.when|replace(", " ~ y, "")|replace(" " ~ y, "") }}{% if h.where %} &middot; {{ h.where }}{% endif %}</p>
           {%- if h.note %}<p class="topo-tl-note">{{ h.note }}</p>{% endif %}
         </li>
