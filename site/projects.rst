@@ -106,10 +106,13 @@ Python Software Foundation
 I'm a `PSF <https://www.python.org/psf-landing/>`_ Fellow.
 I served on the board from 2017 to 2020,
 and chaired its Funding Working Group.
+There I helped get the Mozilla Open Source Support (MOSS) grant
+that kickstarted the PSF's Developer in Residence program.
 
 Earlier
 -------
 
+* `sphinx_rtd_theme <https://github.com/readthedocs/sphinx_rtd_theme>`_: the Read the Docs theme for Sphinx. I :doc:`announced it in 2013 </blog/2013/nov/4/new-theme-read-the-docs>`.
 * `Django Kong <http://django-kong.rtfd.org>`_: a wrapper around twill for monitoring and basic functional testing of your sites.
 * `Django Test Utils <http://django-test-utils.rtfd.org>`_: tools to help with testing Django applications. I :doc:`announced it in 2008 </blog/2008/nov/10/announcing-django-crawler-test-utils>`.
 

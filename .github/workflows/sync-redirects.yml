@@ -1,7 +1,7 @@
 # Syncs redirects.yml to the Read the Docs project with readthedocs-cli.
 # Pull requests get a dry run that shows what would change; main applies it.
 # Needs an RTD_TOKEN repository secret: a Read the Docs API token
-# (https://app.readthedocs.org/accounts/tokens/).
+# (https://app.readthedocs.org/accounts/tokens/). Without it, the job skips with a notice.
 name: Sync redirects
 
 on:
@@ -26,4 +26,9 @@ jobs:
         env:
           RTD_TOKEN: ${{ secrets.RTD_TOKEN }}
           MODE: ${{ github.event_name == 'pull_request' && '--dry-run' || '--wet-run' }}
-        run: uvx --from readthedocs-cli==5 rtd projects ericholscher.com redirects sync -f redirects.yml $MODE
+        run: |
+          if [ -z "$RTD_TOKEN" ]; then
+            echo "::notice::No RTD_TOKEN secret yet, so redirects were not synced. The site's forwarding pages cover them until then."
+            exit 0
+          fi
+          uvx --from readthedocs-cli==5 rtd projects ericholscher.com redirects sync -f redirects.yml $MODE
