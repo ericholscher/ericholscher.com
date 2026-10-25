@@ -210,6 +210,12 @@ img { max-width: 100%; height: auto; }
 .body table.docutils th { font-weight: 600; border-bottom-color: var(--rule-strong); }
 .body .table-wrapper, .body .wy-table-responsive { overflow-x: auto; }
 .body .footnote, .body .citation { font-size: 14px; color: var(--text-2); }
+/* Interviews page: one entry per row, episode title over the show and date. */
+.body ul.topo-interviews { list-style: none; padding-left: 0; margin: 0 0 24px; }
+.body ul.topo-interviews > li { margin: 0; padding: 14px 0; border-top: 1px solid var(--rule); }
+.body ul.topo-interviews > li:last-child { border-bottom: 1px solid var(--rule); }
+.body ul.topo-interviews > li > p { margin: 0; }
+.body ul.topo-interviews > li > p + p { margin-top: 2px; font-size: 14px; color: var(--muted); }
 .body dl.footnote, .body aside.footnote { font-size: 14px; }
 .body .toctree-wrapper ul { list-style: none; padding-left: 0; }
 
