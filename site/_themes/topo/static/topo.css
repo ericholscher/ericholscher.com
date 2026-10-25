@@ -60,7 +60,12 @@ img { max-width: 100%; height: auto; }
   box-shadow: inset 0 -1px 0 var(--sign-2);
 }
 .topo-wordmark { display: inline-flex; align-items: center; gap: 12px; font-family: var(--serif); font-weight: 500; font-size: 28px; line-height: 1; letter-spacing: -0.005em; color: var(--sign-text); border-bottom: 0; }
-.topo-mark { display: block; flex: none; color: var(--sign-text); --mark-snow: var(--sign); position: relative; top: -2.5px; } /* centers the blaze on the letters, not the line box */
+.topo-mark { display: block; flex: none; color: var(--sign-text); --mark-snow: var(--sign); }
+/* Center the blaze on the capitals, not the line box. Trimming the name to cap height and baseline
+   holds in whichever serif renders (font-display: optional can leave Georgia on a first visit);
+   browsers without text-box get a nudge tuned for Newsreader. */
+.topo-wordmark span { text-box: trim-both cap alphabetic; }
+@supports not (text-box: trim-both cap alphabetic) { .topo-mark { position: relative; top: -2.5px; } }
 .topo-wordmark:hover { color: var(--sign-gold); }
 /* Nav links are 44px tall for touch; the padding replaces the space the gap used to give. */
 .topo-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 0 10px; }
