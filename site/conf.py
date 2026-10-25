@@ -108,7 +108,6 @@ topo_redirects = {
     "pct/thoughts": "pct/index",
     # Old top-level pages, retired in 2026.
     "books": "blog/2023/feb/10/books-ive-liked",
-    "favorites": "blog/2023/feb/10/books-ive-liked",
     "consulting": "speaking",
     "roadmap": "speaking",
     "digital-nomad/index": "blog/drafts/puerto-varas-digital-nomad-guide",
