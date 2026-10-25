@@ -51,7 +51,7 @@ The look is linen paper, umber ink, forest-green links, and public-land trail si
 - **Labels:** brown plaques with a gold inset line.
 - **Type:** Newsreader serif headings, with IBM Plex Sans and Plex Mono for text and labels.
 - **Texture:** a public-domain USGS topo map behind the home intro.
-- **Footer:** a ridgeline above it: the Cascades from Bachelor to Jefferson, with the Three Sisters, traced from real elevation data by `scripts/skyline.py`.
+- **Footer:** a ridgeline above it: the Cascades from Pilot Butte, Bachelor to Jefferson with the Three Sisters, traced from real elevation data by `scripts/skyline.py`.
 
 Keep that identity. Work within the existing tokens in `topo.css` rather than adding colors.
 
