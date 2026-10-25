@@ -11,9 +11,6 @@ posts:
   - post: blog/2018/mar/9/one-percent-for-open-source
     summary: "A proposal: companies put 1% of a funding round or yearly profits into the open source they use."
 
-  - post: blog/2023/feb/10/we-dont-do-that-here
-    summary: "A short phrase that lets organizers hold the line on social norms without winning a debate every time."
-
   - post: blog/2017/jan/27/code-is-self-documenting
     summary: "Comments explain the why, and documentation does more than explain how the code works."
 
@@ -22,3 +19,6 @@ posts:
 
   - post: blog/2019/sep/19/helping-first-time-conference-attendees-with-welcome-wagon
     summary: "How Write the Docs helps first-time attendees know what to expect, before and during the conference."
+
+  - post: blog/2023/feb/10/we-dont-do-that-here
+    summary: "A short phrase that lets organizers hold the line on social norms without winning a debate every time."
