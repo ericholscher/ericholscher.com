@@ -33,7 +33,7 @@ We call it an Unconference; sometimes it's called an Open Space.
 **The main thing is that it isn't scheduled in advance,
 and allows people interested in similar topics to find each other.**
 
-```{figure} https://live.staticflickr.com/65535/55266138806_85083f918a_b.jpg
+```{figure} /_static/img/wtd-unconference-board.jpg
 :alt: The unconference sessions board at Write the Docs Portland 2026
 :width: 600px
 :align: center
