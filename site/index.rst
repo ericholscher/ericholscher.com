@@ -15,5 +15,6 @@ and `EthicalAds <https://www.ethicalads.io/>`_.
    blog/index
    adventures
    about
+   projects
    interviews
    speaking

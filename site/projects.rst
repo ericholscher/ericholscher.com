@@ -1,32 +1,51 @@
-:orphan:
-
 Projects
 ========
 
-Some projects that I have worked on over the years.
+The projects I work on now, and a few from earlier years.
 
-* `Read The Docs`_ 
+Read the Docs
+-------------
 
-A Django Dash project, allowing users to host their Sphinx documentation easily. 
+`Read the Docs <https://about.readthedocs.com/>`_ is documentation hosting, and the standard place Python projects host their docs.
+I co-founded it in 2010 at the Django Dash,
+and it has been my day job since 2014.
+Our :doc:`2025 vision </blog/2025/jan/14/an-updated-vision-for-read-the-docs>`
+is about building more support for other documentation tools,
+and better UX for documentation authors and readers.
 
-* `Write the Docs Conference`_ 
+EthicalAds
+----------
 
-A conference about all things documentation, held in Portland, Oregon.
+`EthicalAds <https://www.ethicalads.io/>`_ is a privacy-first ad network for developers,
+and it helps fund Read the Docs.
+I co-founded it.
+I've written about where it fits in :doc:`funding open source </blog/2024/nov/1/ai-search-should-sustain-open-source>`.
 
-* `Write the Docs Documentation`_ 
+Write the Docs
+--------------
 
-A resource for writing better documentation, and spreading the general culture of writing documentation in software.
+`Write the Docs <https://www.writethedocs.org/>`_ is a community for people who care about documentation,
+with conferences, meetups, a Slack, and a newsletter.
+I co-founded it.
 
-* `Django Kong`_
+PyCascades
+----------
 
-A wrapper around twill that allows you to do monitoring and basic functional testing of your sites. 
+`PyCascades <https://www.pycascades.com/>`_ is a regional Python conference in the Pacific Northwest,
+first held in 2018.
+I co-founded it, organized it from 2018 to 2020,
+and co-chaired PyCascades 2020 in Portland.
 
-* `Django Test Utils`_ 
+Python Software Foundation
+--------------------------
 
-This is a project of mine to help with the testing of Django applications. 
+I served on the `PSF <https://www.python.org/psf-landing/>`_ board from 2017 to 2020,
+and chaired its Funding Working Group.
 
-.. _Read The Docs: http://readthedocs.org
-.. _Django Kong: http://django-kong.rtfd.org
-.. _Django Test Utils: http://django-test-utils.rtfd.org
-.. _Write the Docs Conference: http://conf.writethedocs.org
-.. _Write the Docs Documentation: http://docs.writethedocs.org
+Earlier
+-------
+
+* `Django Kong <http://django-kong.rtfd.org>`_: a wrapper around twill for monitoring and basic functional testing of your sites.
+* `Django Test Utils <http://django-test-utils.rtfd.org>`_: tools to help with testing Django applications.
+
+More of my work history is on my :doc:`résumé </resume>`.
