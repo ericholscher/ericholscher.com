@@ -5,12 +5,18 @@ I've given a few different interviews on podcasts and other formats over the yea
 This page keeps track of all of them,
 in case you want to hear my thoughts about things at certain points in time.
 
+.. rst-class:: topo-plaque
+
+Favorite
+
 Maintainer Stories
 ------------------
 
 .. rst-class:: topo-talk-meta
 
 GitHub video, February 2017
+
+A short, well-made film from GitHub that shows my life in Portland.
 
 .. raw:: html
 
