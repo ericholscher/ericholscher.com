@@ -2,7 +2,6 @@ Welcome to my home on the web
 =============================
 
 Hi! I'm Eric. I build documentation tools and communities, and otherwise spend time outside.
-
 I co-founded `Read the Docs <https://about.readthedocs.com/>`_,
 `Write the Docs <https://www.writethedocs.org>`_,
 `PyCascades <https://www.pycascades.com/>`_,
