@@ -72,7 +72,9 @@ img { max-width: 100%; height: auto; }
 @media (max-width: 560px) {
   .topo-masthead { flex-direction: column; align-items: flex-start; gap: 2px; padding-top: 16px; padding-bottom: 4px; }
   .topo-wordmark { font-size: 25px; gap: 10px; }
-  .topo-nav { gap: 0 8px; margin-left: -6px; }
+  .topo-nav { gap: 0; margin-left: -4px; }
+  .topo-nav a { padding: 0 5px; font-size: 14px; }
+  .topo-nav .topo-nav-search { min-width: 40px; padding: 0; }
 }
 
 /* Page frame */

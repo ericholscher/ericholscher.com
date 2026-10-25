@@ -70,7 +70,7 @@ Keep that identity. Work within the existing tokens in `topo.css` rather than ad
   - YouTube and Vimeo iframes scale to 16:9.
 - **Maps:** inline SVG from Natural Earth land shapes, with no tiles or external scripts.
   - Interactive parts (year filter, hover labels, zoom, expand) are progressive enhancement. The page must still make sense without JavaScript.
-- **Mobile masthead:** the wordmark sits over a single nav row: Blog, Adventures, Speaking, About, and a search icon.
+- **Mobile masthead:** the wordmark sits over a single nav row: Blog, Adventures, Speaking, Projects, About, and a search icon. It fits one row down to 375px; a 6th item would need tighter spacing or a shorter label.
 
 ## Voice and content
 
