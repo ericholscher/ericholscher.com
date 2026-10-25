@@ -185,11 +185,17 @@ img { max-width: 100%; height: auto; }
 .body section.topo-project > * { grid-column: 2; }
 .body section.topo-project > h2 { margin: 0 0 6px; font-size: 24px; }
 .body section.topo-project > p:last-child { margin-bottom: 0; }
-.body img.topo-project-logo { grid-column: 1; grid-row: 1 / span 6; box-sizing: border-box; width: 168px; height: 84px !important; padding: 16px 18px; object-fit: contain; background: var(--paper); border: 1px solid var(--rule); border-radius: 3px; margin: 0; }
+.body .topo-project-posts { margin-top: 4px; padding-top: 12px; border-top: 1px solid var(--rule); font-size: 15px; }
+.body .topo-project-posts > p { margin: 0 0 6px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+.body .topo-project-posts ul { margin: 0; padding-left: 18px; }
+.body .topo-project-posts li { margin: 2px 0; line-height: 1.5; }
+.body section.topo-project > a.image-reference { grid-column: 1; grid-row: 1 / span 6; display: block; border: 0; }
+.body img.topo-project-logo { box-sizing: border-box; width: 168px; height: 84px !important; padding: 16px 18px; object-fit: contain; background: var(--paper); border: 1px solid var(--rule); border-radius: 3px; margin: 0; }
 @media (max-width: 560px) {
   .body section.topo-project { grid-template-columns: minmax(0, 1fr); padding: 16px; }
   .body section.topo-project > * { grid-column: 1; }
-  .body img.topo-project-logo { grid-row: auto; order: -1; width: 100%; height: 72px !important; margin-bottom: 14px; }
+  .body section.topo-project > a.image-reference { grid-row: auto; order: -1; }
+  .body img.topo-project-logo { width: 100%; height: 72px !important; margin-bottom: 14px; }
 }
 .body img.align-right { float: right; max-width: 46%; margin: 4px 0 16px 28px; }
 .body img.align-left { float: left; max-width: 46%; margin: 4px 28px 16px 0; }
