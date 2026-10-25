@@ -128,7 +128,6 @@ img { max-width: 100%; height: auto; }
 /* Recent posts (home) */
 .topo-recent-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 6px 24px; margin-bottom: 6px; }
 .topo-recent-head h2 { font-family: var(--mono); font-weight: 400; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; margin: 0; color: var(--sign-text); background: var(--sign); padding: 6px 12px; border-radius: 3px; box-shadow: inset 0 0 0 1px var(--sign-2), inset 0 0 0 2px rgba(217,164,65,.55); }
-.topo-key { font-family: var(--mono); font-size: 12px; color: var(--muted); }
 .topo-entry {
   display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 0 20px;
   align-items: baseline; padding: 22px 0; border-top: 1px solid var(--rule);
@@ -336,7 +335,6 @@ ul.postlist p.ablog-post-excerpt { font-size: 16px; color: var(--text-2); margin
   .body .topo-feature-where, .topo-feature-where { font-size: 13px; }
   .topo-feature-meta .topo-kind { display: none; }
 }
-.topo-adv-link { margin: -16px 0 8px; }
 
 .topo-log { margin: 0 0 32px; }
 .topo-log .topo-plaque { margin-bottom: 8px; }
@@ -468,7 +466,7 @@ html.topo-map-open, html.topo-map-open body { overflow: hidden; }
 .topo-side-block:first-child { border-top: 0; padding-top: 0; }
 .topo-side-block p { margin: 0; font-size: 15px; line-height: 1.55; color: var(--text-2); }
 /* Sidebar labels are lighter than the content plaques: umber small caps over a short gold rule. */
-.topo-side-label, #searchlabel { font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--sign); display: inline-block; padding: 0 0 4px; margin: 0 0 12px; border-bottom: 2px solid var(--sign-gold); }
+.topo-side-label { font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--sign); display: inline-block; padding: 0 0 4px; margin: 0 0 12px; border-bottom: 2px solid var(--sign-gold); }
 .topo-side-label a { color: var(--sign); border-bottom: 0; }
 .topo-side-label a:hover { color: var(--link-hover); }
 .topo-side-portrait { display: block; width: fit-content; margin: 0 auto 12px; border-bottom: 0; }
@@ -477,10 +475,6 @@ html.topo-map-open, html.topo-map-open body { overflow: hidden; }
 .topo-years a { border-bottom: 0; }
 .topo-side-small { margin-top: 10px !important; font-size: 14px !important; }
 .topo-side-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; }
-#searchbox { padding: 20px 0 0; border-top: 1px solid var(--rule); }
-form.search { display: flex; gap: 6px; }
-form.search input[type="text"] { flex: 1 1 auto; min-width: 0; font: inherit; font-size: 15px; padding: 7px 10px; border: 1px solid var(--rule-strong); border-radius: 3px; background: #FAF5E9; color: var(--ink); }
-form.search input[type="submit"] { font: inherit; font-size: 14px; padding: 7px 12px; border: 1px solid var(--sign); border-radius: 3px; background: var(--sign); color: var(--sign-text); cursor: pointer; }
 
 /* Search results page */
 .body form input[type="text"] { font: inherit; font-size: 15px; padding: 7px 10px; border: 1px solid var(--rule-strong); border-radius: 3px; background: #FAF5E9; color: var(--ink); max-width: 100%; }
@@ -489,6 +483,77 @@ form.search input[type="submit"] { font: inherit; font-size: 14px; padding: 7px 
 ul.search { list-style: none; padding: 0; }
 ul.search li { padding: 10px 0; border-bottom: 1px solid var(--rule); background: none; }
 ul.search li a { font-family: var(--serif); font-size: 22px; }
+
+/* Read the Docs addons: the search modal (press /), the file-diff bar on PR previews, and notifications.
+   They render in shadow DOM, so they are themed through RTD's --readthedocs-* properties. RTD sets its
+   defaults in a cascade layer, so these unlayered ones win. */
+:root {
+  --readthedocs-font-family: var(--sans);
+  --readthedocs-font-size: 16px;
+
+  --readthedocs-search-code-font-family: var(--mono);
+  --readthedocs-search-backdrop-color: color-mix(in srgb, var(--ink) 45%, transparent);
+  --readthedocs-search-color: var(--text);
+  --readthedocs-search-link-color: var(--text);
+  --readthedocs-search-content-background-color: var(--paper);
+  --readthedocs-search-content-border-color: var(--rule-strong);
+  --readthedocs-search-filters-border-color: var(--rule);
+  --readthedocs-search-input-background-color: #FAF5E9;
+  --readthedocs-search-footer-background-color: var(--paper-2);
+  --readthedocs-search-footer-color: var(--text-2);
+  --readthedocs-search-footer-code-background-color: var(--paper);
+  --readthedocs-search-footer-code-border-color: var(--rule-strong);
+  --readthedocs-search-result-heading-color: var(--ink);
+  --readthedocs-search-result-subheading-color: var(--ink);
+  --readthedocs-search-result-color: var(--text-2);
+  --readthedocs-search-result-icon-color: var(--muted);
+  --readthedocs-search-result-highlight-color: var(--link);
+  --readthedocs-search-result-active-background-color: var(--paper-2);
+  --readthedocs-search-result-border-color: var(--rule);
+  --readthedocs-search-badge-background-color: var(--paper-2);
+  --readthedocs-search-badge-color: var(--text);
+
+  /* The file-diff bar hangs off the masthead like a second sign. */
+  --readthedocs-filetreediff-font-size: 14px;
+  --readthedocs-filetreediff-color: var(--sign-text);
+  --readthedocs-filetreediff-background-color: var(--sign-2);
+  --readthedocs-filetreediff-chunks-color: var(--sign-gold);
+
+  --readthedocs-notification-color: var(--text);
+  --readthedocs-notification-background-color: var(--paper-2);
+  --readthedocs-notification-title-color: var(--ink);
+  --readthedocs-notification-title-background-color: var(--rule);
+  --readthedocs-notification-link-color: var(--link);
+  --readthedocs-notification-inverted-color: var(--sign-text);
+  --readthedocs-notification-inverted-background-color: var(--sign);
+  --readthedocs-notification-inverted-title-color: var(--sign-text);
+  --readthedocs-notification-inverted-link-color: var(--sign-gold);
+}
+/* The diff bar is position: fixed inside RTD's shadow DOM. contain: layout makes the host its containing
+   block, and body is a flex column, so order: -1 sets it in a strip above the masthead that scrolls away. */
+readthedocs-filetreediff { display: block; order: -1; contain: layout; height: 31px; background: var(--sign-2); }
+@media (max-width: 768px) { readthedocs-filetreediff { height: 38px; } }
+/* "Show diff" highlights. RTD adopts these styles after ours, so they need the extra specificity. */
+body .doc-diff-added { background-color: color-mix(in srgb, var(--forest) 20%, transparent); }
+body .doc-diff-removed { background-color: color-mix(in srgb, var(--blaze) 25%, transparent); text-decoration: line-through; text-decoration-color: color-mix(in srgb, var(--blaze) 60%, transparent); }
+/* Link previews: the card RTD shows when hovering a link to another page. It's a plain div at the end of
+   body, styled by a sheet RTD adopts after ours, so these selectors carry the data attribute to win. */
+div.tooltip[data-linkpreview-href] {
+  max-width: min(440px, calc(100vw - 20px)); max-height: min(380px, 60vh); min-height: 0;
+  background: var(--paper); border: 1px solid var(--rule-strong); border-radius: 3px;
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--ink) 20%, transparent);
+}
+div.tooltip[data-linkpreview-href] .tooltip-content { padding: 16px 20px; color: var(--text); font-family: var(--sans); font-size: 14px; line-height: 1.55; }
+div.tooltip[data-linkpreview-href] .tooltip-content > :first-child { margin-top: 0; }
+div.tooltip[data-linkpreview-href] :is(h1, h2, h3, h4) { font-family: var(--serif); font-weight: 500; line-height: 1.15; color: var(--ink); margin: 18px 0 6px; }
+div.tooltip[data-linkpreview-href] h1 { font-size: 24px; margin-top: 2px; }
+div.tooltip[data-linkpreview-href] h2 { font-size: 19px; }
+div.tooltip[data-linkpreview-href] :is(h3, h4) { font-size: 16px; }
+div.tooltip[data-linkpreview-href] :is(h1, h2, h3, h4) a { color: inherit; border-bottom: 0; }
+div.tooltip[data-linkpreview-href] p { margin: 0 0 10px; }
+div.tooltip[data-linkpreview-href] img { max-height: 180px; width: auto; }
+div.tooltip[data-linkpreview-href] .arrow { background: var(--paper); }
+body .doc-diff-chunk-selected { background-color: color-mix(in srgb, var(--sign-gold) 22%, transparent); }
 
 /* Footer */
 .topo-ridge { display: block; width: 100%; height: 48px; fill: var(--forest); background: var(--paper); }

@@ -57,7 +57,6 @@ html_sidebars = {
         "sidebar/archive.html",
         "sidebar/walking.html",
         "sidebar/elsewhere.html",
-        "searchbox.html",
     ],
 }
 # globaltoc_collapse = False

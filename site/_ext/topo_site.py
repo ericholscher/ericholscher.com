@@ -1,11 +1,9 @@
 """The site's own Sphinx hooks: year letters, photo rows, the redirect stubs, and the data files.
 
-conf.py is for settings only. Site data and copy live in their own files:
-_data/*.json for the Adventures timeline, map, and topics, favorites.yml for the favorite posts,
-and redirects.yml at the repo root for redirects.
+conf.py is for settings only. Site data and copy live in their own files: _data/ for the
+Adventures timeline, map, topics, and favorite posts, and redirects.yml at the repo root.
 """
 
-import json
 import re
 from pathlib import Path
 
@@ -13,9 +11,6 @@ import yaml
 
 from docutils import nodes
 from docutils.parsers.rst import Directive
-
-# Data files in site/_data, each exposed to templates as topo_<name>.
-TOPO_DATA = ["categories", "hikes", "places"]
 
 
 def topo_data_context(app, pagename, templatename, context, doctree):
@@ -51,14 +46,7 @@ class AdventureSummary(Directive):
         return [nodes.raw("", TOPO_SUMMARY_SLOT, format="html")]
 
 
-def topo_year_letters(app, pagename, templatename, context, doctree):
-    from ablog.blog import Blog
-
-    published = {p.docname for p in Blog(app).posts}
-    # Years with a published letter, for the Adventures page to link to.
-    context["topo_year_letters"] = {
-        m.group(1): doc for doc in published if (m := TOPO_YEAR_LETTER.match(doc))
-    }
+def topo_year_summary(app, pagename, templatename, context, doctree):
     m = TOPO_YEAR_LETTER.match(pagename)
     if m and TOPO_SUMMARY_SLOT in context.get("body", ""):
         html = app.builder.templates.render("topo/year-summary.html", {**context, "year": m.group(1)})
@@ -87,12 +75,11 @@ def topo_photo_rows(app, doctree, docname):
 
 
 def setup(app):
-    data = Path(app.srcdir, "_data")
-    app.topo_data = {f"topo_{n}": json.loads((data / f"{n}.json").read_text()) for n in TOPO_DATA}
-    app.topo_data["topo_favorites"] = yaml.safe_load((data / "favorites.yml").read_text())
+    # Each file in site/_data is exposed to templates as topo_<name>. YAML is a superset of JSON.
+    app.topo_data = {f"topo_{f.stem}": yaml.safe_load(f.read_text()) for f in Path(app.srcdir, "_data").iterdir()}
     app.connect("html-page-context", topo_data_context)
     app.connect("html-collect-pages", topo_redirect_pages)
     app.add_directive("adventure-summary", AdventureSummary)
-    app.connect("html-page-context", topo_year_letters)
+    app.connect("html-page-context", topo_year_summary)
     app.connect("doctree-resolved", topo_photo_rows)
     return {"parallel_read_safe": True, "parallel_write_safe": True}

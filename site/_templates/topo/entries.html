@@ -6,32 +6,25 @@
 {%- else %}<span{% if cls %} class="{{ cls }}"{% endif %}>Draft</span>{% endif %}
 {%- endmacro %}
 
-{%- macro entries(posts, pagename) %}
-{%- for post in posts %}
-<article class="topo-entry">
-  <div class="topo-entry-meta">{{ date(post, '%b %-d, %Y', 'topo-entry-date') }}</div>
-  <div class="topo-entry-body">
-    <h3><a href="{{ pathto(post.docname) }}{{ anchor(post) }}">{{ post.title }}</a></h3>
-    <div class="topo-entry-excerpt">{{ post.to_html(pagename) }}</div>
-  </div>
-</article>
-{%- endfor %}
-{%- endmacro %}
-
-{#- Featured posts with a hand-written summary instead of the opening lines: (post, summary) pairs. -#}
-{%- macro featured(items, pagename) %}
-{%- for post, summary in items %}
+{#- One post: its opening lines, or a hand-written summary for featured posts. -#}
+{%- macro entry(post, pagename, summary=None) %}
 <article class="topo-entry">
   <div class="topo-entry-meta">{{ date(post, '%b %-d, %Y', 'topo-entry-date') }}</div>
   <div class="topo-entry-body">
     <h3><a href="{{ pathto(post.docname) }}{{ anchor(post) }}">{{ post.title }}</a></h3>
     {%- if summary %}
     <p class="topo-entry-excerpt">{{ summary }}</p>
+    {%- else %}
+    <div class="topo-entry-excerpt">{{ post.to_html(pagename) }}</div>
     {%- endif %}
   </div>
 </article>
-{%- endfor %}
 {%- endmacro %}
+
+{%- macro entries(posts, pagename) %}{% for post in posts %}{{ entry(post, pagename) }}{% endfor %}{% endmacro %}
+
+{#- Featured posts: (post, summary) pairs. -#}
+{%- macro featured(items, pagename) %}{% for post, summary in items %}{{ entry(post, pagename, summary) }}{% endfor %}{% endmacro %}
 
 {#- Compact list without excerpts, for topic blocks. -#}
 {%- macro titles(posts, pagename) %}
@@ -51,9 +44,7 @@
   <section class="topo-topic">
     <h3><a href="{{ pathto(coll.docname) }}">{{ meta.title }}</a> <span class="topo-topic-count">{{ coll|length }}</span></h3>
     <p>{{ meta.intro }}</p>
-    {%- set recent = [] %}
-    {%- for post in coll %}{% if loop.index <= per %}{% set _ = recent.append(post) %}{% endif %}{% endfor %}
-    {{ titles(recent, pagename) }}
+    {{ titles((coll|list)[:per], pagename) }}
   </section>
 {%- endif %}
 {%- endfor %}
