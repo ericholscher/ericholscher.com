@@ -319,7 +319,10 @@ ul.postlist p.ablog-post-excerpt { font-size: 16px; color: var(--text-2); margin
 .topo-spark-hit { fill: transparent; }
 .topo-spark-bar { fill: var(--forest); }
 .topo-spark a:hover .topo-spark-bar, .topo-spark a:focus-visible .topo-spark-bar { fill: var(--link-hover); }
+.topo-spark-bar.is-current { fill: var(--blaze); }
 .topo-spark-empty { fill: var(--rule-strong); }
+/* At the top of the Blog, archive and year pages, where it doubles as year navigation. */
+.topo-lede + .topo-spark, .topo-landing-intro + .topo-spark, .topo-collection h1 + .topo-spark { margin: -12px 0 28px; }
 .topo-spark-label { font-family: var(--mono); font-size: 12px; fill: var(--muted); }
 .topo-spark figcaption { margin-top: 2px; font-family: var(--mono); font-size: 12px; color: var(--muted); }
 .topo-pager { margin: 32px 0 0; padding-top: 18px; border-top: 1px solid var(--rule); display: flex; flex-direction: column; gap: 14px; }
@@ -518,6 +521,8 @@ html.topo-map-open, html.topo-map-open body { overflow: hidden; }
 /* Touch screens: small controls grow to about 44px so they're easy to hit. Mouse users keep the compact sizes. */
 @media (pointer: coarse) {
   .topo-years a, .topo-more-link, .topo-side-list a, .topo-log-permalink { display: inline-flex; align-items: center; min-height: 44px; }
+  /* The taller box would carry the border underline 44px down, so draw the underline on the text instead. */
+  .topo-side-list a, .topo-log-permalink { border-bottom: 0; text-decoration: underline 1px rgba(46, 107, 74, .4); text-underline-offset: 3px; }
   .topo-recent-head { align-items: center; }
   .topo-side-list { gap: 0; }
   .topo-pager-pages a, .topo-pager-pages span { min-width: 44px; min-height: 44px; }

@@ -158,6 +158,7 @@
       {%- elif is_archive and ablog is defined %}
       <section class="topo-recent" id="recent" aria-labelledby="recent-head">
         <p class="topo-lede">New here? Start with <a href="{{ pathto('favorite-posts') }}">some of my favorite posts</a> from over the years.</p>
+        {{ year_sparkline() }}
         <div class="topo-recent-head"><h2 id="recent-head">Latest posts</h2><a href="{{ pathto(ablog.archive.docname) }}" class="topo-more-link">Every title, by year &rarr;</a></div>
         {#- Short text summaries, like the home page, rather than each post's whole first block with its images. -#}
         {%- set latest = namespace(items=[]) %}
@@ -166,7 +167,6 @@
       </section>
       <section class="topo-years-section" aria-labelledby="years-head">
         <div class="topo-recent-head"><h2 id="years-head">Keep reading, by year</h2></div>
-        {{ year_sparkline() }}
         {{ year_pager() }}
       </section>
       {%- endif %}
