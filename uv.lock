@@ -248,6 +248,7 @@ dev = [
 docs = [
     { name = "ablog" },
     { name = "myst-parser" },
+    { name = "pillow" },
     { name = "sphinx", version = "9.1.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.13'" },
     { name = "sphinx", version = "9.2.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.13'" },
     { name = "sphinx-notfound-page" },
@@ -274,6 +275,7 @@ dev = [{ name = "sphinx-autobuild" }]
 docs = [
     { name = "ablog" },
     { name = "myst-parser" },
+    { name = "pillow" },
     { name = "sphinx" },
     { name = "sphinx-notfound-page" },
     { name = "sphinxext-opengraph" },

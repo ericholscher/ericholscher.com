@@ -6,12 +6,14 @@
 {%- else %}<span{% if cls %} class="{{ cls }}"{% endif %}>Draft</span>{% endif %}
 {%- endmacro %}
 
+{#- Post links carry class="internal", like Sphinx's own, so Read the Docs link previews can find them. -#}
+
 {#- One post: its opening lines, or a hand-written summary for featured posts. -#}
 {%- macro entry(post, pagename, summary=None, level=3) %}
 <article class="topo-entry">
   <div class="topo-entry-meta">{{ date(post, '%b %-d, %Y', 'topo-entry-date') }}</div>
   <div class="topo-entry-body">
-    <h{{ level }}><a href="{{ pathto(post.docname) }}{{ anchor(post) }}">{{ post.title }}</a></h{{ level }}>
+    <h{{ level }}><a class="internal" href="{{ pathto(post.docname) }}{{ anchor(post) }}">{{ post.title }}</a></h{{ level }}>
     {#- A post that opens with a photo has an empty text summary: it shows the title alone, not the photo. -#}
     {%- if summary is not none %}
     {%- if summary %}<p class="topo-entry-excerpt">{{ summary }}</p>{% endif %}
@@ -31,7 +33,7 @@
 {%- macro titles(posts, pagename) %}
 <ul class="topo-titles">
 {%- for post in posts %}
-  <li>{{ date(post, '%b %Y') }}<a href="{{ pathto(post.docname) }}{{ anchor(post) }}">{{ post.title }}</a></li>
+  <li>{{ date(post, '%b %Y') }}<a class="internal" href="{{ pathto(post.docname) }}{{ anchor(post) }}">{{ post.title }}</a></li>
 {%- endfor %}
 </ul>
 {%- endmacro %}

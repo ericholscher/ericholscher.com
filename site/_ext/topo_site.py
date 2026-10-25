@@ -4,6 +4,8 @@ conf.py is for settings only. Site data and copy live in their own files: _data/
 Adventures timeline, map, topics, and favorite posts, and redirects.yml at the repo root.
 """
 
+import datetime
+import os
 import re
 from pathlib import Path
 
@@ -15,6 +17,17 @@ from docutils.parsers.rst import Directive
 
 def topo_data_context(app, pagename, templatename, context, doctree):
     context.update(app.topo_data)
+
+
+# The footer's build stamp: when the site was built and, on Read the Docs, from which commit.
+def topo_build_stamp(app):
+    commit = os.environ.get("READTHEDOCS_GIT_COMMIT_HASH", "")
+    repo = os.environ.get("READTHEDOCS_GIT_CLONE_URL", "").removesuffix(".git")
+    app.topo_data["topo_build"] = {
+        "date": datetime.date.today(),
+        "commit": commit[:7],
+        "url": f"{repo}/commit/{commit}" if commit and repo.startswith("https://github.com/") else "",
+    }
 
 
 # Redirects live in redirects.yml at the repo root, synced to Read the Docs by a GitHub workflow.
@@ -97,6 +110,7 @@ def topo_photo_rows(app, doctree, docname):
 def setup(app):
     # Each file in site/_data is exposed to templates as topo_<name>. YAML is a superset of JSON.
     app.topo_data = {f"topo_{f.stem}": yaml.safe_load(f.read_text()) for f in Path(app.srcdir, "_data").iterdir()}
+    topo_build_stamp(app)
     app.connect("html-page-context", topo_data_context)
     app.connect("html-collect-pages", topo_redirect_pages)
     app.add_directive("adventure-summary", AdventureSummary)
