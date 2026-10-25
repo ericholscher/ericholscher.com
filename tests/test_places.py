@@ -99,7 +99,10 @@ def test_year_strip_links_to_that_years_trips(page, site_url):
         assert on_map == in_list
         years = page.eval_on_selector_all("#places .topo-pin:not(.is-dim):not(.topo-pin-lived)", "ps => ps.map(p => p.dataset.years)")
         assert years and all(year in y.split() for y in years)
+        # The list below shows only that year.
+        assert page.eval_on_selector_all(".topo-log-year:not([hidden])", "ss => ss.map(s => s.dataset.year)") == [year]
         page.click(f'.topo-spark button[data-year="{year}"]')
+        assert page.locator(".topo-log-year[hidden]").count() == 0
     page.click('.topo-spark button[data-year="2018"]')
     page.locator(".topo-map-readout a").first.click()
     assert page.locator(f'.topo-log-year[data-year="2018"] details.topo-trip').first.get_attribute("open") is not None
@@ -114,4 +117,17 @@ def test_filter_narrows_the_list_and_the_map(page, site_url, built):
     assert lit and all(set(t.split()) & set(shown) for t in lit)
     page.click(".topo-log-filter a")
     page.wait_for_function("!document.querySelector('.topo-trip-item[hidden]')")
+    assert page.locator("#places .topo-pin.is-dim").count() == 0
+
+
+def test_year_and_kind_filters_combine(page, site_url, built):
+    page.goto(f"{site_url}adventures/#long")
+    page.wait_for_timeout(300)
+    page.click('.topo-spark button[data-year="2025"]')
+    shown = page.eval_on_selector_all(".topo-log-year:not([hidden]) .topo-trip-item:not([hidden]) details", "ds => ds.map(d => d.id)")
+    assert shown == [t["slug"] for t in built["trips"] if t["long"] and t["year"] == 2025]
+    assert page.locator(".topo-log-filter strong").text_content() == f"{len(shown)} trips with a long one from 2025"
+    page.click(".topo-log-filter a")
+    assert page.locator(".topo-log-year[hidden], .topo-trip-item[hidden]").count() == 0
+    assert page.locator('.topo-spark button[aria-pressed="true"]').count() == 0
     assert page.locator("#places .topo-pin.is-dim").count() == 0

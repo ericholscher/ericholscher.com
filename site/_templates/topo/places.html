@@ -78,6 +78,7 @@
     var hint = readout.textContent;
     var expanded = false, zoom = 1, active = null, hovered = null, drag = null, dragged = false, pinch = null;
     // What the map shows: a year from the strip, and the trips the list below is filtered to (or null for all).
+    // The list owns both: a tap on a year asks it, and it answers with topo:filter.
     var year = null, only = null;
     // The hover label below replaces the browser's own tooltips, which stay for pages without JavaScript.
     svg.querySelectorAll('.topo-pin title').forEach(function (t) { t.remove(); });
@@ -237,12 +238,12 @@
     }
     bars.forEach(function (b) {
       b.addEventListener('click', function () {
-        year = year === b.dataset.year ? null : b.dataset.year;
-        update();
+        // The list below (timeline.html) shows only that year too, and answers with topo:filter.
+        document.dispatchEvent(new CustomEvent('topo:pick-year', { detail: year === b.dataset.year ? null : b.dataset.year }));
       });
     });
-    // The list's filters (see timeline.html) narrow the map to the trips they show.
-    document.addEventListener('topo:filter', function (e) { only = e.detail; update(); });
+    // The list's filters (see timeline.html) narrow the map to the year and trips they show.
+    document.addEventListener('topo:filter', function (e) { only = e.detail.trips; year = e.detail.year; update(); });
     expand.addEventListener('click', function () { setExpanded(true); });
     close.addEventListener('click', function () { setExpanded(false); });
     map.querySelectorAll('.topo-map-zoom').forEach(function (b) {

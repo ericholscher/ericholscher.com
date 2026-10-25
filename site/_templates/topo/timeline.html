@@ -136,41 +136,56 @@
     });
     window.addEventListener('resize', function () { log.querySelectorAll('details.topo-trip[open]').forEach(nameTrip); });
 
-    // Show only the long ones, or one kind of trip. The map above dims everything else.
-    function showKind(kind) {
+    // Show only the long ones or one kind of trip (from the chips), and only one year (from the
+    // map's year strip). The map above follows: it dims what the list hides.
+    var kind = null, year = null;
+    function show() {
       var shown = [];
       items.forEach(function (li) {
         var on = !kind || (kind === 'long' ? li.hasAttribute('data-long') : li.dataset.kinds.split(' ').indexOf(kind) !== -1);
         li.hidden = !on;
         if (on) shown.push(li.querySelector('.topo-trip').id);
       });
-      years.forEach(function (s) { s.hidden = !!kind && !s.querySelector('.topo-trip-item:not([hidden])'); });
+      years.forEach(function (s) {
+        s.hidden = !!year && s.dataset.year !== year || !!kind && !s.querySelector('.topo-trip-item:not([hidden])');
+      });
       log.classList.toggle('is-kind', !!kind);
-      bar.hidden = !kind;
-      if (kind) {
-        bar.querySelector('strong').textContent = shown.length + (shown.length === 1 ? ' trip' : ' trips') +
-          (kind === 'long' ? ' with a long one' : ' with ' + kind.replace(/-/g, ' '));
+      bar.hidden = !kind && !year;
+      if (kind || year) {
+        var n = log.querySelectorAll('.topo-log-year:not([hidden]) .topo-trip-item:not([hidden])').length;
+        bar.querySelector('strong').textContent = n + (n === 1 ? ' trip' : ' trips') +
+          (kind === 'long' ? ' with a long one' : kind ? ' with ' + kind.replace(/-/g, ' ') : '') + (year ? ' from ' + year : '');
       }
       chips.forEach(function (a) {
         var on = a.hash.slice(1) === kind;
         a.classList.toggle('is-active', on);
         if (on) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
       });
-      document.dispatchEvent(new CustomEvent('topo:filter', { detail: kind ? shown : null }));
+      document.dispatchEvent(new CustomEvent('topo:filter', { detail: { trips: kind ? shown : null, year: year } }));
     }
-    // The address bar is the state: #trek filters, #europe-2018 opens that trip.
+    document.addEventListener('topo:pick-year', function (e) { year = e.detail; show(); });
+    bar.querySelector('a').addEventListener('click', function (e) {
+      e.preventDefault();
+      kind = null; year = null; show();
+      history.replaceState(null, '', location.pathname + location.search);
+    });
+    // The address bar holds the chips: #trek filters, #europe-2018 opens that trip.
     function apply(scroll) {
       var h = decodeURIComponent(location.hash.slice(1));
       if (kinds.indexOf(h) !== -1) {
-        showKind(h);
+        kind = h; show();
         if (scroll) log.scrollIntoView();
         return;
       }
-      showKind(null);
       var el = h && document.getElementById(h);
-      if (el && el.matches('details.topo-trip')) {
-        el.open = true;
-        if (scroll) el.scrollIntoView();
+      var trip = el && el.matches('details.topo-trip') && el;
+      // A link to a trip or year the filters hide clears them.
+      kind = null;
+      if (el && year && !el.closest('.topo-log-year[data-year="' + year + '"]')) year = null;
+      show();
+      if (trip) {
+        trip.open = true;
+        if (scroll) trip.scrollIntoView();
       }
     }
     window.addEventListener('hashchange', function () { apply(true); });
