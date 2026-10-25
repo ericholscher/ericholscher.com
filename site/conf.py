@@ -4,7 +4,9 @@ import re
 
 import ablog
 from docutils import nodes
-from docutils.parsers.rst import Directive
+from docutils.parsers.rst import Directive, directives
+from sphinx.util import logging
+from sphinx.util.docutils import SphinxDirective
 
 extensions = [
     "ablog",
@@ -60,25 +62,6 @@ html_context = {
         "outside": ("Outside", "Long trails, bike tours, and the places they go through."),
         "link-blog": ("Notes", "Short pointers to things worth reading, with a line or two of why."),
     },
-    # Home page favorites, in order: the first topo_featured_count are featured with their summary,
-    # the rest listed by title further down. Hand-picked; edit freely.
-    "topo_popular": [
-        ("blog/2017/aug/2/pacman-rule-conferences",
-         "When you stand in a group at a conference, leave room for one more. A simple rule for friendlier events."),
-        ("blog/2025/apr/29/camino-de-costa-rica-recap",
-         "Walking Costa Rica coast to coast without a guide: 165 miles and 30,000 feet of climbing in 14 days."),
-        ("blog/2018/mar/9/one-percent-for-open-source",
-         "A proposal: companies put 1% of a funding round or yearly profits into the open source they use."),
-        ("blog/2023/feb/10/we-dont-do-that-here",
-         "A short phrase that lets organizers hold the line on social norms without winning a debate every time."),
-        ("blog/2017/jan/27/code-is-self-documenting",
-         "Comments explain the why, and documentation does more than explain how the code works."),
-        ("blog/2018/feb/7/the-post-i-never-published",
-         "A draft from 2016, written while close to burn out on Read the Docs, shared to talk more openly about it."),
-        ("blog/2019/sep/19/helping-first-time-conference-attendees-with-welcome-wagon",
-         "How Write the Docs helps first-time attendees know what to expect, before and during the conference."),
-    ],
-    "topo_featured_count": 3,
     "topo_hikes": json.loads((_data / "hikes.json").read_text()),
     "topo_places": json.loads((_data / "places.json").read_text()),
 }
@@ -100,19 +83,6 @@ html_sidebars = {
 html_title = blog_title
 html_favicon = "_static/img/favicon.svg"
 html_static_path = ["_static"]
-
-# Old pages that were folded into others: old docname -> where it now forwards.
-topo_redirects = {
-    "backpacking": "adventures",
-    "bike": "adventures",
-    "pct/thoughts": "pct/index",
-}
-
-
-def topo_redirect_pages(app):
-    for old, new in topo_redirects.items():
-        yield (old, {"redirect": new}, "topo/redirect.html")
-
 
 # Year letters: site/adventures/<year>.md, one story per year with photos for each month.
 # A letter is an ABlog post (unlisted draft until its post directive has a date), and the
@@ -142,6 +112,62 @@ def topo_year_letters(app, pagename, templatename, context, doctree):
         context["body"] = context["body"].replace(TOPO_SUMMARY_SLOT, html, 1)
 
 
+# Favorite posts: the list lives in site/favorite-posts.rst, in a favorite-posts directive.
+# That page shows every entry with its summary; the home page features the first few.
+class FavoritePosts(SphinxDirective):
+    """Each entry is a post's docname, with a one-line summary indented below it."""
+
+    has_content = True
+    option_spec = {"featured": directives.nonnegative_int}
+
+    def run(self):
+        items = []
+        for line in self.content:
+            if not line.strip():
+                continue
+            if line[0].isspace() and items:
+                items[-1][1] = f"{items[-1][1]} {line.strip()}".strip()
+            else:
+                items.append([line.strip().strip("/"), ""])
+        self.env.topo_favorites = {
+            "docname": self.env.docname,
+            "items": [tuple(i) for i in items],
+            "featured": self.options.get("featured", 3),
+        }
+        return []
+
+
+def topo_favorites_purge(app, env, docname):
+    if getattr(env, "topo_favorites", {}).get("docname") == docname:
+        del env.topo_favorites
+
+
+def topo_favorites_merge(app, env, docnames, other):
+    if hasattr(other, "topo_favorites"):
+        env.topo_favorites = other.topo_favorites
+
+
+def topo_favorites_outdated(app, env, added, changed, removed):
+    # The home page shows the list too, so rebuild it when the list's page changes.
+    doc = getattr(env, "topo_favorites", {}).get("docname")
+    return [env.config.root_doc] if doc and doc in changed else []
+
+
+def topo_favorites_context(app, pagename, templatename, context, doctree):
+    favorites = getattr(app.env, "topo_favorites", {})
+    context["topo_favorite_posts"] = favorites.get("items", [])
+    context["topo_featured_count"] = favorites.get("featured", 3)
+    context["topo_favorites_page"] = favorites.get("docname")
+
+
+def topo_favorites_check(app, env):
+    for doc, _ in getattr(env, "topo_favorites", {}).get("items", []):
+        if doc not in env.found_docs:
+            logging.getLogger(__name__).warning(
+                "favorite-posts: no page %r", doc, location=env.topo_favorites["docname"]
+            )
+
+
 def topo_photo_rows(app, doctree, docname):
     """Size each photo in a topo-photos row by its aspect ratio, so the row shares one height uncropped."""
     import imagesize
@@ -164,7 +190,12 @@ def topo_photo_rows(app, doctree, docname):
 
 
 def setup(app):
-    app.connect("html-collect-pages", topo_redirect_pages)
+    app.add_directive("favorite-posts", FavoritePosts)
+    app.connect("env-purge-doc", topo_favorites_purge)
+    app.connect("env-merge-info", topo_favorites_merge)
+    app.connect("env-check-consistency", topo_favorites_check)
+    app.connect("env-get-outdated", topo_favorites_outdated)
+    app.connect("html-page-context", topo_favorites_context)
     app.add_directive("adventure-summary", AdventureSummary)
     app.connect("html-page-context", topo_year_letters)
     app.connect("doctree-resolved", topo_photo_rows)

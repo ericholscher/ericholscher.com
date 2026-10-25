@@ -445,7 +445,7 @@ html.topo-map-open, html.topo-map-open body { overflow: hidden; }
 .topo-side-label { font-family: var(--mono); font-size: 11px; font-weight: 400; letter-spacing: .12em; text-transform: uppercase; color: var(--sign-text); background: var(--sign); display: inline-block; padding: 4px 9px; border-radius: 3px; margin: 0 0 12px; box-shadow: inset 0 0 0 1px var(--sign-2), inset 0 0 0 2px rgba(217,164,65,.55); }
 .topo-side-label a { color: var(--sign-text); border-bottom: 0; }
 .topo-side-label a:hover { color: var(--sign-gold); }
-.topo-side-portrait { display: inline-block; border-bottom: 0; margin-bottom: 12px; }
+.topo-side-portrait { display: block; width: fit-content; margin: 0 auto 12px; border-bottom: 0; }
 .topo-side-portrait img { width: 88px; height: 88px; border-radius: 50%; display: block; border: 2px solid var(--paper-2); }
 .topo-years { display: flex; flex-wrap: wrap; gap: 6px 14px; font-family: var(--mono); font-size: 13px; }
 .topo-years a { border-bottom: 0; }

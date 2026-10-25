@@ -1,6 +1,6 @@
 :orphan:
 
-Résumé
+Resume
 ======
 
 | Eric Holscher
