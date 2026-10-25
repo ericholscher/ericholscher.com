@@ -6,9 +6,10 @@
 # Single-track conferences with a formalized hallway track
 
 I've helped organize around 50 conferences over the years, mostly Write the Docs and PyCascades events,
-and attended about as many again.
+and attended around 50 more.
 Over this time, I've come to build a preference for a certain kind of event:
-the single-track conference with a formalized hallway track.
+the single-track conference with a formalized hallway track,
+scheduled against the main talks.
 Write the Docs has been doing this for a number of years,
 and I think it's the best conference format,
 especially for events of 500 or fewer people.
@@ -71,7 +72,19 @@ and then end up on our main stage.
 I think that's a really important way of building community,
 and of getting more of that dynamic energy into the event.
 
-One of the other things I believe is that
-[you shouldn't let audience members ask questions](/blog/2016/nov/12/questions-at-conferences/),
-especially at an open mic.
-You can read the above post for my 10-year-old version of that argument :)
+## More conference thoughts
+
+I've written about conferences quite a bit over the years.
+10 years ago, I wrote about [how to handle questions]((/blog/2016/nov/12/questions-at-conferences/)),
+which I still believe today.
+
+Check out some of the other posts as well:
+
+.. seealso::
+
+   * :doc:`/blog/2017/aug/2/pacman-rule-conferences`
+   * :doc:`/blog/2017/dec/2/breaking-cliques-at-events`
+   * :doc:`/blog/2019/sep/19/helping-first-time-conference-attendees-with-welcome-wagon`
+   * :doc:`/blog/2023/feb/10/we-dont-do-that-here`
+
+
