@@ -321,9 +321,8 @@ ul.postlist p.ablog-post-excerpt { font-size: 16px; color: var(--text-2); margin
 .topo-spark a:hover .topo-spark-bar, .topo-spark a:focus-visible .topo-spark-bar { fill: var(--link-hover); }
 .topo-spark-bar.is-current { fill: var(--blaze); }
 .topo-spark-empty { fill: var(--rule-strong); }
-/* At the top of the Blog, archive and year pages, and in the sidebar Archive. */
+/* At the top of the Blog, archive and year pages, where it doubles as year navigation. */
 .topo-lede + .topo-spark, .topo-landing-intro + .topo-spark, .topo-collection h1 + .topo-spark { margin: -12px 0 28px; }
-.topo-side-block .topo-spark { margin: 0 0 12px; }
 .topo-spark-label { font-family: var(--mono); font-size: 12px; fill: var(--muted); }
 .topo-spark figcaption { margin-top: 2px; font-family: var(--mono); font-size: 12px; color: var(--muted); }
 .topo-pager { margin: 32px 0 0; padding-top: 18px; border-top: 1px solid var(--rule); display: flex; flex-direction: column; gap: 14px; }
