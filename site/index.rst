@@ -4,8 +4,8 @@ Welcome to my home on the web
 Hi! I'm Eric. I build documentation tools and communities, and otherwise spend time outside.
 I co-founded `Read the Docs <https://about.readthedocs.com/>`_,
 `Write the Docs <https://www.writethedocs.org>`_,
-`PyCascades <https://www.pycascades.com/>`_,
-and `EthicalAds <https://www.ethicalads.io/>`_.
+`EthicalAds <https://www.ethicalads.io/>`_,
+and `PyCascades <https://www.pycascades.com/>`_.
 
 This site covers a long history of posts,
 spanning various seasons of life and adventures outdoors.
