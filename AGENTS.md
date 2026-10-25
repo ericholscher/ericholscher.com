@@ -12,6 +12,7 @@ uv sync                                  # just what the build needs (the docs g
 cd site && rm -rf _build && uv run sphinx-build -b dirhtml . _build/dirhtml
 ```
 
+- After building, run `uv run --group tests pytest` from the repo root. The tests check that the pilcrow clears the blaze's gold line and that the mark and search icon line up with the text, with and without the webfonts. CI runs them on every PR (`.github/workflows/tests.yml`). Locally, set `CHROMIUM_PATH` if Playwright's own Chromium isn't installed.
 - Delete `_build` before building. Incremental builds can serve stale theme CSS.
 - `uv sync --all-groups` adds `sphinx-autobuild` and the script dependencies.
 - The build should have no warnings. A new warning means something is wrong.
@@ -57,8 +58,8 @@ Keep that identity. Work within the existing tokens in `topo.css` rather than ad
 - **Section labels:** use `.topo-plaque` (the filled brown plaque) in the content. Sidebar labels (`.topo-side-label`) are lighter on purpose: umber small caps over a short gold rule, since Eric found plaques overbearing there.
 - **Calls to action:** one pattern everywhere. A paper card with a forest top edge (`.topo-cta`) holds one primary `.topo-button`, optionally with a `.topo-button-quiet` beside it. Buttons are 44px tall. (This lands with PR #42.)
 - **The mark:** a diamond blaze with the Newsreader pilcrow as a path, in `layout.html` and `_static/img/favicon.svg`.
-  - The pilcrow is centered geometrically: `translate(21.996 41.33)`.
-  - `.topo-mark` is nudged up 2.5px so it centers on the letters, not the line box.
+  - The pilcrow is centered so its widest points (the flag at top right, the stem foot at bottom right, the bowl at top left) sit the same distance inside the gold line: `translate(20.882 42.118) scale(0.016)`. Centering its bounding box instead pushed the flag through the gold line.
+  - The name and nav labels use `text-box: trim-both cap alphabetic`, so flex centering lines the mark and search icon up on the capitals in any font. Browsers without `text-box` fall back to nudging `.topo-mark` up 2.5px.
   - Eric preferred this original pilcrow mark over the alternatives tried.
 - **Fonts:** the three main fonts are preloaded and use `font-display: optional`. Don't switch back to `swap`; it made every page flash on load.
 - **Images:**

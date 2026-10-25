@@ -1,0 +1,20 @@
+# Builds the site and runs tests/, which check the masthead mark in Chromium.
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - name: Build the site
+        run: cd site && uv run sphinx-build -W -b dirhtml . _build/dirhtml
+      - name: Install Chromium
+        run: uv run --group tests playwright install --with-deps chromium
+      - name: Run tests
+        run: uv run --group tests pytest
