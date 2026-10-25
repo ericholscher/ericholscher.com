@@ -275,6 +275,15 @@ ul.postlist p.ablog-post-excerpt { font-size: 16px; color: var(--text-2); margin
 .topo-topics-section { margin-top: 44px; }
 .topo-years-section { margin-top: 44px; }
 .topo-years-section .topo-pager { margin-top: 12px; border-top: 0; padding-top: 0; }
+.topo-spark { margin: 4px 0 0; max-width: 100%; overflow: hidden; }
+.topo-spark svg { display: block; max-width: 100%; height: auto; }
+.topo-spark a { border-bottom: 0; }
+.topo-spark-hit { fill: transparent; }
+.topo-spark-bar { fill: var(--forest); }
+.topo-spark a:hover .topo-spark-bar, .topo-spark a:focus-visible .topo-spark-bar { fill: var(--link-hover); }
+.topo-spark-empty { fill: var(--rule-strong); }
+.topo-spark-label { font-family: var(--mono); font-size: 11px; fill: var(--muted); }
+.topo-spark figcaption { margin-top: 2px; font-family: var(--mono); font-size: 11px; color: var(--muted); }
 .topo-pager { margin: 32px 0 0; padding-top: 18px; border-top: 1px solid var(--rule); display: flex; flex-direction: column; gap: 14px; }
 .topo-pager-step { display: flex; justify-content: space-between; gap: 12px; font-size: 16px; }
 .topo-pager-step a[rel="next"] { margin-left: auto; }
@@ -284,8 +293,7 @@ ul.postlist p.ablog-post-excerpt { font-size: 16px; color: var(--text-2); margin
 .topo-pager-pages a { color: var(--text); }
 .topo-pager-pages a:hover { border-color: var(--sign); color: var(--link-hover); }
 .topo-pager-pages span[aria-current] { background: var(--sign); border-color: var(--sign); color: var(--sign-text); }
-.topo-popular + .topo-recent, .topo-favorites { margin-top: 44px; }
-.topo-favorites .topo-recent-head { margin-bottom: 14px; }
+.topo-popular + .topo-recent { margin-top: 44px; }
 .topo-head-links { display: flex; flex-wrap: wrap; gap: 4px 18px; }
 .topo-popular + .topo-recent .topo-recent-head { margin-bottom: 14px; }
 .topo-more-link { font-family: var(--mono); font-size: 12px; border-bottom: 0; }

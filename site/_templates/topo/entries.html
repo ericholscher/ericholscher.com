@@ -81,3 +81,36 @@
   </ol>
 </nav>
 {%- endmacro %}
+
+{#- Posts per year as small columns, oldest to newest; each column links to its year page.
+    Years with no posts get a short tick so gaps read as gaps. -#}
+{%- macro year_sparkline() %}
+{%- set sp = namespace(counts={}, top=1) %}
+{%- for c in ablog.archive if c %}{% set _ = sp.counts.update({c.name|int: c}) %}{% if c|length > sp.top %}{% set sp.top = c|length %}{% endif %}{% endfor %}
+{%- if sp.counts %}
+{%- set first, last = sp.counts|min, sp.counts|max %}
+{%- set w, gap, h = 12, 2, 40 %}
+{%- set width = (last - first + 1) * (w + gap) - gap %}
+<figure class="topo-spark">
+  <svg width="{{ width }}" height="{{ h + 18 }}" viewBox="0 0 {{ width }} {{ h + 18 }}" role="img" aria-label="Posts per year, {{ first }} to {{ last }}">
+    {%- for y in range(first, last + 1) %}
+    {%- set x = (y - first) * (w + gap) %}
+    {%- if y in sp.counts %}
+    {%- set c = sp.counts[y] %}
+    {%- set bh = [(c|length / sp.top * h)|round(1), 2]|max %}
+    {%- set r = [2, bh / 2]|min %}
+    <a href="{{ pathto(c.docname) }}"><title>{{ y }}: {{ c|length }} post{{ '' if c|length == 1 else 's' }}</title>
+      <rect class="topo-spark-hit" x="{{ x }}" y="0" width="{{ w + gap }}" height="{{ h }}"></rect>
+      <path class="topo-spark-bar" d="M{{ x }} {{ h }}V{{ h - bh + r }}Q{{ x }} {{ h - bh }} {{ x + r }} {{ h - bh }}H{{ x + w - r }}Q{{ x + w }} {{ h - bh }} {{ x + w }} {{ h - bh + r }}V{{ h }}Z"></path>
+    </a>
+    {%- else %}
+    <rect class="topo-spark-empty" x="{{ x }}" y="{{ h - 1 }}" width="{{ w }}" height="1"><title>{{ y }}: no posts</title></rect>
+    {%- endif %}
+    {%- endfor %}
+    <text class="topo-spark-label" x="0" y="{{ h + 14 }}">{{ first }}</text>
+    <text class="topo-spark-label" x="{{ width }}" y="{{ h + 14 }}" text-anchor="end">{{ last }}</text>
+  </svg>
+  <figcaption>Posts per year</figcaption>
+</figure>
+{%- endif %}
+{%- endmacro %}
