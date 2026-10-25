@@ -19,10 +19,10 @@ Retired pages forward elsewhere through Read the Docs redirects, kept in ``redir
 `readthedocs-cli <https://pypi.org/project/readthedocs-cli/>`_ on pushes to ``main`` (a dry run on pull requests), using
 an ``RTD_TOKEN`` repository secret, and skips with a notice until that secret exists. Until then the build also
 writes a meta-refresh page at each old URL that no longer has a page of its own (``topo_redirect_pages`` in
-``site/conf.py``). Read the Docs only redirects URLs that 404, so remove those pages once the sync is running.
+``site/_ext/topo_site.py``). Read the Docs only redirects URLs that 404, so remove those pages once the sync is running.
 Posts in the ``link-blog`` category get a small "link" label next to their date.
 
-Topics are ABlog categories. The ones listed in ``html_context["topo_categories"]`` in ``site/conf.py``
+Topics are ABlog categories. The ones listed in ``site/_data/categories.json`` (slug to title and intro)
 get a landing page with an intro, and a card on the home page. A post joins a topic with ``:category: <slug>``.
 The Adventures page (``site/adventures.rst``) renders trips from ``site/_data/hikes.json`` and a places map
 from ``site/_data/places.json``; both are plain JSON meant to be edited by hand.

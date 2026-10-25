@@ -1,5 +1,5 @@
 {#- A year at a glance, for a year letter (site/adventures/<year>.md): that year's trips from hikes.json
-    and a map of its places from places.json, cropped to where they are. conf.py fills this in where the
+    and a map of its places from places.json, cropped to where they are. _ext/topo_site.py fills this in where the
     letter has the adventure-summary directive. Same projection as places.html. -#}
 {%- set W = 1000 %}{% set TOP = 84 %}{% set BOT = -58 %}{% set H = (W * (TOP - BOT) / 360)|round(0) %}
 {%- set trips = topo_hikes|selectattr('year', 'equalto', year)|list %}
