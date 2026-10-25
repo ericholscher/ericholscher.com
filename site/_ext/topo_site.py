@@ -117,6 +117,7 @@ def topo_trip_log(app):
         for h in hikes:
             if int(h["year"]) == y:
                 t = next((t for t in trips if takes(t, h)), None)
+                h["trip"] = t["slug"] if t else ""
                 g = groups.setdefault(t["slug"] if t else id(h), {"trip": t, "entries": [], "places": []})
                 g["entries"].append(h)
         for t in trips:

@@ -291,6 +291,14 @@
         setFocus({ trip: tripNamed(a.dataset.trip) });
       });
     });
+    // The long ones, above the map: each opens its trip here.
+    document.querySelectorAll('.topo-feature-list a[data-trip]').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        setFocus({ trip: tripNamed(a.dataset.trip) });
+        root.scrollIntoView({ block: 'start' });
+      });
+    });
     // "Show on the map" beside each trip in the year-by-year log.
     document.querySelectorAll('[data-map-trip]').forEach(function (b) {
       b.hidden = false;
