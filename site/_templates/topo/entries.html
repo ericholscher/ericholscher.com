@@ -9,13 +9,14 @@
 {#- Post links carry class="internal", like Sphinx's own, so Read the Docs link previews can find them. -#}
 
 {#- One post: its opening lines, or a hand-written summary for featured posts. -#}
-{%- macro entry(post, pagename, summary=None) %}
+{%- macro entry(post, pagename, summary=None, level=3) %}
 <article class="topo-entry">
   <div class="topo-entry-meta">{{ date(post, '%b %-d, %Y', 'topo-entry-date') }}</div>
   <div class="topo-entry-body">
-    <h3><a class="internal" href="{{ pathto(post.docname) }}{{ anchor(post) }}">{{ post.title }}</a></h3>
-    {%- if summary %}
-    <p class="topo-entry-excerpt">{{ summary }}</p>
+    <h{{ level }}><a class="internal" href="{{ pathto(post.docname) }}{{ anchor(post) }}">{{ post.title }}</a></h{{ level }}>
+    {#- A post that opens with a photo has an empty text summary: it shows the title alone, not the photo. -#}
+    {%- if summary is not none %}
+    {%- if summary %}<p class="topo-entry-excerpt">{{ summary }}</p>{% endif %}
     {%- else %}
     <div class="topo-entry-excerpt">{{ post.to_html(pagename) }}</div>
     {%- endif %}
@@ -25,8 +26,8 @@
 
 {%- macro entries(posts, pagename) %}{% for post in posts %}{{ entry(post, pagename) }}{% endfor %}{% endmacro %}
 
-{#- Featured posts: (post, summary) pairs. -#}
-{%- macro featured(items, pagename) %}{% for post, summary in items %}{{ entry(post, pagename, summary) }}{% endfor %}{% endmacro %}
+{#- Featured posts: (post, summary) pairs. level is the title's heading level: 2 where no section heading sits above them. -#}
+{%- macro featured(items, pagename, level=3) %}{% for post, summary in items %}{{ entry(post, pagename, summary, level) }}{% endfor %}{% endmacro %}
 
 {#- Compact list without excerpts, for topic blocks. -#}
 {%- macro titles(posts, pagename) %}
@@ -53,7 +54,8 @@
 </div>
 {%- endmacro %}
 
-{#- Paging through the blog by year, using ABlog's year pages, newest first. -#}
+{#- Paging through the blog by year, using ABlog's year pages. Prev and next step newest first; the years
+    themselves run oldest to newest like the sparkline, one row per decade. -#}
 {%- macro year_pager(current=None) %}
 {%- set ys = namespace(list=[], i=-1) %}
 {%- for c in ablog.archive if c %}{% set ys.list = ys.list + [c] %}{% endfor %}
@@ -65,16 +67,23 @@
     {%- if ys.i < ys.list|length - 1 %}<a rel="next" href="{{ pathto(ys.list[ys.i + 1].docname) }}">{{ ys.list[ys.i + 1] }} &rarr;</a>{% endif %}
   </div>
   {%- endif %}
-  <ol class="topo-pager-pages">
-    {%- for c in ys.list %}
-    <li>{% if loop.index0 == ys.i %}<span aria-current="page">{{ c }}</span>{% else %}<a href="{{ pathto(c.docname) }}">{{ c }}</a>{% endif %}</li>
-    {%- endfor %}
+  <div class="topo-pager-decades">
+  {%- set d = namespace(cur=None) %}
+  {%- for c in ys.list|reverse %}
+    {%- set decade = c.name|int // 10 %}
+    {%- if decade != d.cur %}{% if d.cur is not none %}
+  </ol>{% endif %}
+  <ol class="topo-pager-pages">{% set d.cur = decade %}{% endif %}
+    <li>{% if current and c.name == current.name %}<span aria-current="page">{{ c }}</span>{% else %}<a href="{{ pathto(c.docname) }}">{{ c }}</a>{% endif %}</li>
+  {%- endfor %}
   </ol>
+  </div>
 </nav>
 {%- endmacro %}
 
 {#- Posts per year as small columns, oldest to newest; each column links to its year page.
-    Years with no posts get a short tick so gaps read as gaps. -#}
+    Years with no posts get a short tick so gaps read as gaps. The year chips below it carry the
+    same links in a size you can tap, so the chart is hidden from screen readers and skipped by Tab. -#}
 {%- macro year_sparkline() %}
 {%- set sp = namespace(counts={}, top=1) %}
 {%- for c in ablog.archive if c %}{% set _ = sp.counts.update({c.name|int: c}) %}{% if c|length > sp.top %}{% set sp.top = c|length %}{% endif %}{% endfor %}
@@ -83,14 +92,14 @@
 {%- set w, gap, h = 12, 2, 40 %}
 {%- set width = (last - first + 1) * (w + gap) - gap %}
 <figure class="topo-spark">
-  <svg width="{{ width }}" height="{{ h + 18 }}" viewBox="0 0 {{ width }} {{ h + 18 }}" role="img" aria-label="Posts per year, {{ first }} to {{ last }}">
+  <svg width="{{ width }}" height="{{ h + 18 }}" viewBox="0 0 {{ width }} {{ h + 18 }}" aria-hidden="true" focusable="false">
     {%- for y in range(first, last + 1) %}
     {%- set x = (y - first) * (w + gap) %}
     {%- if y in sp.counts %}
     {%- set c = sp.counts[y] %}
     {%- set bh = [(c|length / sp.top * h)|round(1), 2]|max %}
     {%- set r = [2, bh / 2]|min %}
-    <a href="{{ pathto(c.docname) }}"><title>{{ y }}: {{ c|length }} post{{ '' if c|length == 1 else 's' }}</title>
+    <a href="{{ pathto(c.docname) }}" tabindex="-1"><title>{{ y }}: {{ c|length }} post{{ '' if c|length == 1 else 's' }}</title>
       <rect class="topo-spark-hit" x="{{ x }}" y="0" width="{{ w + gap }}" height="{{ h }}"></rect>
       <path class="topo-spark-bar" d="M{{ x }} {{ h }}V{{ h - bh + r }}Q{{ x }} {{ h - bh }} {{ x + r }} {{ h - bh }}H{{ x + w - r }}Q{{ x + w }} {{ h - bh }} {{ x + w }} {{ h - bh + r }}V{{ h }}Z"></path>
     </a>

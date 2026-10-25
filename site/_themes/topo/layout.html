@@ -27,8 +27,10 @@
 {%- endblock %}
 
 {%- block header %}
+<a class="topo-skip" href="#content">Skip to content</a>
 <header class="topo-masthead">
-  <a class="topo-wordmark" href="{{ pathto(root_doc) }}">{{ mark(30) }}<span>{{ docstitle|e }}</span></a>
+  {#- The 404 page is served at any URL, and its pathto() gives "#" for the root, so it links home by path. -#}
+  <a class="topo-wordmark" href="{{ '/' if pagename == '404' else pathto(root_doc) }}">{{ mark(30) }}<span>{{ docstitle|e }}</span></a>
   <nav class="topo-nav" aria-label="Main">
     <a href="{{ pathto('blog/index') }}"><span>Blog</span></a>
     <a href="{{ pathto('adventures') }}"><span>Adventures</span></a>
@@ -47,7 +49,7 @@
 
 {%- macro mark(size) %}
 {#- The site mark: a diamond trail blaze with a pilcrow in it. Text and trail in one shape. -#}
-<svg class="topo-mark" width="{{ size }}" height="{{ size }}" viewBox="0 0 64 64" role="img" aria-label="Eric Holscher">
+<svg class="topo-mark" width="{{ size }}" height="{{ size }}" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
   <polygon points="32,5 59,32 32,59 5,32" fill="currentColor" stroke="currentColor" stroke-width="6" stroke-linejoin="round"></polygon>
   <polygon points="32,10 54,32 32,54 10,32" fill="none" stroke="var(--sign-gold)" stroke-width="1.5" stroke-linejoin="round" opacity=".85"></polygon>
   <path d="M675.7 1350.0V667.2H443.0Q306.7 667.2 220.7 711.0Q134.7 754.8 94.2 830.6Q53.7 906.4 53.7 1002.2Q53.7 1095.1 93.2 1174.3Q132.8 1253.5 218.4 1301.8Q304.0 1350.0 443.1 1350.0ZM707.8 -250.0H607.6V1350.0H881.9V1255.1H707.8ZM958.6 -250.0H858.4V1350.0H1123.2V1312.0L958.6 1263.3Z" fill="var(--mark-snow)" transform="translate(20.882 42.118) scale(0.01600 -0.01600)"></path>
@@ -56,22 +58,35 @@
 
 {%- from "topo/entries.html" import kind with context %}
 
+{#- Sphinx's sidebar, as an aside: it holds the about blurb, archive and links, not the site's navigation. -#}
+{%- macro topo_sidebar() %}
+<aside class="sphinxsidebar" aria-label="About this site">
+  <div class="sphinxsidebarwrapper">
+    {%- for sidebartemplate in sidebars %}
+    {%- include sidebartemplate %}
+    {%- endfor %}
+  </div>
+</aside>
+{%- endmacro %}
+
 {%- block content %}
 <div class="topo-page">
   {%- if is_home %}
   <section class="topo-hero">
     {#- The map is a CSS background texture behind the copy; see .topo-hero::before in topo.css -#}
-    <div class="topo-hero-copy body" role="main">
+    <div class="topo-hero-copy body" role="main" id="content">
       {% block body %} {% endblock %}
+      <span class="topo-map-credit">Map: USGS, Three Sisters Wilderness</span>
     </div>
-    <span class="topo-map-credit">Map: USGS, Three Sisters Wilderness</span>
   </section>
   {%- endif %}
 
   <div class="topo-columns">
-    <main class="topo-main">
+    {#- A plain div, not <main>: the page's own content is the role="main" block inside it, which Read the Docs
+        search and file diffs read. The site-wide blocks around it are labeled sections or asides. -#}
+    <div class="topo-main">
       {%- if not is_home %}
-      <div class="body" role="main">
+      <div class="body" role="main" id="content">
         {%- if is_post %}
           {%- set post = ablog[pagename] %}
           <p class="topo-dateline">
@@ -83,20 +98,33 @@
       </div>
       {#- Site-wide copy sits outside role="main" so Read the Docs search and file diffs see only the page's own content. -#}
       {%- if is_post %}
-      <aside class="topo-cta topo-pitch">
-        <p>Hi, I'm Eric. I work on communities in the world of software documentation. I'm always happy to hear what you think of this one.</p>
+      <aside class="topo-cta topo-pitch" aria-label="Reply">
+        <p>Hi, I’m Eric. I work on communities in the world of software documentation. I’m always happy to hear what you think of this one.</p>
         <p class="topo-cta-actions">
           <a class="topo-button" href="mailto:eric@ericholscher.com?subject={{ ('Re: ' ~ title|striptags)|urlencode }}">Reply by email</a>
         </p>
       </aside>
+      {%- set this = ablog[pagename] %}
+      {%- if this.date and (this.prev or this.next) %}
+      <nav class="topo-postnav" aria-label="Older and newer posts">
+        {%- if this.prev %}
+        <a class="topo-postnav-prev" rel="prev" href="{{ pathto(this.prev.docname) }}"><span class="topo-postnav-dir">&larr; Older</span><span class="topo-postnav-title">{{ this.prev.title }}</span></a>
+        {%- endif %}
+        {%- if this.next %}
+        <a class="topo-postnav-next" rel="next" href="{{ pathto(this.next.docname) }}"><span class="topo-postnav-dir">Newer &rarr;</span><span class="topo-postnav-title">{{ this.next.title }}</span></a>
+        {%- endif %}
+      </nav>
+      {%- endif %}
       {%- endif %}
       {%- if pagename == 'adventures' %}
+      <section class="topo-trips" aria-label="Trips and places">
       {% include "topo/features.html" %}
       {% include "topo/places.html" %}
       {% include "topo/timeline.html" %}
       {%- if ablog is defined and ablog.category['outside'] %}
       <p class="topo-more"><a href="{{ pathto(ablog.category['outside'].docname) }}">Writing from these trips &rarr;</a></p>
       {%- endif %}
+      </section>
       {%- endif %}
       {%- endif %}
 
@@ -105,40 +133,45 @@
       {%- for f in topo_favorites.posts if f.post in ablog %}{% set pop.items = pop.items + [(ablog[f.post], f.summary)] %}{% endfor %}
       {%- endif %}
       {%- if pagename == 'favorite-posts' %}
-      <section class="topo-recent topo-popular" id="popular">
-        {{ featured(pop.items, pagename) }}
+      <section class="topo-recent topo-popular" id="popular" aria-label="Favorite posts">
+        {{ featured(pop.items, pagename, level=2) }}
       </section>
       {%- endif %}
 
       {%- if is_home and ablog is defined %}
-      <section class="topo-recent topo-popular" id="popular">
-        <div class="topo-recent-head"><h2>Favorite posts</h2>{% if pop.items|length > topo_favorites.featured %}<a href="{{ pathto('favorite-posts') }}" class="topo-more-link">All favorites &rarr;</a>{% endif %}</div>
+      <section class="topo-recent topo-popular" id="popular" aria-labelledby="popular-head">
+        <div class="topo-recent-head"><h2 id="popular-head">Favorite posts</h2>{% if pop.items|length > topo_favorites.featured %}<a href="{{ pathto('favorite-posts') }}" class="topo-more-link">All favorites &rarr;</a>{% endif %}</div>
         {{ featured(pop.items[:topo_favorites.featured], pagename) }}
       </section>
-      <section class="topo-recent" id="recent">
-        <div class="topo-recent-head"><h2>Recently</h2><a href="{{ pathto('blog/index') }}" class="topo-more-link">All posts &rarr;</a></div>
+      <section class="topo-recent" id="recent" aria-labelledby="recent-head">
+        <div class="topo-recent-head"><h2 id="recent-head">Latest posts</h2><a href="{{ pathto('blog/index') }}" class="topo-more-link">All posts &rarr;</a></div>
+        {#- Skips the favorites shown just above, and ends each excerpt at a sentence. -#}
+        {%- set shown = pop.items[:topo_favorites.featured]|map(attribute='0.docname')|list %}
         {%- set recent = namespace(items=[]) %}
-        {%- for post in ablog.recent(6, pagename) %}{% set recent.items = recent.items + [(post, post.to_html(pagename)|striptags|truncate(220))] %}{% endfor %}
+        {%- for post in ablog.recent(6 + shown|length, pagename) if post.docname not in shown %}{% if recent.items|length < 6 %}{% set recent.items = recent.items + [(post, post.to_html(pagename)|striptags|topo_excerpt(220))] %}{% endif %}{% endfor %}
         {{ featured(recent.items, pagename) }}
       </section>
-      <section class="topo-topics-section" id="topics">
-        <div class="topo-recent-head"><h2>By topic</h2><a href="{{ pathto(ablog.category.docname) }}" class="topo-more-link">All topics &rarr;</a></div>
+      <section class="topo-topics-section" id="topics" aria-labelledby="topics-head">
+        <div class="topo-recent-head"><h2 id="topics-head">By topic</h2><a href="{{ pathto(ablog.category.docname) }}" class="topo-more-link">All topics &rarr;</a></div>
         {{ topics(pagename, 3) }}
       </section>
       {%- elif is_archive and ablog is defined %}
-      <p class="topo-lede">New here? Start with <a href="{{ pathto('favorite-posts') }}">some of my favorite posts</a> from over the years.</p>
-      <section class="topo-recent" id="recent">
-        <div class="topo-recent-head"><h2>Latest posts</h2><a href="{{ pathto(ablog.archive.docname) }}" class="topo-more-link">Every title, by year &rarr;</a></div>
-        {{ entries(ablog.recent(20, pagename), pagename) }}
+      <section class="topo-recent" id="recent" aria-labelledby="recent-head">
+        <p class="topo-lede">New here? Start with <a href="{{ pathto('favorite-posts') }}">some of my favorite posts</a> from over the years.</p>
+        <div class="topo-recent-head"><h2 id="recent-head">Latest posts</h2><a href="{{ pathto(ablog.archive.docname) }}" class="topo-more-link">Every title, by year &rarr;</a></div>
+        {#- Short text summaries, like the home page, rather than each post's whole first block with its images. -#}
+        {%- set latest = namespace(items=[]) %}
+        {%- for post in ablog.recent(20, pagename) %}{% set latest.items = latest.items + [(post, post.to_html(pagename)|striptags|topo_excerpt(220))] %}{% endfor %}
+        {{ featured(latest.items, pagename) }}
       </section>
-      <section class="topo-years-section">
-        <div class="topo-recent-head"><h2>Keep reading, by year</h2></div>
+      <section class="topo-years-section" aria-labelledby="years-head">
+        <div class="topo-recent-head"><h2 id="years-head">Keep reading, by year</h2></div>
         {{ year_sparkline() }}
         {{ year_pager() }}
       </section>
       {%- endif %}
-    </main>
-    {{ sidebar() }}
+    </div>
+    {{ topo_sidebar() }}
   </div>
 </div>
 {%- endblock %}
