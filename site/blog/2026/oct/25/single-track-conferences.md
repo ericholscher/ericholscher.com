@@ -6,7 +6,7 @@
 # Single-track conferences with a formalized hallway track
 
 I've helped organize around 50 conferences over the years, mostly Write the Docs and PyCascades events,
-and attended many more, probably around 50 more.
+and attended about as many again.
 Over this time, I've come to build a preference for a certain kind of event:
 the single-track conference with a formalized hallway track.
 Write the Docs has been doing this for a number of years,
@@ -17,12 +17,12 @@ especially for events of 500 or fewer people.
 
 The goal is to have a single track of talks, so nobody has to choose between different tracks.
 This allows the audience to get into the flow of the event with few choices,
-and speakers can reference previous talks and assume the audience has contxt.
+and speakers can reference previous talks and assume the audience has context.
 These events feel the most cohesive to me.
 
-Not every talk can be interested to every person though.
+Not every talk can be interesting to every person though.
 If a talk isn't interesting to you,
-you need is something else compelling:
+you need something else compelling:
 a formalized hallway track.
 
 ## A formalized hallway track
@@ -44,7 +44,7 @@ The unconference sessions board at Write the Docs Portland 2026
 
 The Unconference track should be timed in the same blocks as the primary talks.
 This naturally groups people who are interested in similar topics together,
-which are often far afield from the primary talk content.
+on topics that are often far afield from the primary talk content.
 
 Being scheduled day-of also means that the content will be up-to-date,
 even if it's about something that happened only one or two weeks ago.
