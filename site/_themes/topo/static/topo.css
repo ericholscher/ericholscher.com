@@ -570,7 +570,7 @@ body .doc-diff-chunk-selected { background-color: color-mix(in srgb, var(--sign-
 
 /* Footer */
 .topo-ridge { overflow: hidden; background: var(--paper); }
-.topo-ridge svg { display: block; width: 100%; min-width: 820px; height: 48px; fill: var(--forest); }
+.topo-ridge svg { display: block; width: 100%; min-width: 1280px; height: 48px; fill: var(--forest); }
 .topo-footer {
   display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 32px;
   padding: 18px var(--gutter) 22px; background: var(--forest); border-top: 3px solid var(--sign-gold);

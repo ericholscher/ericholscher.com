@@ -1,7 +1,7 @@
 """Trace the footer's mountain skyline from real elevation data.
 
-The footer ridgeline is the Cascades as seen from the top of Pilot Butte in Bend, Oregon: Mt. Bachelor,
-Broken Top, the Three Sisters, Mt. Washington, Three Fingered Jack, Black Butte, and Mt. Jefferson.
+The footer ridgeline is the Cascades as seen from just east of Redmond, Oregon: Mt. Bachelor,
+Broken Top, the Three Sisters, Mt. Washington, Black Butte, Three Fingered Jack, and Mt. Jefferson.
 For each compass bearing across that view, the script walks outward over a digital elevation model
 and keeps the highest angle above the horizon (allowing for the earth's curvature), which is the
 skyline an eye at that spot would see.
@@ -23,16 +23,16 @@ from pathlib import Path
 
 from PIL import Image
 
-VIEW = (44.0597, -121.2806)  # the summit of Pilot Butte
-EYE = 2  # metres above the ground
-BEARINGS = (248, 334)  # Mt. Bachelor (255) through Mt. Jefferson (329)
+VIEW = (44.300, -121.080)  # east of Redmond, about 1,000 m up
+EYE = 10  # metres above the ground
+BEARINGS = (228, 312)  # Mt. Bachelor (234) through Mt. Jefferson (306)
 RAYS = 1001
-REACH = 90_000  # metres; Jefferson is about 80 km away
+REACH = 90_000  # metres; Jefferson is about 71 km away
 ZOOM = 12
 CACHE = Path(__file__).resolve().parent.parent / ".skyline-cache"
 
 WIDTH, HEIGHT = 1280, 48
-FLOOR, FOOTHILLS = 0.1, 1.6  # degrees above level: where the drawing starts, and the foothills' top
+FLOOR, FOOTHILLS = 0.2, 1.0  # degrees above level: where the drawing starts, and the foothills' top
 FOOTHILL_PX, HEADROOM_PX = 12, 2
 TOLERANCE = 0.35  # px, for simplifying the outline
 
