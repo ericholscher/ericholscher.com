@@ -37,6 +37,17 @@ Videos
 Here are a few videos of my previous talks.
 Most of my recorded talks, back to 2009, are collected `on PyVideo <https://pyvideo.org/speaker/eric-holscher.html>`_.
 
+Conference introduction and community update - Write the Docs Portland 2022
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The opening of Write the Docs Portland 2022,
+with an update on the Write the Docs community.
+
+.. raw:: html
+
+   <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/a6-VYEmV7tM" title="Conference introduction and community update - Write the Docs Portland 2022" frameborder="0" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+   <p class="topo-video-link"><a href="https://www.youtube.com/watch?v=a6-VYEmV7tM">Watch on YouTube</a></p>
+
 Documenting Django Code in 2022 - DjangoCon US 2022
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
