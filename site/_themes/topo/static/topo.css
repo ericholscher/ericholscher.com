@@ -359,7 +359,7 @@ a.topo-kind:hover { color: var(--link-hover); border-color: var(--link-hover) !i
 .body .topo-year-trips li, .topo-year-trips li { margin: 0; font-size: 15.5px; line-height: 1.45; }
 .topo-year-trips .topo-kind { margin-right: 6px; }
 .topo-year-trip-when { color: var(--muted); font-size: 14px; }
-.topo-year-more { font-size: 14px; margin: 12px 0 0; }
+.body .topo-year-more, .topo-year-more { font-size: 14px; margin: 14px 0 0; }
 /* Photo rows: the build sets each figure's width from its photo's shape, so the row shares one
    height and nothing is cropped. On a phone they stack at full width. */
 .topo-photos { display: flex; gap: 12px; align-items: flex-start; margin: 16px 0 28px; }
