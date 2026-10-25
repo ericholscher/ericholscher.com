@@ -69,6 +69,7 @@ I've written about where it fits in :doc:`funding open source </blog/2024/nov/1/
 
    From the blog:
 
+   * `Announcing EthicalAds <https://www.ethicalads.io/blog/2020/08/announcing-ethicalads/>`__
    * :doc:`Funding open source with marketing money </blog/2016/aug/31/funding-oss-marketing-money>`
    * :doc:`Business questions I'm working on in 2018 </blog/2018/jan/4/business-questions-for-2018>`
 
