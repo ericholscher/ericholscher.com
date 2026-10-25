@@ -109,7 +109,7 @@ Leave a trip that is still in progress off the site until Eric says to add it.
 - **LinkedIn:** `https://www.linkedin.com/in/eric-holscher/`.
 - **Speaking photo:** taken in Portland in 2025, by Kay Smoljak.
 - **Trip details:** the PCT, JMT, and other trips are recorded in `hikes.json`; trust it over memory.
-- **Not yet confirmed:** "Write the Docs Portland, 2013 to present" on the Speaking page and résumé.
+- **Not yet confirmed:** "Write the Docs Portland, 2013 to present" on the Speaking page and resume.
 
 ## Workflow
 
