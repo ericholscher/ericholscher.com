@@ -1,0 +1,44 @@
+# Redirects for ericholscher.com, the single source of truth. Read the Docs serves them,
+# and .github/workflows/sync-redirects.yml syncs this file to the project with
+# readthedocs-cli whenever it changes on main. A redirect added in the Read the Docs
+# dashboard and missing here is deleted on the next sync.
+#
+# "page" redirects only fire when the old URL 404s, so retire a page by deleting it.
+---
+# Folded into Adventures.
+- type: page
+  from_url: /backpacking/
+  to_url: /adventures/
+
+- type: page
+  from_url: /bike/
+  to_url: /adventures/
+
+- type: page
+  from_url: /pct/thoughts/
+  to_url: /pct/
+
+# Old top-level pages retired into posts.
+- type: page
+  from_url: /books/
+  to_url: /blog/2023/feb/10/books-ive-liked/
+
+- type: page
+  from_url: /favorites/
+  to_url: /blog/2023/feb/10/books-ive-liked/
+
+- type: page
+  from_url: /consulting/
+  to_url: /speaking/
+
+- type: page
+  from_url: /roadmap/
+  to_url: /speaking/
+
+- type: page
+  from_url: /digital-nomad/
+  to_url: /blog/drafts/puerto-varas-digital-nomad-guide/
+
+- type: page
+  from_url: /digital-nomad/chile/puerto-varas/
+  to_url: /blog/drafts/puerto-varas-digital-nomad-guide/

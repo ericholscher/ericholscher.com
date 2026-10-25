@@ -33,13 +33,13 @@ Headless Chromium can't play H.264, so a video that "won't play" there is not a 
 - `site/conf.py` holds the site settings and the hand-kept lists:
   - `topo_categories` lists the topics.
   - `topo_popular` lists the home page favorites, as (docname, summary) pairs; `topo_featured_count` sets how many are featured.
-  - `topo_redirects` maps retired pages to where they now forward.
   - The `setup()` hooks live here too.
 - `site/_themes/topo/` holds the theme: `layout.html`, `static/topo.css` (all styles, with tokens on `:root`), the fonts, and `theme.toml`.
 - `site/_templates/`:
-  - `topo/` has the shared pieces: post lists, the Adventures timeline, the map, and the redirect page.
+  - `topo/` has the shared pieces: post lists, the Adventures timeline, and the map.
   - `ablog/` overrides ABlog's topic and archive pages.
   - `sidebar/` has the sidebar blocks.
+- `redirects.yml` maps retired URLs to where they now forward. Read the Docs serves them; `.github/workflows/sync-redirects.yml` syncs the file with readthedocs-cli. Add redirects there, never in the Read the Docs dashboard, since the sync deletes anything not in the file.
 - `site/_data/hikes.json` and `places.json` hold the Adventures timeline and map data. They are the source of truth for trips; edit them by hand.
 - `scripts/photo_trips.py` turns an osxphotos export into candidate trip rows. See the README.
 

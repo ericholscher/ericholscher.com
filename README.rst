@@ -14,8 +14,10 @@ in ``site/conf.py``, each a (post docname, one-line summary) pair, then the eigh
 the favorites as a short list, then the topic cards.
 ``blog/index`` shows the 20 latest posts, then pages by year: ABlog's year pages (``blog/archive/<year>/``) get
 newer and older year links. The Archive page (``blog/archive/archive/``) lists every title by year.
-Retired pages forward elsewhere through ``topo_redirects`` in ``site/conf.py`` (old docname to new), for example ``/bike/`` and
-``/backpacking/`` to the Adventures page.
+Retired pages forward elsewhere through Read the Docs redirects, kept in ``redirects.yml`` at the repo root, for example
+``/bike/`` and ``/backpacking/`` to the Adventures page. The ``Sync redirects`` GitHub workflow applies the file with
+`readthedocs-cli <https://pypi.org/project/readthedocs-cli/>`_ on pushes to ``main`` (a dry run on pull requests), using
+an ``RTD_TOKEN`` repository secret. Redirects only fire for URLs that 404, so delete the old page when adding one.
 Posts in the ``link-blog`` category get a small "link" label next to their date.
 
 Topics are ABlog categories. The ones listed in ``html_context["topo_categories"]`` in ``site/conf.py``

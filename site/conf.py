@@ -101,19 +101,6 @@ html_title = blog_title
 html_favicon = "_static/img/favicon.svg"
 html_static_path = ["_static"]
 
-# Old pages that were folded into others: old docname -> where it now forwards.
-topo_redirects = {
-    "backpacking": "adventures",
-    "bike": "adventures",
-    "pct/thoughts": "pct/index",
-}
-
-
-def topo_redirect_pages(app):
-    for old, new in topo_redirects.items():
-        yield (old, {"redirect": new}, "topo/redirect.html")
-
-
 # Year letters: site/adventures/<year>.md, one story per year with photos for each month.
 # A letter is an ABlog post (unlisted draft until its post directive has a date), and the
 # adventure-summary directive marks where the year's trips and map are filled in.
@@ -164,7 +151,6 @@ def topo_photo_rows(app, doctree, docname):
 
 
 def setup(app):
-    app.connect("html-collect-pages", topo_redirect_pages)
     app.add_directive("adventure-summary", AdventureSummary)
     app.connect("html-page-context", topo_year_letters)
     app.connect("doctree-resolved", topo_photo_rows)
