@@ -8,7 +8,7 @@ in case you want to hear my thoughts about things at certain points in time.
 2020s
 -----
 
-.. rst-class:: topo-interviews
+.. rst-class:: topo-media-list
 
 * `Building a home for documentarians <https://thenotboringtechwriter.com/episodes/building-a-home-for-documentarians-with-eric-holscher>`__
 
@@ -41,7 +41,7 @@ in case you want to hear my thoughts about things at certain points in time.
 2010s
 -----
 
-.. rst-class:: topo-interviews
+.. rst-class:: topo-media-list
 
 * `Documentation Hell and Documentation Heaven <https://www.radiofreerabbit.com/podcast/116-documentation-hell-and-documentation-heaven-with-eric-holscher>`__
 
