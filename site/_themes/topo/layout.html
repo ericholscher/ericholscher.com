@@ -125,10 +125,7 @@
         {{ topics(pagename, 3) }}
       </section>
       {%- elif is_archive and ablog is defined %}
-      <aside class="topo-cta topo-favorites-cta">
-        <p>New here? Start with some of my favorite posts from over the years.</p>
-        <p class="topo-cta-actions"><a class="topo-button" href="{{ pathto('favorite-posts') }}">Favorite posts</a></p>
-      </aside>
+      <p class="topo-lede">New here? Start with <a href="{{ pathto('favorite-posts') }}">some of my favorite posts</a> from over the years.</p>
       <section class="topo-recent" id="recent">
         <div class="topo-recent-head"><h2>Latest posts</h2><a href="{{ pathto(ablog.archive.docname) }}" class="topo-more-link">Every title, by year &rarr;</a></div>
         {{ entries(ablog.recent(20, pagename), pagename) }}

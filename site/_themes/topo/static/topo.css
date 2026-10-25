@@ -159,6 +159,7 @@ img { max-width: 100%; height: auto; }
 .body h4, .body h5, .body h6 { font-family: var(--sans); font-weight: 600; font-size: 16px; margin: 24px 0 6px; color: var(--ink); }
 .body p, .body li { font-size: 17px; line-height: 1.65; }
 .body p { margin: 0 0 1em; }
+.topo-lede { font-size: 17px; line-height: 1.65; margin: 0 0 28px; color: var(--text); }
 .body ul, .body ol { padding-left: 1.4em; margin: 0 0 1em; }
 .body li { margin-bottom: .3em; }
 .body li > p { margin-bottom: .4em; }
