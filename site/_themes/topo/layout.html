@@ -11,6 +11,10 @@
   {%- for f in ['Newsreader-Variable', 'IBMPlexSans-Variable', 'IBMPlexMono-Regular'] %}
   <link rel="preload" href="{{ pathto('_static/fonts/' ~ f ~ '.woff2', 1) }}" as="font" type="font/woff2" crossorigin>
   {%- endfor %}
+  {#- A draft (an undated post) builds at its URL for previewing, but stays out of search engines. -#}
+  {%- if is_post and not ablog[pagename].date %}
+  <meta name="robots" content="noindex">
+  {%- endif %}
   {{ super() }}
 {%- endblock %}
 

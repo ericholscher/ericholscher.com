@@ -1,0 +1,42 @@
+{#- A year at a glance, for a year letter (site/adventures/<year>.md): that year's trips from hikes.json
+    and a map of its places from places.json, cropped to where they are. conf.py fills this in where the
+    letter has the adventure-summary directive. Same projection as places.html. -#}
+{%- set W = 1000 %}{% set TOP = 84 %}{% set BOT = -58 %}{% set H = (W * (TOP - BOT) / 360)|round(0) %}
+{%- set trips = topo_hikes|selectattr('year', 'equalto', year)|list %}
+{%- set ns = namespace(pins=[], x0=W, x1=0, y0=H, y1=0) %}
+{%- for p in topo_places if p.years and year|int in p.years %}
+  {%- set x = (p.lon + 180) / 360 * W %}{% set y = (TOP - p.lat) / (TOP - BOT) * H %}
+  {%- set ns.pins = ns.pins + [(p, x, y)] %}
+  {%- set ns.x0 = [ns.x0, x]|min %}{% set ns.x1 = [ns.x1, x]|max %}{% set ns.y0 = [ns.y0, y]|min %}{% set ns.y1 = [ns.y1, y]|max %}
+{%- endfor %}
+<section class="topo-year-summary" aria-label="{{ year }} at a glance">
+  {%- if ns.pins %}
+  {#- Crop to the pins with some margin, kept between 1.6:1 and 2.6:1 so one far-off place doesn't make it a sliver. -#}
+  {%- set pad = 30 %}
+  {%- set w = [ns.x1 - ns.x0 + 2 * pad, 160]|max %}{% set h = [ns.y1 - ns.y0 + 2 * pad, 80]|max %}
+  {%- if w / h < 1.6 %}{% set w = h * 1.6 %}{% elif w / h > 2.6 %}{% set h = w / 2.6 %}{% endif %}
+  {%- set w = [w, W]|min %}{% set h = [h, H]|min %}
+  {%- set cx = (ns.x0 + ns.x1) / 2 %}{% set cy = (ns.y0 + ns.y1) / 2 %}
+  {%- set vx = [[cx - w / 2, 0]|max, W - w]|min %}{% set vy = [[cy - h / 2, 0]|max, H - h]|min %}
+  <figure class="topo-year-map">
+    <svg class="topo-world" viewBox="{{ vx|round(1) }} {{ vy|round(1) }} {{ w|round(1) }} {{ h|round(1) }}" role="img" aria-label="Map of places from {{ year }}">
+      {% include "topo/world-land.html" %}
+      {%- for p, x, y in ns.pins %}
+      <g class="topo-pin topo-pin-{{ p.kind }}"><circle class="topo-pin-dot" cx="{{ x|round(1) }}" cy="{{ y|round(1) }}" r="{{ (w / 150)|round(2) }}"><title>{{ p.name }}{% if p.note %} · {{ p.note }}{% endif %}</title></circle></g>
+      {%- endfor %}
+    </svg>
+    <figcaption>
+      <span class="topo-legend topo-legend-hiked">Walked, rode, or floated</span>
+      <span class="topo-legend topo-legend-visited">Visited</span>
+    </figcaption>
+  </figure>
+  {%- endif %}
+  {%- if trips %}
+  <ol class="topo-year-trips">
+    {%- for h in trips %}
+    <li><span class="topo-kind topo-kind-{{ h.kind }}">{{ h.kind|replace("-", " ") }}</span> <strong>{{ h.name }}</strong> <span class="topo-year-trip-when">{{ h.when|replace(", " ~ year, "")|replace(" " ~ year, "") }}{% if h.where %} &middot; {{ h.where }}{% endif %}</span></li>
+    {%- endfor %}
+  </ol>
+  {%- endif %}
+  <p class="topo-year-more"><a href="{{ pathto('adventures') }}#{{ year }}">{{ year }} on the Adventures page &rarr;</a></p>
+</section>
