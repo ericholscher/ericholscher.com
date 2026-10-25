@@ -9,7 +9,7 @@ Fonts are self-hosted under ``site/_themes/topo/static/fonts/``.
 Sidebar blocks are plain Jinja templates in ``site/_templates/sidebar/`` and are safe to edit by hand.
 
 The home page and ``blog/index`` listings are rendered by the theme from ABlog's post data.
-The home page leads with "Most read": the first ``topo_featured_count`` (3) entries of ``html_context["topo_popular"]``
+The home page leads with "Favorite posts": the first ``topo_featured_count`` (3) entries of ``html_context["topo_popular"]``
 in ``site/conf.py``, each a (post docname, one-line summary) pair, then the eight most recent posts, then the rest of
 the favorites as a short list, then the topic cards.
 ``blog/index`` shows the 20 latest posts, then pages by year: ABlog's year pages (``blog/archive/<year>/``) get
