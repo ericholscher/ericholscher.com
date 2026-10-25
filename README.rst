@@ -9,9 +9,8 @@ Fonts are self-hosted under ``site/_themes/topo/static/fonts/``.
 Sidebar blocks are plain Jinja templates in ``site/_templates/sidebar/`` and are safe to edit by hand.
 
 The home page and ``blog/index`` listings are rendered by the theme from ABlog's post data.
-The home page leads with "Favorite posts": the first few entries (``:featured: 3``) of the ``favorite-posts`` list in
-``site/favorite-posts.rst``, each a post's path with a one-line summary indented under it, with a link to
-the full list on ``/favorite-posts/``, then the eight most recent posts, then the topic cards.
+The home page leads with "Favorite posts": the first ``featured`` (3) entries of ``site/_data/favorites.yml``, each a
+post's path and a one-line summary, with a link to the full list on ``/favorite-posts/``, then the eight most recent posts, then the topic cards.
 ``blog/index`` shows the 20 latest posts, then pages by year: ABlog's year pages (``blog/archive/<year>/``) get
 newer and older year links. The Archive page (``blog/archive/archive/``) lists every title by year.
 Retired pages forward elsewhere through Read the Docs redirects, kept in ``redirects.yml`` at the repo root, for example
