@@ -1,0 +1,24 @@
+# Favorite posts, in order. The home page features the first `featured` with their summaries
+# and links to /favorite-posts/, which shows them all. Summaries are hand-written; edit freely.
+featured: 3
+posts:
+  - post: blog/2017/aug/2/pacman-rule-conferences
+    summary: "When you stand in a group at a conference, leave room for one more. A simple rule for friendlier events."
+
+  - post: blog/2025/apr/29/camino-de-costa-rica-recap
+    summary: "Walking Costa Rica coast to coast without a guide: 165 miles and 30,000 feet of climbing in 14 days."
+
+  - post: blog/2018/mar/9/one-percent-for-open-source
+    summary: "A proposal: companies put 1% of a funding round or yearly profits into the open source they use."
+
+  - post: blog/2023/feb/10/we-dont-do-that-here
+    summary: "A short phrase that lets organizers hold the line on social norms without winning a debate every time."
+
+  - post: blog/2017/jan/27/code-is-self-documenting
+    summary: "Comments explain the why, and documentation does more than explain how the code works."
+
+  - post: blog/2018/feb/7/the-post-i-never-published
+    summary: "A draft from 2016, written while close to burn out on Read the Docs, shared to talk more openly about it."
+
+  - post: blog/2019/sep/19/helping-first-time-conference-attendees-with-welcome-wagon
+    summary: "How Write the Docs helps first-time attendees know what to expect, before and during the conference."

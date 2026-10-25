@@ -30,8 +30,8 @@ Headless Chromium can't play H.264, so a video that "won't play" there is not a 
 
 ## Where things live
 
-- `site/conf.py` holds Sphinx settings only. Never put site data or copy in it: give each list its own file in `site/_data/` (or a page, like `favorite-posts.rst`) and load it from the extension.
-- `site/_ext/topo_site.py` is the site's own Sphinx extension: it loads `site/_data/*.json` into templates as `topo_<name>`, and holds the year-letter, favorite-posts, photo-row, and redirect-stub hooks.
+- `site/conf.py` holds Sphinx settings only. Never put site data or copy in it: give each list its own file in `site/_data/` and load it from the extension.
+- `site/_ext/topo_site.py` is the site's own Sphinx extension: it loads `site/_data/*.json` into templates as `topo_<name>`, and holds the year-letter, photo-row, and redirect-stub hooks.
 - `site/_data/categories.json` lists the topics: slug, then title and intro.
 - `site/_themes/topo/` holds the theme: `layout.html`, `static/topo.css` (all styles, with tokens on `:root`), the fonts, and `theme.toml`.
 - `site/_templates/`:
@@ -39,7 +39,7 @@ Headless Chromium can't play H.264, so a video that "won't play" there is not a 
   - `ablog/` overrides ABlog's topic and archive pages.
   - `sidebar/` has the sidebar blocks.
 - `redirects.yml` maps retired URLs to where they now forward. Read the Docs serves them; `.github/workflows/sync-redirects.yml` syncs the file with readthedocs-cli. Add redirects there, never in the Read the Docs dashboard, since the sync deletes anything not in the file. Until the `RTD_TOKEN` secret is added, the build also writes meta-refresh pages from this file.
-- `site/favorite-posts.rst` holds the favorite posts list in its `favorite-posts` directive: a post path, then a summary indented under it. The `/favorite-posts/` page shows all of them, and the home page features the first `:featured:` few.
+- `site/_data/favorites.yml` holds the favorite posts: each a post path and a hand-written summary. The `/favorite-posts/` page shows all of them, and the home page shows only the first `featured` few, with a link to the rest.
 - `site/_data/hikes.json` and `places.json` hold the Adventures timeline and map data. They are the source of truth for trips; edit them by hand.
 - `scripts/photo_trips.py` turns an osxphotos export into candidate trip rows. See the README.
 
@@ -86,7 +86,7 @@ These are Eric's preferences, learned the hard way. Follow them without re-askin
 - **Don't invent facts:** no dates, routes, roles, summits, photo credits, or event names that aren't in the posts, the data files, or something Eric said.
   - When unsure, write less, or ask.
   - When summarizing a post, work from the post's own words.
-- Favorite-post summaries are hand-written in `site/favorite-posts.rst`, not taken from opening lines, which can stop mid-thought.
+- Favorite-post summaries are hand-written in `site/_data/favorites.yml`, not taken from opening lines, which can stop mid-thought.
 
 ## Privacy
 
@@ -109,7 +109,7 @@ Leave a trip that is still in progress off the site until Eric says to add it.
 - **LinkedIn:** `https://www.linkedin.com/in/eric-holscher/`.
 - **Speaking photo:** taken in Portland in 2025, by Kay Smoljak.
 - **Trip details:** the PCT, JMT, and other trips are recorded in `hikes.json`; trust it over memory.
-- **Not yet confirmed:** "Write the Docs Portland, 2013 to present" on the Speaking page and résumé.
+- **Not yet confirmed:** "Write the Docs Portland, 2013 to present" on the Speaking page and resume.
 
 ## Workflow
 

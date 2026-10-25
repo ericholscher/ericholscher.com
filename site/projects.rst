@@ -124,4 +124,4 @@ Earlier
 * `Django Kong <http://django-kong.rtfd.org>`_: a wrapper around twill for monitoring and basic functional testing of your sites.
 * `Django Test Utils <http://django-test-utils.rtfd.org>`_: tools to help with testing Django applications. I :doc:`announced it in 2008 </blog/2008/nov/10/announcing-django-crawler-test-utils>`.
 
-More of my work history is on my :doc:`résumé </resume>`.
+More of my work history is on my :doc:`resume </resume>`.
