@@ -1,8 +1,4 @@
 {#- Shared post-list markup for the home page, the archive, and category landing pages. -#}
-{%- macro kind(post) %}
-{%- set cats = post.category|map('string')|list if post.category else [] %}
-{%- if 'link-blog' in cats %}<span class="topo-kind">link</span>{% endif %}
-{%- endmacro %}
 
 {#- A post's date, or "Draft" for an undated post (ABlog's drafts). -#}
 {%- macro date(post, fmt, cls='') %}
@@ -13,7 +9,7 @@
 {%- macro entries(posts, pagename) %}
 {%- for post in posts %}
 <article class="topo-entry">
-  <div class="topo-entry-meta">{{ date(post, '%b %-d, %Y', 'topo-entry-date') }}{{ kind(post) }}</div>
+  <div class="topo-entry-meta">{{ date(post, '%b %-d, %Y', 'topo-entry-date') }}</div>
   <div class="topo-entry-body">
     <h3><a href="{{ pathto(post.docname) }}{{ anchor(post) }}">{{ post.title }}</a></h3>
     <div class="topo-entry-excerpt">{{ post.to_html(pagename) }}</div>
@@ -26,7 +22,7 @@
 {%- macro featured(items, pagename) %}
 {%- for post, summary in items %}
 <article class="topo-entry">
-  <div class="topo-entry-meta">{{ date(post, '%b %-d, %Y', 'topo-entry-date') }}{{ kind(post) }}</div>
+  <div class="topo-entry-meta">{{ date(post, '%b %-d, %Y', 'topo-entry-date') }}</div>
   <div class="topo-entry-body">
     <h3><a href="{{ pathto(post.docname) }}{{ anchor(post) }}">{{ post.title }}</a></h3>
     {%- if summary %}
