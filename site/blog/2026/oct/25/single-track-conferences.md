@@ -64,7 +64,7 @@ They're five-minute talks that are submitted the week of the conference, or the 
 They give people the chance to get up on stage,
 and I find they're the best way to break the ice for getting people on stage
 and building a group of speakers.
-That's the way I gave [my first conference talk](/blog/2008/dec/31/year-review/#lawrence-chronicles).
+That's the way I gave [my first conference talk](https://www.ericholscher.com/blog/2008/dec/31/year-review/#lawrence-chronicles).
 
 A lot of people start speaking with lightning talks,
 then maybe give a meetup talk,
