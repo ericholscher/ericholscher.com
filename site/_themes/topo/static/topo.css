@@ -180,6 +180,7 @@ img { max-width: 100%; height: auto; }
 .body iframe[width][height] { aspect-ratio: 16 / 9; height: auto; }
 .body img, .body figure img, .body .figure img { display: block; max-width: 100%; height: auto !important; border: 1px solid var(--rule-strong); }
 .body img.plain { border: 0; } /* transparent illustrations; photos keep the frame */
+.body img.topo-project-logo { height: 40px !important; width: auto; margin: 4px 0 14px; } /* Projects page: one row height for every logo */
 .body img.align-right { float: right; max-width: 46%; margin: 4px 0 16px 28px; }
 .body img.align-left { float: left; max-width: 46%; margin: 4px 28px 16px 0; }
 .body img.align-center { margin-left: auto; margin-right: auto; }
