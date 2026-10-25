@@ -149,7 +149,8 @@
 </svg>
 <footer class="topo-footer">
   <span>&copy; {{ copyright|e }} &middot; Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a href="https://ablog.readthedocs.io/">ABlog</a></span>
-  <span class="topo-footer-note">Contour interval: one post</span>
+  <span class="topo-footer-note">Contour interval: one post &middot; <span class="topo-footer-stamp">Last surveyed {{ topo_build.date.strftime('%b %-d, %Y') }}
+    {%- if topo_build.url %} at <a href="{{ topo_build.url }}">{{ topo_build.commit }}</a>{% elif topo_build.commit %} at {{ topo_build.commit }}{% endif %}</span></span>
 </footer>
 {#- Search is Read the Docs' modal. The masthead icon opens it when the addon has loaded, and links to Sphinx's search page otherwise. -#}
 <script>

@@ -576,6 +576,7 @@ body .doc-diff-chunk-selected { background-color: color-mix(in srgb, var(--sign-
   font-family: var(--mono); font-size: 12px; color: var(--sign-text);
 }
 .topo-footer a { color: var(--sign-text); border-bottom-color: rgba(242,235,220,.4); }
+.topo-footer-stamp { white-space: nowrap; }
 .topo-footer a:hover { color: var(--sign-gold); border-bottom-color: var(--sign-gold); }
 
 /* Keyboard focus */
