@@ -84,10 +84,9 @@
       {#- Site-wide copy sits outside role="main" so Read the Docs search and file diffs see only the page's own content. -#}
       {%- if is_post %}
       <aside class="topo-cta topo-pitch">
-        <p>Hi, I'm Eric. I work on communities in the world of software documentation. New posts go out by email, and I'm always happy to hear what you think of this one.</p>
+        <p>Hi, I'm Eric. I work on communities in the world of software documentation. I'm always happy to hear what you think of this one.</p>
         <p class="topo-cta-actions">
-          <a class="topo-button" href="https://ericholscher.substack.com/">Subscribe by email</a>
-          <a class="topo-button topo-button-quiet" href="mailto:eric@ericholscher.com?subject={{ ('Re: ' ~ title|striptags)|urlencode }}">Reply by email</a>
+          <a class="topo-button" href="mailto:eric@ericholscher.com?subject={{ ('Re: ' ~ title|striptags)|urlencode }}">Reply by email</a>
         </p>
       </aside>
       {%- endif %}
@@ -117,7 +116,7 @@
         {{ featured(pop.items[:topo_favorites.featured], pagename) }}
       </section>
       <section class="topo-recent" id="recent">
-        <div class="topo-recent-head"><h2>Recently</h2><span class="topo-head-links"><a href="https://ericholscher.substack.com/" class="topo-more-link">Subscribe by email</a><a href="{{ pathto('blog/index') }}" class="topo-more-link">All posts &rarr;</a></span></div>
+        <div class="topo-recent-head"><h2>Recently</h2><a href="{{ pathto('blog/index') }}" class="topo-more-link">All posts &rarr;</a></div>
         {{ titles(ablog.recent(8, pagename)|list, pagename) }}
       </section>
       <section class="topo-topics-section" id="topics">
