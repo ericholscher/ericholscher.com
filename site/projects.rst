@@ -110,6 +110,13 @@ and chaired its Funding Working Group.
 There I helped get the Mozilla Open Source Support (MOSS) grant
 that kickstarted the PSF's Developer in Residence program.
 
+.. container:: topo-project-posts
+
+   From the blog:
+
+   * :doc:`Read the Docs update, with the PSF grant that helped host it </blog/2011/apr/11/read-docs-update>`
+   * :doc:`One Percent for Open Source </blog/2018/mar/9/one-percent-for-open-source>`
+
 Earlier
 -------
 
