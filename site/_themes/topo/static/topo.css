@@ -482,6 +482,58 @@ ul.search { list-style: none; padding: 0; }
 ul.search li { padding: 10px 0; border-bottom: 1px solid var(--rule); background: none; }
 ul.search li a { font-family: var(--serif); font-size: 22px; }
 
+/* Read the Docs addons: the search modal (press /), the file-diff bar on PR previews, and notifications.
+   They render in shadow DOM, so they are themed through RTD's --readthedocs-* properties. RTD sets its
+   defaults in a cascade layer, so these unlayered ones win. */
+:root {
+  --readthedocs-font-family: var(--sans);
+  --readthedocs-font-size: 16px;
+
+  --readthedocs-search-code-font-family: var(--mono);
+  --readthedocs-search-backdrop-color: color-mix(in srgb, var(--ink) 45%, transparent);
+  --readthedocs-search-color: var(--text);
+  --readthedocs-search-link-color: var(--text);
+  --readthedocs-search-content-background-color: var(--paper);
+  --readthedocs-search-content-border-color: var(--rule-strong);
+  --readthedocs-search-filters-border-color: var(--rule);
+  --readthedocs-search-input-background-color: #FAF5E9;
+  --readthedocs-search-footer-background-color: var(--paper-2);
+  --readthedocs-search-footer-color: var(--text-2);
+  --readthedocs-search-footer-code-background-color: var(--paper);
+  --readthedocs-search-footer-code-border-color: var(--rule-strong);
+  --readthedocs-search-result-heading-color: var(--ink);
+  --readthedocs-search-result-subheading-color: var(--ink);
+  --readthedocs-search-result-color: var(--text-2);
+  --readthedocs-search-result-icon-color: var(--muted);
+  --readthedocs-search-result-highlight-color: var(--link);
+  --readthedocs-search-result-active-background-color: var(--paper-2);
+  --readthedocs-search-result-border-color: var(--rule);
+  --readthedocs-search-badge-background-color: var(--paper-2);
+  --readthedocs-search-badge-color: var(--text);
+
+  /* The file-diff bar hangs off the masthead like a second sign. */
+  --readthedocs-filetreediff-font-size: 14px;
+  --readthedocs-filetreediff-color: var(--sign-text);
+  --readthedocs-filetreediff-background-color: var(--sign-2);
+  --readthedocs-filetreediff-chunks-color: var(--sign-gold);
+
+  --readthedocs-notification-color: var(--text);
+  --readthedocs-notification-background-color: var(--paper-2);
+  --readthedocs-notification-title-color: var(--ink);
+  --readthedocs-notification-title-background-color: var(--rule);
+  --readthedocs-notification-link-color: var(--link);
+  --readthedocs-notification-inverted-color: var(--sign-text);
+  --readthedocs-notification-inverted-background-color: var(--sign);
+  --readthedocs-notification-inverted-title-color: var(--sign-text);
+  --readthedocs-notification-inverted-link-color: var(--sign-gold);
+}
+/* On a phone the diff bar spans the top edge; make room so it doesn't cover the wordmark. */
+@media (max-width: 768px) { body:has(> readthedocs-filetreediff) { padding-top: 38px; } }
+/* "Show diff" highlights. RTD adopts these styles after ours, so they need the extra specificity. */
+body .doc-diff-added { background-color: color-mix(in srgb, var(--forest) 20%, transparent); }
+body .doc-diff-removed { background-color: color-mix(in srgb, var(--blaze) 25%, transparent); text-decoration: line-through; text-decoration-color: color-mix(in srgb, var(--blaze) 60%, transparent); }
+body .doc-diff-chunk-selected { background-color: color-mix(in srgb, var(--sign-gold) 22%, transparent); }
+
 /* Footer */
 .topo-ridge { display: block; width: 100%; height: 48px; fill: var(--forest); background: var(--paper); }
 .topo-footer {
