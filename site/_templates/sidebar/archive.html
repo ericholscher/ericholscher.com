@@ -1,6 +1,7 @@
-{%- if ablog is defined and ablog.archive %}
+{#- Skipped on the Blog page, which has its own year chips, and on Adventures, whose years are trip years. -#}
+{%- if ablog is defined and ablog.archive and pagename not in ('blog/index', 'adventures') %}
 <div class="topo-side-block">
-  <h3 class="topo-side-label"><a href="{{ pathto(ablog.archive.docname) }}">Archive</a></h3>
+  <h2 class="topo-side-label"><a href="{{ pathto(ablog.archive.docname) }}">Archive</a></h2>
   <div class="topo-years">
     {%- for coll in ablog.archive %}{% if coll %}
     <a href="{{ pathto(coll.docname) }}">{{ coll }}</a>

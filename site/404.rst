@@ -1,0 +1,21 @@
+:orphan:
+
+Page not found
+==============
+
+There's nothing at this address.
+It may be an old link from before the site was reorganized.
+
+.. raw:: html
+
+   <form class="topo-404-search" action="/search/" method="get" role="search">
+     <label for="topo-404-q">Search the site</label>
+     <span class="topo-404-row"><input id="topo-404-q" type="search" name="q"> <button type="submit" class="topo-button">Search</button></span>
+   </form>
+
+Or start from one of these:
+
+* `Latest posts </blog/>`__
+* `Favorite posts </favorite-posts/>`__
+* `Every post, by year </blog/archive/archive/>`__
+* `Adventures </adventures/>`__
