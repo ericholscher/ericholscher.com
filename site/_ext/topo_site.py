@@ -66,6 +66,26 @@ def topo_year_summary(app, pagename, templatename, context, doctree):
         context["body"] = context["body"].replace(TOPO_SUMMARY_SLOT, html, 1)
 
 
+# Excerpts on the home page: a post's opening text, ended at the last full sentence that fits,
+# so it doesn't stop mid-thought. A first sentence too long to fit falls back to a word break.
+TOPO_SENTENCE_END = re.compile(r"[.!?][\"”’)]*(?=\s)")
+
+
+def topo_excerpt(text, limit=220):
+    text = " ".join(text.split())
+    if len(text) <= limit:
+        return text
+    ends = [m.end() for m in TOPO_SENTENCE_END.finditer(text[: limit + 1])]
+    if ends and ends[-1] >= limit // 3:
+        return text[: ends[-1]]
+    return text[:limit].rsplit(" ", 1)[0].rstrip(",;:") + "…"
+
+
+def topo_template_filters(app):
+    if hasattr(app.builder, "templates"):
+        app.builder.templates.environment.filters["topo_excerpt"] = topo_excerpt
+
+
 def topo_photo_rows(app, doctree, docname):
     """Size each photo in a topo-photos row by its aspect ratio, so the row shares one height uncropped."""
     import imagesize
@@ -96,4 +116,5 @@ def setup(app):
     app.add_directive("adventure-summary", AdventureSummary)
     app.connect("html-page-context", topo_year_summary)
     app.connect("doctree-resolved", topo_photo_rows)
+    app.connect("builder-inited", topo_template_filters)
     return {"parallel_read_safe": True, "parallel_write_safe": True}

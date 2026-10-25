@@ -1,10 +1,10 @@
+Speaking
+========
+
 .. figure:: /_static/img/speaking-stage.jpg
    :alt: Eric on a dark stage with a headset microphone, smiling and gesturing toward the audience with a slide clicker in hand
 
    Portland, 2025. Photo by Kay Smoljak.
-
-Speaking
-========
 
 I have always had an interest in teaching,
 and I believe that conference presentations are one of the best ways to teach in a professional setting.
@@ -26,15 +26,19 @@ I am interested in speaking on the following topics:
 
 .. raw:: html
 
-   <aside class="topo-cta">
-     <p>Want me to speak at your event? I'm happy to talk about the topics above, or something that fits your audience.</p>
+   <div class="topo-cta">
+     <p>Want me to speak at your event? I’m happy to talk about the topics above, or something that fits your audience.</p>
      <p class="topo-cta-actions"><a class="topo-button" href="mailto:eric@ericholscher.com?subject=Speaking%20Engagement">Email me about speaking</a></p>
-   </aside>
+   </div>
 
 Videos
 ------
 
 Here are a few videos of my recent talks, with older recordings listed below.
+
+.. rst-class:: topo-plaque
+
+Favorite
 
 Conference introduction and community update
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -44,11 +48,12 @@ Conference introduction and community update
 Write the Docs Portland, May 2022
 
 The opening of Write the Docs Portland 2022,
-with an update on the Write the Docs community.
+and the values behind the Write the Docs community.
+The clip stops before the conference logistics.
 
 .. raw:: html
 
-   <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/a6-VYEmV7tM" title="Conference introduction and community update - Write the Docs Portland 2022" frameborder="0" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+   <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/a6-VYEmV7tM?end=342" title="Conference introduction and community update - Write the Docs Portland 2022" frameborder="0" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
    <p class="topo-video-link"><a href="https://www.youtube.com/watch?v=a6-VYEmV7tM">Watch on YouTube</a></p>
 
 Documenting Django Code in 2022
