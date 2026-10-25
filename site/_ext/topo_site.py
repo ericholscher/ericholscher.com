@@ -84,13 +84,21 @@ def topo_excerpt(text, limit=220):
     return text[:limit].rsplit(" ", 1)[0].rstrip(",;:") + "…"
 
 
-# Trips in _data/trips.json name their places (from places.json) and the trips along the way
-# (from hikes.json, within the trip's years). A name that doesn't match would quietly drop out
-# of the map or the list, so say so.
-def topo_check_trips(app):
-    places = {p["name"]: p for p in app.topo_data.get("topo_places", [])}
-    hikes = app.topo_data.get("topo_hikes", [])
-    for t in app.topo_data.get("topo_trips", []):
+# Trips in _data/trips.json group the places (from places.json) and the entries along the way
+# (from hikes.json, within the trip's years; a trip with no years takes the named entries from any
+# year). The map steps through these trips, and the year-by-year log groups each year by them, so
+# both show the same trips and counts: topo_log has, per year, its trips (and each entry that's in
+# no trip, on its own), each trip's places from that year, and the places that are in no trip.
+# A name that doesn't match would quietly drop out of both, so say so.
+def topo_trip_log(app):
+    data = app.topo_data
+    places = {p["name"]: p for p in data["topo_places"]}
+    hikes, trips = data["topo_hikes"], data["topo_trips"]
+
+    def takes(t, h):
+        return h["name"] in t.get("along", []) and (not t.get("years") or int(h["year"]) in t["years"])
+
+    for t in trips:
         years = set(t.get("years", []))
         for name in t["places"]:
             p = places.get(name)
@@ -99,8 +107,40 @@ def topo_check_trips(app):
             elif years and not years & set(p.get("years", [])):
                 logger.warning("trips.json: %s has %s, but not in %s", t["slug"], name, sorted(years))
         for name in t.get("along", []):
-            if not any(h["name"] == name and (not years or int(h["year"]) in years) for h in hikes):
+            if not any(takes(t, h) for h in hikes):
                 logger.warning("trips.json: %s names a trip not in hikes.json for its years: %s", t["slug"], name)
+
+    years = {int(h["year"]) for h in hikes} | {y for p in places.values() for y in p.get("years", [])}
+    log = []
+    for y in sorted(years, reverse=True):
+        groups = {}
+        for h in hikes:
+            if int(h["year"]) == y:
+                t = next((t for t in trips if takes(t, h)), None)
+                g = groups.setdefault(t["slug"] if t else id(h), {"trip": t, "entries": [], "places": []})
+                g["entries"].append(h)
+        for t in trips:
+            here = [places[n] for n in t["places"] if n in places and y in places[n].get("years", [])]
+            if here and (y in t.get("years", []) or t["slug"] in groups):
+                groups.setdefault(t["slug"], {"trip": t, "entries": [], "places": []})["places"] = here
+        # An entry on its own takes the place of the same name, if there is one.
+        for g in groups.values():
+            if not g["trip"] and g["entries"][0]["name"] in places:
+                p = places[g["entries"][0]["name"]]
+                g["places"] = [p] if y in p.get("years", []) else []
+        named = {p["name"] for g in groups.values() for p in g["places"]}
+        # In the order they happened: a trip carried over from last year first, then by first entry.
+        order = list(groups.values())
+        order.sort(key=lambda g: 0 if g["trip"] and min(g["trip"].get("years") or [y]) < y else 1)
+        log.append({
+            "year": str(y),
+            "groups": order,
+            "places": [p for p in data["topo_places"] if y in p.get("years", [])],
+            "other": [p for p in data["topo_places"] if y in p.get("years", []) and p["name"] not in named],
+        })
+    data["topo_log"] = log
+    # Every trip once, counting each entry that's in no trip as its own, for the map's overview.
+    data["topo_trip_count"] = len(trips) + sum(1 for yr in log for g in yr["groups"] if not g["trip"])
 
 
 def topo_template_filters(app):
@@ -139,5 +179,5 @@ def setup(app):
     app.connect("html-page-context", topo_year_summary)
     app.connect("doctree-resolved", topo_photo_rows)
     app.connect("builder-inited", topo_template_filters)
-    app.connect("builder-inited", topo_check_trips)
+    app.connect("builder-inited", topo_trip_log)
     return {"parallel_read_safe": True, "parallel_write_safe": True}

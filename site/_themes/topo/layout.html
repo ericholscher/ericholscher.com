@@ -119,8 +119,8 @@
       {%- if pagename == 'adventures' %}
       <section class="topo-trips" aria-label="Trips and places">
       {% include "topo/places.html" %}
-      {% include "topo/features.html" %}
       {% include "topo/timeline.html" %}
+      {% include "topo/features.html" %}
       {%- if ablog is defined and ablog.category['outside'] %}
       <p class="topo-more"><a href="{{ pathto(ablog.category['outside'].docname) }}">Writing from these trips &rarr;</a></p>
       {%- endif %}

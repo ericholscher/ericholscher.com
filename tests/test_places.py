@@ -1,4 +1,5 @@
-"""The places map on the Adventures page: trips from site/_data/trips.json, and the year strip.
+"""The places map on the Adventures page: trips from site/_data/trips.json, the year strip, and
+how they line up with the year-by-year log below.
 
 Build the site first (see test_masthead.py).
 """
@@ -22,7 +23,7 @@ def test_trip_permalink_fits_and_names_its_pins(page, site_url):
     page.goto(f"{site_url}adventures/#{TRIP}")
     page.wait_for_timeout(300)
     trip = page.locator(f"#{TRIP}")
-    assert page.locator(".topo-tripnav-title").text_content() == trip.locator("h4").text_content()
+    assert page.locator(".topo-tripnav-title").text_content() == trip.get_attribute("data-name")
     names = trip.get_attribute("data-places").split("|")
     lit = page.eval_on_selector_all(".topo-pin:not(.is-dim)", "ps => ps.map(p => p.dataset.name)")
     assert sorted(lit) == sorted(names)
@@ -42,7 +43,7 @@ def test_arrows_step_through_trips(page, site_url):
     page.goto(f"{site_url}adventures/")
     first = page.locator(".topo-trip").first
     page.click('.topo-tripnav-step[data-step="1"]')
-    assert page.locator(".topo-tripnav-title").text_content() == first.locator("h4").text_content()
+    assert page.locator(".topo-tripnav-title").text_content() == first.get_attribute("data-name")
     assert page.evaluate("location.hash") == "#" + first.get_attribute("id")
     page.click('.topo-tripnav-step[data-step="-1"]')
     assert page.locator(".topo-tripnav-title").text_content() == "All places"
@@ -57,3 +58,14 @@ def test_year_strip_shows_a_year(page, site_url):
     assert page.locator('details[id="2016"]').get_attribute("open") is not None
     years = page.eval_on_selector_all(".topo-pin:not(.is-dim):not(.topo-pin-lived)", "ps => ps.map(p => p.dataset.years)")
     assert years and all("2016" in y.split() for y in years)
+
+
+def test_map_and_log_agree_on_a_year(page, site_url):
+    page.goto(f"{site_url}adventures/")
+    for year in ("2026", "2018", "2016"):
+        page.click(f'.topo-spark button[data-year="{year}"]')
+        log = page.locator(f'details[id="{year}"]')
+        assert page.locator(".topo-tripnav-when").text_content() == log.locator(".topo-log-count").text_content().strip()
+        on_map = page.locator(f'.topo-yeartrips[data-year="{year}"] > li > a').all_text_contents()
+        in_log = log.locator(".topo-log-body > .topo-tl-list > li > :is(h3, .topo-log-trip-name)").all_text_contents()
+        assert on_map == [t.strip() for t in in_log]

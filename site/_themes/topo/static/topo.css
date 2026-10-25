@@ -406,6 +406,18 @@ ul.postlist p.ablog-post-excerpt { font-size: 16px; color: var(--text-2); margin
 .topo-tl-meta { font-family: var(--mono); font-size: 12px; color: var(--muted); margin: 0 0 4px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
 .topo-kind-thru-hike, .topo-kind-trek { color: var(--forest); border-color: var(--forest) !important; }
 .body .topo-tl-note, .topo-tl-note { margin: 0; font-size: 15px; line-height: 1.5; color: var(--text-2); max-width: 60ch; }
+.topo-log-trip { position: relative; padding: 0 0 18px 22px; margin: 0; }
+.topo-log-trip::before { content: ""; position: absolute; left: 0; top: 6px; width: 13px; height: 13px; background: var(--sign); border: 2px solid var(--sign-gold); box-sizing: border-box; transform: rotate(45deg); }
+.topo-log-trip[hidden] { display: none; }
+.body .topo-log-trip-name, .topo-log-trip-name { font-family: var(--serif); font-weight: 500; font-size: 22px; line-height: 1.2; margin: 0 0 2px; color: var(--ink); }
+.body .topo-log-trip-meta, .topo-log-trip-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; margin: 0 0 8px; font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.topo-log-tripmap { font: inherit; padding: 0; border: 0; background: none; color: var(--link); cursor: pointer; text-decoration: underline 1px rgba(46, 107, 74, .4); text-underline-offset: 3px; }
+.topo-log-tripmap[hidden] { display: none; }
+.topo-log-trip .topo-log-placelist { margin: 0 0 12px; }
+.topo-log-trip .topo-tl-list { margin-top: 4px; }
+.body .topo-tl-item h4, .topo-tl-item h4 { font-family: var(--serif); font-weight: 500; font-size: 18px; line-height: 1.2; margin: 0 0 4px; color: var(--ink); }
+.topo-tl-item h4 a { color: var(--ink); border-bottom: 0; }
+.topo-tl-item h4 a:hover { color: var(--link-hover); }
 .topo-log-places { padding-top: 12px; border-top: 1px dashed var(--rule-strong); }
 .body .topo-log-label, .topo-log-label { font-family: var(--mono); font-weight: 400; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0 0 8px; }
 .body .topo-log-placelist, .topo-log-placelist { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 16px; }
@@ -420,7 +432,7 @@ a.topo-kind:hover { color: var(--link-hover); border-color: var(--link-hover) !i
 .topo-log-kinds a.is-active .topo-kind-count { color: var(--sign-gold); }
 .topo-log-filter { margin: 0 0 6px; padding: 8px 12px; background: #F7F1E4; border: 1px solid var(--rule-strong); border-radius: 3px; font-size: 15px; }
 .topo-log-filter[hidden], .topo-log-year[hidden], .topo-tl-item[hidden] { display: none; }
-.topo-log.is-kind .topo-log-places, .topo-log.is-kind .topo-log-foot { display: none; }
+.topo-log.is-kind .topo-log-places, .topo-log.is-kind .topo-log-foot, .topo-log.is-kind .topo-log-trip .topo-log-placelist { display: none; }
 .topo-log-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin: 12px 0 0; }
 .topo-log-foot .topo-log-map { margin-top: 0; }
 .topo-log-permalink { font-family: var(--mono); font-size: 12px; }
@@ -479,20 +491,13 @@ a.topo-kind:hover { color: var(--link-hover); border-color: var(--link-hover) !i
 .topo-spark button[aria-pressed="true"] span { background: var(--sign); }
 .body .topo-spark-axis, .topo-spark-axis { display: flex; justify-content: space-between; margin: 0; padding-top: 4px; border-top: 1px solid var(--rule-strong); font-family: var(--mono); font-size: 11px; color: var(--muted); }
 .topo-spark-note { color: var(--ink); }
-/* The trips, under the map. Once JavaScript is running, each is a name and dates until it's picked;
-   then it's the only one shown, with its trips from the year-by-year log and its places. */
-.topo-places .topo-triplist-head { margin: 24px 0 6px; }
-.body .topo-triplist, .topo-triplist { list-style: none; margin: 0; padding: 0; }
-.is-enhanced .topo-triplist { columns: 2 260px; column-gap: 32px; }
-.body .topo-trip, .topo-trip { margin: 0; padding: 6px 0; break-inside: avoid; }
-.topo-trip[hidden] { display: none; }
-.body .topo-trip h4, .topo-trip h4 { font-family: var(--serif); font-weight: 500; font-size: 19px; line-height: 1.2; margin: 0; }
-.body .topo-trip-when, .topo-trip-when { font-family: var(--mono); font-size: 12px; color: var(--muted); margin: 2px 0 0; }
-.topo-trip-more { margin: 8px 0 12px; }
-.is-enhanced .topo-trip-more, .is-trip .topo-trip h4, .is-trip .topo-trip-when, .is-trip .topo-triplist-head { display: none; }
-.is-trip .topo-triplist { columns: auto; }
-.is-trip .topo-trip.is-current { padding: 14px 16px 4px; border-top: 3px solid var(--forest); background: var(--paper-2); border-radius: 0 0 3px 3px; margin-top: 14px; }
-.is-trip .topo-trip.is-current .topo-trip-more { display: block; margin: 0; }
+/* Under the map: the year's trips, or the trip's entries and places, on a card like a call to action. */
+.topo-trip, .topo-yeartrips { margin: 14px 0 0; padding: 14px 16px 4px; border-top: 3px solid var(--forest); background: var(--paper-2); border-radius: 0 0 3px 3px; }
+.topo-trip[hidden], .topo-yeartrips[hidden] { display: none; }
+.body .topo-yeartrips, .topo-yeartrips { list-style: none; padding-bottom: 10px; }
+.body .topo-yeartrips li, .topo-yeartrips li { margin: 0; padding: 4px 0; font-size: 15px; line-height: 1.4; }
+.topo-yeartrips a { font-family: var(--serif); font-size: 18px; }
+.topo-yeartrips span { display: block; font-family: var(--mono); font-size: 12px; color: var(--muted); }
 .body .topo-trip-along, .topo-trip-along { list-style: none; margin: 0 0 14px; padding: 0; }
 .body .topo-trip-along li, .topo-trip-along li { margin: 0; padding: 2px 0; font-size: 15px; }
 .topo-trip-along span { font-family: var(--mono); font-size: 12px; color: var(--muted); margin-left: 6px; }
@@ -504,8 +509,6 @@ a.topo-kind:hover { color: var(--link-hover); border-color: var(--link-hover) !i
   .topo-tripnav-head { order: -1; flex: 1 0 100%; padding: 0; }
   .body .topo-tripnav-title, .topo-tripnav-title { font-size: 20px; }
   .topo-map.is-focused:not(.is-expanded) .topo-map-scroll { aspect-ratio: 5 / 4 !important; }
-  .body .topo-trip h4, .topo-trip h4 { font-size: 17px; }
-  .body .topo-trip, .topo-trip { padding: 4px 0; }
 }
 .topo-map-zoombox { position: absolute; right: 8px; bottom: 8px; display: flex; flex-direction: column; gap: 4px; }
 .topo-map-zoombox[hidden] { display: none; }
@@ -577,7 +580,7 @@ html.topo-map-open, html.topo-map-open body { overflow: hidden; }
   .topo-recent-head { align-items: center; }
   .topo-side-list { gap: 0; }
   .topo-pager-pages a, .topo-pager-pages span { min-width: 44px; min-height: 44px; }
-  .topo-tripnav button, .topo-map-tools button, .topo-log-map, .topo-map-expand, .topo-log-kinds .topo-kind { min-height: 44px; }
+  .topo-tripnav button, .topo-map-tools button, .topo-log-map, .topo-log-tripmap, .topo-map-expand, .topo-log-kinds .topo-kind { min-height: 44px; }
   .topo-log-kinds .topo-kind { display: inline-flex; align-items: center; }
   .topo-map-zoom { width: 44px; height: 44px; }
 }

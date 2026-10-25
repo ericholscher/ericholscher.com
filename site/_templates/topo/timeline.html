@@ -1,10 +1,11 @@
-{#- Year-by-year log: trips from hikes.json and places from places.json, newest year first.
+{#- Year-by-year log, newest year first: each year's trips (trips.json, the same ones the map steps
+    through), with their entries from hikes.json and their places from places.json. An entry that's in
+    no trip stands on its own. topo_log, built in _ext/topo_site.py, does the grouping.
     Each year is a <details>, so the page reads as a short list of years until one is opened.
     Years and trip types are permalinks: /adventures/#2016 opens that year (and sets the map to it),
     /adventures/#trek shows only treks. Without JavaScript, #2016 still jumps to the year. -#}
-{%- set ns = namespace(years=[], kinds=[]) %}
-{%- for h in topo_hikes %}{% if h.year not in ns.years %}{% set ns.years = ns.years + [h.year] %}{% endif %}{% if h.kind not in ns.kinds %}{% set ns.kinds = ns.kinds + [h.kind] %}{% endif %}{% endfor %}
-{%- for p in topo_places %}{% for y in p.years or [] %}{% if y|string not in ns.years %}{% set ns.years = ns.years + [y|string] %}{% endif %}{% endfor %}{% endfor %}
+{%- set ns = namespace(kinds=[]) %}
+{%- for h in topo_hikes %}{% if h.kind not in ns.kinds %}{% set ns.kinds = ns.kinds + [h.kind] %}{% endif %}{% endfor %}
 <section class="topo-log" id="hikes">
   <h2 class="topo-plaque">Year by year</h2>
   <p class="topo-log-kinds">
@@ -13,43 +14,61 @@
     {%- endfor %}
   </p>
   <p class="topo-log-filter" hidden>Showing only <strong></strong> trips. <a href="#hikes">Show everything</a></p>
-  {%- for y in ns.years|sort(reverse=true) %}
-  {%- set trips = topo_hikes|selectattr('year', 'equalto', y)|list %}
-  {%- set pl = namespace(items=[]) %}
-  {%- for p in topo_places if p.years and y|int in p.years %}{% set pl.items = pl.items + [p] %}{% endfor %}
-  <details class="topo-log-year" id="{{ y }}"{% if loop.first %} open{% endif %}>
-    <summary>
-      <span class="topo-log-yearnum">{{ y }}</span>
-      <span class="topo-log-gist">{{ (trips or pl.items)|map(attribute='name')|join(' · ') }}</span>
-      <span class="topo-log-count">
-        {%- if trips %}{{ trips|length }} {{ 'trip' if trips|length == 1 else 'trips' }}{% endif %}
-        {%- if trips and pl.items %} · {% endif %}
-        {%- if pl.items %}{{ pl.items|length }} {{ 'place' if pl.items|length == 1 else 'places' }}{% endif %}</span>
-    </summary>
-    <div class="topo-log-body">
-      {%- if trips %}
-      <ol class="topo-tl-list">
-      {%- for h in trips %}
+  {%- macro entry(h, y, tag) %}
         <li class="topo-tl-item" data-kind="{{ h.kind }}">
-          <h3>{% if h.link %}<a class="internal" href="{{ pathto(h.link) }}">{{ h.name }}</a>{% else %}{{ h.name }}{% endif %}</h3>
+          <{{ tag }}>{% if h.link %}<a class="internal" href="{{ pathto(h.link) }}">{{ h.name }}</a>{% else %}{{ h.name }}{% endif %}</{{ tag }}>
           <p class="topo-tl-meta"><a class="topo-kind topo-kind-{{ h.kind }}" href="#{{ h.kind }}">{{ h.kind|replace("-", " ") }}</a>{{ h.when|replace(", " ~ y, "")|replace(" " ~ y, "") }}{% if h.where %} &middot; {{ h.where }}{% endif %}</p>
           {%- if h.note %}<p class="topo-tl-note">{{ h.note }}</p>{% endif %}
         </li>
+  {%- endmacro %}
+  {%- for yr in topo_log %}{% set y = yr.year %}
+  <details class="topo-log-year" id="{{ y }}"{% if loop.first %} open{% endif %}>
+    <summary>
+      <span class="topo-log-yearnum">{{ y }}</span>
+      <span class="topo-log-gist">
+        {%- for g in yr.groups %}{{ g.trip.name if g.trip else g.entries[0].name }}{% if not loop.last %} · {% endif %}{% endfor %}
+        {%- if not yr.groups %}{{ yr.places|map(attribute='name')|join(' · ') }}{% endif %}</span>
+      <span class="topo-log-count">
+        {%- if yr.groups %}{{ yr.groups|length }} {{ 'trip' if yr.groups|length == 1 else 'trips' }}{% endif %}
+        {%- if yr.groups and yr.places %} · {% endif %}
+        {%- if yr.places %}{{ yr.places|length }} {{ 'place' if yr.places|length == 1 else 'places' }}{% endif %}</span>
+    </summary>
+    <div class="topo-log-body">
+      <ol class="topo-tl-list">
+      {%- for g in yr.groups %}
+        {%- if g.trip %}
+        <li class="topo-log-trip">
+          <h3 class="topo-log-trip-name">{{ g.trip.name }}</h3>
+          <p class="topo-log-trip-meta">
+            {%- if g.trip.when %}<span>{{ g.trip.when }}</span>{% endif %}
+            <button type="button" class="topo-log-tripmap" data-map-trip="{{ g.trip.slug }}" hidden>Show on the map</button></p>
+          {%- if g.places %}
+          <ul class="topo-log-placelist">
+            {%- for p in g.places %}<li><span class="topo-dot topo-dot-{{ p.kind }}" aria-hidden="true"></span>{{ p.name }}</li>{% endfor %}
+          </ul>
+          {%- endif %}
+          {%- if g.entries %}
+          <ol class="topo-tl-list">
+            {%- for h in g.entries %}{{ entry(h, y, 'h4') }}{% endfor %}
+          </ol>
+          {%- endif %}
+        </li>
+        {%- else %}{{ entry(g.entries[0], y, 'h3') }}
+        {%- endif %}
       {%- endfor %}
       </ol>
-      {%- endif %}
-      {%- if pl.items %}
+      {%- if yr.other %}
       <div class="topo-log-places">
-        <h3 class="topo-log-label">Places</h3>
+        <h3 class="topo-log-label">{{ 'Other places' if yr.groups else 'Places' }}</h3>
         <ul class="topo-log-placelist">
-        {%- for p in pl.items %}
+        {%- for p in yr.other %}
           <li><span class="topo-dot topo-dot-{{ p.kind }}" aria-hidden="true"></span>{{ p.name }}</li>
         {%- endfor %}
         </ul>
       </div>
       {%- endif %}
       <p class="topo-log-foot">
-        {%- if pl.items %}<button type="button" class="topo-log-map" data-map-year="{{ y }}" hidden>Show {{ y }} on the map</button>{% endif %}
+        {%- if yr.places %}<button type="button" class="topo-log-map" data-map-year="{{ y }}" hidden>Show {{ y }} on the map</button>{% endif %}
         <a class="topo-log-permalink" href="#{{ y }}">Link to {{ y }}</a>
         {%- if ablog is defined and 'adventures/' ~ y in ablog.posts %}
         <a class="topo-log-letter" href="{{ pathto('adventures/' ~ y) }}">Read the {{ y }} letter &rarr;</a>
@@ -77,6 +96,9 @@
         if (on) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
       });
       items.forEach(function (li) { li.hidden = !!kind && li.dataset.kind !== kind; });
+      log.querySelectorAll('.topo-log-trip').forEach(function (li) {
+        li.hidden = !!kind && !li.querySelector('.topo-tl-item[data-kind="' + kind + '"]');
+      });
       years.forEach(function (d, i) {
         var any = !kind || d.querySelector('.topo-tl-item[data-kind="' + kind + '"]');
         d.hidden = !any;

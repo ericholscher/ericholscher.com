@@ -2,7 +2,8 @@
     Equirectangular to match world-land.html. Without JavaScript this is the whole world's pins and a
     list of trips. Everything else is progressive enhancement: stepping through trips (the map zooms to
     each and names its pins), a strip of years to filter by, expanding the map to fill the screen (with
-    zoom and drag to pan), and tapping a pin to name it. A trip permalink (#europe-2018) opens that trip. -#}
+    zoom and drag to pan), and tapping a pin to name it. A trip permalink (#europe-2018) opens that trip.
+    The trips and counts come from topo_log, the same as the year-by-year log below. -#}
 {%- set W = 1000 %}{% set TOP = 84 %}{% set BOT = -58 %}{% set H = (W * (TOP - BOT) / 360)|round(0) %}
 {%- set ns = namespace(years=[]) %}
 {%- for p in topo_places %}{% for y in p.years or [] %}{% set ns.years = ns.years + [y] %}{% endfor %}{% endfor %}
@@ -17,7 +18,7 @@
         <button type="button" class="topo-tripnav-step" data-step="-1" aria-label="Newer">&lsaquo;</button>
         <div class="topo-tripnav-head" aria-live="polite">
           <p class="topo-tripnav-title">All places</p>
-          <p class="topo-tripnav-when">{{ topo_trips|length }} trips, newest first</p>
+          <p class="topo-tripnav-when">{{ topo_trip_count }} trips · {{ topo_places|length }} places</p>
         </div>
         <button type="button" class="topo-tripnav-step" data-step="1" aria-label="Older">&rsaquo;</button>
         <button type="button" class="topo-tripnav-all" hidden>All trips</button>
@@ -64,27 +65,34 @@
       <span class="topo-legend topo-legend-visited">Visited</span>
     </p>
   </div>
-  <h3 class="topo-log-label topo-triplist-head">Trips</h3>
-  <ol class="topo-triplist">
-    {%- for t in topo_trips %}
-    <li class="topo-trip" id="{{ t.slug }}" data-places="{{ t.places|join('|')|e }}" data-years="{{ (t.years or [])|join(' ') }}">
-      <h4><a href="#{{ t.slug }}">{{ t.name }}</a></h4>
-      <p class="topo-trip-when">{% if t.when %}{{ t.when }} &middot; {% endif %}{{ t.places|length }} {{ 'place' if t.places|length == 1 else 'places' }}</p>
-      <div class="topo-trip-more">
-        {%- if t.along %}
-        <h5 class="topo-log-label">Along the way</h5>
-        <ul class="topo-trip-along">
-          {%- for name in t.along %}{% for h in topo_hikes if h.name == name and (not t.years or h.year|int in t.years) %}
-          <li><a href="#{{ h.year }}">{{ h.name }}</a> <span>{{ h.when }}</span></li>
-          {%- endfor %}{% endfor %}
-        </ul>
-        {%- endif %}
-        <h5 class="topo-log-label">Places</h5>
-        <p class="topo-trip-places">{{ t.places|join(' · ') }}</p>
-      </div>
-    </li>
+  {#- Under the map, once JavaScript is running: the year's trips, the same as the year-by-year log
+      shows them, or the trip's entries and places. Without it, the log below has all of this. #}
+  {%- for yr in topo_log %}
+  <ul class="topo-yeartrips" data-year="{{ yr.year }}" data-count="
+    {%- if yr.groups %}{{ yr.groups|length }} {{ 'trip' if yr.groups|length == 1 else 'trips' }} · {% endif %}{{ yr.places|length }} {{ 'place' if yr.places|length == 1 else 'places' }}" hidden>
+    {%- for g in yr.groups %}
+    {%- if g.trip %}
+    <li><a href="#{{ g.trip.slug }}" data-trip="{{ g.trip.slug }}">{{ g.trip.name }}</a> <span>{{ g.places|length }} {{ 'place' if g.places|length == 1 else 'places' }}{% if g.entries %} &middot; {{ g.entries|map(attribute='name')|join(', ') }}{% endif %}</span></li>
+    {%- else %}
+    <li><a href="#{{ yr.year }}">{{ g.entries[0].name }}</a> <span>{{ g.entries[0].kind|replace("-", " ") }}</span></li>
+    {%- endif %}
     {%- endfor %}
-  </ol>
+  </ul>
+  {%- endfor %}
+  {%- for t in topo_trips %}
+  <div class="topo-trip" id="{{ t.slug }}" data-places="{{ t.places|join('|')|e }}" data-years="{{ (t.years or [])|join(' ') }}" data-name="{{ t.name|e }}" data-when="{% if t.when %}{{ t.when }} &middot; {% endif %}{{ t.places|length }} {{ 'place' if t.places|length == 1 else 'places' }}" hidden>
+    {%- if t.along %}
+    <h3 class="topo-log-label">Along the way</h3>
+    <ul class="topo-trip-along">
+      {%- for name in t.along %}{% for h in topo_hikes if h.name == name and (not t.years or h.year|int in t.years) %}
+      <li><a href="#{{ h.year }}">{{ h.name }}</a> <span>{{ h.when }}</span></li>
+      {%- endfor %}{% endfor %}
+    </ul>
+    {%- endif %}
+    <h3 class="topo-log-label">Places</h3>
+    <p class="topo-trip-places">{{ t.places|join(' · ') }}</p>
+  </div>
+  {%- endfor %}
   <p class="topo-home-line">Home, over the years:
     {%- for p in topo_places if p.kind == 'lived' %} <span class="topo-home-place">{{ p.name }}</span>{% if not loop.last %} &middot;{% endif %}{% endfor %}</p>
   <script>
@@ -102,6 +110,7 @@
     var bars = [].slice.call(spark.querySelectorAll('button'));
     var sparkNote = spark.querySelector('.topo-spark-note');
     var trips = [].slice.call(root.querySelectorAll('.topo-trip'));
+    var yearLists = [].slice.call(root.querySelectorAll('.topo-yeartrips'));
     var expand = map.querySelector('.topo-map-expand');
     var close = map.querySelector('.topo-map-close');
     var readout = map.querySelector('.topo-map-readout');
@@ -218,7 +227,6 @@
         expand.focus();
       }
     }
-    function plural(n, one) { return n + ' ' + one + (n === 1 ? '' : 's'); }
     // Show everything (null), one year ({ year }), or one trip ({ trip }).
     function setFocus(f, quiet) {
       focus = f;
@@ -229,24 +237,20 @@
         p.classList.toggle('is-dim', !on);
       });
       map.classList.toggle('is-focused', !!f);
-      root.classList.toggle('is-trip', !!trip);
-      trips.forEach(function (li) {
-        li.classList.toggle('is-current', li === trip);
-        li.hidden = !!trip ? li !== trip : !!year && li.dataset.years.split(' ').indexOf(year) === -1;
-      });
+      trips.forEach(function (d) { d.hidden = d !== trip; });
+      yearLists.forEach(function (ul) { ul.hidden = ul.dataset.year !== year; });
       var tripYears = trip ? trip.dataset.years.split(' ') : [];
       bars.forEach(function (b) {
         b.setAttribute('aria-pressed', String(b.dataset.year === year));
         b.classList.toggle('is-trip', tripYears.indexOf(b.dataset.year) !== -1);
       });
       if (trip) {
-        title.textContent = trip.querySelector('h4').textContent;
-        when.textContent = trip.querySelector('.topo-trip-when').textContent;
+        title.textContent = trip.dataset.name;
+        when.textContent = trip.dataset.when;
       } else if (year) {
-        var n = lit().filter(function (p) { return !p.classList.contains('topo-pin-lived'); }).length;
-        var t = trips.filter(function (li) { return !li.hidden; }).length;
+        var list = yearLists.filter(function (ul) { return ul.dataset.year === year; })[0];
         title.textContent = year;
-        when.textContent = plural(n, 'place') + (t ? ' · ' + plural(t, 'trip') : '');
+        when.textContent = list ? list.dataset.count : '';
       } else {
         title.textContent = allTitle; when.textContent = allWhen;
       }
@@ -280,18 +284,26 @@
         setFocus(focus && focus.year === b.dataset.year ? null : { year: b.dataset.year });
       });
     });
-    trips.forEach(function (li) {
-      li.querySelector('h4 a').addEventListener('click', function (e) {
+    function tripNamed(slug) { return trips.filter(function (d) { return d.id === slug; })[0]; }
+    root.querySelectorAll('.topo-yeartrips a[data-trip]').forEach(function (a) {
+      a.addEventListener('click', function (e) {
         e.preventDefault();
-        setFocus({ trip: li });
+        setFocus({ trip: tripNamed(a.dataset.trip) });
+      });
+    });
+    // "Show on the map" beside each trip in the year-by-year log.
+    document.querySelectorAll('[data-map-trip]').forEach(function (b) {
+      b.hidden = false;
+      b.addEventListener('click', function () {
+        setFocus({ trip: tripNamed(b.dataset.mapTrip) });
         root.scrollIntoView({ block: 'start' });
       });
     });
     // A year permalink (#2016) sets the map to that year; see timeline.html. A trip permalink opens the trip.
     document.addEventListener('topo:year', function (e) { setFocus({ year: e.detail }, true); });
     function fromHash() {
-      var li = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
-      if (li && li.classList.contains('topo-trip')) { setFocus({ trip: li }, true); root.scrollIntoView({ block: 'start' }); }
+      var li = location.hash && tripNamed(decodeURIComponent(location.hash.slice(1)));
+      if (li) { setFocus({ trip: li }, true); root.scrollIntoView({ block: 'start' }); }
     }
     window.addEventListener('hashchange', fromHash);
     expand.addEventListener('click', function () { setExpanded(true); });
