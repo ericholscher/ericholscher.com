@@ -1,4 +1,4 @@
-```{post}
+```{post}  Oct 25, 2026
 :category: community
 :tags: conferences, organization
 ```
@@ -44,6 +44,8 @@ The unconference sessions board at Write the Docs Portland 2026
 ```
 
 The Unconference track should be timed in the same blocks as the primary talks.
+We use 35 minute blocks with 10 minute breaks,
+so the break is a natural "change places" time for the whole event.
 This naturally groups people who are interested in similar topics together,
 on topics that are often far afield from the primary talk content.
 
@@ -54,9 +56,9 @@ it's important that people can talk about the latest and greatest things.
 
 ## Give attendees ownership
 
-The other important thing is to give attendees ownership of the event,
+The other important value this embodies is to give attendees ownership of the event,
 because this is how you build community and help ensure a more dynamic conference.
-The Unconference, or formalized hallway track, is one place to do that.
+The Unconference is one important place to do that.
 
 But we also want to put some of that on the main stage,
 and that's where [lightning talks](https://www.writethedocs.org/conf/portland/2026/lightning-talks/) come in.
@@ -81,9 +83,7 @@ which I still believe today.
 
 Check out some of the other posts as well:
 
-```{seealso}
 - {doc}`/blog/2017/aug/2/pacman-rule-conferences`
 - {doc}`/blog/2017/dec/2/breaking-cliques-at-events`
 - {doc}`/blog/2019/sep/19/helping-first-time-conference-attendees-with-welcome-wagon`
 - {doc}`/blog/2023/feb/10/we-dont-do-that-here`
-```
