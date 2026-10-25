@@ -13,6 +13,7 @@ extensions = [
     "sphinxext.opengraph",
     "myst_parser",
     "topo_site",
+    "topo_cards",
 ]
 suppress_warnings = ["myst.header"]
 blog_title = "Eric Holscher"
@@ -24,6 +25,8 @@ notfound_urls_prefix = '/'
 ogp_site_url = blog_baseurl
 ogp_image = "https://www.ericholscher.com/_static/img/opengraph.jpg"
 ogp_use_first_image = True
+# Pages without a photo get a share card from _ext/topo_cards.py, so every preview is the large kind.
+ogp_custom_meta_tags = ['<meta name="twitter:card" content="summary_large_image">']
 
 # blog_authors = {
 #     "Eric": ("Eric Holscher", "http://ericholscher.com"),
