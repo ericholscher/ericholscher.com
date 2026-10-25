@@ -19,3 +19,15 @@ python:
       command: sync
       groups:
         - docs
+
+# Search: posts and pages, not the lists of them. Tag, topic, and year pages repeat post titles,
+# so they crowded the top of results. Paths are files in the dirhtml output.
+search:
+  ranking:
+    blog/20*: 2
+  ignore:
+    - search/index.html
+    - 404/index.html
+    - 404.html
+    - genindex/index.html
+    - blog/archive/*
