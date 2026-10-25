@@ -27,7 +27,7 @@ Some of my favorite posts from over the years.
       Comments explain the why, and documentation does more than explain how the code works.
 
    blog/2018/feb/7/the-post-i-never-published
-      A draft from 2016, written while burned out on Read the Docs, shared to talk more openly about it.
+      A draft from 2016, written while close to burn out on Read the Docs, shared to talk more openly about it.
 
    blog/2019/sep/19/helping-first-time-conference-attendees-with-welcome-wagon
       How Write the Docs helps first-time attendees know what to expect, before and during the conference.
