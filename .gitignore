@@ -9,3 +9,4 @@ trips.csv
 photo-skip.json
 .venv/
 __pycache__/
+.skyline-cache/
