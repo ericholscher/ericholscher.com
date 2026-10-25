@@ -57,7 +57,7 @@ Keep that identity. Work within the existing tokens in `topo.css` rather than ad
 - **Section labels:** use `.topo-plaque` (the filled brown plaque) in the content. Sidebar labels (`.topo-side-label`) are lighter on purpose: umber small caps over a short gold rule, since Eric found plaques overbearing there.
 - **Calls to action:** one pattern everywhere. A paper card with a forest top edge (`.topo-cta`) holds one primary `.topo-button`, optionally with a `.topo-button-quiet` beside it. Buttons are 44px tall. (This lands with PR #42.)
 - **The mark:** a diamond blaze with the Newsreader pilcrow as a path, in `layout.html` and `_static/img/favicon.svg`.
-  - The pilcrow is centered geometrically: `translate(21.996 41.33)`.
+  - The pilcrow is centered so its widest points (the flag at top right, the stem foot at bottom right, the bowl at top left) sit the same distance inside the gold line: `translate(20.882 42.118) scale(0.016)`. Centering its bounding box instead pushed the flag through the gold line.
   - `.topo-mark` is nudged up 2.5px so it centers on the letters, not the line box.
   - Eric preferred this original pilcrow mark over the alternatives tried.
 - **Fonts:** the three main fonts are preloaded and use `font-display: optional`. Don't switch back to `swap`; it made every page flash on load.
