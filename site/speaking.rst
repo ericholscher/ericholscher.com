@@ -34,64 +34,111 @@ I am interested in speaking on the following topics:
 Videos
 ------
 
-Here are a few videos of my previous talks.
-Most of my recorded talks, back to 2009, are collected `on PyVideo <https://pyvideo.org/speaker/eric-holscher.html>`_.
+Here are a few videos of my recent talks, with older recordings listed below.
 
-Documenting Django Code in 2022 - DjangoCon US 2022
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Conference introduction and community update
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-How to document a Django project today, with Sphinx and Read the Docs.
-The recording is `on PyVideo <https://pyvideo.org/djangocon-us-2022/documenting-django-code-in-2022.html>`__.
+.. rst-class:: topo-talk-meta
 
-GitHub webcast: Using GitHub for documentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Write the Docs Portland, May 2022
 
-Was featured on a GitHub webcast talking about using GitHub for documentation.
-You can see more information and get the video here:
-
-https://resources.github.com/webcasts/GitHub-writing-documentation-for-your-projects/
+The opening of Write the Docs Portland 2022,
+with an update on the Write the Docs community.
 
 .. raw:: html
 
-	<iframe src="https://player.vimeo.com/video/244950538" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-	<p><a href="https://vimeo.com/244950538">How GitHub Uses GitHub - Writing documentation for your project</a> from <a href="https://vimeo.com/github">GitHub</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+   <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/a6-VYEmV7tM" title="Conference introduction and community update - Write the Docs Portland 2022" frameborder="0" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+   <p class="topo-video-link"><a href="https://www.youtube.com/watch?v=a6-VYEmV7tM">Watch on YouTube</a></p>
 
-Introduction to Sphinx & Read the Docs - Djangocon 2015
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Documenting Django Code in 2022
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-My thoughts on why Documentation is important,
-how Sphinx thinks about documentation,
-and how to use it well.
+.. rst-class:: topo-talk-meta
 
-.. raw:: html 
+DjangoCon US, October 2022
 
-   <iframe width="640" height="360" src="https://www.youtube.com/embed/eWNiwMwMcr4" frameborder="0" allowfullscreen></iframe>
-   <p class="topo-video-link"><a href="https://www.youtube.com/watch?v=eWNiwMwMcr4">Watch on YouTube</a></p>
+How to document a Django project today, with Sphinx and Read the Docs.
 
+.. raw:: html
 
-Documentation as Empathy - Open Source & Feelings
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/mqn0D4xat58" title="Documenting Django Code in 2022 - DjangoCon US 2022" frameborder="0" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+   <p class="topo-video-link"><a href="https://www.youtube.com/watch?v=mqn0D4xat58">Watch on YouTube</a></p>
 
-My thoughts on how Documentation plays a role in the open source world.
+More recordings
+~~~~~~~~~~~~~~~
 
+Most of these are also collected `on PyVideo <https://pyvideo.org/speaker/eric-holscher.html>`__.
 
-.. raw:: html 
+.. rst-class:: topo-media-list
 
-   <iframe width="640" height="360" src="https://www.youtube.com/embed/CvhJG_HfKac" frameborder="0" allowfullscreen></iframe>
-   <p class="topo-video-link"><a href="https://www.youtube.com/watch?v=CvhJG_HfKac">Watch on YouTube</a></p>
+* `Write the Docs Portland 2021 closing <https://www.youtube.com/watch?v=e2Pg98vBM9M>`__
 
+  Write the Docs Portland, April 2021
 
-Documentation as Empathy - Django Birthday
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* `Welcome to Write the Docs Portland 2021 <https://www.youtube.com/watch?v=YkbhW_ntAMc>`__
 
-This talk tells the story of how Documentation was a large part of my entry into the tech world.
-I relate this to other folks who are trying to get into the tech world,
-and how we need to continue to improve documentation to keep them in the industry.
+  Write the Docs Portland, April 2021
 
-.. raw:: html 
+* `Using GitHub for documentation <https://vimeo.com/244950538>`__
 
-   <iframe width="640" height="360" src="https://www.youtube.com/embed/m6F5MQ9prgE" frameborder="0" allowfullscreen></iframe>
-   <p class="topo-video-link"><a href="https://www.youtube.com/watch?v=m6F5MQ9prgE">Watch on YouTube</a></p>
+  GitHub webcast, November 2017
+
+* `Lightning talks, day 3 <https://www.youtube.com/watch?v=yesg-G3QpkM>`__
+
+  DjangoCon US, August 2017
+
+* `Introduction & State of the Docs <https://www.youtube.com/watch?v=2LTsqJdUKiI>`__
+
+  Write the Docs Portland, May 2017
+
+* `Documenting your project with Sphinx & Read the Docs <https://www.youtube.com/watch?v=hM4I58TA72g>`__
+
+  PyCon US, May 2016
+
+* `Introduction & State of the Docs <https://www.youtube.com/watch?v=Fmfs-iYqx5Q>`__
+
+  Write the Docs, May 2016
+
+* `Read the Docs <https://www.youtube.com/watch?v=nwBMMNcTsqo>`__
+
+  PyCaribbean keynote, February 2016
+
+* `Documentation as Empathy <https://www.youtube.com/watch?v=CvhJG_HfKac>`__
+
+  Open Source & Feelings, October 2015
+
+* `Introduction to Sphinx & Read the Docs <https://www.youtube.com/watch?v=eWNiwMwMcr4>`__
+
+  DjangoCon US, September 2015
+
+* `Documentation as Empathy <https://www.youtube.com/watch?v=m6F5MQ9prgE>`__
+
+  Django Birthday, July 2015
+
+* `Introduction <https://www.youtube.com/watch?v=LmjF1PZxuHs>`__
+
+  Write the Docs, May 2015
+
+* `Introduction to Sphinx & Read the Docs <https://www.youtube.com/watch?v=2xU7cL6NE2I>`__
+
+  Open Source Bridge, 2014
+
+* `The story and tech of Read the Docs <https://pyvideo.org/djangocon-us-2011/djangocon-2011--the-story-and-tech-of-read-the-do.html>`__
+
+  DjangoCon US, September 2011
+
+* `Large Problems in Django, Mostly Solved <https://pyvideo.org/djangocon-us-2010/djangocon-2010--large-problems-in-django--mostly-.html>`__
+
+  DjangoCon US, September 2010
+
+* `Getting the most out of your test suite <https://pyvideo.org/djangocon-europe-2010/djangoconeu-ericholschergettingthemostoutofyourte.html>`__
+
+  DjangoCon Europe, May 2010
+
+* `Token testing <https://pyvideo.org/djangocon-us-2009/djangocon-2009--token-testing-talk.html>`__
+
+  DjangoCon US, September 2009
 
 
 Past Events
