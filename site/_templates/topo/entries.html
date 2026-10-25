@@ -29,7 +29,9 @@
   <div class="topo-entry-meta">{{ date(post, '%b %-d, %Y', 'topo-entry-date') }}{{ kind(post) }}</div>
   <div class="topo-entry-body">
     <h3><a href="{{ pathto(post.docname) }}{{ anchor(post) }}">{{ post.title }}</a></h3>
+    {%- if summary %}
     <p class="topo-entry-excerpt">{{ summary }}</p>
+    {%- endif %}
   </div>
 </article>
 {%- endfor %}

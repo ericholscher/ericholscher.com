@@ -245,7 +245,6 @@ div[class^="highlight-"] { margin: 0 0 1.2em; }
 .topo-button:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
 .topo-button-quiet { background: transparent; color: var(--forest); box-shadow: inset 0 0 0 1px var(--forest); }
 .topo-button-quiet:hover { background: rgba(37,90,66,.08); color: var(--forest); }
-.topo-button-small { min-height: 40px; padding: 0 16px; font-size: 14.5px; }
 
 /* ABlog pages (archive, tags, categories) */
 ul.postlist { list-style: none; padding: 0; margin: 0; }
@@ -294,7 +293,6 @@ ul.postlist p.ablog-post-excerpt { font-size: 16px; color: var(--text-2); margin
 .topo-pager-pages a:hover { border-color: var(--sign); color: var(--link-hover); }
 .topo-pager-pages span[aria-current] { background: var(--sign); border-color: var(--sign); color: var(--sign-text); }
 .topo-popular + .topo-recent { margin-top: 44px; }
-.topo-head-links { display: flex; flex-wrap: wrap; gap: 4px 18px; }
 .topo-popular + .topo-recent .topo-recent-head { margin-bottom: 14px; }
 .topo-more-link { font-family: var(--mono); font-size: 12px; border-bottom: 0; }
 .topo-topics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 28px; margin-top: 6px; }
