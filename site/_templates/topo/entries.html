@@ -12,8 +12,9 @@
   <div class="topo-entry-meta">{{ date(post, '%b %-d, %Y', 'topo-entry-date') }}</div>
   <div class="topo-entry-body">
     <h{{ level }}><a href="{{ pathto(post.docname) }}{{ anchor(post) }}">{{ post.title }}</a></h{{ level }}>
-    {%- if summary %}
-    <p class="topo-entry-excerpt">{{ summary }}</p>
+    {#- A post that opens with a photo has an empty text summary: it shows the title alone, not the photo. -#}
+    {%- if summary is not none %}
+    {%- if summary %}<p class="topo-entry-excerpt">{{ summary }}</p>{% endif %}
     {%- else %}
     <div class="topo-entry-excerpt">{{ post.to_html(pagename) }}</div>
     {%- endif %}
