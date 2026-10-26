@@ -166,11 +166,16 @@
       },
       {
         "file": "john-muir-trail-07.jpg",
+        "date": "2026-07-23",
+        "mile": 175
+      },
+      {
+        "file": "john-muir-trail-08.jpg",
         "date": "2026-07-25",
         "mile": 208
       },
       {
-        "file": "john-muir-trail-08.jpg",
+        "file": "john-muir-trail-09.jpg",
         "date": "2026-07-26",
         "mile": 214
       }
