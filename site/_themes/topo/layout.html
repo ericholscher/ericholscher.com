@@ -98,6 +98,11 @@
           </p>
         {%- endif %}
         {{ self.body() }}
+        {#- A year letter (site/adventures/<year>.md) ends with that year's trips and map. -#}
+        {%- set year = pagename[11:] if pagename.startswith('adventures/') else '' %}
+        {%- if year|length == 4 and year.isdigit() %}
+        {% include "topo/year-summary.html" %}
+        {%- endif %}
         {#- Tags sit quietly under the post; the category stays in the dateline above. -#}
         {%- if is_post and post.tags %}
         <p class="topo-post-tags">Tagged {% for tag in post.tags %}<a href="{{ pathto(tag.docname) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
