@@ -1,4 +1,4 @@
-"""The site's own Sphinx hooks: year letters, photo rows, the redirect stubs, and the data files.
+"""The site's own Sphinx hooks: photo rows, the redirect stubs, and the data files.
 
 conf.py is for settings only. Site data and copy live in their own files: _data/ for the
 Adventures timeline, map, topics, and favorite posts, and redirects.yml at the repo root.
@@ -13,7 +13,6 @@ import yaml
 from sphinx.util import logging
 
 from docutils import nodes
-from docutils.parsers.rst import Directive
 
 import topo_trips
 
@@ -48,27 +47,6 @@ def topo_redirect_pages(app):
             if f"{new}/index" in docs:
                 new = f"{new}/index"
             yield (old, {"redirect": new or app.config.root_doc}, "topo/redirect.html")
-
-
-# Year letters: site/adventures/<year>.md, one story per year with photos for each month.
-# A letter is an ABlog post (unlisted draft until its post directive has a date), and the
-# adventure-summary directive marks where the year's trips and map are filled in.
-TOPO_YEAR_LETTER = re.compile(r"^adventures/(\d{4})$")
-TOPO_SUMMARY_SLOT = '<div class="topo-year-summary-slot"></div>'
-
-
-class AdventureSummary(Directive):
-    """The year's trips and a map of its places, from hikes.json and places.json."""
-
-    def run(self):
-        return [nodes.raw("", TOPO_SUMMARY_SLOT, format="html")]
-
-
-def topo_year_summary(app, pagename, templatename, context, doctree):
-    m = TOPO_YEAR_LETTER.match(pagename)
-    if m and TOPO_SUMMARY_SLOT in context.get("body", ""):
-        html = app.builder.templates.render("topo/year-summary.html", {**context, "year": m.group(1)})
-        context["body"] = context["body"].replace(TOPO_SUMMARY_SLOT, html, 1)
 
 
 # Excerpts on the home page: a post's opening text, ended at the last full sentence that fits,
@@ -134,8 +112,6 @@ def setup(app):
     topo_build_stamp(app)
     app.connect("html-page-context", topo_data_context)
     app.connect("html-collect-pages", topo_redirect_pages)
-    app.add_directive("adventure-summary", AdventureSummary)
-    app.connect("html-page-context", topo_year_summary)
     app.connect("doctree-resolved", topo_photo_rows)
     app.connect("builder-inited", topo_template_filters)
     app.connect("builder-inited", topo_trip_log)
