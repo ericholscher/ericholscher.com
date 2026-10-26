@@ -53,6 +53,14 @@ def test_every_entry_and_place_has_one_home(built):
         assert {p["name"] for p in yr["places"]} <= in_trips | {p["name"] for p in yr["other"]}
 
 
+def test_trip_dates_come_from_their_entries():
+    entry = lambda when, year: {"when": when, "year": year}
+    assert topo_trips.span([entry("May 2025", "2025"), entry("July and August 2025", "2025"), entry("September 2025", "2025")]) == "May to September 2025"
+    assert topo_trips.span([entry("August 2021", "2021"), entry("September 2021", "2021")]) == "August and September 2021"
+    assert topo_trips.span([entry("December 2018", "2018"), entry("March 2019", "2019")]) == "December 2018 to March 2019"
+    assert topo_trips.span([entry("June 2012", "2012"), entry("Summer 2012", "2012")]) == ""
+
+
 def test_list_shows_every_trip_and_entry_once(page, site_url, built):
     page.goto(f"{site_url}adventures/")
     ids = page.eval_on_selector_all("details.topo-trip", "ds => ds.map(d => d.id)")
