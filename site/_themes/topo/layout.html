@@ -106,10 +106,7 @@
       {#- Site-wide copy sits outside role="main" so Read the Docs search and file diffs see only the page's own content. -#}
       {%- if is_post %}
       <aside class="topo-cta topo-pitch" aria-label="Reply">
-        <p>Hi, I’m Eric. I work on communities in the world of software documentation. I’m always happy to hear what you think of this one.</p>
-        <p class="topo-cta-actions">
-          <a class="topo-button" href="mailto:eric@ericholscher.com?subject={{ ('Re: ' ~ title|striptags)|urlencode }}">Reply by email</a>
-        </p>
+        <p>Hi, I’m Eric. I work on communities in the world of software documentation. If you have thoughts on this post, <a href="mailto:eric@ericholscher.com?subject={{ ('Re: ' ~ title|striptags)|urlencode }}">email me</a>.</p>
       </aside>
       {%- set this = ablog[pagename] %}
       {%- if this.date and (this.prev or this.next) %}
