@@ -592,7 +592,9 @@ html.topo-map-open, html.topo-map-open body { overflow: hidden; }
 .topo-trail-canvas:fullscreen .topo-trail-live { border: 0; border-radius: 0; }
 .topo-trail-3d { position: absolute; top: 10px; left: 10px; z-index: 2; min-width: 44px; min-height: 32px; padding: 0 10px; font-family: var(--mono); font-size: 12px; letter-spacing: .08em; color: var(--sign-text); background: var(--sign); border: 0; border-radius: 3px; box-shadow: inset 0 0 0 1px var(--sign-2), inset 0 0 0 2px rgba(219,166,62,.55); cursor: pointer; }
 .topo-trail-3d[aria-pressed="true"] { background: var(--forest); }
-.topo-trail-map-photo { display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; padding: 0 4px; border: 0; border-radius: 3px; background: var(--sign); color: var(--sign-text); font-family: var(--mono); font-size: 12px; line-height: 1; cursor: pointer; box-shadow: inset 0 0 0 1px rgba(219,166,62,.55), 0 0 0 2px var(--paper); }
+.topo-trail-map-photo { display: block; width: 12px; height: 12px; padding: 0; border: 0; border-radius: 2px; background: var(--sign); cursor: pointer; box-shadow: inset 0 0 0 1px rgba(219,166,62,.55), 0 0 0 2px var(--paper); }
+/* A bigger target than it looks, for a finger. */
+.topo-trail-map-photo::after { content: ""; position: absolute; inset: -12px; }
 .topo-trail-map-photo:hover, .topo-trail-map-photo:focus-visible { background: var(--link-hover); }
 .topo-trail-cursor { width: 12px; height: 12px; border-radius: 50%; background: var(--blaze); box-shadow: 0 0 0 2px var(--paper); pointer-events: none; }
 .topo-trail-cursor::after { content: attr(data-label); position: absolute; left: 16px; top: 50%; transform: translateY(-50%); white-space: nowrap; font-family: var(--mono); font-size: 11px; color: var(--ink); background: var(--paper); padding: 2px 5px; border-radius: 2px; box-shadow: 0 1px 3px rgba(51,42,32,.2); }
@@ -612,15 +614,20 @@ html.topo-map-open, html.topo-map-open body { overflow: hidden; }
 .topo-trail-key-pass::before { border: solid transparent; border-width: 0 5px 9px; border-bottom-color: var(--sign); vertical-align: 0; }
 .topo-trail-key-night::before { width: 8px; height: 8px; border-radius: 50%; background: var(--sign-gold); box-shadow: 0 0 0 1.5px var(--sign); vertical-align: 0; }
 .body .topo-trail-photo-pin { transform: translate(-50%, -50%); z-index: 1; }
-.topo-trail-photo-pin a, .topo-trail-photo-num, .topo-trail-key-photo::before { display: inline-flex; align-items: center; justify-content: center; min-width: 18px; height: 18px; padding: 0 3px; box-sizing: border-box; border-radius: 3px; background: var(--sign); color: var(--sign-text); font-family: var(--mono); font-size: 11px; line-height: 1; text-decoration: none; box-shadow: inset 0 0 0 1px rgba(219,166,62,.55), 0 0 0 1.5px var(--paper); }
+.topo-trail-photo-pin a, .topo-trail-key-photo::before { display: block; width: 10px; height: 10px; border-radius: 2px; background: var(--sign); box-shadow: inset 0 0 0 1px rgba(219,166,62,.55), 0 0 0 1.5px var(--paper); }
 .topo-trail-photo-pin a:hover { background: var(--link-hover); }
-.topo-trail-photo-num { margin-right: 8px; vertical-align: 1px; }
-.topo-trail-key-photo::before { content: ""; min-width: 12px; height: 12px; vertical-align: -1px; }
-.topo-trail-photos figure { scroll-margin-top: 24px; }
-.topo-trail-photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 0 0 32px; }
-.body .topo-trail-photos figure { margin: 0; }
-.body .topo-trail-photos img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
-@media (max-width: 560px) { .topo-trail-photos { grid-template-columns: minmax(0, 1fr); } }
+.topo-trail-key-photo::before { content: ""; display: inline-block; vertical-align: -1px; }
+/* The photo viewer (trail-map.js): one photo at a time, over the page. */
+.topo-trail-viewer { max-width: min(1100px, 94vw); max-height: 94vh; padding: 12px 12px 8px; border: 1px solid var(--rule-strong); border-radius: 3px; background: var(--paper); color: var(--ink); box-shadow: 0 8px 30px rgba(51,42,32,.35); }
+.topo-trail-viewer::backdrop { background: rgba(51,42,32,.7); }
+.topo-trail-viewer figure { margin: 0; }
+.topo-trail-viewer img { display: block; max-width: 100%; max-height: calc(94vh - 76px); width: auto; height: auto; margin: 0 auto; border-radius: 2px; }
+.topo-trail-viewer figcaption { margin: 8px 132px 0 0; min-height: 44px; display: flex; align-items: center; font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.topo-trail-viewer button { position: absolute; bottom: 8px; width: 44px; height: 44px; border: 1px solid var(--rule-strong); border-radius: 3px; background: var(--paper); color: var(--sign); font-size: 20px; line-height: 1; cursor: pointer; }
+.topo-trail-viewer button:hover, .topo-trail-viewer button:focus-visible { background: var(--paper-2); }
+.topo-trail-viewer-prev { right: 108px; }
+.topo-trail-viewer-next { right: 60px; }
+.topo-trail-viewer-close { right: 12px; }
 .topo-trail-profile { margin: 0 0 32px; }
 .topo-trail-plot { position: relative; height: 200px; margin-top: 40px; border-bottom: 1px solid var(--rule-strong); }
 .topo-trail-plot svg { position: absolute; inset: 0; width: 100%; height: 100%; }

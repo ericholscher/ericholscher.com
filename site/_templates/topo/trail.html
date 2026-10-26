@@ -34,7 +34,7 @@
       <li class="topo-trail-night" style="left: {{ n.left }}%; top: {{ n.top }}%" title="Night {{ n.night }}{% if n.day %}, {{ n.day }}{% endif %}, mile {{ n.mile }}"><span class="topo-visually-hidden">Night {{ n.night }}</span></li>
       {%- endfor %}
       {%- for p in trail.photos if p.left is defined %}
-      <li class="topo-trail-photo-pin" style="left: {{ p.left }}%; top: {{ p.top }}%"><a href="#photo-{{ p.n }}" title="Photo {{ p.n }}, {{ p.day }}, mile {{ p.mile }}">{{ p.n }}</a></li>
+      <li class="topo-trail-photo-pin" style="left: {{ p.left }}%; top: {{ p.top }}%"><a href="{{ pathto('_static/photos/' ~ trail.slug ~ '/' ~ p.file, 1) }}" data-photo="{{ p.n }}" title="Photo, {{ p.day }}, mile {{ p.mile }}"><span class="topo-visually-hidden">Photo, {{ p.day }}</span></a></li>
       {%- endfor %}
       {%- for s in trail.map.spurs %}
       <li class="topo-trail-place is-spur is-{{ s.side }}" style="left: {{ s.left }}%; top: {{ s.top }}%">{{ s.name }}</li>
@@ -81,21 +81,10 @@
     <figcaption>Feet above sea level, by trail mile{% if trail.nights %}. The ticks along the bottom are nights{% endif %}.</figcaption>
   </figure>
 
-  {%- if trail.photos %}
-  <h2 class="topo-plaque">Photos</h2>
-  <div class="topo-trail-photos">
-    {%- for p in trail.photos %}
-    <figure id="photo-{{ p.n }}">
-      <a href="{{ pathto('_static/photos/' ~ trail.slug ~ '/' ~ p.file, 1) }}"><img src="{{ pathto('_static/photos/' ~ trail.slug ~ '/' ~ p.file, 1) }}" alt="{{ p.alt or ('On the trail, ' ~ p.day if p.day else 'On the trail') }}" loading="lazy"></a>
-      <figcaption>{% if p.left is defined %}<span class="topo-trail-photo-num">{{ p.n }}</span>{% endif %}{{ p.day }}{% if p.mile is defined and p.mile is not none %} &middot; mile {{ p.mile }}{% endif %}</figcaption>
-    </figure>
-    {%- endfor %}
-  </div>
-  {%- endif %}
-
   {%- if trail.days %}
-  {#- One list of the walk, day by day: each day's miles, the passes and side trips on it, its photos,
-      and where the night was. Hovering a day lights up its stretch on the map and the profile. -#}
+  {#- One list of the walk, day by day: each day's miles, the passes and side trips on it, its photos
+      (small, opening full size in trail-map.js's viewer, or as the image without it), and where the
+      night was. Hovering a day lights up its stretch on the map and the profile. -#}
   <h2 class="topo-plaque">Day by day</h2>
   <ol class="topo-trail-days">
     {%- for d in trail.days %}
@@ -117,13 +106,19 @@
       </ul>
       {%- if d.photos %}
       <p class="topo-trail-day-photos">
-        {%- for p in d.photos %}<a href="#photo-{{ p.n }}"><img src="{{ pathto('_static/photos/' ~ trail.slug ~ '/' ~ p.file, 1) }}" alt="Photo {{ p.n }}" loading="lazy" width="72" height="54"></a>{% endfor %}
+        {%- for p in d.photos %}<a href="{{ pathto('_static/photos/' ~ trail.slug ~ '/' ~ p.file, 1) }}" data-photo="{{ p.n }}"><img src="{{ pathto('_static/photos/' ~ trail.slug ~ '/' ~ p.file, 1) }}" alt="{{ p.alt or ('Photo from ' ~ p.day) }}" loading="lazy" width="72" height="54"></a>{% endfor %}
       </p>
       {%- endif %}
     </li>
     {%- endfor %}
   </ol>
-  {%- elif trail.passes %}
+  {%- else %}
+  {%- if trail.photos %}
+  <p class="topo-trail-day-photos">
+    {%- for p in trail.photos %}<a href="{{ pathto('_static/photos/' ~ trail.slug ~ '/' ~ p.file, 1) }}" data-photo="{{ p.n }}"><img src="{{ pathto('_static/photos/' ~ trail.slug ~ '/' ~ p.file, 1) }}" alt="{{ p.alt or ('Photo from ' ~ p.day if p.day else 'On the trail') }}" loading="lazy" width="72" height="54"></a>{% endfor %}
+  </p>
+  {%- endif %}
+  {%- if trail.passes %}
   <h2 class="topo-plaque">Passes</h2>
   <table class="topo-trail-table">
     <thead><tr><th scope="col">Pass</th><th scope="col">Mile</th><th scope="col">Feet</th></tr></thead>
@@ -133,6 +128,7 @@
       {%- endfor %}
     </tbody>
   </table>
+  {%- endif %}
   {%- endif %}
 
   {%- if h %}

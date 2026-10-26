@@ -3,11 +3,60 @@
    The page already shows the trail on a static relief. This swaps in a map you can pan, zoom, and tilt
    into 3D: MapLibre (vendored in _static/vendor), with OpenFreeMap's vector tiles of OpenStreetMap and
    USGS terrain from the AWS Terrain Tiles, styled in the site's colors. The route, nights, passes, and
-   photos come from the page's own data. Hovering the elevation profile moves a marker along the map,
+   photos come from the page's own data, and the photos open in the viewer below. Hovering the elevation profile moves a marker along the map,
    and hovering the route moves one along the profile.
 
    It only replaces the static map once the map's tiles have loaded. Without WebGL, or if the tiles
    fail or are slow, the static map stays, so the page never shows a blank box. */
+(function () {
+  'use strict';
+  // The photo viewer: the day list's thumbnails and the map's photo pins open the photo full size in
+  // a dialog, with the previous and next photos a key or tap away. Without it they link to the image.
+  var figure = document.querySelector('.topo-trail-map');
+  var dataEl = figure && figure.querySelector('.topo-trail-data');
+  if (!dataEl || typeof HTMLDialogElement !== 'function') return;
+  var photos = JSON.parse(dataEl.textContent).photos;
+  var base = figure.getAttribute('data-static');
+  if (!photos.length) return;
+
+  var dialog = document.createElement('dialog');
+  dialog.className = 'topo-trail-viewer';
+  dialog.innerHTML = '<figure><img alt=""><figcaption></figcaption></figure>' +
+    '<button type="button" class="topo-trail-viewer-prev" aria-label="Previous photo">&larr;</button>' +
+    '<button type="button" class="topo-trail-viewer-next" aria-label="Next photo">&rarr;</button>' +
+    '<button type="button" class="topo-trail-viewer-close" aria-label="Close">&times;</button>';
+  document.body.appendChild(dialog);
+  var img = dialog.querySelector('img'), caption = dialog.querySelector('figcaption'), current = 0;
+
+  function show(i) {
+    current = (i + photos.length) % photos.length;
+    var ph = photos[current];
+    img.src = base + ph.file;
+    img.alt = 'Photo from ' + ph.day;
+    caption.textContent = ph.day + (ph.mile != null ? ' · mile ' + ph.mile : '') + ' · ' + (current + 1) + ' of ' + photos.length;
+  }
+  function open(n) {
+    show(n - 1);
+    if (!dialog.open) dialog.showModal();
+  }
+  window.topoTrailPhoto = open;
+
+  dialog.querySelector('.topo-trail-viewer-prev').addEventListener('click', function () { show(current - 1); });
+  dialog.querySelector('.topo-trail-viewer-next').addEventListener('click', function () { show(current + 1); });
+  dialog.querySelector('.topo-trail-viewer-close').addEventListener('click', function () { dialog.close(); });
+  dialog.addEventListener('click', function (e) { if (e.target === dialog) dialog.close(); });
+  dialog.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') show(current - 1);
+    if (e.key === 'ArrowRight') show(current + 1);
+  });
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest && e.target.closest('a[data-photo]');
+    if (!link || e.metaKey || e.ctrlKey || e.shiftKey) return;
+    e.preventDefault();
+    open(+link.getAttribute('data-photo'));
+  });
+})();
+
 (function () {
   'use strict';
   var figure = document.querySelector('.topo-trail-map');
@@ -228,16 +277,18 @@
       hoverText('nights', function (p) { return '<strong>Night ' + p.night + '</strong> · ' + p.day + ' · mile ' + p.mile; });
       hoverText('passes', function (p) { return '<strong>' + p.name + '</strong> · mile ' + Math.round(p.mile); });
 
-      // Photos: numbered pins on the route; a click opens the photo.
+      // Photos: small pins on the route. Hovering one previews the photo; a click opens the viewer.
       data.photos.forEach(function (ph) {
         if (ph.lon == null) return;
         var pin = document.createElement('button');
-        pin.type = 'button'; pin.className = 'topo-trail-map-photo'; pin.textContent = ph.n;
-        pin.setAttribute('aria-label', 'Photo ' + ph.n + ', ' + ph.day);
-        var card = new maplibregl.Popup({ offset: 14, maxWidth: '280px', className: 'topo-trail-popup is-photo' }).setHTML(
-          '<a href="#photo-' + ph.n + '"><img src="' + base + ph.file + '" alt="Photo ' + ph.n + '" loading="lazy"></a>' +
-          '<span>' + ph.day + (ph.mile != null ? ' · mile ' + ph.mile : '') + '</span>');
-        new maplibregl.Marker({ element: pin }).setLngLat([ph.lon, ph.lat]).setPopup(card).addTo(map);
+        pin.type = 'button'; pin.className = 'topo-trail-map-photo';
+        pin.setAttribute('aria-label', 'Photo from ' + ph.day);
+        var preview = new maplibregl.Popup({ closeButton: false, offset: 10, maxWidth: '200px', className: 'topo-trail-popup is-photo' }).setHTML(
+          '<img src="' + base + ph.file + '" alt="" loading="lazy"><span>' + ph.day + (ph.mile != null ? ' · mile ' + ph.mile : '') + '</span>');
+        pin.addEventListener('mouseenter', function () { preview.setLngLat([ph.lon, ph.lat]).addTo(map); });
+        pin.addEventListener('mouseleave', function () { preview.remove(); });
+        pin.addEventListener('click', function () { preview.remove(); if (window.topoTrailPhoto) window.topoTrailPhoto(ph.n); });
+        new maplibregl.Marker({ element: pin }).setLngLat([ph.lon, ph.lat]).addTo(map);
       });
     });
 
