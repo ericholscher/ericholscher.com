@@ -86,6 +86,30 @@ Each row lists the trip's main towns in ``towns``, with days photographed in eac
 ``--towns`` (most per trip, default 3) and ``--town-share`` (a town with this share of the photos is listed even if it never led a day, default 0.2).
 All three files are gitignored, so those places stay on your machine. The script uses only the standard library.
 
+Trail pages
+-----------
+
+Each long trail can have its own page (``site/trails/<trail>.rst``, with a ``.. trail:: <trail>`` directive):
+the route on a shaded relief map, its elevation profile, the passes, and the nights.
+
+1. Add the trail to ``site/_data/trails.json``: its ``hikes.json`` entry, the OpenStreetMap route
+   relations it followed (look them up on `Waymarked Trails <https://hiking.waymarkedtrails.org/>`_),
+   and where the walk started and ended. ``spurs`` are side trails drawn but not counted.
+2. Trace the route, its elevation, and the passes on it::
+
+       uv run --group photos python scripts/trail_routes.py
+
+   This writes ``site/_data/trail_routes.json`` and ``site/_static/trails/<trail>-relief.webp``. The route is
+   the public trail from OpenStreetMap, never a GPS track.
+3. Add the nights from your photos, as trail miles (no coordinates are printed or written)::
+
+       python3 scripts/photo_trips.py photo-places.json --nights john-muir-trail
+       python3 scripts/photo_trips.py photo-places.json --nights john-muir-trail --write
+
+   Or type them into ``trails.json`` by hand: ``{"night": 1, "date": "2026-07-01", "mile": 12}``,
+   or ``"town"`` instead of ``"mile"`` for a night off the trail.
+4. Point the ``hikes.json`` entry's ``link`` at the page.
+
 Dependencies live in ``pyproject.toml`` and are pinned in ``uv.lock``; Read the Docs installs the ``docs`` group with uv.
 To build locally::
 

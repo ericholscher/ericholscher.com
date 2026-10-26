@@ -1,0 +1,101 @@
+{#- A long trail's page: the route on a relief map, its elevation profile, the passes, and the nights.
+    _ext/topo_site.py fills this in where a page has the trail directive; `trail` is built by
+    _ext/topo_trails.py from trails.json, trail_routes.json (scripts/trail_routes.py), and the trail's
+    hikes.json entry. Labels and markers are HTML placed by percentage over the drawings, so they keep
+    their size on a phone. Nights are trail miles, never campsites. -#}
+{%- set h = trail.hike %}{% set b = trail.map.box %}
+{%- macro feet(n) %}{{ "{:,}".format(n) }}{% endmacro %}
+<div class="topo-trail">
+  {%- if h %}
+  <p class="topo-tl-meta"><a class="topo-kind topo-kind-{{ h.kind }}" href="{{ pathto('adventures') }}#{{ h.kind }}">{{ h.kind|replace("-", " ") }}</a>{{ h.when }}{% if h.where %} &middot; {{ h.where }}{% endif %}</p>
+  {%- if h.note %}<p class="topo-trail-note">{{ h.note }}</p>{% endif %}
+  {%- endif %}
+  <p class="topo-trail-facts">{{ trail.miles|round|int }} miles from {{ trail.start.name }} to {{ trail.end.name }} on the mapped trail{% if trail.high %}, over {{ trail.passes|length }} named passes. The highest is {{ trail.high.name }}, {{ feet(trail.high.feet) }} feet{% endif %}.</p>
+
+  <figure class="topo-trail-map" style="aspect-ratio: {{ b[2] }} / {{ b[3] }}">
+    <img src="{{ pathto('_static/trails/' ~ trail.slug ~ '-relief.webp', 1) }}" alt="" width="{{ b[2]|round|int }}" height="{{ b[3]|round|int }}">
+    <svg viewBox="{{ b|join(' ') }}" role="img" aria-label="Map of the route from {{ trail.start.name }} to {{ trail.end.name }}">
+      {%- for s in trail.map.spurs %}
+      <path class="topo-trail-spur" d="{{ s.line }}"><title>{{ s.name }}, {{ s.miles }} miles off the route</title></path>
+      {%- endfor %}
+      <path class="topo-trail-halo" d="{{ trail.map.line }}"/>
+      <path class="topo-trail-line" d="{{ trail.map.line }}"/>
+    </svg>
+    <ul class="topo-trail-marks">
+      {%- for p in trail.passes %}
+      <li class="topo-trail-pass" style="left: {{ p.left }}%; top: {{ p.top }}%" title="{{ p.name }}, {{ feet(p.feet) }} feet"><span class="topo-visually-hidden">{{ p.name }}</span></li>
+      {%- endfor %}
+      {%- for n in trail.nights if n.left is defined %}
+      <li class="topo-trail-night" style="left: {{ n.left }}%; top: {{ n.top }}%" title="Night {{ n.night }}{% if n.day %}, {{ n.day }}{% endif %}, mile {{ n.mile }}"><span class="topo-visually-hidden">Night {{ n.night }}</span></li>
+      {%- endfor %}
+      {%- for s in trail.map.spurs %}
+      <li class="topo-trail-place is-spur is-{{ s.side }}" style="left: {{ s.left }}%; top: {{ s.top }}%">{{ s.name }}</li>
+      {%- endfor %}
+      <li class="topo-trail-place is-end is-{{ trail.start.side }}" style="left: {{ trail.start.left }}%; top: {{ trail.start.top }}%">{{ trail.start.name }}</li>
+      <li class="topo-trail-place is-end is-{{ trail.end.side }}" style="left: {{ trail.end.left }}%; top: {{ trail.end.top }}%">{{ trail.end.name }}</li>
+    </ul>
+    <figcaption>
+      <span class="topo-trail-key topo-trail-key-route">The route</span>
+      {%- if trail.passes %}<span class="topo-trail-key topo-trail-key-pass">Pass</span>{% endif %}
+      {%- if trail.nights %}<span class="topo-trail-key topo-trail-key-night">Night</span>{% endif %}
+      {%- for s in trail.map.spurs %}<span class="topo-trail-key topo-trail-key-spur">To {{ s.name }}, not counted</span>{% endfor %}
+    </figcaption>
+  </figure>
+
+  <h2 class="topo-plaque">Elevation</h2>
+  {%- set pr = trail.profile %}
+  <figure class="topo-trail-profile">
+    <div class="topo-trail-plot">
+      <svg viewBox="0 0 {{ pr.w }} {{ pr.h }}" preserveAspectRatio="none" role="img" aria-label="Elevation along the route, from {{ feet(pr.floor) }} to {{ feet(pr.top) }} feet">
+        <path class="topo-trail-ground" d="{{ pr.d }}"/>
+        <path class="topo-trail-ridge" d="{{ pr.line }}"/>
+      </svg>
+      <ul class="topo-trail-grid" aria-hidden="true">
+        {%- for g in pr.grid %}<li style="top: {{ g.top }}%"><span>{{ feet(g.feet) }}</span></li>{% endfor %}
+      </ul>
+      <ul class="topo-trail-marks" aria-hidden="true">
+        {%- for p in trail.passes %}
+        <li class="topo-trail-pass is-row{{ p.row }}" style="left: {{ p.pct }}%; top: {{ 100 * (1 - (p.feet - pr.floor) / (pr.top - pr.floor)) }}%" title="{{ p.name }}, {{ feet(p.feet) }} feet"><span class="topo-trail-pass-name">{{ p.name|replace(" Pass", "") }}</span></li>
+        {%- endfor %}
+        {%- for n in trail.nights if n.pct is defined %}
+        <li class="topo-trail-night" style="left: {{ n.pct }}%" title="Night {{ n.night }}{% if n.day %}, {{ n.day }}{% endif %}, mile {{ n.mile }}"></li>
+        {%- endfor %}
+      </ul>
+    </div>
+    <ul class="topo-trail-axis" aria-hidden="true">
+      {%- for t in pr.ticks %}<li style="left: {{ t.pct }}%">{{ t.mile }}{% if loop.first %} mi{% endif %}</li>{% endfor %}
+    </ul>
+    <figcaption>Feet above sea level, by trail mile{% if trail.nights %}. The ticks along the bottom are nights{% endif %}.</figcaption>
+  </figure>
+
+  {%- if trail.passes %}
+  <h2 class="topo-plaque">Passes</h2>
+  <table class="topo-trail-table">
+    <thead><tr><th scope="col">Pass</th><th scope="col">Mile</th><th scope="col">Feet</th></tr></thead>
+    <tbody>
+      {%- for p in trail.passes %}
+      <tr{% if p is sameas trail.high %} class="is-high"{% endif %}><th scope="row">{{ p.name }}</th><td>{{ p.mile|round|int }}</td><td>{{ feet(p.feet) }}</td></tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+  {%- endif %}
+
+  {%- if trail.nights %}
+  <h2 class="topo-plaque">Nights</h2>
+  <table class="topo-trail-table">
+    <thead><tr><th scope="col">Night</th><th scope="col">Date</th><th scope="col">Where</th></tr></thead>
+    <tbody>
+      {%- for n in trail.nights %}
+      <tr><th scope="row">{{ n.night }}</th><td>{{ n.day }}</td><td>{% if n.town %}{{ n.town }}{% elif n.mile is not none and n.mile is defined %}Mile {{ n.mile }}{% endif %}</td></tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+  {%- endif %}
+
+  {%- if h %}
+  <p class="topo-trail-links">
+    {%- if h.trip %}<a href="{{ pathto('adventures') }}#{{ h.trip }}">On the Adventures page &rarr;</a>{% endif %}
+  </p>
+  {%- endif %}
+  <p class="topo-trail-credit">Route and pass elevations from <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, under the ODbL. Terrain from USGS 3DEP elevation data, via Terrain Tiles.</p>
+</div>

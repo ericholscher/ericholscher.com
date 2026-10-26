@@ -11,3 +11,4 @@ photo-skip.json
 __pycache__/
 .skyline-cache/
 .trip-maps-cache/
+.trail-cache/

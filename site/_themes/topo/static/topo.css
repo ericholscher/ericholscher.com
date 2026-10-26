@@ -554,6 +554,72 @@ html.topo-map-open, html.topo-map-open body { overflow: hidden; }
 .topo-map.is-expanded .topo-map-readout { margin: 0; }
 .topo-map.is-expanded .topo-map-legend { margin: 0; }
 
+/* Trail pages (trails/<trail>): the route on a shaded relief, its elevation profile, then passes and nights.
+   Markers and labels are HTML placed by percentage over the drawings, so they keep their size at any width. */
+.body:has(.topo-trail) { max-width: none; }
+.topo-trail { max-width: 780px; }
+.body .topo-trail-note, .body .topo-trail-facts { max-width: var(--measure); margin: 0 0 12px; }
+.body .topo-trail-note { color: var(--text-2); }
+.body .topo-trail-facts { font-size: 15px; color: var(--text-2); margin-bottom: 20px; }
+.topo-trail-map { position: relative; margin: 0 0 32px; }
+.body .topo-trail-map img, .topo-trail-map img { display: block; width: 100%; height: auto; margin: 0; border: 1px solid var(--rule-strong); border-radius: 3px; }
+.topo-trail-map svg { position: absolute; top: 0; left: 0; width: 100%; height: auto; aspect-ratio: inherit; overflow: visible; }
+.topo-trail-halo, .topo-trail-line, .topo-trail-spur { fill: none; stroke-linejoin: round; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+.topo-trail-halo { stroke: var(--paper); stroke-width: 6px; opacity: .85; }
+.topo-trail-line { stroke: var(--forest); stroke-width: 3px; }
+.topo-trail-spur { stroke: var(--sign); stroke-width: 2px; stroke-dasharray: 4 4; }
+.body .topo-trail-marks { list-style: none; margin: 0; padding: 0; position: absolute; inset: 0; pointer-events: none; }
+.body .topo-trail-map .topo-trail-marks { bottom: auto; aspect-ratio: inherit; }
+.body .topo-trail-marks li { position: absolute; margin: 0; pointer-events: auto; }
+.topo-trail-pass { width: 0; height: 0; transform: translate(-5px, -7px); border: solid transparent; border-width: 0 5px 9px; border-bottom-color: var(--sign); }
+.topo-trail-night { width: 8px; height: 8px; transform: translate(-50%, -50%); border-radius: 50%; background: var(--sign-gold); box-shadow: 0 0 0 1.5px var(--sign); }
+.body .topo-trail-place { transform: translate(10px, -50%); font-family: var(--mono); font-size: 12px; line-height: 1.3; color: var(--ink); white-space: nowrap; text-shadow: 0 0 3px var(--paper), 0 0 3px var(--paper), 0 0 2px var(--paper); }
+.body .topo-trail-place.is-left { transform: translate(calc(-100% - 10px), -50%); }
+.body .topo-trail-place.is-below { transform: translate(-50%, 10px); }
+.body .topo-trail-place.is-above { transform: translate(-50%, calc(-100% - 10px)); }
+.body .topo-trail-place.is-end::before { content: ""; position: absolute; top: 50%; width: 9px; height: 9px; border-radius: 50%; background: var(--forest); box-shadow: 0 0 0 2px var(--paper); }
+.body .topo-trail-place.is-end.is-right::before { left: -14px; transform: translateY(-50%); }
+.body .topo-trail-place.is-end.is-left::before { right: -14px; transform: translateY(-50%); }
+.body .topo-trail-place.is-end.is-below::before { left: 50%; top: -10px; transform: translate(-50%, -50%); }
+.body .topo-trail-place.is-end.is-above::before { left: 50%; top: auto; bottom: -10px; transform: translate(-50%, 50%); }
+.body .topo-trail-place.is-spur { color: var(--sign); }
+.topo-trail-map figcaption { display: flex; flex-wrap: wrap; gap: 4px 18px; }
+.topo-trail-key::before { content: ""; display: inline-block; margin-right: 6px; vertical-align: 2px; }
+.topo-trail-key-route::before { width: 16px; height: 3px; background: var(--forest); }
+.topo-trail-key-spur::before { width: 16px; border-top: 2px dashed var(--sign); }
+.topo-trail-key-pass::before { border: solid transparent; border-width: 0 5px 9px; border-bottom-color: var(--sign); vertical-align: 0; }
+.topo-trail-key-night::before { width: 8px; height: 8px; border-radius: 50%; background: var(--sign-gold); box-shadow: 0 0 0 1.5px var(--sign); vertical-align: 0; }
+.topo-trail-profile { margin: 0 0 32px; }
+.topo-trail-plot { position: relative; height: 200px; margin-top: 40px; border-bottom: 1px solid var(--rule-strong); }
+.topo-trail-plot svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.topo-trail-ground { fill: var(--paper-2); }
+.topo-trail-ridge { fill: none; stroke: var(--sign); stroke-width: 1.5px; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
+.body .topo-trail-grid { list-style: none; margin: 0; padding: 0; position: absolute; inset: 0; }
+.body .topo-trail-grid li { position: absolute; left: 0; right: 0; margin: 0; border-top: 1px dashed var(--rule); font-family: var(--mono); font-size: 11px; line-height: 1.2; color: var(--muted); padding-top: 3px; }
+.body .topo-trail-grid li span { background: color-mix(in srgb, var(--paper) 80%, transparent); padding: 1px 3px 1px 0; }
+.body .topo-trail-plot .topo-trail-pass { transform: translate(-5px, -9px); }
+.topo-trail-pass-name { position: absolute; bottom: 14px; left: 5px; transform: translateX(-50%); font-family: var(--mono); font-size: 11px; line-height: 14px; color: var(--muted); white-space: nowrap; }
+.body .topo-trail-pass.is-row1 .topo-trail-pass-name { bottom: 30px; }
+.topo-trail-pass-name::after { content: ""; position: absolute; left: 50%; top: 14px; height: 2px; border-left: 1px solid var(--rule-strong); }
+.topo-trail-pass.is-row1 .topo-trail-pass-name::after { height: 18px; }
+.body .topo-trail-plot .topo-trail-night { top: auto; bottom: 0; width: 2px; height: 8px; transform: translateX(-50%); border-radius: 0; box-shadow: none; background: var(--sign); }
+.body .topo-trail-axis { list-style: none; position: relative; height: 18px; margin: 0; padding: 0; font-family: var(--mono); font-size: 11px; color: var(--muted); }
+.body .topo-trail-axis li { position: absolute; top: 4px; margin: 0; font-size: 11px; line-height: 1.3; transform: translateX(-50%); white-space: nowrap; }
+.body .topo-trail-axis li:first-child { transform: none; }
+.topo-trail-table { border-collapse: collapse; width: 100%; max-width: 480px; margin: 0 0 32px; font-size: 15px; font-variant-numeric: tabular-nums; }
+.topo-trail-table th, .topo-trail-table td { border-bottom: 1px solid var(--rule); padding: 7px 10px 7px 0; text-align: left; font-weight: 400; }
+.topo-trail-table thead th { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); border-bottom-color: var(--rule-strong); }
+.topo-trail-table td { text-align: right; }
+.topo-trail-table thead th:not(:first-child) { text-align: right; }
+.topo-trail-table tr.is-high th { font-weight: 600; color: var(--ink); }
+.body .topo-trail-credit { font-size: 13px; color: var(--muted); max-width: var(--measure); }
+.topo-visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+/* On a phone the pass names would crowd the profile; they're in the table below. */
+@media (max-width: 640px) {
+  .topo-trail-pass-name { display: none; }
+  .body .topo-trail-plot { height: 150px; margin-top: 12px; }
+}
+
 /* Sidebar */
 .topo-side-block { padding: 20px 0; border-top: 1px solid var(--rule); }
 .topo-side-block:first-child { border-top: 0; padding-top: 0; }

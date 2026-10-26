@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "john-muir-trail",
+    "entry": "John Muir Trail",
+    "year": "2026",
+    "relations": [
+      1243679,
+      1244828
+    ],
+    "start": {
+      "name": "Cottonwood Pass",
+      "lat": 36.4538,
+      "lon": -118.2153,
+      "label": "below"
+    },
+    "end": {
+      "name": "Yosemite",
+      "lat": 37.7328,
+      "lon": -119.5578,
+      "label": "left"
+    },
+    "spurs": [
+      {
+        "name": "Mount Whitney",
+        "lat": 36.5786,
+        "lon": -118.2921,
+        "label": "above"
+      }
+    ],
+    "nights": []
+  }
+]

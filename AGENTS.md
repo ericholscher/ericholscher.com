@@ -48,6 +48,10 @@ Headless Chromium can't play H.264, so a video that "won't play" there is not a 
   - Each trip's map is `site/_static/maps/<slug>.svg`, drawn by `scripts/trip_maps.py` from Natural Earth. Rerun it after changing a trip's places, and commit the output.
   - The build warns if a trip names a place or entry that isn't in the other files, or a map is missing.
 - `scripts/photo_trips.py` turns an osxphotos export into candidate trip rows. See the README.
+- Trail pages (`site/trails/<trail>.rst`) are drawn from `site/_data/trails.json` by `site/_ext/topo_trails.py` and `topo/trail.html`:
+  - The route is the public trail from OpenStreetMap, traced by `scripts/trail_routes.py` into `trail_routes.json` with a relief image. Never use a personal GPS track.
+  - Nights are trail miles or a town, from `photo_trips.py --nights`; never campsite coordinates.
+  - The pages hold data, maps, and structure, plus Eric's own words from `hikes.json`. Don't write narrative for them.
 
 ## Design
 
