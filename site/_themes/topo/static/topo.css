@@ -355,6 +355,24 @@ ul.postlist p.ablog-post-excerpt { font-size: 16px; color: var(--text-2); margin
 .topo-titles a { color: var(--ink); border-bottom: 0; }
 .topo-titles a:hover { color: var(--link-hover); }
 @media (max-width: 600px) { .topo-topics { grid-template-columns: minmax(0, 1fr); } }
+/* Recent adventures on the home page: the newest trips, each a small map that links into the Adventures list. */
+.topo-recent-adventures { margin-top: 44px; }
+.topo-recent-trips { list-style: none; margin: 6px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px 24px; }
+.topo-recent-trip { min-width: 0; margin: 0; }
+.topo-recent-trip a { display: block; color: var(--ink); border-bottom: 0; text-decoration: none; }
+.topo-recent-trip .topo-trip-map { display: block; margin: 0 0 10px; transition: border-color .15s ease; }
+.topo-recent-trip a:hover .topo-trip-map { border-color: var(--link-hover); }
+.topo-recent-trip-name { display: block; font-family: var(--serif); font-weight: 500; font-size: 20px; line-height: 1.2; }
+.topo-recent-trip a:hover .topo-recent-trip-name { color: var(--link-hover); }
+.topo-recent-trip-meta { display: block; margin-top: 4px; font-size: 14px; line-height: 1.5; color: var(--text-2); }
+@media (max-width: 600px) {
+  .topo-recent-trips { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .topo-recent-trip a { display: grid; grid-template-columns: 128px minmax(0, 1fr); column-gap: 14px; align-items: center; min-height: 64px; }
+  .topo-recent-trip .topo-trip-map { grid-row: span 2; margin: 0; }
+  .topo-recent-trip-name { font-size: 19px; align-self: end; }
+  .topo-recent-trip-meta { margin-top: 2px; font-size: 13px; align-self: start; }
+}
+@media (prefers-reduced-motion: reduce) { .topo-recent-trip .topo-trip-map { transition: none; } }
 
 /* Landing pages (categories) */
 .topo-landing-intro { font-size: 18px; line-height: 1.6; color: var(--text-2); max-width: var(--measure); margin: 0 0 28px; }

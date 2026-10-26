@@ -152,8 +152,12 @@
         {#- Skips the favorites shown just above, and ends each excerpt at a sentence. -#}
         {%- set shown = pop.items[:topo_favorites.featured]|map(attribute='0.docname')|list %}
         {%- set recent = namespace(items=[]) %}
-        {%- for post in ablog.recent(6 + shown|length, pagename) if post.docname not in shown %}{% if recent.items|length < 6 %}{% set recent.items = recent.items + [(post, post.to_html(pagename)|striptags|topo_excerpt(220))] %}{% endif %}{% endfor %}
+        {%- for post in ablog.recent(3 + shown|length, pagename) if post.docname not in shown %}{% if recent.items|length < 3 %}{% set recent.items = recent.items + [(post, post.to_html(pagename)|striptags|topo_excerpt(220))] %}{% endif %}{% endfor %}
         {{ featured(recent.items, pagename) }}
+      </section>
+      <section class="topo-recent topo-recent-adventures" id="adventures" aria-labelledby="adventures-head">
+        <div class="topo-recent-head"><h2 id="adventures-head">Recent adventures</h2><a href="{{ pathto('adventures') }}" class="topo-more-link">All adventures &rarr;</a></div>
+        {% include "topo/recent-trips.html" %}
       </section>
       <section class="topo-topics-section" id="topics" aria-labelledby="topics-head">
         <div class="topo-recent-head"><h2 id="topics-head">By topic</h2><a href="{{ pathto(ablog.category.docname) }}" class="topo-more-link">All topics &rarr;</a></div>

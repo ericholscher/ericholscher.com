@@ -1,0 +1,22 @@
+{#- The newest few trips for the home page, from topo_trip_list (newest first, built by
+    _ext/topo_trips.py). Years close to home are left out; each card links to its trip in the
+    Adventures list, which opens it. -#}
+{%- set away = topo_trip_list|rejectattr('home')|list %}
+<ul class="topo-recent-trips">
+{%- for t in away[:3] %}
+  <li class="topo-recent-trip">
+    <a href="{{ pathto('adventures') }}#{{ t.slug }}">
+      {%- if t.map %}{% set b = t.map.box %}
+      <span class="topo-trip-map">
+        <img src="{{ pathto('_static/maps/' ~ t.slug ~ '.svg', 1) }}" alt="" loading="lazy" width="{{ b[2] }}" height="{{ b[3] }}">
+        <svg class="topo-trip-pins" viewBox="{{ b|join(' ') }}" aria-hidden="true">
+          {%- for pin in t.map.pins %}<g class="topo-pin topo-pin-{{ pin.place.kind }}"><circle class="topo-pin-dot" cx="{{ pin.x }}" cy="{{ pin.y }}" r="{{ (b[2] / 80)|round(2) }}"/></g>{% endfor %}
+        </svg>
+      </span>
+      {%- endif %}
+      <span class="topo-recent-trip-name">{{ t.name }}</span>
+      <span class="topo-recent-trip-meta">{% if t.when %}{{ t.when }}{% else %}{{ t.places|length }} {{ 'place' if t.places|length == 1 else 'places' }}{% endif %}</span>
+    </a>
+  </li>
+{%- endfor %}
+</ul>
