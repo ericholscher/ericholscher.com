@@ -24,7 +24,8 @@
         "name": "Mount Whitney",
         "lat": 36.5786,
         "lon": -118.2921,
-        "label": "above"
+        "label": "above",
+        "date": "2026-07-07"
       },
       {
         "name": "Clouds Rest",

@@ -54,16 +54,6 @@
   </figure>
   <script src="{{ pathto('_static/trail-map.js', 1) }}" defer></script>
 
-  {%- if trail.photos %}
-  <div class="topo-trail-photos">
-    {%- for p in trail.photos %}
-    <figure id="photo-{{ p.n }}">
-      <a href="{{ pathto('_static/photos/' ~ trail.slug ~ '/' ~ p.file, 1) }}"><img src="{{ pathto('_static/photos/' ~ trail.slug ~ '/' ~ p.file, 1) }}" alt="{{ p.alt or ('On the trail, ' ~ p.day if p.day else 'On the trail') }}" loading="lazy"></a>
-      <figcaption>{% if p.left is defined %}<span class="topo-trail-photo-num">{{ p.n }}</span>{% endif %}{{ p.day }}{% if p.mile is defined and p.mile is not none %} &middot; mile {{ p.mile }}{% endif %}</figcaption>
-    </figure>
-    {%- endfor %}
-  </div>
-  {%- endif %}
 
   <h2 class="topo-plaque">Elevation</h2>
   {%- set pr = trail.profile %}
@@ -91,25 +81,55 @@
     <figcaption>Feet above sea level, by trail mile{% if trail.nights %}. The ticks along the bottom are nights{% endif %}.</figcaption>
   </figure>
 
-  {%- if trail.passes %}
+  {%- if trail.photos %}
+  <h2 class="topo-plaque">Photos</h2>
+  <div class="topo-trail-photos">
+    {%- for p in trail.photos %}
+    <figure id="photo-{{ p.n }}">
+      <a href="{{ pathto('_static/photos/' ~ trail.slug ~ '/' ~ p.file, 1) }}"><img src="{{ pathto('_static/photos/' ~ trail.slug ~ '/' ~ p.file, 1) }}" alt="{{ p.alt or ('On the trail, ' ~ p.day if p.day else 'On the trail') }}" loading="lazy"></a>
+      <figcaption>{% if p.left is defined %}<span class="topo-trail-photo-num">{{ p.n }}</span>{% endif %}{{ p.day }}{% if p.mile is defined and p.mile is not none %} &middot; mile {{ p.mile }}{% endif %}</figcaption>
+    </figure>
+    {%- endfor %}
+  </div>
+  {%- endif %}
+
+  {%- if trail.days %}
+  {#- One list of the walk, day by day: each day's miles, the passes and side trips on it, its photos,
+      and where the night was. Hovering a day lights up its stretch on the map and the profile. -#}
+  <h2 class="topo-plaque">Day by day</h2>
+  <ol class="topo-trail-days">
+    {%- for d in trail.days %}
+    <li class="topo-trail-day" data-from="{{ d.start }}" data-to="{{ d.end }}">
+      <p class="topo-trail-day-head"><span class="topo-trail-day-num">Day {{ d.day }}</span> <span class="topo-trail-day-date">{{ d.label }}</span>
+        <span class="topo-trail-day-miles">{% if d.miles %}{{ d.miles }} mi &middot; mile {{ d.start }}&ndash;{{ d.end }}{% else %}No miles on the route{% endif %}</span></p>
+      <ul class="topo-trail-day-items">
+        {%- for p in d.passes %}
+        <li class="is-pass">{{ p.name }}, {{ feet(p.feet) }} ft <span class="topo-trail-day-at">mile {{ p.mile|round|int }}</span></li>
+        {%- endfor %}
+        {%- for s in d.spurs %}
+        <li class="is-spur">Side trip to {{ s.name }} <span class="topo-trail-day-at">{{ s.miles }} mi each way</span></li>
+        {%- endfor %}
+        {%- if d.night %}
+        <li class="is-night">{% if d.night.town %}Night in {{ d.night.town }}{% else %}Night at mile {{ d.night.mile }}{% endif %}</li>
+        {%- else %}
+        <li class="is-end">Finished at {{ trail.end.name }}</li>
+        {%- endif %}
+      </ul>
+      {%- if d.photos %}
+      <p class="topo-trail-day-photos">
+        {%- for p in d.photos %}<a href="#photo-{{ p.n }}"><img src="{{ pathto('_static/photos/' ~ trail.slug ~ '/' ~ p.file, 1) }}" alt="Photo {{ p.n }}" loading="lazy" width="72" height="54"></a>{% endfor %}
+      </p>
+      {%- endif %}
+    </li>
+    {%- endfor %}
+  </ol>
+  {%- elif trail.passes %}
   <h2 class="topo-plaque">Passes</h2>
   <table class="topo-trail-table">
     <thead><tr><th scope="col">Pass</th><th scope="col">Mile</th><th scope="col">Feet</th></tr></thead>
     <tbody>
       {%- for p in trail.passes %}
       <tr{% if p is sameas trail.high %} class="is-high"{% endif %}><th scope="row">{{ p.name }}</th><td>{{ p.mile|round|int }}</td><td>{{ feet(p.feet) }}</td></tr>
-      {%- endfor %}
-    </tbody>
-  </table>
-  {%- endif %}
-
-  {%- if trail.nights %}
-  <h2 class="topo-plaque">Nights</h2>
-  <table class="topo-trail-table">
-    <thead><tr><th scope="col">Night</th><th scope="col">Date</th><th scope="col">Where</th></tr></thead>
-    <tbody>
-      {%- for n in trail.nights %}
-      <tr><th scope="row">{{ n.night }}</th><td>{{ n.day }}</td><td>{% if n.town %}{{ n.town }}{% elif n.mile is not none and n.mile is defined %}Mile {{ n.mile }}{% endif %}</td></tr>
       {%- endfor %}
     </tbody>
   </table>

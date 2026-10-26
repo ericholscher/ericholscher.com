@@ -644,6 +644,30 @@ html.topo-map-open, html.topo-map-open body { overflow: hidden; }
 .topo-trail-table td { text-align: right; }
 .topo-trail-table thead th:not(:first-child) { text-align: right; }
 .topo-trail-table tr.is-high th { font-weight: 600; color: var(--ink); }
+.body .topo-trail-days { list-style: none; margin: 0 0 32px; padding: 0; border-top: 1px solid var(--rule-strong); }
+.body .topo-trail-day { margin: 0; padding: 12px 10px 12px 14px; border-bottom: 1px solid var(--rule); border-left: 3px solid transparent; display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 16px; align-items: start; transition: background .12s ease, border-color .12s ease; }
+.body .topo-trail-day:hover, .body .topo-trail-day.is-active { background: color-mix(in srgb, var(--paper) 60%, var(--hero)); border-left-color: var(--blaze); }
+.body .topo-trail-day-head { grid-column: 1; margin: 0 0 4px; font-size: 15px; line-height: 1.4; display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 10px; }
+.topo-trail-day-num { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--sign-text); background: var(--sign); border-radius: 3px; padding: 1px 6px; }
+.topo-trail-day-date { font-weight: 600; color: var(--ink); }
+.topo-trail-day-miles { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.body .topo-trail-day-items { grid-column: 1; list-style: none; margin: 0; padding: 0; }
+.body .topo-trail-day-items li { margin: 0; padding-left: 18px; position: relative; font-size: 15px; line-height: 1.55; color: var(--text-2); }
+.topo-trail-day-items li::before { content: ""; position: absolute; left: 2px; top: .55em; }
+.topo-trail-day-items .is-pass::before { border: solid transparent; border-width: 0 5px 9px; border-bottom-color: var(--sign); top: .4em; }
+.topo-trail-day-items .is-night::before { width: 8px; height: 8px; border-radius: 50%; background: var(--sign-gold); box-shadow: 0 0 0 1.5px var(--sign); }
+.topo-trail-day-items .is-end::before { width: 9px; height: 9px; border-radius: 50%; background: var(--forest); }
+.topo-trail-day-items .is-spur::before { width: 11px; border-top: 2px dashed var(--sign); top: .75em; }
+.topo-trail-day-at { font-family: var(--mono); font-size: 12px; color: var(--muted); margin-left: 4px; }
+.body .topo-trail-day-photos { grid-column: 2; grid-row: 1 / span 2; margin: 0; display: flex; gap: 6px; }
+.body .topo-trail-day-photos img { display: block; width: 72px; height: 54px; object-fit: cover; margin: 0; border: 1px solid var(--rule-strong); border-radius: 2px; }
+@media (max-width: 560px) {
+  .body .topo-trail-day { grid-template-columns: minmax(0, 1fr); }
+  .body .topo-trail-day-photos { grid-column: 1; grid-row: auto; margin-top: 8px; }
+}
+@media (prefers-reduced-motion: reduce) { .body .topo-trail-day { transition: none; } }
+.topo-trail-plot-band { position: absolute; top: 0; bottom: 0; background: color-mix(in srgb, var(--blaze) 16%, transparent); border-left: 1px solid var(--blaze); border-right: 1px solid var(--blaze); pointer-events: none; }
+.topo-trail-plot-band[hidden] { display: none; }
 .body .topo-trail-credit { font-size: 13px; color: var(--muted); max-width: var(--measure); }
 .topo-visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 /* On a phone the pass names would crowd the profile; they're in the table below. */

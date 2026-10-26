@@ -25,7 +25,7 @@
   var C = {
     paper: token('--paper', '#F2EBDC'), hero: token('--hero', '#EBE2CD'), ink: token('--ink', '#332A20'),
     muted: token('--muted', '#6B6354'), rule: token('--rule', '#D9CFB8'), ruleStrong: token('--rule-strong', '#B5A784'),
-    forest: token('--forest', '#255A42'), sign: token('--sign', '#4F3520'), gold: token('--sign-gold', '#DBA63E'),
+    forest: token('--forest', '#255A42'), blaze: token('--blaze', '#C96B32'), sign: token('--sign', '#4F3520'), gold: token('--sign-gold', '#DBA63E'),
     water: '#BFC7B5', wood: '#DDE0C8' // forest mixed into paper, 25% and 12%
   };
 
@@ -80,6 +80,7 @@
         encoding: 'terrarium', tileSize: 256, maxzoom: 14
       },
       route: { type: 'geojson', data: route },
+      day: { type: 'geojson', data: collection([]) },
       spurs: { type: 'geojson', data: collection(data.spurs.map(function (s) { return lineFeature(s.line, { name: s.name }); })) },
       nights: { type: 'geojson', data: collection(data.nights.map(function (n) { return pointFeature(n.lon, n.lat, n); })) },
       passes: {
@@ -119,6 +120,8 @@
         paint: { 'line-color': C.paper, 'line-width': ['interpolate', ['linear'], ['zoom'], 7, 5, 14, 9], 'line-opacity': 0.85 } },
       { id: 'route', type: 'line', source: 'route', layout: { 'line-join': 'round', 'line-cap': 'round' },
         paint: { 'line-color': C.forest, 'line-width': ['interpolate', ['linear'], ['zoom'], 7, 2.5, 14, 5] } },
+      { id: 'day', type: 'line', source: 'day', layout: { 'line-join': 'round', 'line-cap': 'round' },
+        paint: { 'line-color': C.blaze, 'line-width': ['interpolate', ['linear'], ['zoom'], 7, 4, 14, 7] } },
       { id: 'lake-names', type: 'symbol', source: 'osm', 'source-layer': 'water_name', minzoom: 11,
         layout: { 'text-field': ['get', 'name'], 'text-font': ['Noto Sans Italic'], 'text-size': 11 },
         paint: Object.assign({ 'text-color': '#4E5E50' }, halo) },
@@ -264,6 +267,39 @@
     }
     map.on('mousemove', 'route-halo', function (e) { show(nearest(e.lngLat), true); });
     map.on('mouseleave', 'route-halo', hide);
+
+    // Day by day: hovering a day lights up its stretch on the map and the profile; a click zooms to it.
+    var band = document.createElement('div');
+    band.className = 'topo-trail-plot-band';
+    band.hidden = true;
+    if (plot) plot.appendChild(band);
+    function stretch(from, to) {
+      return track.filter(function (p) { return p[2] >= from - 0.01 && p[2] <= to + 0.01; });
+    }
+    function light(day) {
+      if (!figure.classList.contains('is-live')) return;
+      var from = +day.getAttribute('data-from'), to = +day.getAttribute('data-to');
+      var pts = stretch(from, to);
+      if (pts.length > 1) map.getSource('day').setData(lineFeature(pts.map(function (p) { return [p[0], p[1]]; })));
+      if (plot) { band.hidden = false; band.style.left = (100 * from / miles) + '%'; band.style.width = (100 * (to - from) / miles) + '%'; }
+    }
+    function unlight() {
+      if (map.getSource('day')) map.getSource('day').setData(collection([]));
+      band.hidden = true;
+    }
+    [].forEach.call(document.querySelectorAll('.topo-trail-day'), function (day) {
+      day.addEventListener('mouseenter', function () { light(day); });
+      day.addEventListener('mouseleave', unlight);
+      day.addEventListener('click', function (e) {
+        if (e.target.closest('a') || !figure.classList.contains('is-live')) return;
+        var pts = stretch(+day.getAttribute('data-from'), +day.getAttribute('data-to'));
+        if (pts.length < 2) pts = stretch(+day.getAttribute('data-from') - 2, +day.getAttribute('data-to') + 2);
+        var lons = pts.map(function (p) { return p[0]; }), lats = pts.map(function (p) { return p[1]; });
+        map.fitBounds([[Math.min.apply(null, lons), Math.min.apply(null, lats)], [Math.max.apply(null, lons), Math.max.apply(null, lats)]],
+          { padding: PADDING, maxZoom: 13, duration: 800 });
+        figure.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
   }
 
   // Wait until the map is near the screen, then load MapLibre.
