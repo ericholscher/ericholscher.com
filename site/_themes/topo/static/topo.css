@@ -589,6 +589,10 @@ html.topo-map-open, html.topo-map-open body { overflow: hidden; }
 .topo-trail-key-spur::before { width: 16px; border-top: 2px dashed var(--sign); }
 .topo-trail-key-pass::before { border: solid transparent; border-width: 0 5px 9px; border-bottom-color: var(--sign); vertical-align: 0; }
 .topo-trail-key-night::before { width: 8px; height: 8px; border-radius: 50%; background: var(--sign-gold); box-shadow: 0 0 0 1.5px var(--sign); vertical-align: 0; }
+.topo-trail-photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 0 0 32px; }
+.body .topo-trail-photos figure { margin: 0; }
+.body .topo-trail-photos img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+@media (max-width: 560px) { .topo-trail-photos { grid-template-columns: minmax(0, 1fr); } }
 .topo-trail-profile { margin: 0 0 32px; }
 .topo-trail-plot { position: relative; height: 200px; margin-top: 40px; border-bottom: 1px solid var(--rule-strong); }
 .topo-trail-plot svg { position: absolute; inset: 0; width: 100%; height: 100%; }

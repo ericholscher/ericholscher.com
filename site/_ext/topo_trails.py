@@ -1,7 +1,8 @@
 """Trail pages: one page per long trail, drawn from trails.json, trail_routes.json, and hikes.json.
 
 trails.json is edited by hand: which OpenStreetMap relations a walk followed, where it started and
-ended, and its nights as trail miles. scripts/trail_routes.py turns that into trail_routes.json, a
+ended, its nights as trail miles, and a few photos (in site/_static/photos/<trail>/, metadata
+stripped by scripts/prepare_photos.py) with their date and trail mile. scripts/trail_routes.py turns that into trail_routes.json, a
 point every quarter mile with its elevation, plus the passes on the way. This module turns both into
 what the page draws: the route on a relief map, the elevation profile, and the passes and nights.
 
@@ -91,6 +92,8 @@ def view(trail, route, hike):
             night.update(at_mile(n["mile"]))
         nights.append(night)
 
+    photos = [{**p, "day": nice_date(p["date"]) if p.get("date") else ""} for p in trail.get("photos", [])]
+
     first, last = track[0], track[-1]
     return {
         "slug": trail["slug"],
@@ -111,6 +114,7 @@ def view(trail, route, hike):
         "passes": passes,
         "high": high,
         "nights": nights,
+        "photos": photos,
     }
 
 

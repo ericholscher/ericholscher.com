@@ -42,6 +42,17 @@
     </figcaption>
   </figure>
 
+  {%- if trail.photos %}
+  <div class="topo-trail-photos">
+    {%- for p in trail.photos %}
+    <figure>
+      <a href="{{ pathto('_static/photos/' ~ trail.slug ~ '/' ~ p.file, 1) }}"><img src="{{ pathto('_static/photos/' ~ trail.slug ~ '/' ~ p.file, 1) }}" alt="{{ p.alt or ('On the trail, ' ~ p.day if p.day else 'On the trail') }}" loading="lazy"></a>
+      <figcaption>{{ p.day }}{% if p.mile is defined and p.mile is not none %} &middot; mile {{ p.mile }}{% endif %}</figcaption>
+    </figure>
+    {%- endfor %}
+  </div>
+  {%- endif %}
+
   <h2 class="topo-plaque">Elevation</h2>
   {%- set pr = trail.profile %}
   <figure class="topo-trail-profile">
