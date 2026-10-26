@@ -32,6 +32,36 @@ def project(lon, lat, lat0):
     return lon * math.cos(math.radians(lat0)) * SCALE, -lat * SCALE
 
 
+MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+
+def span(entries):
+    """When a trip ran, from its entries' dates: "May to October 2026", "December 2018 to March 2019".
+
+    Empty when an entry has no month to go by (like "Summer 2012").
+    """
+    found = []
+    for h in entries:
+        words = re.findall(r"[A-Z][a-z]+|\d{4}", h["when"])
+        months = [w for w in words if w in MONTHS]
+        if not months:
+            return ""
+        year = int(h["year"])
+        for w in words:
+            if w.isdigit():
+                year = int(w)
+            elif w in MONTHS:
+                found.append((year, MONTHS.index(w)))
+    if not found:
+        return ""
+    (y0, m0), (y1, m1) = min(found), max(found)
+    if (y0, m0) == (y1, m1):
+        return f"{MONTHS[m0]} {y0}"
+    if y0 == y1:
+        return f"{MONTHS[m0]} {'and' if m1 == m0 + 1 else 'to'} {MONTHS[m1]} {y1}"
+    return f"{MONTHS[m0]} {y0} to {MONTHS[m1]} {y1}"
+
+
 def trip_view(pins):
     """The map for a trip's places: its middle latitude, and a viewBox around them."""
     lats = [p["lat"] for p in pins]
@@ -119,6 +149,10 @@ def build(hikes, places, trips):
             p["trips"].append(t["slug"])
         # A trip of one entry, named for it, reads as that entry, whether or not trips.json lists it.
         t["solo"] = t["solo"] or len(t["entries"]) == 1 and t["entries"][0]["name"] == t["name"]
+        # Without a "when" in trips.json, a trip runs from its first entry to its last. One entry
+        # doesn't say how long a whole trip ran, unless the trip is that entry or a year at home.
+        if not t["when"] and (t["home"] or len(t["entries"]) > 1):
+            t["when"] = span(t["entries"])
         t["kinds"] = sorted({h["kind"] for h in t["entries"]})
         t["long"] = any(h.get("feature") for h in t["entries"])
         t["map"] = trip_view(t["places"]) if t["places"] else None
