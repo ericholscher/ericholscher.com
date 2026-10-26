@@ -54,8 +54,9 @@
 </div>
 {%- endmacro %}
 
-{#- Paging through the blog by year, using ABlog's year pages. Prev and next step newest first; the years
-    themselves run oldest to newest like the sparkline, one row per decade. -#}
+{#- Paging through the blog by year, using ABlog's year pages. Like the post nav, the left arrow (rel="prev")
+    goes to the older year and the right arrow to the newer one. ablog.archive runs newest first, so older
+    is i + 1. The years themselves run oldest to newest like the sparkline, one row per decade. -#}
 {%- macro year_pager(current=None) %}
 {%- set ys = namespace(list=[], i=-1) %}
 {%- for c in ablog.archive if c %}{% set ys.list = ys.list + [c] %}{% endfor %}
@@ -63,8 +64,8 @@
 <nav class="topo-pager" aria-label="Posts by year">
   {%- if ys.i >= 0 %}
   <div class="topo-pager-step">
-    {%- if ys.i > 0 %}<a rel="prev" href="{{ pathto(ys.list[ys.i - 1].docname) }}">&larr; {{ ys.list[ys.i - 1] }}</a>{% endif %}
-    {%- if ys.i < ys.list|length - 1 %}<a rel="next" href="{{ pathto(ys.list[ys.i + 1].docname) }}">{{ ys.list[ys.i + 1] }} &rarr;</a>{% endif %}
+    {%- if ys.i < ys.list|length - 1 %}<a rel="prev" href="{{ pathto(ys.list[ys.i + 1].docname) }}" aria-label="Older: {{ ys.list[ys.i + 1] }}">&larr; {{ ys.list[ys.i + 1] }}</a>{% endif %}
+    {%- if ys.i > 0 %}<a rel="next" href="{{ pathto(ys.list[ys.i - 1].docname) }}" aria-label="Newer: {{ ys.list[ys.i - 1] }}">{{ ys.list[ys.i - 1] }} &rarr;</a>{% endif %}
   </div>
   {%- endif %}
   <div class="topo-pager-decades">
