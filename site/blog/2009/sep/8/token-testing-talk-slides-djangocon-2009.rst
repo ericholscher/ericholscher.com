@@ -14,25 +14,6 @@ If you have any questions or comments, feel free to leave them
 below.
 
 
-.. raw:: html
+`Token Testing Slides <http://www.slideshare.net/ericholscher/token-testing-slides>`__
 
-   <div style="width:425px;text-align:left" id="__ss_1969262">
-   
-Token Testing Slides
-
-.. raw:: html
-
-   <object style="margin:0px" width="425" height="355">
-   
-
-.. raw:: html
-
-   </object><div style="font-size:11px;font-family:tahoma,arial;height:26px;padding-top:2px;">
-   
-View more documents from ericholscher.
-
-.. raw:: html
-
-   </div></div>
-   
 

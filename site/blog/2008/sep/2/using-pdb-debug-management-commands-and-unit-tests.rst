@@ -44,15 +44,9 @@ You can download the video
 
 .. raw:: html
 
-   <object width="640" height="500">   
-   
+   <iframe src="https://player.vimeo.com/video/1649791" title="Debugging management commands and unit tests" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
 
-.. raw:: html
-
-   </object>
-   
-Debugging management commands and unit tests from Eric Holscher on
-Vimeo.
+`Debugging management commands and unit tests <https://vimeo.com/1649791>`__ from `Eric Holscher <https://vimeo.com/user627770>`__ on `Vimeo <https://vimeo.com>`__.
 
 Writeup
 ~~~~~~~

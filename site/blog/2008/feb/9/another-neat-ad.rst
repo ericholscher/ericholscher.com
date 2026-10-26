@@ -12,11 +12,5 @@ more places. Somebody has been listening to Seth Godin :)
 
 .. raw:: html
 
-   <object width="425" height="373">
-   
-
-.. raw:: html
-
-   </object>
-   
+   <iframe src="https://www.youtube.com/embed/w4y272NI7J8" title="New Ford Focus &quot;Beautifully Arranged&quot;" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
 

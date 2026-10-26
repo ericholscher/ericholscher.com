@@ -14,13 +14,13 @@ small undertaking, and I believe a large part of how he is doing so
 well. Young people aren't apathetic, all previous candidates have
 just been God Awful.
 
-I also love this onion piece about the candidates and their stances
+I also love `this onion piece <http://www.theonion.com/content/whitehousewar/healthcare>`__ about the candidates and their stances
 on Iraq, so funny.
 
 Hillary Clinton: "I would never have voted for the war had we known
 it would become unpopular."
 
-In closing, here's to kicking out Bush! :) The original homeland
-security
+In closing, here's to kicking out Bush! :) `The original homeland
+security <http://markybaby.com/SU_images/homelandSecurity.jpg>`__
 
 

@@ -36,14 +36,9 @@ sense.
 
 .. raw:: html
 
-   <object width="400" height="300">   
-   
+   <iframe src="https://player.vimeo.com/video/1398579" title="Django TestMaker" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
 
-.. raw:: html
-
-   </object>
-   
-Django TestMaker from Eric Holscher on Vimeo.
+`Django TestMaker <https://vimeo.com/1398579>`__ from `Eric Holscher <https://vimeo.com/user627770>`__ on `Vimeo <https://vimeo.com>`__.
 
 Writeup
 ~~~~~~~

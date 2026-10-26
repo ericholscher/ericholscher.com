@@ -79,9 +79,9 @@ mod\_wsgi on Apache with Django. If not, feel free to leave
 comments or email me
 
 EDIT: Someone in the comments pointed out this website on the
-mod\_wsgi wiki is also helpful: Integration with Django
+mod\_wsgi wiki is also helpful: `Integration with Django <http://code.google.com/p/modwsgi/wiki/IntegrationWithDjango>`__
 
-There appears to be a page on the Django WIki as well if you need
+There appears to be a page on the `Django WIki <http://code.djangoproject.com/wiki/django_apache_and_mod_wsgi>`__ as well if you need
 more pointers.
 
 

@@ -12,7 +12,7 @@ awesome trip around the East Coast, since I won't have a chance to
 do it for another little while.
 
 The first trip was to Boston and was awesomely coincidental. The
-day after graduation there was a Radiohead show at the Nissan
+day after graduation there was a `Radiohead show <http://www.radiohead-notforprofit.com/2008/05/13/radiohead-live-bristow-may-11th-2008-mp3-live/>`__ at the Nissan
 Pavilion. I decided to give myself a graduation present and head to
 that. My friend Emily was going, and her friend from New Hampshire
 was coming down to go. So my roommate josh and I went with them to
@@ -27,7 +27,7 @@ were talking about life, and it turned out that Elliot went to
 school just south of Boston, and happened to be looking for someone
 to share gas money with on his ride back. He was leaving that
 Thursday, and I found myself a ride to Boston. I went online and
-realized that Barcamp Boston was happening the same weekend. SCORE!
+realized that `Barcamp Boston <http://barcamp.org/BarCampBoston>`__ was happening the same weekend. SCORE!
 Now I have something to do, and a free ride there. All I needed was
 a place to stay.
 

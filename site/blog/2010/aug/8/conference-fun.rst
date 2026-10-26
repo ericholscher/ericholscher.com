@@ -70,27 +70,8 @@ that realm. If you haven't seen it before, I hope you learn
 something:
 
 
-.. raw:: html
+`Making the most of your Test Suite <http://www.slideshare.net/ericholscher/making-the-most-of-your-test-suite>`__
 
-   <div style="width:425px" id="__ss_4335428">
-   
-Making the most of your Test Suite
-
-.. raw:: html
-
-   <object id="__sse4335428" width="425" height="355">
-   
-
-.. raw:: html
-
-   </object><div style="padding:5px 0 12px">
-   
-View more presentations from ericholscher.
-
-.. raw:: html
-
-   </div></div>
-   
    
 I know that I love software conferences, especially Open Source
 oriented ones (I've never been to another kind :). So I hope to see

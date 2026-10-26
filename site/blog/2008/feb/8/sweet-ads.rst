@@ -8,7 +8,7 @@ another to another without intervention. I'm sure there's a name
 for it, but you know what i'm talking about. Just found this neat
 one online from a dutch website, which is simply awesome!
 
-Watch it and see
+`Watch it and see <http://producten.hema.nl/>`__
 
 It reminds me of the honda commerical they did a couple years ago,
 using all the parts of the car. Simply stunning..

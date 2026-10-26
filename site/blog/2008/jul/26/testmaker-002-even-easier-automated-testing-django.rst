@@ -4,7 +4,7 @@
 Testmaker .002 (Even easier automated testing in Django)
 ========================================================
 
-Okay, Well I have been hacking away at django-testmaker for the
+Okay, Well I have been hacking away at `django-testmaker <http://code.google.com/p/django-testmaker/>`__ for the
 last couple of days based on some ideas from the community. It has
 gotten a lot better, so here is another blog post showing what's
 new.
@@ -36,14 +36,9 @@ Here is another video of it in action:
 
 .. raw:: html
 
-   <object width="400" height="300">   
-   
+   <iframe src="https://player.vimeo.com/video/1412685" title="Django Testmaker v2" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
 
-.. raw:: html
-
-   </object>
-   
-Django Testmaker v2
+`Django Testmaker v2 <https://vimeo.com/1412685>`__
 
 
 .. raw:: html

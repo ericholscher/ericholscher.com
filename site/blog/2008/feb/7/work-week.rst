@@ -14,8 +14,8 @@ fashion.
 I found a couple useful websites that have helped me do this, so
 I'll link them here for future reference.
 
-Traversing Trees in SQL
+`Traversing Trees in SQL <http://philip.greenspun.com/sql/trees.html>`__
 
-SQL Tree and Graph Algorithms
+`SQL Tree and Graph Algorithms <http://willets.org/sqlgraphs.html>`__
 
 

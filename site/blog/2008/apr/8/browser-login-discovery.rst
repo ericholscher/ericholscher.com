@@ -6,7 +6,7 @@ Browser Login Discovery
 There are some really cool ideas floating around the interwebs
 these days, dealing with discovery of authentication. A lot of the
 talk is about integrating OpenID into the browser, but I don't
-think it needs to be limited to that. People are working on good
+think it needs to be limited to that. `People <http://yadis.org/wiki/Main_Page>`__ are working on good
 ways to auto-discover what the login end-points are on some pages.
 So when I go to ericholscher.com, there will be a specific URL to
 go to that will list the places where you can login, and what they

@@ -3,7 +3,7 @@
 Hackers and Painters
 ====================
 
-Just finished reading Hackers and Painters by Paul Graham. It was
+Just finished reading `Hackers and Painters <http://paulgraham.com/hackpaint.html>`__ by Paul Graham. It was
 an amazing book about the past, present, and future of computers.
 Lots of stuff about programming, but also fulfilling for people
 that don't know much about computers as well looking outside in. It

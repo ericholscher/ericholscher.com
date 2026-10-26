@@ -9,9 +9,9 @@ conference will be held at Google Campus (Googleplex) in Mountain
 View!! September 6 and 7th. That's only two months away, so
 hopefully this gets pulled together well.
 
-The Official Post announcing DjangoCon. The DjangoCon website
+`The Official Post announcing DjangoCon <http://www.djangoproject.com/weblog/2008/jul/13/djangocon/>`__. The DjangoCon website
 should be up on friday.
 
-The DjangoCon Website
+`The DjangoCon Website <http://djangocon.org/>`__
 
 
