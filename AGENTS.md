@@ -33,7 +33,7 @@ Headless Chromium can't play H.264, so a video that "won't play" there is not a 
 
 - `site/conf.py` holds Sphinx settings only. Never put site data or copy in it: give each list its own file in `site/_data/` and load it from the extension.
 - `site/_ext/topo_site.py` is the site's own Sphinx extension: it loads `site/_data/*.json` into templates as `topo_<name>`, and holds the year-letter, photo-row, and redirect-stub hooks.
-- `site/_data/categories.json` lists the topics: slug, then title and intro.
+- `site/_data/categories.json` lists the topics: slug, then title and intro. Topic lists follow the file order; Community comes first because Eric thinks it is his best writing.
 - `site/_themes/topo/` holds the theme: `layout.html`, `static/topo.css` (all styles, with tokens on `:root`), the fonts, and `theme.toml`.
 - `site/_templates/`:
   - `topo/` has the shared pieces: post lists, the Adventures timeline, the map, and the redirect page.
