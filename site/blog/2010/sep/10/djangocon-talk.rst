@@ -16,25 +16,6 @@ time. Also many thanks to the conference organizers and volunteers
 who managed to make it all happen, it was a great time!
 
 
-.. raw:: html
+`Large problems, Mostly Solved <http://www.slideshare.net/ericholscher/large-problems>`__
 
-   <div style="width:425px" id="__ss_5159345">
-   
-Large problems, Mostly Solved
-
-.. raw:: html
-
-   <object id="__sse5159345" width="425" height="355">
-   
-
-.. raw:: html
-
-   </object><div style="padding:5px 0 12px">
-   
-View more presentations from ericholscher.
-
-.. raw:: html
-
-   </div></div>
-   
 

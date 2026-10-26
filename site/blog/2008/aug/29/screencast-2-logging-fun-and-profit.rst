@@ -47,14 +47,9 @@ The video is available to download in higher res or for streaming.
 
 .. raw:: html
 
-   <object width="640" height="475">   
-   
+   <iframe src="https://player.vimeo.com/video/1624166" title="Screencast 2: Using Logging in Django" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
 
-.. raw:: html
-
-   </object>
-   
-Screencast 2: Using Logging in Django from Eric Holscher on Vimeo.
+`Screencast 2: Using Logging in Django <https://vimeo.com/1624166>`__ from `Eric Holscher <https://vimeo.com/user627770>`__ on `Vimeo <https://vimeo.com>`__.
 
 Writeup
 ~~~~~~~

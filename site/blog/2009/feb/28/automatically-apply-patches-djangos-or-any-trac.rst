@@ -9,7 +9,7 @@ applying people's patches has been a bit of a hassle. You know you
 want to apply someones patch, but there are about five steps in
 between you and applying their patch to your source tree.
 
-So I'd like to present trac\_patch.py, which allows you to apply a
+So I'd like to present `trac\_patch.py <http://github.com/ericholscher/sandbox/blob/39c5f6e69dbd2ccf71189c9f33a9424b3e7d8c87/trac_patch.py>`__, which allows you to apply a
 patch from Django's trac automatically. It is posted on github, so
 I encourage everyone to fork it and modify it to fit your own
 workflow. This was done in about 2 hours, so it's still pretty

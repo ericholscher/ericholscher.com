@@ -15,7 +15,7 @@ when it gets announced, but I'm almost definitely going! YAY!!
 Update: An official announcement should be made Monday or Tuesday,
 including dates and location.
 
-Check my post here for updates: DjangoCon: September 6-7,
-GooglePlex
+Check my post here for updates: `DjangoCon: September 6-7,
+GooglePlex <http://www.ericholscher.com/blog/2008/jul/13/djangocon-dateslocation-announced/>`__
 
 

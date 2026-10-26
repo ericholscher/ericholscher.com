@@ -5,7 +5,7 @@ OpenID FTW
 
 This is why OpenID is such a good idea.
 
-URL based Identifiers
+`URL based Identifiers <http://factoryjoe.com/blog/2008/01/03/its-high-time-we-moved-to-url-based-identifiers/>`__
 
 It talks about how we should use URLs instead of E-mail as
 identifiers for ourselves. When someone gets ahold of your e-mail,

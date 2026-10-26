@@ -3,7 +3,7 @@
 Security Vulnerabilities on the Internet
 ========================================
 
-I was reading an article on LWN about security vulnerabilities on
+I was reading an `article <http://lwn.net/Articles/268170/>`__ on LWN about security vulnerabilities on
 newly shipped machines. The qualm is that the same place that the
 updates for vulnerabilities come from is the same place where you
 are going to get infected. They are asking if there isn't possibly

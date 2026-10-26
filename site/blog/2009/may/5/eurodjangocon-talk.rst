@@ -13,21 +13,8 @@ my talk in
 and on slideshare.
 
 
-.. raw:: html
+`Testing Slides <http://www.slideshare.net/ericholscher/testing-slides-1387499>`__
 
-   <div style="width:425px;text-align:left" id="__ss_1387499">
-   
-Testing Slides
-
-.. raw:: html
-
-   <object style="margin:0px" width="425" height="355">
-   
-
-.. raw:: html
-
-   </object></div>
-   
 I hope that people have questions or constructive feedback, and I'd
 love to hear what everyone thought. I will be writing a full
 writeup at the end of the conference, but I'll say that it has been

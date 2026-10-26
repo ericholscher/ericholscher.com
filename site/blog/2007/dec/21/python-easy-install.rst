@@ -6,7 +6,7 @@ Python Easy Install
 
 EDIT: Hey everyone, I wrote an updated post that actually tells how
 to setup a django app (and any python app) using easy install.
-Check it out!
+`Check it out <http://ericholscher.com/blog/2008/aug/6/easily-packing-and-distributing-django-apps-setupt/>`__!
 
 I found a neat python module that lets you install other python
 modules. I have set it up on here, and it makes it really easy to

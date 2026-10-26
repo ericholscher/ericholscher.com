@@ -4,8 +4,8 @@
 Code on Launchpad
 =================
 
-The code for the website is now located on launchpad. I am using
-their bazaar version control system that is kick ass. It's a
+The code for the website is now located on `launchpad <https://launchpad.net/~eric-holscher>`__. I am using
+their `bazaar version control system <http://bazaar-vcs.org/>`__ that is kick ass. It's a
 Distributed VCS which means that you can run it completely locally,
 without a server. I use the server of course, but it allows you to
 do work on your code without internet access and other neat

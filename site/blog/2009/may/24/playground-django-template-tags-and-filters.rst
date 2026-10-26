@@ -31,19 +31,10 @@ Here is a small 1:40 minute screencast that explains what I did:
 
 .. raw:: html
 
-   <object width="600" height="400">
-   
+   <iframe src="https://player.vimeo.com/video/4814380" title="Django Admin Playground" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
 
-.. raw:: html
+`Django Admin Playground <https://vimeo.com/4814380>`__ from `Eric Holscher <https://vimeo.com/user627770>`__ on `Vimeo <https://vimeo.com>`__.
 
-   </object><p>
-   
-Django Admin Playground from Eric Holscher on Vimeo.
-
-.. raw:: html
-
-   </p>
-   
 It gives you a "Play" link next to each of the tags and filters in
 the admin. Once you click on that, if the docstring for the tag has
 a code example, it attempts to parse that out. This allows you to

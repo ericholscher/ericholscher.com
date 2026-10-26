@@ -7,8 +7,8 @@ Books to read
 Just posting some books that I want to read this upcoming
 semester.
 
-Structure and interpretation of computer program (free html
-version): The quintessential book on computer programming. It's a
+Structure and interpretation of computer program (`free html
+version <http://mitpress.mit.edu/sicp/full-text/book/book-Z-H-3.html>`__): The quintessential book on computer programming. It's a
 classic and I feel like I should read it just to say that I have
 and to understand the basic theory of computing presented easily.
 The book opens with an amazing dedication that I would like to

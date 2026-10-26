@@ -53,14 +53,9 @@ The full video can be downloaded
 
 .. raw:: html
 
-   <object width="640" height="475">   
-   
+   <iframe src="https://player.vimeo.com/video/1615834" title="Screencast 1: Debugging with the Django error page" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
 
-.. raw:: html
-
-   </object>
-   
-Debugging with the Django error page from Eric Holscher on Vimeo.
+`Debugging with the Django error page <https://vimeo.com/1615834>`__ from `Eric Holscher <https://vimeo.com/user627770>`__ on `Vimeo <https://vimeo.com>`__.
 
 Writeup
 ~~~~~~~
