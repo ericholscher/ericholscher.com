@@ -137,45 +137,49 @@
     "photos": [
       {
         "file": "john-muir-trail-01.jpg",
+        "date": "2026-07-06"
+      },
+      {
+        "file": "john-muir-trail-02.jpg",
         "date": "2026-07-09",
         "mile": 30
       },
       {
-        "file": "john-muir-trail-02.jpg",
+        "file": "john-muir-trail-03.jpg",
         "date": "2026-07-10"
       },
       {
-        "file": "john-muir-trail-03.jpg",
+        "file": "john-muir-trail-04.jpg",
         "date": "2026-07-12",
         "mile": 46
       },
       {
-        "file": "john-muir-trail-04.jpg",
+        "file": "john-muir-trail-05.jpg",
         "date": "2026-07-14",
         "mile": 66
       },
       {
-        "file": "john-muir-trail-05.jpg",
+        "file": "john-muir-trail-06.jpg",
         "date": "2026-07-15",
         "mile": 96
       },
       {
-        "file": "john-muir-trail-06.jpg",
+        "file": "john-muir-trail-07.jpg",
         "date": "2026-07-17",
         "mile": 117
       },
       {
-        "file": "john-muir-trail-07.jpg",
+        "file": "john-muir-trail-08.jpg",
         "date": "2026-07-23",
         "mile": 175
       },
       {
-        "file": "john-muir-trail-08.jpg",
+        "file": "john-muir-trail-09.jpg",
         "date": "2026-07-25",
         "mile": 208
       },
       {
-        "file": "john-muir-trail-09.jpg",
+        "file": "john-muir-trail-10.jpg",
         "date": "2026-07-26",
         "mile": 214
       }
