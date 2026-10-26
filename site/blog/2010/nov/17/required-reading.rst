@@ -39,7 +39,7 @@ everyone should watch:
 -  Bill O'Reily
    `DO IT LIVE (remix) <http://youtube.com/watch?v=5j2YDq6FkVE&NR=1>`_
    for when you're doing it live.
--  Nerf guns `gone wild <www.vimeo.com/2830418>`_.
+-  Nerf guns `gone wild <https://vimeo.com/2830418>`_.
    `Again <http://flickr.com/photos/webology/3023204926/>`_.
 -  `SCHNAPPI <http://youtube.com/watch?v=izibSMAQhEY>`_. Cutest
    Crocodile Ever.

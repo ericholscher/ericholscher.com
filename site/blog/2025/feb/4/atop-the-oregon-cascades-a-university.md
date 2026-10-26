@@ -1,5 +1,6 @@
 ```{post} Feb 04, 2025
 :category: link-blog
+:excerpt: 2
 ```
 
 # Atop the Oregon Cascades, a University of Oregon team finds a huge buried aquifer

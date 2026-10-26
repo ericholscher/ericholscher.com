@@ -45,11 +45,7 @@ internet connection there, which made posting hard.
 Traffic stats
 -------------
 
-.. figure:: http://media.ericholscher.com/images/postaday-analytics.jpg
-   :align: center
-   :alt: Analytics stats
-   
-   Analytics stats
+*The original screenshot is no longer available.*
 
 The day after that big spike I launched my redesign, so there are
 probably around 1,000 hits missing from that. I got around 30,000

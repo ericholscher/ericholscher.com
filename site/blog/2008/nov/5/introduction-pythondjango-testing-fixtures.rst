@@ -1,10 +1,11 @@
 .. post:: 2008-11-05 03:10:17
+   :tags: testing series
    :category: code
 
 Introduction to Python/Django tests: Fixtures
 =============================================
 
-In the first two posts of this `series </tag/testing-series/>`_, we
+In the first two posts of this `series </blog/archive/tag/testing-series/>`_, we
 talked about how to get the basic infrastructure for your tests up
 and running. You should have a file with doc tests and one with
 unit tests. They should be linked into your django project with an

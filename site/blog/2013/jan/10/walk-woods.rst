@@ -30,7 +30,7 @@ responsibilities I have are minimal, so it seems like a great time
 to go walk in the woods for 5 months. The approximate timeline is
 from April 15~September 30.
 
-.. figure:: http://i.imgur.com/rpU5z.jpg
+.. figure:: /_static/img/walk-woods-pct.jpg
    :align: center
    :alt: Pacific Crest Trail
    
@@ -65,7 +65,7 @@ at http://ericholscher.com, if you want to follow along. There
 isn't anything there yet because this wasn't public knowledge, but
 I will start posting about it soon.
 
-.. figure:: http://i.imgur.com/IXspr.gif
+.. figure:: /_static/img/walk-woods-high-five.gif
    :align: center
    :alt: Cop High Five
    
@@ -90,7 +90,7 @@ tl;dr:
 
 tl;dr gif:
 
-.. figure:: http://i.imgur.com/eZGh9.gif
+.. figure:: /_static/img/walk-woods-oregon-trail.gif
    :align: center
    :alt: Oregon Trail
    

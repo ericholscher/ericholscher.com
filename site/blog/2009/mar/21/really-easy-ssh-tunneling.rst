@@ -48,11 +48,7 @@ live. Go down the the SOCKS host, and set it to localhost, with the
 port you set up above, 5555 in this case. It should look something
 like this:
 
-.. figure:: http://media.ericholscher.com/images/firefox-proxy.png
-   :align: center
-   :alt: Configuration for Proxy
-   
-   Configuration for Proxy
+*The original screenshot is no longer available.*
 
 I use the
 `Quickproxy <https://addons.mozilla.org/en-US/firefox/addon/1557>`_
