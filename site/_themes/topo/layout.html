@@ -91,10 +91,17 @@
           {%- set post = ablog[pagename] %}
           <p class="topo-dateline">
             {%- if post.date %}<time datetime="{{ post.date.strftime('%Y-%m-%d') }}">{{ post.date.strftime('%B %-d, %Y') }}</time>{% else %}Draft{% endif %}
-            {%- if post.tags %} &middot; {% for tag in post.tags %}<a href="{{ pathto(tag.docname) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}{% endif %}
+            {#- Only the topics in categories.json, by their titles; minor categories like conference-organizing stay off. -#}
+            {%- set topics = namespace(items=[]) %}
+            {%- for cat in post.category if topo_categories.get(cat.name) %}{% set topics.items = topics.items + [cat] %}{% endfor %}
+            {%- if topics.items %} &middot; {% for cat in topics.items %}<a href="{{ pathto(cat.docname) }}">{{ topo_categories[cat.name].title }}</a>{% if not loop.last %}, {% endif %}{% endfor %}{% endif %}
           </p>
         {%- endif %}
         {{ self.body() }}
+        {#- Tags sit quietly under the post; the category stays in the dateline above. -#}
+        {%- if is_post and post.tags %}
+        <p class="topo-post-tags">Tagged {% for tag in post.tags %}<a href="{{ pathto(tag.docname) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
+        {%- endif %}
       </div>
       {#- Site-wide copy sits outside role="main" so Read the Docs search and file diffs see only the page's own content. -#}
       {%- if is_post %}

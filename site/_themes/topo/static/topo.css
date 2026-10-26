@@ -256,6 +256,9 @@ div[class^="highlight-"] { margin: 0 0 1.2em; }
 .topo-dateline { font-family: var(--mono); font-size: 12px; color: var(--muted); margin: 0 0 14px; display: flex; flex-wrap: wrap; align-items: center; gap: 0 8px; }
 .topo-dateline a { color: var(--muted); border-bottom-color: var(--rule); }
 .topo-dateline a:hover { color: var(--ink); }
+.body .topo-post-tags { font-family: var(--mono); font-size: 12px; line-height: 1.6; color: var(--muted); margin: 32px 0 0; padding-top: 12px; border-top: 1px solid var(--rule); }
+.topo-post-tags a { color: var(--muted); border-bottom-color: var(--rule); }
+.topo-post-tags a:hover { color: var(--ink); }
 /* Calls to action: a paper card with a forest edge, and one button style everywhere,
    forest green with the trail-sign gold inset line. The quiet variant is for a second action. */
 .topo-cta { margin: 32px 0; padding: 18px 20px 20px; background: #F7F1E4; border: 1px solid var(--rule-strong); border-top: 3px solid var(--forest); border-radius: 3px; }
