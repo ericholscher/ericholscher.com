@@ -1,4 +1,5 @@
 .. post:: 2008-11-02 15:00:00
+   :tags: testing series
    :category: code
 
 Introduction to Python/Django testing: Basic Doctests

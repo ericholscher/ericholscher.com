@@ -71,7 +71,6 @@ Example
 
 This shows how user might harness this data.
 
-.. image:: https://dl.dropboxusercontent.com/u/372293/GTD-Example.gif
-	:width: 800px
+*The original animation is no longer available.*
 
 	

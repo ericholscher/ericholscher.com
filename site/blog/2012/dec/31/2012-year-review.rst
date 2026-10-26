@@ -1,4 +1,5 @@
 .. post:: 2012-12-31 08:06:17
+   :tags: year in review
    :category: outside
 
 2012 Year in Review 

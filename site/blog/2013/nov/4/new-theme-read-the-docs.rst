@@ -35,16 +35,18 @@ This allows you to keep context inside the documentation when you land on a page
 Old
 ***
 
-.. image:: http://i.imgur.com/hWOnmKy.png
+.. image:: /_static/img/rtd-theme-2013-1.png
+	:alt: The old Read the Docs theme
 	:width: 100%
-	:target: http://i.imgur.com/hWOnmKy.png
+	:target: /_static/img/rtd-theme-2013-1.png
 
 New
 ***
 
-.. image:: http://i.imgur.com/7oLntvR.png
+.. image:: /_static/img/rtd-theme-2013-2.png
+	:alt: The new Read the Docs theme
 	:width: 100%
-	:target: http://i.imgur.com/7oLntvR.png
+	:target: /_static/img/rtd-theme-2013-2.png
 
 Flyout
 ~~~~~~
@@ -64,9 +66,10 @@ The old flyout let you:
 	* Change versions
 	* Go back to Read the Docs
 
-.. image:: http://i.imgur.com/CBDPzbD.png
+.. image:: /_static/img/rtd-theme-2013-3.png
+	:alt: The old flyout menu
 	:width: 50%
-	:target: http://i.imgur.com/CBDPzbD.png
+	:target: /_static/img/rtd-theme-2013-3.png
 
 New
 ***
@@ -81,9 +84,10 @@ The new flyout lets you:
 	* Contribute edits on GitHub or Bitbucket
 	* Do a full-text search (Coming soon)
 
-.. image:: http://i.imgur.com/9DRP8fj.png
+.. image:: /_static/img/rtd-theme-2013-4.png
+	:alt: The new flyout menu
 	:width: 50%
-	:target: http://i.imgur.com/9DRP8fj.png
+	:target: /_static/img/rtd-theme-2013-4.png
 
 Mobile
 ~~~~~~
@@ -92,9 +96,10 @@ The new theme really shines on mobile.
 We provide a beautiful interface for phones and tablets,
 while staying completely functional.
 
-.. image:: http://i.imgur.com/29uEpVs.png
+.. image:: /_static/img/rtd-theme-2013-5.png
+	:alt: The new theme on a phone
 	:width: 100%
-	:target: http://i.imgur.com/29uEpVs.png
+	:target: /_static/img/rtd-theme-2013-5.png
 
 Using it
 --------

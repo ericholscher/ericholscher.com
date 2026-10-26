@@ -1,11 +1,12 @@
 .. post:: 2008-11-11 17:40:10
+   :tags: testing series
    :category: code
 
 Practical Django Testing Examples: Views
 ========================================
 
 This is the fourth in a series of Django testing posts. Check out
-the others in my `Testing series </tag/testing-series/>`_ if you
+the others in my `Testing series </blog/archive/tag/testing-series/>`_ if you
 want to read more. Today is the start of a sub-series, which is
 practical examples. This series will be going through each of the
 different kinds of tests in Django, and showing how to do them. I

@@ -26,11 +26,7 @@ parts that are pretty :)
 What does it do?
 ^^^^^^^^^^^^^^^^
 
-.. figure:: http://media.ericholscher.com/images/Kong/Admin.png
-   :align: center
-   :alt: Admin
-   
-   Admin
+*The original screenshot is no longer available.*
 
 On top of this base, I have written a way to run tests against
 these sites. You can categorize the sites by the type of site they

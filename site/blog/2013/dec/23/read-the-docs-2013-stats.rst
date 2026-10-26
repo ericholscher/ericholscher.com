@@ -51,7 +51,8 @@ these numbers are similar to what `MDN has`_.
 
 I think an image shows this a bit better than words:
 
-.. image:: https://dl.dropboxusercontent.com/s/m1xjc5jemlql6i2/Screenshot%202013-12-21%2009.28.51.png
+.. image:: /_static/img/rtd-2013-stats.png
+	:alt: Read the Docs usage statistics for 2013
 	:width: 100%
 
 Site Stats

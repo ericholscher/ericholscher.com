@@ -11,6 +11,7 @@
 <section class="topo-log" id="hikes">
   <h2 class="topo-plaque">Trips, year by year</h2>
   <p class="topo-log-kinds" aria-label="Show only">
+    <span class="topo-log-label">Trips</span>
     <a class="topo-kind topo-kind-long" href="#long">long ones <span class="topo-kind-count">{{ topo_trip_list|selectattr('long')|list|length }}</span></a>
     {%- for k in ns.kinds|sort %}
     <a class="topo-kind topo-kind-{{ k }}" href="#{{ k }}">{{ k|replace("-", " ") }} {% set c = namespace(n=0) %}{% for t in topo_trip_list if k in t.kinds %}{% set c.n = c.n + 1 %}{% endfor %}<span class="topo-kind-count">{{ c.n }}</span></a>
@@ -31,6 +32,10 @@
               {%- if t.entries and not t.solo %}
               <span class="topo-trip-gist">
                 {%- for h in t.entries %}<span class="topo-trip-gist-item">{% if h.feature %}<span class="topo-long-mark" title="One of the long ones"></span>{% endif %}{{ h.name }}{% if not loop.last %} ·{% endif %}</span>{% if not loop.last %} {% endif %}{% endfor %}</span>
+              {%- elif t.places and not t.solo %}
+              {#- A trip of places alone (a quiet year close to home) names them, so its line isn't just a count. #}
+              <span class="topo-trip-gist">
+                {%- for p in t.places %}<span class="topo-trip-gist-item">{{ p.name }}{% if not loop.last %} ·{% endif %}</span>{% if not loop.last %} {% endif %}{% endfor %}</span>
               {%- endif %}
               <span class="topo-trip-meta">
                 {%- if t.solo %}{% set h = t.entries[0] %}{% if h.feature %}<span class="topo-long-mark" title="One of the long ones"></span>{% endif %}{{ h.kind|replace("-", " ") }} · {{ h.when|replace(", " ~ y, "")|replace(" " ~ y, "") }}{% if h.where %} · {{ h.where }}{% endif %}

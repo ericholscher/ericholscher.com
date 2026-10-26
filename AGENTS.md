@@ -61,7 +61,7 @@ The look is linen paper, umber ink, forest-green links, and public-land trail si
 Keep that identity. Work within the existing tokens in `topo.css` rather than adding colors.
 
 - **Section labels:** use `.topo-plaque` (the filled brown plaque) in the content. Sidebar labels (`.topo-side-label`) are lighter on purpose: umber small caps over a short gold rule, since Eric found plaques overbearing there.
-- **Calls to action:** one pattern everywhere. A paper card with a forest top edge (`.topo-cta`) holds one primary `.topo-button`, optionally with a `.topo-button-quiet` beside it. Buttons are 44px tall. (This lands with PR #42.)
+- **Calls to action:** one pattern everywhere. A paper card with a forest top edge (`.topo-cta`) holds one primary `.topo-button`, optionally with a `.topo-button-quiet` beside it. Buttons are 44px tall.
 - **The mark:** a diamond blaze with the Newsreader pilcrow as a path, in `layout.html` and `_static/img/favicon.svg`.
   - The pilcrow is centered so its widest points (the flag at top right, the stem foot at bottom right, the bowl at top left) sit the same distance inside the gold line: `translate(20.882 42.118) scale(0.016)`. Centering its bounding box instead pushed the flag through the gold line.
   - The name and nav labels use `text-box: trim-both cap alphabetic`, so flex centering lines the mark and search icon up on the capitals in any font. Browsers without `text-box` fall back to nudging `.topo-mark` up 2.5px.
@@ -85,10 +85,10 @@ These are Eric's preferences, learned the hard way. Follow them without re-askin
 - It is a personal site, not a B2B landing page. No stat counters or metric bars.
 - The Pacific Northwest belongs in the motifs, not the copy.
 - **Understated, never braggy.**
-  - The home intro is "I'm Eric. I build documentation tools and communities, and otherwise spend time outside." followed by the projects.
+  - The home intro is Eric's own words (he rewrote it on 2026-10-25): "Hi! I'm Eric. I build documentation tools and communities, and otherwise spend time outside." then the projects, then a pointer to favorite posts and Adventures. Don't rewrite it.
   - Say what he does once.
   - "Walk long trails" was cut as braggy.
-- Keep the home H1 "My home on the web". Eric chose it over alternatives.
+- Keep the home H1 "Welcome to my home on the web". Eric chose it.
 - **Don't invent facts:** no dates, routes, roles, summits, photo credits, or event names that aren't in the posts, the data files, or something Eric said.
   - When unsure, write less, or ask.
   - When summarizing a post, work from the post's own words.
@@ -98,11 +98,11 @@ These are Eric's preferences, learned the hard way. Follow them without re-askin
 
 This repo is public. Never commit:
 
-- Names of friends or family.
-- Where family lives, family visits, or health details.
+- Names of friends or family. Mentioning his wife is fine (Eric, 2026-10-26).
+- Specific personal medical or health details, or where family lives.
 - Trips that weren't Eric's. The shared Photos library includes his wife's own trips.
 - Exact locations from photos. Map pins stay at town or region level.
-- Photo metadata. Run photos through `scripts/prepare_photos.py`, which strips EXIF and GPS (PR #43).
+- Photo metadata. Run photos through `scripts/prepare_photos.py`, which strips EXIF and GPS.
 - Personal skip lists for the photo script. They go in `photo-skip.json`, which is gitignored.
 
 Leave a trip that is still in progress off the site until Eric says to add it.
@@ -123,7 +123,5 @@ Leave a trip that is still in progress off the site until Eric says to add it.
 - Push straight to `main` only when Eric asks, for that change.
 - After a PR merges, restart the branch from `main` instead of stacking on merged history.
 - Write commit messages that say why, not only what.
-- Open PRs when this was written (October 2026):
-  - #40: photo script skip list by place or name.
-  - #42: call-to-action pattern and a tidier intro.
-  - #43: year letters, `site/adventures/<year>.md`.
+- Check GitHub for open PRs rather than trusting a list here; one written down goes stale within days.
+- The year letters (`site/adventures/<year>.md`) are drafts with no date on `{post}`. They build and are reachable by URL with noindex, which Eric is fine with. Publishing one means adding a date, and only Eric decides when.
