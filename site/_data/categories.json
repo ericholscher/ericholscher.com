@@ -1,4 +1,8 @@
 {
+  "community": {
+    "title": "Community",
+    "intro": "Conferences, events, and making rooms that are easier to walk into."
+  },
   "documentation": {
     "title": "Documentation",
     "intro": "How software gets explained: Read the Docs, Write the Docs, Sphinx, and the craft of docs."
@@ -6,10 +10,6 @@
   "open-source": {
     "title": "Open source",
     "intro": "Sustaining open source projects and the businesses around them."
-  },
-  "community": {
-    "title": "Community",
-    "intro": "Conferences, events, and making rooms that are easier to walk into."
   },
   "code": {
     "title": "Code",
