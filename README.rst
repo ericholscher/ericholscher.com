@@ -22,13 +22,19 @@ writes a meta-refresh page at each old URL that no longer has a page of its own 
 
 Topics are ABlog categories. The ones listed in ``site/_data/categories.json`` (slug to title and intro)
 get a landing page with an intro, and a card on the home page. A post joins a topic with ``:category: <slug>``.
-The Adventures page (``site/adventures.rst``) renders trips from ``site/_data/hikes.json`` and a places map
-from ``site/_data/places.json``; both are plain JSON meant to be edited by hand.
-Trips marked ``"feature": true`` show as cards under "The long ones".
-Years and trip types are permalinks: ``/adventures/#2016`` opens that year and sets the map to it,
-``/adventures/#trek`` shows only treks.
-Every trip and place also shows in a year-by-year log, one collapsible section per year.
-The map expands to fill the screen, with drag to pan, a label on hover (or tap) naming each pin, and zoom by pinch, ctrl+scroll, or the on-map buttons
+The Adventures page (``site/adventures.rst``) is one list of trips by year, built from three hand-edited
+JSON files: ``site/_data/hikes.json`` (the outings), ``site/_data/places.json`` (the map's pins), and
+``site/_data/trips.json``, which groups them into trips (a region and season, like "Southeast Asia, winter 2026").
+``site/_ext/topo_trips.py`` puts every outing in exactly one trip: the trip that names it, or for a trip marked
+``"home": true``, that trip for the outing's year ("Close to home, 2024"), or else a trip of its own.
+Places in no trip go on that year's "Also" line.
+Each trip opens to its own map; ``scripts/trip_maps.py`` draws the land for them from Natural Earth into
+``site/_static/maps/`` (committed). Rerun it after changing a trip's places; the build warns when a map is missing.
+Trips marked ``"feature": true`` in hikes.json are listed under "The long ones" and get a gold diamond in the list.
+Trips and filters are permalinks: ``/adventures/#europe-2018`` opens that trip, ``/adventures/#2016`` jumps to the
+year, and ``/adventures/#trek`` or ``/adventures/#long`` shows only those trips (and dims the rest on the map).
+The world map above the list is an overview: tap a year to show its places, or a pin to name it and link to its trips.
+It expands to fill the screen, with drag to pan and zoom by pinch, ctrl+scroll, or the on-map buttons
 (plain scroll and double-click also zoom once it is expanded).
 Each hike has a ``kind``: ``thru-hike`` (end to end), ``trek`` (multi-day, hut or village based), ``hiking`` (a stay spent hiking from a base), ``backpacking``, ``summit``, ``day-hike``, ``camping``, ``rafting``, ``kayak``, ``cruise``, ``road-trip``, or ``bike``.
 

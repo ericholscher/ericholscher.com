@@ -8,12 +8,8 @@ check what a reader sees rather than CSS boxes. Build the site first:
     cd .. && uv run --group tests pytest
 """
 
-import functools
-import http.server
 import io
-import os
 import re
-import threading
 from pathlib import Path
 
 import pytest
@@ -21,7 +17,6 @@ import pytest
 ROOT = Path(__file__).resolve().parent.parent
 LAYOUT = ROOT / "site/_themes/topo/layout.html"
 FAVICON = ROOT / "site/_static/img/favicon.svg"
-BUILD = ROOT / "site/_build/dirhtml"
 
 # The gold inset line: a diamond of radius 22 around (32, 32), stroked 1.5 wide.
 GOLD_RADIUS = 22
@@ -75,30 +70,6 @@ def test_favicon_matches_masthead_mark():
 
 
 # Browser tests
-
-
-@pytest.fixture(scope="module")
-def site_url():
-    if not (BUILD / "index.html").exists():
-        pytest.skip("site not built; see this module's docstring")
-    class Quiet(http.server.SimpleHTTPRequestHandler):
-        def log_message(self, *args):
-            pass
-
-    handler = functools.partial(Quiet, directory=str(BUILD))
-    server = http.server.ThreadingHTTPServer(("127.0.0.1", 0), handler)
-    threading.Thread(target=server.serve_forever, daemon=True).start()
-    yield f"http://127.0.0.1:{server.server_port}/"
-    server.shutdown()
-
-
-@pytest.fixture(scope="module")
-def browser():
-    sync_playwright = pytest.importorskip("playwright.sync_api").sync_playwright
-    with sync_playwright() as p:
-        b = p.chromium.launch(executable_path=os.environ.get("CHROMIUM_PATH"))
-        yield b
-        b.close()
 
 
 # Pages render with the webfonts, and without them: font-display: optional can leave

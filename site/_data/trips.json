@@ -1,0 +1,487 @@
+[
+  {
+    "slug": "europe-2026",
+    "name": "Europe, 2026",
+    "years": [
+      2026
+    ],
+    "places": [
+      "Berlin",
+      "Athens",
+      "Vikos-Aoös National Park",
+      "Bilbao",
+      "Lisbon",
+      "Copenhagen",
+      "Sarajevo",
+      "Utrecht",
+      "Madrid",
+      "Picos de Europa",
+      "Camino del Norte",
+      "Budapest",
+      "Karwendel"
+    ],
+    "along": [
+      "Vikos-Aoös National Park",
+      "Camino del Norte",
+      "Picos de Europa",
+      "Austrian Alps"
+    ]
+  },
+  {
+    "slug": "john-muir-and-colorado-2026",
+    "name": "John Muir Trail and Colorado, 2026",
+    "when": "July and August 2026",
+    "years": [
+      2026
+    ],
+    "places": [
+      "John Muir Trail",
+      "White River National Forest"
+    ],
+    "along": [
+      "John Muir Trail",
+      "Colorado Rockies"
+    ]
+  },
+  {
+    "slug": "southeast-asia-2026",
+    "name": "Southeast Asia, winter 2026",
+    "when": "February to April 2026",
+    "years": [
+      2026
+    ],
+    "places": [
+      "Singapore",
+      "Bali",
+      "Andaman coast, Thailand",
+      "Raja Ampat",
+      "Bohol, Philippines",
+      "Malapascua, Philippines",
+      "Sabah, Borneo"
+    ],
+    "along": [
+      "Thailand's Andaman coast",
+      "Diving in Indonesia",
+      "Hiking and river safari in Borneo"
+    ]
+  },
+  {
+    "slug": "japan-2025",
+    "name": "Japan by train, winter 2025–26",
+    "when": "December 2025 to January 2026",
+    "years": [
+      2025,
+      2026
+    ],
+    "places": [
+      "Kyoto",
+      "Hiroshima",
+      "Hakone and Kamakura",
+      "Kanazawa",
+      "Yamanouchi, Nagano",
+      "Tokyo",
+      "Himeji",
+      "Nara",
+      "Miyajima"
+    ],
+    "along": [
+      "Month in Japan by train"
+    ]
+  },
+  {
+    "slug": "kenya-2025",
+    "name": "Kenya, 2025",
+    "when": "September and October 2025",
+    "years": [
+      2025
+    ],
+    "places": [
+      "Maasai Mara",
+      "Amboseli",
+      "Diani Beach, Kenya",
+      "Kakamega Forest",
+      "Nairobi"
+    ],
+    "along": [
+      "Safari in Kenya",
+      "Kakamega Forest"
+    ]
+  },
+  {
+    "slug": "europe-2025",
+    "name": "Europe, 2025",
+    "years": [
+      2025
+    ],
+    "places": [
+      "Berlin",
+      "Amsterdam",
+      "Scotland",
+      "Ireland",
+      "Dubrovnik and Kotor",
+      "Durmitor National Park",
+      "Peaks of the Balkans",
+      "Via Alpina, Switzerland",
+      "Milan",
+      "Munich",
+      "Carnic Alps High Route",
+      "Triglav National Park",
+      "Alta Via 1, Dolomites",
+      "Venice",
+      "Istanbul",
+      "Turkish Mediterranean coast",
+      "London",
+      "Utrecht"
+    ],
+    "along": [
+      "Cycling the Netherlands",
+      "Scotland and Ireland",
+      "Durmitor National Park",
+      "Peaks of the Balkans",
+      "Via Alpina",
+      "Carnic Alps High Route",
+      "Triglav National Park",
+      "Alta Via 1"
+    ]
+  },
+  {
+    "slug": "costa-rica-2025",
+    "name": "Costa Rica, 2025",
+    "when": "April 2025",
+    "years": [
+      2025
+    ],
+    "places": [
+      "Costa Rica",
+      "Monteverde and Arenal"
+    ],
+    "along": [
+      "Camino de Costa Rica"
+    ]
+  },
+  {
+    "slug": "europe-2022",
+    "name": "Iceland and Portugal, 2022",
+    "when": "September and October 2022",
+    "years": [
+      2022
+    ],
+    "places": [
+      "Reykjavík and Þingvellir",
+      "Porto",
+      "Peneda-Gerês National Park"
+    ],
+    "along": [
+      "Porto and northern Portugal"
+    ]
+  },
+  {
+    "slug": "canadian-rockies-2023",
+    "name": "Canadian Rockies",
+    "years": [
+      2023
+    ],
+    "places": [
+      "Jasper National Park"
+    ],
+    "along": [
+      "Canadian Rockies"
+    ]
+  },
+  {
+    "slug": "alaska-2022",
+    "name": "Alaska, 2022",
+    "when": "July and August 2022",
+    "years": [
+      2022
+    ],
+    "places": [
+      "Vancouver",
+      "Inside Passage, Alaska",
+      "Denali",
+      "Tracy Arm",
+      "Sitka"
+    ],
+    "along": [
+      "Alaska cruise"
+    ]
+  },
+  {
+    "slug": "europe-2019",
+    "name": "Europe and Morocco, 2019",
+    "years": [
+      2019
+    ],
+    "places": [
+      "Prague",
+      "Amsterdam",
+      "Barcelona",
+      "Dolomites",
+      "Cinque Terre",
+      "Rome",
+      "Pompeii",
+      "Taghazout, Morocco",
+      "Seville",
+      "Malta"
+    ],
+    "along": [
+      "Three weeks in the Dolomites"
+    ]
+  },
+  {
+    "slug": "south-america-2018",
+    "name": "South America, winter 2018–19",
+    "when": "December 2018 to March 2019",
+    "years": [
+      2018,
+      2019
+    ],
+    "places": [
+      "Puerto Varas, Chile",
+      "El Chaltén",
+      "Lima",
+      "Machu Picchu and the Sacred Valley",
+      "Cusco",
+      "Lake Titicaca",
+      "Colca Canyon",
+      "Huacachina",
+      "Valparaíso and Santiago",
+      "Punta Arenas",
+      "Torres del Paine",
+      "Buenos Aires",
+      "Salkantay pass"
+    ],
+    "along": [
+      "Salkantay trek",
+      "Chile's Lakes District",
+      "Torres del Paine O Circuit",
+      "Hiking under Fitz Roy"
+    ]
+  },
+  {
+    "slug": "europe-2018",
+    "name": "Europe, 2018",
+    "years": [
+      2018
+    ],
+    "places": [
+      "Prague",
+      "Scotland",
+      "London",
+      "Lisbon",
+      "Dover and Deal",
+      "Dartmoor",
+      "La Rochelle",
+      "Bordeaux",
+      "Haute Route",
+      "Caminito del Rey",
+      "Costa Vicentina",
+      "Sintra",
+      "Split",
+      "Plitvice Lakes",
+      "Velebit coast",
+      "Roscoff",
+      "Ondres"
+    ],
+    "along": [
+      "La Vélodyssée",
+      "Haute Route",
+      "Month in Croatia"
+    ]
+  },
+  {
+    "slug": "asia-2018",
+    "name": "Taiwan and Southeast Asia, 2018",
+    "years": [
+      2018
+    ],
+    "places": [
+      "Hong Kong",
+      "Chiang Mai",
+      "Hoi An",
+      "Ninh Binh",
+      "Luang Prabang",
+      "Angkor",
+      "Taroko Gorge",
+      "Taipei",
+      "Huế"
+    ],
+    "along": [
+      "Two weeks in Taiwan by train"
+    ]
+  },
+  {
+    "slug": "colombia-2017",
+    "name": "Colombia, 2017",
+    "years": [
+      2017
+    ],
+    "places": [
+      "Guatapé",
+      "Bogotá"
+    ]
+  },
+  {
+    "slug": "europe-2017",
+    "name": "Europe, 2017",
+    "years": [
+      2017
+    ],
+    "places": [
+      "Lisbon"
+    ]
+  },
+  {
+    "slug": "europe-2016",
+    "name": "Europe, 2016",
+    "years": [
+      2016
+    ],
+    "places": [
+      "Prague",
+      "Ireland"
+    ]
+  },
+  {
+    "slug": "europe-2015",
+    "name": "Europe, 2015",
+    "years": [
+      2015
+    ],
+    "places": [
+      "Amsterdam",
+      "Zugspitze"
+    ]
+  },
+  {
+    "slug": "europe-2014",
+    "name": "Europe, 2014",
+    "years": [
+      2014
+    ],
+    "places": [
+      "Prague",
+      "Budapest",
+      "Szeged",
+      "Paris"
+    ]
+  },
+  {
+    "slug": "southeast-asia-2014",
+    "name": "Southeast Asia, 2014",
+    "years": [
+      2014
+    ],
+    "places": [
+      "Singapore",
+      "Andaman coast, Thailand",
+      "Chiang Mai",
+      "Angkor",
+      "Taroko Gorge",
+      "Taipei",
+      "Bangkok",
+      "Manila",
+      "Kuala Lumpur"
+    ]
+  },
+  {
+    "slug": "pct-2013",
+    "name": "Pacific Crest Trail, 2013",
+    "when": "April to June 2013",
+    "years": [
+      2013
+    ],
+    "places": [
+      "Pacific Crest Trail, Campo",
+      "Mount Whitney"
+    ],
+    "along": [
+      "Pacific Crest Trail"
+    ]
+  },
+  {
+    "slug": "europe-2010",
+    "name": "Europe, 2010",
+    "years": [
+      2010
+    ],
+    "places": [
+      "Berlin"
+    ]
+  },
+  {
+    "slug": "europe-2009",
+    "name": "Europe, 2009",
+    "years": [
+      2009
+    ],
+    "places": [
+      "Prague"
+    ]
+  },
+  {
+    "slug": "close-to-home",
+    "name": "Close to home",
+    "home": true,
+    "places": [
+      "Portland, Oregon",
+      "Bend, Oregon",
+      "Mount St. Helens",
+      "Mount Hood",
+      "Crater Lake",
+      "Elkhorn Mountains",
+      "Alvord Desert and Steens Mountain",
+      "Three Sisters Wilderness",
+      "McKenzie Pass",
+      "Oregon Cascades",
+      "PCT, Washington",
+      "Painted Hills and John Day",
+      "Columbia River Gorge",
+      "John Day River",
+      "Oregon Coast Trail",
+      "Strawberry Mountain Wilderness",
+      "PCT, Snoqualmie Pass",
+      "Wallowa Lake",
+      "Leavenworth",
+      "Olympic National Park",
+      "Goat Rocks Wilderness",
+      "Olympic coast",
+      "San Juan Islands",
+      "Eagle Cap Wilderness",
+      "Summer Lake Hot Springs",
+      "Mount Adams",
+      "Vancouver to Bellingham",
+      "Sawtooth Mountains"
+    ],
+    "along": [
+      "Petal Pedal century",
+      "Mount Hood weekends",
+      "Crater Lake and Lava Lake",
+      "Mount St. Helens",
+      "First bike overnight",
+      "Portland to Eugene",
+      "Mount St. Helens overnight",
+      "Vancouver to Bellingham",
+      "Three Sisters Wilderness",
+      "Mount Adams",
+      "Olympic National Park",
+      "Goat Rocks Wilderness",
+      "Shi Shi Beach",
+      "San Juan Islands",
+      "Eagle Cap Wilderness",
+      "Oregon Cascades",
+      "PCT in Washington",
+      "Mount Hood",
+      "McKenzie Pass, car-free",
+      "Elkhorn and Sawtooth Mountains",
+      "Alvord Desert and Steens Mountain",
+      "Three Sisters loop",
+      "Strawberry Mountain Wilderness",
+      "PCT loop from Snoqualmie Pass",
+      "John Day River",
+      "Lower John Day River",
+      "Oregon Coast Trail",
+      "Timberline Trail"
+    ]
+  }
+]

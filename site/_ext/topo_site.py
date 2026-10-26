@@ -10,9 +10,14 @@ import re
 from pathlib import Path
 
 import yaml
+from sphinx.util import logging
 
 from docutils import nodes
 from docutils.parsers.rst import Directive
+
+import topo_trips
+
+logger = logging.getLogger(__name__)
 
 
 def topo_data_context(app, pagename, templatename, context, doctree):
@@ -81,6 +86,22 @@ def topo_excerpt(text, limit=220):
     return text[:limit].rsplit(" ", 1)[0].rstrip(",;:") + "…"
 
 
+# The Adventures page is one list of trips by year, built from trips.json, hikes.json, and
+# places.json by topo_trips.build (see that module for how entries land in trips). The world map
+# and the long ones link into that list, so everything counts the same trips.
+def topo_trip_log(app):
+    data = app.topo_data
+    trips, years, problems = topo_trips.build(data["topo_hikes"], data["topo_places"], data["topo_trips"])
+    for problem in problems:
+        logger.warning("trips.json: %s", problem)
+    maps = Path(app.srcdir, "_static", "maps")
+    for t in trips:
+        if t["map"] and not (maps / f"{t['slug']}.svg").exists():
+            logger.warning("No map for the trip %s: run scripts/trip_maps.py", t["slug"])
+    data["topo_trip_list"] = trips
+    data["topo_log"] = years
+
+
 def topo_template_filters(app):
     if hasattr(app.builder, "templates"):
         app.builder.templates.environment.filters["topo_excerpt"] = topo_excerpt
@@ -117,4 +138,5 @@ def setup(app):
     app.connect("html-page-context", topo_year_summary)
     app.connect("doctree-resolved", topo_photo_rows)
     app.connect("builder-inited", topo_template_filters)
+    app.connect("builder-inited", topo_trip_log)
     return {"parallel_read_safe": True, "parallel_write_safe": True}
