@@ -25,6 +25,24 @@
         "lat": 36.5786,
         "lon": -118.2921,
         "label": "above"
+      },
+      {
+        "name": "Clouds Rest",
+        "lat": 37.7671,
+        "lon": -119.4895,
+        "label": "right",
+        "relations": [
+          16759394
+        ]
+      },
+      {
+        "name": "Half Dome",
+        "lat": 37.7459,
+        "lon": -119.5332,
+        "label": "right",
+        "relations": [
+          16315186
+        ]
       }
     ],
     "nights": [

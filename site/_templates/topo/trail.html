@@ -12,7 +12,11 @@
   {%- endif %}
   <p class="topo-trail-facts">{{ trail.miles|round|int }} miles from {{ trail.start.name }} to {{ trail.end.name }} on the mapped trail{% if trail.high %}, over {{ trail.passes|length }} named passes. The highest is {{ trail.high.name }}, {{ feet(trail.high.feet) }} feet{% endif %}.</p>
 
-  <figure class="topo-trail-map" style="aspect-ratio: {{ b[2] }} / {{ b[3] }}">
+  {#- The relief, route, and marks below are the map without JavaScript. With it, trail-map.js swaps in
+      a live map (MapLibre, with OpenFreeMap tiles and USGS terrain) once its tiles have loaded, and
+      leaves this in place if they don't. -#}
+  <figure class="topo-trail-map" data-static="{{ pathto('_static/', 1) }}">
+    <div class="topo-trail-canvas" style="aspect-ratio: {{ b[2] }} / {{ b[3] }}">
     <img src="{{ pathto('_static/trails/' ~ trail.slug ~ '-relief.webp', 1) }}" alt="" width="{{ b[2]|round|int }}" height="{{ b[3]|round|int }}">
     <svg viewBox="{{ b|join(' ') }}" role="img" aria-label="Map of the route from {{ trail.start.name }} to {{ trail.end.name }}">
       {%- for s in trail.map.spurs %}
@@ -28,26 +32,33 @@
       {%- for n in trail.nights if n.left is defined %}
       <li class="topo-trail-night" style="left: {{ n.left }}%; top: {{ n.top }}%" title="Night {{ n.night }}{% if n.day %}, {{ n.day }}{% endif %}, mile {{ n.mile }}"><span class="topo-visually-hidden">Night {{ n.night }}</span></li>
       {%- endfor %}
+      {%- for p in trail.photos if p.left is defined %}
+      <li class="topo-trail-photo-pin" style="left: {{ p.left }}%; top: {{ p.top }}%"><a href="#photo-{{ p.n }}" title="Photo {{ p.n }}, {{ p.day }}, mile {{ p.mile }}">{{ p.n }}</a></li>
+      {%- endfor %}
       {%- for s in trail.map.spurs %}
       <li class="topo-trail-place is-spur is-{{ s.side }}" style="left: {{ s.left }}%; top: {{ s.top }}%">{{ s.name }}</li>
       {%- endfor %}
       <li class="topo-trail-place is-end is-{{ trail.start.side }}" style="left: {{ trail.start.left }}%; top: {{ trail.start.top }}%">{{ trail.start.name }}</li>
       <li class="topo-trail-place is-end is-{{ trail.end.side }}" style="left: {{ trail.end.left }}%; top: {{ trail.end.top }}%">{{ trail.end.name }}</li>
     </ul>
+    </div>
+    <script type="application/json" class="topo-trail-data">{{ trail.geo|tojson }}</script>
     <figcaption>
       <span class="topo-trail-key topo-trail-key-route">The route</span>
       {%- if trail.passes %}<span class="topo-trail-key topo-trail-key-pass">Pass</span>{% endif %}
       {%- if trail.nights %}<span class="topo-trail-key topo-trail-key-night">Night</span>{% endif %}
-      {%- for s in trail.map.spurs %}<span class="topo-trail-key topo-trail-key-spur">To {{ s.name }}, not counted</span>{% endfor %}
+      {%- if trail.photos %}<span class="topo-trail-key topo-trail-key-photo">Photo</span>{% endif %}
+      {%- if trail.map.spurs %}<span class="topo-trail-key topo-trail-key-spur">Side trails, not counted</span>{% endif %}
     </figcaption>
   </figure>
+  <script src="{{ pathto('_static/trail-map.js', 1) }}" defer></script>
 
   {%- if trail.photos %}
   <div class="topo-trail-photos">
     {%- for p in trail.photos %}
-    <figure>
+    <figure id="photo-{{ p.n }}">
       <a href="{{ pathto('_static/photos/' ~ trail.slug ~ '/' ~ p.file, 1) }}"><img src="{{ pathto('_static/photos/' ~ trail.slug ~ '/' ~ p.file, 1) }}" alt="{{ p.alt or ('On the trail, ' ~ p.day if p.day else 'On the trail') }}" loading="lazy"></a>
-      <figcaption>{{ p.day }}{% if p.mile is defined and p.mile is not none %} &middot; mile {{ p.mile }}{% endif %}</figcaption>
+      <figcaption>{% if p.left is defined %}<span class="topo-trail-photo-num">{{ p.n }}</span>{% endif %}{{ p.day }}{% if p.mile is defined and p.mile is not none %} &middot; mile {{ p.mile }}{% endif %}</figcaption>
     </figure>
     {%- endfor %}
   </div>

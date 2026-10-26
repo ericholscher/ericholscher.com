@@ -80,6 +80,7 @@ Keep that identity. Work within the existing tokens in `topo.css` rather than ad
   - YouTube and Vimeo iframes scale to 16:9.
 - **Maps:** inline SVG from Natural Earth land shapes, with no tiles or external scripts.
   - Interactive parts (year filter, hover labels, zoom, expand) are progressive enhancement. The page must still make sense without JavaScript.
+  - The exception is the trail pages, where Eric asked for a real map (October 2026). `trail-map.js` swaps the static relief for MapLibre (vendored in `site/_static/vendor/`), with OpenFreeMap tiles and USGS terrain, only once its tiles have drawn. If they fail, the static map stays, so it never shows a blank box.
 - **Mobile masthead:** the wordmark sits over a single nav row: Blog, Adventures, Speaking, Projects, About, and a search icon. It fits one row down to 375px; a 6th item would need tighter spacing or a shorter label.
 
 ## Voice and content

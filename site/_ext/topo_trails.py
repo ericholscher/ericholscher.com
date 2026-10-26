@@ -64,7 +64,7 @@ def view(trail, route, hike):
 
     def at_mile(mile):
         p = min(track, key=lambda q: abs(q[0] - mile))
-        return {**on_map(p[2], p[1]), "feet": p[3], "pct": round(100 * mile / miles, 2)}
+        return {**on_map(p[2], p[1]), "feet": p[3], "pct": round(100 * mile / miles, 2), "lon": p[2], "lat": p[1]}
 
     # The profile: feet over miles, between round thousands.
     feet = [p[3] for p in track]
@@ -92,7 +92,12 @@ def view(trail, route, hike):
             night.update(at_mile(n["mile"]))
         nights.append(night)
 
-    photos = [{**p, "day": nice_date(p["date"]) if p.get("date") else ""} for p in trail.get("photos", [])]
+    photos = []
+    for i, p in enumerate(trail.get("photos", []), 1):
+        photo = {**p, "n": i, "day": nice_date(p["date"]) if p.get("date") else ""}
+        if p.get("mile") is not None:
+            photo.update(at_mile(p["mile"]))
+        photos.append(photo)
 
     first, last = track[0], track[-1]
     return {
@@ -115,6 +120,17 @@ def view(trail, route, hike):
         "high": high,
         "nights": nights,
         "photos": photos,
+        # For the interactive map (topo/static/trail-map.js), in longitude and latitude.
+        "geo": {
+            "track": [[p[2], p[1], p[0], p[3]] for p in track],
+            "spurs": [{"name": s["name"], "line": [[lon, lat] for lat, lon in s["line"]]} for s in route["spurs"]],
+            "passes": [{"name": p["name"], "mile": p["mile"], "feet": p["feet"]} for p in passes],
+            "nights": [{k: n[k] for k in ("night", "day", "mile", "lon", "lat") if k in n} for n in nights if "lon" in n],
+            "photos": [{"n": p["n"], "file": f"photos/{trail['slug']}/{p['file']}", "day": p["day"], "mile": p.get("mile"), "lon": p.get("lon"), "lat": p.get("lat")}
+                       for p in photos],
+            "start": {"name": trail["start"]["name"], "lon": first[2], "lat": first[1]},
+            "end": {"name": trail["end"]["name"], "lon": last[2], "lat": last[1]},
+        },
     }
 
 

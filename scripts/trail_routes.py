@@ -4,8 +4,8 @@ Each trail in site/_data/trails.json names the OpenStreetMap route relations it 
 the walk started and ended. The script downloads those relations, joins their ways into one graph,
 and takes the shortest path along them from the start to the end, so a walk that began partway
 along a trail (the JMT from Cottonwood Pass, on the PCT) or followed two of them comes out as one
-line. "spurs" are side trails drawn on the map but not counted, like the JMT's last miles up Mount
-Whitney.
+line. "spurs" are side trips drawn on the map but not counted, like the JMT's last miles up Mount
+Whitney; a spur's own "relations" are the trails it takes off the route.
 
 The route is the public trail, never a GPS track, so nothing here comes from Eric's own photos or
 devices. Nights on the trail are trail miles in trails.json (see --nights in photo_trips.py).
@@ -224,6 +224,11 @@ def trace(trail):
 
     spurs = []
     for spur in trail.get("spurs", []):
+        # A spur can follow trails of its own; they join the graph only for it, so the route itself
+        # never takes them as a shortcut.
+        if spur.get("relations"):
+            more_nodes, more_edges, _ = load_graph(trail["relations"] + spur["relations"])
+            nodes, edges = {**nodes, **more_nodes}, more_edges
         tip = nearest(nodes, edges, (spur["lat"], spur["lon"]))
         path = shortest_path(edges, tip, on_route)
         spur_line, length = resample([nodes[n] for n in path], STEP * METERS_PER_MILE)

@@ -563,13 +563,13 @@ html.topo-map-open, html.topo-map-open body { overflow: hidden; }
 .body .topo-trail-facts { font-size: 15px; color: var(--text-2); margin-bottom: 20px; }
 .topo-trail-map { position: relative; margin: 0 0 32px; }
 .body .topo-trail-map img, .topo-trail-map img { display: block; width: 100%; height: auto; margin: 0; border: 1px solid var(--rule-strong); border-radius: 3px; }
-.topo-trail-map svg { position: absolute; top: 0; left: 0; width: 100%; height: auto; aspect-ratio: inherit; overflow: visible; }
+.topo-trail-canvas { position: relative; }
+.topo-trail-map svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
 .topo-trail-halo, .topo-trail-line, .topo-trail-spur { fill: none; stroke-linejoin: round; stroke-linecap: round; vector-effect: non-scaling-stroke; }
 .topo-trail-halo { stroke: var(--paper); stroke-width: 6px; opacity: .85; }
 .topo-trail-line { stroke: var(--forest); stroke-width: 3px; }
 .topo-trail-spur { stroke: var(--sign); stroke-width: 2px; stroke-dasharray: 4 4; }
 .body .topo-trail-marks { list-style: none; margin: 0; padding: 0; position: absolute; inset: 0; pointer-events: none; }
-.body .topo-trail-map .topo-trail-marks { bottom: auto; aspect-ratio: inherit; }
 .body .topo-trail-marks li { position: absolute; margin: 0; pointer-events: auto; }
 .topo-trail-pass { width: 0; height: 0; transform: translate(-5px, -7px); border: solid transparent; border-width: 0 5px 9px; border-bottom-color: var(--sign); }
 .topo-trail-night { width: 8px; height: 8px; transform: translate(-50%, -50%); border-radius: 50%; background: var(--sign-gold); box-shadow: 0 0 0 1.5px var(--sign); }
@@ -584,11 +584,39 @@ html.topo-map-open, html.topo-map-open body { overflow: hidden; }
 .body .topo-trail-place.is-end.is-above::before { left: 50%; top: auto; bottom: -10px; transform: translate(-50%, 50%); }
 .body .topo-trail-place.is-spur { color: var(--sign); }
 .topo-trail-map figcaption { display: flex; flex-wrap: wrap; gap: 4px 18px; }
+/* The live map (trail-map.js) covers the static one once its tiles have drawn. */
+.topo-trail-canvas .topo-trail-live { position: absolute; inset: 0; border: 1px solid var(--rule-strong); border-radius: 3px; overflow: hidden; background: var(--paper); visibility: hidden; font-family: var(--sans); }
+.topo-trail-map.is-live .topo-trail-live { visibility: visible; }
+.topo-trail-map.is-live .topo-trail-marks { display: none; }
+.topo-trail-canvas:fullscreen { background: var(--paper); }
+.topo-trail-canvas:fullscreen .topo-trail-live { border: 0; border-radius: 0; }
+.topo-trail-3d { position: absolute; top: 10px; left: 10px; z-index: 2; min-width: 44px; min-height: 32px; padding: 0 10px; font-family: var(--mono); font-size: 12px; letter-spacing: .08em; color: var(--sign-text); background: var(--sign); border: 0; border-radius: 3px; box-shadow: inset 0 0 0 1px var(--sign-2), inset 0 0 0 2px rgba(219,166,62,.55); cursor: pointer; }
+.topo-trail-3d[aria-pressed="true"] { background: var(--forest); }
+.topo-trail-map-photo { display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; padding: 0 4px; border: 0; border-radius: 3px; background: var(--sign); color: var(--sign-text); font-family: var(--mono); font-size: 12px; line-height: 1; cursor: pointer; box-shadow: inset 0 0 0 1px rgba(219,166,62,.55), 0 0 0 2px var(--paper); }
+.topo-trail-map-photo:hover, .topo-trail-map-photo:focus-visible { background: var(--link-hover); }
+.topo-trail-cursor { width: 12px; height: 12px; border-radius: 50%; background: var(--blaze); box-shadow: 0 0 0 2px var(--paper); pointer-events: none; }
+.topo-trail-cursor::after { content: attr(data-label); position: absolute; left: 16px; top: 50%; transform: translateY(-50%); white-space: nowrap; font-family: var(--mono); font-size: 11px; color: var(--ink); background: var(--paper); padding: 2px 5px; border-radius: 2px; box-shadow: 0 1px 3px rgba(51,42,32,.2); }
+.topo-trail-plot-cursor { position: absolute; top: 0; bottom: 0; width: 0; border-left: 1.5px solid var(--blaze); pointer-events: none; }
+.topo-trail-plot-cursor[hidden] { display: none; }
+.topo-trail-plot { touch-action: pan-y; }
+.topo-trail-popup .maplibregl-popup-content { font-family: var(--mono); font-size: 12px; color: var(--ink); background: var(--paper); border: 1px solid var(--rule-strong); border-radius: 3px; padding: 6px 9px; box-shadow: 0 2px 8px rgba(51,42,32,.2); }
+.topo-trail-popup.is-photo .maplibregl-popup-content { padding: 6px; }
+.topo-trail-popup.is-photo a { display: block; }
+.topo-trail-popup.is-photo img { display: block; width: 260px; max-width: 100%; height: auto; margin: 0 0 6px; border: 0; border-radius: 2px; }
+.topo-trail-popup .maplibregl-popup-tip { border-top-color: var(--rule-strong); border-bottom-color: var(--rule-strong); }
+.topo-trail-live .maplibregl-ctrl-attrib, .topo-trail-live .maplibregl-ctrl-scale { font-family: var(--mono); font-size: 10px; }
+.topo-trail-live .maplibregl-cooperative-gesture-screen { font-family: var(--sans); }
 .topo-trail-key::before { content: ""; display: inline-block; margin-right: 6px; vertical-align: 2px; }
 .topo-trail-key-route::before { width: 16px; height: 3px; background: var(--forest); }
 .topo-trail-key-spur::before { width: 16px; border-top: 2px dashed var(--sign); }
 .topo-trail-key-pass::before { border: solid transparent; border-width: 0 5px 9px; border-bottom-color: var(--sign); vertical-align: 0; }
 .topo-trail-key-night::before { width: 8px; height: 8px; border-radius: 50%; background: var(--sign-gold); box-shadow: 0 0 0 1.5px var(--sign); vertical-align: 0; }
+.body .topo-trail-photo-pin { transform: translate(-50%, -50%); z-index: 1; }
+.topo-trail-photo-pin a, .topo-trail-photo-num, .topo-trail-key-photo::before { display: inline-flex; align-items: center; justify-content: center; min-width: 18px; height: 18px; padding: 0 3px; box-sizing: border-box; border-radius: 3px; background: var(--sign); color: var(--sign-text); font-family: var(--mono); font-size: 11px; line-height: 1; text-decoration: none; box-shadow: inset 0 0 0 1px rgba(219,166,62,.55), 0 0 0 1.5px var(--paper); }
+.topo-trail-photo-pin a:hover { background: var(--link-hover); }
+.topo-trail-photo-num { margin-right: 8px; vertical-align: 1px; }
+.topo-trail-key-photo::before { content: ""; min-width: 12px; height: 12px; vertical-align: -1px; }
+.topo-trail-photos figure { scroll-margin-top: 24px; }
 .topo-trail-photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 0 0 32px; }
 .body .topo-trail-photos figure { margin: 0; }
 .body .topo-trail-photos img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
