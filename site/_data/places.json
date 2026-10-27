@@ -630,7 +630,10 @@
     "kind": "hiked",
     "years": [
       2026
-    ]
+    ],
+    "shape": {
+      "osm": "W137325307"
+    }
   },
   {
     "name": "Bilbao",
@@ -660,7 +663,10 @@
     "years": [
       2026
     ],
-    "note": "Cottonwood Pass to Yosemite"
+    "note": "Cottonwood Pass to Yosemite",
+    "shape": {
+      "trail": "john-muir-trail"
+    }
   },
   {
     "name": "White River National Forest",
@@ -670,7 +676,10 @@
     "years": [
       2026
     ],
-    "note": "Colorado Rockies"
+    "note": "Colorado Rockies",
+    "shape": {
+      "osm": "R3724941"
+    }
   },
   {
     "name": "Mexico City",
@@ -734,7 +743,10 @@
     "kind": "hiked",
     "years": [
       2026
-    ]
+    ],
+    "shape": {
+      "osm": "R2401595"
+    }
   },
   {
     "name": "Camino del Norte",
@@ -744,7 +756,21 @@
     "years": [
       2026
     ],
-    "note": "Basque coast"
+    "note": "Irún to Santander",
+    "shape": {
+      "route": [
+        1116809,
+        360167
+      ],
+      "from": [
+        43.339,
+        -1.789
+      ],
+      "to": [
+        43.4623,
+        -3.81
+      ]
+    }
   },
   {
     "name": "Hong Kong",
@@ -1622,6 +1648,9 @@
     "kind": "hiked",
     "years": [
       2026
-    ]
+    ],
+    "shape": {
+      "osm": "R9893495"
+    }
   }
 ]

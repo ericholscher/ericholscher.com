@@ -28,8 +28,15 @@ JSON files: ``site/_data/hikes.json`` (the outings), ``site/_data/places.json`` 
 ``site/_ext/topo_trips.py`` puts every outing in exactly one trip: the trip that names it, or for a trip marked
 ``"home": true``, that trip for the outing's year ("Close to home, 2024"), or else a trip of its own.
 Places in no trip go on that year's "Also" line.
-Each trip opens to its own map; ``scripts/trip_maps.py`` draws the land for them from Natural Earth into
-``site/_static/maps/`` (committed). Rerun it after changing a trip's places; the build warns when a map is missing.
+Each trip has its own map, on the home page and in the Adventures list: one topo map with its places named,
+each drawn as what it was on the ground. A place in places.json can have a ``"shape"``: a park's OpenStreetMap
+boundary (``{"osm": "R3724941"}``), a trail page's route (``{"trail": "john-muir-trail"}``), or a stretch of a
+waymarked route (``{"route": [relation ids], "from": [lat, lon], "to": [lat, lon]}``); anything else is a pin.
+``scripts/trip_shapes.py`` fetches the shapes into ``site/_data/trip_shapes.json``, and ``scripts/trip_topo.py``
+draws each trip's map with MapLibre in Chromium into ``site/_static/maps/<trip>-card.webp`` (the home page) and
+``<trip>-topo.webp`` (the Adventures page, where opening a trip swaps in the same map live, from
+``trip-map.js``). ``scripts/trip_maps.py`` draws a flat fallback from Natural Earth. All three are committed;
+rerun them after changing a trip's places, and the build warns when a map is missing.
 Trips marked ``"feature": true`` in hikes.json are listed under "The long ones" and get a gold diamond in the list.
 Trips and filters are permalinks: ``/adventures/#europe-2018`` opens that trip, ``/adventures/#2016`` jumps to the
 year, and ``/adventures/#trek`` or ``/adventures/#long`` shows only those trips (and dims the rest on the map).

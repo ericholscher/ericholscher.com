@@ -82,23 +82,43 @@ def trip_view(pins):
     }
 
 
-def trip_bounds(view):
-    """A trip map's box (from trip_view) as west, south, east, and north, in degrees."""
-    lat0, (x, y, w, h) = view["lat0"], view["box"]
-    k = math.cos(math.radians(lat0)) * SCALE
-    return round(x / k, 4), round(-(y + h) / SCALE, 4), round((x + w) / k, 4), round(-y / SCALE, 4)
+MIN_SPAN = 1.2  # degrees: the least a trip map shows across, so one small park still has context
 
 
-def trip_routes(trip, routes, every=1):
-    """The routes of the trail pages a trip's entries link to (from trail_routes.json), as lines of
-    [lon, lat], keeping every `every`th point."""
-    lines = []
-    for h in trip["entries"]:
-        slug = (h.get("link") or "").removeprefix("trails/")
-        if (h.get("link") or "").startswith("trails/") and slug in routes:
-            track = routes[slug]["track"]
-            lines.append([[p[2], p[1]] for p in track[::every] + track[-1:]])
-    return lines
+def trip_geo(trip, shapes):
+    """What a trip's topo map draws (scripts/trip_topo.py and trip-map.js): each place as its shape
+    from trip_shapes.json (a park's boundary, a trail's route) or as a pin, and the bounds that fit
+    them all, as west, south, east, north."""
+    places, xs, ys = [], [], []
+
+    def walk(coords):
+        if isinstance(coords[0], (int, float)):
+            xs.append(coords[0])
+            ys.append(coords[1])
+        else:
+            for c in coords:
+                walk(c)
+
+    for p in trip["places"]:
+        shape = shapes.get(p["name"])
+        places.append({"name": p["name"], "kind": p["kind"], "lon": p["lon"], "lat": p["lat"], "shape": shape})
+        walk(shape["coordinates"] if shape else [p["lon"], p["lat"]])
+    west, east, south, north = min(xs), max(xs), min(ys), max(ys)
+    if east - west < MIN_SPAN:
+        west, east = (west + east - MIN_SPAN) / 2, (west + east + MIN_SPAN) / 2
+    if north - south < MIN_SPAN / 2:
+        south, north = (south + north - MIN_SPAN / 2) / 2, (south + north + MIN_SPAN / 2) / 2
+    # A name goes on the side of its place toward the middle of the map, so it isn't cut off at an
+    # edge: to the left of a place in the east, and above or below one near the top or bottom.
+    for p in places:
+        x = (p["lon"] - west) / ((east - west) or 1)
+        y = (north - p["lat"]) / ((north - south) or 1)
+        side = "right" if x > 0.6 else "left" if x < 0.4 else ""
+        level = "top" if y < 0.2 else "bottom" if y > 0.8 else ""
+        p["anchor"] = "-".join(filter(None, (level, side))) or "left"
+    # Within the United States, its states give a sense of where; elsewhere, countries do.
+    states = west > -125 and east < -66 and south > 24 and north < 50
+    return {"bounds": [round(v, 4) for v in (west, south, east, north)], "places": places, "states": states}
 
 
 def build(hikes, places, trips):

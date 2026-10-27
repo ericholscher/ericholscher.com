@@ -78,6 +78,13 @@ def topo_trip_log(app):
     for t in trips:
         if t["map"] and not (maps / f"{t['slug']}.svg").exists():
             logger.warning("No map for the trip %s: run scripts/trip_maps.py", t["slug"])
+        # The topo maps from scripts/trip_topo.py: a card for the home page, and a wider one for the
+        # Adventures page, where trip-map.js swaps in a live map, drawn from "geo", when it's opened.
+        t["topo"] = bool(t["map"]) and (maps / f"{t['slug']}-topo.webp").exists() and (maps / f"{t['slug']}-card.webp").exists()
+        if t["map"] and not t["topo"]:
+            logger.warning("No topo map for the trip %s: run scripts/trip_topo.py", t["slug"])
+        if t["map"]:
+            t["geo"] = topo_trips.trip_geo(t, data["topo_trip_shapes"])
     data["topo_trip_list"] = trips
     data["topo_log"] = years
 
