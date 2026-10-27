@@ -236,7 +236,13 @@
       // The small map grows taller for a year or filter, so wait for the new size before fitting.
       requestAnimationFrame(function () { if (focused()) fit(); else setZoom(1); });
     }
+    // Hovering or focusing a bar names its year and count where "Tap a year" is; a tap picks it.
+    function nameBar(b) { sparkNote.textContent = b ? b.getAttribute('aria-label').replace(',', ' ·') : year || 'Tap a year'; }
     bars.forEach(function (b) {
+      b.addEventListener('pointerenter', function (e) { if (e.pointerType !== 'touch') nameBar(b); });
+      b.addEventListener('pointerleave', function () { nameBar(null); });
+      b.addEventListener('focus', function () { if (b.matches(':focus-visible')) nameBar(b); });
+      b.addEventListener('blur', function () { nameBar(null); });
       b.addEventListener('click', function () {
         // The list below (timeline.html) shows only that year too, and answers with topo:filter.
         document.dispatchEvent(new CustomEvent('topo:pick-year', { detail: year === b.dataset.year ? null : b.dataset.year }));
