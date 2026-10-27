@@ -1,30 +1,32 @@
 [
   {
-    "slug": "europe-2026",
-    "name": "Europe, 2026",
+    "slug": "europe-fall-2026",
+    "name": "Europe, fall 2026",
     "years": [
       2026
     ],
     "places": [
-      "Berlin",
-      "Athens",
-      "Vikos-Aoös National Park",
-      "Bilbao",
-      "Lisbon",
-      "Copenhagen",
-      "Sarajevo",
-      "Utrecht",
-      "Madrid",
       "Picos de Europa",
-      "Camino del Norte",
-      "Budapest",
       "Karwendel"
     ],
     "along": [
-      "Vikos-Aoös National Park",
-      "Camino del Norte",
       "Picos de Europa",
       "Austrian Alps"
+    ]
+  },
+  {
+    "slug": "europe-spring-2026",
+    "name": "Europe, spring 2026",
+    "years": [
+      2026
+    ],
+    "places": [
+      "Vikos-Aoös National Park",
+      "Camino del Norte"
+    ],
+    "along": [
+      "Vikos-Aoös National Park",
+      "Camino del Norte"
     ]
   },
   {

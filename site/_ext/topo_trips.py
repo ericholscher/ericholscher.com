@@ -82,10 +82,30 @@ def trip_view(pins):
     }
 
 
+def trip_bounds(view):
+    """A trip map's box (from trip_view) as west, south, east, and north, in degrees."""
+    lat0, (x, y, w, h) = view["lat0"], view["box"]
+    k = math.cos(math.radians(lat0)) * SCALE
+    return round(x / k, 4), round(-(y + h) / SCALE, 4), round((x + w) / k, 4), round(-y / SCALE, 4)
+
+
+def trip_routes(trip, routes, every=1):
+    """The routes of the trail pages a trip's entries link to (from trail_routes.json), as lines of
+    [lon, lat], keeping every `every`th point."""
+    lines = []
+    for h in trip["entries"]:
+        slug = (h.get("link") or "").removeprefix("trails/")
+        if (h.get("link") or "").startswith("trails/") and slug in routes:
+            track = routes[slug]["track"]
+            lines.append([[p[2], p[1]] for p in track[::every] + track[-1:]])
+    return lines
+
+
 def build(hikes, places, trips):
     """Group the entries and places into trips. Returns (trips, years, problems).
 
     Each entry gets "trip", its trip's slug, and each place "trips", the slugs of the trips it's in.
+    Each trip gets "last", where its latest entry is in hikes.json (which runs oldest first), or -1.
     trips: every trip, newest first. years: newest first, each with its trips, its places, and the
     places in no trip. problems: names in trips.json that don't match places.json or hikes.json.
     """
@@ -109,7 +129,7 @@ def build(hikes, places, trips):
 
     def trip(slug, **fields):
         if slug not in found:
-            found[slug] = {"slug": slug, "entries": [], "places": [], "home": False, "solo": False, **fields}
+            found[slug] = {"slug": slug, "entries": [], "places": [], "home": False, "solo": False, "last": -1, **fields}
         return found[slug]
 
     for order, h in enumerate(hikes):
@@ -126,6 +146,7 @@ def build(hikes, places, trips):
             # The place named after it, or noted with its name, from that year.
             tr["places"] = [p for p in places if h["name"] in (p["name"], p.get("note")) and y in p.get("years", [])]
         tr["entries"].append(h)
+        tr["last"] = order
         h["trip"] = tr["slug"]
     # Trips with places but no entries, like a year's visit to Europe, or a year close to home.
     for t in trips:
