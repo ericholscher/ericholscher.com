@@ -20,7 +20,24 @@
   var SMALL = ['Andorra', 'Monaco', 'San Marino', 'Vatican City', 'Liechtenstein', 'Luxembourg', 'Gibraltar', 'Malta', 'Brunei', 'Singapore', 'Kosovo'];
 
   function feature(geometry, props) { return { type: 'Feature', properties: props || {}, geometry: geometry }; }
-  function point(p) { return feature({ type: 'Point', coordinates: [p.lon, p.lat] }, { name: p.name, kind: p.kind, anchor: p.anchor || 'left' }); }
+  function point(p) {
+    return feature({ type: 'Point', coordinates: [p.lon, p.lat] }, { name: p.name, kind: p.kind, anchor: p.anchor || 'left', rank: p.kind === 'hiked' ? 0 : 1 });
+  }
+  // A name goes on the side toward the middle of the map (its anchor, from trip_geo), or failing that,
+  // on another side, but never toward the nearer side edge, where it would be cut off. (There's room
+  // above and below: see topoTripPadding.)
+  var SIDES = { left: [0.8, 0], right: [-0.8, 0], top: [0, 0.7], bottom: [0, -0.7],
+                'top-left': [0.6, 0.5], 'top-right': [-0.6, 0.5], 'bottom-left': [0.6, -0.5], 'bottom-right': [-0.6, -0.5] };
+  var AWAY = { left: 'right', right: 'left' };
+  function offsets(first) {
+    var away = first.split('-').map(function (part) { return AWAY[part]; }).filter(Boolean);
+    var rest = Object.keys(SIDES).filter(function (a) {
+      return a !== first && !away.some(function (part) { return a.split('-').indexOf(part) >= 0; });
+    });
+    return ['literal', [first].concat(rest).reduce(function (out, a) { return out.concat([a, SIDES[a]]); }, [])];
+  }
+  var OFFSETS = ['match', ['get', 'anchor']].concat(Object.keys(SIDES).filter(function (a) { return a !== 'left'; })
+    .reduce(function (out, a) { return out.concat([a, offsets(a)]); }, []), [offsets('left')]);
   function collection(features) { return { type: 'FeatureCollection', features: features }; }
 
   // geo is a trip's "geo" (topo_trips.trip_geo). size is the name's size in pixels.
@@ -81,7 +98,8 @@
           paint: { 'text-color': C.muted, 'text-opacity': 0.8, 'text-halo-color': C.land, 'text-halo-width': 1 } },
         { id: 'names', type: 'symbol', source: 'names',
           layout: { 'text-field': ['get', 'name'], 'text-font': FONT, 'text-size': size, 'text-max-width': 9,
-                    'text-anchor': ['get', 'anchor'], 'text-radial-offset': 0.8, 'text-justify': 'auto', 'text-padding': 1 },
+                    'text-variable-anchor-offset': OFFSETS, 'text-justify': 'auto', 'text-padding': 1,
+                    'symbol-sort-key': ['get', 'rank'] },
           paint: { 'text-color': C.ink, 'text-halo-color': C.paper, 'text-halo-width': 1.6 } }
       ]
     };

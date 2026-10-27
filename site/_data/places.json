@@ -67,7 +67,10 @@
     "years": [
       2012,
       2021
-    ]
+    ],
+    "shape": {
+      "osm": "R1274747"
+    }
   },
   {
     "name": "Pacific Crest Trail, Campo",
@@ -97,7 +100,10 @@
     "note": "Tahoe Rim Trail",
     "years": [
       2024
-    ]
+    ],
+    "shape": {
+      "relation": 3094865
+    }
   },
   {
     "name": "Puerto Varas, Chile",
@@ -237,7 +243,10 @@
     "kind": "hiked",
     "years": [
       2025
-    ]
+    ],
+    "shape": {
+      "osm": "R10241242"
+    }
   },
   {
     "name": "Peaks of the Balkans",
@@ -246,7 +255,10 @@
     "kind": "hiked",
     "years": [
       2025
-    ]
+    ],
+    "shape": {
+      "relation": 4726204
+    }
   },
   {
     "name": "Via Alpina, Switzerland",
@@ -256,7 +268,10 @@
     "note": "Kandersteg, Grindelwald",
     "years": [
       2025
-    ]
+    ],
+    "shape": {
+      "relation": 12359033
+    }
   },
   {
     "name": "Milan",
@@ -284,7 +299,20 @@
     "kind": "hiked",
     "years": [
       2025
-    ]
+    ],
+    "shape": {
+      "route": [
+        1163255
+      ],
+      "from": [
+        46.7163,
+        12.3618
+      ],
+      "to": [
+        46.6115,
+        12.872
+      ]
+    }
   },
   {
     "name": "Triglav National Park",
@@ -294,7 +322,10 @@
     "note": "Lake Bled, Ljubljana",
     "years": [
       2025
-    ]
+    ],
+    "shape": {
+      "osm": "R2868142"
+    }
   },
   {
     "name": "Alta Via 1, Dolomites",
@@ -303,7 +334,20 @@
     "kind": "hiked",
     "years": [
       2025
-    ]
+    ],
+    "shape": {
+      "route": [
+        177743
+      ],
+      "from": [
+        46.694,
+        12.085
+      ],
+      "to": [
+        46.483,
+        12.054
+      ]
+    }
   },
   {
     "name": "Venice",
@@ -351,7 +395,10 @@
     "note": "Safari",
     "years": [
       2025
-    ]
+    ],
+    "shape": {
+      "osm": "R19372831"
+    }
   },
   {
     "name": "Diani Beach, Kenya",
@@ -427,7 +474,10 @@
     "years": [
       2015,
       2020
-    ]
+    ],
+    "shape": {
+      "osm": "R6087273"
+    }
   },
   {
     "name": "McKenzie Pass",
@@ -941,7 +991,10 @@
     "kind": "visited",
     "years": [
       2018
-    ]
+    ],
+    "shape": {
+      "osm": "R10047860"
+    }
   },
   {
     "name": "Velebit coast",
@@ -1036,7 +1089,10 @@
     "years": [
       2019
     ],
-    "note": "O Circuit"
+    "note": "O Circuit",
+    "shape": {
+      "osm": "R2622290"
+    }
   },
   {
     "name": "Buenos Aires",
@@ -1246,7 +1302,10 @@
     "years": [
       2022
     ],
-    "note": "A road trip through northern Portugal"
+    "note": "A road trip through northern Portugal",
+    "shape": {
+      "osm": "R2383411"
+    }
   },
   {
     "name": "Salt Lake City",
@@ -1266,7 +1325,10 @@
     "years": [
       2023
     ],
-    "note": "Three-day backpacking trips"
+    "note": "Three-day backpacking trips",
+    "shape": {
+      "osm": "R6395738"
+    }
   },
   {
     "name": "Panama",
@@ -1345,7 +1407,10 @@
     "kind": "hiked",
     "years": [
       2021
-    ]
+    ],
+    "shape": {
+      "osm": "R6073122"
+    }
   },
   {
     "name": "PCT, Snoqualmie Pass",
@@ -1492,7 +1557,10 @@
     "kind": "hiked",
     "years": [
       2016
-    ]
+    ],
+    "shape": {
+      "osm": "R163769"
+    }
   },
   {
     "name": "Wind River Range",
@@ -1510,7 +1578,10 @@
     "kind": "hiked",
     "years": [
       2016
-    ]
+    ],
+    "shape": {
+      "osm": "R6109176"
+    }
   },
   {
     "name": "Guatapé",
@@ -1566,7 +1637,10 @@
     "kind": "hiked",
     "years": [
       2017
-    ]
+    ],
+    "shape": {
+      "osm": "R6070959"
+    }
   },
   {
     "name": "Summer Lake Hot Springs",
@@ -1652,5 +1726,92 @@
     "shape": {
       "osm": "R9893495"
     }
+  },
+  {
+    "name": "Meteora",
+    "lat": 39.72,
+    "lon": 21.63,
+    "kind": "visited",
+    "years": [
+      2026
+    ]
+  },
+  {
+    "name": "Lefkada",
+    "lat": 38.7,
+    "lon": 20.65,
+    "kind": "visited",
+    "years": [
+      2026
+    ]
+  },
+  {
+    "name": "Rocky Mountain National Park",
+    "lat": 40.34,
+    "lon": -105.68,
+    "kind": "visited",
+    "years": [
+      2026
+    ],
+    "shape": {
+      "osm": "R390960"
+    }
+  },
+  {
+    "name": "Gesäuse National Park",
+    "lat": 47.57,
+    "lon": 14.61,
+    "kind": "visited",
+    "years": [
+      2026
+    ],
+    "shape": {
+      "osm": "R10015852"
+    }
+  },
+  {
+    "name": "Dachstein and Schladming",
+    "lat": 47.4,
+    "lon": 13.69,
+    "kind": "visited",
+    "years": [
+      2026
+    ]
+  },
+  {
+    "name": "Hohe Tauern National Park",
+    "lat": 47.07,
+    "lon": 12.8,
+    "kind": "visited",
+    "years": [
+      2026
+    ]
+  },
+  {
+    "name": "Langkawi",
+    "lat": 6.35,
+    "lon": 99.8,
+    "kind": "visited",
+    "years": [
+      2026
+    ]
+  },
+  {
+    "name": "Moalboal, Philippines",
+    "lat": 9.95,
+    "lon": 123.4,
+    "kind": "visited",
+    "years": [
+      2026
+    ]
+  },
+  {
+    "name": "Dauin, Philippines",
+    "lat": 9.19,
+    "lon": 123.27,
+    "kind": "visited",
+    "years": [
+      2026
+    ]
   }
 ]

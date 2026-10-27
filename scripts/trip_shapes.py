@@ -6,6 +6,8 @@ on the ground:
     "shape": {"osm": "R3724941"}                     a park or forest: its boundary in OpenStreetMap
                                                      (R relation, W way), from Nominatim, simplified
     "shape": {"trail": "john-muir-trail"}            a trail with a page: its route from trail_routes.json
+    "shape": {"relation": 3094865}                   a whole waymarked route, walked end to end (thinned
+                                                     to about 400 m steps, plenty at a trip's scale)
     "shape": {"route": [1116809, 360167],            a stretch of a waymarked route: the shortest way
               "from": [lat, lon], "to": [lat, lon]}  along those OpenStreetMap relations, as in
                                                      trail_routes.py
@@ -34,6 +36,7 @@ OUTPUT = DATA / "trip_shapes.json"
 NOMINATIM = "https://nominatim.openstreetmap.org/lookup?format=json&osm_ids={}&polygon_geojson=1&polygon_threshold=0.004"
 ROUTE_STEP = 0.5  # miles between points on a route
 TRAIL_EVERY = 4  # every 4th of a trail page's quarter-mile points
+THIN = 0.004  # degrees, about 400 m: the least step kept along a whole route
 
 
 def rounded(coords, digits=4):
@@ -49,6 +52,24 @@ def area(osm_id):
         raise SystemExit(f"Nominatim has no {osm_id}")
     geometry = found[0]["geojson"]
     return {"type": geometry["type"], "coordinates": rounded(geometry["coordinates"])}
+
+
+def whole_route(rel):
+    """Every way of a route relation (and of its stages, for a superroute), as a MultiLineString."""
+    data = json.loads(trail_routes.fetch(trail_routes.OSM.format(rel), trail_routes.CACHE / f"relation-{rel}.json").read_text())["elements"]
+    nodes = {e["id"]: (e["lon"], e["lat"]) for e in data if e["type"] == "node"}
+    lines = []
+    for e in data:
+        if e["type"] == "way":
+            line = [rounded(nodes[n], 3) for n in e["nodes"] if n in nodes]
+            kept = line[:1]
+            for i, p in enumerate(line[1:], 1):
+                if i == len(line) - 1 or abs(p[0] - kept[-1][0]) + abs(p[1] - kept[-1][1]) > THIN:
+                    kept.append(p)
+            lines.append(kept)
+        elif e["type"] == "relation" and e["id"] == rel:
+            lines += [ln for m in e["members"] if m["type"] == "relation" for ln in whole_route(m["ref"])["coordinates"]]
+    return {"type": "MultiLineString", "coordinates": [ln for ln in lines if len(ln) > 1]}
 
 
 def route(shape):
@@ -72,6 +93,8 @@ def main():
         print(p["name"])
         if "osm" in shape:
             shapes[p["name"]] = area(shape["osm"])
+        elif "relation" in shape:
+            shapes[p["name"]] = whole_route(shape["relation"])
         elif "trail" in shape:
             track = routes[shape["trail"]]["track"]
             shapes[p["name"]] = {"type": "LineString", "coordinates": [[q[2], q[1]] for q in track[::TRAIL_EVERY] + track[-1:]]}

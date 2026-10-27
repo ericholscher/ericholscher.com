@@ -6,7 +6,13 @@
       2026
     ],
     "places": [
+      "Copenhagen",
+      "Sarajevo",
+      "Utrecht",
       "Picos de Europa",
+      "Gesäuse National Park",
+      "Dachstein and Schladming",
+      "Hohe Tauern National Park",
       "Karwendel"
     ],
     "along": [
@@ -21,8 +27,13 @@
       2026
     ],
     "places": [
+      "Athens",
+      "Meteora",
       "Vikos-Aoös National Park",
-      "Camino del Norte"
+      "Lefkada",
+      "Camino del Norte",
+      "Bilbao",
+      "Lisbon"
     ],
     "along": [
       "Vikos-Aoös National Park",
@@ -38,7 +49,8 @@
     ],
     "places": [
       "John Muir Trail",
-      "White River National Forest"
+      "White River National Forest",
+      "Rocky Mountain National Park"
     ],
     "along": [
       "John Muir Trail",
@@ -56,7 +68,10 @@
       "Singapore",
       "Bali",
       "Andaman coast, Thailand",
+      "Langkawi",
       "Raja Ampat",
+      "Moalboal, Philippines",
+      "Dauin, Philippines",
       "Bohol, Philippines",
       "Malapascua, Philippines",
       "Sabah, Borneo"
