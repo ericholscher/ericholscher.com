@@ -332,6 +332,7 @@ ul.postlist p.ablog-post-excerpt { font-size: 16px; color: var(--text-2); margin
 .topo-pager { margin: 32px 0 0; padding-top: 18px; border-top: 1px solid var(--rule); display: flex; flex-direction: column; gap: 14px; }
 .topo-pager-step { display: flex; justify-content: space-between; gap: 12px; font-size: 16px; }
 .topo-pager-step a[rel="next"] { margin-left: auto; }
+.topo-pager-step a { display: inline-flex; align-items: center; min-height: 44px; }
 .topo-pager-decades { display: flex; flex-direction: column; gap: 6px; }
 .topo-pager-pages { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; font-family: var(--mono); font-size: 12px; }
 .topo-pager-pages li { margin: 0; }
@@ -445,6 +446,8 @@ ul.postlist p.ablog-post-excerpt { font-size: 16px; color: var(--text-2); margin
 a.topo-kind { text-decoration: none; }
 a.topo-kind:hover { color: var(--link-hover); border-color: var(--link-hover) !important; }
 .topo-log-kinds .topo-kind { font-size: 11px; padding: 3px 8px; white-space: nowrap; }
+/* The counts are trips, not entries: "long ones 9" is nine trips holding the fifteen long ones listed above. */
+.topo-log-kinds .topo-log-label { flex: none; align-self: center; margin-right: 2px; }
 /* On a phone the filters are one row that scrolls sideways, so they don't push the trips down. */
 @media (max-width: 640px) {
   .topo-log-kinds { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-right: calc(-1 * var(--gutter)); padding-right: var(--gutter); }

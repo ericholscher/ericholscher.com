@@ -48,11 +48,7 @@ right side of what the output of the template would be.
 
 A simple example with the Add Template Tag:
 
-.. figure:: http://media.ericholscher.com/images/Add_Example.png
-   :align: center
-   :alt: Add Template Tag
-   
-   Add Template Tag
+*The original screenshot is no longer available.*
 
 Caveats
 ~~~~~~~

@@ -1,4 +1,5 @@
 .. post:: 2008-12-31 15:25:24
+   :tags: year in review
    :category: code
 
 Year in Review

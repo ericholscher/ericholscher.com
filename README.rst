@@ -48,8 +48,8 @@ with a few photos for each month. ``2025.md`` and ``2026.md`` are started as dra
   it builds at ``/adventures/<year>/`` but isn't listed anywhere. Give it a date (```{post} 2026-12-31```)
   and it is published like any post, in the blog, the feeds, and the Outside topic, and the Adventures
   page links to it from that year ("Read the 2026 letter").
-* **The year at a glance.** The ``adventure-summary`` directive near the top fills in that year's trips from
-  ``hikes.json`` and a map of its places from ``places.json``, cropped to where they are. Write the story;
+* **The year at a glance.** Each letter ends with that year's trips from ``hikes.json`` and a map of its
+  places from ``places.json``, cropped to where they are. Write the story;
   the data takes care of itself.
 * **Photos.** Export a few picks per month from Photos as JPEG, then make clean copies, resized and with all
   location and camera metadata removed so nothing private lands in this public repo::
