@@ -126,14 +126,34 @@
     "note": "Below Fitz Roy"
   },
   {
-    "name": "Costa Rica",
+    "name": "Camino de Costa Rica",
     "lat": 9.9,
     "lon": -83.9,
     "kind": "hiked",
-    "note": "Camino de Costa Rica",
+    "note": "Caribbean coast to the Pacific",
     "years": [
       2025
-    ]
+    ],
+    "shape": {
+      "via": [
+        [
+          10.098,
+          -83.507
+        ],
+        [
+          9.855,
+          -83.615
+        ],
+        [
+          9.797,
+          -83.855
+        ],
+        [
+          9.431,
+          -84.162
+        ]
+      ]
+    }
   },
   {
     "name": "Prague",

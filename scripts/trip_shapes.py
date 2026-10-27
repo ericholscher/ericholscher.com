@@ -11,6 +11,11 @@ on the ground:
     "shape": {"route": [1116809, 360167],            a stretch of a waymarked route: the shortest way
               "from": [lat, lon], "to": [lat, lon]}  along those OpenStreetMap relations, as in
                                                      trail_routes.py
+    "shape": {"via": [[lat, lon], ...]}             a route with no waymarked relation in OpenStreetMap,
+                                                     mostly on roads: the walking route through those
+                                                     towns, from OSRM's foot profile on OpenStreetMap
+                                                     (routing.openstreetmap.de). An approximation, so
+                                                     only for a whole trail, between its public towns.
 
 Only public data: boundaries and waymarked routes, never a GPS track. OpenStreetMap data is
 © OpenStreetMap contributors, under the ODbL. Downloads are cached in .trail-cache/.
@@ -33,6 +38,7 @@ import trail_routes  # noqa: E402
 
 DATA = ROOT / "site" / "_data"
 OUTPUT = DATA / "trip_shapes.json"
+OSRM = "https://routing.openstreetmap.de/routed-foot/route/v1/foot/{}?overview=full&geometries=geojson"
 NOMINATIM = "https://nominatim.openstreetmap.org/lookup?format=json&osm_ids={}&polygon_geojson=1&polygon_threshold=0.004"
 ROUTE_STEP = 0.5  # miles between points on a route
 TRAIL_EVERY = 4  # every 4th of a trail page's quarter-mile points
@@ -61,15 +67,29 @@ def whole_route(rel):
     lines = []
     for e in data:
         if e["type"] == "way":
-            line = [rounded(nodes[n], 3) for n in e["nodes"] if n in nodes]
-            kept = line[:1]
-            for i, p in enumerate(line[1:], 1):
-                if i == len(line) - 1 or abs(p[0] - kept[-1][0]) + abs(p[1] - kept[-1][1]) > THIN:
-                    kept.append(p)
-            lines.append(kept)
+            lines.append(thinned([rounded(nodes[n], 3) for n in e["nodes"] if n in nodes]))
         elif e["type"] == "relation" and e["id"] == rel:
             lines += [ln for m in e["members"] if m["type"] == "relation" for ln in whole_route(m["ref"])["coordinates"]]
     return {"type": "MultiLineString", "coordinates": [ln for ln in lines if len(ln) > 1]}
+
+
+def thinned(line):
+    kept = line[:1]
+    for i, p in enumerate(line[1:], 1):
+        if i == len(line) - 1 or abs(p[0] - kept[-1][0]) + abs(p[1] - kept[-1][1]) > THIN:
+            kept.append(p)
+    return kept
+
+
+def via(towns):
+    """The walking route through towns, by road and path, from OSRM on OpenStreetMap."""
+    stops = ";".join(f"{lon},{lat}" for lat, lon in towns)
+    key = "-".join(f"{lat:.2f},{lon:.2f}" for lat, lon in towns)
+    found = json.loads(trail_routes.fetch(OSRM.format(stops), trail_routes.CACHE / f"osrm-{key}.json").read_text())
+    if found.get("code") != "Ok":
+        raise SystemExit(f"OSRM found no route through {towns}")
+    print(f"  {found['routes'][0]['distance'] / trail_routes.METERS_PER_MILE:.0f} miles")
+    return {"type": "LineString", "coordinates": thinned(rounded(found["routes"][0]["geometry"]["coordinates"], 3))}
 
 
 def route(shape):
@@ -95,6 +115,8 @@ def main():
             shapes[p["name"]] = area(shape["osm"])
         elif "relation" in shape:
             shapes[p["name"]] = whole_route(shape["relation"])
+        elif "via" in shape:
+            shapes[p["name"]] = via(shape["via"])
         elif "trail" in shape:
             track = routes[shape["trail"]]["track"]
             shapes[p["name"]] = {"type": "LineString", "coordinates": [[q[2], q[1]] for q in track[::TRAIL_EVERY] + track[-1:]]}
