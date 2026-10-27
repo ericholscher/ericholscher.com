@@ -46,6 +46,32 @@
         ]
       }
     ],
+    "stops": [
+      {
+        "name": "Bishop",
+        "lat": 37.3635,
+        "lon": -118.3951,
+        "date": "2026-07-10",
+        "note": "Resupply, overnight at the hostel"
+      },
+      {
+        "name": "Muir Trail Ranch",
+        "lat": 37.2295,
+        "lon": -118.9097,
+        "date": "2026-07-16",
+        "note": "Food scavenging",
+        "label": "left"
+      },
+      {
+        "name": "Vermilion Valley Resort",
+        "short": "VVR",
+        "lat": 37.3735,
+        "lon": -119.007,
+        "date": "2026-07-18",
+        "note": "Resupply, overnight",
+        "label": "left"
+      }
+    ],
     "nights": [
       {
         "night": 1,
@@ -115,7 +141,8 @@
       {
         "night": 14,
         "date": "2026-07-18",
-        "mile": 128
+        "mile": 128,
+        "stop": "Vermilion Valley Resort"
       },
       {
         "night": 15,

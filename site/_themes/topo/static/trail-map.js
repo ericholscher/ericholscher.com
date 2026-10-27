@@ -137,6 +137,7 @@
           var t = atMile(p.mile); return pointFeature(t[0], t[1], { name: p.name, label: p.name + '\n' + feet(p.feet) + ' ft', mile: p.mile });
         }))
       },
+      stops: { type: 'geojson', data: collection((data.stops || []).map(function (s) { return pointFeature(s.lon, s.lat, s); })) },
       ends: {
         type: 'geojson', data: collection([data.start, data.end].map(function (e) { return pointFeature(e.lon, e.lat, { name: e.name }); }))
       }
@@ -190,6 +191,10 @@
       { id: 'nights', type: 'circle', source: 'nights',
         paint: { 'circle-radius': ['interpolate', ['linear'], ['zoom'], 7, 3.5, 13, 6], 'circle-color': C.gold,
                  'circle-stroke-color': C.sign, 'circle-stroke-width': 1.5 } },
+      { id: 'stops', type: 'symbol', source: 'stops',
+        layout: { 'icon-image': 'stop', 'icon-allow-overlap': true, 'text-field': ['get', 'name'], 'text-font': FONT, 'text-size': 12,
+                  'text-anchor': 'left', 'text-offset': [0.9, 0], 'text-optional': true },
+        paint: Object.assign({ 'text-color': C.sign }, halo) },
       { id: 'ends', type: 'circle', source: 'ends',
         paint: { 'circle-radius': 6, 'circle-color': C.forest, 'circle-stroke-color': C.paper, 'circle-stroke-width': 2 } },
       { id: 'end-names', type: 'symbol', source: 'ends',
@@ -206,6 +211,16 @@
     g.beginPath(); g.moveTo(s / 2, 1.5); g.lineTo(s - 2, s - 2.5); g.lineTo(2, s - 2.5); g.closePath();
     g.fillStyle = C.sign; g.strokeStyle = C.paper; g.lineWidth = 1.5; g.stroke(); g.fill();
     map.addImage('pass', g.getImageData(0, 0, s * 2, s * 2), { pixelRatio: 2 });
+  }
+
+  function stopIcon(map) {
+    var s = 14, canvas = document.createElement('canvas');
+    canvas.width = canvas.height = s * 2;
+    var g = canvas.getContext('2d');
+    g.scale(2, 2);
+    g.fillStyle = C.sign; g.fillRect(1.5, 1.5, s - 3, s - 3);
+    g.fillStyle = C.gold; g.fillRect(3, 3, s - 6, s - 6);
+    map.addImage('stop', g.getImageData(0, 0, s * 2, s * 2), { pixelRatio: 2 });
   }
 
   function start() {
@@ -243,7 +258,7 @@
       var attrib = holder.querySelector('.maplibregl-compact-show');
       if (attrib) attrib.classList.remove('maplibregl-compact-show');
     });
-    map.on('styleimagemissing', function (e) { if (e.id === 'pass') passIcon(map); });
+    map.on('styleimagemissing', function (e) { if (e.id === 'pass') passIcon(map); if (e.id === 'stop') stopIcon(map); });
 
     map.addControl(new maplibregl.AttributionControl({
       compact: true,
@@ -275,6 +290,7 @@
         map.on('mouseleave', layer, function () { popup.remove(); });
       }
       hoverText('nights', function (p) { return '<strong>Night ' + p.night + '</strong> · ' + p.day + ' · mile ' + p.mile; });
+      hoverText('stops', function (p) { return '<strong>' + p.name + '</strong> · ' + p.note; });
       hoverText('passes', function (p) { return '<strong>' + p.name + '</strong> · mile ' + Math.round(p.mile); });
 
       // Photos: small pins on the route. Hovering one previews the photo; a click opens the viewer.

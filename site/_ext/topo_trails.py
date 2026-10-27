@@ -47,12 +47,13 @@ def nice_date(iso):
     return f"{MONTHS[m - 1]} {d}"
 
 
-def itinerary(trail, miles, passes, nights, photos, spurs):
+def itinerary(trail, miles, passes, nights, photos, spurs, stops=()):
     """The walk day by day: where each day started and ended, in trail miles, and what was on it.
 
     Day N ends at night N; the last day ends at the end of the trail. A night in town keeps the
     day's miles where they were, since the walk out to town isn't on the route. A pass or side trip
-    goes on the day whose miles reach it (or on its "date", for a side trip that gives one), and a
+    goes on the day whose miles reach it (or on its "date", for a side trip that gives one), as does a
+    resupply stop, and a
     photo on the day it was taken. Empty without nights, since then the days aren't known.
     """
     if not nights or not all(n.get("date") for n in nights):
@@ -76,6 +77,7 @@ def itinerary(trail, miles, passes, nights, photos, spurs):
             "from_pct": round(100 * at / miles, 2), "to_pct": round(100 * end / miles, 2),
             "passes": [p for p in passes if span(p["mile"])],
             "spurs": [s for s in spurs if (s["date"] == date if s["date"] else span(s["mile"]))],
+            "stops": [s for s in stops if (s.get("date") == date if s.get("date") else span(s["mile"]))],
             "photos": [p for p in photos if p.get("date") == date],
             "night": night,
         })
@@ -141,8 +143,14 @@ def view(trail, route, hike):
         mile = min(track, key=lambda q: abs(q[1] - lat) + abs(q[2] - lon))[0]
         spurs.append({"name": s["name"], "miles": s["miles"], "mile": mile, "date": spur.get("date")})
 
+    # Resupply stops: towns and resorts off the trail, drawn where they are, at the mile nearest them.
+    stops = []
+    for st in trail.get("stops", []):
+        mile = min(track, key=lambda q: abs(q[1] - st["lat"]) + abs(q[2] - st["lon"]))[0]
+        stops.append({**st, "mile": mile, **on_map(st["lon"], st["lat"], st.get("label"))})
+
     first, last = track[0], track[-1]
-    days = itinerary(trail, miles, passes, nights, photos, spurs)
+    days = itinerary(trail, miles, passes, nights, photos, spurs, stops)
     return {
         "slug": trail["slug"],
         "hike": hike,
@@ -162,6 +170,7 @@ def view(trail, route, hike):
         "passes": passes,
         "high": high,
         "nights": nights,
+        "stops": stops,
         "photos": photos,
         "days": days,
         # For the interactive map (topo/static/trail-map.js), in longitude and latitude.
@@ -172,6 +181,7 @@ def view(trail, route, hike):
             "nights": [{k: n[k] for k in ("night", "day", "mile", "lon", "lat") if k in n} for n in nights if "lon" in n],
             "photos": [{"n": p["n"], "file": f"photos/{trail['slug']}/{p['file']}", "day": p["day"], "mile": p.get("mile"), "lon": p.get("lon"), "lat": p.get("lat")}
                        for p in photos],
+            "stops": [{"name": st["name"], "note": st["note"], "lon": st["lon"], "lat": st["lat"]} for st in stops],
             "start": {"name": trail["start"]["name"], "lon": first[2], "lat": first[1]},
             "end": {"name": trail["end"]["name"], "lon": last[2], "lat": last[1]},
         },

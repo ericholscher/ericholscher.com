@@ -36,6 +36,10 @@
       {%- for p in trail.photos if p.left is defined %}
       <li class="topo-trail-photo-pin" style="left: {{ p.left }}%; top: {{ p.top }}%"><a href="{{ pathto('_static/photos/' ~ trail.slug ~ '/' ~ p.file, 1) }}" data-photo="{{ p.n }}" title="Photo, {{ p.day }}, mile {{ p.mile }}"><span class="topo-visually-hidden">Photo, {{ p.day }}</span></a></li>
       {%- endfor %}
+      {%- for st in trail.stops %}
+      <li class="topo-trail-stop" style="left: {{ st.left }}%; top: {{ st.top }}%" title="{{ st.name }}: {{ st.note }}"><span class="topo-visually-hidden">{{ st.name }}</span></li>
+      <li class="topo-trail-place is-stop is-{{ st.side }}" style="left: {{ st.left }}%; top: {{ st.top }}%">{{ st.short or st.name }}</li>
+      {%- endfor %}
       {%- for s in trail.map.spurs %}
       <li class="topo-trail-place is-spur is-{{ s.side }}" style="left: {{ s.left }}%; top: {{ s.top }}%">{{ s.name }}</li>
       {%- endfor %}
@@ -48,6 +52,7 @@
       <span class="topo-trail-key topo-trail-key-route">The route</span>
       {%- if trail.passes %}<span class="topo-trail-key topo-trail-key-pass">Pass</span>{% endif %}
       {%- if trail.nights %}<span class="topo-trail-key topo-trail-key-night">Night</span>{% endif %}
+      {%- if trail.stops %}<span class="topo-trail-key topo-trail-key-stop">Resupply</span>{% endif %}
       {%- if trail.photos %}<span class="topo-trail-key topo-trail-key-photo">Photo</span>{% endif %}
       {%- if trail.map.spurs %}<span class="topo-trail-key topo-trail-key-spur">Side trip, not in the miles</span>{% endif %}
     </figcaption>
@@ -98,8 +103,11 @@
         {%- for s in d.spurs %}
         <li class="is-spur">Side trip to {{ s.name }} <span class="topo-trail-day-at">{{ s.miles }} mi each way</span></li>
         {%- endfor %}
+        {%- for st in d.stops %}
+        <li class="is-stop">{{ st.name }}{% if st.short %} ({{ st.short }}){% endif %} <span class="topo-trail-day-at">{{ st.note }}</span></li>
+        {%- endfor %}
         {%- if d.night %}
-        <li class="is-night">{% if d.night.town %}Night in {{ d.night.town }}{% else %}Night at mile {{ d.night.mile }}{% endif %}</li>
+        <li class="is-night">{% if d.night.stop %}Night at {{ d.night.stop }}{% elif d.night.town %}Night in {{ d.night.town }}{% else %}Night at mile {{ d.night.mile }}{% endif %}</li>
         {%- else %}
         <li class="is-end">Finished at {{ trail.end.name }}</li>
         {%- endif %}
