@@ -1,0 +1,234 @@
+[
+  {
+    "slug": "john-muir-trail",
+    "entry": "John Muir Trail",
+    "year": "2026",
+    "relations": [
+      1243679,
+      1244828
+    ],
+    "start": {
+      "name": "Cottonwood Pass",
+      "lat": 36.4538,
+      "lon": -118.2153,
+      "label": "below"
+    },
+    "end": {
+      "name": "Yosemite",
+      "lat": 37.7328,
+      "lon": -119.5578,
+      "label": "left"
+    },
+    "spurs": [
+      {
+        "name": "Mount Whitney",
+        "lat": 36.5786,
+        "lon": -118.2921,
+        "label": "above",
+        "date": "2026-07-07"
+      },
+      {
+        "name": "Clouds Rest",
+        "lat": 37.7671,
+        "lon": -119.4895,
+        "label": "right",
+        "relations": [
+          16759394
+        ]
+      },
+      {
+        "name": "Half Dome",
+        "lat": 37.7459,
+        "lon": -119.5332,
+        "label": "right",
+        "relations": [
+          16315186
+        ]
+      }
+    ],
+    "stops": [
+      {
+        "name": "Bishop",
+        "lat": 37.3635,
+        "lon": -118.3951,
+        "date": "2026-07-10",
+        "note": "Resupply, overnight at the hostel"
+      },
+      {
+        "name": "Muir Trail Ranch",
+        "lat": 37.2295,
+        "lon": -118.9097,
+        "date": "2026-07-16",
+        "note": "Food scavenging",
+        "label": "left"
+      },
+      {
+        "name": "Vermilion Valley Resort",
+        "short": "VVR",
+        "lat": 37.3735,
+        "lon": -119.007,
+        "date": "2026-07-18",
+        "note": "Resupply, overnight",
+        "label": "left"
+      }
+    ],
+    "nights": [
+      {
+        "night": 1,
+        "date": "2026-07-05",
+        "mile": 9
+      },
+      {
+        "night": 2,
+        "date": "2026-07-06",
+        "mile": 16
+      },
+      {
+        "night": 3,
+        "date": "2026-07-07",
+        "mile": 16
+      },
+      {
+        "night": 4,
+        "date": "2026-07-08",
+        "mile": 24
+      },
+      {
+        "night": 5,
+        "date": "2026-07-09",
+        "mile": 31
+      },
+      {
+        "night": 6,
+        "date": "2026-07-10",
+        "town": "Bishop"
+      },
+      {
+        "night": 7,
+        "date": "2026-07-11",
+        "mile": 36
+      },
+      {
+        "night": 8,
+        "date": "2026-07-12",
+        "mile": 51
+      },
+      {
+        "night": 9,
+        "date": "2026-07-13",
+        "mile": 65
+      },
+      {
+        "night": 10,
+        "date": "2026-07-14",
+        "mile": 80
+      },
+      {
+        "night": 11,
+        "date": "2026-07-15",
+        "mile": 96
+      },
+      {
+        "night": 12,
+        "date": "2026-07-16",
+        "mile": 110
+      },
+      {
+        "night": 13,
+        "date": "2026-07-17",
+        "mile": 118
+      },
+      {
+        "night": 14,
+        "date": "2026-07-18",
+        "mile": 128,
+        "stop": "Vermilion Valley Resort"
+      },
+      {
+        "night": 15,
+        "date": "2026-07-19",
+        "mile": 130
+      },
+      {
+        "night": 16,
+        "date": "2026-07-20",
+        "mile": 146
+      },
+      {
+        "night": 17,
+        "date": "2026-07-21",
+        "mile": 160
+      },
+      {
+        "night": 18,
+        "date": "2026-07-22",
+        "mile": 175
+      },
+      {
+        "night": 19,
+        "date": "2026-07-23",
+        "mile": 188
+      },
+      {
+        "night": 20,
+        "date": "2026-07-24",
+        "mile": 202
+      },
+      {
+        "night": 21,
+        "date": "2026-07-25",
+        "mile": 210
+      }
+    ],
+    "photos": [
+      {
+        "file": "john-muir-trail-01.jpg",
+        "date": "2026-07-06"
+      },
+      {
+        "file": "john-muir-trail-02.jpg",
+        "date": "2026-07-09",
+        "mile": 30
+      },
+      {
+        "file": "john-muir-trail-03.jpg",
+        "date": "2026-07-10"
+      },
+      {
+        "file": "john-muir-trail-04.jpg",
+        "date": "2026-07-12",
+        "mile": 46
+      },
+      {
+        "file": "john-muir-trail-05.jpg",
+        "date": "2026-07-14",
+        "mile": 66
+      },
+      {
+        "file": "john-muir-trail-06.jpg",
+        "date": "2026-07-15",
+        "mile": 96
+      },
+      {
+        "file": "john-muir-trail-07.jpg",
+        "date": "2026-07-17",
+        "mile": 117
+      },
+      {
+        "file": "john-muir-trail-08.jpg",
+        "date": "2026-07-23",
+        "mile": 175
+      },
+      {
+        "file": "john-muir-trail-09.jpg",
+        "date": "2026-07-25",
+        "mile": 208
+      },
+      {
+        "file": "john-muir-trail-10.jpg",
+        "date": "2026-07-26",
+        "mile": 214
+      }
+    ]
+  }
+]

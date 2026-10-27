@@ -43,6 +43,14 @@
             </summary>
             <div class="topo-trip-body">
               {%- if t.map %}{% set b = t.map.box %}
+              {#- The topo map from scripts/trip_topo.py, with the places drawn and named on it; opening the
+                  trip, trip-map.js swaps in the same map live once its tiles have drawn. Without one, the
+                  land from trip_maps.py, with pins that the script below names. #}
+              {%- if t.topo %}
+              <figure class="topo-trip-map is-topo" data-geo="{{ t.geo|tojson|forceescape }}" data-static="{{ pathto('_static/', 1) }}" role="img" aria-label="Map of {{ t.name }}: {{ t.places|map(attribute='name')|join(', ') }}">
+                <img src="{{ pathto('_static/maps/' ~ t.slug ~ '-topo.webp', 1) }}" alt="" loading="lazy" width="480" height="240">
+              </figure>
+              {%- else %}
               <figure class="topo-trip-map">
                 <img src="{{ pathto('_static/maps/' ~ t.slug ~ '.svg', 1) }}" alt="" loading="lazy" width="{{ b[2] }}" height="{{ b[3] }}">
                 <svg class="topo-trip-pins" viewBox="{{ b|join(' ') }}" role="img" aria-label="Map of {{ t.name }}">
@@ -52,6 +60,7 @@
                   <g class="topo-pin-labels" aria-hidden="true"></g>
                 </svg>
               </figure>
+              {%- endif %}
               {%- endif %}
               {%- if t.solo %}{% set h = t.entries[0] %}
               {%- if h.note %}<p class="topo-tl-note">{{ h.note }}</p>{% endif %}
@@ -89,6 +98,8 @@
     </div>
   </section>
   {%- endfor %}
+  <p class="topo-trail-credit">Trip maps from <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, under the ODbL, by way of <a href="https://openfreemap.org/">OpenFreeMap</a>, with terrain from the Terrain Tiles on AWS.</p>
+  <script src="{{ pathto('_static/trip-map.js', 1) }}" defer></script>
   <script>
   document.addEventListener('DOMContentLoaded', function () {
     var log = document.getElementById('hikes'); if (!log) return;

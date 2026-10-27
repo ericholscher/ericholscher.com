@@ -42,6 +42,16 @@ the way you'd write them.
 
 If your library is shared, other people's trips show up too; delete those rows.
 
+For a long trail, --nights SLUG finds where each night was, as a trail mile, for the trail's
+page. It reads only photos within --trail-km of the trail's route (site/_data/trail_routes.json,
+from scripts/trail_routes.py) in the trail's year, takes the last photo of each day and the first
+of the next, and puts the night halfway between them, rounded to a whole mile. A night spent off
+the trail, more than --town-km away, gets the town's name instead. It prints the nights, and --write puts them in
+site/_data/trails.json; no coordinates are printed or written:
+
+    python3 scripts/photo_trips.py photo-places.json --nights john-muir-trail
+    python3 scripts/photo_trips.py photo-places.json --nights john-muir-trail --write
+
 Only dates, coordinates, place names, and scene labels are read. Filenames
 and people are ignored, and nothing leaves your machine.
 """
@@ -161,6 +171,83 @@ def main_towns(pts, top, min_share):
     return "; ".join(f"{t} ({days[t]})" for t in sorted(keep, key=first.get))
 
 
+def trail_mile(c, track):
+    """The mile of the route point nearest a photo and how far off it is in km, or (None, None)
+    for a photo outside the trail's box."""
+    if not (track["lat"][0] <= c[0] <= track["lat"][1] and track["lon"][0] <= c[1] <= track["lon"][1]):
+        return None, None
+    d, mile = min((haversine_km(c, (lat, lon)), m) for m, lat, lon, _ in track["points"])
+    return mile, d
+
+
+def nights(args, photos):
+    """Each night on a trail, as a trail mile, from the last photo of a day and the first of the next."""
+    routes = json.loads(open(args.trail_routes).read())
+    trails = json.loads(open(args.trails).read())
+    if args.nights not in routes:
+        sys.exit(f"{args.nights} isn't in {args.trail_routes}; run scripts/trail_routes.py")
+    trail = next(t for t in trails if t["slug"] == args.nights)
+    points = routes[args.nights]["track"]
+    pad = args.town_km / 100  # degrees, roughly, so most photos skip the distance check
+    track = {
+        "points": points,
+        "lat": (min(p[1] for p in points) - pad, max(p[1] for p in points) + pad),
+        "lon": (min(p[2] for p in points) - pad * 1.5, max(p[2] for p in points) + pad * 1.5),
+    }
+    # Photos says where a photo was by its nearest town, which in the backcountry can be one far
+    # away over the crest, so a photo counts as in town only when it's --town-km off the trail.
+    # Closer than that, a camp at a lake off the trail still gets the nearest trail mile.
+    days = collections.defaultdict(list)  # date: [(time, mile or None, km off the trail, town)]
+    for p in photos:
+        c, when = coords(p), p.get("date") or ""
+        if not c or not when.startswith(trail["year"]):
+            continue
+        mile, km = trail_mile(c, track)
+        if km is not None and km > args.town_km:
+            mile = None
+        town = place_names(p)[0].get("town", "")
+        days[when[:10]].append((when, mile, km, town))
+    on_trail = sorted(d for d, pts in days.items() if any(k is not None and k <= args.trail_km for _, _, k, _ in pts))
+    if not on_trail:
+        sys.exit(f"No photos within {args.trail_km} km of the {trail['entry']} in {trail['year']}")
+    # The walk: the longest run of days with photos on the trail, allowing a day or two without.
+    runs, run = [], [on_trail[0]]
+    for a, b in zip(on_trail, on_trail[1:]):
+        if (date.fromisoformat(b) - date.fromisoformat(a)).days <= 3:
+            run.append(b)
+        else:
+            runs.append(run)
+            run = [b]
+    runs.append(run)
+    walk = max(runs, key=lambda r: (date.fromisoformat(r[-1]) - date.fromisoformat(r[0])).days)
+    first, last = date.fromisoformat(walk[0]), date.fromisoformat(walk[-1])
+    print(f"{trail['entry']}: {first} to {last}, {(last - first).days + 1} days", file=sys.stderr)
+
+    out, d = [], first
+    while d < last:
+        tonight, tomorrow = sorted(days.get(d.isoformat(), [])), sorted(days.get((d + timedelta(days=1)).isoformat(), []))
+        evening = next((m for _, m, _, _ in reversed(tonight) if m is not None), None)
+        morning = next((m for _, m, _, _ in tomorrow if m is not None), None)
+        # A night in town: the day's last photo and the next day's first are far off the trail.
+        town = tonight[-1][3] if tonight and tonight[-1][1] is None and (not tomorrow or tomorrow[0][1] is None) else ""
+        night = {"night": len(out) + 1, "date": d.isoformat()}
+        if town:
+            night["town"] = town
+        elif evening is not None and morning is not None:
+            night["mile"] = round((evening + morning) / 2)
+        elif evening is not None or morning is not None:
+            night["mile"] = round(evening if evening is not None else morning)
+        out.append(night)
+        print(f"Night {night['night']:>2}  {night['date']}  "
+              + (f"mile {night['mile']}" if "mile" in night else night.get("town") or "no photos"), file=sys.stderr)
+        d += timedelta(days=1)
+    if args.write:
+        trail["nights"] = out
+        with open(args.trails, "w") as f:
+            f.write(json.dumps(trails, indent=2) + "\n")
+        print(f"Wrote {len(out)} nights to {args.trails}", file=sys.stderr)
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("export", help="JSON written by `osxphotos query --json`")
@@ -176,10 +263,19 @@ def main():
     ap.add_argument("--min-photos", type=int, default=5, help="drop trips with fewer photos (default 5)")
     ap.add_argument("--outdoor-only", action="store_true", help="keep trips that look outdoorsy")
     ap.add_argument("--year", help="only trips starting in this year")
+    ap.add_argument("--nights", metavar="SLUG", help="find each night on this trail from trails.json instead of listing trips")
+    ap.add_argument("--trail-km", type=float, default=2, help="with --nights, photos this close to the trail find the walk's days (default 2)")
+    ap.add_argument("--town-km", type=float, default=8,
+                    help="with --nights, a night this far off the trail is named for its town instead of a mile (default 8)")
+    ap.add_argument("--trails", default="site/_data/trails.json", help="with --nights, the trails (default site/_data/trails.json)")
+    ap.add_argument("--trail-routes", default="site/_data/trail_routes.json", help="with --nights, their routes")
+    ap.add_argument("--write", action="store_true", help="with --nights, write the nights into --trails")
     args = ap.parse_args()
 
     with open(args.export) as f:
         photos = json.load(f)
+    if args.nights:
+        return nights(args, photos)
     skip = [(h, args.home_radius) for h in load_homes(args.homes)]
     near, skip_names = load_skips(args.skip, args.home_radius)
     skip += near

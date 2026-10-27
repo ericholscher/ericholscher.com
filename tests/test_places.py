@@ -73,18 +73,23 @@ def test_list_shows_every_trip_and_entry_once(page, site_url, built):
     assert page.evaluate("document.documentElement.scrollWidth - innerWidth") == 0
 
 
-def test_trip_permalink_opens_and_names_its_pins(page, site_url):
+def test_trip_permalink_opens_and_names_its_places(page, site_url, built):
     page.goto(f"{site_url}adventures/#{TRIP}")
     page.wait_for_timeout(300)
     trip = page.locator(f"#{TRIP}")
     assert trip.get_attribute("open") is not None
-    frame = trip.locator(".topo-trip-map").bounding_box()
-    inside = lambda b: frame["x"] - 1 <= b["x"] and b["x"] + b["width"] <= frame["x"] + frame["width"] + 1 and frame["y"] - 1 <= b["y"] and b["y"] + b["height"] <= frame["y"] + frame["height"] + 1
-    pins = trip.locator(".topo-pin circle").evaluate_all("cs => cs.map(c => c.getBoundingClientRect().toJSON())")
-    labels = trip.locator(".topo-pin-labels text").evaluate_all("ts => ts.map(t => t.getBoundingClientRect().toJSON())")
-    assert pins and len(labels) >= len(pins) // 3
-    for b in pins + labels:
-        assert inside(b), b
+    # The map is the topo from scripts/trip_topo.py, with the places named on it; its live version
+    # (trip-map.js) draws from data-geo, which holds every place in the trip.
+    figure = trip.locator(".topo-trip-map")
+    image = figure.locator("img")
+    image.scroll_into_view_if_needed()
+    page.wait_for_function("img => img.complete && img.naturalWidth > 0", arg=image.element_handle())
+    frame, shown = figure.bounding_box(), image.bounding_box()
+    assert abs(frame["width"] - shown["width"]) <= 2 and abs(frame["height"] - shown["height"]) <= 2
+    geo = json.loads(figure.get_attribute("data-geo"))
+    trip_built = {t["slug"]: t for t in built["trips"]}[TRIP]
+    assert [p["name"] for p in geo["places"]] == [p["name"] for p in trip_built["places"]]
+    assert figure.get_attribute("aria-label").count(",") >= len(trip_built["places"]) - 1
     assert page.evaluate("document.documentElement.scrollWidth - innerWidth") == 0
 
 

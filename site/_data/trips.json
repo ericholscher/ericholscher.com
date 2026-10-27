@@ -1,30 +1,46 @@
 [
   {
-    "slug": "europe-2026",
-    "name": "Europe, 2026",
+    "slug": "europe-fall-2026",
+    "name": "Europe, fall 2026",
     "years": [
       2026
     ],
     "places": [
-      "Berlin",
-      "Athens",
-      "Vikos-Aoös National Park",
-      "Bilbao",
-      "Lisbon",
       "Copenhagen",
+      "Berlin",
+      "Budapest",
       "Sarajevo",
       "Utrecht",
-      "Madrid",
       "Picos de Europa",
-      "Camino del Norte",
-      "Budapest",
+      "Madrid",
+      "Gesäuse National Park",
+      "Dachstein and Schladming",
+      "Hohe Tauern National Park",
       "Karwendel"
     ],
     "along": [
-      "Vikos-Aoös National Park",
-      "Camino del Norte",
       "Picos de Europa",
       "Austrian Alps"
+    ]
+  },
+  {
+    "slug": "europe-spring-2026",
+    "name": "Europe, spring 2026",
+    "years": [
+      2026
+    ],
+    "places": [
+      "Athens",
+      "Meteora",
+      "Vikos-Aoös National Park",
+      "Lefkada",
+      "Camino del Norte",
+      "Bilbao",
+      "Lisbon"
+    ],
+    "along": [
+      "Vikos-Aoös National Park",
+      "Camino del Norte"
     ]
   },
   {
@@ -36,7 +52,8 @@
     ],
     "places": [
       "John Muir Trail",
-      "White River National Forest"
+      "White River National Forest",
+      "Rocky Mountain National Park"
     ],
     "along": [
       "John Muir Trail",
@@ -54,7 +71,10 @@
       "Singapore",
       "Bali",
       "Andaman coast, Thailand",
+      "Langkawi",
       "Raja Ampat",
+      "Moalboal, Philippines",
+      "Dauin, Philippines",
       "Bohol, Philippines",
       "Malapascua, Philippines",
       "Sabah, Borneo"
@@ -152,7 +172,7 @@
       2025
     ],
     "places": [
-      "Costa Rica",
+      "Camino de Costa Rica",
       "Monteverde and Arenal"
     ],
     "along": [

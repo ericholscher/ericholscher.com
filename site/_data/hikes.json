@@ -517,7 +517,7 @@
     "kind": "trek",
     "when": "June 2026",
     "name": "Camino del Norte",
-    "where": "Basque Country, Spain",
+    "where": "Irún to Santander, Spain",
     "note": "Eleven days along the northern coast of Spain, finishing with a day in Bilbao.",
     "feature": true
   },
@@ -528,7 +528,8 @@
     "name": "John Muir Trail",
     "where": "Cottonwood Pass to Yosemite, California",
     "note": "22 days northbound, starting from Cottonwood Pass, back in the range where the 2013 PCT walk ended.",
-    "feature": true
+    "feature": true,
+    "link": "trails/john-muir-trail"
   },
   {
     "year": "2026",

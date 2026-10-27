@@ -1,12 +1,16 @@
-{#- The newest few trips for the home page, from topo_trip_list (newest first, built by
-    _ext/topo_trips.py). Years close to home are left out; each card links to its trip in the
-    Adventures list, which opens it. -#}
-{%- set away = topo_trip_list|rejectattr('home')|list %}
+{#- The newest few trips for the home page, from topo_trip_list (built by _ext/topo_trips.py),
+    by when each one ended: that list runs by the year a trip started, oldest first within it, so a
+    year's last trip would come last. Years close to home are left out; each card links to its trip
+    in the Adventures list, which opens it. The map is the card from scripts/trip_topo.py, with the
+    places drawn and named on it, or the land from trip_maps.py and pins without one. -#}
+{%- set away = topo_trip_list|rejectattr('home')|sort(attribute='last', reverse=True)|list %}
 <ul class="topo-recent-trips">
 {%- for t in away[:3] %}
   <li class="topo-recent-trip">
     <a href="{{ pathto('adventures') }}#{{ t.slug }}">
-      {%- if t.map %}{% set b = t.map.box %}
+      {%- if t.topo %}
+      <span class="topo-trip-map is-topo"><img src="{{ pathto('_static/maps/' ~ t.slug ~ '-card.webp', 1) }}" alt="" loading="lazy" width="300" height="200"></span>
+      {%- elif t.map %}{% set b = t.map.box %}
       <span class="topo-trip-map">
         <img src="{{ pathto('_static/maps/' ~ t.slug ~ '.svg', 1) }}" alt="" loading="lazy" width="{{ b[2] }}" height="{{ b[3] }}">
         <svg class="topo-trip-pins" viewBox="{{ b|join(' ') }}" aria-hidden="true">

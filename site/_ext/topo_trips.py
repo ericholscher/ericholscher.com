@@ -82,10 +82,50 @@ def trip_view(pins):
     }
 
 
+MIN_SPAN = 1.2  # degrees: the least a trip map shows across, so one small park still has context
+
+
+def trip_geo(trip, shapes):
+    """What a trip's topo map draws (scripts/trip_topo.py and trip-map.js): each place as its shape
+    from trip_shapes.json (a park's boundary, a trail's route) or as a pin, and the bounds that fit
+    them all, as west, south, east, north."""
+    places, xs, ys = [], [], []
+
+    def walk(coords):
+        if isinstance(coords[0], (int, float)):
+            xs.append(coords[0])
+            ys.append(coords[1])
+        else:
+            for c in coords:
+                walk(c)
+
+    for p in trip["places"]:
+        shape = shapes.get(p["name"])
+        places.append({"name": p["name"], "kind": p["kind"], "lon": p["lon"], "lat": p["lat"], "shape": shape})
+        walk(shape["coordinates"] if shape else [p["lon"], p["lat"]])
+    west, east, south, north = min(xs), max(xs), min(ys), max(ys)
+    if east - west < MIN_SPAN:
+        west, east = (west + east - MIN_SPAN) / 2, (west + east + MIN_SPAN) / 2
+    if north - south < MIN_SPAN / 2:
+        south, north = (south + north - MIN_SPAN / 2) / 2, (south + north + MIN_SPAN / 2) / 2
+    # A name goes on the side of its place toward the middle of the map, so it isn't cut off at an
+    # edge: to the left of a place in the east, and above or below one near the top or bottom.
+    for p in places:
+        x = (p["lon"] - west) / ((east - west) or 1)
+        y = (north - p["lat"]) / ((north - south) or 1)
+        side = "right" if x > 0.6 else "left" if x < 0.4 else ""
+        level = "top" if y < 0.2 else "bottom" if y > 0.8 else ""
+        p["anchor"] = "-".join(filter(None, (level, side))) or "left"
+    # Within the United States, its states give a sense of where; elsewhere, countries do.
+    states = west > -125 and east < -66 and south > 24 and north < 50
+    return {"bounds": [round(v, 4) for v in (west, south, east, north)], "places": places, "states": states}
+
+
 def build(hikes, places, trips):
     """Group the entries and places into trips. Returns (trips, years, problems).
 
     Each entry gets "trip", its trip's slug, and each place "trips", the slugs of the trips it's in.
+    Each trip gets "last", where its latest entry is in hikes.json (which runs oldest first), or -1.
     trips: every trip, newest first. years: newest first, each with its trips, its places, and the
     places in no trip. problems: names in trips.json that don't match places.json or hikes.json.
     """
@@ -109,7 +149,7 @@ def build(hikes, places, trips):
 
     def trip(slug, **fields):
         if slug not in found:
-            found[slug] = {"slug": slug, "entries": [], "places": [], "home": False, "solo": False, **fields}
+            found[slug] = {"slug": slug, "entries": [], "places": [], "home": False, "solo": False, "last": -1, **fields}
         return found[slug]
 
     for order, h in enumerate(hikes):
@@ -126,6 +166,7 @@ def build(hikes, places, trips):
             # The place named after it, or noted with its name, from that year.
             tr["places"] = [p for p in places if h["name"] in (p["name"], p.get("note")) and y in p.get("years", [])]
         tr["entries"].append(h)
+        tr["last"] = order
         h["trip"] = tr["slug"]
     # Trips with places but no entries, like a year's visit to Europe, or a year close to home.
     for t in trips:

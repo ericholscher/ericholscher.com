@@ -45,9 +45,13 @@ Headless Chromium can't play H.264, so a video that "won't play" there is not a 
 - `site/_data/trips.json` groups the places and `hikes.json` entries into trips (a region and season, like "Southeast Asia, winter 2026"). Europe gets its own trip for each year. The Adventures page is one list of these trips by year, built by `site/_ext/topo_trips.py`:
   - Every entry lands in exactly one trip. The `"home": true` trip ("Close to home") splits by year; an entry no trip names becomes a trip of its own.
   - A place in no trip goes on its year's "Also" line. The world map links into the same trips, so names and counts match.
-  - Each trip's map is `site/_static/maps/<slug>.svg`, drawn by `scripts/trip_maps.py` from Natural Earth. Rerun it after changing a trip's places, and commit the output.
+  - Each trip's map is one labeled topo map (Eric chose it over panels, October 2026), drawn by `scripts/trip_topo.py` into `<slug>-card.webp` (home) and `<slug>-topo.webp` (Adventures), with each place as its shape from `trip_shapes.json` (`scripts/trip_shapes.py`): a park's boundary, a trail's route, or a pin. Draw only what Eric did: a stretch of a long route he walked, never the whole route. `scripts/trip_maps.py` draws the flat SVG fallback. Rerun them after changing a trip's places, and commit the output.
   - The build warns if a trip names a place or entry that isn't in the other files, or a map is missing.
 - `scripts/photo_trips.py` turns an osxphotos export into candidate trip rows. See the README.
+- Trail pages (`site/trails/<trail>.rst`) are drawn from `site/_data/trails.json` by `site/_ext/topo_trails.py` and `topo/trail.html`:
+  - The route is the public trail from OpenStreetMap, traced by `scripts/trail_routes.py` into `trail_routes.json` with a relief image. Never use a personal GPS track.
+  - Nights are trail miles or a town, from `photo_trips.py --nights`; never campsite coordinates.
+  - The pages hold data, maps, and structure, plus Eric's own words from `hikes.json`. Don't write narrative for them.
 
 ## Design
 
@@ -76,6 +80,8 @@ Keep that identity. Work within the existing tokens in `topo.css` rather than ad
   - YouTube and Vimeo iframes scale to 16:9.
 - **Maps:** inline SVG from Natural Earth land shapes, with no tiles or external scripts.
   - Interactive parts (year filter, hover labels, zoom, expand) are progressive enhancement. The page must still make sense without JavaScript.
+  - The exception is the trail pages and the trip maps, where Eric asked for a real map (October 2026). The trip maps are images rendered with MapLibre; opening a trip on the Adventures page swaps in the live map (`trip-map.js`).
+  - On the trail pages, `trail-map.js` swaps the static relief for MapLibre (vendored in `site/_static/vendor/`), with OpenFreeMap tiles and USGS terrain, only once its tiles have drawn. If they fail, the static map stays, so it never shows a blank box.
 - **Mobile masthead:** the wordmark sits over a single nav row: Blog, Adventures, Speaking, Projects, About, and a search icon. It fits one row down to 375px; a 6th item would need tighter spacing or a shorter label.
 
 ## Voice and content

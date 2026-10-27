@@ -28,8 +28,15 @@ JSON files: ``site/_data/hikes.json`` (the outings), ``site/_data/places.json`` 
 ``site/_ext/topo_trips.py`` puts every outing in exactly one trip: the trip that names it, or for a trip marked
 ``"home": true``, that trip for the outing's year ("Close to home, 2024"), or else a trip of its own.
 Places in no trip go on that year's "Also" line.
-Each trip opens to its own map; ``scripts/trip_maps.py`` draws the land for them from Natural Earth into
-``site/_static/maps/`` (committed). Rerun it after changing a trip's places; the build warns when a map is missing.
+Each trip has its own map, on the home page and in the Adventures list: one topo map with its places named,
+each drawn as what it was on the ground. A place in places.json can have a ``"shape"``: a park's OpenStreetMap
+boundary (``{"osm": "R3724941"}``), a trail page's route (``{"trail": "john-muir-trail"}``), or a stretch of a
+waymarked route (``{"route": [relation ids], "from": [lat, lon], "to": [lat, lon]}``); anything else is a pin.
+``scripts/trip_shapes.py`` fetches the shapes into ``site/_data/trip_shapes.json``, and ``scripts/trip_topo.py``
+draws each trip's map with MapLibre in Chromium into ``site/_static/maps/<trip>-card.webp`` (the home page) and
+``<trip>-topo.webp`` (the Adventures page, where opening a trip swaps in the same map live, from
+``trip-map.js``). ``scripts/trip_maps.py`` draws a flat fallback from Natural Earth. All three are committed;
+rerun them after changing a trip's places, and the build warns when a map is missing.
 Trips marked ``"feature": true`` in hikes.json are listed under "The long ones" and get a gold diamond in the list.
 Trips and filters are permalinks: ``/adventures/#europe-2018`` opens that trip, ``/adventures/#2016`` jumps to the
 year, and ``/adventures/#trek`` or ``/adventures/#long`` shows only those trips (and dims the rest on the map).
@@ -85,6 +92,30 @@ For one-offs, pass ``--skip-near LAT,LON[,KM]`` or ``--skip-place NAME``.
 Each row lists the trip's main towns in ``towns``, with days photographed in each. Tune the depth with
 ``--towns`` (most per trip, default 3) and ``--town-share`` (a town with this share of the photos is listed even if it never led a day, default 0.2).
 All three files are gitignored, so those places stay on your machine. The script uses only the standard library.
+
+Trail pages
+-----------
+
+Each long trail can have its own page (``site/trails/<trail>.rst``, with a ``.. trail:: <trail>`` directive):
+the route on a shaded relief map, its elevation profile, the passes, and the nights.
+
+1. Add the trail to ``site/_data/trails.json``: its ``hikes.json`` entry, the OpenStreetMap route
+   relations it followed (look them up on `Waymarked Trails <https://hiking.waymarkedtrails.org/>`_),
+   and where the walk started and ended. ``spurs`` are side trails drawn but not counted.
+2. Trace the route, its elevation, and the passes on it::
+
+       uv run --group photos python scripts/trail_routes.py
+
+   This writes ``site/_data/trail_routes.json`` and ``site/_static/trails/<trail>-relief.webp``. The route is
+   the public trail from OpenStreetMap, never a GPS track.
+3. Add the nights from your photos, as trail miles (no coordinates are printed or written)::
+
+       python3 scripts/photo_trips.py photo-places.json --nights john-muir-trail
+       python3 scripts/photo_trips.py photo-places.json --nights john-muir-trail --write
+
+   Or type them into ``trails.json`` by hand: ``{"night": 1, "date": "2026-07-01", "mile": 12}``,
+   or ``"town"`` instead of ``"mile"`` for a night off the trail.
+4. Point the ``hikes.json`` entry's ``link`` at the page.
 
 Dependencies live in ``pyproject.toml`` and are pinned in ``uv.lock``; Read the Docs installs the ``docs`` group with uv.
 To build locally::

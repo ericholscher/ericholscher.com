@@ -1,4 +1,4 @@
-"""The site's own Sphinx hooks: photo rows, the redirect stubs, and the data files.
+"""The site's own Sphinx hooks: trail pages, photo rows, the redirect stubs, and the data files.
 
 conf.py is for settings only. Site data and copy live in their own files: _data/ for the
 Adventures timeline, map, topics, and favorite posts, and redirects.yml at the repo root.
@@ -13,7 +13,9 @@ import yaml
 from sphinx.util import logging
 
 from docutils import nodes
+from docutils.parsers.rst import Directive
 
+import topo_trails
 import topo_trips
 
 logger = logging.getLogger(__name__)
@@ -76,8 +78,53 @@ def topo_trip_log(app):
     for t in trips:
         if t["map"] and not (maps / f"{t['slug']}.svg").exists():
             logger.warning("No map for the trip %s: run scripts/trip_maps.py", t["slug"])
+        # The topo maps from scripts/trip_topo.py: a card for the home page, and a wider one for the
+        # Adventures page, where trip-map.js swaps in a live map, drawn from "geo", when it's opened.
+        t["topo"] = bool(t["map"]) and (maps / f"{t['slug']}-topo.webp").exists() and (maps / f"{t['slug']}-card.webp").exists()
+        if t["map"] and not t["topo"]:
+            logger.warning("No topo map for the trip %s: run scripts/trip_topo.py", t["slug"])
+        if t["map"]:
+            t["geo"] = topo_trips.trip_geo(t, data["topo_trip_shapes"])
     data["topo_trip_list"] = trips
     data["topo_log"] = years
+
+
+# Trail pages: one per long trail, from trails.json and the routes scripts/trail_routes.py traced
+# (see topo_trails). A page holds a trail directive where its map, profile, and nights go.
+TOPO_TRAIL_SLOT = re.compile(r'<div class="topo-trail-slot" data-trail="([a-z0-9-]+)"></div>')
+
+
+class Trail(Directive):
+    """A long trail's map, elevation profile, passes, and nights."""
+
+    required_arguments = 1
+
+    def run(self):
+        return [nodes.raw("", f'<div class="topo-trail-slot" data-trail="{self.arguments[0]}"></div>', format="html")]
+
+
+def topo_trail_views(app):
+    data = app.topo_data
+    views, problems = topo_trails.build(data["topo_trails"], data["topo_trail_routes"], data["topo_hikes"])
+    for problem in problems:
+        logger.warning("trails.json: %s", problem)
+    for slug in views:
+        if not Path(app.srcdir, "_static", "trails", f"{slug}-relief.webp").exists():
+            logger.warning("No relief for the trail %s: run scripts/trail_routes.py", slug)
+    data["topo_trail_views"] = views
+
+
+def topo_trail_page(app, pagename, templatename, context, doctree):
+    body = context.get("body", "")
+    m = TOPO_TRAIL_SLOT.search(body)
+    if not m:
+        return
+    trail = app.topo_data["topo_trail_views"].get(m.group(1))
+    if not trail:
+        logger.warning("%s: no trail %s in trails.json", pagename, m.group(1))
+        return
+    html = app.builder.templates.render("topo/trail.html", {**context, "trail": trail})
+    context["body"] = body[: m.start()] + html + body[m.end():]
 
 
 def topo_template_filters(app):
@@ -112,7 +159,10 @@ def setup(app):
     topo_build_stamp(app)
     app.connect("html-page-context", topo_data_context)
     app.connect("html-collect-pages", topo_redirect_pages)
+    app.add_directive("trail", Trail)
+    app.connect("html-page-context", topo_trail_page)
     app.connect("doctree-resolved", topo_photo_rows)
     app.connect("builder-inited", topo_template_filters)
     app.connect("builder-inited", topo_trip_log)
+    app.connect("builder-inited", topo_trail_views)
     return {"parallel_read_safe": True, "parallel_write_safe": True}

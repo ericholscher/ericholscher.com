@@ -81,7 +81,7 @@ I have kept going back to pieces of it:
 
 * **2019**: a week on the PCT in Washington, near Lake Chelan, six years after the first walk.
 * **2021**: a week-long loop from Snoqualmie Pass that followed the PCT.
-* **2026**: the John Muir Trail, northbound from Cottonwood Pass,
+* **2026**: the :doc:`John Muir Trail </trails/john-muir-trail>`, northbound from Cottonwood Pass,
   back through the High Sierra where the 2013 walk ended.
 
 Every trip since is on the :doc:`Adventures </adventures>` page, with a map.
