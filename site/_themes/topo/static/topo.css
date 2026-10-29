@@ -40,8 +40,8 @@
      is shared on both sides instead of piling up on the right. */
   --frame: 1024px;
   --pad: max(var(--gutter), (100% - var(--frame)) / 2);
-  /* About 75 characters of body text a line, inside the 45 to 80 that readability guides give. */
-  --measure: 35em;
+  /* About 75 characters of 18px body text a line, inside the 45 to 80 that readability guides give. */
+  --measure: 37em;
 }
 @media (max-width: 760px) { :root { --gutter: 18px; } }
 
@@ -181,7 +181,7 @@ img { max-width: 100%; height: auto; }
 .body h2 { font-family: var(--serif); font-weight: 500; font-size: 28px; line-height: 1.15; color: var(--ink); margin: 40px 0 10px; }
 .body h3 { font-family: var(--serif); font-weight: 500; font-size: 24px; line-height: 1.2; color: var(--ink); margin: 30px 0 8px; }
 .body h4, .body h5, .body h6 { font-family: var(--sans); font-weight: 600; font-size: 16px; margin: 24px 0 6px; color: var(--ink); }
-.body p, .body li { font-size: 17px; line-height: 1.65; }
+.body p, .body li { font-size: 18px; line-height: 1.6; }
 .body p { margin: 0 0 1em; }
 .topo-lede { font-size: 17px; line-height: 1.65; margin: 0 0 28px; color: var(--text); }
 .body ul, .body ol { padding-left: 1.4em; margin: 0 0 1em; }
