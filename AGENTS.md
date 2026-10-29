@@ -60,6 +60,9 @@ The look is linen paper, umber ink, forest-green links, and public-land trail si
 
 Keep that identity. Work within the existing tokens in `topo.css` rather than adding colors.
 
+- **Layout:** the masthead, home intro, columns, and footer share one frame (`--frame` in `topo.css`), so wide screens center the page instead of leaving all the spare width on the right. Body text is capped at `--measure` (35em, about 75 characters a line); keep it within 45 to 80.
+- **Type sizes:** stick to the existing steps (serif headings 40/28/24/20/18, plus the home H1 and the wordmark; sans 18/17/16/15/14; mono 12/11). Sizes 1px apart read as a mistake, not a level.
+- **Colors:** every color is a token on `:root`; don't add hex literals elsewhere.
 - **Section labels:** use `.topo-plaque` (the filled brown plaque) in the content. Sidebar labels (`.topo-side-label`) are lighter on purpose: umber small caps over a short gold rule, since Eric found plaques overbearing there.
 - **Calls to action:** one pattern everywhere. A paper card with a forest top edge (`.topo-cta`) holds one primary `.topo-button`, optionally with a `.topo-button-quiet` beside it. Buttons are 44px tall.
 - **The mark:** a diamond blaze with the Newsreader pilcrow as a path, in `layout.html` and `_static/img/favicon.svg`.

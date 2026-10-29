@@ -26,12 +26,22 @@
   --sign-text: #F2EBDC;
   --sign-gold: #DBA63E;
   --forest: #255A42;
+  --forest-dark: #1B4632;
+  --card: #F7F1E4;
+  --field: #FAF5E9;
+  --land: #DCD2BA;
+  --land-edge: #C9BD9F;
   --mark-snow: #F2EBDC;
   --serif: "Newsreader", Georgia, "Times New Roman", serif;
   --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
   --gutter: 40px;
-  --measure: 66ch;
+  /* Main column, gap, and sidebar. On wider screens the page centers on this frame, so the spare width
+     is shared on both sides instead of piling up on the right. */
+  --frame: 1024px;
+  --pad: max(var(--gutter), (100% - var(--frame)) / 2);
+  /* About 75 characters of body text a line, inside the 45 to 80 that readability guides give. */
+  --measure: 35em;
 }
 @media (max-width: 760px) { :root { --gutter: 18px; } }
 
@@ -55,11 +65,13 @@ img { max-width: 100%; height: auto; }
 .topo-skip:focus { top: 8px; }
 /* Long titles break into even lines instead of leaving one word behind. */
 .topo-hero-copy h1, .body h1, .body h2, .body h3, .topo-entry-body :is(h2, h3) { text-wrap: balance; }
+/* Paragraphs avoid a lone word on their last line. */
+.body p, .body li, .topo-entry-excerpt { text-wrap: pretty; }
 
 /* Masthead */
 .topo-masthead {
   display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
-  gap: 12px 32px; padding: 11px var(--gutter);
+  gap: 12px 32px; padding: 11px var(--pad);
   background: var(--sign); color: var(--sign-text);
   border-bottom: 3px solid var(--sign-gold);
   box-shadow: inset 0 -1px 0 var(--sign-2);
@@ -92,9 +104,9 @@ img { max-width: 100%; height: auto; }
 .topo-page { flex: 1 0 auto; }
 .topo-columns {
   display: flex; flex-wrap: wrap; align-items: flex-start;
-  gap: 32px 64px; padding: 36px var(--gutter) 72px;
+  gap: 32px 64px; padding: 36px var(--pad) 72px;
 }
-.topo-main { flex: 999 1 560px; min-width: 0; max-width: 780px; }
+.topo-main { flex: 999 1 560px; min-width: 0; max-width: 680px; }
 .sphinxsidebar { flex: 1 1 220px; max-width: 280px; min-width: 0; font-size: 15px; }
 .sphinxsidebarwrapper { display: flex; flex-direction: column; gap: 0; }
 @media (max-width: 760px) {
@@ -106,7 +118,7 @@ img { max-width: 100%; height: auto; }
    multiplied into the paper and faded toward the text side so the copy stays readable. */
 .topo-hero {
   position: relative; overflow: hidden; isolation: isolate;
-  padding: 48px var(--gutter) 44px; border-bottom: 1px solid var(--rule-strong);
+  padding: 48px var(--pad) 44px; border-bottom: 1px solid var(--rule-strong);
   background: var(--hero);
 }
 .topo-hero::before {
@@ -126,7 +138,7 @@ img { max-width: 100%; height: auto; }
 .topo-hero-copy p { font-size: 18px; line-height: 1.6; color: var(--text); margin: 0 0 12px; }
 .topo-hero-copy p:last-child { margin-bottom: 0; }
 .topo-hero-copy .headerlink { display: none; }
-.topo-map-credit { position: absolute; right: var(--gutter); bottom: 10px; font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.topo-map-credit { position: absolute; right: var(--pad); bottom: 10px; font-family: var(--mono); font-size: 12px; color: var(--muted); }
 @media (max-width: 760px) {
   .topo-hero { padding-top: 28px; padding-bottom: 36px; }
   .topo-hero::before { opacity: .34; background-position: 55% 50%; }
@@ -138,7 +150,7 @@ img { max-width: 100%; height: auto; }
 
 /* Recent posts (home) */
 .topo-recent-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 6px 24px; margin-bottom: 6px; }
-.topo-recent-head h2 { font-family: var(--mono); font-weight: 400; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; margin: 0; color: var(--sign-text); background: var(--sign); padding: 6px 12px; border-radius: 3px; box-shadow: inset 0 0 0 1px var(--sign-2), inset 0 0 0 2px rgba(217,164,65,.55); }
+.topo-recent-head h2 { font-family: var(--mono); font-weight: 400; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; margin: 0; color: var(--sign-text); background: var(--sign); padding: 6px 12px; border-radius: 3px; box-shadow: inset 0 0 0 1px var(--sign-2), inset 0 0 0 2px rgba(219,166,62,.55); }
 .topo-entry {
   display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 0 20px;
   align-items: baseline; padding: 22px 0; border-top: 1px solid var(--rule);
@@ -196,7 +208,7 @@ img { max-width: 100%; height: auto; }
 /* Projects page: each project is a card, its logo in a fixed tile beside the name and text. */
 /* The cards use the column's full width, like the post lists, rather than the prose measure. */
 .body:has(section.topo-project) { max-width: none; }
-.body section.topo-project { display: grid; grid-template-columns: 168px minmax(0, 1fr); column-gap: 24px; align-items: start; margin: 24px 0; padding: 20px; background: #F7F1E4; border: 1px solid var(--rule); border-radius: 3px; }
+.body section.topo-project { display: grid; grid-template-columns: 168px minmax(0, 1fr); column-gap: 24px; align-items: start; margin: 24px 0; padding: 20px; background: var(--card); border: 1px solid var(--rule); border-radius: 3px; }
 .body section.topo-project > * { grid-column: 2; }
 .body section.topo-project > h2 { margin: 0 0 6px; font-size: 24px; }
 .body section.topo-project > p:last-child { margin-bottom: 0; }
@@ -246,7 +258,7 @@ div[class^="highlight-"] { margin: 0 0 1.2em; }
 .body a.reference code.literal { border-bottom: 0; }
 
 /* Admonitions */
-.body .admonition { margin: 1.4em 0; padding: 14px 18px; border: 1px solid var(--rule-strong); background: #F7F0E0; border-radius: 3px; }
+.body .admonition { margin: 1.4em 0; padding: 14px 18px; border: 1px solid var(--rule-strong); background: var(--card); border-radius: 3px; }
 .body .admonition p { margin: 0 0 .5em; font-size: 16px; }
 .body .admonition p:last-child { margin-bottom: 0; }
 .body .admonition-title { font-family: var(--mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px !important; }
@@ -261,13 +273,13 @@ div[class^="highlight-"] { margin: 0 0 1.2em; }
 .topo-post-tags a:hover { color: var(--ink); }
 /* Calls to action: a paper card with a forest edge, and one button style everywhere,
    forest green with the trail-sign gold inset line. The quiet variant is for a second action. */
-.topo-cta { margin: 32px 0; padding: 18px 20px 20px; background: #F7F1E4; border: 1px solid var(--rule-strong); border-top: 3px solid var(--forest); border-radius: 3px; }
+.topo-cta { margin: 32px 0; padding: 18px 20px 20px; background: var(--card); border: 1px solid var(--rule-strong); border-top: 3px solid var(--forest); border-radius: 3px; }
 .body .topo-cta p, .topo-cta p { margin: 0 0 14px; font-size: 16px; line-height: 1.55; color: var(--text); }
 .body .topo-cta-actions, .topo-cta-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 !important; }
 .topo-pitch { margin-top: 48px; }
 .body .topo-pitch p, .topo-pitch p { margin: 0; }
 .topo-button { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 18px; box-sizing: border-box; border: 0; border-radius: 3px; background: var(--forest); color: var(--sign-text); font-family: var(--sans); font-size: 15px; font-weight: 600; line-height: 1.2; text-align: center; box-shadow: inset 0 0 0 1px rgba(0,0,0,.2), inset 0 0 0 2px rgba(219,166,62,.55); }
-.topo-button:hover { background: #1B4632; color: var(--sign-text); border-bottom: 0; }
+.topo-button:hover { background: var(--forest-dark); color: var(--sign-text); border-bottom: 0; }
 .topo-button:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
 .topo-button-quiet { background: transparent; color: var(--forest); box-shadow: inset 0 0 0 1px var(--forest); }
 .topo-button-quiet:hover { background: rgba(37,90,66,.08); color: var(--forest); }
@@ -286,7 +298,7 @@ div[class^="highlight-"] { margin: 0 0 1.2em; }
 .body .topo-404-search { margin: 0 0 1.4em; }
 .body .topo-404-search label { display: block; margin: 0 0 6px; font-size: 15px; color: var(--text-2); }
 .topo-404-row { display: flex; gap: 8px; max-width: 420px; }
-.body .topo-404-search input[type="search"] { flex: 1 1 auto; min-width: 0; min-height: 44px; box-sizing: border-box; font: inherit; font-size: 16px; padding: 0 12px; border: 1px solid var(--rule-strong); border-radius: 3px; background: #FAF5E9; color: var(--ink); }
+.body .topo-404-search input[type="search"] { flex: 1 1 auto; min-width: 0; min-height: 44px; box-sizing: border-box; font: inherit; font-size: 16px; padding: 0 12px; border: 1px solid var(--rule-strong); border-radius: 3px; background: var(--field); color: var(--ink); }
 .body .topo-404-search input[type="search"]:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
 
 /* ABlog pages (archive, tags, categories) */
@@ -370,8 +382,8 @@ ul.postlist p.ablog-post-excerpt { font-size: 16px; color: var(--text-2); margin
   .topo-recent-trips { grid-template-columns: minmax(0, 1fr); gap: 14px; }
   .topo-recent-trip a { display: grid; grid-template-columns: 128px minmax(0, 1fr); column-gap: 14px; align-items: center; min-height: 64px; }
   .topo-recent-trip .topo-trip-map { grid-row: span 2; margin: 0; }
-  .topo-recent-trip-name { font-size: 19px; align-self: end; }
-  .topo-recent-trip-meta { margin-top: 2px; font-size: 13px; align-self: start; }
+  .topo-recent-trip-name { font-size: 18px; align-self: end; }
+  .topo-recent-trip-meta { margin-top: 2px; font-size: 14px; align-self: start; }
 }
 @media (prefers-reduced-motion: reduce) { .topo-recent-trip .topo-trip-map { transition: none; } }
 
@@ -389,7 +401,7 @@ ul.postlist p.ablog-post-excerpt { font-size: 16px; color: var(--text-2); margin
 /* One row per year: the year, then that year's long ones. */
 .body .topo-feature-list, .topo-feature-list { display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 0 14px; margin: 0; }
 .body .topo-feature-list dt, .topo-feature-list dt { font-family: var(--serif); font-weight: 500; font-size: 20px; line-height: 1.4; color: var(--sign); margin: 0; padding: 6px 0; border-top: 1px solid var(--rule); }
-.body .topo-feature-list dd, .topo-feature-list dd { margin: 0; padding: 6px 0; border-top: 1px solid var(--rule); font-family: var(--serif); font-size: 19px; line-height: 1.4; }
+.body .topo-feature-list dd, .topo-feature-list dd { margin: 0; padding: 6px 0; border-top: 1px solid var(--rule); font-family: var(--serif); font-size: 20px; line-height: 1.4; }
 .topo-feature-list dd a { color: var(--ink); }
 .topo-feature-list dd a:hover { color: var(--link-hover); }
 .topo-feature-list dd a { white-space: nowrap; }
@@ -416,7 +428,7 @@ ul.postlist p.ablog-post-excerpt { font-size: 16px; color: var(--text-2); margin
 .topo-trip > summary::after { content: ""; grid-column: 2; grid-row: 1; align-self: center; width: 7px; height: 7px; border-right: 2px solid var(--sign); border-bottom: 2px solid var(--sign); transform: rotate(45deg); margin-top: -4px; }
 .topo-trip[open] > summary::after { transform: rotate(225deg); margin-top: 4px; }
 .topo-trip > summary:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
-.topo-trip-name { font-family: var(--serif); font-weight: 500; font-size: 21px; line-height: 1.2; color: var(--ink); }
+.topo-trip-name { font-family: var(--serif); font-weight: 500; font-size: 20px; line-height: 1.2; color: var(--ink); }
 .topo-trip > summary:hover .topo-trip-name { color: var(--link-hover); }
 .topo-trip-gist { font-size: 15px; line-height: 1.4; color: var(--text-2); }
 .topo-trip-meta { font-family: var(--mono); font-size: 12px; line-height: 1.5; color: var(--muted); }
@@ -459,7 +471,7 @@ a.topo-kind:hover { color: var(--link-hover); border-color: var(--link-hover) !i
 .topo-kind-count { color: var(--muted); margin-left: 5px; }
 .topo-log-kinds a.is-active { background: var(--sign); border-color: var(--sign) !important; color: var(--sign-text); }
 .topo-log-kinds a.is-active .topo-kind-count { color: var(--sign-gold); }
-.topo-log-filter { margin: 0 0 6px; padding: 8px 12px; background: #F7F1E4; border: 1px solid var(--rule-strong); border-radius: 3px; font-size: 15px; }
+.topo-log-filter { margin: 0 0 6px; padding: 8px 12px; background: var(--card); border: 1px solid var(--rule-strong); border-radius: 3px; font-size: 15px; }
 .topo-log-filter[hidden] { display: none; }
 .topo-log.is-kind .topo-log-also, .topo-log.is-kind .topo-log-foot { display: none; }
 .body .topo-log-foot, .topo-log-foot { margin: 10px 0 0; }
@@ -522,7 +534,7 @@ a.topo-kind:hover { color: var(--link-hover); border-color: var(--link-hover) !i
 /* Showing a trip or year, the small map grows taller and doesn't pan by touch, so a swipe still scrolls the page. */
 .topo-map.is-focused:not(.is-expanded) .topo-map-scroll { aspect-ratio: 2 / 1 !important; overflow: hidden; }
 .topo-world { width: 100%; height: auto; display: block; max-width: none; }
-.topo-land { fill: #DCD2BA; stroke: #C9BD9F; stroke-width: .6; vector-effect: non-scaling-stroke; }
+.topo-land { fill: var(--land); stroke: var(--land-edge); stroke-width: .6; vector-effect: non-scaling-stroke; }
 .topo-pin-dot { stroke: var(--paper); stroke-width: 1.5; vector-effect: non-scaling-stroke; transition: opacity .15s ease; }
 .topo-pin.is-dim .topo-pin-dot { opacity: .15; }
 .topo-pin.is-active .topo-pin-dot, .topo-pin.is-hover .topo-pin-dot { stroke: var(--ink); stroke-width: 2.5; }
@@ -589,7 +601,7 @@ html.topo-map-open, html.topo-map-open body { overflow: hidden; }
 }
 
 /* Search results page */
-.body form input[type="text"] { font: inherit; font-size: 15px; padding: 7px 10px; border: 1px solid var(--rule-strong); border-radius: 3px; background: #FAF5E9; color: var(--ink); max-width: 100%; }
+.body form input[type="text"] { font: inherit; font-size: 15px; padding: 7px 10px; border: 1px solid var(--rule-strong); border-radius: 3px; background: var(--field); color: var(--ink); max-width: 100%; }
 .body form input[type="submit"] { font: inherit; font-size: 14px; padding: 7px 12px; border: 1px solid var(--link); border-radius: 3px; background: var(--link); color: var(--paper); cursor: pointer; }
 #search-results h2 { font-family: var(--serif); font-weight: 400; }
 ul.search { list-style: none; padding: 0; }
@@ -610,7 +622,7 @@ ul.search li a { font-family: var(--serif); font-size: 24px; }
   --readthedocs-search-content-background-color: var(--paper);
   --readthedocs-search-content-border-color: var(--rule-strong);
   --readthedocs-search-filters-border-color: var(--rule);
-  --readthedocs-search-input-background-color: #FAF5E9;
+  --readthedocs-search-input-background-color: var(--field);
   --readthedocs-search-footer-background-color: var(--paper-2);
   --readthedocs-search-footer-color: var(--text-2);
   --readthedocs-search-footer-code-background-color: var(--paper);
@@ -659,7 +671,7 @@ div.tooltip[data-linkpreview-href] .tooltip-content { padding: 20px 24px; color:
 div.tooltip[data-linkpreview-href] .tooltip-content > :first-child { margin-top: 0; }
 div.tooltip[data-linkpreview-href] :is(h1, h2, h3, h4) { font-family: var(--serif); font-weight: 500; line-height: 1.15; color: var(--ink); margin: 18px 0 6px; }
 div.tooltip[data-linkpreview-href] h1 { font-size: 28px; margin-top: 2px; }
-div.tooltip[data-linkpreview-href] h2 { font-size: 21px; }
+div.tooltip[data-linkpreview-href] h2 { font-size: 20px; }
 div.tooltip[data-linkpreview-href] :is(h3, h4) { font-size: 16px; }
 div.tooltip[data-linkpreview-href] :is(h1, h2, h3, h4) a { color: inherit; border-bottom: 0; }
 div.tooltip[data-linkpreview-href] p { margin: 0 0 10px; }
@@ -681,7 +693,7 @@ body .doc-diff-chunk-selected { background-color: color-mix(in srgb, var(--sign-
 .topo-peak-row1::after { height: max(2px, calc(var(--summit) + 0px)); }
 .topo-footer {
   display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 32px;
-  padding: 18px var(--gutter) 22px; background: var(--forest); border-top: 3px solid var(--sign-gold);
+  padding: 18px var(--pad) 22px; background: var(--forest); border-top: 3px solid var(--sign-gold);
   font-family: var(--mono); font-size: 12px; color: var(--sign-text);
 }
 .topo-footer a { color: var(--sign-text); border-bottom-color: rgba(242,235,220,.4); }
