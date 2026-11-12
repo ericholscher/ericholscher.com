@@ -124,7 +124,9 @@
       {#- Site-wide copy sits outside role="main" so Read the Docs search and file diffs see only the page's own content. -#}
       {%- if is_post %}
       <aside class="topo-cta topo-pitch" aria-label="Reply">
-        <p>Hi, I’m Eric. I work on communities in the world of software documentation. If you have thoughts on this post, <a href="mailto:eric@ericholscher.com?subject={{ ('Re: ' ~ title|striptags)|urlencode }}">email me</a>.</p>
+        <p>Hi, I’m Eric. I work on communities in the world of software documentation. If you have thoughts on this post, <a href="mailto:eric@ericholscher.com?subject={{ ('Re: ' ~ title|striptags)|urlencode }}">email me</a>
+        {%- set toot = topo_mastodon|selectattr('post', 'equalto', pagename)|first %}
+        {%- if toot %} or <a href="{{ toot.url }}">discuss it on Mastodon</a>{% endif %}.</p>
       </aside>
       {%- set this = ablog[pagename] %}
       {%- if this.date and (this.prev or this.next) %}
