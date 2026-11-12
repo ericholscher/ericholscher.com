@@ -1,6 +1,12 @@
 # Press and other writers who covered or quoted Eric's work. Hand-written: add an entry only from the piece itself.
 # post is the docname of a post on this site, or the URL of one elsewhere (like a company-blog post).
 # A post on this site lists its mentions at the bottom; the Interviews page lists them all, newest first.
+- title: How AI bots are threatening your favorite websites
+  outlet: The Washington Post
+  date: 2025-07-01
+  url: https://www.washingtonpost.com/technology/2025/07/01/ai-crawlers-reddit-wikipedia-fight/
+  post: https://about.readthedocs.com/blog/2024/07/ai-crawlers-abuse/
+  post_title: AI crawlers need to be more respectful
 - title: "AI crawlers run up a website's hosting bill"
   outlet: Boing Boing
   date: 2024-07-29
