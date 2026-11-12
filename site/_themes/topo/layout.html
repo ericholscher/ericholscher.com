@@ -107,6 +107,14 @@
         {%- if is_post and post.tags %}
         <p class="topo-post-tags">Tagged {% for tag in post.tags %}<a href="{{ pathto(tag.docname) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
         {%- endif %}
+        {#- Press and other writers who covered this post, from site/_data/press.yml. -#}
+        {%- set press = topo_press|selectattr('post', 'equalto', pagename)|sort(attribute='date')|list if is_post else [] %}
+        {%- if press %}
+        <p class="topo-post-press">Mentioned in {% for item in press %}<a href="{{ item.url }}">{{ item.outlet }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
+        {%- endif %}
+        {%- if pagename == 'interviews' %}
+        {% include "topo/press.html" %}
+        {%- endif %}
       </div>
       {#- Site-wide copy sits outside role="main" so Read the Docs search and file diffs see only the page's own content. -#}
       {%- if is_post %}

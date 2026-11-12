@@ -80,6 +80,17 @@ def topo_trip_log(app):
     data["topo_log"] = years
 
 
+# Each press.yml entry names the post it covered: a docname here, or a URL elsewhere.
+def topo_check_press(app, env):
+    for item in app.topo_data["topo_press"]:
+        post = item["post"]
+        if post.startswith("http"):
+            if not item.get("post_title"):
+                logger.warning(f"press.yml: {item['url']} links to {post} but has no post_title")
+        elif post not in env.found_docs:
+            logger.warning(f"press.yml: {item['url']} names {post}, which is not a page on this site")
+
+
 def topo_template_filters(app):
     if hasattr(app.builder, "templates"):
         app.builder.templates.environment.filters["topo_excerpt"] = topo_excerpt
@@ -115,4 +126,5 @@ def setup(app):
     app.connect("doctree-resolved", topo_photo_rows)
     app.connect("builder-inited", topo_template_filters)
     app.connect("builder-inited", topo_trip_log)
+    app.connect("env-check-consistency", topo_check_press)
     return {"parallel_read_safe": True, "parallel_write_safe": True}

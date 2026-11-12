@@ -1,0 +1,17 @@
+{#- The press list on the Interviews page, from site/_data/press.yml, newest first.
+    Each row links the piece by its outlet, with the month, and which of Eric's posts it covered. -#}
+<section class="topo-press" aria-labelledby="in-the-press">
+  <h2 id="in-the-press">In the press</h2>
+  <p>Other writers who covered or quoted something I wrote.</p>
+  <ul class="topo-media-list">
+    {%- for item in topo_press|sort(attribute='date', reverse=true) %}
+    {%- set internal = not item.post.startswith('http') %}
+    <li>
+      <p><a class="reference external" href="{{ item.url }}" title="{{ item.title }}">{{ item.outlet }}</a></p>
+      <p>{{ item.date.strftime('%B %Y') }} &middot; on
+        {%- if internal %} <a class="reference internal" href="{{ pathto(item.post) }}">{{ ablog[item.post].title }}</a>
+        {%- else %} <a class="reference external" href="{{ item.post }}">{{ item.post_title }}</a>{% endif %}</p>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
