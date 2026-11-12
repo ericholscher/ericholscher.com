@@ -112,6 +112,11 @@
         {%- if press %}
         <p class="topo-post-press">Mentioned in {% for item in press %}<a href="{{ item.url }}">{{ item.outlet }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
         {%- endif %}
+        {#- Hacker News threads about this post, from site/_data/hn.yml (scripts/hn_discussions.py). -#}
+        {%- set hn = topo_hn|selectattr('post', 'equalto', pagename)|sort(attribute='date')|list if is_post else [] %}
+        {%- if hn %}
+        <p class="topo-post-press">Discussed on Hacker News: {% for item in hn %}<a href="{{ item.url }}">{{ item.date.strftime('%b %Y') }}</a> ({{ item.comments }} comments){% if not loop.last %}, {% endif %}{% endfor %}</p>
+        {%- endif %}
         {%- if pagename == 'interviews' %}
         {% include "topo/press.html" %}
         {%- endif %}

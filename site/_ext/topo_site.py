@@ -81,6 +81,7 @@ def topo_trip_log(app):
 
 
 # Each press.yml entry names the post it covered: a docname here, or a URL elsewhere.
+# Each hn.yml thread names a post here.
 def topo_check_press(app, env):
     for item in app.topo_data["topo_press"]:
         post = item["post"]
@@ -89,6 +90,9 @@ def topo_check_press(app, env):
                 logger.warning(f"press.yml: {item['url']} links to {post} but has no post_title")
         elif post not in env.found_docs:
             logger.warning(f"press.yml: {item['url']} names {post}, which is not a page on this site")
+    for item in app.topo_data["topo_hn"]:
+        if item["post"] not in env.found_docs:
+            logger.warning(f"hn.yml: {item['url']} names {item['post']}, which is not a page on this site")
 
 
 def topo_template_filters(app):
