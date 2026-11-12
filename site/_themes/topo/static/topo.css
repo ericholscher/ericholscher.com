@@ -367,6 +367,9 @@ ul.postlist p.ablog-post-excerpt { font-size: 16px; color: var(--text-2); margin
 .topo-titles time { font-family: var(--mono); font-size: 12px; color: var(--muted); white-space: nowrap; }
 .topo-titles a { color: var(--ink); border-bottom: 0; }
 .topo-titles a:hover { color: var(--link-hover); }
+/* A post on a company blog: it links out, so it's labeled with the blog and an arrow. */
+.topo-elsewhere-blog { font-family: var(--mono); font-size: 12px; color: var(--muted); white-space: nowrap; }
+.topo-elsewhere-year { margin-top: 44px; }
 @media (max-width: 600px) { .topo-topics { grid-template-columns: minmax(0, 1fr); } }
 /* Recent adventures on the home page: the newest trips, each a small map that links into the Adventures list. */
 .topo-recent-adventures { margin-top: 44px; }

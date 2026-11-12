@@ -38,6 +38,22 @@
 </ul>
 {%- endmacro %}
 
+{#- A post Eric wrote on a company blog (from topo_elsewhere): it links out, labeled with the blog. -#}
+{%- macro elsewhere_item(item) %}
+  <li class="topo-elsewhere"><time datetime="{{ item.date.isoformat() }}">{{ item.date.strftime('%b %Y') }}</time><span><a class="external" href="{{ item.url }}">{{ item.title }}</a> <span class="topo-elsewhere-blog">{{ item.blog }} blog<span aria-hidden="true"> &#8599;</span></span></span></li>
+{%- endmacro %}
+
+{#- An archive year: this site's posts and the posts elsewhere, by date. -#}
+{%- macro archive_rows(rows, pagename) %}
+<ul class="topo-titles">
+{%- for post, item in rows %}
+{%- if post %}
+  <li>{{ date(post, '%b %Y') }}<a class="internal" href="{{ pathto(post.docname) }}{{ anchor(post) }}">{{ post.title }}</a></li>
+{%- else %}{{ elsewhere_item(item) }}{% endif %}
+{%- endfor %}
+</ul>
+{%- endmacro %}
+
 {#- Topic cards: one per category in topo_categories that has posts. -#}
 {%- macro topics(pagename, per=3) %}
 <div class="topo-topics">
