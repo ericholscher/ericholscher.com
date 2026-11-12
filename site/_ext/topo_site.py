@@ -95,9 +95,33 @@ def topo_check_press(app, env):
             logger.warning(f"hn.yml/mastodon.yml: {item['url']} names {item['post']}, which is not a page on this site")
 
 
+# Posts Eric wrote on the company blogs, from _data/elsewhere.yml (written by
+# scripts/company_posts.py). The archive lists them by year beside his own posts, linking out:
+# they aren't pages here, so they stay out of the feed, topics, and post counts.
+def topo_with_elsewhere(archive, elsewhere):
+    """The archive's years, newest first, as (year, collection, rows): rows are this site's posts
+    and the posts elsewhere, newest first, each a (post, None) or (None, item) pair. A year with
+    only posts elsewhere has no collection, since ABlog has no page for it."""
+    years = {int(c.name): c for c in archive if c}
+    items = {}
+    for item in elsewhere or []:
+        items.setdefault(item["date"].year, []).append(item)
+
+    def when(row):
+        post, item = row
+        return post.date.date() if post else item["date"]
+
+    for year in sorted(years.keys() | items.keys(), reverse=True):
+        coll = years.get(year)
+        rows = [(p, None) for p in coll or []] + [(None, i) for i in items.get(year, [])]
+        yield year, coll, sorted(rows, key=when, reverse=True)
+
+
 def topo_template_filters(app):
     if hasattr(app.builder, "templates"):
-        app.builder.templates.environment.filters["topo_excerpt"] = topo_excerpt
+        filters = app.builder.templates.environment.filters
+        filters["topo_excerpt"] = topo_excerpt
+        filters["topo_with_elsewhere"] = topo_with_elsewhere
 
 
 def topo_photo_rows(app, doctree, docname):

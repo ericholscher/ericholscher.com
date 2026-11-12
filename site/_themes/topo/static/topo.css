@@ -342,6 +342,10 @@ ul.postlist p.ablog-post-excerpt { font-size: 16px; color: var(--text-2); margin
 .topo-spark a:hover .topo-spark-bar, .topo-spark a:focus-visible .topo-spark-bar { fill: var(--link-hover); }
 .topo-spark-bar.is-current { fill: var(--blaze); }
 .topo-spark-empty { fill: var(--rule-strong); }
+/* Posts on company blogs, stacked on this site's posts. */
+.topo-spark-other { fill: var(--contour); }
+.topo-spark a:hover .topo-spark-other, .topo-spark a:focus-visible .topo-spark-other { fill: var(--link-hover); }
+.topo-spark-key { display: inline-block; width: 8px; height: 8px; margin-right: 5px; border-radius: 1px; background: var(--contour); }
 /* At the top of the Blog, archive and year pages, where it doubles as year navigation. */
 .topo-lede + .topo-spark, .topo-landing-intro + .topo-spark, .topo-collection h1 + .topo-spark { margin: -12px 0 28px; }
 .topo-spark-label { font-family: var(--mono); font-size: 12px; fill: var(--muted); }
@@ -372,6 +376,9 @@ ul.postlist p.ablog-post-excerpt { font-size: 16px; color: var(--text-2); margin
 .topo-titles time { font-family: var(--mono); font-size: 12px; color: var(--muted); white-space: nowrap; }
 .topo-titles a { color: var(--ink); border-bottom: 0; }
 .topo-titles a:hover { color: var(--link-hover); }
+/* A post on a company blog: it links out, so it's labeled with the blog and an arrow. */
+.topo-elsewhere-blog { font-family: var(--mono); font-size: 12px; color: var(--muted); white-space: nowrap; }
+.topo-elsewhere-year { margin-top: 44px; }
 @media (max-width: 600px) { .topo-topics { grid-template-columns: minmax(0, 1fr); } }
 /* Recent adventures on the home page: the newest trips, each a small map that links into the Adventures list. */
 .topo-recent-adventures { margin-top: 44px; }
