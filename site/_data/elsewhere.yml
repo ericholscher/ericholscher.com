@@ -1,0 +1,198 @@
+# Posts Eric wrote on company blogs. The archive links out to them; they aren't copied here.
+# Written by scripts/company_posts.py, which replaces this file: drop a post for good with SKIP there.
+- title: "Agent skills for the Read the Docs now available"
+  date: 2026-02-11
+  blog: Read the Docs
+  url: https://about.readthedocs.com/blog/2026/02/readthedocs-skills-api-config/
+- title: "Serve llms.txt from your docs"
+  date: 2026-02-11
+  blog: Read the Docs
+  url: https://about.readthedocs.com/blog/2026/02/llms-txt-support/
+- title: "How to think about AI and documentation tools"
+  date: 2025-11-24
+  blog: Read the Docs
+  url: https://about.readthedocs.com/blog/2025/11/docs-ai-tools/
+- title: "Thanks to AWS for supporting Read the Docs for many years"
+  date: 2025-09-03
+  blog: Read the Docs
+  url: https://about.readthedocs.com/blog/2025/09/aws-powers-read-the-docs/
+- title: "Read the Docs 2025 Vision: great support for all documentation tools"
+  date: 2025-01-14
+  blog: Read the Docs
+  url: https://about.readthedocs.com/blog/2025/01/2025-vision/
+- title: "10 years of sustainable open source"
+  date: 2024-08-26
+  blog: Read the Docs
+  url: https://about.readthedocs.com/blog/2024/08/10-year-anniversary/
+- title: "AI crawlers need to be more respectful"
+  date: 2024-07-25
+  blog: Read the Docs
+  url: https://about.readthedocs.com/blog/2024/07/ai-crawlers-abuse/
+- title: "Using embeddings in production with Postgres & Django for niche ad targeting"
+  date: 2024-04-23
+  blog: EthicalAds
+  url: https://www.ethicalads.io/blog/2024/04/using-embeddings-in-production-with-postgres-django-for-niche-ad-targeting/
+- title: "Read the Docs 2023 Stats"
+  date: 2024-03-06
+  blog: Read the Docs
+  url: https://about.readthedocs.com/blog/2024/03/read-the-docs-2023-stats/
+- title: "Write the Docs 2023 Stats"
+  date: 2024-01-10
+  blog: Write the Docs
+  url: https://www.writethedocs.org/blog/write-the-docs-2023-stats/
+- title: "Read the Docs website migration to about.readthedocs.com"
+  date: 2023-03-09
+  blog: Read the Docs
+  url: https://blog.readthedocs.com/website-migration/
+- title: "Write the Docs 2022 Stats"
+  date: 2023-01-13
+  blog: Write the Docs
+  url: https://www.writethedocs.org/blog/write-the-docs-2022-stats/
+- title: "A new approach to content-based targeting for advertising"
+  date: 2022-11-07
+  blog: EthicalAds
+  url: https://www.ethicalads.io/blog/2022/11/a-new-approach-to-content-based-targeting-for-advertising/
+- title: "Python Software Foundation & EthicalAds working to promote open source sponsorship"
+  date: 2022-11-01
+  blog: EthicalAds
+  url: https://www.ethicalads.io/blog/2022/11/python-software-foundation-ethicalads-working-to-promote-open-source-sponsorship/
+- title: "Running a company book club: tips & what we read"
+  date: 2022-05-05
+  blog: EthicalAds
+  url: https://www.ethicalads.io/blog/2022/05/running-a-company-book-club-tips-what-we-read/
+- title: "Read the Docs 2021 Stats"
+  date: 2022-03-21
+  blog: Read the Docs
+  url: https://blog.readthedocs.com/read-the-docs-2021-stats/
+- title: "Write the Docs 2021 Stats"
+  date: 2022-01-13
+  blog: Write the Docs
+  url: https://www.writethedocs.org/blog/write-the-docs-2021-stats/
+- title: "EthicalAds providing free analytics with Simple Analytics"
+  date: 2021-11-30
+  blog: EthicalAds
+  url: https://www.ethicalads.io/blog/2021/11/ethicalads-providing-free-analytics-with-simple-analytics/
+- title: "Read the Docs 2020 Stats"
+  date: 2021-03-17
+  blog: Read the Docs
+  url: https://blog.readthedocs.com/read-the-docs-2020-stats/
+- title: "Pull Request Builders available for all users"
+  date: 2021-01-27
+  blog: Read the Docs
+  url: https://blog.readthedocs.com/pull-request-builder-general-availability/
+- title: "Write the Docs 2020 Stats"
+  date: 2021-01-13
+  blog: Write the Docs
+  url: https://www.writethedocs.org/blog/write-the-docs-2020-stats/
+- title: "Announcing Chan Zuckerberg Initiative Grant to Expand the Interoperability of Scientific Documentation"
+  date: 2020-11-19
+  blog: Read the Docs
+  url: https://blog.readthedocs.com/czi-grant-announcement/
+- title: "Announcing EthicalAds"
+  date: 2020-08-24
+  blog: EthicalAds
+  url: https://www.ethicalads.io/blog/2020/08/announcing-ethicalads/
+- title: "Shipping a CDN on Read the Docs Community"
+  date: 2020-05-18
+  blog: Read the Docs
+  url: https://blog.readthedocs.com/announcing-community-cdn/
+- title: "Read the Docs 2019 Stats"
+  date: 2020-05-14
+  blog: Read the Docs
+  url: https://blog.readthedocs.com/read-the-docs-2019-stats/
+- title: "Read the Docs Offsite 2019"
+  date: 2019-06-20
+  blog: Read the Docs
+  url: https://blog.readthedocs.com/offsite-2019/
+- title: "Write the Docs 2018 Stats"
+  date: 2019-01-10
+  blog: Write the Docs
+  url: https://www.writethedocs.org/blog/write-the-docs-2018-stats/
+- title: "Read the Docs 2018 Stats"
+  date: 2019-01-08
+  blog: Read the Docs
+  url: https://blog.readthedocs.com/read-the-docs-2018-stats/
+- title: "Ethical Advertising Works"
+  date: 2018-04-16
+  blog: Read the Docs
+  url: https://blog.readthedocs.com/ethical-advertising-works/
+- title: "Read the Docs 2017 Stats"
+  date: 2018-02-14
+  blog: Read the Docs
+  url: https://blog.readthedocs.com/read-the-docs-2017-stats/
+- title: "Write the Docs 2017 Stats"
+  date: 2018-01-08
+  blog: Write the Docs
+  url: https://www.writethedocs.org/blog/write-the-docs-2017-stats/
+- title: "MOSS Final Report"
+  date: 2017-08-10
+  blog: Read the Docs
+  url: https://blog.readthedocs.com/moss-final-report/
+- title: "Ads on the Alabaster Theme on Read the Docs Community Sites"
+  date: 2017-06-16
+  blog: Read the Docs
+  url: https://blog.readthedocs.com/ads-on-other-themes/
+- title: "Uniregistry sponsors Read the Docs and Open Source"
+  date: 2017-04-03
+  blog: Read the Docs
+  url: https://blog.readthedocs.com/ads-with-uniregistry/
+- title: "Write the Docs 2016 Year in Review"
+  date: 2017-01-18
+  blog: Write the Docs
+  url: https://www.writethedocs.org/blog/write-the-docs-2016-year-in-review/
+- title: "Read the Docs 2016 Stats"
+  date: 2017-01-13
+  blog: Read the Docs
+  url: https://blog.readthedocs.com/read-the-docs-2016-stats/
+- title: "Announcing pydoc.io beta"
+  date: 2016-11-17
+  blog: Read the Docs
+  url: https://blog.readthedocs.com/announcing-pydoc-io/
+- title: "Running ads with Sentry"
+  date: 2016-10-24
+  blog: Read the Docs
+  url: https://blog.readthedocs.com/ads-with-sentry/
+- title: "Documenting the Write the Docs Team & European Conference Reminder"
+  date: 2016-07-29
+  blog: Write the Docs
+  url: https://www.writethedocs.org/blog/team-eu-speakers/
+- title: "Welcome to the blog"
+  date: 2016-04-15
+  blog: Write the Docs
+  url: https://www.writethedocs.org/blog/welcome/
+- title: "Advertising on Read the Docs Community Sites"
+  date: 2016-03-09
+  blog: Read the Docs
+  url: https://blog.readthedocs.com/ads-on-read-the-docs/
+- title: "Read the Docs 2015 Stats"
+  date: 2016-01-15
+  blog: Read the Docs
+  url: https://blog.readthedocs.com/read-the-docs-2015-stats/
+- title: "Read the Docs & Sphinx now support Commonmark"
+  date: 2015-10-16
+  blog: Read the Docs
+  url: https://blog.readthedocs.com/adding-markdown-support/
+- title: "Read the Docs 2014 Stats"
+  date: 2014-12-31
+  blog: Read the Docs
+  url: https://blog.readthedocs.com/read-the-docs-2014-stats/
+- title: "User-defined Redirects"
+  date: 2014-08-22
+  blog: Read the Docs
+  url: https://blog.readthedocs.com/user-defined-redirects/
+- title: "Badge Support"
+  date: 2014-08-14
+  blog: Read the Docs
+  url: https://blog.readthedocs.com/badge-support/
+- title: "Welcome"
+  date: 2014-08-07
+  blog: Read the Docs
+  url: https://blog.readthedocs.com/welcome/
+- title: "Read the Docs 2013 Stats"
+  date: 2013-12-23
+  blog: Read the Docs
+  url: https://blog.readthedocs.com/read-the-docs-2013-stats/
+- title: "A New Theme for Read the Docs"
+  date: 2013-11-04
+  blog: Read the Docs
+  url: https://blog.readthedocs.com/new-theme-read-the-docs/

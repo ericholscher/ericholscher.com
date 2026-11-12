@@ -1,6 +1,6 @@
 {#- The index of categories, tags, or archives. Categories render as topic cards. -#}
 {%- extends "page.html" %}
-{%- from "topo/entries.html" import topics, titles, year_sparkline with context %}
+{%- from "topo/entries.html" import topics, archive_rows, year_sparkline with context %}
 {%- block body %}
 {%- if catalog.name == 'category' %}
 <h1>Topics</h1>
@@ -8,14 +8,18 @@
 {{ topics(pagename, 4) }}
 {%- elif catalog.docname == ablog.archive.docname %}
 <h1>Archive</h1>
-<p class="topo-landing-intro">Every post, by year. The <a href="{{ pathto('blog/index') }}">blog</a> has the same posts with excerpts.</p>
+<p class="topo-landing-intro">Every post, by year. The <a href="{{ pathto('blog/index') }}">blog</a> has the same posts with excerpts. Posts on the Read the Docs, Write the Docs, and EthicalAds blogs are listed too, marked with the blog's name, and link there.</p>
 {{ year_sparkline() }}
-{%- for collection in catalog %}{% if collection %}
-<section class="topo-archive-year" id="y{{ collection }}">
-  <h2><a href="{{ pathto(collection.docname) }}">{{ collection }}</a> <span class="topo-topic-count">{{ collection|length }}</span></h2>
-  {{ titles(collection, pagename) }}
+{%- for year, collection, rows in catalog|topo_with_elsewhere(topo_elsewhere) %}
+<section class="topo-archive-year" id="y{{ year }}">
+  {%- if collection %}
+  <h2><a href="{{ pathto(collection.docname) }}">{{ year }}</a> <span class="topo-topic-count">{{ collection|length }}</span></h2>
+  {%- else %}
+  <h2>{{ year }}</h2>
+  {%- endif %}
+  {{ archive_rows(rows, pagename) }}
 </section>
-{%- endif %}{% endfor %}
+{%- endfor %}
 {%- else %}
 <h1>{{ header }}</h1>
 {%- for collection in catalog %}{% if collection %}
