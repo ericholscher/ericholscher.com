@@ -1,0 +1,56 @@
+# Press and other writers who covered or quoted Eric's work. Hand-written: add an entry only from the piece itself.
+# post is the docname of a post on this site, or the URL of one elsewhere (like a company-blog post).
+# A post on this site lists its mentions at the bottom; the Interviews page lists them all, newest first.
+- title: How AI bots are threatening your favorite websites
+  outlet: The Washington Post
+  date: 2025-07-01
+  url: https://www.washingtonpost.com/technology/2025/07/01/ai-crawlers-reddit-wikipedia-fight/
+  post: https://about.readthedocs.com/blog/2024/07/ai-crawlers-abuse/
+  post_title: AI crawlers need to be more respectful
+- title: "AI crawlers run up a website's hosting bill"
+  outlet: Boing Boing
+  date: 2024-07-29
+  url: https://boingboing.net/2024/07/29/ai-crawlers-run-up-a-websites-hosting-bill.html
+  post: https://about.readthedocs.com/blog/2024/07/ai-crawlers-abuse/
+  post_title: AI crawlers need to be more respectful
+- title: AI crawlers need to be more respectful
+  outlet: Simon Willison’s Weblog
+  date: 2024-07-25
+  url: https://simonwillison.net/2024/Jul/25/ai-crawlers-need-to-be-more-respectful/
+  post: https://about.readthedocs.com/blog/2024/07/ai-crawlers-abuse/
+  post_title: AI crawlers need to be more respectful
+- title: Breaking Cliques at Events
+  outlet: Simon Willison’s Weblog
+  date: 2017-12-03
+  url: https://simonwillison.net/2017/Dec/3/breaking-cliques-at-events/
+  post: blog/2017/dec/2/breaking-cliques-at-events
+- title: The Pac-Man Rule at Conferences
+  outlet: Simon Willison’s Weblog
+  date: 2017-11-17
+  url: https://simonwillison.net/2017/Nov/17/the-pac-man-rule-at-conferences/
+  post: blog/2017/aug/2/pacman-rule-conferences
+- title: "Announcing Kong: A server description and deployment testing tool"
+  outlet: Simon Willison’s Weblog
+  date: 2009-11-18
+  url: https://simonwillison.net/2009/Nov/18/kong/
+  post: blog/2009/nov/17/announcing-kong-server-description-and-deployment-
+- title: Correct way to handle mobile browsers
+  outlet: Simon Willison’s Weblog
+  date: 2009-11-10
+  url: https://simonwillison.net/2009/Nov/10/mobile/
+  post: blog/2009/nov/9/correct-way-handle-mobile-browsers
+- title: "Large Problems in Django, Mostly Solved: Search"
+  outlet: Simon Willison’s Weblog
+  date: 2009-11-03
+  url: https://simonwillison.net/2009/Nov/3/search/
+  post: blog/2009/nov/2/large-problems-django-mostly-solved
+- title: Debugging Django in Production Revisited
+  outlet: Simon Willison’s Weblog
+  date: 2009-09-07
+  url: https://simonwillison.net/2009/Sep/7/debugging/
+  post: blog/2009/sep/5/debugging-django-production-revisited
+- title: Django now has fast tests
+  outlet: Simon Willison’s Weblog
+  date: 2009-01-16
+  url: https://simonwillison.net/2009/Jan/16/fast/
+  post: blog/2009/jan/15/django-now-has-fast-tests

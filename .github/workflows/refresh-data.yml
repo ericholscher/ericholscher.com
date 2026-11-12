@@ -1,0 +1,40 @@
+# Once a week, rerun the scripts that gather Eric's writing and discussion elsewhere:
+# company-blog posts (elsewhere.yml), Hacker News threads (hn.yml), and Mastodon shares (mastodon.yml).
+# If any file changed, it opens (or updates) one PR for Eric to review; it never pushes to main.
+# Needs "Allow GitHub Actions to create and approve pull requests" on, in
+# Settings > Actions > General. Run it by hand from the Actions tab too.
+name: Refresh outside data
+
+on:
+  schedule:
+    - cron: "17 6 * * 1"  # Mondays, 06:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - name: Company-blog posts
+        run: uv run --group scripts python scripts/company_posts.py
+      - name: Hacker News threads
+        run: uv run --group scripts python scripts/hn_discussions.py
+      - name: Mastodon shares
+        run: uv run --group scripts python scripts/mastodon_shares.py
+      - name: Open a PR if anything changed
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: refresh-outside-data
+          delete-branch: true
+          add-paths: site/_data/*.yml
+          commit-message: Refresh company posts, Hacker News threads, and Mastodon shares
+          title: Refresh outside data
+          body: |
+            The weekly run of `scripts/company_posts.py`, `scripts/hn_discussions.py`, and
+            `scripts/mastodon_shares.py` found changes. Check the diff, then merge.
+          assignees: ericholscher

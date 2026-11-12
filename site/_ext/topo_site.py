@@ -80,6 +80,21 @@ def topo_trip_log(app):
     data["topo_log"] = years
 
 
+# Each press.yml entry names the post it covered: a docname here, or a URL elsewhere.
+# Each hn.yml thread and mastodon.yml share names a post here.
+def topo_check_press(app, env):
+    for item in app.topo_data["topo_press"]:
+        post = item["post"]
+        if post.startswith("http"):
+            if not item.get("post_title"):
+                logger.warning(f"press.yml: {item['url']} links to {post} but has no post_title")
+        elif post not in env.found_docs:
+            logger.warning(f"press.yml: {item['url']} names {post}, which is not a page on this site")
+    for item in app.topo_data["topo_hn"] + app.topo_data["topo_mastodon"]:
+        if item["post"] not in env.found_docs:
+            logger.warning(f"hn.yml/mastodon.yml: {item['url']} names {item['post']}, which is not a page on this site")
+
+
 # Posts Eric wrote on the company blogs, from _data/elsewhere.yml (written by
 # scripts/company_posts.py). The archive lists them by year beside his own posts, linking out:
 # they aren't pages here, so they stay out of the feed, topics, and post counts.
@@ -139,4 +154,5 @@ def setup(app):
     app.connect("doctree-resolved", topo_photo_rows)
     app.connect("builder-inited", topo_template_filters)
     app.connect("builder-inited", topo_trip_log)
+    app.connect("env-check-consistency", topo_check_press)
     return {"parallel_read_safe": True, "parallel_write_safe": True}
