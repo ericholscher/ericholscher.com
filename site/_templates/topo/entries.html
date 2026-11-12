@@ -98,28 +98,42 @@
 </nav>
 {%- endmacro %}
 
-{#- Posts per year as small columns, oldest to newest; each column links to its year page.
-    Years with no posts get a short tick so gaps read as gaps. The year chips below it carry the
-    same links in a size you can tap, so the chart is hidden from screen readers and skipped by Tab.
-    current marks one year's column (on that year's page); caption=False drops "Posts per year". -#}
+{#- A column from y0 down to y1 (y1 > y0), x to x + w, with rounded top corners when round. -#}
+{%- macro spark_bar(cls, x, w, y0, y1, round) %}
+{%- set r = [2, (y1 - y0) / 2]|min if round else 0 %}
+<path class="{{ cls }}" d="M{{ x }} {{ y1 }}V{{ y0 + r }}Q{{ x }} {{ y0 }} {{ x + r }} {{ y0 }}H{{ x + w - r }}Q{{ x + w }} {{ y0 }} {{ x + w }} {{ y0 + r }}V{{ y1 }}Z"></path>
+{%- endmacro %}
+
+{#- Posts per year as small columns, oldest to newest. Each column is this site's posts, with the posts on
+    company blogs (topo_elsewhere) stacked on top in gold. A column links to its year page, or for a year
+    with only posts elsewhere, to that year in the archive. Years with no posts get a short tick so gaps read
+    as gaps. The year chips below it carry the same links in a size you can tap, so the chart is hidden from
+    screen readers and skipped by Tab. current marks one year's column (on that year's page); caption=False
+    drops the caption. -#}
 {%- macro year_sparkline(current=None, caption=True) %}
-{%- set sp = namespace(counts={}, top=1) %}
-{%- for c in ablog.archive if c %}{% set _ = sp.counts.update({c.name|int: c}) %}{% if c|length > sp.top %}{% set sp.top = c|length %}{% endif %}{% endfor %}
-{%- if sp.counts %}
-{%- set first, last = sp.counts|min, sp.counts|max %}
+{%- set sp = namespace(own={}, other={}, top=1) %}
+{%- for c in ablog.archive if c %}{% set _ = sp.own.update({c.name|int: c}) %}{% endfor %}
+{%- for item in topo_elsewhere or [] %}{% set _ = sp.other.update({item.date.year: sp.other.get(item.date.year, 0) + 1}) %}{% endfor %}
+{%- set years = (sp.own.keys()|list) + (sp.other.keys()|list) %}
+{%- for y in years %}{% set n = (sp.own[y]|length if y in sp.own else 0) + sp.other.get(y, 0) %}{% if n > sp.top %}{% set sp.top = n %}{% endif %}{% endfor %}
+{%- if years %}
+{%- set first, last = years|min, years|max %}
 {%- set w, gap, h = 12, 2, 40 %}
 {%- set width = (last - first + 1) * (w + gap) - gap %}
 <figure class="topo-spark">
   <svg width="{{ width }}" height="{{ h + 18 }}" viewBox="0 0 {{ width }} {{ h + 18 }}" aria-hidden="true" focusable="false">
     {%- for y in range(first, last + 1) %}
     {%- set x = (y - first) * (w + gap) %}
-    {%- if y in sp.counts %}
-    {%- set c = sp.counts[y] %}
-    {%- set bh = [(c|length / sp.top * h)|round(1), 2]|max %}
-    {%- set r = [2, bh / 2]|min %}
-    <a href="{{ pathto(c.docname) }}" tabindex="-1"><title>{{ y }}: {{ c|length }} post{{ '' if c|length == 1 else 's' }}</title>
+    {%- set own = sp.own[y]|length if y in sp.own else 0 %}
+    {%- set other = sp.other.get(y, 0) %}
+    {%- if own or other %}
+    {%- set bo = (own / sp.top * h)|round(1) if own else 0 %}
+    {%- set bt = [((own + other) / sp.top * h)|round(1), 2]|max %}
+    {%- set href = pathto(sp.own[y].docname) if own else pathto(ablog.archive.docname) ~ '#y' ~ y %}
+    <a href="{{ href }}" tabindex="-1"><title>{{ y }}: {% if own %}{{ own }} post{{ '' if own == 1 else 's' }}{% endif %}{% if own and other %}, {% endif %}{% if other %}{{ other }} on other blogs{% endif %}</title>
       <rect class="topo-spark-hit" x="{{ x }}" y="0" width="{{ w + gap }}" height="{{ h }}"></rect>
-      <path class="topo-spark-bar{% if current and y|string == current.name|string %} is-current{% endif %}" d="M{{ x }} {{ h }}V{{ h - bh + r }}Q{{ x }} {{ h - bh }} {{ x + r }} {{ h - bh }}H{{ x + w - r }}Q{{ x + w }} {{ h - bh }} {{ x + w }} {{ h - bh + r }}V{{ h }}Z"></path>
+      {%- if own %}{{ spark_bar('topo-spark-bar' ~ (' is-current' if current and y|string == current.name|string else ''), x, w, h - [bo, 2]|max, h, not other) }}{% endif %}
+      {%- if other %}{{ spark_bar('topo-spark-other', x, w, h - bt, h - bo, true) }}{% endif %}
     </a>
     {%- else %}
     <rect class="topo-spark-empty" x="{{ x }}" y="{{ h - 1 }}" width="{{ w }}" height="1"><title>{{ y }}: no posts</title></rect>
@@ -128,7 +142,7 @@
     <text class="topo-spark-label" x="0" y="{{ h + 14 }}">{{ first }}</text>
     <text class="topo-spark-label" x="{{ width }}" y="{{ h + 14 }}" text-anchor="end">{{ last }}</text>
   </svg>
-  {%- if caption %}<figcaption>Posts per year</figcaption>{% endif %}
+  {%- if caption %}<figcaption>Posts per year{% if sp.other %}, with <span class="topo-spark-key" aria-hidden="true"></span>posts on other blogs{% endif %}</figcaption>{% endif %}
 </figure>
 {%- endif %}
 {%- endmacro %}
