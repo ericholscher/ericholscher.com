@@ -31,7 +31,7 @@ but we had a few folks we chatted with a few times.
 
 We packed a tent because we thought it would give us more options,
 but when we asked about accommodation,
-it was something like 20 EUR per person for dinner, breakfast, a pack lunch, and a tent.
+it was something like 20 EUR per person for dinner, breakfast, a pack lunch, and a tent spot.
 It was only 30 EUR per person to sleep inside,
 so we ended up sleeping inside every night :)
 
