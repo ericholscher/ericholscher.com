@@ -5,7 +5,7 @@
 
 I hope that you love tomatoes, cucumbers, and cheese.
 Because that is the main thing you'll be eating as you traverse the beautiful mountains of Kosovo, Albania, and Montenegro.
-This soon-to-be classic "hut-to-hut" hike is a great way to expose a place that many Americans only know from the bleak history of the 90s.
+This soon-to-be classic "hut-to-hut" hike is a great way to experience a place that many Americans only know from the bleak history of the 90s.
 
 If you want information on how to do this hike,
 I always recommend [The Hiking Life](https://www.thehikinglife.com/2024/10/a-quick-dirty-guide-to-the-peaks-of-the-balkans-trail/) as a starting point for an opinionated take on it.
