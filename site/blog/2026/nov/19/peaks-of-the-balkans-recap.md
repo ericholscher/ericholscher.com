@@ -20,7 +20,7 @@ and then we met up at Roshkodol Pass,
 a romantic meeting point after a few days hiking.
 I hitched from Plav up to the higher trail area on the back of a flatbed truck with some nice kids,
 which was a great start to the trail.
-The meeting went smoothly,
+The meeting all went smoothly,
 and we continued the next 5 days together.
 
 We did the hike clockwise,
@@ -63,10 +63,10 @@ You hike up and around a beautiful rock ridge,
 surrounded by huge peaks in every direction.
 Quite a lovely experience.
 
-We also enjoyed the Theth to Valbona section,
+We also quite enjoyed the Theth to Valbona section,
 but it was the most crowded.
 The days into Theth and out of Valbona back into Montenegro were some of our other favorites.
-But overall each day had some highlights that were lovely.
+But overall each day had some highlights that were quite lovely.
 
 We got our border crossing permit at the police station in Plav,
 which took a couple hours of confusion with a very nice cop who didn't speak any English.
@@ -87,7 +87,7 @@ just enough people for our taste.
 
 I'd recommend doing this hike in probably 5-6 days,
 skipping most of the Kosovo part unfortunately.
-There is a steep, large elevation drop and gain,
+There is quite a steep, large elevation drop and gain,
 and some road walking,
 in that section.
 You still cross the border a few times up high,
