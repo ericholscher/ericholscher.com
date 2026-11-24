@@ -5,12 +5,11 @@
 
 I hope that you love tomatoes, cucumbers, and cheese.
 Because that is the main thing you'll be eating as you traverse the beautiful mountains of Kosovo, Albania, and Montenegro.
-This soon-to-be classic "hut-to-hut" hike is a great way to expose a place that many Americans only know from the bleak history of the 90s. 
+This soon-to-be classic "hut-to-hut" hike is a great way to expose a place that many Americans only know from the bleak history of the 90s.
 
 If you want information on how to do this hike,
 I always recommend [The Hiking Life](https://www.thehikinglife.com/2024/10/a-quick-dirty-guide-to-the-peaks-of-the-balkans-trail/) as a starting point for an opinionated take on it.
 This post will mostly be our observations after doing the hike.
-
 
 ## How we hiked
 
@@ -21,10 +20,10 @@ and then we met up at Roshkodol Pass,
 a romantic meeting point after a few days hiking.
 I hitched from Plav up to the higher trail area on the back of a flatbed truck with some nice kids,
 which was a great start to the trail.
-The meeting all went smoothly,
+The meeting went smoothly,
 and we continued the next 5 days together.
 
-We did the hike in a clockwise fashion,
+We did the hike clockwise,
 but it turns out the guide book is written in the opposite direction,
 and most people we met were going the other direction.
 This was a bit of a bummer since we didn't find too many multi-day hiking buddies,
@@ -48,10 +47,10 @@ and was quite filling.
 The language barrier with the hosts was generally pretty large,
 which made the cultural aspect of the trip a bit less valuable than we'd hoped.
 
-The mountains in general are quite beautiful,
+The mountains are quite beautiful,
 but also pretty steep.
 Most days we did over 1,000m of elevation gain or loss,
-but it was manageable and not overwhelming.
+but it was manageable.
 
 ## Recommendations
 
@@ -64,10 +63,10 @@ You hike up and around a beautiful rock ridge,
 surrounded by huge peaks in every direction.
 Quite a lovely experience.
 
-We also quite enjoyed the Theth to Valbona section,
-but it was also the most crowded.
+We also enjoyed the Theth to Valbona section,
+but it was the most crowded.
 The days into Theth and out of Valbona back into Montenegro were some of our other favorites.
-But overall each day had some highlights that were quite lovely.
+But overall each day had some highlights that were lovely.
 
 We got our border crossing permit at the police station in Plav,
 which took a couple hours of confusion with a very nice cop who didn't speak any English.
@@ -80,7 +79,7 @@ but it removed some anxiety for a small price.
 ## Timing
 
 We didn't book anything ahead of time,
-and always found a place to sleep inside every night.
+and always found a place to sleep inside.
 There were enough people that it felt social at dinner each night,
 but not crowded.
 I think it was the perfect time in the development of the trail to hike it,
@@ -88,7 +87,7 @@ just enough people for our taste.
 
 I'd recommend doing this hike in probably 5-6 days,
 skipping most of the Kosovo part unfortunately.
-There is quite a steep large elevation drop and gain,
+There is a steep, large elevation drop and gain,
 and some road walking,
 in that section.
 You still cross the border a few times up high,
